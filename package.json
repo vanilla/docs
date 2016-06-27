@@ -1,0 +1,14 @@
+{
+    "name": "vanilla/docs",
+    "description": "Smart mirror common base files",
+    "keywords": ["vanilla","forums","documentation","vanillaforums"],
+    "homepage": "https://github.com/vanilla/docs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tim Gunter",
+            "email": "tim@vanillaforums.com",
+            "homepage": "https://vanillaforums.com"
+        }
+    ]
+}
