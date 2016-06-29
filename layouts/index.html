@@ -7,11 +7,9 @@
         <meta name="author" content="Vanilla Community">
 
         <title>Vanilla Forums Documentation</title>
-
-        <link href='//fonts.googleapis.com/css?family=Arbutus+Slab%7CCabin:600%7CSource+Code+Pro' rel='stylesheet' type='text/css'>
         
-        <!-- Add custom CSS here -->
-        <link href="/css/HPstyles.css" rel="stylesheet">
+        <link href="/css/docs.css" rel="stylesheet">
+        <link href="/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <style type="text/css">
@@ -21,22 +19,70 @@
         </style>
     </head>
 
-    <body>
+    <body class="docs grid docs-layout-landing">
+        
+        <div class="docs-cap">
 
-        {{ partial "header.html" . }}
-        
-        <div class="docs-welcome">
-            <h1>Welcome to the Vanilla Forums Documentation repository</h1>
-            <p>
-                These pages are organized into two sections based on target audience, but you can easily switch between them at any time.
-            </p>
-        </div>
-        
-        <div class="docs-chooser">
+            {{ partial "header.html" . }}
+
+            <div class="docs-welcome">
+                <div class="row">
+
+                    <div class="column column-2"></div>
+                    <div class="column column-8">
+                        <div class="docs-welcome-hero">
+                            <h1>
+                                Welcome to the Vanilla Forums<br/>
+                                Documentation repository
+                            </h1>
+                            <h2>
+                                These pages are organized into two sections based on target audience.<br/>
+                                What kind of information are you looking for?
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="column column-2"></div>
+
+                </div>
+            </div>
             
         </div>
         
-        {{ partial "footer.html" . }}
+        <div class="docs-chooser">
+            <div class="row">
+
+                <div class="column column-1"></div>
+                <div class="column column-5">
+                    {{ partial "chooser/help.html" . }}
+                </div>
+                <div class="column column-5">
+                    {{ partial "chooser/developer.html" . }}
+                </div>
+                <div class="column column-1"></div>
+
+            </div>
+        </div>
+
+        <div class="docs-footer docs-landing-footer">
+            <div class="row">
+
+                <div class="column column-3"></div>
+                <div class="column column-6">
+                    {{ partial "footer/copyright.html" . }}
+                </div>
+                <div class="column column-3"></div>
+
+            </div>
+            <div class="row">
+
+                <div class="column column-3"></div>
+                <div class="column column-6">
+                    {{ partial "footer/links.html" . }}
+                </div>
+                <div class="column column-3"></div>
+
+            </div>
+        </div>
 
     </body>
 </html>

@@ -1,15 +1,23 @@
 <div class="docs-header">
     
-    <div class="docs-header-logo">
-        <a href="/">
-            <img class="logo" src="/assets/img/logo.svg" alt="Vanilla Forums" width="102" height="41"> Docs
-        </a>
-    </div>
-    
-    <div class="docs-header-cta">
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="/">
+                <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
         
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                {{ partial "header/search.html" . }}
+                {{ partial "header/cta.html" . }}
+            </div>
+        </div>
+
     </div>
-    
-    {{ partial "search.html" . }}
-    
+
 </div>

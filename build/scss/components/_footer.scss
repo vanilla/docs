@@ -1,0 +1,49 @@
+.docs {
+    
+    .docs-footer {
+        font-size: 12px;
+        color: $lightText;
+        letter-spacing: 0.05em;
+        margin: 80px 0px 40px 0px;
+        
+        a {
+            color: $lightText;
+        }
+        
+        .docs-copyright {
+            margin: 5px 0px;
+        }
+    
+        .docs-links {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0px;
+            
+            a {
+                
+            }
+            
+            a:after {
+                content: "·";
+                margin: 0px 5px;
+            }
+            
+            a:last-child:after {
+                content: "";
+                margin: 0px;
+            }
+        }
+
+    }
+    
+    .docs-landing-footer {
+        background: transparent;
+        
+        .column {
+            justify-content: center;
+            text-align: center;
+        }
+        
+    }
+    
+}

@@ -1,4 +1,5 @@
 .DS_Store
 .tmp
-data/
+node_modules/
+public/
 npm-debug.log

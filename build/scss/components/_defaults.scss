@@ -1,0 +1,11 @@
+body {
+    letter-spacing: 0.5px;
+}
+
+a {
+    &:hover {
+        color: $vanillaPink;
+    }
+            
+    text-decoration: none;
+}

@@ -1,0 +1,90 @@
+.docs-layout-landing {
+    
+    .docs-cap {
+        background: linear-gradient(45deg, $gradientBlue 0%, $gradientMid 50%, $gradientPink 100%);
+    
+        .docs-header {
+            background: transparent;
+            color: white;
+        }
+
+        .docs-welcome {
+            padding: 40px 0px 140px 0px;
+            color: white;
+
+            .column {
+                text-align: center;
+            }
+            
+            .docs-welcome-hero {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 36px;
+                font-weight: 100;
+            }
+
+            h2 {
+                margin-top: 30px;
+                font-weight: lighter;
+                font-size: 20px;
+                color: $ghostText;
+            }
+        }
+    }
+    
+    .docs-chooser {
+        
+        .column {
+            position: relative;
+        }
+        
+        .docs-welcome-choice {
+            width: 420px;
+            min-height: 310px;
+            margin: 0px auto;
+            padding: 30px 40px 40px 40px;
+            margin-top: -80px;
+            
+            position: relative;
+            
+            background: white;
+            box-shadow: 0px 1px 2px 0px rgba($borderGray, 0.4);
+            
+            text-align: center;
+            
+            h3 {
+                margin: 0px;
+                font-weight: lighter;
+                font-size: 28px;
+            }
+            
+            p {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            
+            .docs-choose-buttons {
+                position: absolute;
+                width: 100%;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                
+                padding-bottom: 50px;
+            }
+            
+            .docs-button {
+                width: 260px;
+                border-color: $regularText;
+
+                &:hover {
+                    border-color: $vanillaPink;
+                }
+            }
+            
+        }
+    }
+    
+}
