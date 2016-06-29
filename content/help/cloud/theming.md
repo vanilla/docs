@@ -1,6 +1,7 @@
 ---
 title: "Theming Services"
-categories: ["Cloud","Theming"]
+tags: ["Cloud","Theming"]
+category: "user"
 ---
 
 ## Theming Services Overview

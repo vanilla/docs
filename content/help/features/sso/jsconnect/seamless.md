@@ -1,6 +1,7 @@
 ---
 title: "Seamless Setup"
-categories: ["Features","Single Sign-On","jsConnect"]
+tags: ["Features","Single Sign-On","jsConnect"]
+category: "user"
 ---
 
 ## Seamless SSO with jsConnect

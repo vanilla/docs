@@ -1,6 +1,7 @@
 ---
 title: "Integration Services"
-categories: ["Cloud","Integration"]
+tags: ["Cloud","Integration"]
+category: "user"
 ---
 
 ## Integration Services

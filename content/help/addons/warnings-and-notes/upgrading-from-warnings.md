@@ -1,6 +1,7 @@
 ---
 title: "Upgrading from Warnings"
-categories: ["Features", "Addons", "Warnings and Notes"]
+tags: ["Features", "Addons", "Warnings and Notes"]
+category: "user"
 ---
 
 ## Warnings & Notes is version 2

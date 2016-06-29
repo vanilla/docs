@@ -1,6 +1,7 @@
 ---
 title: "Migration Services"
-categories: ["Cloud","Migration"]
+tags: ["Cloud","Migration"]
+category: "user"
 ---
 
 # Migration Services Overview

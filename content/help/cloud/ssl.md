@@ -1,6 +1,7 @@
 ---
 title: "Setting up SSL (https)"
-categories: ["Features","SSL"]
+tags: ["Features","SSL"]
+category: "user"
 ---
 
 ## Setting up SSL (https) with Vanilla Cloud

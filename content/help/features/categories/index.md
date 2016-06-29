@@ -1,6 +1,7 @@
 ---
 title: "Categories"
-categories: ["Features", "Categories"]
+tags: ["Features", "Categories"]
+category: "user"
 ---
 
 # Using Categories

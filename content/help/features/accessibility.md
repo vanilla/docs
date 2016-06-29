@@ -1,6 +1,7 @@
 ---
 title: "Accessibility"
-categories: ["Features"]
+tags: ["Features"]
+category: "user"
 ---
 
 # Accessibility

@@ -1,6 +1,7 @@
 ---
 title: "Reactions"
-categories: ["Features", "Addons"]
+tags: ["Features", "Addons"]
+category: "user"
 ---
 
 ## What are reactions?

@@ -1,6 +1,7 @@
 ---
 title: "Roles & Permissions"
-categories: ["Features","Roles", "Permissions"]
+tags: ["Features","Roles", "Permissions"]
+category: "user"
 ---
 
 # Roles & Permissions Overview

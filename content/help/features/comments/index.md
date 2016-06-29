@@ -1,6 +1,7 @@
 ---
 title: "Universal Comments"
-categories: ["Features","Comments"]
+tags: ["Features","Comments"]
+category: "user"
 ---
 
 # Vanilla Comments

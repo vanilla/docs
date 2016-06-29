@@ -1,6 +1,7 @@
 ---
 title: "Warnings & Notes"
-categories: ["Features", "Addons"]
+tags: ["Features", "Addons"]
+category: "user"
 ---
 
 ## What are Warnings?

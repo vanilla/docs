@@ -1,6 +1,7 @@
 ---
 title: "Warning a User"
-categories: ["Features", "Addons", "Warnings and Notes"]
+tags: ["Features", "Addons", "Warnings and Notes"]
+category: "user"
 ---
 
 ## Warning a User

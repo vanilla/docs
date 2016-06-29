@@ -1,6 +1,7 @@
 ---
 title: "Redirector"
-categories: ["Addons"]
+tags: ["Addons"]
+category: "user"
 ---
 
 ## When to Use Redirector

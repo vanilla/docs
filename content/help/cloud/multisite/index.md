@@ -1,6 +1,7 @@
 ---
 title: "Multisite Features"
-categories: ["Cloud","Multisite"]
+tags: ["Cloud","Multisite"]
+category: "user"
 ---
 
 # Multisite Features

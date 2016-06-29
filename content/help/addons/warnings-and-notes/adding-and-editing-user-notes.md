@@ -1,6 +1,7 @@
 ---
 title: "Adding and Editing User Notes"
-categories: ["Features", "Addons", "Warnings and Notes"]
+tags: ["Features", "Addons", "Warnings and Notes"]
+category: "user"
 ---
 
 ## Adding a Note

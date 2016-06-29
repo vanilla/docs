@@ -1,6 +1,7 @@
 ---
 title: "Logging"
-categories: ["Cloud"]
+tags: ["Cloud"]
+category: "user"
 ---
 
 # Advanced logging

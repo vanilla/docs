@@ -1,6 +1,7 @@
 ---
 title: "Releases"
-categories: ["Cloud","Releases"]
+tags: ["Cloud","Releases"]
+category: "user"
 ---
 
 # Release Notes

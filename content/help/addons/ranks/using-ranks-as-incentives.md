@@ -1,6 +1,7 @@
 ---
 title: "Using Ranks as Incentives"
-categories: ["Features", "Addons", "Ranks"]
+tags: ["Features", "Addons", "Ranks"]
+category: "user"
 ---
 
 ## Using Ranks: Incentives

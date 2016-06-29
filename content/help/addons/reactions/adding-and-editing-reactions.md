@@ -1,6 +1,7 @@
 ---
 title: "Adding and Editing Reactions"
-categories: ["Features", "Addons", "Reactions"]
+tags: ["Features", "Addons", "Reactions"]
+category: "user"
 ---
 
 ## Selecting Reactions

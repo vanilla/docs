@@ -1,6 +1,7 @@
 ---
 title: "Vanilla Pop on the Site Hub"
-categories: ["Features","Vanilla Pop","Hub"]
+tags: ["Features","Vanilla Pop","Hub"]
+category: "user"
 ---
 
 # Vanilla Pop on the Hub

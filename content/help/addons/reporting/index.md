@@ -1,6 +1,7 @@
 ---
 title: "Reporting"
-categories: ["Features", "Addons"]
+tags: ["Features", "Addons"]
+category: "user"
 ---
 
 ## What is Reporting?

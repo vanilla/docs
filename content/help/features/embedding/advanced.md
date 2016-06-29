@@ -1,6 +1,7 @@
 ---
 title: "Advanced Embedding"
-categories: ["Features","Embedding"]
+tags: ["Features","Embedding"]
+category: "user"
 ---
 
 # Advanced Embedding

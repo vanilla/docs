@@ -1,6 +1,7 @@
 ---
 title: "Emoji"
-categories: ["Features","Emoji"]
+tags: ["Features","Emoji"]
+category: "user"
 ---
 
 ##Emoji

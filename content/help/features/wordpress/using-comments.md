@@ -1,6 +1,7 @@
 ---
 title: "Using Comments"
-categories: ["Features","Embedding"]
+tags: ["Features","Embedding"]
+category: "user"
 ---
 
 ## Transition to Vanilla Comments

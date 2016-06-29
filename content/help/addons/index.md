@@ -1,6 +1,7 @@
 ---
 title: "Addons"
-categories: ["Features"]
+tags: ["Features"]
+category: "user"
 ---
 
 ## What Are Addons?

@@ -1,6 +1,7 @@
 ---
 title: "Default Role Types"
-categories: ["Features","Roles", "Permissions"]
+tags: ["Features","Roles", "Permissions"]
+category: "user"
 ---
 
 ## Default Role Types

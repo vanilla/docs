@@ -1,6 +1,7 @@
 ---
 title: "Statistics"
-categories: ["Addons"]
+tags: ["Addons"]
+category: "user"
 ---
 
 ## What Are Vanilla Statistics?

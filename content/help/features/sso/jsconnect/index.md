@@ -1,6 +1,7 @@
 ---
 title: "SSO with jsConnect"
-categories: ["Features","Single Sign-On","jsConnect"]
+tags: ["Features","Single Sign-On","jsConnect"]
+category: "user"
 ---
 
 ## jsConnect Concepts Overview

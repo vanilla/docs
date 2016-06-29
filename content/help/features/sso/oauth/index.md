@@ -1,6 +1,7 @@
 ---
 title: "SSO with OAuth"
-categories: ["Features","Single Sign-On","OAuth"]
+tags: ["Features","Single Sign-On","OAuth"]
+category: "user"
 ---
 
 ## SSO with OAuth: Overview

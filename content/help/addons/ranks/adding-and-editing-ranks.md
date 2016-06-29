@@ -1,6 +1,7 @@
 ---
 title: "Adding and Editing Ranks"
-categories: ["Features", "Addons", "Ranks"]
+tags: ["Features", "Addons", "Ranks"]
+category: "user"
 ---
 
 ## Adding a Ranks

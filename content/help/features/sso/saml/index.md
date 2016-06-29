@@ -1,6 +1,7 @@
 ---
 title: "SSO with SAML"
-categories: ["Features","Single Sign-On","SAML"]
+tags: ["Features","Single Sign-On","SAML"]
+category: "user"
 ---
 
 ## SSO with SAML: Overview

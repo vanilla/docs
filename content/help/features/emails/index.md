@@ -1,6 +1,7 @@
 ---
 title: "Emails"
-categories: ["Features","Emails"]
+tags: ["Features","Emails"]
+category: "user"
 ---
 
 # Email Appearance

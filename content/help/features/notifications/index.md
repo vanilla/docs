@@ -1,6 +1,7 @@
 ---
 title: "Notifications"
-categories: ["Features","Notifications"]
+tags: ["Features","Notifications"]
+category: "user"
 ---
 
 # Notifications

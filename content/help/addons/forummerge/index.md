@@ -1,6 +1,7 @@
 ---
 title: "Forum Merge"
-categories: ["Addons"]
+tags: ["Addons"]
+category: "user"
 ---
 
 ## When to Use Forum Merge

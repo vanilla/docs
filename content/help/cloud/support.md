@@ -1,6 +1,7 @@
 ---
 title: "Support"
-categories: ["Cloud"]
+tags: ["Cloud"]
+category: "user"
 ---
 
 ## Cloud Support

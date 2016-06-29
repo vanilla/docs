@@ -1,6 +1,7 @@
 ---
 title: "Embedded"
-categories: ["Features","Single Sign-On","jsConnect"]
+tags: ["Features","Single Sign-On","jsConnect"]
+category: "user"
 ---
 
 ## Embedding with Seamless jsConnect

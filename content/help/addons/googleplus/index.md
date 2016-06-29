@@ -1,6 +1,7 @@
 ---
 title: "Google Plus"
-categories: ["Features", "Addons", "Integrations"]
+tags: ["Features", "Addons", "Integrations"]
+category: "user"
 ---
 
 ## Google Plus

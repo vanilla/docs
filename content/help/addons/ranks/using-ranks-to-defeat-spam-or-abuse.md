@@ -1,6 +1,7 @@
 ---
 title: "Using Ranks to Defeat Spam or Abuse"
-categories: ["Features", "Addons", "Ranks"]
+tags: ["Features", "Addons", "Ranks"]
+category: "user"
 ---
 
 ## Using Ranks: Spam

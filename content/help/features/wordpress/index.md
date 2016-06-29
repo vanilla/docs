@@ -1,4 +1,5 @@
 ---
 title: "WordPress Integration"
-categories: ["Features","WordPress"]
+tags: ["Features","WordPress"]
+category: "user"
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Single Sign-On (SSO)"
-categories: ["Features","Single Sign-On"]
+tags: ["Features","Single Sign-On"]
+category: "user"
 ---
 
 ## Single Sign-On Overview

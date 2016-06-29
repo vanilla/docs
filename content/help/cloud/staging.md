@@ -1,6 +1,7 @@
 ---
 title: "Staging Site"
-categories: ["Cloud","Staging"]
+tags: ["Cloud","Staging"]
+category: "user"
 ---
 
 ## Staging Site Overview

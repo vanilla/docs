@@ -1,6 +1,7 @@
 ---
 title: "Cloud Services"
-categories: ["Cloud"]
+tags: ["Cloud"]
+category: "user"
 ---
 
 ## Cloud Services Overview

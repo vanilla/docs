@@ -1,6 +1,7 @@
 ---
 title: "Ideation"
-categories: ["Addons"]
+tags: ["Addons"]
+category: "user"
 ---
 
 ## Ideation

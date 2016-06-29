@@ -1,6 +1,7 @@
 ---
 title: "Embedding"
-categories: ["Features","Embedding"]
+tags: ["Features","Embedding"]
+category: "user"
 ---
 
 ## Embedding Forum

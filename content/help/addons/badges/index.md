@@ -1,6 +1,7 @@
 ---
 title: "Badges"
-categories: ["Features", "Addons"]
+tags: ["Features", "Addons"]
+category: "user"
 ---
 
 ## Purpose

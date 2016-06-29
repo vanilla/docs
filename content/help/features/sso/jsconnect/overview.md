@@ -1,6 +1,7 @@
 ---
 title: "Technical Overview"
-categories: ["Features","Single Sign-On","jsConnect"]
+tags: ["Features","Single Sign-On","jsConnect"]
+category: "user"
 ---
 
 # jsConnect Technical Overview

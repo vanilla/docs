@@ -1,6 +1,7 @@
 ---
 title: "Ranks"
-categories: ["Features", "Addons"]
+tags: ["Features", "Addons"]
+category: "user"
 ---
 
 ## What is a Rank?

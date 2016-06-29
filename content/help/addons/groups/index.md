@@ -1,6 +1,7 @@
 ---
 title: "Groups"
-categories: ["Features", "Addons"]
+tags: ["Features", "Addons"]
+category: "user"
 ---
 
 ## What are Groups?

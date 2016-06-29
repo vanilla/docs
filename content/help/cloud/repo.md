@@ -1,6 +1,7 @@
 ---
 title: "Repository"
-categories: ["Cloud","Repository"]
+tags: ["Cloud","Repository"]
+category: "user"
 ---
 
 ## Private Repository

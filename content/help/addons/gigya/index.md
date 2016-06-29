@@ -1,6 +1,7 @@
 ---
 title: "Gigya Sign In"
-categories: ["Features", "Addons", "Integrations"]
+tags: ["Features", "Addons", "Integrations"]
+category: "user"
 ---
 
 ## Gigya Sign In

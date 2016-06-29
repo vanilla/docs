@@ -1,6 +1,7 @@
 ---
 title: "Vanilla Pop"
-categories: ["Features","Vanilla Pop"]
+tags: ["Features","Vanilla Pop"]
+category: "user"
 ---
 
 # Vanilla Pop
