@@ -1,5 +1,5 @@
 ---
-title: Applying Ranks over SSO
+title: "Applying Ranks over SSO"
 categories: ["Features", "Addons", "Ranks"]
 ---
 

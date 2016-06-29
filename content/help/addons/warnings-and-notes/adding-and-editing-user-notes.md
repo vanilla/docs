@@ -1,5 +1,5 @@
 ---
-title: Adding and Editing User Notes
+title: "Adding and Editing User Notes"
 categories: ["Features", "Addons", "Warnings and Notes"]
 ---
 

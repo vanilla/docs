@@ -1,5 +1,5 @@
 ---
-title: Vanilla Pop
+title: "Vanilla Pop"
 categories: ["Features","Vanilla Pop"]
 ---
 

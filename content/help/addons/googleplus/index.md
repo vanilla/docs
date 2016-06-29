@@ -1,5 +1,5 @@
 ---
-title: Google Plus
+title: "Google Plus"
 categories: ["Features", "Addons", "Integrations"]
 ---
 

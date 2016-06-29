@@ -1,5 +1,5 @@
 ---
-title: Smarty Conditionals
+title: "Smarty Conditionals"
 categories: ["Theming", "Smarty"]
 ---
 

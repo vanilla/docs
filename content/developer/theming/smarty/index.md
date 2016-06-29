@@ -1,5 +1,5 @@
 ---
-title: Smarty
+title: "Smarty"
 categories: ["Theming"]
 ---
 

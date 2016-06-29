@@ -1,5 +1,5 @@
 ---
-title: Single Sign-On (SSO)
+title: "Single Sign-On (SSO)"
 categories: ["Features","Single Sign-On"]
 ---
 

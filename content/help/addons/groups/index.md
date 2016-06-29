@@ -1,5 +1,5 @@
 ---
-title: Groups
+title: "Groups"
 categories: ["Features", "Addons"]
 ---
 

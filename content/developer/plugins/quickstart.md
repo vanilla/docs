@@ -1,5 +1,5 @@
 ---
-title: Plugin Quickstart
+title: "Plugin Quickstart"
 categories: ["Developers","Addons"]
 ---
 

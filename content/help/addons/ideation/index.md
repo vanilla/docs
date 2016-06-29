@@ -1,5 +1,5 @@
 ---
-title: Ideation
+title: "Ideation"
 categories: ["Addons"]
 ---
 

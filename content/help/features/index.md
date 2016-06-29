@@ -1,6 +1,6 @@
 ---
-title: Features
-categories: ["Features"]
+title: "Features"
+category: "user"
 ---
 
 ## Features Overview

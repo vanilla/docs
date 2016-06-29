@@ -1,5 +1,5 @@
 ---
-title: Theming Views
+title: "Theming Views"
 categories: ["Theming"]
 ---
 

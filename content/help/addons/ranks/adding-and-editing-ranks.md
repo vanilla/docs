@@ -1,5 +1,5 @@
 ---
-title: Adding and Editing Ranks
+title: "Adding and Editing Ranks"
 categories: ["Features", "Addons", "Ranks"]
 ---
 

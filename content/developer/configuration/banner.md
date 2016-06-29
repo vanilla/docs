@@ -1,5 +1,5 @@
 ---
-title: Banner Settings
+title: "Banner Settings"
 categories: ["Developers","Configuration"]
 ---
 

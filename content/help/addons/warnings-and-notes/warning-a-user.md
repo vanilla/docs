@@ -1,5 +1,5 @@
 ---
-title: Warning a User
+title: "Warning a User"
 categories: ["Features", "Addons", "Warnings and Notes"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Emoji
+title: "Emoji"
 categories: ["Features","Emoji"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Using The Config
+title: "Using The Config"
 categories: ["Developers","Configuration"]
 ---
 

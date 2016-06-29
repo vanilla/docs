@@ -1,5 +1,5 @@
 ---
-title: Theme Options
+title: "Theme Options"
 categories: ["Theming"]
 ---
 

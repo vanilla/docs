@@ -1,5 +1,5 @@
 ---
-title: Adding and Editing Reactions
+title: "Adding and Editing Reactions"
 categories: ["Features", "Addons", "Reactions"]
 ---
 

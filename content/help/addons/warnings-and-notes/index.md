@@ -1,5 +1,5 @@
 ---
-title: Warnings & Notes
+title: "Warnings & Notes"
 categories: ["Features", "Addons"]
 ---
 

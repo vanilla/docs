@@ -1,5 +1,5 @@
 ---
-title: Theming Quickstart
+title: "Theming Quickstart"
 categories: ["Theming"]
 ---
 

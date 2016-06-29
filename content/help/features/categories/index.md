@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: "Categories"
 categories: ["Features", "Categories"]
 ---
 

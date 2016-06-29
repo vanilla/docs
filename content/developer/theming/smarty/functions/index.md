@@ -1,5 +1,5 @@
 ---
-title: Smarty Functions
+title: "Smarty Functions"
 categories: ["Theming", "Smarty", "Functions"]
 ---
 

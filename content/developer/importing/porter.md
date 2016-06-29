@@ -1,5 +1,5 @@
 ---
-title: Vanilla Porter
+title: "Vanilla Porter"
 categories: ["Developers","Importing"]
 ---
 

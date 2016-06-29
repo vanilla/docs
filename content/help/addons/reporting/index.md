@@ -1,5 +1,5 @@
 ---
-title: Reporting
+title: "Reporting"
 categories: ["Features", "Addons"]
 ---
 

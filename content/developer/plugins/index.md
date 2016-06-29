@@ -1,5 +1,5 @@
 ---
-title: Plugins
+title: "Plugins"
 categories: ["Developers","Plugins"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Coding Standard
+title: "Coding Standard"
 categories: ["Developers", "Contributing"]
 ---
 

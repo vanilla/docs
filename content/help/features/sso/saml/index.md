@@ -1,5 +1,5 @@
 ---
-title: SSO with SAML
+title: "SSO with SAML"
 categories: ["Features","Single Sign-On","SAML"]
 ---
 

@@ -225,7 +225,6 @@ module.exports = function (grunt) {
             args.push('--buildDrafts=true');
             args.push('--buildFuture=true');
         }
-        grunt.log.writeln(args);
         
         // Run hugo
         grunt.util.spawn({

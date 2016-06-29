@@ -1,5 +1,5 @@
 ---
-title: Seamless Setup
+title: "Seamless Setup"
 categories: ["Features","Single Sign-On","jsConnect"]
 ---
 

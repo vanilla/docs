@@ -1,5 +1,5 @@
 ---
-title: Smarty Modifiers
+title: "Smarty Modifiers"
 categories: ["Theming", "Smarty"]
 ---
 

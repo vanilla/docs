@@ -1,5 +1,5 @@
 ---
-title: Managing Groups
+title: "Managing Groups"
 categories: ["Features", "Addons", "Groups"]
 ---
 

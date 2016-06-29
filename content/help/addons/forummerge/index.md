@@ -1,5 +1,5 @@
 ---
-title: Forum Merge
+title: "Forum Merge"
 categories: ["Addons"]
 ---
 

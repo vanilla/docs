@@ -1,5 +1,5 @@
 ---
-title: Homepage Settings
+title: "Homepage Settings"
 categories: ["Developers","Configuration"]
 ---
 ## Homepage

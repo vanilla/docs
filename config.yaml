@@ -6,13 +6,18 @@ layoutdir: "layouts"
 publishdir: "public"
 
 params:
-  description: "Vanilla Forums Documentation"
-  author: "Vanilla Community"
+    description: "Vanilla Forums Documentation"
+    author: "Vanilla Community"
 
-  links:
-    docs: "http://docs.vanillaforums.com"
-    blog: "https://blog.vanillaforums.com"
-    cloud: "https://vanillaforums.com"
-    community: "https://vanillaforums.org/discussions"
-    github: "https://github.com/vanilla/vanilla"
-    issues: "https://github.com/vanilla/vanilla/issues"
+    links:
+        docs: "http://docs.vanillaforums.com"
+        blog: "https://blog.vanillaforums.com"
+        cloud: "https://vanillaforums.com"
+        community: "https://vanillaforums.org/discussions"
+        github: "https://github.com/vanilla/vanilla"
+        issues: "https://github.com/vanilla/vanilla/issues"
+    
+taxonomies:
+    category: "categories"
+    tag: "tags"
+    series: "series"

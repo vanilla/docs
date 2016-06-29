@@ -1,5 +1,5 @@
 ---
-title: Notifications
+title: "Notifications"
 categories: ["Features","Notifications"]
 ---
 

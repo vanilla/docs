@@ -1,5 +1,5 @@
 ---
-title: Giving and Requesting Badges
+title: "Giving and Requesting Badges"
 categories: ["Features", "Addons", "Badges"]
 ---
 

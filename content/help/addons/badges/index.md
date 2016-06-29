@@ -1,5 +1,5 @@
 ---
-title: Badges
+title: "Badges"
 categories: ["Features", "Addons"]
 ---
 

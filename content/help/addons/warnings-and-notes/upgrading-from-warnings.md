@@ -1,5 +1,5 @@
 ---
-title: Upgrading from Warnings
+title: "Upgrading from Warnings"
 categories: ["Features", "Addons", "Warnings and Notes"]
 ---
 

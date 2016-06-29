@@ -1,5 +1,5 @@
 ---
-title: Embedded
+title: "Embedded"
 categories: ["Features","Single Sign-On","jsConnect"]
 ---
 

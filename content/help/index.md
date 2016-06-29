@@ -1,6 +1,6 @@
 ---
-title: Help and Training
-categories: ["Developers"]
+title: "Help and Training"
+category: "user"
 ---
 
 ## Developers Overview

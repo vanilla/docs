@@ -1,5 +1,5 @@
 ---
-title: Emails
+title: "Emails"
 categories: ["Features","Emails"]
 ---
 

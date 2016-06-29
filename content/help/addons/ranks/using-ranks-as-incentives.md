@@ -1,5 +1,5 @@
 ---
-title: Using Ranks as Incentives
+title: "Using Ranks as Incentives"
 categories: ["Features", "Addons", "Ranks"]
 ---
 

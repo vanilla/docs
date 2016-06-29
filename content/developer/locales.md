@@ -1,5 +1,5 @@
 ---
-title: Locales
+title: "Locales"
 categories: ["Developers","Locales"]
 ---
 

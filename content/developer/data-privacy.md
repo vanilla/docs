@@ -1,5 +1,5 @@
 ---
-title: Data privacy
+title: "Data privacy"
 categories: ["Developers"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Statistics
+title: "Statistics"
 categories: ["Addons"]
 ---
 

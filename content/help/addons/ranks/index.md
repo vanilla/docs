@@ -1,5 +1,5 @@
 ---
-title: Ranks
+title: "Ranks"
 categories: ["Features", "Addons"]
 ---
 

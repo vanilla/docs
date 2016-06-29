@@ -1,5 +1,5 @@
 ---
-title: Theming Hooks
+title: "Theming Hooks"
 categories: ["Theming"]
 ---
 

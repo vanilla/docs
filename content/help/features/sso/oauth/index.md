@@ -1,5 +1,5 @@
 ---
-title: SSO with OAuth
+title: "SSO with OAuth"
 categories: ["Features","Single Sign-On","OAuth"]
 ---
 

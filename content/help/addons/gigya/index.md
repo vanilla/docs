@@ -1,5 +1,5 @@
 ---
-title: Gigya Sign In
+title: "Gigya Sign In"
 categories: ["Features", "Addons", "Integrations"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Vanilla Pop on the Site Hub
+title: "Vanilla Pop on the Site Hub"
 categories: ["Features","Vanilla Pop","Hub"]
 ---
 

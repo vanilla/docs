@@ -1,5 +1,5 @@
 ---
-title: Adding and Editing Badges
+title: "Adding and Editing Badges"
 categories: ["Features", "Addons", "Badges"]
 ---
 

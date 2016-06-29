@@ -1,5 +1,5 @@
 ---
-title: Redirector
+title: "Redirector"
 categories: ["Addons"]
 ---
 

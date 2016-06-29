@@ -1,5 +1,5 @@
 ---
-title: Curating with Reactions
+title: "Curating with Reactions"
 categories: ["Features", "Addons", "Reactions"]
 ---
 

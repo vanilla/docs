@@ -1,5 +1,5 @@
 ---
-title: Embedding
+title: "Embedding"
 categories: ["Features","Embedding"]
 ---
 

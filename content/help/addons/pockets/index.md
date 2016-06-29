@@ -1,5 +1,5 @@
 ---
-title: Pockets
+title: "Pockets"
 categories: ["Features", "Addons"]
 ---
 

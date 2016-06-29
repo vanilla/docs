@@ -1,5 +1,5 @@
 ---
-title: SSO with jsConnect
+title: "SSO with jsConnect"
 categories: ["Features","Single Sign-On","jsConnect"]
 ---
 

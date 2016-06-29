@@ -1,4 +1,4 @@
 ---
-title: WishList Integration
+title: "WishList Integration"
 categories: ["Features","WordPress"]
 ---

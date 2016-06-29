@@ -1,5 +1,5 @@
 ---
-title: Advanced Embedding
+title: "Advanced Embedding"
 categories: ["Features","Embedding"]
 ---
 
