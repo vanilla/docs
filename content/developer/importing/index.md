@@ -1,6 +1,7 @@
 ---
 title: "Importing"
-categories: ["Developers","Importing"]
+tags: ["Developers","Importing"]
+category: "developer"
 ---
 
 ## Importing to Vanilla

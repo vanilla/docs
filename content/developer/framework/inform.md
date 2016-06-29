@@ -1,6 +1,7 @@
 ---
 title: "Inform Messages"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 # Inform Messages

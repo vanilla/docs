@@ -1,6 +1,7 @@
 ---
 title: "Theming Hooks"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 ## Theming Hooks

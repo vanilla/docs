@@ -1,6 +1,7 @@
 ---
 title: "Banner Settings"
-categories: ["Developers","Configuration"]
+tags: ["Developers","Configuration"]
+category: "developer"
 ---
 
 ##Banner Settings

@@ -1,6 +1,7 @@
 ---
 title: "Plugin Quickstart"
-categories: ["Developers","Addons"]
+tags: ["Developers","Addons"]
+category: "developer"
 ---
 
 ## Quickstart Links

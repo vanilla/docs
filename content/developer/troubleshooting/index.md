@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting"
-categories: ["Features", "Troubleshooting"]
+tags: ["Features", "Troubleshooting"]
+category: "developer"
 ---
 
 ## Troubleshooting Vanilla

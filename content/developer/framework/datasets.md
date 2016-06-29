@@ -1,6 +1,7 @@
 ---
 title: "Datasets"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Datasets

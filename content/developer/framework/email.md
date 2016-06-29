@@ -1,6 +1,7 @@
 ---
 title: "Email"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 # Sending Emails

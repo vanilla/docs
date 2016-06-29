@@ -1,6 +1,7 @@
 ---
 title: "Building new porters"
-categories: ["Developers","Importing"]
+tags: ["Developers","Importing"]
+category: "developer"
 ---
 
 ## Building a new porter file

@@ -1,6 +1,7 @@
 ---
 title: "Smarty Conditionals"
-categories: ["Theming", "Smarty"]
+tags: ["Theming", "Smarty"]
+category: "developer"
 ---
 
 ## Smarty Conditionals

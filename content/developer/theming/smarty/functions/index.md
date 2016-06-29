@@ -1,6 +1,7 @@
 ---
 title: "Smarty Functions"
-categories: ["Theming", "Smarty", "Functions"]
+tags: ["Theming", "Smarty", "Functions"]
+category: "developer"
 ---
 
 ## Smarty Functions

@@ -1,6 +1,7 @@
 ---
 title: "Page Links"
-categories: ["Theming", "Smarty", "Smarty Functions"]
+tags: ["Theming", "Smarty", "Smarty Functions"]
+category: "developer"
 ---
 
 ## Page Links

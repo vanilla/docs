@@ -1,6 +1,7 @@
 ---
 title: "Developer Tools"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 ## Developer Tools

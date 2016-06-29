@@ -1,6 +1,7 @@
 ---
 title: "Contributing"
-categories: ["Developers","Contributing"]
+tags: ["Developers","Contributing"]
+category: "developer"
 ---
 
 # How to Contribute

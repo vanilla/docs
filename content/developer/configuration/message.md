@@ -1,6 +1,7 @@
 ---
 title: "Messages"
-categories: ["Developers","Configuration"]
+tags: ["Developers","Configuration"]
+category: "developer"
 ---
 ##Messages
 

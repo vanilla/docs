@@ -1,6 +1,7 @@
 ---
 title: "Database access"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Database layer

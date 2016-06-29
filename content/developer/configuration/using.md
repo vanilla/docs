@@ -1,6 +1,7 @@
 ---
 title: "Using The Config"
-categories: ["Developers","Configuration"]
+tags: ["Developers","Configuration"]
+category: "developer"
 ---
 
 ## When to use the config

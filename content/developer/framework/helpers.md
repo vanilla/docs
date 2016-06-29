@@ -1,6 +1,7 @@
 ---
 title: "Helpers"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 # Helper functions

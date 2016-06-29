@@ -1,6 +1,7 @@
 ---
 title: "Backend"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 # Backend setup

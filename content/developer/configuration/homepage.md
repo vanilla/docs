@@ -1,6 +1,7 @@
 ---
 title: "Homepage Settings"
-categories: ["Developers","Configuration"]
+tags: ["Developers","Configuration"]
+category: "developer"
 ---
 ## Homepage
 

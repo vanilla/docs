@@ -1,6 +1,7 @@
 ---
 title: "Vanilla Porter"
-categories: ["Developers","Importing"]
+tags: ["Developers","Importing"]
+category: "developer"
 ---
 
 ## Migrating a forum to Vanilla

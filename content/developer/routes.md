@@ -1,6 +1,7 @@
 ---
 title: "Routes"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 ## Routes

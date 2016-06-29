@@ -1,6 +1,7 @@
 ---
 title: "Theming CSS"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 ## Theming with CSS

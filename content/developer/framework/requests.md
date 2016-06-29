@@ -1,6 +1,7 @@
 ---
 title: "Requests"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Requests

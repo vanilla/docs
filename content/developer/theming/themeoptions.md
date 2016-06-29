@@ -1,6 +1,7 @@
 ---
 title: "Theme Options"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 ## Theme Options

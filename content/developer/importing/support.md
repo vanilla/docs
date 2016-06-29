@@ -1,6 +1,7 @@
 ---
 title: "Supported platforms"
-categories: ["Developers","Importing"]
+tags: ["Developers","Importing"]
+category: "developer"
 ---
 
 ## Supported platforms

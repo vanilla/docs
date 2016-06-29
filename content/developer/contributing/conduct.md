@@ -1,6 +1,7 @@
 ---
 title: "Code of Conduct"
-categories: ["Developers","Contributing"]
+tags: ["Developers","Contributing"]
+category: "developer"
 ---
 
 # Code of Conduct

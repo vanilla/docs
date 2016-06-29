@@ -1,6 +1,7 @@
 ---
 title: "{breadcrumbs}"
-categories: ["Theming", "Smarty", "Smarty Functions"]
+tags: ["Theming", "Smarty", "Smarty Functions"]
+category: "developer"
 ---
 
 ## Function: `{breadcrumbs}`

@@ -1,6 +1,7 @@
 ---
 title: "Theming Views"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 ## Theming Views

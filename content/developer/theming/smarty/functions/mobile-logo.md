@@ -1,6 +1,7 @@
 ---
 title: "{mobile_logo}"
-categories: ["Theming", "Smarty", "Smarty Functions"]
+tags: ["Theming", "Smarty", "Smarty Functions"]
+category: "developer"
 ---
 
 ## Function: `{mobile_logo}`

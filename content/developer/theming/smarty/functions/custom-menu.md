@@ -1,6 +1,7 @@
 ---
 title: "{custom_menu}"
-categories: ["Theming", "Smarty", "Smarty Functions"]
+tags: ["Theming", "Smarty", "Smarty Functions"]
+category: "developer"
 ---
 
 ## Function: `{custom_menu}`

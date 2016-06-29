@@ -1,6 +1,7 @@
 ---
 title: "Community"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 ## Developers Community

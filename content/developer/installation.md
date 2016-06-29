@@ -1,6 +1,7 @@
 ---
 title: "Installation"
-categories: ["Developers","Installation"]
+tags: ["Developers","Installation"]
+category: "developer"
 ---
 
 ## Installing Vanilla

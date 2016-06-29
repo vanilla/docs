@@ -1,6 +1,7 @@
 ---
 title: "Changelog"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 ## Open Source Change Log

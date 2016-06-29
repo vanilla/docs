@@ -1,6 +1,7 @@
 ---
 title: "Locales"
-categories: ["Developers","Locales"]
+tags: ["Developers","Locales"]
+category: "developer"
 ---
 
 ## Translating Vanilla

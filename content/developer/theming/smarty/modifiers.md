@@ -1,6 +1,7 @@
 ---
 title: "Smarty Modifiers"
-categories: ["Theming", "Smarty"]
+tags: ["Theming", "Smarty"]
+category: "developer"
 ---
 
 ## Smarty Modifiers

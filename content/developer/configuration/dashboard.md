@@ -1,6 +1,7 @@
 ---
 title: "Dashboard"
-categories: ["Developers","Configuration"]
+tags: ["Developers","Configuration"]
+category: "developer"
 ---
 ##Dashboard
 

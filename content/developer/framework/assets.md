@@ -1,6 +1,7 @@
 ---
 title: "Assets"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Assets

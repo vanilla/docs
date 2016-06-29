@@ -1,6 +1,7 @@
 ---
 title: "Controllers & URLs"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Controllers

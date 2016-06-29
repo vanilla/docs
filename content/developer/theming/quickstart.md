@@ -1,6 +1,7 @@
 ---
 title: "Theming Quickstart"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 **Vanilla Forums Cloud Customers, check out our [Ultimate Vanilla Forums Theme Guide](http://blog.vanillaforums.com/help/vanilla-forums-themes/).**

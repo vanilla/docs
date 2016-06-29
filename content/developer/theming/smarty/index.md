@@ -1,6 +1,7 @@
 ---
 title: "Smarty"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 ## Smarty Overview

@@ -1,6 +1,7 @@
 ---
 title: "Models, Forms, & Validation"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Models

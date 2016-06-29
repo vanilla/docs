@@ -1,6 +1,7 @@
 ---
 title: "Data privacy"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 # Data privacy

@@ -1,6 +1,7 @@
 ---
 title: "Theming"
-categories: ["Theming"]
+tags: ["Theming"]
+category: "developer"
 ---
 
 ## Theming Overview

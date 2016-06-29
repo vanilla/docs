@@ -1,6 +1,7 @@
 ---
 title: "Developers"
-categories: ["Developers"]
+tags: ["Developers"]
+category: "developer"
 ---
 
 ## Developers Overview

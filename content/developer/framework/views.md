@@ -1,6 +1,7 @@
 ---
 title: "Views"
-categories: ["Developers","Framework"]
+tags: ["Developers","Framework"]
+category: "developer"
 ---
 
 ## Views

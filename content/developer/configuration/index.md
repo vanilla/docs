@@ -1,6 +1,7 @@
 ---
 title: "Configuration"
-categories: ["Developers","Configuration"]
+tags: ["Developers","Configuration"]
+category: "developer"
 ---
 
 ## Vanilla configuration files

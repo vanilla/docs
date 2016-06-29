@@ -1,6 +1,7 @@
 ---
 title: "Coding Standard"
-categories: ["Developers", "Contributing"]
+tags: ["Developers", "Contributing"]
+category: "developer"
 ---
 
 # Coding Standard
