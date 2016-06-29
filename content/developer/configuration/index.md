@@ -1,6 +1,5 @@
 ---
 title: Configuration
-layout: docs
 categories: ["Developers","Configuration"]
 ---
 

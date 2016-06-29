@@ -1,6 +1,5 @@
 ---
 title: "{asset}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

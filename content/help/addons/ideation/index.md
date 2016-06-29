@@ -1,6 +1,5 @@
 ---
 title: Ideation
-layout: docs
 categories: ["Addons"]
 ---
 

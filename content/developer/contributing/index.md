@@ -1,6 +1,5 @@
 ---
 title: Contributing
-layout: docs
 categories: ["Developers","Contributing"]
 ---
 

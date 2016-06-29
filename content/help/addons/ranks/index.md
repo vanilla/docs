@@ -1,6 +1,5 @@
 ---
 title: Ranks
-layout: docs
 categories: ["Features", "Addons"]
 ---
 

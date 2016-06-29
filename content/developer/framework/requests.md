@@ -1,6 +1,5 @@
 ---
 title: Requests
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

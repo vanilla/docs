@@ -1,6 +1,5 @@
 ---
 title: "{link}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

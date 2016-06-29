@@ -1,6 +1,5 @@
 ---
 title: Theme Options
-layout: docs
 categories: ["Theming"]
 ---
 

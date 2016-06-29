@@ -1,6 +1,5 @@
 ---
 title: Data privacy
-layout: docs
 categories: ["Developers"]
 ---
 

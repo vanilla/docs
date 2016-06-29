@@ -1,6 +1,5 @@
 ---
 title: Single Sign-On (SSO)
-layout: docs
 categories: ["Features","Single Sign-On"]
 ---
 

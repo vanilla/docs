@@ -1,6 +1,5 @@
 ---
 title: Banner Settings
-layout: docs
 categories: ["Developers","Configuration"]
 ---
 

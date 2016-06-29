@@ -1,6 +1,5 @@
 ---
 title: Theming Services
-layout: docs
 categories: ["Cloud","Theming"]
 ---
 

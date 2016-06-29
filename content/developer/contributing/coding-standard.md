@@ -1,6 +1,5 @@
 ---
 title: Coding Standard
-layout: docs
 categories: ["Developers", "Contributing"]
 ---
 

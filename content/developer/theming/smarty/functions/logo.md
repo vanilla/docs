@@ -1,6 +1,5 @@
 ---
 title: "{logo}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

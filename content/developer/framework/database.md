@@ -1,6 +1,5 @@
 ---
 title: Database access
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

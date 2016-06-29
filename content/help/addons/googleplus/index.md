@@ -1,6 +1,5 @@
 ---
 title: Google Plus
-layout: docs
 categories: ["Features", "Addons", "Integrations"]
 ---
 

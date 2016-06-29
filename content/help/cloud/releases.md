@@ -1,6 +1,5 @@
 ---
 title: Releases
-layout: docs
 categories: ["Cloud","Releases"]
 ---
 

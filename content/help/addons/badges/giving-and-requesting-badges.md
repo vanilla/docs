@@ -1,6 +1,5 @@
 ---
 title: Giving and Requesting Badges
-layout: docs
 categories: ["Features", "Addons", "Badges"]
 ---
 

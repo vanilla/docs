@@ -1,6 +1,5 @@
 ---
 title: SSO with jsConnect
-layout: docs
 categories: ["Features","Single Sign-On","jsConnect"]
 ---
 

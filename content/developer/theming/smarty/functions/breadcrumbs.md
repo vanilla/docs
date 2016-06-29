@@ -1,6 +1,5 @@
 ---
 title: "{breadcrumbs}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

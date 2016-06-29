@@ -1,6 +1,5 @@
 ---
 title: Reactions
-layout: docs
 categories: ["Features", "Addons"]
 ---
 

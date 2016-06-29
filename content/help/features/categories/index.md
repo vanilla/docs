@@ -1,6 +1,5 @@
 ---
 title: Categories
-layout: docs
 categories: ["Features", "Categories"]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Developer Tools
-layout: docs
 categories: ["Developers"]
 ---
 

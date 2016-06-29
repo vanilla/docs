@@ -1,6 +1,5 @@
 ---
 title: Setting up SSL (https)
-layout: docs
 categories: ["Features","SSL"]
 ---
 

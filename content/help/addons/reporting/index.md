@@ -1,6 +1,5 @@
 ---
 title: Reporting
-layout: docs
 categories: ["Features", "Addons"]
 ---
 

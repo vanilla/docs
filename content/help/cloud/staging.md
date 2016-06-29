@@ -1,6 +1,5 @@
 ---
 title: Staging Site
-layout: docs
 categories: ["Cloud","Staging"]
 ---
 

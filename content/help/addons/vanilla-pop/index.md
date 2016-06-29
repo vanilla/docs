@@ -1,6 +1,5 @@
 ---
 title: Vanilla Pop
-layout: docs
 categories: ["Features","Vanilla Pop"]
 ---
 

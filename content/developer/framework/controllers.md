@@ -1,6 +1,5 @@
 ---
 title: Controllers & URLs
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

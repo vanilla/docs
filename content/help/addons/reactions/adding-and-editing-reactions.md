@@ -1,6 +1,5 @@
 ---
 title: Adding and Editing Reactions
-layout: docs
 categories: ["Features", "Addons", "Reactions"]
 ---
 

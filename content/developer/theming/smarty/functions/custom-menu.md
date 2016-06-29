@@ -1,6 +1,5 @@
 ---
 title: "{custom_menu}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

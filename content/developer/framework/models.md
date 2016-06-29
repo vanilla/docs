@@ -1,6 +1,5 @@
 ---
 title: Models, Forms, & Validation
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

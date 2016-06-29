@@ -1,6 +1,5 @@
 ---
 title: Theming Quickstart
-layout: docs
 categories: ["Theming"]
 ---
 

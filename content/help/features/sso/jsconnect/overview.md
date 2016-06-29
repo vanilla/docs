@@ -1,6 +1,5 @@
 ---
 title: Technical Overview
-layout: docs
 categories: ["Features","Single Sign-On","jsConnect"]
 ---
 

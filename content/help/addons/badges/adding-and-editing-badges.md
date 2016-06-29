@@ -1,6 +1,5 @@
 ---
 title: Adding and Editing Badges
-layout: docs
 categories: ["Features", "Addons", "Badges"]
 ---
 

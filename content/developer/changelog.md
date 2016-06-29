@@ -1,6 +1,5 @@
 ---
 title: Changelog
-layout: docs
 categories: ["Developers"]
 ---
 

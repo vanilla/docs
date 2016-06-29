@@ -1,6 +1,5 @@
 ---
 title: "{event}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Messages
-layout: docs
 categories: ["Developers","Configuration"]
 ---
 ##Messages

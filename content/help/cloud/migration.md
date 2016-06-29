@@ -1,6 +1,5 @@
 ---
 title: Migration Services
-layout: docs
 categories: ["Cloud","Migration"]
 ---
 

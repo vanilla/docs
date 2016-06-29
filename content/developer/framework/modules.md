@@ -1,6 +1,5 @@
 ---
 title: Modules
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

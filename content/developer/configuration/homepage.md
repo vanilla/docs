@@ -1,6 +1,5 @@
 ---
 title: Homepage Settings
-layout: docs
 categories: ["Developers","Configuration"]
 ---
 ## Homepage

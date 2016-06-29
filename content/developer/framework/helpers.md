@@ -1,6 +1,5 @@
 ---
 title: Helpers
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

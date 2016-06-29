@@ -1,6 +1,5 @@
 ---
 title: Framework
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Multisite Features
-layout: docs
 categories: ["Cloud","Multisite"]
 ---
 

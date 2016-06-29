@@ -1,6 +1,5 @@
 ---
 title: Vanilla Pop on the Site Hub
-layout: docs
 categories: ["Features","Vanilla Pop","Hub"]
 ---
 

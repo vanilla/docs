@@ -1,6 +1,5 @@
 ---
 title: Pull Requests
-layout: docs
 categories: ["Developers","Contributing"]
 ---
 

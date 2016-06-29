@@ -1,6 +1,5 @@
 ---
 title: "{mobile_logo}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

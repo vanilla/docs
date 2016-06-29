@@ -1,6 +1,5 @@
 ---
 title: Pockets
-layout: docs
 categories: ["Features", "Addons"]
 ---
 

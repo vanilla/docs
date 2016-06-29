@@ -1,6 +1,5 @@
 ---
 title: Repository
-layout: docs
 categories: ["Cloud","Repository"]
 ---
 

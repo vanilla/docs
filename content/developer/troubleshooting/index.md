@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting
-layout: docs
 categories: ["Features", "Troubleshooting"]
 ---
 

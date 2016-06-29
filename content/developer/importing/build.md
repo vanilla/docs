@@ -1,6 +1,5 @@
 ---
 title: Building new porters
-layout: docs
 categories: ["Developers","Importing"]
 ---
 

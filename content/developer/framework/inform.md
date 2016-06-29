@@ -1,6 +1,5 @@
 ---
 title: Inform Messages
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

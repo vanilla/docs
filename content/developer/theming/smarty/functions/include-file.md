@@ -1,6 +1,5 @@
 ---
 title: "{include_file}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

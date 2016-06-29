@@ -1,6 +1,5 @@
 ---
 title: Backend
-layout: docs
 categories: ["Developers"]
 ---
 

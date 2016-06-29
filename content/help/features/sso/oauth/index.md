@@ -1,6 +1,5 @@
 ---
 title: SSO with OAuth
-layout: docs
 categories: ["Features","Single Sign-On","OAuth"]
 ---
 

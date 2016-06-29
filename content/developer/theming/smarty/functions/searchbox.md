@@ -1,6 +1,5 @@
 ---
 title: "{searchbox}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

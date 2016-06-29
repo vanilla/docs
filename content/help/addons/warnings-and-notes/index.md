@@ -1,6 +1,5 @@
 ---
 title: Warnings & Notes
-layout: docs
 categories: ["Features", "Addons"]
 ---
 

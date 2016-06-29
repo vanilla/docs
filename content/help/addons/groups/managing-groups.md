@@ -1,6 +1,5 @@
 ---
 title: Managing Groups
-layout: docs
 categories: ["Features", "Addons", "Groups"]
 ---
 

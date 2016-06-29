@@ -1,6 +1,5 @@
 ---
 title: Integration Services
-layout: docs
 categories: ["Cloud","Integration"]
 ---
 

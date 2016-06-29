@@ -1,6 +1,5 @@
 ---
 title: Smarty Functions
-layout: docs
 categories: ["Theming", "Smarty", "Functions"]
 ---
 

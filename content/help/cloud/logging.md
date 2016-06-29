@@ -1,6 +1,5 @@
 ---
 title: Logging
-layout: docs
 categories: ["Cloud"]
 ---
 

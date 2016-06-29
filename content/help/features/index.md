@@ -1,6 +1,5 @@
 ---
 title: Features
-layout: docs
 categories: ["Features"]
 ---
 

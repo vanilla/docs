@@ -1,6 +1,5 @@
 ---
 title: Theming
-layout: docs
 categories: ["Theming"]
 ---
 

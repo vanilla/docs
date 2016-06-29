@@ -1,6 +1,5 @@
 ---
 title: Addons
-layout: docs
 categories: ["Features"]
 ---
 

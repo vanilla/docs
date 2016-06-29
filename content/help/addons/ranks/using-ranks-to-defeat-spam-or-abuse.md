@@ -1,6 +1,5 @@
 ---
 title: Using Ranks to Defeat Spam or Abuse
-layout: docs
 categories: ["Features", "Addons", "Ranks"]
 ---
 

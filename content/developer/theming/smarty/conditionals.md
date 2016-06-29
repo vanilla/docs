@@ -1,6 +1,5 @@
 ---
 title: Smarty Conditionals
-layout: docs
 categories: ["Theming", "Smarty"]
 ---
 

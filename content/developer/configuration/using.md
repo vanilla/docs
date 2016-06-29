@@ -1,6 +1,5 @@
 ---
 title: Using The Config
-layout: docs
 categories: ["Developers","Configuration"]
 ---
 

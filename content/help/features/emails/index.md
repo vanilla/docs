@@ -1,6 +1,5 @@
 ---
 title: Emails
-layout: docs
 categories: ["Features","Emails"]
 ---
 

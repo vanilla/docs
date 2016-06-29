@@ -1,6 +1,5 @@
 ---
 title: Supported platforms
-layout: docs
 categories: ["Developers","Importing"]
 ---
 

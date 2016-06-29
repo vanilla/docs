@@ -1,6 +1,5 @@
 ---
 title: Accessibility
-layout: docs
 categories: ["Features"]
 ---
 

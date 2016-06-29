@@ -1,6 +1,5 @@
 ---
 title: Locales
-layout: docs
 categories: ["Developers","Locales"]
 ---
 

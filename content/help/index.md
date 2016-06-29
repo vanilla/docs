@@ -1,6 +1,5 @@
 ---
 title: Help and Training
-layout: docs
 categories: ["Developers"]
 ---
 

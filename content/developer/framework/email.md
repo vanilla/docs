@@ -1,6 +1,5 @@
 ---
 title: Email
-layout: docs
 categories: ["Developers","Framework"]
 ---
 

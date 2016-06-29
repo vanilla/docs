@@ -1,6 +1,5 @@
 ---
 title: Advanced Embedding
-layout: docs
 categories: ["Features","Embedding"]
 ---
 

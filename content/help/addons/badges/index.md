@@ -1,6 +1,5 @@
 ---
 title: Badges
-layout: docs
 categories: ["Features", "Addons"]
 ---
 

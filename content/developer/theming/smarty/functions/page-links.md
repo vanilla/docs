@@ -1,6 +1,5 @@
 ---
 title: "Page Links"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Forum Merge
-layout: docs
 categories: ["Addons"]
 ---
 

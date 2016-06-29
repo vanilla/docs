@@ -1,6 +1,5 @@
 ---
 title: "{permission}"
-layout: docs
 categories: ["Theming", "Smarty", "Smarty Functions"]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Redirector
-layout: docs
 categories: ["Addons"]
 ---
 
