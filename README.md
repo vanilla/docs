@@ -1,6 +1,6 @@
 # Vanilla Docs
 
-[![Build Status](http://img.shields.io/travis/vanilla/docs/master.svg?style=flat)](https://travis-ci.org/vanilla/docs) [![Dependency Status](http://img.shields.io/gemnasium/vanilla/docs.svg?style=flat)](https://gemnasium.com/vanilla/docs) [![Open Issues](http://img.shields.io/github/issues/vanilla/vdocs.svg?style=flat)](https://github.com/vanilla/docs/issues)
+[![Open Issues](http://img.shields.io/github/issues/vanilla/docs.svg?style=flat)](https://github.com/vanilla/docs/issues)
 
 ## Contributing
 
