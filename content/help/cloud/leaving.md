@@ -14,7 +14,7 @@ There are four custom components to any forum:
 
 * Database
 * Uploaded files (avatars, images, etc)
-* Custom theme or plugins
+* Theme or plugin done as a _customer-specific_ customization
 * Config
 
 Of these, the only one we do not ever provide is the config. This is simply because it would not help you at all, and would  possibly undermine you. You still need to set up a new forum using the installer anyway.
