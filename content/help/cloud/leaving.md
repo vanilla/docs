@@ -43,8 +43,6 @@ We typically need two working days' notice to provide your uploaded files. For s
 
 We generally cannot coordinate a "final backup" of these files for a specific time (downloading from a CDN is very slow) unless it's very small.
 
-**A note on file paths:** You'll want to unzip what we send you into your `/uploads` folder if you're moving to open source. You may need to find and delete any instance of `cf:` or `~cf/` in file paths stored in the database (try `GDN_User.Photo` and `GDN_Media.Path`). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the `/uploads` folder (which you should not need to prepend).
-
 ## Open source
 
 If you plan to continue using Vanilla on your own, there's both good news and bad. The good news is that we don't maintain a private fork of Vanilla. Therefore, your data will mostly work as-is without further data conversions. The bad news is it's a little more complicated than that.
@@ -53,7 +51,7 @@ First, you may need to build the [latest version](https://github.com/vanilla/van
 
 Second, not all cloud-based addons are open source. There are open source alternatives for some, but you may need to convert the data yourself. One example of this is Badges.
 
-Thirdly, you may need to do some manual work to make existing file uploads appear correctly. See the previous section for more info.
+Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You'll want to unzip what we send you into your `/uploads` folder if you're moving to open source. You may need to find and delete any instance of `cf:` or `~cf/` in file paths stored in the database (try `GDN_User.Photo` and `GDN_Media.Path`). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the `/uploads` folder (which you should not need to prepend).
 
 ## Support
 
