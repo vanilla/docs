@@ -10,14 +10,14 @@ Hey, it happens. On rare occassion, we need to go our separate ways. We hate to 
 
 ## Getting your data
 
-There are four non-code components to any forum:
+There are four custom components to any forum:
 
 * Database
 * Uploaded files (avatars, images, etc)
 * Custom theme or plugins
 * Config
 
-Of these, the only one we do not ever provide is the config. This is simply because it would not help you at all, and would actually possibly undermine you. You still need to set up a new forum using the installer anyway.
+Of these, the only one we do not ever provide is the config. This is simply because it would not help you at all, and would  possibly undermine you. You still need to set up a new forum using the installer anyway.
 
 We only provide custom themes or plugins that you created yourself, or that we created from scratch on your behalf under contract. If you customized one of our _propritary_ cloud themes via your Dashboard, we cannot assist with transitioning that theme.
 
