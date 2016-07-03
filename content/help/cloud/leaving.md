@@ -21,7 +21,7 @@ Of these, the only one we do not ever provide is the config. This is simply beca
 
 We only provide custom themes or plugins that you created yourself, or that we created from scratch on your behalf under contract. If you customized one of our _propritary_ cloud themes via your Dashboard, we cannot assist with transitioning that theme.
 
-We provide complete database backups and uploaded files. There is no charge for this, with the reasonable caveats explained below.
+We provide complete database backups and uploaded files. There is no charge for this, with the reasonable caveats explained below. However, your billing must be up to date without exception.
 
 ### Database
 
@@ -35,13 +35,13 @@ Here is the exception: if your site exceeds any of the following limits, we may 
 
 Barring your objection, we may truncate your activity or log tables because they're not very helpful and can make the dump exponentially larger (and therefore more difficult for you).
 
-We can coordinate final backups for a specific time of a weekday during the hours 10am-4pm Eastern time. Doing so outside of those hours may cost a fee to schedule staff to be available.
+We only provide one database dump per month. If you are leaving, we will make a one-time exception so that you can get an advanced copy for preparation. We can coordinate a final backup for a specific time of a weekday during the hours 10am-4pm Eastern time if requested. Doing so outside of those hours may cost a fee to schedule staff to be available.
 
 ### Uploaded files
 
 We typically need two working days' notice to provide your uploaded files. For sites with exceptional amounts of files (in excess of 10GB) we may require a week's notice.
 
-We generally cannot coordinate a "final backup" of these files for a specific time (downloading from a CDN is very slow) unless it's very small.
+Please only request this once. We generally cannot coordinate a "final backup" of these files for a specific time (downloading from a CDN is very slow) unless it's very small.
 
 ## Open source
 
