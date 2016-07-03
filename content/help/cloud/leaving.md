@@ -49,7 +49,7 @@ If you plan to continue using Vanilla on your own, there's both good news and ba
 
 First, you may need to build the [latest version](https://github.com/vanilla/vanilla) of the code from GitHub (`master` branch). Try the [latest stable release](https://vanillaforums.org/addon/vanilla-core) of Vanilla first, but if that doesn't work, you'll need to use Composer.
 
-Second, not all cloud-based addons are open source. There are open source alternatives for some, but you may need to convert the data yourself (We **do* provide any cloud-based addon data in your database). One example of this is Badges. 
+Second, not all cloud-based addons are open source. There are open source alternatives for some, but you may need to convert the data yourself (We **do** provide any cloud-based addon data in your database). One example of this is Badges. 
 
 Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You'll want to unzip what we send you into your `/uploads` folder if you're moving to open source. You may need to find and delete any instance of `cf:` or `~cf/` in file paths stored in the database (try `GDN_User.Photo` and `GDN_Media.Path`). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the `/uploads` folder (which you should not need to prepend).
 
