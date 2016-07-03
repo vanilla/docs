@@ -53,6 +53,8 @@ Second, not all cloud-based addons are open source. There are open source altern
 
 Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You'll want to unzip what we send you into your `/uploads` folder if you're moving to open source. You may need to find and delete any instance of `cf:` or `~cf/` in file paths stored in the database (try `GDN_User.Photo` and `GDN_Media.Path`). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the `/uploads` folder (which you should not need to prepend).
 
+You may find additional help from the [volunteer community](https://vanillaforums.org/discussions) and the [developer docs](http://docs.vanillaforums.com/developers/).
+
 ## Support
 
 We do not provide support for leaving the cloud beyond this document and delivering your data as promised. It's a hard goodbye, but if you roll up your sleeves, we're confident you'll have the tools you need to build your own future.
