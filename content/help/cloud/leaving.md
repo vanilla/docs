@@ -19,7 +19,7 @@ There are four custom components to any forum:
 
 Of these, the only one we do not ever provide is the config. This is simply because it would not help you at all (useless data & incompatible anyway).
 
-We only provide custom themes or plugins that you created yourself, or that we created from scratch on your behalf under contract. If you customized one of our _propritary_ cloud themes via your Dashboard, we cannot assist with transitioning that theme.
+We only provide custom themes or plugins that you created yourself, or that we created from scratch on your behalf under contract. If you customized one of our _proprietary_ cloud themes via your Dashboard, we cannot assist with transitioning that theme.
 
 We provide complete database backups and uploaded files. There is no charge for this, with the reasonable caveats explained below. However, your billing must be up to date without exception.
 
