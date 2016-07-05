@@ -23,21 +23,52 @@
         
         {{ partial "header.html" . }}
         
-        {{ if .Params.toc }}
-            <div class="col-lg-8 col-md-12">
-                {{ partial "title.html" . }}
-                {{ .Content }}
+        {{ if .Params.notoc }}
+        
+            <div class="docs-title-wrapper">
+                <div class="row">
+                    <div id="title" class="column column-12">
+                        {{ partial "title.html" . }}
+                    </div>
+                </div>
             </div>
-            <div id="toc" class="col-lg-offset-6 toc {{ if gt (len .TableOfContents) 2500 }}compact{{ end }}">
-                {{ .TableOfContents }}
+        
+            <div class="docs-content">
+                <div class="row">
+                    <div id="content" class="column column-12">
+                        {{ .Content }}
+                    </div>
+                </div>
             </div>
+        
         {{ else }}
 
-            {{ partial "title.html" . }}
-            {{ .Content }}
+            <div class="docs-title-wrapper">
+                <div class="row">
+                    <div class="column column-3"></div>
+                    <div id="title" class="column column-9">
+                        {{ partial "title.html" . }}
+                    </div>
+                </div>
+            </div>
+        
+            <div class="docs-content">
+                <div class="row">
+                    <div id="toc" class="column column-3 toc {{ if gt (len .TableOfContents) 2500 }}compact{{ end }}">
+                        <div class="docs-nav">
+                            {{ .TableOfContents }}
+                        </div>
+                    </div>
+
+                    <div id="content" class="column column-9">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
 
         {{ end }}
-        
+
+        {{ partial "platforms.html" . }}
         {{ partial "footer.html" . }}
     
     </body>

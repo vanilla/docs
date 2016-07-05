@@ -1,5 +1,6 @@
 .DS_Store
 .tmp
+npm-debug.log
+/build/scss/_componentMap.scss
 node_modules/
 public/
-npm-debug.log

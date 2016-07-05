@@ -1,10 +1,11 @@
 .docs {
     
     .docs-footer {
+        background-color: $panelDark;
         font-size: 12px;
         color: $lightText;
         letter-spacing: 0.05em;
-        margin: 80px 0px 40px 0px;
+        margin: 20px 0px;
         
         a {
             color: $lightText;
@@ -16,7 +17,7 @@
     
         .docs-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             margin: 5px 0px;
             
             a {

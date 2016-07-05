@@ -1,16 +1,37 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        
+        <ul class="sidebar-menu">
+            {{ $currentNode := . }}
+            {{ range .Site.Menus.main }}
+                {{ if .HasChildren }}
+
+                    <li class="sub-menu{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+                        <a href="javascript:;" class="">
+                            {{ .Pre }}
+                            <!--<i class="icon_desktop"></i>-->
+                            <span>{{ .Name }}</span>
+                            <span class="menu-arrow fa {{if $currentNode.HasMenuCurrent "main" . }}fa-angle-down{{else}}fa-angle-right{{end}}"></span>
+                        </a>
+                        <ul class="sub{{if $currentNode.HasMenuCurrent "main" . }} open{{end}}">
+                            {{ range .Children }}
+                            <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{.URL}}">{{ .Name }}</a> </li>
+                            {{ end }}
+                        </ul>
+                        
+                {{else}}
+                
+                    <li>
+                        <a class="" href="{{.URL}}">
+                            {{ .Pre }}
+                            <!--<i class="icon_house_alt"></i>-->
+                            <span>{{ .Name }}</span>
+                        </a>
+                        
+                {{end}}
+                </li>
+            {{end}}
+        </ul>
+        
+    </div>
+</aside>

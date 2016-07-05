@@ -1,0 +1,26 @@
+.docs-platform {
+    background: $panelSlate;
+    border-top: 1px solid $borderDarken;
+    padding: 30px 0px;
+    
+    .docs-platform-choice {
+        padding-right: 150px;
+        color: $lighterText;
+        
+        h3 {
+            margin: 0px 0px 10px 0px;
+            font-size: 26px;
+            font-weight: lighter;
+        }
+        
+        p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        
+        a {
+            color: $vanillaBlue;
+            border-bottom: 1px dotted $vanillaBlue;
+        }
+    }
+}
