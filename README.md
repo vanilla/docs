@@ -20,6 +20,7 @@ The "Developers" folder is for all technical documentation. This is targetted at
 * Use H1 (`#` in Markdown) as your top-level headings in each file (and only once).
 * Use H2 (`##` in Markdown) for major sub-topics and H3 (`###`) for minor headings.
 * All images go within [`static/img`](static/img) and must be referenced absolutely (`/img/foo.png`).
+* Images *may* be deeply nested for organizational purposes.
 * Use descriptive image names that include their topic area and what they depict, and `hyphenate-the-names.png`.
 
 ### Writing

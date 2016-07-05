@@ -646,4 +646,12 @@ a:hover {
   color: #0291DB;
   border-bottom: 1px dotted #0291DB;
 }
+
+.docs.docs-layout-section-developer .docs-header {
+  background-color: #333333;
+}
+
+.docs.docs-layout-section-developer .docs-header .docs-header-tray .docs-header-search .docs-search-wrap {
+  background: #232323;
+}
 /*# sourceMappingURL=docs.css.map */
