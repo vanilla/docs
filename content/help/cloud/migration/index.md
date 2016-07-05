@@ -89,4 +89,4 @@ If a client does not wish to provide email addresses during a migration, we reco
 
 Most [single sign-on services](http://docs.vanillaforums.com/features/sso/) work by matching accounts based on email address. To work in this scenario, the authentication endpoint must construct (or have on record) an identical dummy email address. This allows the seamless authentication of the user against the correct account without using real personal info.
 
-More information is available from our [Privacy Policy](https://vanillaforums.com/info/privacy) and our [developer docs on data privacy](/developers/data-privacy).
+More information is available from our [Privacy Policy](https://vanillaforums.com/info/privacy) and our [developer docs on data privacy](/developer/data-privacy).

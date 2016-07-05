@@ -9,7 +9,7 @@ menu:
 
 ## Quickstart Links
 
-* Read about our hooks system: [Extending Vanilla with plugins](/developers/plugins)
+* Read about our hooks system: [Extending Vanilla with plugins](/developer/plugins)
 * Download the official [Example plugin](http://vanillaforums.org/addon/example-plugin)
 * Download other plugins from the [Addon Directory](http://vanillaforums.org/addons) and borrow their code.
 * Get help in the [developer community](http://vanillaforums.org/categories/developers)
@@ -122,7 +122,7 @@ That whole definitions section probably didn't *seem* very quick, but you just d
 
 Try the [Eventi plugin](http://vanillaforums.org/addon/eventi-plugin) to visualize where events are fired in Vanilla. Use the hooks in the [Example plugin](http://vanillaforums.org/addon/example-plugin) to see what they do.
 
-Read the [plugin hooks tutorial](/developers/plugins) for more on how to override & extend Vanilla.
+Read the [plugin hooks tutorial](/developer/plugins) for more on how to override & extend Vanilla.
 
 Use an IDE and use the project search functionality to locate instances of `FireEvent` in the [core repo](http://github.com/vanilla/vanilla). Many doc blocks show what events are fired within their methods. Or, search for `_Handler` in the [addons repo](http://github.com/vanilla/addons) to see examples and common uses.
 
@@ -146,7 +146,7 @@ public function SomeController_SomeEvent_Handler($Sender, $Args) {
 }
 ```
 
-Use the `$Sender` variable to call methods from the controller or model that triggered your code. Use the `$Args` variable to change parameters or detect certain situations. This is where you'll want to start digging into the finer points of [extending Vanilla with plugins](/developers/plugins).
+Use the `$Sender` variable to call methods from the controller or model that triggered your code. Use the `$Args` variable to change parameters or detect certain situations. This is where you'll want to start digging into the finer points of [extending Vanilla with plugins](/developer/plugins).
 
 You can also use normal methods to reuse code. For instance, maybe you need 2 different hooks to do the same thing:
 
@@ -204,11 +204,11 @@ That should put you well on your way to your first Vanilla plugin! Dream big, bu
 
 Final tips:
 
-* Use the [troubleshooting guide](/developers/troubleshooting).
+* Use the [troubleshooting guide](/developer/troubleshooting).
 * Use `decho()` to output variables & `Trace()` to leave breadcrumbs.
 * **Wrap all URLs** with `Url()` to account for subfolder'd forums.
 * **Never hard-code paths**. Use constants like `PATH_UPLOADS`.
 * **Use models** to access the database rather than writing your own queries. E.g.: Need discussions? Look at `DiscussionModel`.
-* Adding your own data to the database? Read about the [database query builder](/developers/framework/database).
+* Adding your own data to the database? Read about the [database query builder](/developer/framework/database).
 
 And, as always, ask the talented & helpful folks on our [community forum](http://vanillaforums.org/discussions) when you get stuck.

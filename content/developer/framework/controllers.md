@@ -13,7 +13,7 @@ In our MVC context, controllers are the traffic cops. They receive a parsed requ
 
 ### Dispatcher
 
-Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (`Gdn_Dispatcher`) receives incoming [requests](/developers/framework/requests) and invokes the appropriate controller(s).
+Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (`Gdn_Dispatcher`) receives incoming [requests](/developer/framework/requests) and invokes the appropriate controller(s).
 
 ### Mapping URLs
 
@@ -40,9 +40,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
 ```
 
-Consult the [community](/developers/community) if you need assistance configuring another server platform such as nginx or IIS.
+Consult the [community](/developer/community) if you need assistance configuring another server platform such as nginx or IIS.
 
-Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the [config](/developers/configuration) setting to enable pretty URLs is:
+Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the [config](/developer/configuration) setting to enable pretty URLs is:
 
 ```
 $Configuration['Garden']['RewriteUrls'] = TRUE;

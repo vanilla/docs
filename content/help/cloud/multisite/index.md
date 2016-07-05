@@ -20,7 +20,7 @@ This is a classic forum setup. It is the equivalent of 1 installation of forum s
 
 ### The Hub
 
-A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each **Node** is a **Single Community** with the added ability of being [synched](/cloud/multisite/sync) with changes made on the Hub. Each Node is otherwise independent from each other - **separate** user lists, private message exchanges, and activity streams.
+A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each **Node** is a **Single Community** with the added ability of being [synched](/help/cloud/multisite/sync) with changes made on the Hub. Each Node is otherwise independent from each other - **separate** user lists, private message exchanges, and activity streams.
 
 Each Node is accessible via either a subdomain *or* a subfolder off a domain shared by the whole Hub. This is called the **Hub URL Format**. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.
 
@@ -56,4 +56,4 @@ While we do support robust embedding (iframe) solutions, we strongly recommend a
 
 ### SSL certificates
 
-We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on [providing SSL certificates](/cloud/ssl).
+We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on [providing SSL certificates](/help/cloud/ssl).

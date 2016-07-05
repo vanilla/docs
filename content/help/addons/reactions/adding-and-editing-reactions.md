@@ -13,7 +13,7 @@ Vanilla comes with a wide range of reactions in your Dashboard, of which a few a
 
 Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.
 
-![The list of Reactions in the Dashboard](/images/reactions-list.png)
+![The list of Reactions in the Dashboard](/img/help/addons/reactions/list.png)
 
 Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.
 
@@ -35,7 +35,7 @@ To add a new reaction, contact support or your sales representative.
 
 You can access "Advanced Settings" for Reactions via a link near the top of the Reactions page of the Dashboard.
 
-![The Advanced Settings page](/images/reactions-advanced.png)
+![The Advanced Settings page](/img/help/addons/reactions/advanced.png)
 
 "Show Who Reacted to Posts" changes how reaction tallies are displayed under comments. The default is "in a popup" which requires hovering your mouse pointer over the reaction to see who reacted that way. Use "As avatars" on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select "Don't show" to hide it entirely.
 

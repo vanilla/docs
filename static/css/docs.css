@@ -533,6 +533,11 @@ a:hover {
   background-color: #FFFBEF;
 }
 
+.docs-content #content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .docs-content #sidebar {
   font-size: 12px;
   padding-right: 20px;
@@ -545,11 +550,74 @@ a:hover {
 }
 
 .docs-content #sidebar ul {
+  list-style-type: none;
   margin: 0px;
+  padding-left: 20px;
 }
 
 .docs-content #sidebar ul li {
-  padding-right: 10px;
+  padding: 8px 10px 8px 0px;
+}
+
+.docs-content #sidebar ul li:first-child {
+  padding-top: 16px;
+}
+
+.docs-content #sidebar ul li:last-child {
+  padding-bottom: 16px;
+}
+
+.docs-content #sidebar ul li a {
+  color: #808A8F;
+}
+
+.docs-content #sidebar ul li.active a {
+  color: #0291DB;
+  font-weight: bolder;
+}
+
+.docs-content #sidebar ul li:before {
+  position: relative;
+  left: -14px;
+  top: 2px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.docs-content #sidebar ul li.nest:before {
+  content: "\f0da";
+}
+
+.docs-content #sidebar ul li.nest.active:before {
+  content: "\f0d7";
+}
+
+.docs-content #sidebar ul.nav-tier1 > li {
+  border-bottom: 1px dotted #E4E4E4;
+}
+
+.docs-content #sidebar ul.nav-tier1 > li:last-child {
+  padding-bottom: 8px;
+}
+
+.docs-content #sidebar ul.nav-tier1 > li a {
+  text-transform: uppercase;
+  color: #606A6F;
+  font-size: 13px;
+}
+
+.docs-content #sidebar ul.nav-tier1 > li.active a {
+  color: #0291DB;
+}
+
+.docs-content #sidebar ul.nav-tier1 > ul {
+  border-bottom: 1px dotted #E4E4E4;
 }
 
 .docs-platform {

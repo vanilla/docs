@@ -9,15 +9,15 @@ menu:
 
 ## Requests
 
-Vanilla's base Controller class (the class from which all [controllers](/developers/framework/controllers) are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.
+Vanilla's base Controller class (the class from which all [controllers](/developer/framework/controllers) are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.
 
 ### DeliveryType
 
 There are four delivery types available:
 
 1. `DELIVERY_TYPE_ALL`: Entire page (default).
-2. `DELIVERY_TYPE_ASSET`: Content for the requested [asset](/developers/framework/assets).
-3. `DELIVERY_TYPE_VIEW`: Only the requested [view](/developers/framework/views).
+2. `DELIVERY_TYPE_ASSET`: Content for the requested [asset](/developer/framework/assets).
+3. `DELIVERY_TYPE_VIEW`: Only the requested [view](/developer/framework/views).
 4. `DELIVERY_TYPE_BOOL`: Only report request success (true/false).
 
 If no delivery type is provided in the request, `DELIVERY_TYPE_ALL` is assumed.

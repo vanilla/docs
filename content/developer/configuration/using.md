@@ -11,11 +11,11 @@ menu:
 
 Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.
 
-If you have large quantities of data or data that is written frequently, consider using the [database](/developers/framework/database) instead.
+If you have large quantities of data or data that is written frequently, consider using the [database](/developer/framework/database) instead.
 
 ## Reading from config
 
-The `c` function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in [dot notation](/developers/configuration). The second is an optional default value to return if requested config setting is not defined.
+The `c` function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in [dot notation](/developer/configuration). The second is an optional default value to return if requested config setting is not defined.
 
 Example:
 `$Value = c('Name.Of.Setting', 'DefaultValue');`

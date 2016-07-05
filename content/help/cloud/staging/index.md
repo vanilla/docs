@@ -14,7 +14,7 @@ For higher [plan levels](http://vanillaforums.com/plans), we provide a separate 
 
 ### Test data
 
-We will typically use your staging forum as the destination for your [test migration](/cloud/migration). For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don't support huge staging datasets in the longer-term.
+We will typically use your staging forum as the destination for your [test migration](/help/cloud/migration). For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don't support huge staging datasets in the longer-term.
 
 ### Access precautions
 

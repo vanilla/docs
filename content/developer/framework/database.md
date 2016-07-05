@@ -11,7 +11,7 @@ menu:
 
 Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in `/library/databases`). However, at this time, the Vanilla team has no plans to support additional databases.
 
-The best way to access the database is via existing [models](/developers/framework/models). For instance, to get a list of discussions, use the `Get` method in the `DiscussionModel`. You can rely on model-based access to already be optimized for performance and utilize caching if it's available.
+The best way to access the database is via existing [models](/developer/framework/models). For instance, to get a list of discussions, use the `Get` method in the `DiscussionModel`. You can rely on model-based access to already be optimized for performance and utilize caching if it's available.
 
 ### Building queries
 

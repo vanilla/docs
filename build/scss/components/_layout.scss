@@ -118,6 +118,11 @@
                 background-color: $panelYellow;
             }
         }
+        
+        img {
+            max-width: 100%; 
+            height: auto;
+        }
     }
     
     #sidebar {
@@ -131,9 +136,87 @@
         }
         
         ul {
+            list-style-type: none;
             margin: 0px;
+            padding-left: 20px;
+            
             li {
-                padding-right: 10px;
+                padding: 8px 10px 8px 0px;
+                
+                &:first-child {
+                    padding-top: 16px;
+                }
+                
+                &:last-child {
+                    padding-bottom: 16px;
+                }
+                
+                a {
+                    color: $lighterText;
+                }
+                
+                &.active {
+                    a {
+                        color: $vanillaBlue;
+                        font-weight: bolder;
+                    }
+                }
+                
+                &:before {
+                    position: relative;
+                    left: -14px;
+                    top: 2px;
+                    
+                    display: block;
+                    width: 0px;
+                    height: 0px;
+                    
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+                
+                &.nest {
+  
+                    &:before {
+                        content: "\f0da";
+                    }
+                    
+                    &.active {
+                        &:before {
+                            content: "\f0d7";
+                        }
+                    }
+                }
+            }
+        }
+        
+        ul.nav-tier1 {
+            
+            > li {
+                border-bottom: 1px dotted $borderDarken;
+                
+                &:last-child {
+                    padding-bottom: 8px;
+                }
+                
+                a {
+                    text-transform: uppercase;
+                    color: $regularText;
+                    font-size: 13px;
+                }
+                
+                &.active {
+                    a {
+                        color: $vanillaBlue;
+                    }
+                }
+            }
+            
+            > ul {
+                border-bottom: 1px dotted $borderDarken;
             }
         }
     }

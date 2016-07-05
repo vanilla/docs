@@ -55,7 +55,7 @@ Cloud users can contact support to make these changes.
 
 Clicking the "Sign In" button in Vanilla generates an asynchronous request **in the user's browser session** back to the main website. This means the user's cookies are sent as if they had visited the page directly, and that your normal login detection logic will work.
 
-![](/features/sso/images/jsconnect-overview.png)
+![](/img/help/features/sso/jsconnect-overview.png)
 
 ## Two Flavors of SSO
 There are two implementations of SSO that jsConnect supports. You can implement either of the methods or both as they serve different purposes.
@@ -70,7 +70,7 @@ Vanilla also has the ability to be embedded in an html page either as an entire 
 
 When setting up a jsConnect connection in full-site mode, you have the option to specify it as "default". Doing this attaches it to the special `/sso` endpoint in Vanilla. When a user clicks "Forum" in your website's navigation, instead of linking to the forum homepage, instead link them to the `/sso` page. This will auto-fire the asynchronous call back to your website rather than waiting for the user to click "sign in", then drops them on the homepage as normal.
 
-For more information, read our [technical overview](/features/sso/jsconnect/overview).
+For more information, read our [technical overview](/help/features/sso/jsconnect/overview).
 
 ## WordPress plugin
 

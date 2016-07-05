@@ -58,4 +58,4 @@ The Skeleton application in `/applications/skeleton` is heavily documented inlin
 
 ## Where to start
 
-Not sure what doc to read next? We recommend reading the [plugin quickstart](/developers/plugins/quickstart), then try [Controller](/developers/framework/controllers) and [Models](/developers/framework/models). It's a self-guided tour from there! Don't forget to stop by the [community forum](http://vanillaforums.org/discussions) for guidance. When in doubt, dance.
+Not sure what doc to read next? We recommend reading the [plugin quickstart](/developer/plugins/quickstart), then try [Controller](/developer/framework/controllers) and [Models](/developer/framework/models). It's a self-guided tour from there! Don't forget to stop by the [community forum](http://vanillaforums.org/discussions) for guidance. When in doubt, dance.

@@ -38,7 +38,7 @@ All set? OK, let's jump in.
 
 ### 1. Export old forum data
 
-Vanlla Porter exports from a database to a special "Porter file" format that Vanilla can import. We currently support [these platforms](/developers/importing/support).
+Vanlla Porter exports from a database to a special "Porter file" format that Vanilla can import. We currently support [these platforms](/developer/importing/support).
 
 If you have a very large forum (millions of posts), see the **Special Steps & Notes** below before beginning.
 
@@ -140,7 +140,7 @@ If you run into problems, your platform isn't supported, or want to reset them a
 
 Many legacy platform redirects can be handled by the **Redirector** plugin in the [Addons repository](https://github.com/vanilla/addons). Simply enable the plugin. Check the description for what it supports currently.
 
-You can create custom redirects as needed using the [Routes](/developers/routes) feature in the Dashboard. Use regular expressions to match incoming URL patterns and 301 redirects to their new place. Some imports will automatically create Routes for you, so check to see.
+You can create custom redirects as needed using the [Routes](/developer/routes) feature in the Dashboard. Use regular expressions to match incoming URL patterns and 301 redirects to their new place. Some imports will automatically create Routes for you, so check to see.
 
 If you run the import on localhost and then copy the database to production, be sure to manually transfer those special Routes as well.
 

@@ -3,7 +3,7 @@
 {{ $currentNode := . }}
 {{ range .Site.Menus.developer }}
 
-    <li  class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}">
+    <li  class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
         <a href="{{.URL}}">{{.Name}}</a>
     </li>
     
@@ -12,9 +12,9 @@
         {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
         
         {{ if .HasChildren }}
-            <ul>{{ range .Children }}
+            <ul class="nav-tier2">{{ range .Children }}
 	    
-                <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}">
+                <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                     <a href="{{.URL}}">{{ .Name }} </a>
                 </li>
                 
@@ -23,9 +23,9 @@
                     {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
                
                     {{ if .HasChildren }}
-                        <ul>{{ range .Children }}
+                        <ul class="nav-tier3">{{ range .Children }}
 
-                            <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}">
+                            <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                 <a href="{{.URL}}">{{ .Name }}</a>
                             </li>
 
@@ -34,9 +34,9 @@
                                 {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
                                 
                                 {{ if .HasChildren }}
-                                    <ul>{{ range .Children }}
+                                    <ul class="nav-tier4">{{ range .Children }}
                                         
-                                        <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}">
+                                        <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                             <a href="{{.URL}}">{{ .Name }} </a>
                                         </li>
 
@@ -45,9 +45,9 @@
                                             {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
                                             
                                             {{ if .HasChildren }}
-                                                <ul>{{ range .Children }}
+                                                <ul class="nav-tier5">{{ range .Children }}
 				    
-                                                    <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}">
+                                                    <li class="{{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                                         <a href="{{.URL}}">{{ .Name }} </a>
                                                     </li>
 				    

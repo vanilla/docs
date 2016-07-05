@@ -17,13 +17,13 @@ menu:
 1. [Triage](#triaging-issues) issues already reported!
 1. Test [pre-releases](http://vanillaforums.org/categories/blog).
 1. Contribute [docs](https://github.com/vanillaforums/VanillaDocs).
-1. Help [translate Vanilla](/developers/locales).
+1. Help [translate Vanilla](/developer/locales).
 1. Evaluate community addons & offer feedback.
 1. Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it's like to use Vanilla.
 
 ### Developers
 
-1. Contribute code via [pull requests](/developers/contributing/pull-requests) (requires [Contributor Agreement](http://vanillaforums.org/contributors))
+1. Contribute code via [pull requests](/developer/contributing/pull-requests) (requires [Contributor Agreement](http://vanillaforums.org/contributors))
 1. Contribute addons & themes to the [Official Directory](http://vanillaforums.org/addons).
 1. Audit code for security & disclose issues [responsibly](/developers).
 

@@ -28,7 +28,7 @@ You can also set up additional email addresses to forward to individual categori
 
 When you have Vanilla Pop enabled you will see an __Incoming Email__ item in your dashboard under Site Settings. The page looks like this:
 
-![Vanilla Pop Settings](/addons/vanilla-pop/images/vanilla-pop.png)
+![Vanilla Pop Settings](/img/help/addons/vanilla-pop/list.png)
 
 Let's run down the settings one by one:
 

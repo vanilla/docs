@@ -14,7 +14,7 @@ Vanilla comments allow any website with a unique content id to add a commenting 
 
 ## What are Universal Comments?
 
-We made Comment integration easy with WordPress ([learn more about that here](/features/wordpress/using-comments/).), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.
+We made Comment integration easy with WordPress ([learn more about that here](/help/features/wordpress/using-comments/).), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.
 
 ## How to use Universal Comments.
 
@@ -24,15 +24,15 @@ This identifier is how you can assign a comment box from Vanilla to a specific d
 
 Once you've determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Blog Comments” under the “Forum” heading. You will see the following:
 
-![Universal Comments](/features/comments/images/Blog_Comments-settings.png)
+![Universal Comments](/img/help/features/comments/settings.png)
 
 You want to make sure you have enabled embedding. The next step is to select the Universal Code setting tab:
 
-![Universal Comments tab](/features/comments/images/Blog_Comments_-universal_code.png)
+![Universal Comments tab](/img/help/features/comments/universal-code.png)
 
 On this tab you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.
 
-![Universal Comments tab](/features/comments/images/Blog_Comments_Universal-Code-Identifier.png)
+![Universal Comments tab](/img/help/features/comments/universal-code-identifier.png)
 
 Please note, before you paste the code in your platform’s template or theme, you will need to modify the elements highlighted in yellow.
 
@@ -54,4 +54,4 @@ There are some additional settings you may wish to also review :
 
 
 
-If you are using WordPress, check out our [how to integrate comments with WordPress](/features/wordpress/using-comments/).
+If you are using WordPress, check out our [how to integrate comments with WordPress](/help/features/wordpress/using-comments/).

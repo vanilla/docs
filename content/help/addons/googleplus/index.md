@@ -24,4 +24,4 @@ The Google Plus Sign-In adds the ability to sign to your community with Google P
 7. Copy over Client ID and Secret into appropriate fields in Vanilla Dashboard.
 8. If you have never used Google APIs before you will also need to fill in Consent Screen.
 
-![Settings in Google Plus](/addons/googleplus/images/Google_Developers_Console_Settings.png)
+![Settings in Google Plus](/img/help/addons/googleplus/settings.png)

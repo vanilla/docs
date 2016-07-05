@@ -98,7 +98,7 @@ Magic methods only work in classes that extend `Gdn_Pluggable`. For example, not
 
 Is your addon a bit more complex? Add a `controllers` folder and add your own controller classes. They will automatically be detected and be dispatched to like normal controllers. This functionality is new in Vanilla 2.2.
 
-As a reminder, controllers should extend Gdn_Controller. [Read more about controllers](/developers/framework/controllers).
+As a reminder, controllers should extend Gdn_Controller. [Read more about controllers](/developer/framework/controllers).
 
 ## Virtual Controller (deprecated)
 

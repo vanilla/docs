@@ -17,6 +17,6 @@ Vanilla Porter is a tool that you can upload to your current web server to run i
 
 All imports will completely overwrite all data in your forum (including your users), so only import to a fresh forum installation that doesn't have any data you want to save. We recommend backing up your Vanilla database first as an extra precaution.
 
-[Supported platforms & compatibility notes](/developers/importing/support)
+[Supported platforms & compatibility notes](/developer/importing/support)
 
-[Using Vanilla Porter](/developers/importing/porter)
+[Using Vanilla Porter](/developer/importing/porter)

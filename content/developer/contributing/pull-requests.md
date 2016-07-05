@@ -39,7 +39,7 @@ Never try to address multiple, unrelated issues in a single pull request.
 * Did you target the correct branch (usually `master`)?
 * Is your title written like a concise release note?
 * Does your description provide rationale for your change?
-* Did you carefully follow our [coding standards](/developers/contributing/coding-standard)?
+* Did you carefully follow our [coding standards](/developer/contributing/coding-standard)?
 
 ### Feedback on pull requests
 
