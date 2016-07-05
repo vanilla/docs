@@ -52,8 +52,15 @@ This is how the Akismet plugin uses the ConfigurationModule to build a simple se
 ```php
 $Cf = new ConfigurationModule($Sender);
 $Cf->Initialize(array(
-    'Plugins.Akismet.Key' => array('Description' => $KeyDesc),
-    'Plugins.Akismet.Server' => array('Description' => 'You can use either Akismet or TypePad antispam.', 'Control' => 'DropDown', 'Items' => array('' => 'Aksimet', 'api.antispam.typepad.com' => 'TypePad', 'DefaultValue' => ''))
+    'Plugins.Akismet.Key' => ['Description' => $KeyDesc],
+    'Plugins.Akismet.Server' => [
+        'Description' => 'You can use either Akismet or TypePad antispam.', 
+        'Control' => 'DropDown', 'Items' => [
+            '' => 'Aksimet', 
+            'api.antispam.typepad.com' => 'TypePad', 
+            'DefaultValue' => ''
+        ]
+    ]
 ));
 $Cf->RenderAll();
 ```

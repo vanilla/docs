@@ -8,7 +8,7 @@ menu:
         identifier: "features-emails"
 ---
 
-# Email Appearance
+## Email Appearance
 
 You can choose between sending plaintext or HTML emails. The difference is that HTML emails can include colors, images and other styling while plaintext emails are, well, plain text.
 

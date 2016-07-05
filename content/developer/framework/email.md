@@ -7,7 +7,7 @@ menu:
         parent: "framework"
 ---
 
-# Sending Emails
+## Sending Emails
 
 The Garden framework includes an Email object for sending and configuring emails. The formatting of Vanilla Emails is handled by the EmailTemplate property of the Email object.
 

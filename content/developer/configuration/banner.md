@@ -7,7 +7,7 @@ menu:
         parent: "configuration"
 ---
 
-##Banner Settings
+## Banner Settings
 
 On the Banner Settings page you can control the following aspects of your forum:
 

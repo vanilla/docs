@@ -9,8 +9,9 @@ menu:
 
 ## Open Source Change Log
 
-2.1
-===
+Release notes
+
+## 2.1
 
 ### 2.1.6
 *[Released 21 Nov 2014](http://vanillaforums.org/discussion/28555/vanilla-2-1-6-released)*
@@ -75,8 +76,7 @@ Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discus
 * [Beta 3](http://vanillaforums.org/discussion/26518/vanillla-2-1-beta-3)
 * [Release Candidate 1](http://vanillaforums.org/discussion/26626/vanilla-2-1-release-candidate)
 
-2.0.18
-===
+## 2.0.18
 
 ### 2.0.18.14
 *[Released 30 Oct 2014](http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14)*
@@ -206,8 +206,7 @@ Fixes:
 * Fixed profile to not ask for old password if one was never set (via SSO)
 * Fixed hundreds of other bugs too numerous to list, including dozens of SQL-related bugs.
 
-2.0.17
-===
+## 2.0.17
 
 ### 2.0.17.10
 SECURITY: Fixed Facebook, Twitter, and Embed plugins' access control.
@@ -246,8 +245,8 @@ Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal e
 * Fixed bug where mobile theme would sometimes display incorrect "last comment date".
 * Optimized Announced Discussions query to improve performance.
 
-Older Releases
-===
+## Older Releases
+
 *Unlisted versions were skipped or replaced the same day.*
 
 * 2.0.16 - 2010-12-02

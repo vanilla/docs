@@ -7,7 +7,7 @@ menu:
         parent: "contributing"
 ---
 
-# Code of Conduct
+## Code of Conduct
 
 _Adapted from Swift's Code of Conduct v1.3 for now because a copied code is better than no code._
 

@@ -7,7 +7,7 @@ menu:
         parent: "contributing"
 ---
 
-# Coding Standard
+## Standards
 
 As of May 2014, Vanilla will adhere to [PSR-2] (and therefore [PSR-1]) with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
 
@@ -15,7 +15,7 @@ We've named our primary exception to PSR-2 the **[Lord Brackos](https://twitter.
 
 We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it's annoying and hard to read when everything is styled differently. Key words in this document ("MUST", "SHOULD", etc.) are used as described in [RFC 2119] which is as boring and obvious as you expect but mercifully brief.
 
-## PHP Version
+### PHP Version
 
 All code in `master` must work under PHP 5.4.
 
@@ -23,7 +23,7 @@ All code in `release/2.2` must work under PHP 5.3.
 
 We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.
 
-## Check out CodeSniffer
+### Check out CodeSniffer
 
 CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.
 
@@ -43,8 +43,7 @@ Thus ends the readable part of your adventure as you descend into the dry, techn
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 
 
-1. Overview
------------
+## 1. Overview
 
 - Code MUST use 4 spaces for indenting, not tabs.
 
@@ -130,8 +129,7 @@ class Foo extends Bar implements FooInterface {
 ```
 
 
-2. General
---------
+## 2. General
 
 ### 2.1. Files
 All PHP files MUST use the Unix LF (linefeed) line ending.
@@ -225,10 +223,12 @@ There MUST NOT be more than one statement per line.
 
 Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
 
-> N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
-> problems with diffs, patches, history, and annotations. The use of spaces
-> also makes it easy to insert fine-grained sub-indentation for inter-line
-> alignment.
+<aside class="note">
+N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
+problems with diffs, patches, history, and annotations. The use of spaces
+also makes it easy to insert fine-grained sub-indentation for inter-line
+alignment.
+</aside>
 
 ### 2.7. Keywords and True/False/Null
 
@@ -239,14 +239,12 @@ The PHP constants `true`, `false`, and `null` MUST be in lower case.
 [keywords]: http://php.net/manual/en/reserved.keywords.php
 
 
-3. Namespace and Use Declarations
----------------------------------
+## 3. Namespace and Use Declarations
 
 No requirements.
 
 
-4. Class Constants, Properties, and Methods
--------------------------------------------
+### 4. Class Constants, Properties, and Methods
 
 The term "class" refers to all classes, interfaces, and traits.
 
@@ -455,8 +453,7 @@ $foo->bar(
 );
 ```
 
-5. Control Structures
----------------------
+## 5. Control Structures
 
 The general style rules for control structures are as follows:
 
@@ -585,8 +582,7 @@ try {
 }
 ```
 
-6. Closures
------------
+## 6. Closures
 
 Closures MUST be declared with a space after the `function` keyword, and a
 space before and after the `use` keyword.
@@ -691,8 +687,7 @@ $foo->bar(
 );
 ```
 
-7. Doc Blocks
---------------
+## 7. Doc Blocks
 
 - Descriptions MUST BE a full sentence with a capital to start and period to end
 
@@ -711,8 +706,7 @@ $foo->bar(
  */
 ```
 
-8. Conclusion
---------------
+## 8. Conclusion
 
 There are many elements of style and practice intentionally omitted by this
 guide. These include but are not limited to:

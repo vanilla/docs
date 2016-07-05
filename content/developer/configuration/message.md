@@ -6,11 +6,11 @@ menu:
     developer:
         parent: "configuration"
 ---
-##Messages
+## Messages
 
 Messages can appear anywhere in your community, and can be used to inform your users of news and events.
 
-###Configuring Messages
+### Configuring Messages
 
 Messages can be added to your forum by clicking on the Add Message button when on the Message page, and choosing the following
 Message options:

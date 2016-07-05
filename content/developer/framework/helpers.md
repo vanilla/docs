@@ -7,12 +7,11 @@ menu:
         parent: "framework"
 ---
 
-# Helper functions
+## Helper Functions
 
 This is a quickstart guide to some of Vanilla's globally available functions and methods. Familiarizing yourself with them will save you time and effort in the long term, and give you clues about how best to use the framework. 
 
 This is by no means an exhaustive list, nor full signature documentation. You'll want to find them in the source code (files at `/library/core/functions.*.php`) for more info.
-
 
 ## Getting & setting
 

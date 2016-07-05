@@ -7,7 +7,7 @@ menu:
         identifier: "data-privacy"
 ---
 
-# Data privacy
+## Types of Information
 
 Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.
 

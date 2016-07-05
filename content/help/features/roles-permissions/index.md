@@ -8,7 +8,7 @@ menu:
         identifier: "features-role-permissions"
 ---
 
-# Roles & Permissions Overview
+## Overview
  Roles and Permissions are used in tandem to control what users can see and do in your community. Upon account creation, there are 6 default Roles in your Vanilla account. Each of the default Roles have permissions that you would expect from the Role name:
 
 - **Guest**: This is a special role that represents inactive sessions in Vanilla. You can use this role to restrict what logged out users see when viewing your forum. As Vanilla does not allow anonymous posting, this role cannot be given other permissions.

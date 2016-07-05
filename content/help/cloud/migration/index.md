@@ -8,7 +8,7 @@ menu:
         identifier: "cloud-migration"
 ---
 
-# Migration Services Overview
+## Overview
 
 Vanilla offers full, professional migration services from nearly any platform imaginable. If you provide the data, we'll figure out how to make it work in Vanilla.
 

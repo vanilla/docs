@@ -8,7 +8,7 @@ menu:
         identifier: "features-notifications"
 ---
 
-# Notifications
+## Overview
 
 Notifications for certain forum events can be delivered in-app (via Growl-style popups) and/or via email. New users will be opted in to a list of notifications that can be configured by the administrator. Users may edit these preferences in their profile at any time.
 

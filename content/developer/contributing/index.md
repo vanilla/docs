@@ -7,7 +7,7 @@ menu:
         identifier: "contributing"
 ---
 
-# How to Contribute
+## How to Contribute
 
 ### General
 

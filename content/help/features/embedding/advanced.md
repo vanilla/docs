@@ -7,7 +7,7 @@ menu:
         parent: "features-embedding"
 ---
 
-# Advanced Embedding
+## Overview
 
 The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs [easyXDM](http://easyxdm.net/wp/) and a special container layer to achieve this. It requires a more in-depth setup than Vanilla's basic embed solution.
 

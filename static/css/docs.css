@@ -492,16 +492,45 @@ a:hover {
   margin-top: 30px;
 }
 
-.docs-content #content ul {
+.docs-content #content ul, .docs-content #content ol {
   font-size: 12px;
 }
 
+.docs-content #content pre {
+  background: #fff3f6;
+  color: #F52C6E;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.docs-content #content pre code {
+  background: transparent;
+  padding: 0px;
+}
+
 .docs-content #content code {
-  background: #F4D4DC;
+  background: #fff3f6;
   color: #F52C6E;
   font-family: "Courier New", Terminal;
   padding: 2px 4px;
   border-radius: 2px;
+}
+
+.docs-content #content aside {
+  font-size: 12px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+}
+
+.docs-content #content aside.warning {
+  color: #cc0000;
+  background-color: #ffdcdc;
+}
+
+.docs-content #content aside.note {
+  color: #9E998E;
+  background-color: #FFFBEF;
 }
 
 .docs-content #sidebar {

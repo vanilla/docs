@@ -7,7 +7,7 @@ menu:
         identifier: "plugins"
 ---
 
-# Extending Vanilla with plugins
+## Extending Vanilla with plugins
 
 Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.
 

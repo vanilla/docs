@@ -8,7 +8,7 @@ menu:
         identifier: "cloud-logging"
 ---
 
-# Advanced logging
+## Advanced logging
 
 Additional logging is available on our highest-tier plans for an additional fee to cover the additional load & performance hit incurred by more verbose logs.
 

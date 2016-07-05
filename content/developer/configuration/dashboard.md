@@ -6,7 +6,7 @@ menu:
     developer:
         parent: "configuration"
 ---
-##Dashboard
+## Dashboard
 
 The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum's main page, a profile link (shown as your user name), and Sign Out.
 

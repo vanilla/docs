@@ -113,8 +113,12 @@ module.exports = function (grunt) {
         }
 
     });
-
+    
     grunt.registerTask('default', [
+        'build'
+    ]);
+
+    grunt.registerTask('build', [
         'css',
         'js',
         'hugo',

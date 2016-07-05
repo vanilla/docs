@@ -74,11 +74,24 @@
             }
         }
 
-        ul {
+        ul, ol {
             font-size: 12px;
 
             li {
 
+            }
+        }
+        
+        pre {
+            background: $faintPink;
+            color: $vanillaPink;
+            font-size: 12px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            
+            code {
+                background: transparent;
+                padding: 0px;
             }
         }
         
@@ -88,6 +101,22 @@
             font-family: "Courier New", Terminal;
             padding: 2px 4px;
             border-radius: 2px;
+        }
+        
+        aside {
+            font-size: 12px;
+            padding: 10px 15px;
+            margin: 10px 0px;
+            
+            &.warning {
+                color: $panelRedText;
+                background-color: $panelRed;
+            }
+            
+            &.note {
+                color: $panelYellowText;
+                background-color: $panelYellow;
+            }
         }
     }
     

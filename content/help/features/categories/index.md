@@ -8,7 +8,7 @@ menu:
         identifier: "features-categories"
 ---
 
-# Using Categories
+## Using Categories
 
 Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
 
