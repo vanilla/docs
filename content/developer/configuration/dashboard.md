@@ -2,6 +2,9 @@
 title: "Dashboard"
 tags: ["Developers","Configuration"]
 category: "developer"
+menu:
+    developer:
+        parent: "configuration"
 ---
 ##Dashboard
 

@@ -1,7 +1,11 @@
 ---
 title: "Ideation"
 tags: ["Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-ideation"
 ---
 
 ## Ideation

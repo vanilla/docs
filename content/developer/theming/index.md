@@ -2,6 +2,9 @@
 title: "Theming"
 tags: ["Theming"]
 category: "developer"
+menu:
+    developer:
+        identifier: "theming"
 ---
 
 ## Theming Overview

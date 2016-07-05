@@ -1,14 +1,18 @@
 ---
 title: "Multisite Features"
 tags: ["Cloud","Multisite"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "cloud"
+        identifier: "cloud-multisite"
 ---
 
-# Multisite Features
+## Multisite Features
 
-Vanilla's cloud solution offers a number of configurations for enterprise-grade deployments.
+Vanilla's cloud solution offers a number of configuration settings for enterprise-grade deployments.
 
-## Configurations
+## Settings
 
 ### Single Community
 

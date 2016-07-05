@@ -1,7 +1,11 @@
 ---
 title: "Technical Overview"
 tags: ["Features","Single Sign-On","jsConnect"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-sso-jsconnect"
+        weight: 100
 ---
 
 # jsConnect Technical Overview

@@ -1,7 +1,10 @@
 ---
 title: "Giving and Requesting Badges"
 tags: ["Features", "Addons", "Badges"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-badges"
 ---
 
 ## Giving a badge

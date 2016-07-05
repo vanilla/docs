@@ -1,7 +1,11 @@
 ---
 title: "Statistics"
 tags: ["Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-statistics"
 ---
 
 ## What Are Vanilla Statistics?

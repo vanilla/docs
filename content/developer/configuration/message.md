@@ -2,6 +2,9 @@
 title: "Messages"
 tags: ["Developers","Configuration"]
 category: "developer"
+menu:
+    developer:
+        parent: "configuration"
 ---
 ##Messages
 

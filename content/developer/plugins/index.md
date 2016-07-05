@@ -2,6 +2,9 @@
 title: "Plugins"
 tags: ["Developers","Plugins"]
 category: "developer"
+menu:
+    developer:
+        identifier: "plugins"
 ---
 
 # Extending Vanilla with plugins

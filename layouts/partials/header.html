@@ -1,23 +1,34 @@
-<div class="docs-header">
-    
-    <div class="row">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
 
-        <div class="column column-4">
-            
-            <a class="vertical-group docs-header-logo" href="/">
-                <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
-                <span class="docs-docs-tag">Docs</span>
-            </a>
-            
-        </div>
+        <title>Vanilla Forums Documentation</title>
         
-        <div class="column column-8">
-            <div class="vertical-group docs-header-tray">
-                {{ partial "header/search.html" . }}
-                {{ partial "header/cta.html" . }}
+        <link href="/css/docs.css" rel="stylesheet">
+        <link href="/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+
+    <body class="docs grid docs-layout-single">
+        
+        {{ partial "header/slimheader.html" . }}
+        
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    {{ partial "title.html" . }}
+                </div>
             </div>
         </div>
-
-    </div>
-
-</div>
+        

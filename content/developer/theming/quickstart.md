@@ -1,7 +1,11 @@
 ---
-title: "Theming Quickstart"
+title: "Quickstart"
 tags: ["Theming"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming"
+        weight: 10
 ---
 
 **Vanilla Forums Cloud Customers, check out our [Ultimate Vanilla Forums Theme Guide](http://blog.vanillaforums.com/help/vanilla-forums-themes/).**

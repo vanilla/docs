@@ -2,6 +2,9 @@
 title: "Vanilla Porter"
 tags: ["Developers","Importing"]
 category: "developer"
+menu:
+    developer:
+        parent: "importing"
 ---
 
 ## Migrating a forum to Vanilla

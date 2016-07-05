@@ -1,7 +1,11 @@
 ---
 title: "Roles & Permissions"
 tags: ["Features","Roles", "Permissions"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-role-permissions"
 ---
 
 # Roles & Permissions Overview

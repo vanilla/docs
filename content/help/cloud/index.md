@@ -1,7 +1,10 @@
 ---
 title: "Cloud Services"
 tags: ["Cloud"]
-category: "user"
+category: "help"
+menu:
+    help:
+        identifier: "cloud"
 ---
 
 ## Cloud Services Overview

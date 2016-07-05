@@ -2,6 +2,9 @@
 title: "Smarty Modifiers"
 tags: ["Theming", "Smarty"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty"
 ---
 
 ## Smarty Modifiers

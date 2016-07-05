@@ -1,7 +1,11 @@
 ---
 title: "Vanilla Pop"
 tags: ["Features","Vanilla Pop"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-vanilla-pop"
 ---
 
 # Vanilla Pop

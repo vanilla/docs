@@ -5,6 +5,8 @@ contentdir: "content"
 layoutdir: "layouts"
 publishdir: "public"
 
+canonifyurls: true
+
 params:
     description: "Vanilla Forums Documentation"
     author: "Vanilla Community"

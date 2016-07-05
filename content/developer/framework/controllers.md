@@ -2,6 +2,9 @@
 title: "Controllers & URLs"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 ## Controllers

@@ -1,7 +1,11 @@
 ---
 title: "Gigya Sign In"
 tags: ["Features", "Addons", "Integrations"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-gigya"
 ---
 
 ## Gigya Sign In

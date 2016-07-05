@@ -1,5 +1,8 @@
 ---
 title: "WishList Integration"
 tags: ["Features","WordPress"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-wordpress"
 ---

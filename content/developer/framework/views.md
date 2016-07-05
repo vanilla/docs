@@ -2,6 +2,9 @@
 title: "Views"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 ## Views

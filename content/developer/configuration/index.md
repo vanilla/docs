@@ -2,6 +2,9 @@
 title: "Configuration"
 tags: ["Developers","Configuration"]
 category: "developer"
+menu:
+    developer:
+        identifier: "configuration"
 ---
 
 ## Vanilla configuration files

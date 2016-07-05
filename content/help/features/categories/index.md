@@ -1,7 +1,11 @@
 ---
 title: "Categories"
 tags: ["Features", "Categories"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-categories"
 ---
 
 # Using Categories

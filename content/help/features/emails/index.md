@@ -1,7 +1,11 @@
 ---
 title: "Emails"
 tags: ["Features","Emails"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-emails"
 ---
 
 # Email Appearance

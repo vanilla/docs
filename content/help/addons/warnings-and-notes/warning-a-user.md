@@ -1,7 +1,10 @@
 ---
 title: "Warning a User"
 tags: ["Features", "Addons", "Warnings and Notes"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-warnings-and-notes"
 ---
 
 ## Warning a User

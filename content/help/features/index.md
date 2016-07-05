@@ -1,6 +1,9 @@
 ---
 title: "Features"
-category: "user"
+category: "help"
+menu:
+    help:
+        identifier: "features"
 ---
 
 ## Features Overview

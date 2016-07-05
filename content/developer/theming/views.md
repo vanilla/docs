@@ -1,7 +1,11 @@
 ---
-title: "Theming Views"
+title: "Views / HTML"
 tags: ["Theming"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming"
+        weight: 40
 ---
 
 ## Theming Views

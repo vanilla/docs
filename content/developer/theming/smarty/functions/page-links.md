@@ -2,6 +2,9 @@
 title: "Page Links"
 tags: ["Theming", "Smarty", "Smarty Functions"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty-functions"
 ---
 
 ## Page Links

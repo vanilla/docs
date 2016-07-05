@@ -2,6 +2,9 @@
 title: "Plugin Quickstart"
 tags: ["Developers","Addons"]
 category: "developer"
+menu:
+    developer:
+        parent: "plugins"
 ---
 
 ## Quickstart Links

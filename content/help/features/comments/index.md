@@ -1,7 +1,11 @@
 ---
 title: "Universal Comments"
 tags: ["Features","Comments"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-comments"
 ---
 
 # Vanilla Comments

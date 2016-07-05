@@ -2,6 +2,9 @@
 title: "Supported platforms"
 tags: ["Developers","Importing"]
 category: "developer"
+menu:
+    developer:
+        parent: "importing"
 ---
 
 ## Supported platforms

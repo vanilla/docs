@@ -1,9 +1,12 @@
 ---
-title: "Multisite Features"
+title: "Multisite Sync"
 tags: ["Cloud","Multisite"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "cloud-multisite"
 ---
 
-# Hub Sync
+## Hub Sync
 
 A number of settings can be synced between the hub and its nodes.

@@ -504,17 +504,22 @@ a:hover {
   border-radius: 2px;
 }
 
-.docs-content #toc {
+.docs-content #sidebar {
   font-size: 12px;
+  padding-right: 20px;
 }
 
-.docs-content #toc .docs-nav {
+.docs-content #sidebar .docs-nav {
   display: inline-block;
-  margin-right: 20px;
+  width: 100%;
   border-right: 1px solid #E4E4E4;
 }
 
-.docs-content #toc ul li {
+.docs-content #sidebar ul {
+  margin: 0px;
+}
+
+.docs-content #sidebar ul li {
   padding-right: 10px;
 }
 

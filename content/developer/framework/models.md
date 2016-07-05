@@ -2,6 +2,9 @@
 title: "Models, Forms, & Validation"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 ## Models

@@ -1,0 +1,72 @@
+{{ partial "menu/header.html" . }}
+
+{{ $currentNode := . }}
+{{ range .Site.Menus.help }}
+
+    <li  class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}">
+        <a href="{{.URL}}">{{.Name}}</a>
+    </li>
+    
+    {{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+        {{ $.Scratch.Set "CurrentMenu" . }}
+        {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+        
+        {{ if .HasChildren }}
+            <ul>{{ range .Children }}
+	    
+                <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}">
+                    <a href="{{.URL}}">{{ .Name }} </a>
+                </li>
+                
+                {{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+                    {{ $.Scratch.Set "CurrentMenu" . }}
+                    {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+               
+                    {{ if .HasChildren }}
+                        <ul>{{ range .Children }}
+
+                            <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}">
+                                <a href="{{.URL}}">{{ .Name }}</a>
+                            </li>
+
+                            {{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+                                {{ $.Scratch.Set "CurrentMenu" . }}
+                                {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+                                
+                                {{ if .HasChildren }}
+                                    <ul>{{ range .Children }}
+                                        
+                                        <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}">
+                                            <a href="{{.URL}}">{{ .Name }} </a>
+                                        </li>
+
+					{{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+                                            {{ $.Scratch.Set "CurrentMenu" . }}
+                                            {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+                                            
+                                            {{ if .HasChildren }}
+                                                <ul>{{ range .Children }}
+				    
+                                                    <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}">
+                                                        <a href="{{.URL}}">{{ .Name }} </a>
+                                                    </li>
+				    
+                                                {{ end }}</ul>
+                                            {{ end }}
+                                        {{ end }}
+			    
+                                    {{ end }}</ul>
+                                {{ end }}
+			    {{ end }}
+		    
+                        {{ end }}</ul>
+                    {{ end }}
+                {{ end }}
+
+	    {{ end }}</ul>
+        {{ end }}
+    {{ end }}
+	    
+{{end}}
+
+{{ partial "menu/footer.html" . }}

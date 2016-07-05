@@ -2,6 +2,9 @@
 title: "{custom_menu}"
 tags: ["Theming", "Smarty", "Smarty Functions"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty-functions"
 ---
 
 ## Function: `{custom_menu}`

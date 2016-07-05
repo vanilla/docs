@@ -2,6 +2,9 @@
 title: "Framework"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        identifier: "framework"
 ---
 
 ## Garden's place in Vanilla

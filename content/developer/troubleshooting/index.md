@@ -2,6 +2,9 @@
 title: "Troubleshooting"
 tags: ["Features", "Troubleshooting"]
 category: "developer"
+menu:
+    developer:
+        identifier: "troubleshooting"
 ---
 
 ## Troubleshooting Vanilla

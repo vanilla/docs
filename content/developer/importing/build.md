@@ -2,6 +2,9 @@
 title: "Building new porters"
 tags: ["Developers","Importing"]
 category: "developer"
+menu:
+    developer:
+        parent: "importing"
 ---
 
 ## Building a new porter file

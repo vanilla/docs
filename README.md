@@ -10,16 +10,16 @@ If you find any problems in the docs or have a question, open an issue. Please s
 
 Picking a location for your docs is important.
 
-The "Help" folder is for all users of Vanilla Forums. Descriptions may include services and features specific to the VanillaForums.com cloud.
+The "Help" folder is for all users of Vanilla Forums. Descriptions may include services and features specific to the vanillaforums.com cloud.
 
 The "Developers" folder is for all technical documentation. This is targetted at developers that are perhaps implementing their own code solutions. These docs may include descriptions of solutions that are not possible or disallowed on VanillaForums.com cloud. Clients of VanillaForums.com should consult support or their customer success manager for guidance.
 
 ### Formatting
 
-* Every doc file must end in `.html.md` and be formatted in Markdown.
+* Every doc file must end in `.md` and be formatted in Markdown.
 * Use H1 (`#` in Markdown) as your top-level headings in each file (and only once).
 * Use H2 (`##` in Markdown) for major sub-topics and H3 (`###`) for minor headings.
-* All images go within [`docs/images`](docs/images) and must be referenced absolutely (`/images/foo.png`).
+* All images go within [`static/img`](static/img) and must be referenced absolutely (`/img/foo.png`).
 * Use descriptive image names that include their topic area and what they depict, and `hyphenate-the-names.png`.
 
 ### Writing
@@ -28,6 +28,11 @@ The "Developers" folder is for all technical documentation. This is targetted at
 * Carefully consider organization.
 * Cross-reference with links liberally.
 * Break up long sentences and paragraphs.
+
+
+## Structure
+
+ * Consciously build menus using the front-matter
 
 ## Technical Setup
 

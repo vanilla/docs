@@ -1,7 +1,10 @@
 ---
 title: "Managing Groups"
 tags: ["Features", "Addons", "Groups"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-groups"
 ---
 
 ## Adding your first groups

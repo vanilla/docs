@@ -2,6 +2,9 @@
 title: "Coding Standard"
 tags: ["Developers", "Contributing"]
 category: "developer"
+menu:
+    developer:
+        parent: "contributing"
 ---
 
 # Coding Standard

@@ -2,6 +2,9 @@
 title: "Using The Config"
 tags: ["Developers","Configuration"]
 category: "developer"
+menu:
+    developer:
+        parent: "configuration"
 ---
 
 ## When to use the config

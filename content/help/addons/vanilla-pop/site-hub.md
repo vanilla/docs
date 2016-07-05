@@ -1,7 +1,10 @@
 ---
 title: "Vanilla Pop on the Site Hub"
 tags: ["Features","Vanilla Pop","Hub"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-vanilla-pop"
 ---
 
 # Vanilla Pop on the Hub

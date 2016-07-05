@@ -1,7 +1,11 @@
 ---
 title: "Warnings & Notes"
 tags: ["Features", "Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-warnings-and-notes"
 ---
 
 ## What are Warnings?

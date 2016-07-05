@@ -2,6 +2,9 @@
 title: "Database access"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 ## Database layer

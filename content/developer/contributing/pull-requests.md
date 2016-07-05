@@ -2,6 +2,9 @@
 title: "Pull Requests"
 tags: ["Developers","Contributing"]
 category: "developer"
+menu:
+    developer:
+        parent: "contributing"
 ---
 
 ## Using pull requests to contribute code

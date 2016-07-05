@@ -1,7 +1,10 @@
 ---
 title: "Adding and Editing Reactions"
 tags: ["Features", "Addons", "Reactions"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-reactions"
 ---
 
 ## Selecting Reactions

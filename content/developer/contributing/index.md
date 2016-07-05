@@ -2,6 +2,9 @@
 title: "Contributing"
 tags: ["Developers","Contributing"]
 category: "developer"
+menu:
+    developer:
+        identifier: "contributing"
 ---
 
 # How to Contribute

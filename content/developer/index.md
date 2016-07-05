@@ -4,7 +4,7 @@ tags: ["Developers"]
 category: "developer"
 ---
 
-## Developers Overview
+## Welcome!
 
 The Developers section is primarily targeted at folks using the **open source product** who have at least a basic understanding of PHP, HTML, CSS and Javascript.
 

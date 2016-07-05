@@ -1,7 +1,11 @@
 ---
 title: "Google Plus"
 tags: ["Features", "Addons", "Integrations"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-googleplus"
 ---
 
 ## Google Plus

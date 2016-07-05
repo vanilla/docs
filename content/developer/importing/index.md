@@ -2,6 +2,9 @@
 title: "Importing"
 tags: ["Developers","Importing"]
 category: "developer"
+menu:
+    developer:
+        identifier: "importing"
 ---
 
 ## Importing to Vanilla

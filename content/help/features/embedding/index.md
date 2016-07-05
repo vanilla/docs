@@ -1,7 +1,11 @@
 ---
 title: "Embedding"
 tags: ["Features","Embedding"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-embedding"
 ---
 
 ## Embedding Forum

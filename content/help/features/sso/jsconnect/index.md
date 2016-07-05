@@ -1,7 +1,11 @@
 ---
-title: "SSO with jsConnect"
+title: "jsConnect"
 tags: ["Features","Single Sign-On","jsConnect"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-sso"
+        identifier: "features-sso-jsconnect"
 ---
 
 ## jsConnect Concepts Overview

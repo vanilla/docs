@@ -2,6 +2,9 @@
 title: "{module}"
 tags: ["Theming", "Smarty", "Smarty Functions"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty-functions"
 ---
 
 ## Function: `{module}`

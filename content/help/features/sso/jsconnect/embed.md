@@ -1,7 +1,11 @@
 ---
 title: "Embedded"
 tags: ["Features","Single Sign-On","jsConnect"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-sso-jsconnect"
+        weight: 300
 ---
 
 ## Embedding with Seamless jsConnect

@@ -1,7 +1,10 @@
 ---
 title: "Advanced Embedding"
 tags: ["Features","Embedding"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-embedding"
 ---
 
 # Advanced Embedding

@@ -1,7 +1,11 @@
 ---
 title: "Redirector"
 tags: ["Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-redirector"
 ---
 
 ## When to Use Redirector

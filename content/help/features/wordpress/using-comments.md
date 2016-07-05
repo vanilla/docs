@@ -1,7 +1,10 @@
 ---
 title: "Using Comments"
 tags: ["Features","Embedding"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-wordpress"
 ---
 
 ## Transition to Vanilla Comments

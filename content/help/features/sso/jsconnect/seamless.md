@@ -1,7 +1,11 @@
 ---
 title: "Seamless Setup"
 tags: ["Features","Single Sign-On","jsConnect"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-sso-jsconnect"
+        weight: 200
 ---
 
 ## Seamless SSO with jsConnect

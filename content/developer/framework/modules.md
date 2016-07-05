@@ -2,6 +2,9 @@
 title: "Modules"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 <p>If controller methods represent the main content/purpose of a page, modules represent secondary information or functions. Modules are small groupings of functionality or information on a page. Some modules that are bundled with Garden include:</p>

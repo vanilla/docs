@@ -2,6 +2,11 @@
 title: "Smarty"
 tags: ["Theming"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming"
+        weight: 30
+        identifier: "theming-smarty"
 ---
 
 ## Smarty Overview

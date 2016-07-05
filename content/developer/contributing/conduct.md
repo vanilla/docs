@@ -2,6 +2,9 @@
 title: "Code of Conduct"
 tags: ["Developers","Contributing"]
 category: "developer"
+menu:
+    developer:
+        parent: "contributing"
 ---
 
 # Code of Conduct

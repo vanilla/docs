@@ -1,7 +1,11 @@
 ---
-title: "Theming CSS"
+title: "CSS"
 tags: ["Theming"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming"
+        weight: 20
 ---
 
 ## Theming with CSS

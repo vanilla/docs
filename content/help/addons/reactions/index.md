@@ -1,7 +1,11 @@
 ---
 title: "Reactions"
 tags: ["Features", "Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-reactions"
 ---
 
 ## What are reactions?

@@ -2,6 +2,9 @@
 title: "Helpers"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 # Helper functions

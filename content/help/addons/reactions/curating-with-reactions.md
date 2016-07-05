@@ -1,7 +1,10 @@
 ---
 title: "Curating with Reactions"
 tags: ["Features", "Addons", "Reactions"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-reactions"
 ---
 
 ## Curating with Reactions

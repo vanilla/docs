@@ -2,6 +2,9 @@
 title: "Smarty Conditionals"
 tags: ["Theming", "Smarty"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty"
 ---
 
 ## Smarty Conditionals

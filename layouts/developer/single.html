@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            {{ partial "menu/developer.html" . }}
+        </div>
+
+        <div id="content" class="column column-9">
+
+            {{ if .Params.toc }}
+
+                <div class="docs-toc-wrapper">
+                    <div id="toc" class="column column-3 docs-toc {{ if gt (len .TableOfContents) 2500 }}compact{{ end }}">
+                        {{ .TableOfContents }}
+                    </div>
+                </div>
+
+                {{ .Content }}
+
+            {{ else }}
+
+                {{ .Content }}
+
+            {{ end }}
+            
+        </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

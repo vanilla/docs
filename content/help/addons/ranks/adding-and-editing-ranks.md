@@ -1,7 +1,10 @@
 ---
 title: "Adding and Editing Ranks"
 tags: ["Features", "Addons", "Ranks"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-ranks"
 ---
 
 ## Adding a Ranks

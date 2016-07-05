@@ -2,6 +2,10 @@
 title: "Theme Options"
 tags: ["Theming"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming"
+        weight: 60
 ---
 
 ## Theme Options

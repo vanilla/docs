@@ -1,7 +1,10 @@
 ---
 title: "Applying Ranks over SSO"
 tags: ["Features", "Addons", "Ranks"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-ranks"
 ---
 
 ## Applying Ranks over SSO

@@ -1,7 +1,11 @@
 ---
-title: "SSO with OAuth"
+title: "OAuth"
 tags: ["Features","Single Sign-On","OAuth"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-sso"
+        identifier: "features-sso-oauth"
 ---
 
 ## SSO with OAuth: Overview

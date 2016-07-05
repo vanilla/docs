@@ -1,7 +1,10 @@
 ---
 title: "Addons"
 tags: ["Features"]
-category: "user"
+category: "help"
+menu:
+    help:
+        identifier: "addons"
 ---
 
 ## What Are Addons?

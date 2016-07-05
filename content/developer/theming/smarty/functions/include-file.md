@@ -2,6 +2,9 @@
 title: "{include_file}"
 tags: ["Theming", "Smarty", "Smarty Functions"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty-functions"
 ---
 
 ## Function: `{include_file}`

@@ -1,7 +1,11 @@
 ---
 title: "Emoji"
 tags: ["Features","Emoji"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-emoji"
 ---
 
 ##Emoji

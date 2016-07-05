@@ -1,7 +1,11 @@
 ---
 title: "Groups"
 tags: ["Features", "Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-groups"
 ---
 
 ## What are Groups?

@@ -1,7 +1,11 @@
 ---
 title: "Ranks"
 tags: ["Features", "Addons"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons"
+        identifier: "addons-ranks"
 ---
 
 ## What is a Rank?

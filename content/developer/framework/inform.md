@@ -2,6 +2,9 @@
 title: "Inform Messages"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 # Inform Messages

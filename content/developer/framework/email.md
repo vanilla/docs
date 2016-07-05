@@ -2,6 +2,9 @@
 title: "Email"
 tags: ["Developers","Framework"]
 category: "developer"
+menu:
+    developer:
+        parent: "framework"
 ---
 
 # Sending Emails

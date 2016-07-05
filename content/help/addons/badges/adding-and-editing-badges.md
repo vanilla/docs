@@ -1,7 +1,10 @@
 ---
 title: "Adding and Editing Badges"
 tags: ["Features", "Addons", "Badges"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-badges"
 ---
 
 ## Disabling badges

@@ -2,6 +2,9 @@
 title: "Banner Settings"
 tags: ["Developers","Configuration"]
 category: "developer"
+menu:
+    developer:
+        parent: "configuration"
 ---
 
 ##Banner Settings

@@ -1,7 +1,11 @@
 ---
 title: "Notifications"
 tags: ["Features","Notifications"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-notifications"
 ---
 
 # Notifications

@@ -1,7 +1,11 @@
 ---
 title: "Single Sign-On (SSO)"
 tags: ["Features","Single Sign-On"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features"
+        identifier: "features-sso"
 ---
 
 ## Single Sign-On Overview

@@ -1,7 +1,11 @@
 ---
-title: "SSO with SAML"
+title: "SAML"
 tags: ["Features","Single Sign-On","SAML"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "features-sso"
+        identifier: "features-sso-saml"
 ---
 
 ## SSO with SAML: Overview

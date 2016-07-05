@@ -1,7 +1,10 @@
 ---
 title: "Adding and Editing User Notes"
 tags: ["Features", "Addons", "Warnings and Notes"]
-category: "user"
+category: "help"
+menu:
+    help:
+        parent: "addons-warnings-and-notes"
 ---
 
 ## Adding a Note

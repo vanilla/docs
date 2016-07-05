@@ -2,6 +2,10 @@
 title: "Smarty Functions"
 tags: ["Theming", "Smarty", "Functions"]
 category: "developer"
+menu:
+    developer:
+        parent: "theming-smarty"
+        identifier: "theming-smarty-functions"
 ---
 
 ## Smarty Functions
