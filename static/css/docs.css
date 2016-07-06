@@ -130,7 +130,7 @@ body {
 
 body {
   background: #333333;
-  color: #606A6F;
+  color: #505A5F;
 }
 
 .grid .row {
@@ -172,7 +172,7 @@ body {
   border: 1px solid #F52C6E;
   border-radius: 3px;
   padding: 10px 20px;
-  color: #606A6F;
+  color: #505A5F;
   font-size: 20px;
 }
 
@@ -213,8 +213,8 @@ body {
 }
 
 .docs-content #content p {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .docs-content #content p + h2 {
@@ -222,11 +222,11 @@ body {
 }
 
 .docs-content #content ul, .docs-content #content ol {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .docs-content #content ul li, .docs-content #content ol li {
-  margin: 3px 0px;
+  line-height: 22px;
 }
 
 .docs-content #content a {
@@ -527,7 +527,7 @@ a:hover {
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice .docs-button {
   width: 260px;
-  border-color: #606A6F;
+  border-color: #505A5F;
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice .docs-button:hover {
@@ -668,7 +668,7 @@ a:hover {
 
 .docs-content #sidebar ul.nav-tier1 > li a {
   text-transform: uppercase;
-  color: #606A6F;
+  color: #505A5F;
   font-size: 13px;
 }
 
