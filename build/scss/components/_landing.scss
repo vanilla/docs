@@ -14,7 +14,7 @@
         }
 
         .docs-welcome {
-            padding: 40px 0px 140px 0px;
+            padding: 40px 0px 220px 0px;
             color: white;
 
             .column {
@@ -46,11 +46,12 @@
         }
         
         .docs-welcome-choice {
-            width: 420px;
-            min-height: 310px;
+            width: 419px;
+            min-height: 380px;
             margin: 0px auto;
             padding: 30px 40px 40px 40px;
-            margin-top: -80px;
+            margin-top: -160px;
+            border-radius: 2px;
             
             position: relative;
             
@@ -59,10 +60,32 @@
             
             text-align: center;
             
+            &.choice-help {
+                background: white url('/img/chooser/help.png') center -120px no-repeat;
+            }
+            
+            &.choice-developer {
+                background: white url('/img/chooser/developer.png') center top no-repeat;
+            }
+            
+            .welcome-intro {
+                position: relative;
+                top: 60px;
+            }
+            
             h3 {
                 margin: 0px;
                 font-weight: lighter;
                 font-size: 28px;
+                color: white;
+            }
+            
+            em {
+                display: block;
+                font-size: 14px;
+                color: white;
+                font-style: normal;
+                font-weight: lighter;
             }
             
             p {
@@ -86,6 +109,8 @@
 
                 &:hover {
                     border-color: $vanillaPink;
+                    background: $vanillaPink;
+                    color: white;
                 }
             }
             

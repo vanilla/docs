@@ -465,7 +465,7 @@ a:hover {
 }
 
 .docs-layout-landing .docs-cap .docs-welcome {
-  padding: 40px 0px 140px 0px;
+  padding: 40px 0px 220px 0px;
   color: white;
 }
 
@@ -494,21 +494,44 @@ a:hover {
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice {
-  width: 420px;
-  min-height: 310px;
+  width: 419px;
+  min-height: 380px;
   margin: 0px auto;
   padding: 30px 40px 40px 40px;
-  margin-top: -80px;
+  margin-top: -160px;
+  border-radius: 2px;
   position: relative;
   background: white;
   box-shadow: 0px 1px 2px 0px rgba(57, 57, 57, 0.4);
   text-align: center;
 }
 
+.docs-layout-landing .docs-chooser .docs-welcome-choice.choice-help {
+  background: white url("/img/chooser/help.png") center -120px no-repeat;
+}
+
+.docs-layout-landing .docs-chooser .docs-welcome-choice.choice-developer {
+  background: white url("/img/chooser/developer.png") center top no-repeat;
+}
+
+.docs-layout-landing .docs-chooser .docs-welcome-choice .welcome-intro {
+  position: relative;
+  top: 60px;
+}
+
 .docs-layout-landing .docs-chooser .docs-welcome-choice h3 {
   margin: 0px;
   font-weight: lighter;
   font-size: 28px;
+  color: white;
+}
+
+.docs-layout-landing .docs-chooser .docs-welcome-choice em {
+  display: block;
+  font-size: 14px;
+  color: white;
+  font-style: normal;
+  font-weight: lighter;
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice p {
@@ -532,6 +555,8 @@ a:hover {
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice .docs-button:hover {
   border-color: #F52C6E;
+  background: #F52C6E;
+  color: white;
 }
 
 .docs-layout-landing .docs-footer {
