@@ -507,11 +507,11 @@ a:hover {
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice.choice-help {
-  background: white url("/img/chooser/help.png") center -120px no-repeat;
+  background: white url("../img/chooser/help.png") center -120px no-repeat;
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice.choice-developer {
-  background: white url("/img/chooser/developer.png") center top no-repeat;
+  background: white url("../img/chooser/developer.png") center top no-repeat;
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice .welcome-intro {
