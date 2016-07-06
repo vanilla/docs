@@ -112,13 +112,12 @@ module.exports = function (grunt) {
             }
         },
         
-        shell: {
+        'gh-pages': {
             push: {
-                command: [
-                    'git subtree split --prefix public -b gh-pages',
-                    'git push -f origin gh-pages:gh-pages',
-                    'git branch -D gh-pages'
-                ].join('&&')
+                options: {
+                    base: 'public'
+                },
+                src: ['**']
             }
         }
 
@@ -155,7 +154,7 @@ module.exports = function (grunt) {
     ]);
     
     grunt.registerTask('push', [
-        'shell:push'
+        'gh-pages:push'
     ]);
     
     grunt.registerTask("lunr_index", function() {
