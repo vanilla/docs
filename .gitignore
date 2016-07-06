@@ -2,6 +2,7 @@
 .tmp
 npm-debug.log
 /build/scss/_componentMap.scss
+/build/scss/_componentsMap.scss
 node_modules/
 public/
 .grunt

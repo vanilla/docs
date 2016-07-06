@@ -28,7 +28,7 @@ If you find an area where Vanilla could improve its accessibility, please [conta
 
 ## Theming consideration
 
-Most Vanilla Forums customize their theme, which can have a huge impact on accessibility. 
+<aside class="note">Most Vanilla Forums customize their theme, which can have a huge impact on accessibility.</aside>
 
 Choices of color and font size are obvious considerations, but because our powerful theming engine also allows for the override of HTML markup, it's important to consider that individual sites may vary wildly in their degree of accessibility.
 

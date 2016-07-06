@@ -7,6 +7,8 @@ menu:
         parent: "addons-reactions"
 ---
 
+{{% cloudfeature %}}
+
 ## Selecting Reactions
 
 Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the "Active/Inactive" toggle next to each reaction in the Dashboard under "Reactions".

@@ -48,40 +48,9 @@ The process below assumes you will provide a database dump. We also perform API-
 
 Migration data should always be sent to Vanilla via SFTP, available by request to your Account Manager. Data can optionally be encrypted using Vanilla's Public Key, provided below:
 
-  ```
-  -----BEGIN PGP PUBLIC KEY BLOCK-----
-  Version: GnuPG/MacGPG2 v2.0.20 (Darwin)
-  Comment: GPGTools - https://gpgtools.org
-
-  mQENBFOPIr0BCACy3qGvAMOG48rmqHwPchaot4YL1W7LoWUaNGNr5YjqnRhdMy8c
-  vca5Si0Z1QJ57N1cYjtG9+75IpUDZ0KhCaVzx4Smaqmx2Ezgp79/Kr4hY5tdHvky
-  0W8B0XNU9U5hJtPuSW0wCpiF68du1d5OcVDDuCe1f4vCwJbiZwluNeIUrUTZeKI1
-  8hO5u1gPQGyIX5LL7X6XWQ9Prvn6wmqscdhg8DlXFfDh64zhqhGC/uPCLXHFcHcz
-  RrBBQ1iXCBd8TRfy8XBOGbzAiWEaO17mhxlIGTdfsAKYc/UU5TkZDQFq+ipuvyrD
-  Zsvjk93FPBd4x1zPFCu+40HFQWh0mmsoe3RpABEBAAG0RFZhbmlsbGEgT3BlcmF0
-  aW9ucyAoVmFuaWxsYSBPcGVyYXRpb25zIFRlYW0pIDxvcHNAdmFuaWxsYWZvcnVt
-  cy5jb20+iQE9BBMBCgAnBQJTjyK9AhsDBQkHhh+ABQsJCAcDBRUKCQgLBRYCAwEA
-  Ah4BAheAAAoJEIkj1hflHtRHKu0IAIJ02m3Q0YsWtVVTQ3RI+yz/5G5ewjp+a3iv
-  oZybmNGInYEIKRNSlSQYf7K7B7fogGr7pAq+aVHE6yUOIwsHiAnK6U2Qpo6/mrlr
-  U2CS24LwSMjX+1x6iV+REEQM9sRZ1olfvrdZAKLgqZZTMyK5/eOyHjgZktHJgzlo
-  mIzd5zHx1xopEKDcZnwqxNWvqaZwRIkdUXWuTVs+HqCG6Cc6sO701k0oJmMmWeoI
-  4khaIokv4VdEibvdD545ru/NjR3zPHUhsrkxX+EggCWJggZ7fiu+98AUbkhGM24T
-  cU4T3TaNsCgjaedgihVb6g1zdKrWCK2AXXOttR8i0PY+ZqSACdy5AQ0EU48ivQEI
-  AL8k9yPxIItjQ398+pZUplLDSufYzeMGGgJRJQUjfSGYBN8aPLWJ/E6MZPVRHmBT
-  jssIYhyxKUXTUY6M+hiTt0vpoYkD9oz3lLyvEzedgUJ8RrisGU+1dL3P5+YJf1/C
-  tC468OkQxAB70oMCag/PXnkljB5fZzgFhfQs8IHeUrdTyVlhrRkUxbh5EjOj3cnE
-  nKlW2eNM2QG/FduBYmPaPf9slcGDBo3SacQ+IcmlEH83ZycRhcoaSfa6sKVdQqq8
-  /FnhtNsOWnu1kYEvX/Qc8Uaoub40ESVTR5Qdj97IiH1NO6q2h5nAwmMC74q0EZzP
-  sQE1vqdsQE+oAEkaNyz5P68AEQEAAYkBJQQYAQoADwUCU48ivQIbDAUJB4YfgAAK
-  CRCJI9YX5R7UR5K8B/970DkBOsiZkSWBVuNVedijD4LSo4LF1o+Xm9/DUH5yXe99
-  CHuiK6iCHRGrJAGlUC2XETB4mA+dwCLQ/Gs4HTLSWoqeWcOfoyyLlYYHk5whWUw3
-  DI3Qj/hH+GvsJoJ2LdgJWBKU8WsXrR/GS9WqhV7sERQbaoUKB8ZbledtXlT7Vjmb
-  U6QvNWXl0gzCnBhdcslYzlZ5KxpQqX67Qo020shfemAKJkwXuMJAMB6Q7p5L+JE9
-  lFkyInx1ZzHOrVfpO9M8l08+9ArpH3+7RvSS60oMF56fNQwuOKiGgHLOZhkiRao7
-  mdgI8Hx09QYcxGjehtMJNzQQ6qryx8UNAaEtB8/w
-  =QysZ
-  -----END PGP PUBLIC KEY BLOCK-----
-  ```
+```
+{{% opskey %}}
+```
 
 ## Personally-identifiable information
 

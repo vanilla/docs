@@ -7,6 +7,8 @@ menu:
         parent: "addons-reactions"
 ---
 
+{{% cloudfeature %}}
+
 ## Curating with Reactions
 
 Reactions can provide your community with powerful self-curation tools. It's very important to understand your community (or the community you intend to build) before selecting what reactions to use.

@@ -5,12 +5,12 @@ category: "help"
 menu:
     help:
         parent: "cloud"
-        identifier: "cloud-repo"
+        identifier: "cloud-repository"
 ---
 
 ## Private Repository
 
-Our [VIP plans](http://vanillaforums.com/plans) come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.
+Our [VIP plans](https://vanillaforums.com/plans) come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.
 
 ### Setup
 
@@ -24,6 +24,6 @@ You will need a GitHub account for each developer that requires access. We stron
 
 ### Local testing
 
-If you'd like to use a local install of Vanilla for testing, please use the `master` branch from our [main repository](http://github.com/vanillaforums/vanilla). Please follow the installation instruction in the README.
+If you'd like to use a local install of Vanilla for testing, please use the `master` branch from our [main repository](https://github.com/vanilla/vanilla). Please follow the installation instruction in the README.
 
-Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the [addons repository](http://github.com/vanillaforums/Addons).
+Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the [addons repository](https://github.com/vanilla/addons).

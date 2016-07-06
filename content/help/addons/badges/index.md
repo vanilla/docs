@@ -8,6 +8,8 @@ menu:
         identifier: "addons-badges"
 ---
 
+{{% cloudfeature %}}
+
 ## Purpose
 
 Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.

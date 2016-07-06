@@ -8,6 +8,8 @@ menu:
         identifier: "addons-vanilla-pop"
 ---
 
+{{% cloudfeature %}}
+
 ## Email Interaction
 
 Vanilla Pop is a feature of Vanilla's Enterprise forums that allows you to interact with your forum through email. 

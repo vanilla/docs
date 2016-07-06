@@ -7,6 +7,8 @@ menu:
         parent: "addons-badges"
 ---
 
+{{% cloudfeature %}}
+
 ## Giving a badge
 
 Badges->Give is the permission that defines who can give badges. By default, moderators and administrators have it.

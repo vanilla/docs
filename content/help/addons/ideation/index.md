@@ -8,6 +8,8 @@ menu:
         identifier: "addons-ideation"
 ---
 
+{{% cloudfeature %}}
+
 ## Ideation
 
 Ideation gives forum users the ability to upvote and optionally downvote discussions.

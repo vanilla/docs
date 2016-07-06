@@ -7,6 +7,8 @@ menu:
         parent: "addons-badges"
 ---
 
+{{% cloudfeature %}}
+
 ## Disabling badges
 
 To disable a badge and prevent it from displaying publicly, click "Yes" in the badge's row under the "Active" column. That will toggle it to "No", indicating it is no longer active.  Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking "No", which will then toggle back to "Yes", indicating it is active again.

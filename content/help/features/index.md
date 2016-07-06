@@ -4,6 +4,7 @@ category: "help"
 menu:
     help:
         identifier: "features"
+        weight: 20
 ---
 
 ## Features Overview

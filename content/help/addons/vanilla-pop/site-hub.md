@@ -7,6 +7,8 @@ menu:
         parent: "addons-vanilla-pop"
 ---
 
+{{% cloudfeature %}}
+
 ## Differences
 
 Vanilla Pop works in much the same way on the hub as it does on regular sites. The node email addresses are slightly different and there are a few more features which are detailed below.

@@ -5,6 +5,7 @@ category: "help"
 menu:
     help:
         identifier: "addons"
+        weight: 40
 ---
 
 ## What Are Addons?

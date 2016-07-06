@@ -13,4 +13,4 @@ Our current installation and upgrade instructions are in the [README file](https
 
 ## Cloud Solution
 
-For a 1-click installation hosted plan with professional support and services, see [Vanilla Forums Cloud Hosting plans](http://vanillaforums.com/plans).
+For a 1-click installation hosted plan with professional support and services, see [Vanilla Forums Cloud Hosting plans](https://vanillaforums.com/plans).

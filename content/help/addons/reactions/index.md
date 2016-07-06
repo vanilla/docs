@@ -8,6 +8,8 @@ menu:
         identifier: "addons-reactions"
 ---
 
+{{% cloudfeature %}}
+
 ## What are reactions?
 
 Reactions are a 1-click response to discussions and comments. Using Reactions enables community members to indicate an emotional ("Awesome", "LOL") or empirical ("Agree", "Vote Down") response without typing a comment. This introduces feedback that is otherwise missing from a community when members don't have anything to add to a discussion via a comment. Reactions are available via an addon.
