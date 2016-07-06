@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reactions on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/categories/reactions/</link>
+    <description>Recent content in Reactions on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/categories/reactions/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adding and Editing Reactions</title>
+      <link>http://127.0.0.1:8080/help/addons/reactions/adding-and-editing-reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <description>
+
+&lt;h2 id=&#34;selecting-reactions&#34;&gt;Selecting Reactions&lt;/h2&gt;
+
+&lt;p&gt;Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8080/images/reactions-list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
+
+&lt;h2 id=&#34;edit-a-reaction&#34;&gt;Edit a Reaction&lt;/h2&gt;
+
+&lt;p&gt;To edit a reaction, go to Reactions in the Dashboard and click the name of the Reaction you wish to edit.&lt;/p&gt;
+
+&lt;p&gt;Editing an existing reaction is the best way to tweak your list to fit the culture of your community. We recommend selecting the default reaction that most closely matches your desired reaction and simply changing its name.&lt;/p&gt;
+
+&lt;p&gt;You can also change the &amp;ldquo;Points&amp;rdquo; field to modify how many points it give to the user receiving each reaction of that type. The number of points assigned to the discussion or comment is not currently editable via the Dashboard. Yes, Reactions assigns points to users and content independently.&lt;/p&gt;
+
+&lt;p&gt;Doing this allows you to keep any automated badges associated with that reaction, which you can then rename appropriately as well. See the Badges - Adding and Editing Badges to see how to do this safely.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-reaction&#34;&gt;Adding a Reaction&lt;/h2&gt;
+
+&lt;p&gt;To add a new reaction, contact support or your sales representative.&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+
+&lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8080/images/reactions-advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Best of Style&amp;rdquo; changes the layout of your Best Of page.&lt;/p&gt;
+
+&lt;p&gt;Reactions come with the option to order your comments based on reactions. In general, we do not recommend doing this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Curating with Reactions</title>
+      <link>http://127.0.0.1:8080/help/addons/reactions/curating-with-reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/addons/reactions/curating-with-reactions/</guid>
+      <description>
+
+&lt;h2 id=&#34;curating-with-reactions&#34;&gt;Curating with Reactions&lt;/h2&gt;
+
+&lt;p&gt;Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.&lt;/p&gt;
+
+&lt;p&gt;Any of the thresholds or increment values mentioned in this document can be modified via support.&lt;/p&gt;
+
+&lt;h2 id=&#34;promoting-content&#34;&gt;Promoting content&lt;/h2&gt;
+
+&lt;p&gt;Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it. It assigns five points to the discussion or comment. The user that made the post receives the number of points indicated under that reaction in your Dashboard.&lt;/p&gt;
+
+&lt;p&gt;Discussions or comments with five or more points assigned to it will be added to the Best Of page and will get the &amp;ldquo;promoted&amp;rdquo; CSS class added to them. These points can come from any type of reaction.&lt;/p&gt;
+
+&lt;p&gt;After content is added to the Best Of page, it is never removed, no matter what its future point total is. The &amp;ldquo;promoted&amp;rdquo; CSS class is reevaluated as point totals change. You can use this special class to style promoted content different (like highlighting it with a special background color).&lt;/p&gt;
+
+&lt;h2 id=&#34;burying-content&#34;&gt;Burying content&lt;/h2&gt;
+
+&lt;p&gt;Discussions and comments that reach a score of -5 or lower will be &amp;ldquo;buried&amp;rdquo;. Buried content appears collapsed by default and requires a user to click on the content before it can be read. You can style buried content using the &amp;ldquo;Buried&amp;rdquo; CSS class.&lt;/p&gt;
+
+&lt;h2 id=&#34;abuse-and-spam&#34;&gt;Abuse and Spam&lt;/h2&gt;
+
+&lt;p&gt;Abuse and Spam reactions are available to all users when enabled but have special actions attached to them. Five or more Abuse reactions will add the content to the Moderation Queue for moderator review. Ten or more will remove it. Five or more Spam reactions will move the content to the Spam Queue.&lt;/p&gt;
+
+&lt;p&gt;A user with the &amp;ldquo;Curation&amp;rdquo; permission counts as 5 of either of these reactions when they use it.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-negative-reactions&#34;&gt;Using negative reactions&lt;/h2&gt;
+
+&lt;p&gt;The current default for negative reactions in new installations of Vanilla is for them to remove 1 point from the discussion or comment, but to have no effect on the point total of the user who made the post. This discourages abuse of negative reactions beyond simple voting scenarios.&lt;/p&gt;
+
+&lt;p&gt;There is always the potential for abuse when you open up avenues of self-curation in a community. In general, we discourage the use of any negative reactions unless there are established guidelines for their use in your community.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

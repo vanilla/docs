@@ -1,0 +1,108 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Email</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h1 id="sending-emails">Sending Emails</h1>
+
+<p>The Garden framework includes an Email object for sending and configuring emails. The formatting of Vanilla Emails is handled by the EmailTemplate property of the Email object.</p>
+
+<h2 id="emailtemplate">EmailTemplate</h2>
+
+<p>The EmailTemplate object helps to organize the components of an email and prepare them for output.</p>
+
+<p>These components are:</p>
+
+<ul>
+<li><strong>Title</strong>: A string, placed in a <code>&lt;h1&gt;</code> block before the rest of the email text in the default email template. Can be HTML-formatted or plaintext.</li>
+<li><strong>Lead</strong>: A string, placed just below the title with a font size between the title&rsquo;s and the message&rsquo;s in the default email template. Can be HTML-formatted or plaintext.</li>
+<li><strong>Message</strong>: A string, usually containing the meat of the email. Can be HTML-formatted or plaintext.</li>
+<li><strong>Footer</strong>: A collection of key/values including the footer text, and the background color and text color. Placed after the rest of the email content in the default email template. The text can be HTML-formatted or plaintext.</li>
+<li><strong>Button</strong>: A collection of key/values including the button text, the link url, and the background color and text color. Renders as a button-looking link in the default email template, but could also be formatted to appear as a simple link. Appears after the email message. The text can be HTML-formatted or plaintext.</li>
+<li><strong>Image</strong>: A collection of key/values including the image source url, the link url and alt text. Appears at the top of the email before any other content and has a max-width of 75% of its container in the default email template.</li>
+</ul>
+
+<p>An email can contain any or none of the above components.</p>
+
+<p>These components are properties on the EmailTemplate object and can be set using the corresponding setter method.</p>
+
+<p>The EmailTemplate object also has a set of colors that can be used in the template view for background colors and text colors.</p>
+
+<h3 id="emailtemplate-view">EmailTemplate View</h3>
+
+<p>The layout and use of the HTML EmailTemplate components is left up to the view. Vanilla provides a basic Smarty template with inline css styles for rendering. This template lives in dashboard/views/email/email-basic.tpl. This is the default view for all HTML emails in Vanilla.</p>
+
+<p>A plugin or theme could specify a new php or Smarty template view using the setView() method on the EmailTemplate or by overriding the email-basic.tpl view.</p>
+
+<p>For more info on overriding view from a plugin or theme, check out our <a href="/theming/views">docs on overriding views in a theme</a>. The same principles found there can be used to override a view in a plugin.</p>
+
+<h3 id="default-emailtemplate-values">Default EmailTemplate Values</h3>
+
+<p>The default color and image values for your forum&rsquo;s emails can be uploaded and configured from the Email settings page in the dashboard. These values can be overridden by explicitly setting the values in the setButton() or setImage() methods of an individual email&rsquo;s EmailTemplate.</p>
+
+<h2 id="setting-up-an-email">Setting Up an Email</h2>
+
+<p>Here&rsquo;s an example of setting up a basic email in Vanilla:</p>
+
+<pre><code class="language-php">// Set up the email object
+$emailer = new Gdn_Email();
+$emailer-&gt;to('foo@bar.com');
+$emailer-&gt;subject('Email Subject');
+
+// Configure the EmailTemplate object
+$email = $emailer-&gt;getEmailTemplate();
+$email-&gt;setTitle('Email Title')
+    -&gt;setLead('Read this exciting email...')
+    -&gt;setMessage('Email body')
+    // Overrides the default button colors
+    -&gt;setButton(externalUrl('/'), 'Check it out', '#ff0000', '#ffff00')
+    // Overrides the default image.
+    -&gt;setImage('http://foobar.com/image.png', externalUrl('/'), 'Image')
+    -&gt;setFooter('Footer text');
+
+// Set the configured EmailTemplate
+$emailer-&gt;setEmailTemplate($email);
+
+// All set to send!
+$emailer-&gt;send();
+</code></pre>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

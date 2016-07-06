@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Importing on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/categories/importing/</link>
+    <description>Recent content in Importing on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/categories/importing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Building new porters</title>
+      <link>http://127.0.0.1:8080/developer/importing/build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/importing/build/</guid>
+      <description>
+
+&lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
+
+&lt;p&gt;We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy an existing class, like &lt;code&gt;class.smf.php&lt;/code&gt; and rename it.&lt;/li&gt;
+&lt;li&gt;Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Importing</title>
+      <link>http://127.0.0.1:8080/developer/importing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/importing/</guid>
+      <description>
+
+&lt;h2 id=&#34;importing-to-vanilla&#34;&gt;Importing to Vanilla&lt;/h2&gt;
+
+&lt;p&gt;Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;Download Vanilla Porter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Vanilla Porter is a tool that you can upload to your current web server to run in your web browser. It exports any platform to a generic format that the &amp;ldquo;Import&amp;rdquo; option in your new Vanilla Forum can read.&lt;/p&gt;
+
+&lt;p&gt;All imports will completely overwrite all data in your forum (including your users), so only import to a fresh forum installation that doesn&amp;rsquo;t have any data you want to save. We recommend backing up your Vanilla database first as an extra precaution.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/developers/importing/support&#34;&gt;Supported platforms &amp;amp; compatibility notes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/developers/importing/porter&#34;&gt;Using Vanilla Porter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Supported platforms</title>
+      <link>http://127.0.0.1:8080/developer/importing/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/importing/support/</guid>
+      <description>
+
+&lt;h2 id=&#34;supported-platforms&#34;&gt;Supported platforms&lt;/h2&gt;
+
+&lt;p&gt;Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the &lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;Vanilla Porter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;php-forums&#34;&gt;PHP forums&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vanilla 1&lt;/li&gt;
+&lt;li&gt;phpBB 2-3&lt;/li&gt;
+&lt;li&gt;vBulletin 3-5&lt;/li&gt;
+&lt;li&gt;bbPress 1&lt;/li&gt;
+&lt;li&gt;SimplePress 1&lt;/li&gt;
+&lt;li&gt;Simple Machines 1-2&lt;/li&gt;
+&lt;li&gt;PunBB 1&lt;/li&gt;
+&lt;li&gt;IP.Board 3&lt;/li&gt;
+&lt;li&gt;XenForo&lt;/li&gt;
+&lt;li&gt;Joomla Kuena&lt;/li&gt;
+&lt;li&gt;Drupal Forum&lt;/li&gt;
+&lt;li&gt;MyBB&lt;/li&gt;
+&lt;li&gt;esoTalk&lt;/li&gt;
+&lt;li&gt;Expression Engine&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;asp-net-forums&#34;&gt;ASP / .NET forums&lt;/h3&gt;
+
+&lt;p&gt;Requires conversion to MySQL first. Try the &lt;a href=&#34;https://github.com/tburry/dbdump&#34;&gt;dbdump tool&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Yet Another Forum&lt;/li&gt;
+&lt;li&gt;Toast&lt;/li&gt;
+&lt;li&gt;UserVoice&lt;/li&gt;
+&lt;li&gt;ASP Playground&lt;/li&gt;
+&lt;li&gt;Webwiz&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;mbox-formatted-mailing-lists&#34;&gt;mbox-formatted mailing lists&lt;/h3&gt;
+
+&lt;p&gt;Mailbox imports are very complicated, but allow importing of email libraries (like a listserv). See its comments at the top of its package file.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Vanilla Porter</title>
+      <link>http://127.0.0.1:8080/developer/importing/porter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/importing/porter/</guid>
+      <description>
+
+&lt;h2 id=&#34;migrating-a-forum-to-vanilla&#34;&gt;Migrating a forum to Vanilla&lt;/h2&gt;
+
+&lt;p&gt;Vanilla Porter is the &lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;export tool&lt;/a&gt;  for converting your legacy forum to Vanilla. The process is four steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Export your old forum data to a special &amp;ldquo;Porter file&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Create a new Vanilla forum.&lt;/li&gt;
+&lt;li&gt;Import the Porter file in Vanilla&amp;rsquo;s Dashboard.&lt;/li&gt;
+&lt;li&gt;Verify &amp;amp; finalize your new forum.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Vanilla Porter &lt;strong&gt;requires&lt;/strong&gt; a MySQL database and PHP 5.3+ with zlib support enabled.&lt;/p&gt;
+
+&lt;h3 id=&#34;before-migrating&#34;&gt;Before migrating&lt;/h3&gt;
+
+&lt;p&gt;We recommend these best practices:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Inform your community&lt;/strong&gt; well in advance about the coming transition. Introduce them to Vanilla and communicate why you are migrating and when.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If possible, &lt;strong&gt;allow moderators time to use Vanilla&lt;/strong&gt; and ask questions before migrating.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Do one or more &lt;strong&gt;test runs&lt;/strong&gt; to work out any issues and familiarize yourself with the process.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Prepare &amp;amp; test redirects&lt;/strong&gt; from your old forum&amp;rsquo;s content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under &lt;strong&gt;Special Steps &amp;amp; Notes&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Doing these things will help your members, moderators, and yourself have a better migration experience and set good expectations for everyone.&lt;/p&gt;
+
+&lt;p&gt;All set? OK, let&amp;rsquo;s jump in.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-export-old-forum-data&#34;&gt;1. Export old forum data&lt;/h3&gt;
+
+&lt;p&gt;Vanlla Porter exports from a database to a special &amp;ldquo;Porter file&amp;rdquo; format that Vanilla can import. We currently support &lt;a href=&#34;http://127.0.0.1:8080/developers/importing/support&#34;&gt;these platforms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have a very large forum (millions of posts), see the &lt;strong&gt;Special Steps &amp;amp; Notes&lt;/strong&gt; below before beginning.&lt;/p&gt;
+
+&lt;p&gt;To use it:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grab&lt;/strong&gt; the &lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;export tool&lt;/a&gt; and unzip it. It will be a single file named &lt;code&gt;vanilla2export.php&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Upload&lt;/strong&gt; the file to &lt;em&gt;writable&lt;/em&gt; web directory on the server with your legacy database. Most forums have a &lt;code&gt;files&lt;/code&gt; or &lt;code&gt;uploads&lt;/code&gt; directory which is an easy place to put it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Browse&lt;/strong&gt; to vanilla2export.php in your web browser. You should see a &amp;ldquo;Vanilla Porter&amp;rdquo; web page.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;If this is the final export, now is the time to put your legacy forum into read-only mode to prevent posts from being lost during the migration.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Enter&lt;/strong&gt; information about your forum database into the form and click &lt;strong&gt;Begin Export&lt;/strong&gt;. If you can’t remember, try looking at your forum’s configuration file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt; the Porter file it generates&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Got problems? See the &lt;strong&gt;Troubleshooting&lt;/strong&gt; section below.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-create-a-new-vanilla-forum&#34;&gt;2. Create a new Vanilla forum&lt;/h3&gt;
+
+&lt;p&gt;In order to import your data, you will need a fresh installation of &lt;a href=&#34;http://vanillaforums.org/addon/vanilla-core&#34;&gt;Vanilla&lt;/a&gt;. When you do the import, all data in your fresh installation will be overwritten, so make sure you don’t have any discussions you want to keep there. See the README file for help.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-import-your-data&#34;&gt;3. Import your data&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Place your Porter file (that the export created) in Vanilla&amp;rsquo;s &lt;code&gt;uploads&lt;/code&gt; folder.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In Vanilla, click &lt;strong&gt;Import&lt;/strong&gt; in the Dashboard.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Select the file you uploaded. Enter the email of the user from your legacy forum you want to be the superadmin of the new forum. Check &amp;ldquo;Use my current password&amp;rdquo;. Leave the password box empty.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click &lt;strong&gt;Start Import&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The import runs a while depending on how much data you have. If it&amp;rsquo;s more than a million posts, you can make a cup of tea and check Twitter.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click &lt;strong&gt;Finish&lt;/strong&gt; to cleanup and finalize the import.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Welcome to Vanilla! Notice you are now logged in as the username you entered. The password is the one you created your Vanilla forum with. Below are some more things you should do to get your new forum ready.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-verifying-finalizing-the-import&#34;&gt;4. Verifying &amp;amp; finalizing the import&lt;/h3&gt;
+
+&lt;p&gt;These are things to do after your Vanilla import. This includes manually visiting a few &amp;ldquo;hidden&amp;rdquo; Dashboard pages just for this process.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Database Update:&lt;/strong&gt; Visit the URL &lt;code&gt;/utility/update&lt;/code&gt; to make any database changes needed. An import can overwrite changes your addons made, so they will be re-applied by this.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Counters Update:&lt;/strong&gt; Visit the URL &lt;code&gt;/dba/counts&lt;/code&gt; to run &amp;ldquo;counter&amp;rdquo; updates of things like the number of discussions per category.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users:&lt;/strong&gt; View your Users page in the Dashboard to verify users were imported correctly and are all assigned to a role.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Roles &amp;amp; Permissions:&lt;/strong&gt; Many imports reset permissions. It is very import you edit each role in turn to review and correct them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Default Roles:&lt;/strong&gt; Visit the URL &lt;code&gt;/role/defaultroles&lt;/code&gt; to make sure your visitor, default, and applicant roles are assigned correctly.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Better BBCode:&lt;/strong&gt; If you&amp;rsquo;re coming from a forum that uses BBCode, we recommend grabbing the NBBC plugin from the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt; for improved support.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Verify Content:&lt;/strong&gt; Go thru your discussions and categories to make sure your content is complete, ungarbled, and organized correctly.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Enable &amp;amp; Verify Redirects:&lt;/strong&gt; Turn on your 301 redirects to Vanilla. Test old discussion, category, and user profile URLs to make sure you have set up your redirects correctly. See the &lt;strong&gt;Redirects&lt;/strong&gt; section below for more info.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;special-steps-notes&#34;&gt;Special Steps &amp;amp; Notes&lt;/h2&gt;
+
+&lt;p&gt;This part contains nauseating levels of detail about aspects of migrating that hopefully you don&amp;rsquo;t need to deal with. You&amp;rsquo;ll get referred here from elsewhere in the docs if you need it.&lt;/p&gt;
+
+&lt;h4 id=&#34;large-forums&#34;&gt;Large forums&lt;/h4&gt;
+
+&lt;p&gt;Forums with over 1 million posts may take a long time to migrate on low-budget hosting plans and cause intense resource usage or downtime while it runs. Forums with over 10 million posts make take a very long time &amp;amp; cause strain on &lt;em&gt;any&lt;/em&gt; hosting plan.&lt;/p&gt;
+
+&lt;p&gt;For advanced users in these circumstances, copy your database to a localhost installation and run the Porter via the command line. See the &lt;a href=&#34;https://github.com/vanilla/porter&#34;&gt;Vanilla Porter repository and README&lt;/a&gt; for more information. We likewise recommend importing to a localhost copy of Vanilla and running your verification &amp;amp; finalization steps locally, and repeating the &lt;strong&gt;Default Roles&lt;/strong&gt; step after copying the database to production.&lt;/p&gt;
+
+&lt;h4 id=&#34;attachments&#34;&gt;Attachments&lt;/h4&gt;
+
+&lt;p&gt;File attachments and avatars may be stored in the file system or as binary blobs in the database depending on your platform and configuration. If they are stored in the file system (most common), copy the entire folder directly into Vanilla&amp;rsquo;s &lt;code&gt;uploads&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;The Porter can export binary blobs for vBulletin. When navigating to the &lt;code&gt;vanilla2export.php&lt;/code&gt; file, add &lt;code&gt;?avatars=1&amp;amp;files=1&lt;/code&gt; to the URL. This will create folders for &lt;code&gt;attachments&lt;/code&gt; and &lt;code&gt;customavatars&lt;/code&gt; that should each be directly copied to Vanilla&amp;rsquo;s &lt;code&gt;uploads&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;To rename vBulletin&amp;rsquo;s attachments to have correct extensions, use &lt;code&gt;filepath=/path/to/attachments&lt;/code&gt; in the URL to process them. Renaming phpBB&amp;rsquo;s attachments requires the special &lt;code&gt;utilities/phpbb.extensions.php&lt;/code&gt; file in the repository. These are currently advanced user tools and may require consulting the inline documentation in the appropriate package file. If you get stuck, ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;non-mysql-data&#34;&gt;Non-MySQL data&lt;/h4&gt;
+
+&lt;p&gt;Data in non-MySQL formats (MSSQL, PostgreSQL, XML, CSV, JSON) should first be converted to a MySQL database before using Vanilla Porter or attempting to create a Porter package. For flat file data, we recommend a table per file. Preserving existing column names is preferred whenever possible.&lt;/p&gt;
+
+&lt;h4 id=&#34;passwords&#34;&gt;Passwords&lt;/h4&gt;
+
+&lt;p&gt;Vanilla natively supports many legacy password schemes for other forums. This means users do not need to reset their password if you&amp;rsquo;re coming from a platform we support (see the vanilla2export.php file for availability).&lt;/p&gt;
+
+&lt;p&gt;If you run into problems, your platform isn&amp;rsquo;t supported, or want to reset them anyway, you can run this SQL query (via a tool like phpMyAdmin) to reset all passwords: &lt;code&gt;update GDN_User set HashMethod = &#39;Reset&#39; where Admin &amp;lt; 1;&lt;/code&gt; (the &lt;code&gt;where&lt;/code&gt; clause there prevents resetting your superadmin password). This does not trigger any notification emails; users will be alerted they must reset their password on their next login attempt.&lt;/p&gt;
+
+&lt;h4 id=&#34;redirects&#34;&gt;Redirects&lt;/h4&gt;
+
+&lt;p&gt;Many legacy platform redirects can be handled by the &lt;strong&gt;Redirector&lt;/strong&gt; plugin in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt;. Simply enable the plugin. Check the description for what it supports currently.&lt;/p&gt;
+
+&lt;p&gt;You can create custom redirects as needed using the &lt;a href=&#34;http://127.0.0.1:8080/developers/routes&#34;&gt;Routes&lt;/a&gt; feature in the Dashboard. Use regular expressions to match incoming URL patterns and 301 redirects to their new place. Some imports will automatically create Routes for you, so check to see.&lt;/p&gt;
+
+&lt;p&gt;If you run the import on localhost and then copy the database to production, be sure to manually transfer those special Routes as well.&lt;/p&gt;
+
+&lt;p&gt;Once you have correct redirects set in Vanilla, you must set up a global redirect from your old forum address to Vanilla. See the &lt;code&gt;forum-redirector&lt;/code&gt; folder in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt; for help setting this up. This is &lt;em&gt;not&lt;/em&gt; the same as the Redirector plugin above (which is at &lt;code&gt;plugins/Redirector&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Users hitting your old forum should then be 1) globally 301 redirected to Vanilla which will then 2) 301 redirect to the correct content based on the URL requested. Yes, 2 redirects are used in this technique.&lt;/p&gt;
+
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+
+&lt;h4 id=&#34;common-problems-using-porter&#34;&gt;Common problems using Porter&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Not placing the file &lt;code&gt;vanilla2export.php&lt;/code&gt; in a web-enabled folder accessible from the Internet.&lt;/li&gt;
+&lt;li&gt;Not placing the file &lt;code&gt;vanilla2export.php&lt;/code&gt; in a folder that the web server has permission to &lt;em&gt;write&lt;/em&gt; to.&lt;/li&gt;
+&lt;li&gt;Attempting to export from an MSSQL database. You must first convert to MySQL. Try the &lt;a href=&#34;https://github.com/tburry/dbdump&#34;&gt;dbdump tool&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Attempting to export from a non-PHP server. Try setting up a tool like MAMP or WAMP on your computer and copying your database there instead.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Still having trouble? Ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;common-problems-while-importing&#34;&gt;Common problems while importing&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Entering a user email address that does not exist in the legacy forum.&lt;/li&gt;
+&lt;li&gt;Unzipping the generated porter file. Leave it zipped and &lt;em&gt;do not rename it&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Not having &lt;code&gt;zlib&lt;/code&gt; installed AND enabled in your PHP install. Confirm this with your host if the file cannot be read.&lt;/li&gt;
+&lt;li&gt;Not placing the generated porter file directly in the &lt;code&gt;uploads&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;Attempting to &amp;lsquo;Browse&amp;rsquo; for the file rather than selecting it with the multiple choice selector above that.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Still having trouble? Ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;data-missing&#34;&gt;Data missing&lt;/h4&gt;
+
+&lt;p&gt;Review the support table included in the vanilla2export.php file (by browsing to it in a web browser and clicking the link) and verify that data is included in that platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Is it supported?&lt;/strong&gt; If so, ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;. If you can find the technical reason it didn&amp;rsquo;t work, please file an &lt;a href=&#34;https://github.com/vanilla/porter/issues&#34;&gt;issue on the GitHub repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Not supported?&lt;/strong&gt; You can request support be added on the GitHub repository. If you do this, &lt;em&gt;please be prepared to supply a copy of your forum database&lt;/em&gt; as a sample. For password support, first create a new user with a password you can share for testing purposes.&lt;/p&gt;
+
+&lt;p&gt;We do accept pull requests for new package support if you create it. Please see the &lt;strong&gt;Contributing&lt;/strong&gt; section of the &lt;a href=&#34;https://github.com/vanilla/porter&#34;&gt;Vanilla Porter README&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;users-cannot-login&#34;&gt;Users cannot login&lt;/h4&gt;
+
+&lt;p&gt;See the &lt;strong&gt;Passwords&lt;/strong&gt; section under &lt;strong&gt;Special Steps &amp;amp; Notes&lt;/strong&gt; above. Use the query there to reset all passwords if necessary.&lt;/p&gt;
+
+&lt;h4 id=&#34;porter-file-seems-too-small&#34;&gt;Porter file seems too small&lt;/h4&gt;
+
+&lt;p&gt;A great deal of data in legacy forums is unneeded, and porter files are compressed significantly. Be sure to do a test import and verify its content before assuming it&amp;rsquo;s not there. The Vanilla Porter export log will give details on what data has been exported (and how much of each type of data).&lt;/p&gt;
+
+&lt;h4 id=&#34;my-legacy-forum-isn-t-supported&#34;&gt;My legacy forum isn&amp;rsquo;t supported&lt;/h4&gt;
+
+&lt;p&gt;Weirdo. Just kidding! You can request support (see &lt;strong&gt;Data Missing - Not Supported?&lt;/strong&gt; above) or roll your own porter package (see the &lt;a href=&#34;https://github.com/vanilla/porter&#34;&gt;repository&lt;/a&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

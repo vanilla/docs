@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ranks on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/categories/ranks/</link>
+    <description>Recent content in Ranks on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/categories/ranks/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adding and Editing Ranks</title>
+      <link>http://127.0.0.1:8080/help/addons/ranks/adding-and-editing-ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <description>
+
+&lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
+
+&lt;p&gt;Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-a-rank&#34;&gt;Editing a Rank&lt;/h2&gt;
+
+&lt;p&gt;On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.&lt;/p&gt;
+
+&lt;h2 id=&#34;rank-information&#34;&gt;Rank information&lt;/h2&gt;
+
+&lt;h3 id=&#34;name-label&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
+
+&lt;p&gt;The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&amp;rsquo;s name in discussions and comments after they attain the rank.&lt;/p&gt;
+
+&lt;h3 id=&#34;body-message&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
+
+&lt;p&gt;These only appear immediately after a user attains a rank. The &amp;ldquo;Body&amp;rdquo; is emailed to the user. The &amp;ldquo;Message&amp;rdquo; appears at the top of the page when the rank is triggered.&lt;/p&gt;
+
+&lt;h3 id=&#34;css-class&#34;&gt;CSS Class&lt;/h3&gt;
+
+&lt;p&gt;The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&amp;rsquo; content appear more prominently. For example, if you had an &amp;ldquo;Expert&amp;rdquo; rank, maybe you&amp;rsquo;d highlight their comments with a special background color.&lt;/p&gt;
+
+&lt;h3 id=&#34;level&#34;&gt;Level&lt;/h3&gt;
+
+&lt;p&gt;Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.&lt;/p&gt;
+
+&lt;p&gt;If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-criteria&#34;&gt;Setting Criteria&lt;/h2&gt;
+
+&lt;p&gt;You can set thresholds for:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Points&lt;/li&gt;
+&lt;li&gt;Posts (comments + discussions)&lt;/li&gt;
+&lt;li&gt;Duration of membership&lt;/li&gt;
+&lt;li&gt;Permission level (e.g. moderator or admin)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All thresholds you set must be met for the rank to be assigned. For instance, if you set Points to 50 and posts to 10, it means a member must have 50 points AND 10 posts to be assigned the rank.&lt;/p&gt;
+
+&lt;p&gt;Checking &amp;ldquo;Assigned Manually&amp;rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&amp;rsquo;s profile and selecting the rank.&lt;/p&gt;
+
+&lt;h2 id=&#34;manually-assigning-a-rank&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
+
+&lt;p&gt;Rank assignment is done via &amp;ldquo;Edit Profile&amp;rdquo; from the user&amp;rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.&lt;/p&gt;
+
+&lt;h2 id=&#34;abilities&#34;&gt;Abilities&lt;/h2&gt;
+
+&lt;p&gt;Each ability may be given the value of &amp;ldquo;Grant&amp;rdquo;, &amp;ldquo;Revoke&amp;rdquo;, or &amp;ldquo;Default&amp;rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.&lt;/p&gt;
+
+&lt;p&gt;Some abilities are effected by other addons. It&amp;rsquo;s important to understand your current Vanilla installation before changing the default values for abilities.&lt;/p&gt;
+
+&lt;p&gt;For instance, in a default Vanilla installation, users will not have a &amp;ldquo;Title&amp;rdquo; field. Therefore, Ranks&amp;rsquo; &amp;ldquo;default&amp;rdquo; would be that no one has a Title. However, Profile Extender can be used to add a &amp;ldquo;Title&amp;rdquo; field, which would give Titles to all users. In that case, Ranks&amp;rsquo; default would be that everyone has a title.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Applying Ranks over SSO</title>
+      <link>http://127.0.0.1:8080/help/addons/ranks/applying-ranks-over-sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <description>
+
+&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
+
+&lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.&lt;/p&gt;
+
+&lt;p&gt;This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks as Incentives</title>
+      <link>http://127.0.0.1:8080/help/addons/ranks/using-ranks-as-incentives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/addons/ranks/using-ranks-as-incentives/</guid>
+      <description>
+
+&lt;h2 id=&#34;using-ranks-incentives&#34;&gt;Using Ranks: Incentives&lt;/h2&gt;
+
+&lt;p&gt;You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-case&#34;&gt;Example Case&lt;/h3&gt;
+
+&lt;p&gt;What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.&lt;/p&gt;
+
+&lt;p&gt;Gaining points on your site is done thru addons such as Badges and Reactions. Users who gain the point levels of the default ranks have demonstrated their ability to positively contribute to your community.&lt;/p&gt;
+
+&lt;h3 id=&#34;suggested-abilities&#34;&gt;Suggested abilities&lt;/h3&gt;
+
+&lt;p&gt;Levels 1 and 2 will remain as default, or you can assign them abilities according the &lt;em&gt;Using Ranks to Defeat Spam and Abuse&lt;/em&gt; document.&lt;/p&gt;
+
+&lt;p&gt;Level 3, set the follow abilities.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Title: Give&lt;/li&gt;
+&lt;li&gt;Location: Give&lt;/li&gt;
+&lt;li&gt;Me Actions: Give&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Title&amp;rdquo; and &amp;ldquo;Location&amp;rdquo; are fields that appear in every comment a user makes. This allows them to display more information about themselves. &amp;ldquo;Me Actions&amp;rdquo; are a fun ability to make specially-formatted posts based on chatroom actions. Add a comment that simple says &amp;ldquo;/me runs away&amp;rdquo; (minus the quotes) to see it inaction as an administrator.&lt;/p&gt;
+
+&lt;p&gt;Level 4, set the same as Level 3, plus:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Signatures: Give&lt;/li&gt;
+&lt;li&gt;Discussion &amp;amp; Comment Editing: Authors may edit for 1 week&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Signatures&amp;rdquo; are snippets of text or images that a user may add to their profile which will show after every comment they make. You must have the Signatures addon enabled for this to work.&lt;/p&gt;
+
+&lt;p&gt;Discussion &amp;amp; Comment Editing is something that makes forum use more enjoyable for members, but has a high potential for abuse. Therefore, only more trusted members should have longer editing time windows.&lt;/p&gt;
+
+&lt;p&gt;Level 5, set the same as Level 3 and 4, plus:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Content Curation: Give&lt;/li&gt;
+&lt;li&gt;Discussion &amp;amp; Comment Editing: Authors may edit for 1 month&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Content Curation is an effect that interacts with the Reactions addon. The ability to Curate gives the special reaction &amp;ldquo;Promote&amp;rdquo; if it&amp;rsquo;s available on your site, which is +5 points and puts the post on the Best Of page. It also means a &amp;ldquo;Spam&amp;rdquo; reaction from that user can move a post immediately to your Spam Queue for review by moderators.&lt;/p&gt;
+
+&lt;p&gt;Again, we set a longer Discussion &amp;amp; Comment Editing timeout for our most-trusted and experienced users.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks to Defeat Spam or Abuse</title>
+      <link>http://127.0.0.1:8080/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
+      <description>
+
+&lt;h2 id=&#34;using-ranks-spam&#34;&gt;Using Ranks: Spam&lt;/h2&gt;
+
+&lt;p&gt;Ranks can be used to limit the ability of spammers to take advantage of your site and protect members from abuse. To do this, limit the abilities of your newest users until they have been proven their value to the community.&lt;/p&gt;
+
+&lt;h2 id=&#34;who-is-this-for&#34;&gt;Who is this for?&lt;/h2&gt;
+
+&lt;p&gt;This guide is for communities currently having spam problems that have already tried other automated filtering solutions like Akismet and Stop Forum Spam. Because this solution inhibits new user actions which can have a detrimental effect, it should be used as a response to issues not as preemptive prevention.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-ranks-to-inhibit-spam-and-abuse&#34;&gt;Setting up Ranks to inhibit spam and abuse&lt;/h2&gt;
+
+&lt;p&gt;What follows is a generalized recommendation for a large, high-traffic site. Please adjust the suggested values to match your needs and community.&lt;/p&gt;
+
+&lt;p&gt;Click &amp;ldquo;Edit&amp;rdquo; on your &amp;ldquo;Level 1&amp;rdquo; rank. If you&amp;rsquo;ve edited your default ranks already, instead set a Rank to have level 1 (or any level as long as it is the lowest level) with no Criteria (all fields should be blank.&lt;/p&gt;
+
+&lt;p&gt;Under Abilities, set the following values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Formatting Posts: Text&lt;/li&gt;
+&lt;li&gt;Verified: Force Check&lt;/li&gt;
+&lt;li&gt;Post Links: Take Away&lt;/li&gt;
+&lt;li&gt;Titles: Take Away&lt;/li&gt;
+&lt;li&gt;Locations: Take Away&lt;/li&gt;
+&lt;li&gt;Signatures: Take Away&lt;/li&gt;
+&lt;li&gt;Discussion &amp;amp; Comment Editing: Authors may never edit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For your Level 2 rank, set some low Criteria. A good recommendation would be a Post total of 5 or 10, depending on the activity level of your site. For this rank, set Abilities:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Formatting Posts: text, links, and YouTube&lt;/li&gt;
+&lt;li&gt;Titles: Take Away&lt;/li&gt;
+&lt;li&gt;Locations: Take Away&lt;/li&gt;
+&lt;li&gt;Signatures: Take Away&lt;/li&gt;
+&lt;li&gt;Discussion &amp;amp; Comment Editing: Authors may never edit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, for Levels 3 set a higher Criteria like 50 posts or points. For this level (and any higher) you can leave default values or grant additional abilities with the &amp;ldquo;Give&amp;rdquo; option.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-ranks-to-prevent-false-positives-on-spam&#34;&gt;Setting up Ranks to prevent false-positives on spam&lt;/h2&gt;
+
+&lt;p&gt;For your higher ranks, set the Ability &amp;ldquo;Verified&amp;rdquo; to &amp;ldquo;bypass&amp;rdquo;. This will prevent your trusted members&amp;rsquo; content from being evaluated by the spam filter, which means their content will never be put into the spam queue.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

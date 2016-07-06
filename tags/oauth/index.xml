@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oauth on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/tags/oauth/</link>
+    <description>Recent content in Oauth on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OAuth</title>
+      <link>http://127.0.0.1:8080/help/features/sso/oauth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/features/sso/oauth/</guid>
+      <description>
+
+&lt;h2 id=&#34;sso-with-oauth-overview&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
+
+&lt;p&gt;Because OAuth 2.0 is an SSO &lt;em&gt;framework&lt;/em&gt; and not a narrowly defined protocol, custom services work is typically required to set up an OAuth solution for your forum.&lt;/p&gt;
+
+&lt;p&gt;Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Twitter&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;Google+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contact the Vanilla Support Team for more information.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

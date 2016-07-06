@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Staging on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/categories/staging/</link>
+    <description>Recent content in Staging on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/categories/staging/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Staging Site</title>
+      <link>http://127.0.0.1:8080/help/cloud/staging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/cloud/staging/</guid>
+      <description>
+
+&lt;h2 id=&#34;staging-site-overview&#34;&gt;Staging Site Overview&lt;/h2&gt;
+
+&lt;p&gt;For higher &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt;, we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.&lt;/p&gt;
+
+&lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
+
+&lt;p&gt;We will typically use your staging forum as the destination for your &lt;a href=&#34;http://127.0.0.1:8080/cloud/migration&#34;&gt;test migration&lt;/a&gt;. For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support huge staging datasets in the longer-term.&lt;/p&gt;
+
+&lt;h3 id=&#34;access-precautions&#34;&gt;Access precautions&lt;/h3&gt;
+
+&lt;p&gt;Your staging site access cannot be restricted by IP range (unless you have a private cluster). However, we do provide an addon for blocking your staging site from search engine results and spidering.&lt;/p&gt;
+
+&lt;p&gt;If you are doing a test import to the staging site, we typically disable all email sending to prevent notifications from being dispatched from it. Confirm this with your success manager. We can alternatively wipe email addresses from all but select user accounts to allow notification testing &amp;amp; review.&lt;/p&gt;
+
+&lt;h3 id=&#34;early-access&#34;&gt;Early access&lt;/h3&gt;
+
+&lt;p&gt;If you have a moderator or executive team you&amp;rsquo;d like to onboard with Vanilla before your launch, we recommend giving them access to your staging site.&lt;/p&gt;
+
+&lt;h3 id=&#34;syncing&#34;&gt;Syncing&lt;/h3&gt;
+
+&lt;p&gt;We never sync neither data nor settings from staging to production. Your customer success manager can assist you in manually copying your settings, and we can assist in auditing your settings before launch. We &lt;strong&gt;cannot&lt;/strong&gt; offer incremental content or data migrations / merges between sites.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

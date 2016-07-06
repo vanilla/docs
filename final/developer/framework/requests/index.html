@@ -1,0 +1,96 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Requests</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="requests">Requests</h2>
+
+<p>Vanilla&rsquo;s base Controller class (the class from which all <a href="/developers/framework/controllers">controllers</a> are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.</p>
+
+<h3 id="deliverytype">DeliveryType</h3>
+
+<p>There are four delivery types available:</p>
+
+<ol>
+<li><code>DELIVERY_TYPE_ALL</code>: Entire page (default).</li>
+<li><code>DELIVERY_TYPE_ASSET</code>: Content for the requested <a href="/developers/framework/assets">asset</a>.</li>
+<li><code>DELIVERY_TYPE_VIEW</code>: Only the requested <a href="/developers/framework/views">view</a>.</li>
+<li><code>DELIVERY_TYPE_BOOL</code>: Only report request success (true/false).</li>
+</ol>
+
+<p>If no delivery type is provided in the request, <code>DELIVERY_TYPE_ALL</code> is assumed.</p>
+
+<p>In order to made the controller deliver content other than <code>DELIVERY_TYPE_ALL</code>, you would have to append the request URL (or post data) with the <code>DeliveryType</code> parameter set to the above value you want.</p>
+
+<p>A <code>DELIVERY_TYPE_VIEW</code> request can be easily used for progressive data loading. That or a <code>DELIVERY_TYPE_ASSET</code> request could be used to update part of a page. A <code>DELIVERY_TYPE_BOOL</code> request is used for actions like closing a discussion.</p>
+
+<h3 id="deliverymethod">DeliveryMethod</h3>
+
+<p>The DeliveryMethod defines what format you want the response in.</p>
+
+<ol>
+<li><code>DELIVERY_METHOD_XHTML</code>: Delivered as HTML (default).</li>
+<li><code>DELIVERY_METHOD_JSON</code>: As JSON.</li>
+<li><code>DELIVERY_METHOD_XML</code>: As XML.</li>
+<li><code>DELIVERY_METHOD_TEXT</code>: As text/plain (since 2.1).</li>
+<li><code>DELIVERY_METHOD_PLAIN</code>: No Content-Type is set (since 2.1).</li>
+<li><code>DELIVERY_METHOD_RSS</code>: An RSS feed (since 2.1).</li>
+</ol>
+
+<p>Vanilla builds datasets for its pages in generic collections that can be output in any of the above formats, assuming an appropriate view is available.</p>
+
+<p>You can define a <code>DeliveryMethod</code> by appending it to your request like <code>DeliveryType</code>, or by appending an extension to your request after the method. For example, try viewing <code>/profile</code> on your forum vs. <code>/profile.json</code>. Note that arguments are added normally after another slash. Supposing you wanted to view userid 2&rsquo;s profile with the name Lincoln, you would use <code>/profile.json/2/Lincoln</code>.</p>
+
+<h3 id="parsing-requests">Parsing Requests</h3>
+
+<p>Vanilla parses incoming URLs and parameters for you. There is rarely any reason to directly access PHP globals like <code>$_GET</code>. The <code>Gdn_Request</code> class (in <code>/library/core/class.request.php</code>) handles this for you.</p>
+
+<p><code>Gdn::request()-&gt;domain()</code> will return the current domain. These methods also work as you&rsquo;d expect: <code>Host</code>, <code>IpAddress</code>, <code>Path</code>, and <code>Port</code>. You can also call <code>Get</code> and <code>Post</code> with a parameter name to see its current value. See <code>Gdn_Request</code> for more request data.</p>
+
+<p>A few more useful methods:</p>
+
+<p>Use <code>Gdn::request()-&gt;isAuthenticatedPostback()</code> to check that the current user sent a <code>POST</code> request along with their TransientKey to protect against CSRF attacks. All forms built with Vanilla include a TransientKey.</p>
+
+<p>Use <code>Gdn::request()-&gt;url()</code> to build safe URLs to other parts of Vanilla. The  <code>url()</code> function is a shortcut to this method.</p>
+
+<p>Use <code>Gdn::request()-&gt;requestMethod()</code> to find out which Vanilla method was called by the current request.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

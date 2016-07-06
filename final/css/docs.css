@@ -1,0 +1,114 @@
+.docs .row,
+.docs .column {
+  box-sizing: border-box;
+}
+
+.docs .row {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.docs .column {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.docs .column + .column {
+  padding-left: 12px;
+}
+
+.docs .column.left {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+.docs .column.right {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.docs .column.middle {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.docs .column.top {
+  -ms-flex-align: start;
+      -ms-grid-row-align: flex-start;
+      align-items: flex-start;
+}
+
+.docs .column.bottom {
+  -ms-flex-align: end;
+      -ms-grid-row-align: flex-end;
+      align-items: flex-end;
+}
+
+.docs .column.center {
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+}
+
+.docs .column-1 {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.docs .column-2 {
+  -ms-flex: 2;
+      flex: 2;
+}
+
+.docs .column-3 {
+  -ms-flex: 3;
+      flex: 3;
+}
+
+.docs .column-4 {
+  -ms-flex: 4;
+      flex: 4;
+}
+
+.docs .column-5 {
+  -ms-flex: 5;
+      flex: 5;
+}
+
+.docs .column-6 {
+  -ms-flex: 6;
+      flex: 6;
+}
+
+.docs .column-7 {
+  -ms-flex: 7;
+      flex: 7;
+}
+
+.docs .column-8 {
+  -ms-flex: 8;
+      flex: 8;
+}
+
+.docs .column-9 {
+  -ms-flex: 9;
+      flex: 9;
+}
+
+.docs .column-10 {
+  -ms-flex: 10;
+      flex: 10;
+}
+
+.docs .column-11 {
+  -ms-flex: 11;
+      flex: 11;
+}
+
+.docs .column-12 {
+  -ms-flex: 12;
+      flex: 12;
+}
+
+/* generated with grunt-sass-globbing */
+/*# sourceMappingURL=docs.css.map */

@@ -1,0 +1,87 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Routes</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="routes">Routes</h2>
+
+<p>Route management allows you to create custom urls to specific pages within your Vanilla 2 installation. It also comes with some pre-defined default values.</p>
+
+<h4 id="pre-defined-routes">Pre-defined Routes</h4>
+
+<p>There are four pre-defined routes that have special meaning. They are:
+* <strong>DefaultController</strong> - This is the main page to load when the root url of your Vanilla installation is viewed.
+* <strong>Default404</strong> - The page to view when the requested url could not be found.
+* <strong>DefaultPermission</strong> - The page to view when the user attempted to perform an action they didn&rsquo;t have permission for.
+* <strong>UpdateMode</strong> - The page to view when Vanilla has been taken offline for maintenance.</p>
+
+<p><strong>DefaultController</strong> is the one you will most likely be working with the most, and by default it is set to &ldquo;discussions&rdquo; with an &ldquo;internal&rdquo; route type, which means that it will essentially be the same as sending the user to www.yourdomain.com/path/to/vanilla/root/discussions.</p>
+
+<h4 id="custom-routes">Custom Routes</h4>
+
+<p>Custom routes allow you to create more &ldquo;user-friendly&rdquo; urls for commonly requested pages in your installation. For example, if you had a popular discussion at the following url:</p>
+
+<p><a href="http://yourdomain.com/community/discussion/1250/hampsters-gonna-hampst">http://yourdomain.com/community/discussion/1250/hampsters-gonna-hampst</a></p>
+
+<p>You could create a route to this discussion by adding a new custom route with the following values:</p>
+
+<ul>
+<li><strong>Route Expression:</strong> hamsters</li>
+<li><strong>Target:</strong> discussion/12500/hampsters-gonna-hamst</li>
+<li><strong>Type:</strong> internal</li>
+</ul>
+
+<p>With this route in place, users will be able to get at your hamster discussion by going to: <a href="http://yourdomain.com/community/hamsters">http://yourdomain.com/community/hamsters</a>. Your old URL will continue to work as well, and this will not affect search engine ranking as we tell the search engines what the canonical url is for every page (Google will treat duplicate routes to the same content as one page).</p>
+
+<h4 id="route-types">Route Types</h4>
+
+<p>There are several different route types. They are:</p>
+
+<ul>
+<li><strong>Internal</strong> - Sends no additional headers with the request.</li>
+<li><strong>Temporary</strong> - Sends a 302 header with the request, telling search engines that the move is temporary, and they should not update their indexes.</li>
+<li><strong>Permanent</strong> - Sends a 301 header with the request, telling search engines that the new page is now permanently at the new location and that they should update their indexes.</li>
+<li><strong>Not Found</strong> - Sends a 404 header with the request, telling search engines that the file was not found, and to update their indexes accordingly.</li>
+</ul>
+
+<p>Most of the time, Internal will be the route type of choice. Non-internal routes can take a full url (including http://) as the target, while internal routes can ONLY forward the user to a location within the application.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

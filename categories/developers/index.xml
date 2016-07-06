@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developers on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/categories/developers/</link>
+    <description>Recent content in Developers on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/categories/developers/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Assets</title>
+      <link>http://127.0.0.1:8080/developer/framework/assets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/assets/</guid>
+      <description>
+
+&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
+
+&lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
+
+&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
+
+&lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
+
+&lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;A common scenario is using &lt;a href=&#34;http://127.0.0.1:8080/developers/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
+
+&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;http://127.0.0.1:8080/developers/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Backend</title>
+      <link>http://127.0.0.1:8080/developer/backend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/backend/</guid>
+      <description>
+
+&lt;h1 id=&#34;backend-setup&#34;&gt;Backend setup&lt;/h1&gt;
+
+&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
+
+&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.&lt;/p&gt;
+
+&lt;h3 id=&#34;apache&#34;&gt;Apache&lt;/h3&gt;
+
+&lt;p&gt;Vanilla includes an &lt;code&gt;.htaccess&lt;/code&gt; file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.&lt;/p&gt;
+
+&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
+
+&lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in &lt;code&gt;nginx.conf&lt;/code&gt; correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.&lt;/p&gt;
+
+&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; running in the root web folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    location @site {
+       rewrite ^ /index.php?p=$uri&amp;amp;$args last;
+    }
+
+    location / {
+       try_files $uri @site;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; in a subfolder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    location /subfolder {
+       try_files $uri @subfolder;
+    }
+
+    location @subfolder {
+       rewrite ^/subfolder(/.*) /subfolder/index.php?p=$1&amp;amp;$args last;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In &lt;strong&gt;Vanilla 2.3&lt;/strong&gt;, these rules change because the &lt;code&gt;p&lt;/code&gt; parameter has been removed in favor of strict usage of &lt;code&gt;PATH_INFO&lt;/code&gt;, and therefore no rewrite is needed. However, it&amp;rsquo;s important that your fastcgi params are setup to pass this information to PHP.&lt;/p&gt;
+
+&lt;h3 id=&#34;iis&#34;&gt;IIS&lt;/h3&gt;
+
+&lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
+
+&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
+
+&lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
+
+&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
+
+&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
+
+&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
+$Configuration[&#39;Cache&#39;][&#39;Method&#39;] = &#39;memcached&#39;;
+$Configuration[&#39;memcached&#39;][&#39;Store&#39;] = &#39;localhost&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also specify a port for memcached. Store, e.g.: &lt;code&gt;localhost:11211&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config. Here are some example settings you may wish to use. Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_DISTRIBUTION] = Memcached::DISTRIBUTION_CONSISTENT;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_LIBKETAMA_COMPATIBLE] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_NO_BLOCK] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_TCP_NODELAY] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_CONNECT_TIMEOUT] = 1000;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_LIMIT] = 2;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Banner Settings</title>
+      <link>http://127.0.0.1:8080/developer/configuration/banner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/configuration/banner/</guid>
+      <description>&lt;p&gt;##Banner Settings&lt;/p&gt;
+
+&lt;p&gt;On the Banner Settings page you can control the following aspects of your forum:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Homepage title: This is the title displayed on your home page. This title will also appear in search engines.&lt;/li&gt;
+&lt;li&gt;Site Description: This is the site description for your homepage. Other pages will have description generated by the content.&lt;/li&gt;
+&lt;li&gt;Banner Title: This is the title will in your community&amp;rsquo;s banner, if you have not uploaded a banner image.&lt;/li&gt;
+&lt;li&gt;Banner Logo: This will replace the Banner Title. You have the freedom to use whatever size you want, but 250px x 50px is a great size that works nice.&lt;/li&gt;
+&lt;li&gt;Mobile Banner Logo: This allows you to add a small banner for the mobile theme.&lt;/li&gt;
+&lt;li&gt;Favicon: This is the icon usually seen in the URL bar and when someone bookmarks a link from your site.&lt;/li&gt;
+&lt;li&gt;Share Image: This is the image that will be included when content is shared on social networks (like Reddit or Google+) if no image is present in the content.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building new porters</title>
+      <link>http://127.0.0.1:8080/developer/importing/build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/importing/build/</guid>
+      <description>
+
+&lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
+
+&lt;p&gt;We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy an existing class, like &lt;code&gt;class.smf.php&lt;/code&gt; and rename it.&lt;/li&gt;
+&lt;li&gt;Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Changelog</title>
+      <link>http://127.0.0.1:8080/developer/changelog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/changelog/</guid>
+      <description>
+
+&lt;h2 id=&#34;open-source-change-log&#34;&gt;Open Source Change Log&lt;/h2&gt;
+
+&lt;h1 id=&#34;2-1&#34;&gt;2.1&lt;/h1&gt;
+
+&lt;h3 id=&#34;2-1-6&#34;&gt;2.1.6&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/28555/vanilla-2-1-6-released&#34;&gt;Released 21 Nov 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security: Fixes an SQL injection vector.&lt;/li&gt;
+&lt;li&gt;Security: Adds a PDO option to harden against SQL injection.&lt;/li&gt;
+&lt;li&gt;Security: Improves the security of password resets by increasing token length and limiting them to 1 hour expiration.&lt;/li&gt;
+&lt;li&gt;Adds vBulletin 5.1 password hashing to allow seamless password migrations. All previous versions continue to be supported.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-5&#34;&gt;2.1.5&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 31 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.&lt;/li&gt;
+&lt;li&gt;Security: Potential CSRF vectors were closed, including one that could allow account hijacking.&lt;/li&gt;
+&lt;li&gt;Fixes issue where enabling cleditor would permanently allow style parameter in comments.&lt;/li&gt;
+&lt;li&gt;Fixes issue notifying users of new comments in certain cases where they did not have permission to then view them.&lt;/li&gt;
+&lt;li&gt;Fixes OpenID bug effecting Google Sign In.&lt;/li&gt;
+&lt;li&gt;Multiple community-contributed bug fixes.&lt;/li&gt;
+&lt;li&gt;2.1.4 had a merge conflict which this release replaced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-3&#34;&gt;2.1.3&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release&#34;&gt;Released 9 Sept 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3 newly discovered XSS vectors were fixed.&lt;/li&gt;
+&lt;li&gt;The timezone bug introduced in 2.1.1 is fixed.&lt;/li&gt;
+&lt;li&gt;Fixes invalid DeliveryType in plugins management.&lt;/li&gt;
+&lt;li&gt;2.1.2 had a Javascript error which this release replaced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-1&#34;&gt;2.1.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/27540/vanilla-2-1-1-important-security-bug-release&#34;&gt;Released 2 Aug 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HtmLawed was upgraded to close an XSS vector (thanks to Psych0tr1a for responsibly disclosing this to us &amp;amp; to HtmLawed for a fast patch in response).&lt;/li&gt;
+&lt;li&gt;Multiple XSS exploits were fixed (thanks to @x00 for responsibly disclosing and both he and @businessdad for assistance in making our patches as bulletproof as possible).&lt;/li&gt;
+&lt;li&gt;Fixed a Twitter SSL bug (thanks @Adrian for the patch).&lt;/li&gt;
+&lt;li&gt;Fixed a missing permission check in the sorting utility (thanks @R_J for the patch).&lt;/li&gt;
+&lt;li&gt;cleditor was patched to fix a crippling IE11 bug.&lt;/li&gt;
+&lt;li&gt;Profile Extender was upgraded and a security flaw in it was fixed.&lt;/li&gt;
+&lt;li&gt;Fixed a bug in Announcing while starting a discussion.&lt;/li&gt;
+&lt;li&gt;Corrected the default theme README.&lt;/li&gt;
+&lt;li&gt;Backported GDN_UserAuthenticationProvider.IsDefault so the latest version of jsConnect will work with 2.1.1.&lt;/li&gt;
+&lt;li&gt;Fixes a theme screenshot bug (thanks @hgtonight‌ for the patch).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-1-1&#34;&gt;2.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26685/vanilla-2-1-stable-released&#34;&gt;Released 28 April 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Vanilla internals were completely revamped for 2.1. Many views and several plugin hooks were changed, so &lt;strong&gt;themes and plugins must be tested&lt;/strong&gt; and may need to be refactored before upgrading.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Better localization support.&lt;/li&gt;
+&lt;li&gt;Improved embedding.&lt;/li&gt;
+&lt;li&gt;Performance and caching enhancements.&lt;/li&gt;
+&lt;li&gt;Revamped Activity structure.&lt;/li&gt;
+&lt;li&gt;Framework improvements.&lt;/li&gt;
+&lt;li&gt;Hundreds of bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Incremental changelogs from the &lt;a href=&#34;http://vanillaforums.org/discussion/23322/vanilla-2-1b1-released&#34;&gt;first 2.1 beta&lt;/a&gt; thru RC1 can be found in their individual release announcements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/24845/vanilla-2-1b2-released&#34;&gt;Beta 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26518/vanillla-2-1-beta-3&#34;&gt;Beta 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26626/vanilla-2-1-release-candidate&#34;&gt;Release Candidate 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2-0-18&#34;&gt;2.0.18&lt;/h1&gt;
+
+&lt;h3 id=&#34;2-0-18-14&#34;&gt;2.0.18.14&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 30 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.&lt;/li&gt;
+&lt;li&gt;Security: Potential CSRF vectors were closed, including one that could allow account hijacking.&lt;/li&gt;
+&lt;li&gt;Fixes DeliveryType issue in plugins managements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-13&#34;&gt;2.0.18.13&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/27541/vanilla-2-0-18-13-security-release-for-old-2-0-18-installs&#34;&gt;Released 5 Aug 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HtmLawed is upgraded and its filtering tightened (thanks @x00 &amp;amp; Psych0tr1a)&lt;/li&gt;
+&lt;li&gt;parseJSON() is substituted for eval() in 2 places&lt;/li&gt;
+&lt;li&gt;Refactored the definitions list into Javascript instead of using the DOM&lt;/li&gt;
+&lt;li&gt;Fixes HTMLawed error in 2.0.18.12 which this immediately replaced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-11&#34;&gt;2.0.18.11&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26627/vanilla-2-0-18-11-security-release&#34;&gt;Released 21 Apr 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3 security patches.&lt;/li&gt;
+&lt;li&gt;Ditches troublesome &amp;ldquo;Remove&amp;rdquo; option on the plugins page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-10&#34;&gt;2.0.18.10&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/25668/dec-2013-security-update-2-0-18-10-and-2-1b2&#34;&gt;Released 21 Dec 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Removes flawed update checker.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-9&#34;&gt;2.0.18.9&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/25458/security-update-vanilla-2-0-18-9&#34;&gt;Released 26 Nov 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use SafeRedirect() instead of Redirect() in the discussion controller.&lt;/li&gt;
+&lt;li&gt;Added TrustedDomains() and SafeRedirect().&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t allow user id override on post.&lt;/li&gt;
+&lt;li&gt;Fix Flagging security flaw&lt;/li&gt;
+&lt;li&gt;Filter discussion title on categories/all&lt;/li&gt;
+&lt;li&gt;Comment notifications should only be sent to people with the &amp;ldquo;NewComment&amp;rdquo; preference set.&lt;/li&gt;
+&lt;li&gt;Twitter: Change api version to 1.1.&lt;/li&gt;
+&lt;li&gt;Tagging: Fix xss bug in tagging.&lt;/li&gt;
+&lt;li&gt;Do not add linebreaks twice on search.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-8&#34;&gt;2.0.18.8&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/23339/security-update-vanilla-2-0-18-8&#34;&gt;Released 4 Apr 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Call &amp;amp; check for FilterForm() properly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-7&#34;&gt;2.0.18.7&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Disable the ability to call functions in escaped SQL strings.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-6&#34;&gt;2.0.18.6&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Switch update checks to json to prevent object injection hacks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-5&#34;&gt;2.0.18.5&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Prevent object injection hacks.&lt;/li&gt;
+&lt;li&gt;Make sure the admin password is hashed when inserting the admin user on an already installed Vanilla.&lt;/li&gt;
+&lt;li&gt;Fix Facebook plugin for the 5 Dec 2012 Facebook update.&lt;/li&gt;
+&lt;li&gt;Add class attributes for all the menu item elements.&lt;/li&gt;
+&lt;li&gt;Cache-control logic improvements.&lt;/li&gt;
+&lt;li&gt;Add the proper username parameter to profile/edit.&lt;/li&gt;
+&lt;li&gt;Filter activity, discussion, and comment forms.&lt;/li&gt;
+&lt;li&gt;Fixed security hole where on profile/picture and profile/preferences. Allow moderators to change users&amp;rsquo; pictures from the profile page.&lt;/li&gt;
+&lt;li&gt;Added joomla password hashing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-4&#34;&gt;2.0.18.4&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/19542/vanilla-2-0-18-4-released&#34;&gt;Released 26 Mar 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Patch form tampering possibility.&lt;/li&gt;
+&lt;li&gt;Fix canonical URL issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-3&#34;&gt;2.0.18.3&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/19285/security-vulnerability-flagging-plugin-2-0-18-2-and-earlier&#34;&gt;Released 5 Mar 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Flagging plugin security fixes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-2&#34;&gt;2.0.18.2&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/18749/vanilla-2-0-18-2-release&#34;&gt;Released 21 Jan 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug where Gravatar was using name instead of email for Vanillicons.&lt;/li&gt;
+&lt;li&gt;vBulletin import improvements.&lt;/li&gt;
+&lt;li&gt;SSO fixed for non-English.&lt;/li&gt;
+&lt;li&gt;Embed improvements.&lt;/li&gt;
+&lt;li&gt;Tagging fix.&lt;/li&gt;
+&lt;li&gt;Fix malformed install screen.&lt;/li&gt;
+&lt;li&gt;Various other bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-1&#34;&gt;2.0.18.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 7 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug in the Twitter plugin.&lt;/li&gt;
+&lt;li&gt;Fixed some bugs with connecting.&lt;/li&gt;
+&lt;li&gt;Prevent too many &amp;ldquo;photo changed&amp;rdquo; activities.&lt;/li&gt;
+&lt;li&gt;Added the ability to include announcements in the /categories/discussions page.&lt;/li&gt;
+&lt;li&gt;Fix so people with custom domains don&amp;rsquo;t see strange text.&lt;/li&gt;
+&lt;li&gt;Fixes mass-approve/deny for Applicants&lt;/li&gt;
+&lt;li&gt;Correct title on /categories pages&lt;/li&gt;
+&lt;li&gt;Fixed jQuery syntax errors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-1-1&#34;&gt;2.0.18&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 3 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Major Features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Added moderation, bans, and delete/edit logging.&lt;/li&gt;
+&lt;li&gt;Added notifications (Growl-like popups).&lt;/li&gt;
+&lt;li&gt;Added advanced category management.&lt;/li&gt;
+&lt;li&gt;Added IP logging to core.&lt;/li&gt;
+&lt;li&gt;Added Split/Merge plugin to core.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Added ability to chain Vanillicons into Gravatars with C(Plugins.Gravatar.UseVanillicons) = TRUE&lt;/li&gt;
+&lt;li&gt;Added ability to use IE targetting for CSS and JS files&lt;/li&gt;
+&lt;li&gt;Disabled CLEditor for IE6 users&lt;/li&gt;
+&lt;li&gt;Disabled popups in IE7 or less&lt;/li&gt;
+&lt;li&gt;Added Session support, see: Gdn_Session()-&amp;gt;Stash()&lt;/li&gt;
+&lt;li&gt;Turns off Embed by default&lt;/li&gt;
+&lt;li&gt;Added WebOS to mobile user agents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug in 2.0.17 that could (on rare occassion) wipe your config.php file&lt;/li&gt;
+&lt;li&gt;Fixed issue that could cause VanillaStats to stop working&lt;/li&gt;
+&lt;li&gt;Many new translatable strings added or fixed&lt;/li&gt;
+&lt;li&gt;Fixed support for PHP 5.2 on Windows (fnmatch)&lt;/li&gt;
+&lt;li&gt;Fixed profile to not ask for old password if one was never set (via SSO)&lt;/li&gt;
+&lt;li&gt;Fixed hundreds of other bugs too numerous to list, including dozens of SQL-related bugs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2-0-17&#34;&gt;2.0.17&lt;/h1&gt;
+
+&lt;h3 id=&#34;2-0-17-10&#34;&gt;2.0.17.10&lt;/h3&gt;
+
+&lt;p&gt;SECURITY: Fixed Facebook, Twitter, and Embed plugins&amp;rsquo; access control.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-9&#34;&gt;2.0.17.9&lt;/h3&gt;
+
+&lt;p&gt;SECURITY: Fixed cookie theft vulnerability.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-8&#34;&gt;2.0.17.8&lt;/h3&gt;
+
+&lt;p&gt;Fixed a packaging problem that caused the contents of index.php to be duplicated&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-7&#34;&gt;2.0.17.7&lt;/h3&gt;
+
+&lt;p&gt;Updated analytics client and server software to fix a bug in stats transmission and rendering&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-6&#34;&gt;2.0.17.6&lt;/h3&gt;
+
+&lt;p&gt;SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-5&#34;&gt;2.0.17.5&lt;/h3&gt;
+
+&lt;p&gt;Fixed problem with category permissions where some configurations would result in too restrictive defaults&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-4&#34;&gt;2.0.17.4&lt;/h3&gt;
+
+&lt;p&gt;Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-3&#34;&gt;2.0.17.3&lt;/h3&gt;
+
+&lt;p&gt;Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-2&#34;&gt;2.0.17.2&lt;/h3&gt;
+
+&lt;p&gt;Fixed bug where analytics registration would occur repeatedly if config file was read-only&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-1&#34;&gt;2.0.17.1&lt;/h3&gt;
+
+&lt;p&gt;Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-1-1&#34;&gt;2.0.17&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Released 2011-01-18&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug where plugins and themes could fail to enable due to extra whitespace.&lt;/li&gt;
+&lt;li&gt;Fixed bug where search results were not properly sorted by date after relevance.&lt;/li&gt;
+&lt;li&gt;Fixed bug where links in profile status cause the profile to clear when clicked.&lt;/li&gt;
+&lt;li&gt;Fixed bug where signing in from the comment form button would not refresh the page.&lt;/li&gt;
+&lt;li&gt;Fixed bug where administrators could not change user&amp;rsquo;s picture without 404 errors.&lt;/li&gt;
+&lt;li&gt;Fixed bug where stack trace would display when testing plugins, even if not in DEBUG mode.&lt;/li&gt;
+&lt;li&gt;Fixed bug where signin would not properly redirect if javascript was disabled.&lt;/li&gt;
+&lt;li&gt;Fixed bug where editing a role was erroneously selecting the default permission in the UI when editing.&lt;/li&gt;
+&lt;li&gt;Fixed bug where discussion autorefresh would sometimes disable itself.&lt;/li&gt;
+&lt;li&gt;Fixed bug where when markdown is enabled urls would not get auto-converted to clickable links.&lt;/li&gt;
+&lt;li&gt;Fixed bugs in OpenID and GoogleSignIn where redirect targets were not getting sent to the signin.&lt;/li&gt;
+&lt;li&gt;Fixed bug where mobile theme would sometimes display incorrect &amp;ldquo;last comment date&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Optimized Announced Discussions query to improve performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;older-releases&#34;&gt;Older Releases&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Unlisted versions were skipped or replaced the same day.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2.0.16 - 2010-12-02&lt;/li&gt;
+&lt;li&gt;2.0.15 - 2010-11-25&lt;/li&gt;
+&lt;li&gt;2.0.14 - 2010-11-09&lt;/li&gt;
+&lt;li&gt;2.0.13 - 2010-10-27&lt;/li&gt;
+&lt;li&gt;2.0.11 - 2010-10-06&lt;/li&gt;
+&lt;li&gt;2.0.10 - 2010-09-30&lt;/li&gt;
+&lt;li&gt;2.0.9 - 2010-09-15&lt;/li&gt;
+&lt;li&gt;2.0.6 - 2010-09-01&lt;/li&gt;
+&lt;li&gt;2.0.3 - 2010-08-11&lt;/li&gt;
+&lt;li&gt;2.0.1 - 2010-08-04&lt;/li&gt;
+&lt;li&gt;2.0.0 - 2010-07-22&lt;/li&gt;
+&lt;li&gt;1.1.10 - 2009-11-23&lt;/li&gt;
+&lt;li&gt;1.1.9 - 2009-09-10&lt;/li&gt;
+&lt;li&gt;1.1.8 - 2009-08-02&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Code of Conduct</title>
+      <link>http://127.0.0.1:8080/developer/contributing/conduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/contributing/conduct/</guid>
+      <description>
+
+&lt;h1 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Adapted from Swift&amp;rsquo;s Code of Conduct v1.3 for now because a copied code is better than no code.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.&lt;/p&gt;
+
+&lt;p&gt;We are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.&lt;/p&gt;
+
+&lt;p&gt;Examples of &lt;strong&gt;unacceptable behavior&lt;/strong&gt; by participants include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The use of sexualized language or imagery&lt;/li&gt;
+&lt;li&gt;Personal attacks&lt;/li&gt;
+&lt;li&gt;Trolling or insulting/derogatory comments&lt;/li&gt;
+&lt;li&gt;Public or private harassment&lt;/li&gt;
+&lt;li&gt;Publishing other’s private information, such as physical or electronic addresses, without explicit permission&lt;/li&gt;
+&lt;li&gt;Other unethical or unprofessional conduct&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.&lt;/p&gt;
+
+&lt;p&gt;This code of conduct applies both within project spaces and in public spaces when an individual is representing the project or its community.&lt;/p&gt;
+
+&lt;p&gt;Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting a project maintainer at &lt;a href=&#34;mailto:dev@vanillaforums.com&#34;&gt;dev@vanillaforums.com&lt;/a&gt;. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. Maintainers are obligated to maintain confidentiality with regard to the reporter of an incident.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coding Standard</title>
+      <link>http://127.0.0.1:8080/developer/contributing/coding-standard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/contributing/coding-standard/</guid>
+      <description>
+
+&lt;h1 id=&#34;coding-standard&#34;&gt;Coding Standard&lt;/h1&gt;
+
+&lt;p&gt;As of May 2014, Vanilla will adhere to &lt;a href=&#34;and therefore [PSR-1]&#34;&gt;PSR-2&lt;/a&gt; with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve named our primary exception to PSR-2 the &lt;strong&gt;&lt;a href=&#34;https://twitter.com/linc/status/462308222427480065&#34;&gt;Lord Brackos&lt;/a&gt;&lt;/strong&gt; rule - Same-line open braces on all classes, method, and function definitions.&lt;/p&gt;
+
+&lt;p&gt;We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently. Key words in this document (&amp;ldquo;MUST&amp;rdquo;, &amp;ldquo;SHOULD&amp;rdquo;, etc.) are used as described in &lt;a href=&#34;http://www.ietf.org/rfc/rfc2119.txt&#34;&gt;RFC 2119&lt;/a&gt; which is as boring and obvious as you expect but mercifully brief.&lt;/p&gt;
+
+&lt;h2 id=&#34;php-version&#34;&gt;PHP Version&lt;/h2&gt;
+
+&lt;p&gt;All code in &lt;code&gt;master&lt;/code&gt; must work under PHP 5.4.&lt;/p&gt;
+
+&lt;p&gt;All code in &lt;code&gt;release/2.2&lt;/code&gt; must work under PHP 5.3.&lt;/p&gt;
+
+&lt;p&gt;We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.&lt;/p&gt;
+
+&lt;h2 id=&#34;check-out-codesniffer&#34;&gt;Check out CodeSniffer&lt;/h2&gt;
+
+&lt;p&gt;CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.&lt;/p&gt;
+
+&lt;p&gt;Our standard is in &lt;a href=&#34;http://github.com/vanillaforums/addons&#34;&gt;Vanilla&amp;rsquo;s Addons repo&lt;/a&gt;, where you can submit issues and pull requests. Its contents will help you on your way.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Get CodeSniffer: &lt;code&gt;pear install PHP_CodeSniffer&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add to bash profile: &lt;code&gt;export PATH=&amp;quot;$(brew --prefix php55)/bin:$PATH&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Find CodeSniffer&amp;rsquo;s Standards folder. Use &lt;code&gt;pear config-get php_dir&lt;/code&gt; and go from there.&lt;/li&gt;
+&lt;li&gt;Symlink &lt;code&gt;addons/standards/Vanilla/&lt;/code&gt; to CodeSniffer&amp;rsquo;s Standards folder.&lt;/li&gt;
+&lt;li&gt;Set Vanilla as your standard: &lt;code&gt;phpcs --config-set default_standard Vanilla&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use it: &lt;code&gt;phpcs /path/to/code&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thus ends the readable part of your adventure as you descend into the dry, technical blather of a coding standard. Godspeed, coding warrior.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Overview
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Code MUST use 4 spaces for indenting, not tabs.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Opening braces for classes and functions SHOULD be on the same line.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Control structure keywords MUST have one space after them; method and
+function calls MUST NOT.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Opening braces for control structures MUST go on the same line, and closing
+braces MUST go on the next line after the body.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Opening parentheses for control structures MUST NOT have a space after them,
+and closing parentheses for control structures MUST NOT have a space before.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;There MUST NOT be a hard limit on line length; the soft limit MUST be 120
+characters; lines SHOULD be 80 characters or less.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Namespace is not required.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Files MUST use only &lt;code&gt;&amp;lt;?php&lt;/code&gt; tag.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Files MUST use only UTF-8 without BOM for PHP code.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Files SHOULD &lt;em&gt;either&lt;/em&gt; declare symbols (classes, functions, constants, etc.)
+&lt;em&gt;or&lt;/em&gt; cause side-effects (e.g. generate output, change .ini settings, etc.)
+but SHOULD NOT do both.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Class names MUST be declared in &lt;code&gt;StudlyCaps&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Class constants MUST be declared in all upper case with underscore separators.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Method names SHOULD be declared in &lt;code&gt;camelCase&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;View files are excluded from this standard.  You SHOULD try to follow as many rules as possible.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;1-1-example&#34;&gt;1.1. Example&lt;/h3&gt;
+
+&lt;p&gt;This example encompasses some of the rules below as a quick overview:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+/**
+ * @copyright 2009-2014 Vanilla Forums Inc.
+ * @license http://www.opensource.org/licenses/gpl-2.0.php GPLv2
+ */
+
+/**
+ * The is the foo class that does foo.
+ *
+ * This is a longer description that spans multiple
+ * lines.
+ */
+class Foo extends Bar implements FooInterface {
+    /**
+     * The is the foo class that does foo.
+     *
+     * This is a longer description that spans multiple
+     * lines.
+     *
+     * @param string $a Must be a full sentence.
+     * @param string|null $b Must be a full sentence.
+     *
+     * @return bool
+     */
+    public function sampleFunction($a, $b = null) {
+        if ($a === $b) {
+            bar();
+        } elseif ($a &amp;gt; $b) {
+            $foo-&amp;gt;bar($arg1);
+        } else {
+            BazClass::bar($arg2, $arg3);
+        }
+
+        return true;
+    }
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;General
+&amp;mdash;&amp;mdash;&amp;ndash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;2-1-files&#34;&gt;2.1. Files&lt;/h3&gt;
+
+&lt;p&gt;All PHP files MUST use the Unix LF (linefeed) line ending.&lt;/p&gt;
+
+&lt;p&gt;All PHP files MUST end with a single blank line.&lt;/p&gt;
+
+&lt;p&gt;The closing &lt;code&gt;?&amp;gt;&lt;/code&gt; tag MUST be omitted from files containing only PHP.&lt;/p&gt;
+
+&lt;p&gt;All view files are excluded from this standard.  You SHOULD try to follow as many rules as possible.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-2-php-tags&#34;&gt;2.2. PHP Tags&lt;/h3&gt;
+
+&lt;p&gt;PHP code MUST use the long &lt;code&gt;&amp;lt;?php ?&amp;gt;&lt;/code&gt; tags; it
+MUST NOT use the other tag variations.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-3-character-encoding&#34;&gt;2.3. Character Encoding&lt;/h3&gt;
+
+&lt;p&gt;PHP code MUST use only UTF-8 without BOM.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-4-side-effects&#34;&gt;2.4. Side Effects&lt;/h3&gt;
+
+&lt;p&gt;A file SHOULD declare new symbols (classes, functions, constants,
+etc.) and cause no other side effects, or it SHOULD execute logic with side
+effects, but SHOULD NOT do both.&lt;/p&gt;
+
+&lt;p&gt;The phrase &amp;ldquo;side effects&amp;rdquo; means execution of logic not directly related to
+declaring classes, functions, constants, etc., &lt;em&gt;merely from including the
+file&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Side effects&amp;rdquo; include but are not limited to: generating output, explicit
+use of &lt;code&gt;require&lt;/code&gt; or &lt;code&gt;include&lt;/code&gt;, connecting to external services, modifying ini
+settings, emitting errors or exceptions, modifying global or static variables,
+reading from or writing to a file, and so on.&lt;/p&gt;
+
+&lt;p&gt;The following is an example of a file with both declarations and side effects;
+i.e, an example of what to avoid:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// side effect: change ini settings
+ini_set(&#39;error_reporting&#39;, E_ALL);
+
+// side effect: loads a file
+include &amp;quot;file.php&amp;quot;;
+
+// side effect: generates output
+echo &amp;quot;&amp;lt;html&amp;gt;\n&amp;quot;;
+
+// declaration
+function foo() {
+    // function body
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The following example is of a file that contains declarations without side
+effects; i.e., an example of what to emulate:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// declaration
+function foo() {
+    // function body
+}
+
+// conditional declaration is *not* a side effect
+if (! function_exists(&#39;bar&#39;)) {
+    function bar() {
+        // function body
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-5-lines&#34;&gt;2.5. Lines&lt;/h3&gt;
+
+&lt;p&gt;There MUST NOT be a hard limit on line length.&lt;/p&gt;
+
+&lt;p&gt;The soft limit on line length MUST be 120 characters; automated style checkers
+MUST warn but MUST NOT error at the soft limit.&lt;/p&gt;
+
+&lt;p&gt;Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD
+be split into multiple subsequent lines of no more than 80 characters each.&lt;/p&gt;
+
+&lt;p&gt;There MUST NOT be trailing whitespace at the end of non-blank lines.&lt;/p&gt;
+
+&lt;p&gt;Blank lines MAY be added to improve readability and to indicate related
+blocks of code.&lt;/p&gt;
+
+&lt;p&gt;There MUST NOT be more than one statement per line.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-6-indenting&#34;&gt;2.6. Indenting&lt;/h3&gt;
+
+&lt;p&gt;Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
+problems with diffs, patches, history, and annotations. The use of spaces
+also makes it easy to insert fine-grained sub-indentation for inter-line
+alignment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;2-7-keywords-and-true-false-null&#34;&gt;2.7. Keywords and True/False/Null&lt;/h3&gt;
+
+&lt;p&gt;PHP &lt;a href=&#34;http://php.net/manual/en/reserved.keywords.php&#34;&gt;keywords&lt;/a&gt; MUST be in lower case.&lt;/p&gt;
+
+&lt;p&gt;The PHP constants &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, and &lt;code&gt;null&lt;/code&gt; MUST be in lower case.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Namespace and Use Declarations
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;No requirements.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Class Constants, Properties, and Methods
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The term &amp;ldquo;class&amp;rdquo; refers to all classes, interfaces, and traits.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-1-constants&#34;&gt;4.1. Constants&lt;/h3&gt;
+
+&lt;p&gt;Class constants MUST be declared in all upper case with underscore separators.
+For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+namespace Vendor\Model;
+
+class Foo {
+    const VERSION = &#39;1.0&#39;;
+    const DATE_APPROVED = &#39;2012-06-01&#39;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-2-extends-and-implements&#34;&gt;4.2. Extends and Implements&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;extends&lt;/code&gt; and &lt;code&gt;implements&lt;/code&gt; keywords MUST be declared on the same line as
+the class name.&lt;/p&gt;
+
+&lt;p&gt;The opening brace for the class MUST go on the same line as the class name; the closing brace
+for the class MUST go on the next line after the body.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+class ClassName extends ParentClass implements \ArrayAccess, \Countable {
+    // constants, properties, methods
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lists of &lt;code&gt;implements&lt;/code&gt; MAY be split across multiple lines, where each
+subsequent line is indented once. When doing so, the first item in the list
+MUST be on the next line, and there MUST be only one interface per line.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+class ClassName extends ParentClass implements
+    \ArrayAccess,
+    \Countable,
+    \Serializable
+{
+    // constants, properties, methods
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-3-properties&#34;&gt;4.3. Properties&lt;/h3&gt;
+
+&lt;p&gt;Visibility MUST be declared on all properties.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;var&lt;/code&gt; keyword MUST NOT be used to declare a property.&lt;/p&gt;
+
+&lt;p&gt;There MUST NOT be more than one property declared per statement.&lt;/p&gt;
+
+&lt;p&gt;Property names SHOULD NOT be prefixed with a single underscore to indicate
+protected or private visibility.&lt;/p&gt;
+
+&lt;p&gt;A property declaration looks like the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+class ClassName {
+    public $foo = null;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-4-methods&#34;&gt;4.4. Methods&lt;/h3&gt;
+
+&lt;p&gt;Method names MUST be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Visibility MUST be declared on all methods.&lt;/p&gt;
+
+&lt;p&gt;Method names SHOULD NOT be prefixed with a single underscore to indicate
+protected or private visibility.&lt;/p&gt;
+
+&lt;p&gt;Method names MUST NOT be declared with a space after the method name. The
+opening brace MUST go on the same line as the method name, and the closing brace MUST go on the
+next line following the body. There MUST NOT be a space after the opening
+parenthesis, and there MUST NOT be a space before the closing parenthesis.&lt;/p&gt;
+
+&lt;p&gt;A method declaration looks like the following. Note the placement of
+parentheses, commas, spaces, and braces:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+class ClassName {
+    public function fooBarBaz($arg1, &amp;amp;$arg2, $arg3 = []) {
+        // method body
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The major exception to this rule is Event Methods.  Any method that has the following patterns:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;_handler&#39;,
+&#39;_create&#39;,
+&#39;_before&#39;,
+&#39;_override&#39;,
+&#39;_after&#39;,
+&#39;controller_&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Event methods MUST be &lt;code&gt;camelCase&lt;/code&gt; separated by &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-5-method-arguments&#34;&gt;4.5. Method Arguments&lt;/h3&gt;
+
+&lt;p&gt;In the argument list, there MUST NOT be a space before each comma, and there
+MUST be one space after each comma.&lt;/p&gt;
+
+&lt;p&gt;Method arguments with default values MUST go at the end of the argument
+list.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+class ClassName {
+    public function foo($arg1, &amp;amp;$arg2, $arg3 = []) {
+        // method body
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argument lists MAY be split across multiple lines, where each subsequent line
+is indented once. When doing so, the first item in the list MUST be on the
+next line, and there MUST be only one argument per line.&lt;/p&gt;
+
+&lt;p&gt;When the argument list is split across multiple lines, the closing parenthesis
+and opening brace MUST be placed together on their own line with one space
+between them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+class ClassName {
+    public function aVeryLongMethodName(
+        ClassTypeHint $arg1,
+        &amp;amp;$arg2,
+        array $arg3 = []
+    ) {
+        // method body
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-6-global-functions&#34;&gt;4.6. Global Functions&lt;/h3&gt;
+
+&lt;p&gt;Global function names SHOULD be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Global function names that match php style; such as array_something() are allowed
+and MUST be declared in lowercase.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-7-abstract-final-and-static&#34;&gt;4.7. &lt;code&gt;abstract&lt;/code&gt;, &lt;code&gt;final&lt;/code&gt;, and &lt;code&gt;static&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;When present, the &lt;code&gt;abstract&lt;/code&gt; and &lt;code&gt;final&lt;/code&gt; declarations MUST precede the
+visibility declaration.&lt;/p&gt;
+
+&lt;p&gt;When present, the &lt;code&gt;static&lt;/code&gt; declaration MUST come after the visibility
+declaration.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+abstract class ClassName {
+    protected static $foo;
+
+    abstract protected function zim();
+
+    final public static function bar() {
+        // method body
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-8-method-and-function-calls&#34;&gt;4.8. Method and Function Calls&lt;/h3&gt;
+
+&lt;p&gt;When making a method or function call, there MUST NOT be a space between the
+method or function name and the opening parenthesis, there MUST NOT be a space
+after the opening parenthesis, and there MUST NOT be a space before the
+closing parenthesis. In the argument list, there MUST NOT be a space before
+each comma, and there MUST be one space after each comma.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+bar();
+$foo-&amp;gt;bar($arg1);
+Foo::bar($arg2, $arg3);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argument lists MAY be split across multiple lines, where each subsequent line
+is indented once. When doing so, the first item in the list MUST be on the
+next line, and there MUST be only one argument per line.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+$foo-&amp;gt;bar(
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Control Structures
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The general style rules for control structures are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There MUST be one space after the control structure keyword&lt;/li&gt;
+&lt;li&gt;There MUST NOT be a space after the opening parenthesis&lt;/li&gt;
+&lt;li&gt;There MUST NOT be a space before the closing parenthesis&lt;/li&gt;
+&lt;li&gt;There MUST be one space between the closing parenthesis and the opening
+brace&lt;/li&gt;
+&lt;li&gt;The structure body MUST be indented once&lt;/li&gt;
+&lt;li&gt;The closing brace MUST be on the next line after the body&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The body of each structure MUST be enclosed by braces. This standardizes how
+the structures look, and reduces the likelihood of introducing errors as new
+lines get added to the body.&lt;/p&gt;
+
+&lt;h3 id=&#34;5-1-if-elseif-else&#34;&gt;5.1. &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elseif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;An &lt;code&gt;if&lt;/code&gt; structure looks like the following. Note the placement of parentheses,
+spaces, and braces; and that &lt;code&gt;else&lt;/code&gt; and &lt;code&gt;elseif&lt;/code&gt; are on the same line as the
+closing brace from the earlier body.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+if ($expr1) {
+    // if body
+} elseif ($expr2) {
+    // elseif body
+} else {
+    // else body;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The keyword &lt;code&gt;elseif&lt;/code&gt; SHOULD be used instead of &lt;code&gt;else if&lt;/code&gt; so that all control
+keywords look like single words.&lt;/p&gt;
+
+&lt;h3 id=&#34;5-2-switch-case&#34;&gt;5.2. &lt;code&gt;switch&lt;/code&gt;, &lt;code&gt;case&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;A &lt;code&gt;switch&lt;/code&gt; structure looks like the following. Note the placement of
+parentheses, spaces, and braces. The &lt;code&gt;case&lt;/code&gt; statement MUST be indented once
+from &lt;code&gt;switch&lt;/code&gt;, and the &lt;code&gt;break&lt;/code&gt; keyword (or other terminating keyword) MUST be
+indented at the same level as the &lt;code&gt;case&lt;/code&gt; body. There MUST be a comment such as
+&lt;code&gt;// no break&lt;/code&gt; when fall-through is intentional in a non-empty &lt;code&gt;case&lt;/code&gt; body.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+switch ($expr) {
+    case 0:
+        echo &#39;First case, with a break&#39;;
+        break;
+    case 1:
+        echo &#39;Second case, which falls through&#39;;
+        // no break
+    case 2:
+    case 3:
+    case 4:
+        echo &#39;Third case, return instead of break&#39;;
+        return;
+    default:
+        echo &#39;Default case&#39;;
+        break;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-3-while-do-while&#34;&gt;5.3. &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;do while&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;A &lt;code&gt;while&lt;/code&gt; statement looks like the following. Note the placement of
+parentheses, spaces, and braces.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+while ($expr) {
+    // structure body
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Similarly, a &lt;code&gt;do while&lt;/code&gt; statement looks like the following. Note the placement
+of parentheses, spaces, and braces.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+do {
+    // structure body;
+} while ($expr);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-4-for&#34;&gt;5.4. &lt;code&gt;for&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;A &lt;code&gt;for&lt;/code&gt; statement looks like the following. Note the placement of parentheses,
+spaces, and braces.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+for ($i = 0; $i &amp;lt; 10; $i++) {
+    // for body
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-5-foreach&#34;&gt;5.5. &lt;code&gt;foreach&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;A &lt;code&gt;foreach&lt;/code&gt; statement looks like the following. Note the placement of
+parentheses, spaces, and braces.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+foreach ($iterable as $key =&amp;gt; $value) {
+    // foreach body
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-6-try-catch&#34;&gt;5.6. &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;A &lt;code&gt;try catch&lt;/code&gt; block looks like the following. Note the placement of
+parentheses, spaces, and braces.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+try {
+    // try body
+} catch (FirstExceptionType $e) {
+    // catch body
+} catch (OtherExceptionType $e) {
+    // catch body
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Closures
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Closures MUST be declared with a space after the &lt;code&gt;function&lt;/code&gt; keyword, and a
+space before and after the &lt;code&gt;use&lt;/code&gt; keyword.&lt;/p&gt;
+
+&lt;p&gt;The opening brace MUST go on the same line, and the closing brace MUST go on
+the next line following the body.&lt;/p&gt;
+
+&lt;p&gt;There MUST NOT be a space after the opening parenthesis of the argument list
+or variable list, and there MUST NOT be a space before the closing parenthesis
+of the argument list or variable list.&lt;/p&gt;
+
+&lt;p&gt;In the argument list and variable list, there MUST NOT be a space before each
+comma, and there MUST be one space after each comma.&lt;/p&gt;
+
+&lt;p&gt;Closure arguments with default values MUST go at the end of the argument
+list.&lt;/p&gt;
+
+&lt;p&gt;A closure declaration looks like the following. Note the placement of
+parentheses, commas, spaces, and braces:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+$closureWithArgs = function ($arg1, $arg2) {
+    // body
+};
+
+$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+    // body
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argument lists and variable lists MAY be split across multiple lines, where
+each subsequent line is indented once. When doing so, the first item in the
+list MUST be on the next line, and there MUST be only one argument or variable
+per line.&lt;/p&gt;
+
+&lt;p&gt;When the ending list (whether or arguments or variables) is split across
+multiple lines, the closing parenthesis and opening brace MUST be placed
+together on their own line with one space between them.&lt;/p&gt;
+
+&lt;p&gt;The following are examples of closures with and without argument lists and
+variable lists split across multiple lines.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+$longArgs_noVars = function (
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+) {
+   // body
+};
+
+$noArgs_longVars = function () use (
+    $longVar1,
+    $longerVar2,
+    $muchLongerVar3
+) {
+   // body
+};
+
+$longArgs_longVars = function (
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+) use (
+    $longVar1,
+    $longerVar2,
+    $muchLongerVar3
+) {
+   // body
+};
+
+$longArgs_shortVars = function (
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
+) use ($var1) {
+   // body
+};
+
+$shortArgs_longVars = function ($arg) use (
+    $longVar1,
+    $longerVar2,
+    $muchLongerVar3
+) {
+   // body
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that the formatting rules also apply when the closure is used directly
+in a function or method call as an argument.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+$foo-&amp;gt;bar(
+    $arg1,
+    function ($arg2) use ($var1) {
+        // body
+    },
+    $arg3
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Doc Blocks
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Descriptions MUST BE a full sentence with a capital to start and period to end&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Short, return and parameter descriptions MUST be included if present&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;There MUST be one space before and after parameters&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;/**
+ * Short description.
+ *
+ * @param string $string Parameter descriptions must be a sentence with full stop.
+ *
+ * @return bool True if user is added else false.
+ */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Conclusion
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There are many elements of style and practice intentionally omitted by this
+guide. These include but are not limited to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Declaration of global variables and global constants&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Operators and assignment&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Inter-line alignment&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Class name prefixes and suffixes&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Best practices&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Future recommendations MAY revise and extend this guide to address those or
+other elements of style and practice.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Community</title>
+      <link>http://127.0.0.1:8080/developer/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/community/</guid>
+      <description>
+
+&lt;h2 id=&#34;developers-community&#34;&gt;Developers Community&lt;/h2&gt;
+
+&lt;p&gt;We have a vibrant &lt;a href=&#34;http://vanillaforums.org/discussions/&#34;&gt;developers&amp;rsquo; community at vanillaforums.org&lt;/a&gt;. Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins &amp;amp; themes to the &lt;a href=&#34;http://vanillaforums.org/addons&#34;&gt;official directory&lt;/a&gt;, and sign the &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;contributors&amp;rsquo; agreement&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;get-notified&#34;&gt;Get Notified&lt;/h3&gt;
+
+&lt;p&gt;Want to get notified about the newest releases?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sign up for the VanillaForums.org newsletter in &lt;a href=&#34;http://vanillaforums.org/profile/edit&#34;&gt;your community profile&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Watch the &lt;a href=&#34;http://vanillaforums.org/categories/blog/feed.rss&#34;&gt;RSS feed for the &amp;lsquo;blog&amp;rsquo; category&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Follow our &lt;a href=&#34;http://twitter.com/vanilla&#34;&gt;Twitter account&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;plugins&#34;&gt;Plugins&lt;/h3&gt;
+
+&lt;p&gt;These addons are currently used on vanillaforums.org. The addons with an asterisk are currently only available on our cloud hosting but may have near-equivalents available from the community.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tagging&lt;/li&gt;
+&lt;li&gt;Reactions*&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A&lt;/li&gt;
+&lt;li&gt;Quotes&lt;/li&gt;
+&lt;li&gt;File Upload&lt;/li&gt;
+&lt;li&gt;Ranks*&lt;/li&gt;
+&lt;li&gt;Signatures&lt;/li&gt;
+&lt;li&gt;Badges*&lt;/li&gt;
+&lt;li&gt;Warnings*&lt;/li&gt;
+&lt;li&gt;Discussion Photos&lt;/li&gt;
+&lt;li&gt;Who&amp;rsquo;s Online&lt;/li&gt;
+&lt;li&gt;Google Prettify (for code)&lt;/li&gt;
+&lt;li&gt;Flagging&lt;/li&gt;
+&lt;li&gt;Advanced Search*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;theme&#34;&gt;Theme&lt;/h3&gt;
+
+&lt;p&gt;The theme used on vanillaforums.org is custom and is not open source. We want it to continue looking unique!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>http://127.0.0.1:8080/developer/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/configuration/</guid>
+      <description>
+
+&lt;h2 id=&#34;vanilla-configuration-files&#34;&gt;Vanilla configuration files&lt;/h2&gt;
+
+&lt;p&gt;Vanilla uses a file-based configuration system.&lt;/p&gt;
+
+&lt;p&gt;Vanilla is distributed with a file at &lt;code&gt;/conf/config-defaults.php&lt;/code&gt; which we will call &amp;ldquo;config-defaults&amp;rdquo;. After installation, a file is created at &lt;code&gt;/conf/config.php&lt;/code&gt; which we will call simply &amp;ldquo;config&amp;rdquo; or &amp;ldquo;config.php&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Your config-defaults file should &lt;strong&gt;never&lt;/strong&gt; be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism thru which it will happen.&lt;/p&gt;
+
+&lt;p&gt;All configuration changes are to be exclusively made to your config.php file. We recommend periodically making a backup copy of your &lt;code&gt;config.php&lt;/code&gt; and storing it in a safe location (not on your web server).&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-configuration&#34;&gt;Editing configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// Config file entries look like this:
+$Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;Value&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Config entires must render as valid PHP code, so the placement of quotes, brackets, and semicolons is extremely important. Line order does not matter, unless you accidentally duplicate values (which should be avoided). In that case, the last duplicate would take precedence.&lt;/p&gt;
+
+&lt;p&gt;Some scenarios for editing your config:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You want to change a config setting, so you simply change &amp;lsquo;Value&amp;rsquo; on 1 line.&lt;/li&gt;
+&lt;li&gt;You want to change a default, so you copy a line from config-defaults into config, then modify its value.&lt;/li&gt;
+&lt;li&gt;You want to add a new config value entirely, so you enter it using the format indicated above on a new line in the config.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;avoiding-accidental-overwrites&#34;&gt;Avoiding accidental overwrites&lt;/h2&gt;
+
+&lt;p&gt;Only open or copy your config for editing &lt;em&gt;after&lt;/em&gt; you have applied or saved your latest settings in the Dashboard, and wait until you are done editing to make further changes to your site. Saving your config will overwrite any changes you may have made elsewhere at the same time.&lt;/p&gt;
+
+&lt;h2 id=&#34;shorthand-references&#34;&gt;Shorthand references&lt;/h2&gt;
+
+&lt;p&gt;When we talk about config lines, we use the following shorthand:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Area.FeatureSet.Setting = &#39;Value&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// The shorthand written using the full formatting
+$Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;Value&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If the above is written in instructions or comments, it is still to be formatted in the config according to the format shown earlier with brackets and quotes.&lt;/p&gt;
+
+&lt;p&gt;Always double-check you have properly transcribed the name and value before saving.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>http://127.0.0.1:8080/developer/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/contributing/</guid>
+      <description>
+
+&lt;h1 id=&#34;how-to-contribute&#34;&gt;How to Contribute&lt;/h1&gt;
+
+&lt;h3 id=&#34;general&#34;&gt;General&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Welcome folks to the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community&lt;/a&gt; and be awesome!&lt;/li&gt;
+&lt;li&gt;Answer questions.&lt;/li&gt;
+&lt;li&gt;Report &lt;a href=&#34;https://github.com/vanillaforums/vanilla&#34;&gt;issues&lt;/a&gt; like a pro (see below).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#triaging-issues&#34;&gt;Triage&lt;/a&gt; issues already reported!&lt;/li&gt;
+&lt;li&gt;Test &lt;a href=&#34;http://vanillaforums.org/categories/blog&#34;&gt;pre-releases&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Contribute &lt;a href=&#34;https://github.com/vanillaforums/VanillaDocs&#34;&gt;docs&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Help &lt;a href=&#34;http://127.0.0.1:8080/developers/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Evaluate community addons &amp;amp; offer feedback.&lt;/li&gt;
+&lt;li&gt;Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;developers&#34;&gt;Developers&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Contribute code via &lt;a href=&#34;http://127.0.0.1:8080/developers/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Contribute addons &amp;amp; themes to the &lt;a href=&#34;http://vanillaforums.org/addons&#34;&gt;Official Directory&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;http://127.0.0.1:8080/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sections of our contribution guidelines are adapted or copied from &lt;a href=&#34;https://swift.org/contributing/&#34;&gt;Swift&lt;/a&gt; because they are awesome.&lt;/p&gt;
+
+&lt;h2 id=&#34;reporting-issues-like-a-pro&#34;&gt;Reporting issues like a pro&lt;/h2&gt;
+
+&lt;p&gt;First, check for duplicates by searching on GitHub. All clear? Then make sure you cover three points:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A concise description of the problem. If the issue is a fatal error, include a debug trace. Otherwise, describe the behavior you were expecting to see, along with the behavior you actually observed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A reproducible test case. If you need to include a lot of code to do this, make a gist on GitHub and link it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Include the precise Vanilla version number and any relevant system information (ex: OS, PHP version &amp;amp; settings, MySQL settings).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;triaging-issues&#34;&gt;Triaging issues&lt;/h2&gt;
+
+&lt;p&gt;There are a number of things you can do to help triage issues in the issue tracker.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Reproduce it! For a bug to be actionable, it needs to be reproducible. If you can’t reproduce the bug, try to figure out why. Get in touch with the submitter if you need more information.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Reduce bugs. Once a bug can be reproduced, reduce it to the smallest amount of code possible. Reasoning about a sample that reproduces a bug in just a few lines of Swift code is easier than reasoning about a longer sample.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Eliminate duplicates. If two bug reports refer to the same underlying problem, mark the newer one as a duplicate of the older one. Doing so allows others to work more effectively.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Controllers &amp; URLs</title>
+      <link>http://127.0.0.1:8080/developer/framework/controllers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/controllers/</guid>
+      <description>
+
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
+
+&lt;p&gt;In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.&lt;/p&gt;
+
+&lt;h3 id=&#34;dispatcher&#34;&gt;Dispatcher&lt;/h3&gt;
+
+&lt;p&gt;Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (&lt;code&gt;Gdn_Dispatcher&lt;/code&gt;) receives incoming &lt;a href=&#34;http://127.0.0.1:8080/developers/framework/requests&#34;&gt;requests&lt;/a&gt; and invokes the appropriate controller(s).&lt;/p&gt;
+
+&lt;h3 id=&#34;mapping-urls&#34;&gt;Mapping URLs&lt;/h3&gt;
+
+&lt;p&gt;First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.&lt;/p&gt;
+
+&lt;p&gt;An example that includes all of these is: &lt;code&gt;/dashboard/profile/notifications/1/Lincoln&lt;/code&gt;. This calls the Dashboard&amp;rsquo;s &lt;code&gt;ProfileController&lt;/code&gt; invoking the &lt;code&gt;Notifications&lt;/code&gt; method, which it passes the arguments &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;Lincoln&lt;/code&gt;, in that order. It roughly translates to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ProfileController = new ProfileController();
+$ProfileController-&amp;gt;notifications(&#39;1&#39;, &#39;Lincoln&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the &lt;code&gt;Index()&lt;/code&gt; method will be invoked. Therefore, the basic profile URL &lt;code&gt;/profile/1/Lincoln&lt;/code&gt; could be more verbosely written as &lt;code&gt;/dashboard/profile/index/1/Lincoln&lt;/code&gt; to more clearly understand what code it is invoking.&lt;/p&gt;
+
+&lt;h3 id=&#34;pretty-urls&#34;&gt;Pretty URLs&lt;/h3&gt;
+
+&lt;p&gt;All requests are dispatched thru the index.php file. While it&amp;rsquo;s possible to use the framework by passing a &amp;lsquo;p&amp;rsquo; parameter with the rest of the path (e.g. &lt;code&gt;/index.php?p=/profile&lt;/code&gt;), it&amp;rsquo;s best to configure your server to handle &amp;ldquo;pretty&amp;rdquo; URLs.&lt;/p&gt;
+
+&lt;p&gt;On Apache, this is accomplished with the &lt;code&gt;.htaccess&lt;/code&gt; file provided with Vanilla that contains these rewrite rules:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Consult the &lt;a href=&#34;http://127.0.0.1:8080/developers/community&#34;&gt;community&lt;/a&gt; if you need assistance configuring another server platform such as nginx or IIS.&lt;/p&gt;
+
+&lt;p&gt;Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the &lt;a href=&#34;http://127.0.0.1:8080/developers/configuration&#34;&gt;config&lt;/a&gt; setting to enable pretty URLs is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Garden&#39;][&#39;RewriteUrls&#39;] = TRUE;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The ability to use non-pretty URLs may be deprecated in the future.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dashboard</title>
+      <link>http://127.0.0.1:8080/developer/configuration/dashboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/configuration/dashboard/</guid>
+      <description>&lt;p&gt;##Dashboard&lt;/p&gt;
+
+&lt;p&gt;The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum&amp;rsquo;s main page, a profile link (shown as your user name), and Sign Out.&lt;/p&gt;
+
+&lt;p&gt;On the left side of the screen is the main navigation menu detailing each of the administrative functions you can perform. Within each major function, such as Appearance, a list of sub-menu items appear, certain sub-menu items may vary depending on what addons you have installed.&lt;/p&gt;
+
+&lt;p&gt;The large area to the right of the screen is the work area. It is here the specific information relating to a particular navigation choice, such as adding a new post, is presented and collected.&lt;/p&gt;
+
+&lt;p&gt;Finally, in the footer, at the bottom of each Administration Panel also in a dark blue gradient, are links to Vanilla Forums, and Documentation. In addition, the version of Vanilla Forums you have installed can be found.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data privacy</title>
+      <link>http://127.0.0.1:8080/developer/data-privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/data-privacy/</guid>
+      <description>
+
+&lt;h1 id=&#34;data-privacy&#34;&gt;Data privacy&lt;/h1&gt;
+
+&lt;p&gt;Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;public-user-info&#34;&gt;Public user info&lt;/h2&gt;
+
+&lt;p&gt;We consider usernames and user IDs (&lt;code&gt;User.Name&lt;/code&gt; and &lt;code&gt;User.UserID&lt;/code&gt;) to be public information. This data is used in URLs, embedded in page data, and generally available to any user with basic permission to view or access your forum. For this reason, we do not recommend using real names or other personally identifiable data for usernames.&lt;/p&gt;
+
+&lt;h2 id=&#34;personal-user-info&#34;&gt;Personal user info&lt;/h2&gt;
+
+&lt;p&gt;We consider emails (&lt;code&gt;User.Email&lt;/code&gt;) and IP addresses (recorded in multiple contexts) to be personal info. Access to this data is governed by a special permission that, by default, is only granted to moderators, community managers, and administrators. You can customize this for your community.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Database access</title>
+      <link>http://127.0.0.1:8080/developer/framework/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/database/</guid>
+      <description>
+
+&lt;h2 id=&#34;database-layer&#34;&gt;Database layer&lt;/h2&gt;
+
+&lt;p&gt;Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in &lt;code&gt;/library/databases&lt;/code&gt;). However, at this time, the Vanilla team has no plans to support additional databases.&lt;/p&gt;
+
+&lt;p&gt;The best way to access the database is via existing &lt;a href=&#34;http://127.0.0.1:8080/developers/framework/models&#34;&gt;models&lt;/a&gt;. For instance, to get a list of discussions, use the &lt;code&gt;Get&lt;/code&gt; method in the &lt;code&gt;DiscussionModel&lt;/code&gt;. You can rely on model-based access to already be optimized for performance and utilize caching if it&amp;rsquo;s available.&lt;/p&gt;
+
+&lt;h3 id=&#34;building-queries&#34;&gt;Building queries&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;SQL&lt;/code&gt; object supports chaining. You can call it with &lt;code&gt;Gdn::sql()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a simple example that gets a single discussion by its ID. We write its pieces in the order of a SQL statement, but they can be called in any order up to the &lt;code&gt;get()&lt;/code&gt;. The &lt;code&gt;get()&lt;/code&gt; is the call that fires the built query.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;
+   -&amp;gt;select(&#39;*&#39;)
+   -&amp;gt;from(&#39;Discussion&#39;)
+   -&amp;gt;where(&#39;DiscussionID&#39;, $DiscussionID)
+   -&amp;gt;get();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that this is an impractical query to use in your addon, because this functionality already exists in a model:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$DiscussionModel = new DiscussionModel();
+$DiscussionModel-&amp;gt;getID($DiscussionID);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Always use pre-existing calls in models when they are available for better performance and forward-compatibility.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example of a complex select that pulls out all the stops:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Gdn::sql()
+   -&amp;gt;select(&#39;cm.*&#39;)
+   -&amp;gt;select(&#39;iu.Name&#39;, &#39;&#39;, &#39;InsertName&#39;)
+   -&amp;gt;from(&#39;ConversationMessage cm&#39;)
+   -&amp;gt;join(&#39;Conversation c&#39;, &#39;cm.ConversationID = c.ConversationID&#39;)
+   -&amp;gt;join(&#39;UserConversation uc&#39;, &#39;c.ConversationID = uc.ConversationID and uc.UserID = &#39;.$ViewingUserID, &#39;left&#39;)
+   -&amp;gt;join(&#39;User iu&#39;, &#39;cm.InsertUserID = iu.UserID&#39;, &#39;left&#39;)
+   -&amp;gt;beginWhereGroup()
+   -&amp;gt;where(&#39;uc.DateCleared is null&#39;)
+   -&amp;gt;orWhere(&#39;uc.DateCleared &amp;lt;&#39;, &#39;cm.DateInserted&#39;, TRUE, FALSE)
+   -&amp;gt;endWhereGroup()
+   -&amp;gt;where(&#39;cm.ConversationID&#39;, $ConversationID)
+   -&amp;gt;orderBy(&#39;cm.DateInserted&#39;, &#39;asc&#39;)
+   -&amp;gt;limit($Limit, $Offset)
+   -&amp;gt;get();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice the use of limit, offset, where groups, where conditions including less than &amp;amp; null, aliasing, and multiple joins.&lt;/p&gt;
+
+&lt;h3 id=&#34;updates-and-inserts&#34;&gt;Updates and inserts&lt;/h3&gt;
+
+&lt;p&gt;An insert is a single step that takes the table name and an array of values to insert as parameters:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;insert(&#39;UserConversation&#39;, array(
+   &#39;ConversationID&#39; =&amp;gt; $ConversationID,
+   &#39;UserID&#39; =&amp;gt; $TargetUserID
+));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An update requires setting the table in &lt;code&gt;Update&lt;/code&gt;, ends with a &lt;code&gt;Put&lt;/code&gt; (much like the select&amp;rsquo;s ending &lt;code&gt;Get&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;update(&#39;Conversation&#39;)
+   -&amp;gt;set(&#39;LastMessageID&#39;, $MessageID)
+   -&amp;gt;where(&#39;ConversationID&#39;, $ConversationID)
+   -&amp;gt;put();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;direct-queries&#34;&gt;Direct queries&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;query()&lt;/code&gt; method allows for sending unfiltered SQL queries to the database. This is strongly discouraged because it can easily cause security flaws, performance problems, and compatibility problems.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;query(&amp;quot;select * from GDN_Comments&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
+
+&lt;p&gt;Vanilla allows you to define database structures in code. Use the &lt;code&gt;Gdn::structure()&lt;/code&gt; method to use this object. Here we&amp;rsquo;ll look at part of the definition of the User table as an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Gdn::structure()
+   -&amp;gt;primaryKey(&#39;UserID&#39;)
+   -&amp;gt;column(&#39;Name&#39;, &#39;varchar(50)&#39;, FALSE, &#39;key&#39;)
+   -&amp;gt;column(&#39;Password&#39;, &#39;varbinary(100)&#39;) 
+   -&amp;gt;column(&#39;ShowEmail&#39;, &#39;tinyint(1)&#39;, &#39;0&#39;)
+   -&amp;gt;column(&#39;Gender&#39;, array(&#39;u&#39;, &#39;m&#39;, &#39;f&#39;), &#39;u&#39;)
+   -&amp;gt;column(&#39;Preferences&#39;, &#39;text&#39;, TRUE)
+   -&amp;gt;column(&#39;DateOfBirth&#39;, &#39;datetime&#39;, TRUE)
+   -&amp;gt;column(&#39;Score&#39;, &#39;float&#39;, NULL)
+   -&amp;gt;set();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;column()&lt;/code&gt; takes 4 parameters: name, type, nulldefault (&lt;code&gt;true&lt;/code&gt; to allow nulls, &lt;code&gt;false&lt;/code&gt; to not - any other value becomes the default with disallowed nulls), and keytype (&amp;lsquo;primary&amp;rsquo;, &amp;lsquo;key&amp;rsquo;, &amp;lsquo;index&amp;rsquo;, &amp;lsquo;unique&amp;rsquo;, or &amp;lsquo;fulltext&amp;rsquo; - defaults to false).&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;primaryKey()&lt;/code&gt; creates an auto-incrementing column. The Gender column uses an array to create an &lt;code&gt;enum&lt;/code&gt; type; the rest are self-explanatory.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;set()&lt;/code&gt; method takes 2 parameters which should nearly &lt;em&gt;always&lt;/em&gt; be false, which is their default. The first is &lt;code&gt;$Explicit&lt;/code&gt; which is whether to force the structure of the table to match &lt;em&gt;exactly&lt;/em&gt; the definition above. The second is &lt;code&gt;$Drop&lt;/code&gt; which is whether to drop and recreate the table.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Datasets</title>
+      <link>http://127.0.0.1:8080/developer/framework/datasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/datasets/</guid>
+      <description>
+
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Gdn_Dataset&lt;/code&gt; object is a way to store data. Most of the time, this data is the result of a query to the database. When you use our &lt;a href=&#34;http://127.0.0.1:8080/developers/framework/database&#34;&gt;database object&lt;/a&gt; (as you always should) to execute a database select query, it will return a dataset.&lt;/p&gt;
+
+&lt;p&gt;Here are a few commonly used methods you&amp;rsquo;ll want to know about:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;count()&lt;/code&gt; returns the number of records in the dataset.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;firstRow()&lt;/code&gt; returns the first record in the dataset.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;resultArray()&lt;/code&gt; returns an array of all the data in the dataset (often used directly in a &lt;code&gt;foreach&lt;/code&gt; loop).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Just as the database object is chainable, so is the dataset object. The database&amp;rsquo;s &lt;code&gt;get()&lt;/code&gt; method returns the resulting dataset object, so the two chain together seamlessly.&lt;/p&gt;
+
+&lt;p&gt;This example gets the number of records in the database matching a query:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$howMany = Gdn::sql()
+    -&amp;gt;select(&#39;*&#39;)
+    -&amp;gt;from(&#39;GDN_SomeTable&#39;)
+    -&amp;gt;get() // Now it&#39;s a dataset!
+    -&amp;gt;count();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This example is a common construct for iterating thru records returned from a database:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$users = Gdn::sql()
+    -&amp;gt;select(&#39;Name&#39;)
+    -&amp;gt;from(&#39;User&#39;)
+    -&amp;gt;where(&#39;CountComments&#39;, 1)
+    -&amp;gt;get();
+
+foreach ($result-&amp;gt;resultArray() as $user) {
+	// Do something to each user with 1 comment.
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Another use case for datasets is joining datasets together after separate database queries, which can result in better performance. This is simply done by adding data to the array or object dataset manually. See the &lt;code&gt;joinUsers()&lt;/code&gt; method in the &lt;code&gt;UserModel&lt;/code&gt; for one such example.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

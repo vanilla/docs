@@ -1,0 +1,60 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Assets</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="assets">Assets</h2>
+
+<p>Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.</p>
+
+<h3 id="default-assets">Default assets</h3>
+
+<p>Vanilla uses these assets by default: <code>Head</code>, <code>Content</code>, <code>Panel</code>, and <code>Foot</code>. You cannot rely on every theme having a <code>Panel</code>, which is typically used as a sidebar. The <code>Content</code> asset is required, because it is where the view is rendered. You can, however, assign it additional content.</p>
+
+<h3 id="using-assets">Using assets</h3>
+
+<p>You can create your own arbitrary assets in your templates and simply add content to them using <code>Gdn::controller()-&gt;addAsset('AssetName', $Content, 'ContentName')</code>. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the <code>default.master.tpl</code> file.</p>
+
+<p>A common scenario is using <a href="/developers/framework/modules">modules</a> to add content to an asset. (Note: In plugin hooks, you will typically be using <code>$Sender</code> in place of <code>Gdn::controller()</code> since the Sender <em>is</em> the controller).</p>
+
+<p>You can set the sort order in which content in an asset is displayed via the <a href="/developers/configuration">config</a>. Use a key like <code>Modules.{Application}.{Asset}</code> (e.g. <code>Modules.Vanilla.Content</code>) to define an array of <code>ContentName</code> values that you used when calling <code>addAsset()</code>. See <code>$ModuleSortContainer</code> in <code>Gdn_Controller</code>.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+        
+        <link href="http://127.0.0.1:8080/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8080/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="http://127.0.0.1:8080/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8080/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+        
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8080/">
+                <img class="logo" src="http://127.0.0.1:8080/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+        
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Event Hooks</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/theming/hooks.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+        
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/changelog/">Changelog</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/framework/">Framework</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8080/developer/theming/">Theming</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/theming/quickstart/">Quickstart </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/theming/css/">CSS </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8080/developer/theming/smarty/">Smarty </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/theming/views/">Views / HTML </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8080/developer/theming/hooks/">Event Hooks </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/theming/themeoptions/">Theme Options </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="theming-hooks">Theming Hooks</h2>
+
+<p>Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.</p>
+
+<p>To use hooks, create a file named class.themehooks.php in your theme&rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files implement Gdn_IPlugin, which requires the specification of a setup method, which is run whenever the theme is enabled. The setup method is a good place to set any config variables your theme may rely on.</p>
+
+<p>To get a better understanding of what the theme hooks are capable of, familiarize yourself with <a href="http://docs.vanillaforums.com/developers/plugins/#custom-events-handlers">custom events &amp; handlers</a>, <a href="http://docs.vanillaforums.com/developers/plugins/#magic-events">magic events</a>, <a href="http://docs.vanillaforums.com/developers/plugins/#function-overrides">function overrides</a>, and <a href="http://docs.vanillaforums.com/developers/plugins/#magic-methods">magic methods</a>.</p>
+
+<p>Here&rsquo;s an example of a themehooks file that sets some config variables, adds locale data for the view, adds a respond button to the discussion page, and overrides a method to add an extra css class to a menu count span.</p>
+
+<pre><code class="language-php">&lt;?php
+/**
+ * @author    My Name &lt;name@email.com&gt;
+ * @copyright 2015 (c) My Organizations
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
+/**
+ * Sets config variables on enabling MyThemeName, adds locale data to the view,
+ * and adds a respond button to the discussion page.
+ */
+class MyThemeNameThemeHooks implements Gdn_IPlugin() {
+
+    /**
+     * Sets some config settings for a modern layout with top-level
+     * categories displayed as headings.
+     *
+     * @return boolean Whether setup was successful.
+     */
+    public function setup() {
+        // Set some config settings for a modern layout with top-level categories displayed as headings.
+        saveToConfig(array(
+            'Vanilla.Discussions.Layout'     =&gt; 'modern',
+            'Vanilla.Categories.Layout'      =&gt; 'modern',
+            'Vanilla.Categories.DoHeadings'  =&gt; true,
+            ), null, true);
+        return true;
+    }
+
+    /**
+     * Fetches the current locale and sets the data for the theme view.
+     * Render the locale in a smarty template using {$locale}
+     *
+     * @param  Controller $sender The sending controller object.
+     */
+    public function base_render_before($sender) {
+        // Bail out if we're in the dashboard
+        if (inSection('Dashboard')) {
+            return;
+        }
+
+        // Fetch the currently enabled locale (en by default)
+        $locale = Gdn::locale()-&gt;current();
+        $sender-&gt;setData('locale', $locale);
+    }
+
+    /**
+     * Adds a 'respond' button on a discussion page below the discussion title
+     * that links to the comment form.
+     *
+     * @param DiscussionController $sender The sending object.
+     */
+    public function discussionController_afterDiscussionTitle_handler($sender) {
+        // Ensure the user is signed in.
+        if (Gdn::session()) {
+            echo '&lt;div class=&quot;below-discussion-title&quot;&gt;'.
+                 '&lt;a class=&quot;respond-button Button&quot; href=&quot;#Form_Comment&quot;&gt;Respond&lt;/a&gt;'.
+                 '&lt;/div&gt;';
+        }
+    }
+}
+
+/**
+ * Adds a new css class to counts in the side panel filter
+ * menu in a discussion list. Overrides the method in the DiscussionFilterModule
+ * (applications/vanilla/views/modules/discussionfilter.php)
+ *
+ * @param int|null $count The number to include in the count.
+ * @param string $url The url to the popin rel for the count.
+ */
+if (!function_exists('filterCountString')) {
+    function filterCountString($count, $url = '') {
+        $count = countString($count, $url);
+        return $count != '' ? '&lt;span class=&quot;a-new-css-class aside&quot;&gt;'.$count.'&lt;/span&gt;' : '';
+    }
+}
+</code></pre>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-cloud">
+                <h3>Cloud Hosted</h3>
+                <p>
+                    <b>We believe that online communities should be intuitive, engaging and true to your brand.</b> Vanilla allows you to create a customized community that rewards positive participation, automatically curates content and lets members drive moderation.
+                </p>
+                <p>
+                    <a href="https://vanillaforums.com">Learn more</a>
+                </p>
+            </div>
+        </div>
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-oss">
+                <h3>Open Source</h3>
+                <p>
+                    Vanilla provides cloud and open source community forum software that powers discussion forums on more than 700,000 sites. Built for flexibility and integration, <b>Vanilla is the best, most powerful community solution in the world.</b>
+                </p>
+                <p>
+                    <a href="https://vanillaforums.org">Learn more</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,122 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Theme Options</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="theme-options">Theme Options</h2>
+
+<p>This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.</p>
+
+<p>You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&rsquo;s design folder. You can also allow an admin to add custom text to your theme.</p>
+
+<p>This functionality can be added simply by editing your theme&rsquo;s about.php file by adding an &lsquo;Options&rsquo; key to your theme info array with an array as its value. The content of the &lsquo;Options&rsquo; array is discussed below.</p>
+
+<h3 id="choosing-between-stylesheets">Choosing Between Stylesheets</h3>
+
+<p>In the design folder of your theme, you can add any number of CSS files. The naming convention is <code>custom_*.css</code>, where * is the theme variant.</p>
+
+<p>You will still need to have the custom.css file as a default for when the theme is first enabled. In order to allow the admin to switch back to the default, you&rsquo;ll need to add an option where the value is simply %s.</p>
+
+<p>So, let&rsquo;s say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:</p>
+
+<pre><code class="language-php">'Options' =&gt; array(
+    'Styles' =&gt; array(
+        'Default' =&gt; '%s',
+        'Blue' =&gt; '%s_blue',
+        'Green' =&gt; '%s_green',
+    ),
+)
+</code></pre>
+
+<p>The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of <code>screenshot_*.ext</code> where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use <code>screenshot.ext</code> for the default theme.</p>
+
+<h3 id="adding-custom-text-to-a-theme">Adding Custom Text to a Theme</h3>
+
+<p>To add custom text to a theme, add a &lsquo;Text&rsquo; key to the &lsquo;Options&rsquo; array. The value of of the &lsquo;Text&rsquo; key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of &lsquo;textbox&rsquo;, which is a regular text input, or &lsquo;textarea&rsquo;, the default, which is a multiline textarea element.</p>
+
+<p>The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the <a href="/functions/text.html.md">text function</a> to insert the text in the theme, using the Text array&rsquo;s key as the &lsquo;code&rsquo; parameter. For example, if you had this options array:</p>
+
+<pre><code class="language-php">'Options' =&gt; array(
+    'Text' =&gt; array(
+        'Custom&amp;nbsp;Text' =&gt; array(
+                'Description' =&gt; 'Custom text to be inserted in the theme.',
+                'Type' =&gt; 'textbox'
+        )
+    )
+)
+</code></pre>
+
+<p>Then you could insert the text into your theme using the Smarty tag:</p>
+
+<pre><code>{text code=&quot;Custom&amp;nbsp;Text&quot; default=&quot;Some default custom text&quot;}
+</code></pre>
+
+<p>The text is saved in your config, so you could also access it in PHP using <code>c('ThemeOption.Custom&amp;nbsp;Text', &quot;Some default custom text&quot;);</code> <a href="../developers/configuration/using.html.md">Learn more about the config here.</a></p>
+
+<h3 id="example">Example</h3>
+
+<p>Here&rsquo;s an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.</p>
+
+<pre><code class="language-php">$ThemeInfo['mytheme'] = array(
+    'Name' =&gt; 'My Theme',
+    'Description' =&gt; &quot;My Theme is the greatest.&quot;,
+    'Version' =&gt; '1.0.0',
+    'Author' =&gt; &quot;Your Name&quot;,
+    'AuthorEmail' =&gt; 'your@email.com',
+    'AuthorUrl' =&gt; 'http://yourwebsite.com',
+    'Options' =&gt; array(
+        'Description' =&gt; 'This theme has an alternative colour scheme and custom text.',
+        'Styles' =&gt; array(
+            'Default' =&gt; '%s_default',
+            'Dark' =&gt; '%s_dark',
+            'Blue' =&gt; '%s_blue',
+        ),
+        'Text' =&gt; array(
+            'Custom&amp;nbsp;Text' =&gt; array(
+                    'Description' =&gt; 'Custom text to be inserted in the theme.',
+                    'Type' =&gt; 'textbox'
+            )
+        )
+    )
+);
+</code></pre>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

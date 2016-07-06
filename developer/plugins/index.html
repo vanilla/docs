@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+        
+        <link href="http://127.0.0.1:8080/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8080/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="http://127.0.0.1:8080/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8080/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+        
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8080/">
+                <img class="logo" src="http://127.0.0.1:8080/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+        
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Plugins</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/plugins/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+        
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/changelog/">Changelog</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/framework/">Framework</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8080/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/plugins/quickstart/">Plugin Quickstart </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="extending-vanilla-with-plugins">Extending Vanilla with plugins</h2>
+
+<p>Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.</p>
+
+<h2 id="events-handlers">Events &amp; Handlers</h2>
+
+<p>Any class that extends the class &ldquo;Pluggable&rdquo; has the ability to call</p>
+
+<pre><code>$this-&gt;fireEvent('EventName');
+</code></pre>
+
+<p>and then plugins can attach to that event to perform an action.</p>
+
+<p>There is a PluginManager that detects any enabled plugins. When the <code>FireEvent</code> method is called, it pings the PluginManager class to see if there are any plugins that want to attach to the event name being fired.</p>
+
+<p>Plugins attach to an event by creating a method named with the object name, event name, and the word <code>handler</code> separated by underscores. Say the <code>DiscussionsController</code> fired an event named &lsquo;Kaboom&rsquo;. Here is how you would use it:</p>
+
+<pre><code>class MyPlugin extends GDN_Plugin() {
+   public function discussionsController_kaboom_handler($sender, $args) {
+   	  // Do stuff at the 'Kaboom' event here.
+   	  $sender-&gt;index(); // You can invoke DiscussionsController methods here.
+   }
+}
+</code></pre>
+
+<p>Notice that 2 parameters are passed. The first is the object invoking the event (usually <code>$this</code>). The second is <em>optional</em>, and is an array of event arguments being passed as additional info or options to be modified.</p>
+
+<h2 id="eventarguments">EventArguments</h2>
+
+<p>Usually these arguments are the data being set up by the object, a toggle the handler can switch on or off, or other contextual info.</p>
+
+<p>For example:</p>
+
+<pre><code>$this-&gt;EventArguments['DuckDodgers'] &amp;= '24.5';
+$this-&gt;fireEvent('Kaboom');
+</code></pre>
+
+<p>Now in our <code>Handler</code> method above, $args would be an array of <code>'DuckDodgers' =&gt; '24.5'</code>. If we set <code>$args['DuckDodgers'] = 0;</code> in our <code>handler</code> method, it would also be changed back in the <code>DiscussionsController</code> because it was passed by reference.</p>
+
+<p>To invoke a handler on ALL methods, use the prefix <code>base</code> instead of an object name. Example: <code>base_kaboom_handler</code>. It is best to avoid unnecessary calls by using this <em>very</em> conservatively.</p>
+
+<p>Custom events are added on a case-by-case basis as the need arises. If you feel you need a new event, request it on the community forum.</p>
+
+<h2 id="magic-events">Magic Events</h2>
+
+<p>Magic events were an elaborate system of hook possibilities that involved the method prefix &lsquo;x&rsquo; and PHP&rsquo;s <code>__call()</code> method. Currently, there is only one undeprecated magic event in Vanilla: <code>render_before</code>. It invokes just before the page is rendered. Example use: <code>base_render_before($Sender)</code>. <strong>It is best to avoid when another event is usable.</strong></p>
+
+<p>For a better alternative hook that reliably fires early on every request, try <code>gdn_dispatcher_appStartup_handler</code> instead. To universally include a CSS file, use <code>assetModel_styleCss_handler</code>.</p>
+
+<h2 id="function-overrides">Function Overrides</h2>
+
+<p>All functions in the framework are declared like so:</p>
+
+<pre><code>if (!function_exists('functionName')) {
+   function functionName() {
+   	  // Do something.
+   }
+}
+</code></pre>
+
+<p>Plugin authors may therefore override any core function simply by defining it in a plugin or theme hook file, which are included before the core functions.</p>
+
+<h2 id="magic-methods">Magic Methods</h2>
+
+<p>Magic methods allow you to create new methods and add them to existing objects. They are created in much the same way that you plug into events. Imagine you wanted to add a method named <code>Kaboom</code> to the DiscussionsController:</p>
+
+<pre><code>class MyPlugin extends Gdn_Plugin {
+   public function discussionsController_kaboom_create($Sender) {
+        echo &quot;Kaboom!&quot;;
+   }
+}
+</code></pre>
+
+<p>With this plugin enabled, going to the URL <code>/discussions/kaboom</code> would now output the text &ldquo;Kaboom!&rdquo;. You can references other methods and properties on the extended object using the <code>$Sender</code> variable.</p>
+
+<p>If you use a magic method to duplicate an existing method name, it will be overridden completely. And call to it will be directed to your plugin instead. The only exception is the <code>Index()</code> method.</p>
+
+<p>Magic methods only work in classes that extend <code>Gdn_Pluggable</code>. For example, notice the <code>Gdn_Form</code> class does, but the <code>Gdn_Format</code> class does not. All models and controllers do.</p>
+
+<h2 id="controllers">Controllers</h2>
+
+<p>Is your addon a bit more complex? Add a <code>controllers</code> folder and add your own controller classes. They will automatically be detected and be dispatched to like normal controllers. This functionality is new in Vanilla 2.2.</p>
+
+<p>As a reminder, controllers should extend Gdn_Controller. <a href="http://127.0.0.1:8080/developer/framework/controllers">Read more about controllers</a>.</p>
+
+<h2 id="virtual-controller-deprecated">Virtual Controller (deprecated)</h2>
+
+<p>A virtual controller let you simulate a single controller within a plugin. First, create a magic method using the namespace you want for your controller. Example: <code>pluginController_newNamespace_create</code>. This creates content under the URL <code>/plugin/newnamespace</code>. To put NewNamespace as the first level (instead of under &ldquo;plugins&rdquo;) use the RootController. End the magic method with a re-dispatch: <code>$this-&gt;dispatch($Sender, $Sender-&gt;RequestArgs);</code>.</p>
+
+<p>Next, create methods named <code>Controller_X</code>, where X is the method namespace. Example: <code>controller_index($Sender)</code>.</p>
+
+<p>Let&rsquo;s put it all together with a quick example. Let&rsquo;s say you wanted to create content at <code>/fancy/ping</code>. This would accomplish that:</p>
+
+<pre><code>&lt;?php
+/**
+ * File-level doc blocks are for @license, @copyright, and @author tags.
+ */
+
+/**
+ * Class-level doc blocks should summarize what the class is for.
+ */
+class MyFancyPlugin extends Gdn_Plugin () {
+
+	/**
+	 * Always document your methods.
+	 */
+   public function rootController_fancy_create($Sender) {
+   	   // This is a good place to check permissions or include assets.
+	   $this-&gt;dispatch($Sender, $Sender-&gt;RequestArgs);
+   }
+
+	/**
+	 * Include @param and @return in your docs too.
+	 */
+   public function controller_ping($Sender) {
+	   // This is what happens when you call /fancy/ping.
+   }
+}
+</code></pre>
+
+<p>This is obviously more resource-intense than a normal controller, so avoid this technique if normal controllers are available to you and/or you need more than one controller. This technique was obsoleted by adding native controllers to plugins in 2.2.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-cloud">
+                <h3>Cloud Hosted</h3>
+                <p>
+                    <b>We believe that online communities should be intuitive, engaging and true to your brand.</b> Vanilla allows you to create a customized community that rewards positive participation, automatically curates content and lets members drive moderation.
+                </p>
+                <p>
+                    <a href="https://vanillaforums.com">Learn more</a>
+                </p>
+            </div>
+        </div>
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-oss">
+                <h3>Open Source</h3>
+                <p>
+                    Vanilla provides cloud and open source community forum software that powers discussion forums on more than 700,000 sites. Built for flexibility and integration, <b>Vanilla is the best, most powerful community solution in the world.</b>
+                </p>
+                <p>
+                    <a href="https://vanillaforums.org">Learn more</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+        
+        <link href="http://127.0.0.1:8080/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8080/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="http://127.0.0.1:8080/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8080/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+        
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8080/">
+                <img class="logo" src="http://127.0.0.1:8080/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+        
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Dashboard</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/configuration/dashboard.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+        
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/changelog/">Changelog</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8080/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/configuration/banner/">Banner Settings </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8080/developer/configuration/dashboard/">Dashboard </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/configuration/homepage/">Homepage Settings </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/configuration/message/">Messages </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/configuration/using/">Using The Config </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/framework/">Framework</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="dashboard">Dashboard</h2>
+
+<p>The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum&rsquo;s main page, a profile link (shown as your user name), and Sign Out.</p>
+
+<p>On the left side of the screen is the main navigation menu detailing each of the administrative functions you can perform. Within each major function, such as Appearance, a list of sub-menu items appear, certain sub-menu items may vary depending on what addons you have installed.</p>
+
+<p>The large area to the right of the screen is the work area. It is here the specific information relating to a particular navigation choice, such as adding a new post, is presented and collected.</p>
+
+<p>Finally, in the footer, at the bottom of each Administration Panel also in a dark blue gradient, are links to Vanilla Forums, and Documentation. In addition, the version of Vanilla Forums you have installed can be found.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-cloud">
+                <h3>Cloud Hosted</h3>
+                <p>
+                    <b>We believe that online communities should be intuitive, engaging and true to your brand.</b> Vanilla allows you to create a customized community that rewards positive participation, automatically curates content and lets members drive moderation.
+                </p>
+                <p>
+                    <a href="https://vanillaforums.com">Learn more</a>
+                </p>
+            </div>
+        </div>
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-oss">
+                <h3>Open Source</h3>
+                <p>
+                    Vanilla provides cloud and open source community forum software that powers discussion forums on more than 700,000 sites. Built for flexibility and integration, <b>Vanilla is the best, most powerful community solution in the world.</b>
+                </p>
+                <p>
+                    <a href="https://vanillaforums.org">Learn more</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

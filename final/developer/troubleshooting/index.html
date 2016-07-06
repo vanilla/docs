@@ -1,0 +1,59 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Troubleshooting</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="troubleshooting-vanilla">Troubleshooting Vanilla</h2>
+
+<p>These are some generic tips for addressing problems during an upgrade.</p>
+
+<ul>
+<li>Set <code>$Configuration['Debug'] = TRUE;</code> in your <code>conf/config.php</code> to reveal full error messages. Remember to remove it when you are done.</li>
+<li>Clear your browser cache and cookies, then restart your browser.</li>
+<li>Clear *.ini files from the <code>cache</code> folder.</li>
+<li>Revert to the default theme. You can do this manually in <code>conf/config.php</code> by setting the <code>$Configuration['Garden']['Theme']</code> value to <code>default</code>.</li>
+<li>Disable plugins. If you cannot get to your Dashboard, you can manually delete lines containing <code>EnabledPlugins</code> in <code>conf/config.php</code> but <strong>do not remove HTMLawed&rsquo;s line</strong>.</li>
+<li>Try running <code>/utility/update</code> again (see upgrade instructions).</li>
+<li>Verify your permissions and default role settings are correct for every role.</li>
+<li>Start a <strong>new discussion</strong> on this site with your version number (likely 2.2 if you&rsquo;re reading this), the exact error message you got, and what you were doing when you got it.</li>
+</ul>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

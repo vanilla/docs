@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plugins on Vanilla Forums Documentation</title>
+    <link>http://docs.vanillaforums.com/categories/plugins/</link>
+    <description>Recent content in Plugins on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://docs.vanillaforums.com/categories/plugins/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Plugins</title>
+      <link>http://docs.vanillaforums.com/developer/plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/developer/plugins/</guid>
+      <description>
+
+&lt;h1 id=&#34;extending-vanilla-with-plugins&#34;&gt;Extending Vanilla with plugins&lt;/h1&gt;
+
+&lt;p&gt;Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.&lt;/p&gt;
+
+&lt;h2 id=&#34;events-handlers&#34;&gt;Events &amp;amp; Handlers&lt;/h2&gt;
+
+&lt;p&gt;Any class that extends the class &amp;ldquo;Pluggable&amp;rdquo; has the ability to call&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$this-&amp;gt;fireEvent(&#39;EventName&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and then plugins can attach to that event to perform an action.&lt;/p&gt;
+
+&lt;p&gt;There is a PluginManager that detects any enabled plugins. When the &lt;code&gt;FireEvent&lt;/code&gt; method is called, it pings the PluginManager class to see if there are any plugins that want to attach to the event name being fired.&lt;/p&gt;
+
+&lt;p&gt;Plugins attach to an event by creating a method named with the object name, event name, and the word &lt;code&gt;handler&lt;/code&gt; separated by underscores. Say the &lt;code&gt;DiscussionsController&lt;/code&gt; fired an event named &amp;lsquo;Kaboom&amp;rsquo;. Here is how you would use it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class MyPlugin extends GDN_Plugin() {
+   public function discussionsController_kaboom_handler($sender, $args) {
+   	  // Do stuff at the &#39;Kaboom&#39; event here.
+   	  $sender-&amp;gt;index(); // You can invoke DiscussionsController methods here.
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that 2 parameters are passed. The first is the object invoking the event (usually &lt;code&gt;$this&lt;/code&gt;). The second is &lt;em&gt;optional&lt;/em&gt;, and is an array of event arguments being passed as additional info or options to be modified.&lt;/p&gt;
+
+&lt;h2 id=&#34;eventarguments&#34;&gt;EventArguments&lt;/h2&gt;
+
+&lt;p&gt;Usually these arguments are the data being set up by the object, a toggle the handler can switch on or off, or other contextual info.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$this-&amp;gt;EventArguments[&#39;DuckDodgers&#39;] &amp;amp;= &#39;24.5&#39;;
+$this-&amp;gt;fireEvent(&#39;Kaboom&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now in our &lt;code&gt;Handler&lt;/code&gt; method above, $args would be an array of &lt;code&gt;&#39;DuckDodgers&#39; =&amp;gt; &#39;24.5&#39;&lt;/code&gt;. If we set &lt;code&gt;$args[&#39;DuckDodgers&#39;] = 0;&lt;/code&gt; in our &lt;code&gt;handler&lt;/code&gt; method, it would also be changed back in the &lt;code&gt;DiscussionsController&lt;/code&gt; because it was passed by reference.&lt;/p&gt;
+
+&lt;p&gt;To invoke a handler on ALL methods, use the prefix &lt;code&gt;base&lt;/code&gt; instead of an object name. Example: &lt;code&gt;base_kaboom_handler&lt;/code&gt;. It is best to avoid unnecessary calls by using this &lt;em&gt;very&lt;/em&gt; conservatively.&lt;/p&gt;
+
+&lt;p&gt;Custom events are added on a case-by-case basis as the need arises. If you feel you need a new event, request it on the community forum.&lt;/p&gt;
+
+&lt;h2 id=&#34;magic-events&#34;&gt;Magic Events&lt;/h2&gt;
+
+&lt;p&gt;Magic events were an elaborate system of hook possibilities that involved the method prefix &amp;lsquo;x&amp;rsquo; and PHP&amp;rsquo;s &lt;code&gt;__call()&lt;/code&gt; method. Currently, there is only one undeprecated magic event in Vanilla: &lt;code&gt;render_before&lt;/code&gt;. It invokes just before the page is rendered. Example use: &lt;code&gt;base_render_before($Sender)&lt;/code&gt;. &lt;strong&gt;It is best to avoid when another event is usable.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For a better alternative hook that reliably fires early on every request, try &lt;code&gt;gdn_dispatcher_appStartup_handler&lt;/code&gt; instead. To universally include a CSS file, use &lt;code&gt;assetModel_styleCss_handler&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;function-overrides&#34;&gt;Function Overrides&lt;/h2&gt;
+
+&lt;p&gt;All functions in the framework are declared like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (!function_exists(&#39;functionName&#39;)) {
+   function functionName() {
+   	  // Do something.
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Plugin authors may therefore override any core function simply by defining it in a plugin or theme hook file, which are included before the core functions.&lt;/p&gt;
+
+&lt;h2 id=&#34;magic-methods&#34;&gt;Magic Methods&lt;/h2&gt;
+
+&lt;p&gt;Magic methods allow you to create new methods and add them to existing objects. They are created in much the same way that you plug into events. Imagine you wanted to add a method named &lt;code&gt;Kaboom&lt;/code&gt; to the DiscussionsController:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class MyPlugin extends Gdn_Plugin {
+   public function discussionsController_kaboom_create($Sender) {
+        echo &amp;quot;Kaboom!&amp;quot;;
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this plugin enabled, going to the URL &lt;code&gt;/discussions/kaboom&lt;/code&gt; would now output the text &amp;ldquo;Kaboom!&amp;rdquo;. You can references other methods and properties on the extended object using the &lt;code&gt;$Sender&lt;/code&gt; variable.&lt;/p&gt;
+
+&lt;p&gt;If you use a magic method to duplicate an existing method name, it will be overridden completely. And call to it will be directed to your plugin instead. The only exception is the &lt;code&gt;Index()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;p&gt;Magic methods only work in classes that extend &lt;code&gt;Gdn_Pluggable&lt;/code&gt;. For example, notice the &lt;code&gt;Gdn_Form&lt;/code&gt; class does, but the &lt;code&gt;Gdn_Format&lt;/code&gt; class does not. All models and controllers do.&lt;/p&gt;
+
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
+
+&lt;p&gt;Is your addon a bit more complex? Add a &lt;code&gt;controllers&lt;/code&gt; folder and add your own controller classes. They will automatically be detected and be dispatched to like normal controllers. This functionality is new in Vanilla 2.2.&lt;/p&gt;
+
+&lt;p&gt;As a reminder, controllers should extend Gdn_Controller. &lt;a href=&#34;http://docs.vanillaforums.com/developers/framework/controllers&#34;&gt;Read more about controllers&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;virtual-controller-deprecated&#34;&gt;Virtual Controller (deprecated)&lt;/h2&gt;
+
+&lt;p&gt;A virtual controller let you simulate a single controller within a plugin. First, create a magic method using the namespace you want for your controller. Example: &lt;code&gt;pluginController_newNamespace_create&lt;/code&gt;. This creates content under the URL &lt;code&gt;/plugin/newnamespace&lt;/code&gt;. To put NewNamespace as the first level (instead of under &amp;ldquo;plugins&amp;rdquo;) use the RootController. End the magic method with a re-dispatch: &lt;code&gt;$this-&amp;gt;dispatch($Sender, $Sender-&amp;gt;RequestArgs);&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, create methods named &lt;code&gt;Controller_X&lt;/code&gt;, where X is the method namespace. Example: &lt;code&gt;controller_index($Sender)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s put it all together with a quick example. Let&amp;rsquo;s say you wanted to create content at &lt;code&gt;/fancy/ping&lt;/code&gt;. This would accomplish that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+/**
+ * File-level doc blocks are for @license, @copyright, and @author tags.
+ */
+
+/**
+ * Class-level doc blocks should summarize what the class is for.
+ */
+class MyFancyPlugin extends Gdn_Plugin () {
+
+	/**
+	 * Always document your methods.
+	 */
+   public function rootController_fancy_create($Sender) {
+   	   // This is a good place to check permissions or include assets.
+	   $this-&amp;gt;dispatch($Sender, $Sender-&amp;gt;RequestArgs);
+   }
+
+	/**
+	 * Include @param and @return in your docs too.
+	 */
+   public function controller_ping($Sender) {
+	   // This is what happens when you call /fancy/ping.
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is obviously more resource-intense than a normal controller, so avoid this technique if normal controllers are available to you and/or you need more than one controller. This technique was obsoleted by adding native controllers to plugins in 2.2.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+        
+        <link href="http://127.0.0.1:8080/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8080/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="http://127.0.0.1:8080/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8080/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+        
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8080/">
+                <img class="logo" src="http://127.0.0.1:8080/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+        
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Modules</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/framework/modules.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+        
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/changelog/">Changelog</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8080/developer/framework/">Framework</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/assets/">Assets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/controllers/">Controllers &amp; URLs </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/database/">Database access </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/datasets/">Datasets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/email/">Email </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/helpers/">Helpers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/inform/">Inform Messages </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/i18n/">Internationalization &amp; Localization </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/models/">Models, Forms, &amp; Validation </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8080/developer/framework/modules/">Modules </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/permissions/">Permissions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/requests/">Requests </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/views/">Views </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                <p><p>If controller methods represent the main content/purpose of a page, modules represent secondary information or functions. Modules are small groupings of functionality or information on a page. Some modules that are bundled with Garden include:</p>
+<ul>
+<li><strong>HeadModule</strong> - Allows addition of javascript, css &amp; meta information to be rendered in the page.</li>
+<li><strong>MenuModule</strong> - Handles management and rendering of items in the main menu.</li>
+<li><strong>PagerModule</strong> - Takes information about a dataset and renders a pagelist.</li>
+<li><strong>GuestModule</strong> - Displays information for unauthenticated users in the sidebar on how to sign in or register.</li>
+</ul>
+<p>Modules are application-specific, and are located in the application&rsquo;s &ldquo;modules&rdquo; folder. To see all of the modules packaged with Garden, browse to <code>/applications/garden/modules</code>. If a module has an associated view, it can be found in the application&rsquo;s views/modules folder with the same name as the module file minus &ldquo;class&rdquo; and &ldquo;module&rdquo;. For example, the view associated with the <code>/applications/garden/modules/class.guestmodule.php</code> is <code>/applications/garden/views/modules/guest.php</code>. Modules are extended from the Module class, which is like a very simple version of the controller class. They are typically used to display information in the Panel asset, but they can actually be used anywhere in the page. A module&rsquo;s default asset is defined with the AssetTarget method, which simply returns the name of the asset to add the module to by default.</p>
+<h2>Examples</h2>
+<p>The simplest modules will have just two methods: AssetTarget and ToString. Let&rsquo;s make a &ldquo;Hello World&rdquo; module. Create a file called class.helloworldmodule.php and place it in your test application&rsquo;s modules folder (if you don&rsquo;t have a test application, put it in Vanilla&rsquo;s modules folder). Open the file and enter the following:</p>
+<pre lang="php">class HelloWorldModule extends Module {</p>
+
+<p>public function AssetTarget() {
+      return &lsquo;Panel&rsquo;;
+   }</p>
+
+<p>public function ToString() {
+      return &lsquo;Hello World!&rsquo;;
+   }
+}</pre>
+<p>Now let&rsquo;s go add it to a controller. Open up a controller in your test application and add the following (if you don&rsquo;t have a test application, use vanilla&rsquo;s controllers/discussions.php file and add it to the bottom of the index method) right above the call to $this-&gt;Render():</p>
+<pre lang="php">$this-&gt;AddModule(&lsquo;HelloWorldModule&rsquo;);</pre>
+<p>If you browse to this page, the text &ldquo;Hello World!&rdquo; will not appear in the panel. You can change where the &ldquo;Hello World!&rdquo; text appears either by changing the value returned by the AssetTarget method, or on the fly when the module is added by the controller. Let&rsquo;s change the AddModule call to send the module to the Content asset instead of the Panel:</p>
+<pre lang="php">$this-&gt;AddModule(&lsquo;HelloWorldModule&rsquo;, &lsquo;Content&rsquo;);</pre>
+<p>Go back and refresh the page to see that the text has moved over to the Content asset. The AddModule method will take a string as the first parameter, or an instantiated module object. So, we could have also added the module in the following manner:</p>
+<pre lang="php">$HelloWorldModule = new HelloWorldModule();
+$this-&gt;AddModule($HelloWorldModule);</pre>
+<h2>Organizing Module Sort Order</h2>
+<p>You can organize the order that modules appear in assets by manipulating the Modules collection of the Configuration array. Take a look at conf/config-defaults.php to see the default sort order of core-packaged modules:</p>
+<pre lang="php">// Modules
+$Configuration[&lsquo;Modules&rsquo;][&lsquo;Vanilla&rsquo;][&lsquo;Panel&rsquo;] = array(&lsquo;NewDiscussionModule&rsquo;, &lsquo;GuestModule&rsquo;, &lsquo;Ads&rsquo;);
+$Configuration[&lsquo;Modules&rsquo;][&lsquo;Vanilla&rsquo;][&lsquo;Content&rsquo;] = array(&lsquo;Gdn_MessageModule&rsquo;, &lsquo;Notices&rsquo;, &lsquo;Content&rsquo;, &lsquo;Ads&rsquo;);
+$Configuration[&lsquo;Modules&rsquo;][&lsquo;Garden&rsquo;][&lsquo;Content&rsquo;] = array(&lsquo;Gdn_MessageModule&rsquo;, &lsquo;Notices&rsquo;, &lsquo;Content&rsquo;, &lsquo;Ads&rsquo;);
+$Configuration[&lsquo;Modules&rsquo;][&lsquo;Conversations&rsquo;][&lsquo;Content&rsquo;] = array(&lsquo;Gdn_MessageModule&rsquo;, &lsquo;Notices&rsquo;, &lsquo;Content&rsquo;, &lsquo;Ads&rsquo;);</pre>
+<p>The collection names the application, followed by the asset to organize. The value is an array in order that modules should be organized. If a module is not added, it will simply be ignored. If a module is added that does not appear in the array, it will be added after the defined modules, and in the order that it was added to the code.</p>
+<h2>Doing More</h2>
+<p>While it&rsquo;s nice to be able to add messages to pages, it doesn&rsquo;t illustrate the true power of modules. Modules can be used to retrieve and display data, contain forms for submitting data, and much more. To see all that can be done with modules, take a look at the modules in Garden &amp; Vanilla. Listed below are a couple examples of modules that do more than just spit out text:</p>
+<dl><dt>/applications/garden/modules/recentactivitymodule.php</dt><dd>Grabs recent activities for display in the panel.</dd><dt>/applications/conversations/modules/class.addpeoplemodule.php</dt><dd>Adds a form to the panel that allows users to add people to a conversation.</dd><dt></dt></dl></p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-cloud">
+                <h3>Cloud Hosted</h3>
+                <p>
+                    <b>We believe that online communities should be intuitive, engaging and true to your brand.</b> Vanilla allows you to create a customized community that rewards positive participation, automatically curates content and lets members drive moderation.
+                </p>
+                <p>
+                    <a href="https://vanillaforums.com">Learn more</a>
+                </p>
+            </div>
+        </div>
+        <div class="column column-6">
+            <div class="docs-platform-choice choice-oss">
+                <h3>Open Source</h3>
+                <p>
+                    Vanilla provides cloud and open source community forum software that powers discussion forums on more than 700,000 sites. Built for flexibility and integration, <b>Vanilla is the best, most powerful community solution in the world.</b>
+                </p>
+                <p>
+                    <a href="https://vanillaforums.org">Learn more</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

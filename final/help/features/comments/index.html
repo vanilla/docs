@@ -1,0 +1,93 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Universal Comments</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h1 id="vanilla-comments">Vanilla Comments</h1>
+
+<p>Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.</p>
+
+<h2 id="what-are-universal-comments">What are Universal Comments?</h2>
+
+<p>We made Comment integration easy with WordPress (<a href="/features/wordpress/using-comments/">learn more about that here</a>.), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.</p>
+
+<h2 id="how-to-use-universal-comments">How to use Universal Comments.</h2>
+
+<p>To know if you can use Vanilla Universal Comments, you need to know if your content has a unique id. What does that mean? In your URL or code, is there a way to identify the difference between two pages? For example in Magento you have a productid, in Concrete5 there is the PageId, in MODX it’s the Resource ID, and so on.</p>
+
+<p>This identifier is how you can assign a comment box from Vanilla to a specific document on any platform. Essentially, if you have a way to identify unique content, you can use Vanilla Comments.</p>
+
+<p>Once you&rsquo;ve determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Blog Comments” under the “Forum” heading. You will see the following:</p>
+
+<p><img src="/features/comments/images/Blog_Comments-settings.png" alt="Universal Comments" /></p>
+
+<p>You want to make sure you have enabled embedding. The next step is to select the Universal Code setting tab:</p>
+
+<p><img src="/features/comments/images/Blog_Comments_-universal_code.png" alt="Universal Comments tab" /></p>
+
+<p>On this tab you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.</p>
+
+<p><img src="/features/comments/images/Blog_Comments_Universal-Code-Identifier.png" alt="Universal Comments tab" /></p>
+
+<p>Please note, before you paste the code in your platform’s template or theme, you will need to modify the elements highlighted in yellow.</p>
+
+<p>The first element you need to review is that the correct full url/path to your Vanilla install is in the code.</p>
+
+<p>The second element you will need to add, and that is the code that calls the unique id for the current page. Replace &ldquo;your-content-identifier&rdquo; with the appropriate code so Vanilla can connect the discussion created to the proper content.</p>
+
+<p>Finally within the comments code, you can:</p>
+
+<ul>
+<li>You can modify Universal Comments code to allow all comments to appear in one discussion thread</li>
+<li>You can make the comments to appear in a certain category of your community. This can be helpful if you integrate Vanilla Comments into a ecommerce shop where you want all product reviews to be placed in the “Product Review” category.</li>
+</ul>
+
+<p>There are some additional settings you may wish to also review :</p>
+
+<ul>
+<li>Configure Comment Counts code to show the number of comments you have.</li>
+<li>Decide how many comments you wish to appear per page</li>
+<li>Under advanced settings add your trusted domains.</li>
+</ul>
+
+<p>If you are using WordPress, check out our <a href="/features/wordpress/using-comments/">how to integrate comments with WordPress</a>.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

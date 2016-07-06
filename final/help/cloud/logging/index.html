@@ -1,0 +1,88 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Logging</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h1 id="advanced-logging">Advanced logging</h1>
+
+<p>Additional logging is available on our highest-tier plans for an additional fee to cover the additional load &amp; performance hit incurred by more verbose logs.</p>
+
+<p>The logs are available via a Dashboard page under &ldquo;Event Log&rdquo;. They can be filtered by date range, event name, and severity. Sorting is chronological or reverse-chronological.</p>
+
+<h2 id="events">Events</h2>
+
+<p>We are currently able to log the following additional events for auditing purposes.</p>
+
+<h3 id="authentication-permissions">Authentication &amp; Permissions:</h3>
+
+<ul>
+<li>signin_failure</li>
+<li>password_reset_request</li>
+<li>password_reset_failure</li>
+<li>password_reset</li>
+<li>password_change</li>
+<li>password_change_failure</li>
+<li>session_start</li>
+<li>session_end</li>
+<li>security_denied (any permission error)</li>
+<li>csrf_failure (request may have been spoofed)</li>
+</ul>
+
+<h3 id="privileged-actions">Privileged actions:</h3>
+
+<ul>
+<li>theme_changed</li>
+<li>addon_enabled</li>
+<li>addon_disabled</li>
+<li>role_add (user permissions modified)</li>
+<li>role_remove</li>
+<li>security_access (admin/moderator-only actions)</li>
+</ul>
+
+<h3 id="outgoing-requests">Outgoing requests:</h3>
+
+<ul>
+<li>http_request</li>
+<li>http_response</li>
+<li>http_response_error</li>
+</ul>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

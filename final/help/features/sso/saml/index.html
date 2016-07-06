@@ -1,0 +1,68 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">SSO with SAML</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="sso-with-saml-overview">SSO with SAML: Overview</h2>
+
+<p>Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAMLSSO addon, and configuring it via its Settings page (Dashboard -&gt; Addons -&gt; SAMLSSO -&gt; Settings button).</p>
+
+<p>SAML accounts are mapped to existing forum accounts by <strong>email address</strong>, or a new account is created if no match is found.</p>
+
+<p>Vanilla&rsquo;s SAML mapping is as follows (the right value is the SAML key):</p>
+
+<pre><code>UniqueID =&gt; id
+Name =&gt; uid
+Email =&gt; mail
+Photo =&gt; photo
+</code></pre>
+
+<p>We also accept a <code>roles</code> field optionally. <code>Photo</code> is likewise optional.</p>
+
+<p><code>UniqueID</code> is whatever you&rsquo;re using to absolutely uniquely identify the user on your side that will never change.</p>
+
+<p><code>Name</code> is the username. We recommend keeping it within the normal rules (alphanumerics and underscores only, 50-character limit, must be unique) but we do not validate its formatting on our side over SSO because we don&rsquo;t want to fail a login. It would just make @mentions impossible to use if it had spaces or special characters in it. However, in the case where there&rsquo;s a duplicate name or none provided, it will send the user to a &ldquo;Connect&rdquo; page to provide a valid, unique username which will then also be validated for formatting.</p>
+
+<p>We don&rsquo;t validate emails on our side either. In general, we are assuming you&rsquo;ve done the data validation on your side and adding more would gum up the works.</p>
+
+<p>Roles consist of a comma-separated list of exact name matches to existing roles on your forum.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

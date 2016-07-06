@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Integration on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/tags/integration/</link>
+    <description>Recent content in Integration on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/tags/integration/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Integration Services</title>
+      <link>http://127.0.0.1:8080/help/cloud/integration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/cloud/integration/</guid>
+      <description>
+
+&lt;h2 id=&#34;integration-services&#34;&gt;Integration Services&lt;/h2&gt;
+
+&lt;p&gt;Higher &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt; include integration support. Integration support is generally given for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
+
+&lt;p&gt;We will continue to assist you with our outstanding professional support even after your integration support ends. Integration support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

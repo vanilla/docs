@@ -1,0 +1,157 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Setting up SSL (https)</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="setting-up-ssl-https-with-vanilla-cloud">Setting up SSL (https) with Vanilla Cloud</h2>
+
+<p>Vanilla offers SSL support in Corporate plans and above. In order for us to to enable SSL for your forum, you will need to provide Vanilla with the following:</p>
+
+<pre><code>Certificates start like this:
+-----BEGIN CERTIFICATE-----
+</code></pre>
+
+<pre><code>Private keys start like this:
+-----BEGIN RSA PRIVATE KEY-----
+</code></pre>
+
+<ol>
+<li><p>The <strong>SSL Certificate</strong> for your forum&rsquo;s domain in PEM format.</p></li>
+
+<li><p>The <strong>SSL Certificate Private Key</strong> for your forum&rsquo;s domain in PEM format, and with <strong>no password</strong>.</p></li>
+
+<li><p>The optional <strong>Intermediate SSL Certificate</strong> for your certificate issuing authority.</p></li>
+</ol>
+
+<h3 id="how-to-obtain-your-ssl-certificates">How to obtain your SSL certificates</h3>
+
+<p>Usually, you&rsquo;ll get an SSL certificate in one of two ways:</p>
+
+<ol>
+<li><p><strong>Ask an IT professional at your company</strong>. They should know exactly what an SSL certificate is and can coordinate sending a certificate to Vanilla&rsquo;s cloud support. Showing them this documentation will also help.</p></li>
+
+<li><p><strong>Obtain a new SSL certificate through a Certificate Authority</strong>. Companies like Verisign and TRUSTe act as Certificate Authorities (CA) and you can purchase an SSL certificate through them. Explaining the entire process of purchasing your own SSL certificate is going to be different for each vendor and is beyond the scope of this documentation. We recommend contacting the support channel of a CA to get more information on purchasing a new SSL certificate.</p></li>
+</ol>
+
+<h4 id="what-is-this-intermediate-ssl-certificate">What is this &ldquo;Intermediate SSL Certificate&rdquo;?</h4>
+
+<p>SSL has 2 components: trust and encryption. Encryption is fairly straightforward: the certificate is used to encrypt communication between the client and the server. Trust, on the other hand, is more complex. Web browsers are pre-configured to &ldquo;know&rdquo; about a certain set of CAs, but if your certificate was issued by a CA that is not in that list, your browser does not know whether it can be trusted. The intermediate certificate solves that problem by connecting the broken chain between your certificate and a CA that the browser trusts. Intermediate certificates are an important part of ensuring that customers see a green &ldquo;Secure&rdquo; symbol in their address bar when they access your site.</p>
+
+<h4 id="why-can-t-vanilla-create-an-ssl-certificate-for-your-site">Why can&rsquo;t Vanilla create an SSL certificate for your site?</h4>
+
+<p>The SSL process would be much smoother if Vanilla could just set it up without requiring anything from you. This just isn&rsquo;t possible though due to the underlying security of SSL and the Internet. <strong>The owner of a domain name is the only person that can generate an SSL certificate.</strong> And if you think about it, this is a good thing. If we could generate an SSL certificate for you then so could a hacker.</p>
+
+<h3 id="how-to-give-ssl-certificates-to-vanilla">How to give SSL certificates to Vanilla</h3>
+
+<p>Once you have your SSL certificates you&rsquo;ll need to give them to Vanilla support. <strong>Don&rsquo;t just email your SSL certificates to us.</strong> These certificates are sort of like passwords and special care should be taken to provide them to us in a secure way. Here are some options.</p>
+
+<ol>
+<li><p><strong>Secure FTP (sftp)</strong>. If you&rsquo;ve been given an SFTP account on Vanilla&rsquo;s project server, then you should upload your certificates there.</p></li>
+
+<li><p><strong>PGP Encrypted Email</strong>. If you have the ability to send PGP encrypted email then you can send your SSL certificates that way. Please send them to: ops@vanillaforums.com. Our public key is included in this documentation.</p></li>
+</ol>
+
+<pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+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
+s4HJBD41ZP7DOeVwKwkfwlDHCYY=
+=cgqK
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre>
+
+<h3 id="ssl-only-sites">SSL only sites</h3>
+
+<p>If you have a strict security policy that requires that your site only be served through https, we can configure your site to always use ssl. We don&rsquo;t recommend forcing SSL during the set up process in order to help us troubleshoot any issues with the configuration process.</p>
+
+<h3 id="gotchas">Gotchas</h3>
+
+<ul>
+<li>When your site is being served through SSL you may encounter problems if you are externally linking to non-SSL resources such as javascript, css, or images. Keep this in mind if you are custom theming your site or have other customizations enabled.</li>
+<li>If you are using jsConnect, make sure your authentication url is available over SSL or else jsConnect will fail.</li>
+<li>Don&rsquo;t give us a wildcard certificate. Usually you should set up Vanilla as a subdomain of your main site (ex. forums.yoursite.com). Make sure you generate certificates just for the forums and not a wildcard certificate that can be used for your entire domain. This is for your own security and serves to reduce your risk and our liability.</li>
+<li>Not all CAs pro-actively provide intermediate certificates, and some CAs only provide them as secondary downloads instead of bundling them with your certificate when you download it.</li>
+</ul>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

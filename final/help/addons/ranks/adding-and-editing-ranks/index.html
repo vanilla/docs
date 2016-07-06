@@ -1,0 +1,99 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Adding and Editing Ranks</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="adding-a-ranks">Adding a Ranks</h2>
+
+<p>Go to the &ldquo;Ranks&rdquo; page of the Dashboard and click the &ldquo;Add Rank&rdquo; button at the bottom of the list.</p>
+
+<h2 id="editing-a-rank">Editing a Rank</h2>
+
+<p>On the &ldquo;Ranks&rdquo; page, click the &ldquo;Edit&rdquo; button next to the Rank you wish to modify.</p>
+
+<h2 id="rank-information">Rank information</h2>
+
+<h3 id="name-label">Name &amp; Label</h3>
+
+<p>The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&rsquo;s name in discussions and comments after they attain the rank.</p>
+
+<h3 id="body-message">Body &amp; Message</h3>
+
+<p>These only appear immediately after a user attains a rank. The &ldquo;Body&rdquo; is emailed to the user. The &ldquo;Message&rdquo; appears at the top of the page when the rank is triggered.</p>
+
+<h3 id="css-class">CSS Class</h3>
+
+<p>The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&rsquo; content appear more prominently. For example, if you had an &ldquo;Expert&rdquo; rank, maybe you&rsquo;d highlight their comments with a special background color.</p>
+
+<h3 id="level">Level</h3>
+
+<p>Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.</p>
+
+<p>If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.</p>
+
+<h2 id="setting-criteria">Setting Criteria</h2>
+
+<p>You can set thresholds for:</p>
+
+<ul>
+<li>Points</li>
+<li>Posts (comments + discussions)</li>
+<li>Duration of membership</li>
+<li>Permission level (e.g. moderator or admin)</li>
+</ul>
+
+<p>All thresholds you set must be met for the rank to be assigned. For instance, if you set Points to 50 and posts to 10, it means a member must have 50 points AND 10 posts to be assigned the rank.</p>
+
+<p>Checking &ldquo;Assigned Manually&rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&rsquo;s profile and selecting the rank.</p>
+
+<h2 id="manually-assigning-a-rank">Manually Assigning a Rank</h2>
+
+<p>Rank assignment is done via &ldquo;Edit Profile&rdquo; from the user&rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.</p>
+
+<h2 id="abilities">Abilities</h2>
+
+<p>Each ability may be given the value of &ldquo;Grant&rdquo;, &ldquo;Revoke&rdquo;, or &ldquo;Default&rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.</p>
+
+<p>Some abilities are effected by other addons. It&rsquo;s important to understand your current Vanilla installation before changing the default values for abilities.</p>
+
+<p>For instance, in a default Vanilla installation, users will not have a &ldquo;Title&rdquo; field. Therefore, Ranks&rsquo; &ldquo;default&rdquo; would be that no one has a Title. However, Profile Extender can be used to add a &ldquo;Title&rdquo; field, which would give Titles to all users. In that case, Ranks&rsquo; default would be that everyone has a title.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

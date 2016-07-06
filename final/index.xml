@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vanilla Forums Documentation</title>
+    <link>http://docs.vanillaforums.com/</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://docs.vanillaforums.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Accessibility</title>
+      <link>http://docs.vanillaforums.com/help/features/accessibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/features/accessibility/</guid>
+      <description>
+
+&lt;h1 id=&#34;accessibility&#34;&gt;Accessibility&lt;/h1&gt;
+
+&lt;p&gt;We strive for maximum accessibility in our product design and take defects in it seriously.&lt;/p&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;&amp;lsquo;508 Compliance&amp;rsquo; refers to a US law that requires that US government websites to be accessible to persons with disabilities (e.g. visual or physical impairment).   Accessibility means, among many other things, that a person must be able to use the website with software that reads the website aloud and/or using only a keyboard. Many private companies use the 508 guidelines to ensure websites are accessible.&lt;/p&gt;
+
+&lt;p&gt;We believe Vanilla Forums to be both Section 508 and WCAG AAA compliant.&lt;/p&gt;
+
+&lt;h3 id=&#34;key-points&#34;&gt;Key points&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Our default UI is primarily text-based and high-contrast.&lt;/li&gt;
+&lt;li&gt;Our interface is keyboard-friendly.&lt;/li&gt;
+&lt;li&gt;We limit the use of colors, images, and symbols as navigation aids or primary content.&lt;/li&gt;
+&lt;li&gt;We use modern HTML5 markup and accessible forms.&lt;/li&gt;
+&lt;li&gt;We cannot control the accessibility of user generated content within a forum.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you find an area where Vanilla could improve its accessibility, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt; or &lt;a href=&#34;http://github.com/vanilla/vanilla/issues&#34;&gt;file an issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;theming-consideration&#34;&gt;Theming consideration&lt;/h2&gt;
+
+&lt;p&gt;Most Vanilla Forums customize their theme, which can have a huge impact on accessibility.&lt;/p&gt;
+
+&lt;p&gt;Choices of color and font size are obvious considerations, but because our powerful theming engine also allows for the override of HTML markup, it&amp;rsquo;s important to consider that individual sites may vary wildly in their degree of accessibility.&lt;/p&gt;
+
+&lt;p&gt;Conversely, themes can also augment the interface to improve Vanilla&amp;rsquo;s core accessibility.&lt;/p&gt;
+
+&lt;h2 id=&#34;further-reading&#34;&gt;Further reading&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.508checker.com/best-practices&#34;&gt;Best Practices for 508 Compliance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://alistapart.com/topic/accessibility&#34;&gt;A List Apart reading list on Accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.w3.org/TR/WCAG20&#34;&gt;WCAG 2.0 Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adding and Editing Badges</title>
+      <link>http://docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
+      <description>
+
+&lt;h2 id=&#34;disabling-badges&#34;&gt;Disabling badges&lt;/h2&gt;
+
+&lt;p&gt;To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active.  Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.&lt;/p&gt;
+
+&lt;p&gt;It is not currently possible to delete a badge entirely.&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-a-badge&#34;&gt;Editing a badge&lt;/h2&gt;
+
+&lt;p&gt;You can safely edit the Name, Description, and/or Image of any badge without effecting its automated functionality. These will be updated for any users who previously received the badge as well.&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;Slug&amp;rdquo; field is what shows in the URL for the badge&amp;rsquo;s page. It is its unique identifier. Changing a badge&amp;rsquo;s Slug will cause it to be disassociated with any automation assigned to it. Therefore, &lt;em&gt;do not change the Slug of the Badges that come with Vanilla by default&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;You may change the Points for a badge at any time. Point changes are not retroactive for users who previously received it.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-your-own-badges&#34;&gt;Creating your own badges&lt;/h2&gt;
+
+&lt;p&gt;Create a memorable Name for your badge and give it a Description that explains what it is for and how users can earn it. This information will appear on the Badge&amp;rsquo;s page.&lt;/p&gt;
+
+&lt;p&gt;The Slug should consist of only lowercase letters, numbers, and hyphens. The Slug must be unique for each badge.&lt;/p&gt;
+
+&lt;p&gt;Add a 200x200 PNG for the image.&lt;/p&gt;
+
+&lt;p&gt;All badges created in your Dashboard must be given manually.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-automated-badges&#34;&gt;Creating automated badges&lt;/h2&gt;
+
+&lt;p&gt;It is not currently possible to create your own automated badges thru the Dashboard. To discuss custom possibilities for your community, contact sales.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adding and Editing Ranks</title>
+      <link>http://docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <description>
+
+&lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
+
+&lt;p&gt;Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-a-rank&#34;&gt;Editing a Rank&lt;/h2&gt;
+
+&lt;p&gt;On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.&lt;/p&gt;
+
+&lt;h2 id=&#34;rank-information&#34;&gt;Rank information&lt;/h2&gt;
+
+&lt;h3 id=&#34;name-label&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
+
+&lt;p&gt;The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&amp;rsquo;s name in discussions and comments after they attain the rank.&lt;/p&gt;
+
+&lt;h3 id=&#34;body-message&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
+
+&lt;p&gt;These only appear immediately after a user attains a rank. The &amp;ldquo;Body&amp;rdquo; is emailed to the user. The &amp;ldquo;Message&amp;rdquo; appears at the top of the page when the rank is triggered.&lt;/p&gt;
+
+&lt;h3 id=&#34;css-class&#34;&gt;CSS Class&lt;/h3&gt;
+
+&lt;p&gt;The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&amp;rsquo; content appear more prominently. For example, if you had an &amp;ldquo;Expert&amp;rdquo; rank, maybe you&amp;rsquo;d highlight their comments with a special background color.&lt;/p&gt;
+
+&lt;h3 id=&#34;level&#34;&gt;Level&lt;/h3&gt;
+
+&lt;p&gt;Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.&lt;/p&gt;
+
+&lt;p&gt;If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-criteria&#34;&gt;Setting Criteria&lt;/h2&gt;
+
+&lt;p&gt;You can set thresholds for:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Points&lt;/li&gt;
+&lt;li&gt;Posts (comments + discussions)&lt;/li&gt;
+&lt;li&gt;Duration of membership&lt;/li&gt;
+&lt;li&gt;Permission level (e.g. moderator or admin)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All thresholds you set must be met for the rank to be assigned. For instance, if you set Points to 50 and posts to 10, it means a member must have 50 points AND 10 posts to be assigned the rank.&lt;/p&gt;
+
+&lt;p&gt;Checking &amp;ldquo;Assigned Manually&amp;rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&amp;rsquo;s profile and selecting the rank.&lt;/p&gt;
+
+&lt;h2 id=&#34;manually-assigning-a-rank&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
+
+&lt;p&gt;Rank assignment is done via &amp;ldquo;Edit Profile&amp;rdquo; from the user&amp;rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.&lt;/p&gt;
+
+&lt;h2 id=&#34;abilities&#34;&gt;Abilities&lt;/h2&gt;
+
+&lt;p&gt;Each ability may be given the value of &amp;ldquo;Grant&amp;rdquo;, &amp;ldquo;Revoke&amp;rdquo;, or &amp;ldquo;Default&amp;rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.&lt;/p&gt;
+
+&lt;p&gt;Some abilities are effected by other addons. It&amp;rsquo;s important to understand your current Vanilla installation before changing the default values for abilities.&lt;/p&gt;
+
+&lt;p&gt;For instance, in a default Vanilla installation, users will not have a &amp;ldquo;Title&amp;rdquo; field. Therefore, Ranks&amp;rsquo; &amp;ldquo;default&amp;rdquo; would be that no one has a Title. However, Profile Extender can be used to add a &amp;ldquo;Title&amp;rdquo; field, which would give Titles to all users. In that case, Ranks&amp;rsquo; default would be that everyone has a title.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adding and Editing Reactions</title>
+      <link>http://docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <description>
+
+&lt;h2 id=&#34;selecting-reactions&#34;&gt;Selecting Reactions&lt;/h2&gt;
+
+&lt;p&gt;Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://docs.vanillaforums.com/images/reactions-list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
+
+&lt;h2 id=&#34;edit-a-reaction&#34;&gt;Edit a Reaction&lt;/h2&gt;
+
+&lt;p&gt;To edit a reaction, go to Reactions in the Dashboard and click the name of the Reaction you wish to edit.&lt;/p&gt;
+
+&lt;p&gt;Editing an existing reaction is the best way to tweak your list to fit the culture of your community. We recommend selecting the default reaction that most closely matches your desired reaction and simply changing its name.&lt;/p&gt;
+
+&lt;p&gt;You can also change the &amp;ldquo;Points&amp;rdquo; field to modify how many points it give to the user receiving each reaction of that type. The number of points assigned to the discussion or comment is not currently editable via the Dashboard. Yes, Reactions assigns points to users and content independently.&lt;/p&gt;
+
+&lt;p&gt;Doing this allows you to keep any automated badges associated with that reaction, which you can then rename appropriately as well. See the Badges - Adding and Editing Badges to see how to do this safely.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-reaction&#34;&gt;Adding a Reaction&lt;/h2&gt;
+
+&lt;p&gt;To add a new reaction, contact support or your sales representative.&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+
+&lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://docs.vanillaforums.com/images/reactions-advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Best of Style&amp;rdquo; changes the layout of your Best Of page.&lt;/p&gt;
+
+&lt;p&gt;Reactions come with the option to order your comments based on reactions. In general, we do not recommend doing this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adding and Editing User Notes</title>
+      <link>http://docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <description>
+
+&lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
+
+&lt;p&gt;To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;viewing-notes&#34;&gt;Viewing Notes&lt;/h2&gt;
+
+&lt;p&gt;To view a user’s notes go to their profile. There will be a notes link on the side panel. Note that both notes and warnings are displayed in the same list. Notes are identified by a note tag. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.View (if present) to view notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-and-deleting-a-note&#34;&gt;Editing and Deleting a Note&lt;/h2&gt;
+
+&lt;p&gt;You can edit and delete user notes by hovering over them and clicking the corresponding button. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to edit or delete notes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Addons</title>
+      <link>http://docs.vanillaforums.com/help/addons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-are-addons&#34;&gt;What Are Addons?&lt;/h2&gt;
+
+&lt;p&gt;Addons are like apps for your forum. They can be enabled or disabled from your Dashboard. Each one can add one or more features, or modify how an existing feature works. You can tailor your users&amp;rsquo; experience to the needs of your community by carefully selecting addons.&lt;/p&gt;
+
+&lt;p&gt;Vanilla is structured such that its baseline installation only contains features that we feel are essential to every community. Addons let you flavor Vanilla to the specific needs of the community you are building. You&amp;rsquo;ll be surprised at the rich levels of functionality you can add via addons.&lt;/p&gt;
+
+&lt;h2 id=&#34;enabling-addons&#34;&gt;Enabling Addons&lt;/h2&gt;
+
+&lt;p&gt;Enabling an addon immediately makes it active and available. To do this, visit the addons list and click &amp;ldquo;Enable&amp;rdquo; next to the addon. There may be a delay while enabling a new addon for the first time while it makes whatever changes are needed to your database.&lt;/p&gt;
+
+&lt;h2 id=&#34;configuring-addons&#34;&gt;Configuring Addons&lt;/h2&gt;
+
+&lt;p&gt;After enabling, some addons will have a &amp;ldquo;Settings&amp;rdquo; button that appear next to them in the Addons list. Always visit the Settings page for an addon after enabling it, if it has one, to see if additional setup is required.&lt;/p&gt;
+
+&lt;p&gt;You can return to the addon&amp;rsquo;s settings at any time to adjust it in the future.&lt;/p&gt;
+
+&lt;h2 id=&#34;disabling-addons&#34;&gt;Disabling Addons&lt;/h2&gt;
+
+&lt;p&gt;Disabling an addon will remove whatever features it added, but it never destroys the data associated with it. For instance, turning off the Polls addon does not delete any Polls that were created, it just hides them until the addon is enabled again.&lt;/p&gt;
+
+&lt;h2 id=&#34;discovering-addon-features&#34;&gt;Discovering Addon Features&lt;/h2&gt;
+
+&lt;p&gt;Addons can do many things. Some common changes include adding new options to the Dashboard&amp;rsquo;s menu, adding information to discussions or comments, changing how parts of the forum work or appear, adding information to user accounts or profiles, or adding new pages of content to your forum.&lt;/p&gt;
+
+&lt;p&gt;Every addon comes with a short description of what it does. As a general rule, enabling an addon is fully reversible, so it&amp;rsquo;s safe to turn on any addon and try it out to get a better understanding of how it effects your community.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advanced Embedding</title>
+      <link>http://docs.vanillaforums.com/help/features/embedding/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/features/embedding/advanced/</guid>
+      <description>
+
+&lt;h1 id=&#34;advanced-embedding&#34;&gt;Advanced Embedding&lt;/h1&gt;
+
+&lt;p&gt;The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs &lt;a href=&#34;http://easyxdm.net/wp/&#34;&gt;easyXDM&lt;/a&gt; and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-advanced-embedding&#34;&gt;Setting Up Advanced Embedding&lt;/h2&gt;
+
+&lt;p&gt;Enable forum embedding via the Dashboard. Then set &lt;code&gt;Garden.Embed.Allow&lt;/code&gt; to &lt;code&gt;2&lt;/code&gt; in your config. &lt;em&gt;Cloud customers will have this done by support staff&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Include easyXDM: &lt;code&gt;/js/easyXDM/easyXDM.min.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Include Vanilla&amp;rsquo;s advanced embed script: &lt;code&gt;/js/vanilla.embed.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a div to contain Vanilla and give it an ID.&lt;/li&gt;
+&lt;li&gt;Call &lt;code&gt;Vanilla.embed({options})&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;options&#34;&gt;Options&lt;/h3&gt;
+
+&lt;p&gt;Vanilla.embed() takes an associative array of options:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;root&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The root url of your Vanilla forum. Example: &lt;a href=&#34;http://community.yoursite.com&#34;&gt;http://community.yoursite.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;container&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The ID or DOM element of the container for Vanilla.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;initialPath&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. The initial path to browse to when embedding the forum. Our example below demonstrates using the hash part of the URL to automatically set this, e.g. &lt;code&gt;site.com/embedpage#/categories/some-category&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sso&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. An SSO string that will automatically sign the user into Vanilla. See &lt;a href=&#34;https://github.com/vanillaforums/jsConnectPHP/blob/master/functions.jsconnect.php#L130&#34;&gt;our example code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autoStart&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. Whether or not to start the embed when &lt;code&gt;embed()&lt;/code&gt; is called. If this is false then you must call embed.start() to start the embed. Default: &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;onReady()&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A callback function to call when the embed is ready.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;notifyLocation(path)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that will be called when the url of the embedded iframe changes. You can use this callback to update your history. By default this function adds the path as the current location&amp;rsquo;s # fragment. Combine this with initialPath to implement your own custom history.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;height(x)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that is called to set the height of the embedded iframe. If you override this method then you can access the embedded iframe using &lt;code&gt;this.iframe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;start()&lt;/code&gt; Start the embed. Only call this method if you set autoStart to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;setLocation(path)&lt;/code&gt; Manually set the location of the embedded iframe. Just specify the path and not the full domain of the embed.&lt;/p&gt;
+
+&lt;h2 id=&#34;custom-callbacks&#34;&gt;Custom Callbacks&lt;/h2&gt;
+
+&lt;p&gt;The embed API allows custom Javascript to be called between the parent and child iframes.&lt;/p&gt;
+
+&lt;h2 id=&#34;exposing-a-method-to-vanilla&#34;&gt;Exposing a method to Vanilla&lt;/h2&gt;
+
+&lt;p&gt;You can expose a method to the child iframe with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.fn.functionName = function(args,...) { … }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The embed requires all functions on both sides to be explicitly registered to prevent a third party hijacking the embed and calling functions with unforeseen consequences.&lt;/p&gt;
+
+&lt;p&gt;Vanilla embed supports a callback function on both ends of the embed. If you want to support a callback function then declare it as the last argument of your function. When the other endpoint of the embed calls your function using &lt;code&gt;callRemote()&lt;/code&gt; it can then specify a callback and the framework will handle calling the callback across the domain.&lt;/p&gt;
+
+&lt;h2 id=&#34;calling-a-method-in-vanilla&#34;&gt;Calling a method in Vanilla&lt;/h2&gt;
+
+&lt;p&gt;You can call a method in Vanilla with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.callRemote(&amp;quot;functionName&amp;quot;, args [, callback]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you supply the callback argument to &lt;code&gt;callRemote()&lt;/code&gt; then it will be supplied as the last argument to the remote function. It is the remote function’s job to call the function. Keep in mind that using &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt;, etc. to set a context for the function will not work as a context cannot be passed across the domain.&lt;/p&gt;
+
+&lt;h3 id=&#34;functions-you-can-call-on-vanilla&#34;&gt;Functions you can call on Vanilla&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;Vanilla.embed.signout()&lt;/code&gt; Calling this function will sign the user out of Vanilla. It won’t refresh the page so you may want to do that afterwards.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-implementation&#34;&gt;Example implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+   	  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+   	  &amp;lt;title&amp;gt;Sample Embed&amp;lt;/title&amp;gt;
+   	  &amp;lt;style&amp;gt;
+         body {
+            margin: 0;
+         }
+         #embedVanilla iframe {
+            width: 100%;
+         }
+      &amp;lt;/style&amp;gt;
+      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/easyXDM/easyXDM.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/vanilla.embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+   &amp;lt;/head&amp;gt;
+   &amp;lt;body style=&amp;quot;background: #ff6600;&amp;quot;&amp;gt;
+      &amp;lt;div style=&amp;quot;height: 50px&amp;quot;&amp;gt;foo&amp;lt;/div&amp;gt;
+      &amp;lt;div id=&amp;quot;embedVanilla&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        // Help older browsers parse JSON.
+        easyXDM.DomHelper.requiresJSON(&amp;quot;js/easyXDM/json2.js&amp;quot;);
+
+        var vanillaEmbed = new Vanilla.embed({
+          // The element or its ID.
+          container: &amp;quot;embedVanilla&amp;quot;,
+          // This is the location of the forum.
+          root: &amp;quot;http://yoursite.local&amp;quot;,
+          // initial path, please start it with a &amp;quot;/&amp;quot;
+          initialPath: window.location.hash.substring(1),
+          onReady: function() {
+            // A lot of the functions need to be done after the embed is ready.
+
+            // This how you set the location of the embedded frame.
+            // vanillaEmbed.setLocation(&#39;/categories&#39;);
+          }
+        });
+      &amp;lt;/script&amp;gt;
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Applying Ranks over SSO</title>
+      <link>http://docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <description>
+
+&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
+
+&lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.&lt;/p&gt;
+
+&lt;p&gt;This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assets</title>
+      <link>http://docs.vanillaforums.com/developer/framework/assets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/developer/framework/assets/</guid>
+      <description>
+
+&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
+
+&lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
+
+&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
+
+&lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
+
+&lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;A common scenario is using &lt;a href=&#34;http://docs.vanillaforums.com/developers/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
+
+&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;http://docs.vanillaforums.com/developers/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Backend</title>
+      <link>http://docs.vanillaforums.com/developer/backend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/developer/backend/</guid>
+      <description>
+
+&lt;h1 id=&#34;backend-setup&#34;&gt;Backend setup&lt;/h1&gt;
+
+&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
+
+&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.&lt;/p&gt;
+
+&lt;h3 id=&#34;apache&#34;&gt;Apache&lt;/h3&gt;
+
+&lt;p&gt;Vanilla includes an &lt;code&gt;.htaccess&lt;/code&gt; file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.&lt;/p&gt;
+
+&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
+
+&lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in &lt;code&gt;nginx.conf&lt;/code&gt; correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.&lt;/p&gt;
+
+&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; running in the root web folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    location @site {
+       rewrite ^ /index.php?p=$uri&amp;amp;$args last;
+    }
+
+    location / {
+       try_files $uri @site;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; in a subfolder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    location /subfolder {
+       try_files $uri @subfolder;
+    }
+
+    location @subfolder {
+       rewrite ^/subfolder(/.*) /subfolder/index.php?p=$1&amp;amp;$args last;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In &lt;strong&gt;Vanilla 2.3&lt;/strong&gt;, these rules change because the &lt;code&gt;p&lt;/code&gt; parameter has been removed in favor of strict usage of &lt;code&gt;PATH_INFO&lt;/code&gt;, and therefore no rewrite is needed. However, it&amp;rsquo;s important that your fastcgi params are setup to pass this information to PHP.&lt;/p&gt;
+
+&lt;h3 id=&#34;iis&#34;&gt;IIS&lt;/h3&gt;
+
+&lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
+
+&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
+
+&lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
+
+&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
+
+&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
+
+&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
+$Configuration[&#39;Cache&#39;][&#39;Method&#39;] = &#39;memcached&#39;;
+$Configuration[&#39;memcached&#39;][&#39;Store&#39;] = &#39;localhost&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also specify a port for memcached. Store, e.g.: &lt;code&gt;localhost:11211&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config. Here are some example settings you may wish to use. Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_DISTRIBUTION] = Memcached::DISTRIBUTION_CONSISTENT;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_LIBKETAMA_COMPATIBLE] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_NO_BLOCK] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_TCP_NODELAY] = true;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_CONNECT_TIMEOUT] = 1000;
+$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_LIMIT] = 2;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Badges</title>
+      <link>http://docs.vanillaforums.com/help/addons/badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/addons/badges/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+
+&lt;p&gt;Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.&lt;/p&gt;
+
+&lt;h2 id=&#34;default-badges&#34;&gt;Default badges&lt;/h2&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions). Default badges are typically assigned to users automatically when certain conditions are met.&lt;/p&gt;
+
+&lt;h2 id=&#34;badges-list&#34;&gt;Badges list&lt;/h2&gt;
+
+&lt;p&gt;All badges are listed in the Dashboard under &amp;ldquo;Badges&amp;rdquo;. This includes any badge ever created in your forum, regardless of whether it is currently active or achievable.&lt;/p&gt;
+
+&lt;h2 id=&#34;users-badges&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
+
+&lt;p&gt;A list of a users&amp;rsquo; badges will display, by default, in the panel of their profile as a grid of badge images. Badges awarded incrementally (such as membership anniversaries) will &amp;ldquo;stack&amp;rdquo;, meaning only the highest-increment badge will show.&lt;/p&gt;
+
+&lt;h2 id=&#34;viewing-a-badge&#34;&gt;Viewing a badge&lt;/h2&gt;
+
+&lt;p&gt;Clicking a badge&amp;rsquo;s name in the badges list will take you to a public page describing the badge. Users can get to this page by clicking the badge in their profile. This page shows the most recent recipients of the badge.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Banner Settings</title>
+      <link>http://docs.vanillaforums.com/developer/configuration/banner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/developer/configuration/banner/</guid>
+      <description>&lt;p&gt;##Banner Settings&lt;/p&gt;
+
+&lt;p&gt;On the Banner Settings page you can control the following aspects of your forum:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Homepage title: This is the title displayed on your home page. This title will also appear in search engines.&lt;/li&gt;
+&lt;li&gt;Site Description: This is the site description for your homepage. Other pages will have description generated by the content.&lt;/li&gt;
+&lt;li&gt;Banner Title: This is the title will in your community&amp;rsquo;s banner, if you have not uploaded a banner image.&lt;/li&gt;
+&lt;li&gt;Banner Logo: This will replace the Banner Title. You have the freedom to use whatever size you want, but 250px x 50px is a great size that works nice.&lt;/li&gt;
+&lt;li&gt;Mobile Banner Logo: This allows you to add a small banner for the mobile theme.&lt;/li&gt;
+&lt;li&gt;Favicon: This is the icon usually seen in the URL bar and when someone bookmarks a link from your site.&lt;/li&gt;
+&lt;li&gt;Share Image: This is the image that will be included when content is shared on social networks (like Reddit or Google+) if no image is present in the content.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building new porters</title>
+      <link>http://docs.vanillaforums.com/developer/importing/build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/developer/importing/build/</guid>
+      <description>
+
+&lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
+
+&lt;p&gt;We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy an existing class, like &lt;code&gt;class.smf.php&lt;/code&gt; and rename it.&lt;/li&gt;
+&lt;li&gt;Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Categories</title>
+      <link>http://docs.vanillaforums.com/help/features/categories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/features/categories/</guid>
+      <description>
+
+&lt;h1 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h1&gt;
+
+&lt;p&gt;Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.&lt;/p&gt;
+
+&lt;p&gt;You can find Categories under the “Forum&amp;rdquo; menu in the Dashboard,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png&#34; alt=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/laurasothertest.vanillaforums.com/editor/2o/34let6oiypkp.png&#34; alt=&#34;&amp;quot;Add Category&amp;quot; and &amp;quot;Don&#39;t use Categories&amp;quot; buttons in the Manage Categories section of the dashboard&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disabling categories will streamline your organization, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories weren&amp;rsquo;t in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-categories&#34;&gt;Adding Categories&lt;/h2&gt;
+
+&lt;p&gt;Clicking the &amp;ldquo;Add Category&amp;rdquo; button will take you to the page pictured below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Add-Category.jpg&#34; alt=&#34;/vanilla/settings/addcategory&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By default, the category url will reflect the category’s name. Clicking the edit button next to the url will allow you to change the slug. Below it, you can add a description for the category, which will display on your homepage if your current theme allows it.&lt;/p&gt;
+
+&lt;p&gt;You can add a unique CSS class, which you can use in your theme to control its appearance. The specified text will be added as a class for the category&amp;rsquo;s HTML wrapper.&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;Display As&amp;rdquo; drop down changes the behavior of a category:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt; Uses the category as a plain text header. The category will be not be selectable in the editor, forcing users to post in its sub-categories.
+&lt;strong&gt;Categories:&lt;/strong&gt; Uses the category as a container to display its sub-categories upon clicking through.
+&lt;strong&gt;Discussions:&lt;/strong&gt; The standard view that displays threads&lt;/p&gt;
+
+&lt;h2 id=&#34;category-page-layout&#34;&gt;Category Page Layout&lt;/h2&gt;
+
+&lt;p&gt;&amp;ldquo;Place nested categories in a comma-delimited list&amp;rdquo; is a way of making sub-categories more compact on the Categories page.
+&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/it/ntxs2xgycl7z.png&#34; alt=&#34;&#34; /&gt;
+We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Do not display the categories in the side panel&amp;rdquo; hides the default category list that shows up in the panel as a shortcut. Select this option if you have many categories (more than a dozen) that would make the list unwieldy.&lt;/p&gt;
+
+&lt;h2 id=&#34;organizing-categories&#34;&gt;Organizing Categories&lt;/h2&gt;
+
+&lt;p&gt;Drag and drop your categories to organize them. Slide them to the right slightly to nest them under the category directly above them.&lt;/p&gt;
+
+&lt;p&gt;The option &amp;ldquo;Display root categories as headings&amp;rdquo; turns the top-level categories into plain text &amp;ldquo;headers&amp;rdquo;. Headers are sections that cannot be posted in directly, so be sure to nest a category underneath your root if you select this option.&lt;/p&gt;
+
+&lt;h2 id=&#34;choosing-a-categories-view&#34;&gt;Choosing a Categories view&lt;/h2&gt;
+
+&lt;p&gt;In the &amp;ldquo;Homepage&amp;rdquo; settings page in your Dashboard under &amp;ldquo;Category Layout&amp;rdquo; there are options for how to display the Categories page for your users. The &amp;ldquo;Mixed Layout&amp;rdquo; option shows up to five discussions with the most recent comment under each category.&lt;/p&gt;
+
+&lt;h2 id=&#34;deleting-a-category&#34;&gt;Deleting a Category&lt;/h2&gt;
+
+&lt;p&gt;To delete a category, click the &amp;ldquo;Delete&amp;rdquo; button beside it in the Dashboard. You will be prompted to select a replacement category from a drop down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.&lt;/p&gt;
+
+&lt;h2 id=&#34;unfollow-a-category&#34;&gt;Unfollow a Category&lt;/h2&gt;
+
+&lt;p&gt;On the main categories page, each section has a cogwheel menu with the option to &amp;ldquo;Hide&amp;rdquo; the category from view. By default, you will only see your &amp;ldquo;Followed Categories&amp;rdquo; when viewing forum index, but if you&amp;rsquo;d like to see hidden categories, simple toggle your view to &amp;ldquo;All Categories&amp;rdquo; with the option at the bottom of the sidebar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/4b/edbr9ey86ysk.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When you are viewing all categories, you can unhide sections with the same cogwheel menu.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Changelog</title>
+      <link>http://docs.vanillaforums.com/developer/changelog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/developer/changelog/</guid>
+      <description>
+
+&lt;h2 id=&#34;open-source-change-log&#34;&gt;Open Source Change Log&lt;/h2&gt;
+
+&lt;h1 id=&#34;2-1&#34;&gt;2.1&lt;/h1&gt;
+
+&lt;h3 id=&#34;2-1-6&#34;&gt;2.1.6&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/28555/vanilla-2-1-6-released&#34;&gt;Released 21 Nov 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security: Fixes an SQL injection vector.&lt;/li&gt;
+&lt;li&gt;Security: Adds a PDO option to harden against SQL injection.&lt;/li&gt;
+&lt;li&gt;Security: Improves the security of password resets by increasing token length and limiting them to 1 hour expiration.&lt;/li&gt;
+&lt;li&gt;Adds vBulletin 5.1 password hashing to allow seamless password migrations. All previous versions continue to be supported.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-5&#34;&gt;2.1.5&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 31 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.&lt;/li&gt;
+&lt;li&gt;Security: Potential CSRF vectors were closed, including one that could allow account hijacking.&lt;/li&gt;
+&lt;li&gt;Fixes issue where enabling cleditor would permanently allow style parameter in comments.&lt;/li&gt;
+&lt;li&gt;Fixes issue notifying users of new comments in certain cases where they did not have permission to then view them.&lt;/li&gt;
+&lt;li&gt;Fixes OpenID bug effecting Google Sign In.&lt;/li&gt;
+&lt;li&gt;Multiple community-contributed bug fixes.&lt;/li&gt;
+&lt;li&gt;2.1.4 had a merge conflict which this release replaced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-3&#34;&gt;2.1.3&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release&#34;&gt;Released 9 Sept 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3 newly discovered XSS vectors were fixed.&lt;/li&gt;
+&lt;li&gt;The timezone bug introduced in 2.1.1 is fixed.&lt;/li&gt;
+&lt;li&gt;Fixes invalid DeliveryType in plugins management.&lt;/li&gt;
+&lt;li&gt;2.1.2 had a Javascript error which this release replaced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-1&#34;&gt;2.1.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/27540/vanilla-2-1-1-important-security-bug-release&#34;&gt;Released 2 Aug 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HtmLawed was upgraded to close an XSS vector (thanks to Psych0tr1a for responsibly disclosing this to us &amp;amp; to HtmLawed for a fast patch in response).&lt;/li&gt;
+&lt;li&gt;Multiple XSS exploits were fixed (thanks to @x00 for responsibly disclosing and both he and @businessdad for assistance in making our patches as bulletproof as possible).&lt;/li&gt;
+&lt;li&gt;Fixed a Twitter SSL bug (thanks @Adrian for the patch).&lt;/li&gt;
+&lt;li&gt;Fixed a missing permission check in the sorting utility (thanks @R_J for the patch).&lt;/li&gt;
+&lt;li&gt;cleditor was patched to fix a crippling IE11 bug.&lt;/li&gt;
+&lt;li&gt;Profile Extender was upgraded and a security flaw in it was fixed.&lt;/li&gt;
+&lt;li&gt;Fixed a bug in Announcing while starting a discussion.&lt;/li&gt;
+&lt;li&gt;Corrected the default theme README.&lt;/li&gt;
+&lt;li&gt;Backported GDN_UserAuthenticationProvider.IsDefault so the latest version of jsConnect will work with 2.1.1.&lt;/li&gt;
+&lt;li&gt;Fixes a theme screenshot bug (thanks @hgtonight‌ for the patch).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-1-1-1&#34;&gt;2.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26685/vanilla-2-1-stable-released&#34;&gt;Released 28 April 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Vanilla internals were completely revamped for 2.1. Many views and several plugin hooks were changed, so &lt;strong&gt;themes and plugins must be tested&lt;/strong&gt; and may need to be refactored before upgrading.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Better localization support.&lt;/li&gt;
+&lt;li&gt;Improved embedding.&lt;/li&gt;
+&lt;li&gt;Performance and caching enhancements.&lt;/li&gt;
+&lt;li&gt;Revamped Activity structure.&lt;/li&gt;
+&lt;li&gt;Framework improvements.&lt;/li&gt;
+&lt;li&gt;Hundreds of bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Incremental changelogs from the &lt;a href=&#34;http://vanillaforums.org/discussion/23322/vanilla-2-1b1-released&#34;&gt;first 2.1 beta&lt;/a&gt; thru RC1 can be found in their individual release announcements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/24845/vanilla-2-1b2-released&#34;&gt;Beta 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26518/vanillla-2-1-beta-3&#34;&gt;Beta 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26626/vanilla-2-1-release-candidate&#34;&gt;Release Candidate 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2-0-18&#34;&gt;2.0.18&lt;/h1&gt;
+
+&lt;h3 id=&#34;2-0-18-14&#34;&gt;2.0.18.14&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 30 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.&lt;/li&gt;
+&lt;li&gt;Security: Potential CSRF vectors were closed, including one that could allow account hijacking.&lt;/li&gt;
+&lt;li&gt;Fixes DeliveryType issue in plugins managements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-13&#34;&gt;2.0.18.13&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/27541/vanilla-2-0-18-13-security-release-for-old-2-0-18-installs&#34;&gt;Released 5 Aug 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HtmLawed is upgraded and its filtering tightened (thanks @x00 &amp;amp; Psych0tr1a)&lt;/li&gt;
+&lt;li&gt;parseJSON() is substituted for eval() in 2 places&lt;/li&gt;
+&lt;li&gt;Refactored the definitions list into Javascript instead of using the DOM&lt;/li&gt;
+&lt;li&gt;Fixes HTMLawed error in 2.0.18.12 which this immediately replaced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-11&#34;&gt;2.0.18.11&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/26627/vanilla-2-0-18-11-security-release&#34;&gt;Released 21 Apr 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3 security patches.&lt;/li&gt;
+&lt;li&gt;Ditches troublesome &amp;ldquo;Remove&amp;rdquo; option on the plugins page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-10&#34;&gt;2.0.18.10&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/25668/dec-2013-security-update-2-0-18-10-and-2-1b2&#34;&gt;Released 21 Dec 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Removes flawed update checker.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-9&#34;&gt;2.0.18.9&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/25458/security-update-vanilla-2-0-18-9&#34;&gt;Released 26 Nov 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use SafeRedirect() instead of Redirect() in the discussion controller.&lt;/li&gt;
+&lt;li&gt;Added TrustedDomains() and SafeRedirect().&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t allow user id override on post.&lt;/li&gt;
+&lt;li&gt;Fix Flagging security flaw&lt;/li&gt;
+&lt;li&gt;Filter discussion title on categories/all&lt;/li&gt;
+&lt;li&gt;Comment notifications should only be sent to people with the &amp;ldquo;NewComment&amp;rdquo; preference set.&lt;/li&gt;
+&lt;li&gt;Twitter: Change api version to 1.1.&lt;/li&gt;
+&lt;li&gt;Tagging: Fix xss bug in tagging.&lt;/li&gt;
+&lt;li&gt;Do not add linebreaks twice on search.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-8&#34;&gt;2.0.18.8&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/23339/security-update-vanilla-2-0-18-8&#34;&gt;Released 4 Apr 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Call &amp;amp; check for FilterForm() properly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-7&#34;&gt;2.0.18.7&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Disable the ability to call functions in escaped SQL strings.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-6&#34;&gt;2.0.18.6&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Switch update checks to json to prevent object injection hacks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-5&#34;&gt;2.0.18.5&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Prevent object injection hacks.&lt;/li&gt;
+&lt;li&gt;Make sure the admin password is hashed when inserting the admin user on an already installed Vanilla.&lt;/li&gt;
+&lt;li&gt;Fix Facebook plugin for the 5 Dec 2012 Facebook update.&lt;/li&gt;
+&lt;li&gt;Add class attributes for all the menu item elements.&lt;/li&gt;
+&lt;li&gt;Cache-control logic improvements.&lt;/li&gt;
+&lt;li&gt;Add the proper username parameter to profile/edit.&lt;/li&gt;
+&lt;li&gt;Filter activity, discussion, and comment forms.&lt;/li&gt;
+&lt;li&gt;Fixed security hole where on profile/picture and profile/preferences. Allow moderators to change users&amp;rsquo; pictures from the profile page.&lt;/li&gt;
+&lt;li&gt;Added joomla password hashing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-4&#34;&gt;2.0.18.4&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/19542/vanilla-2-0-18-4-released&#34;&gt;Released 26 Mar 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Patch form tampering possibility.&lt;/li&gt;
+&lt;li&gt;Fix canonical URL issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-3&#34;&gt;2.0.18.3&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/19285/security-vulnerability-flagging-plugin-2-0-18-2-and-earlier&#34;&gt;Released 5 Mar 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Flagging plugin security fixes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-2&#34;&gt;2.0.18.2&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/18749/vanilla-2-0-18-2-release&#34;&gt;Released 21 Jan 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug where Gravatar was using name instead of email for Vanillicons.&lt;/li&gt;
+&lt;li&gt;vBulletin import improvements.&lt;/li&gt;
+&lt;li&gt;SSO fixed for non-English.&lt;/li&gt;
+&lt;li&gt;Embed improvements.&lt;/li&gt;
+&lt;li&gt;Tagging fix.&lt;/li&gt;
+&lt;li&gt;Fix malformed install screen.&lt;/li&gt;
+&lt;li&gt;Various other bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-1&#34;&gt;2.0.18.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 7 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug in the Twitter plugin.&lt;/li&gt;
+&lt;li&gt;Fixed some bugs with connecting.&lt;/li&gt;
+&lt;li&gt;Prevent too many &amp;ldquo;photo changed&amp;rdquo; activities.&lt;/li&gt;
+&lt;li&gt;Added the ability to include announcements in the /categories/discussions page.&lt;/li&gt;
+&lt;li&gt;Fix so people with custom domains don&amp;rsquo;t see strange text.&lt;/li&gt;
+&lt;li&gt;Fixes mass-approve/deny for Applicants&lt;/li&gt;
+&lt;li&gt;Correct title on /categories pages&lt;/li&gt;
+&lt;li&gt;Fixed jQuery syntax errors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-0-18-1-1&#34;&gt;2.0.18&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://vanillaforums.org/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 3 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Major Features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Added moderation, bans, and delete/edit logging.&lt;/li&gt;
+&lt;li&gt;Added notifications (Growl-like popups).&lt;/li&gt;
+&lt;li&gt;Added advanced category management.&lt;/li&gt;
+&lt;li&gt;Added IP logging to core.&lt;/li&gt;
+&lt;li&gt;Added Split/Merge plugin to core.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Added ability to chain Vanillicons into Gravatars with C(Plugins.Gravatar.UseVanillicons) = TRUE&lt;/li&gt;
+&lt;li&gt;Added ability to use IE targetting for CSS and JS files&lt;/li&gt;
+&lt;li&gt;Disabled CLEditor for IE6 users&lt;/li&gt;
+&lt;li&gt;Disabled popups in IE7 or less&lt;/li&gt;
+&lt;li&gt;Added Session support, see: Gdn_Session()-&amp;gt;Stash()&lt;/li&gt;
+&lt;li&gt;Turns off Embed by default&lt;/li&gt;
+&lt;li&gt;Added WebOS to mobile user agents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug in 2.0.17 that could (on rare occassion) wipe your config.php file&lt;/li&gt;
+&lt;li&gt;Fixed issue that could cause VanillaStats to stop working&lt;/li&gt;
+&lt;li&gt;Many new translatable strings added or fixed&lt;/li&gt;
+&lt;li&gt;Fixed support for PHP 5.2 on Windows (fnmatch)&lt;/li&gt;
+&lt;li&gt;Fixed profile to not ask for old password if one was never set (via SSO)&lt;/li&gt;
+&lt;li&gt;Fixed hundreds of other bugs too numerous to list, including dozens of SQL-related bugs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2-0-17&#34;&gt;2.0.17&lt;/h1&gt;
+
+&lt;h3 id=&#34;2-0-17-10&#34;&gt;2.0.17.10&lt;/h3&gt;
+
+&lt;p&gt;SECURITY: Fixed Facebook, Twitter, and Embed plugins&amp;rsquo; access control.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-9&#34;&gt;2.0.17.9&lt;/h3&gt;
+
+&lt;p&gt;SECURITY: Fixed cookie theft vulnerability.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-8&#34;&gt;2.0.17.8&lt;/h3&gt;
+
+&lt;p&gt;Fixed a packaging problem that caused the contents of index.php to be duplicated&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-7&#34;&gt;2.0.17.7&lt;/h3&gt;
+
+&lt;p&gt;Updated analytics client and server software to fix a bug in stats transmission and rendering&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-6&#34;&gt;2.0.17.6&lt;/h3&gt;
+
+&lt;p&gt;SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-5&#34;&gt;2.0.17.5&lt;/h3&gt;
+
+&lt;p&gt;Fixed problem with category permissions where some configurations would result in too restrictive defaults&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-4&#34;&gt;2.0.17.4&lt;/h3&gt;
+
+&lt;p&gt;Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-3&#34;&gt;2.0.17.3&lt;/h3&gt;
+
+&lt;p&gt;Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-2&#34;&gt;2.0.17.2&lt;/h3&gt;
+
+&lt;p&gt;Fixed bug where analytics registration would occur repeatedly if config file was read-only&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-1&#34;&gt;2.0.17.1&lt;/h3&gt;
+
+&lt;p&gt;Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install&lt;/p&gt;
+
+&lt;h3 id=&#34;2-0-17-1-1&#34;&gt;2.0.17&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Released 2011-01-18&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed bug where plugins and themes could fail to enable due to extra whitespace.&lt;/li&gt;
+&lt;li&gt;Fixed bug where search results were not properly sorted by date after relevance.&lt;/li&gt;
+&lt;li&gt;Fixed bug where links in profile status cause the profile to clear when clicked.&lt;/li&gt;
+&lt;li&gt;Fixed bug where signing in from the comment form button would not refresh the page.&lt;/li&gt;
+&lt;li&gt;Fixed bug where administrators could not change user&amp;rsquo;s picture without 404 errors.&lt;/li&gt;
+&lt;li&gt;Fixed bug where stack trace would display when testing plugins, even if not in DEBUG mode.&lt;/li&gt;
+&lt;li&gt;Fixed bug where signin would not properly redirect if javascript was disabled.&lt;/li&gt;
+&lt;li&gt;Fixed bug where editing a role was erroneously selecting the default permission in the UI when editing.&lt;/li&gt;
+&lt;li&gt;Fixed bug where discussion autorefresh would sometimes disable itself.&lt;/li&gt;
+&lt;li&gt;Fixed bug where when markdown is enabled urls would not get auto-converted to clickable links.&lt;/li&gt;
+&lt;li&gt;Fixed bugs in OpenID and GoogleSignIn where redirect targets were not getting sent to the signin.&lt;/li&gt;
+&lt;li&gt;Fixed bug where mobile theme would sometimes display incorrect &amp;ldquo;last comment date&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Optimized Announced Discussions query to improve performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;older-releases&#34;&gt;Older Releases&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Unlisted versions were skipped or replaced the same day.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2.0.16 - 2010-12-02&lt;/li&gt;
+&lt;li&gt;2.0.15 - 2010-11-25&lt;/li&gt;
+&lt;li&gt;2.0.14 - 2010-11-09&lt;/li&gt;
+&lt;li&gt;2.0.13 - 2010-10-27&lt;/li&gt;
+&lt;li&gt;2.0.11 - 2010-10-06&lt;/li&gt;
+&lt;li&gt;2.0.10 - 2010-09-30&lt;/li&gt;
+&lt;li&gt;2.0.9 - 2010-09-15&lt;/li&gt;
+&lt;li&gt;2.0.6 - 2010-09-01&lt;/li&gt;
+&lt;li&gt;2.0.3 - 2010-08-11&lt;/li&gt;
+&lt;li&gt;2.0.1 - 2010-08-04&lt;/li&gt;
+&lt;li&gt;2.0.0 - 2010-07-22&lt;/li&gt;
+&lt;li&gt;1.1.10 - 2009-11-23&lt;/li&gt;
+&lt;li&gt;1.1.9 - 2009-09-10&lt;/li&gt;
+&lt;li&gt;1.1.8 - 2009-08-02&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

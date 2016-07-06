@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multisite on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/categories/multisite/</link>
+    <description>Recent content in Multisite on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/categories/multisite/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Multisite Features</title>
+      <link>http://127.0.0.1:8080/help/cloud/multisite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/cloud/multisite/</guid>
+      <description>
+
+&lt;h1 id=&#34;multisite-features&#34;&gt;Multisite Features&lt;/h1&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s cloud solution offers a number of configurations for enterprise-grade deployments.&lt;/p&gt;
+
+&lt;h2 id=&#34;configurations&#34;&gt;Configurations&lt;/h2&gt;
+
+&lt;h3 id=&#34;single-community&#34;&gt;Single Community&lt;/h3&gt;
+
+&lt;p&gt;This is a classic forum setup. It is the equivalent of 1 installation of forum software. It can have any number of &lt;strong&gt;categories&lt;/strong&gt; (what other products call “topic areas” or “forums/subforums”) arranged in a hierarchy. Each &lt;strong&gt;Single Community&lt;/strong&gt; needs a domain or subdomain assigned.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-hub&#34;&gt;The Hub&lt;/h3&gt;
+
+&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;http://127.0.0.1:8080/cloud/multisite/sync&#34;&gt;synched&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
+
+&lt;p&gt;Each Node is accessible via either a subdomain &lt;em&gt;or&lt;/em&gt; a subfolder off a domain shared by the whole Hub. This is called the &lt;strong&gt;Hub URL Format&lt;/strong&gt;. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.&lt;/p&gt;
+
+&lt;h3 id=&#34;subcommunities&#34;&gt;Subcommunities&lt;/h3&gt;
+
+&lt;p&gt;This artificially divides a &lt;strong&gt;Single Community&lt;/strong&gt; &lt;em&gt;or&lt;/em&gt; a &lt;strong&gt;Node&lt;/strong&gt; into different areas by making each of the &lt;strong&gt;top tier of categories&lt;/strong&gt; into subcommunities. While in any particular subcommunity, all other content outside the subcommunity is completely hidden. A common use case for subcommunities is localization.&lt;/p&gt;
+
+&lt;p&gt;All subcommunities are still part of a single “instance” - the user list (and therefore moderators / admins), private messages, and activity stream are &lt;strong&gt;shared&lt;/strong&gt; across all subcommunities.&lt;/p&gt;
+
+&lt;p&gt;Each subcommunity has its own URL path prefix. For instance, visiting the “Recent Discussions” page of the English subcommunity for “forum.company.com” would take the user to “forum.company.com/en/discussions”. The user would see only discussions that are in the subcategories under the “English” top tier category.&lt;/p&gt;
+
+&lt;p&gt;A common way of combining this feature with the &lt;strong&gt;Hub&lt;/strong&gt; is to create a &lt;strong&gt;Node&lt;/strong&gt; per product, and use subcommunities for each locale within that product.&lt;/p&gt;
+
+&lt;h2 id=&#34;architectural-considerations&#34;&gt;Architectural considerations&lt;/h2&gt;
+
+&lt;h3 id=&#34;cluster-management&#34;&gt;Cluster management&lt;/h3&gt;
+
+&lt;p&gt;Our physical server assets are arranged into clusters. Each cluster can hold many Single Communities, or a single Hub + its Nodes. They cannot be mixed.&lt;/p&gt;
+
+&lt;h3 id=&#34;scaling-capabilities&#34;&gt;Scaling capabilities&lt;/h3&gt;
+
+&lt;p&gt;Because each Node is a separate entity, there are significant scaling advantages to choosing a hub setup over a single community + subcommunities setup.&lt;/p&gt;
+
+&lt;h3 id=&#34;suggested-setups&#34;&gt;Suggested setups&lt;/h3&gt;
+
+&lt;p&gt;For small-to-medium sites, use a single community. Add subcommunities for multi-locale support or to combine several micro-forums into a single instance.&lt;/p&gt;
+
+&lt;p&gt;For very large or franchise sites, use a dedicated Hub with a Node per locale. This provides maximum scaling potential.&lt;/p&gt;
+
+&lt;h3 id=&#34;embedding-iframes&#34;&gt;Embedding (iframes)&lt;/h3&gt;
+
+&lt;p&gt;While we do support robust embedding (iframe) solutions, we strongly recommend avoiding it whenever possible. It drastically increases project complexity and negatively impacts user experience with longer page load time.&lt;/p&gt;
+
+&lt;h3 id=&#34;ssl-certificates&#34;&gt;SSL certificates&lt;/h3&gt;
+
+&lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;http://127.0.0.1:8080/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multisite Features</title>
+      <link>http://127.0.0.1:8080/help/cloud/multisite/sync/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/cloud/multisite/sync/</guid>
+      <description>
+
+&lt;h1 id=&#34;hub-sync&#34;&gt;Hub Sync&lt;/h1&gt;
+
+&lt;p&gt;A number of settings can be synced between the hub and its nodes.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

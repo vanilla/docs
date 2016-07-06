@@ -1,0 +1,90 @@
+<div class="docs-header">
+    
+    <div class="docs-header-logo">
+        <a href="/">
+            <img class="logo" src="/img/logo.svg" alt="Vanilla Forums" width="102" height="41" /> Docs
+        </a>
+    </div>
+    
+    <div class="docs-header-cta">
+        <a href="http://pages.vanillaforums.com/free-trial-of-vanilla-forums" class="Button Primary Small">Free trial</a>
+    </div>
+    
+    <div class="docs-header-search">
+    Search
+</div>
+    
+</div>
+
+
+<div class="docs-title">
+    <h1 class="docs-page-title">Configuration</h1>
+    <div class="docs-page docs-improve">
+        <i class="fa fa-pencil">Improve this document</i>
+    </div>
+</div>
+
+
+<h2 id="vanilla-configuration-files">Vanilla configuration files</h2>
+
+<p>Vanilla uses a file-based configuration system.</p>
+
+<p>Vanilla is distributed with a file at <code>/conf/config-defaults.php</code> which we will call &ldquo;config-defaults&rdquo;. After installation, a file is created at <code>/conf/config.php</code> which we will call simply &ldquo;config&rdquo; or &ldquo;config.php&rdquo;.</p>
+
+<p>Your config-defaults file should <strong>never</strong> be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism thru which it will happen.</p>
+
+<p>All configuration changes are to be exclusively made to your config.php file. We recommend periodically making a backup copy of your <code>config.php</code> and storing it in a safe location (not on your web server).</p>
+
+<h2 id="editing-configuration">Editing configuration</h2>
+
+<pre><code class="language-php">&lt;?php
+// Config file entries look like this:
+$Configuration['Area']['FeatureSet']['Setting'] = 'Value';
+</code></pre>
+
+<p>Config entires must render as valid PHP code, so the placement of quotes, brackets, and semicolons is extremely important. Line order does not matter, unless you accidentally duplicate values (which should be avoided). In that case, the last duplicate would take precedence.</p>
+
+<p>Some scenarios for editing your config:</p>
+
+<ul>
+<li>You want to change a config setting, so you simply change &lsquo;Value&rsquo; on 1 line.</li>
+<li>You want to change a default, so you copy a line from config-defaults into config, then modify its value.</li>
+<li>You want to add a new config value entirely, so you enter it using the format indicated above on a new line in the config.</li>
+</ul>
+
+<h2 id="avoiding-accidental-overwrites">Avoiding accidental overwrites</h2>
+
+<p>Only open or copy your config for editing <em>after</em> you have applied or saved your latest settings in the Dashboard, and wait until you are done editing to make further changes to your site. Saving your config will overwrite any changes you may have made elsewhere at the same time.</p>
+
+<h2 id="shorthand-references">Shorthand references</h2>
+
+<p>When we talk about config lines, we use the following shorthand:</p>
+
+<p><code>Area.FeatureSet.Setting = 'Value'</code></p>
+
+<pre><code class="language-php">&lt;?php
+// The shorthand written using the full formatting
+$Configuration['Area']['FeatureSet']['Setting'] = 'Value';
+</code></pre>
+
+<p>If the above is written in instructions or comments, it is still to be formatted in the config according to the format shown earlier with brackets and quotes.</p>
+
+<p>Always double-check you have properly transcribed the name and value before saving.</p>
+
+
+
+<div class="docs-footer">
+    <div class="docs-copyright">
+        Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    </div>
+    <div class="docs-submenu">
+        <ul>
+            <li class="docs-submenu-item item-docs"><a href="http://docs.vanillaforums.com">Documentation</a></li>
+            <li class="docs-submenu-item item-blog"><a href="https://blog.vanillaforums.com">Blog</a></li>
+            <li class="docs-submenu-item item-cloud"><a href="https://vanillaforums.com">Cloud</a></li>
+            <li class="docs-submenu-item item-community"><a href="https://vanillaforums.org/discussions">Community</a></li>
+            <li class="docs-submenu-item item-github"><a href="https://github.com/vanilla/vanilla">GitHub</a></li>
+            <li class="docs-submenu-item item-issues"><a href="https://github.com/vanilla/vanilla/issues">Issues</a></li>
+        </ul>
+    </div>
+</div>

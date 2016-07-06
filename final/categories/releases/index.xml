@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Releases on Vanilla Forums Documentation</title>
+    <link>http://docs.vanillaforums.com/categories/releases/</link>
+    <description>Recent content in Releases on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://docs.vanillaforums.com/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Releases</title>
+      <link>http://docs.vanillaforums.com/help/cloud/releases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.vanillaforums.com/help/cloud/releases/</guid>
+      <description>
+
+&lt;h1 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h1&gt;
+
+&lt;p&gt;Our clients on &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.&lt;/p&gt;
+
+&lt;p&gt;We publish changes after each VIP release below, well after other plan levels may have received it.&lt;/p&gt;
+
+&lt;h2 id=&#34;march-2016&#34;&gt;March 2016&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML emails now available.&lt;/li&gt;
+&lt;li&gt;Applicants list is now asynchronous with improved UI.&lt;/li&gt;
+&lt;li&gt;Spoilers added as core feature with updated formatting.&lt;/li&gt;
+&lt;li&gt;Automatic bans (from Banning rules) can now be reversed.&lt;/li&gt;
+&lt;li&gt;Reactions will now always show on all devices, instead of on-hover for larger screens (&amp;ldquo;desktop&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Sign In form now auto-focuses on Username field.&lt;/li&gt;
+&lt;li&gt;Fix newest comment data for zero-comment discussions in table view.&lt;/li&gt;
+&lt;li&gt;Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.&lt;/li&gt;
+&lt;li&gt;Remove line breaks in meta description.&lt;/li&gt;
+&lt;li&gt;Added events to support new analytics system.&lt;/li&gt;
+&lt;li&gt;Fix styling of &amp;lsquo;/me&amp;rsquo; posts.&lt;/li&gt;
+&lt;li&gt;QnA: Allow users to accept their own answer.&lt;/li&gt;
+&lt;li&gt;Reactions: Add an option to allow users to react to their own posts.&lt;/li&gt;
+&lt;li&gt;Add advanced editor options to New Poll screen.&lt;/li&gt;
+&lt;li&gt;Fix plus signs in URLs, especially usernames / profiles.&lt;/li&gt;
+&lt;li&gt;Improve SSO workflow for existing usernames.&lt;/li&gt;
+&lt;li&gt;Rework discussion sorting and filtering architecture.&lt;/li&gt;
+&lt;li&gt;Add no-store header to profiles so read/unread status updates on Back button.&lt;/li&gt;
+&lt;li&gt;Pockets: fix repeating pockets between discussions, and enable on table view.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fix category dropdown filtering when in a subcommunity.&lt;/li&gt;
+&lt;li&gt;Hide editor toolbar when previewing.&lt;/li&gt;
+&lt;li&gt;Fix double-deletion of comment drafts when posting, which could cause a Javascript error.&lt;/li&gt;
+&lt;li&gt;Fix scenario where Quotes could interfere with Spoilers.&lt;/li&gt;
+&lt;li&gt;Vanillicons: Now defaults to v2.&lt;/li&gt;
+&lt;li&gt;NBBC: Fix scenario that could break search results formatting.&lt;/li&gt;
+&lt;li&gt;Fix opaque photo cropping box.&lt;/li&gt;
+&lt;li&gt;Fix and unify logic for determining permission to edit a user&amp;rsquo;s photo.&lt;/li&gt;
+&lt;li&gt;Allow quotes to be collapsed in reported posts.&lt;/li&gt;
+&lt;li&gt;Allow collapsing of quotes with alternate formatting.&lt;/li&gt;
+&lt;li&gt;Make even deeply-nested quotes minimally legible.&lt;/li&gt;
+&lt;li&gt;Update dropdown menu rendering in several places.&lt;/li&gt;
+&lt;li&gt;Update number formatting for discussion &amp;amp; comment counts on All Categories page.&lt;/li&gt;
+&lt;li&gt;Update stock themes for Ideation.&lt;/li&gt;
+&lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;new-addons-available&#34;&gt;New addons available:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
+&lt;li&gt;Microsoft Account SSO&lt;/li&gt;
+&lt;li&gt;CAS SSO&lt;/li&gt;
+&lt;li&gt;Keyword Blocker (send posts with certain keywords to mod queue)&lt;/li&gt;
+&lt;li&gt;Necro Posts (labels recently-revived discussions)&lt;/li&gt;
+&lt;li&gt;User Points Booster (allow awarding points for discussions or comments)&lt;/li&gt;
+&lt;li&gt;Whitelist (provide an IP whitelist for site access)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;january-2016&#34;&gt;January 2016&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes-1&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Improved formatting of Vanilla Comments in certain input formats.&lt;/li&gt;
+&lt;li&gt;Updated Smarty template parsing library.&lt;/li&gt;
+&lt;li&gt;Fix an issue in draft saving.&lt;/li&gt;
+&lt;li&gt;Fix spam deletion error.&lt;/li&gt;
+&lt;li&gt;Update Editor to use files&amp;rsquo; real names when downloading.&lt;/li&gt;
+&lt;li&gt;Fix RSS feed when table view is in use.&lt;/li&gt;
+&lt;li&gt;Remove deprecated form field name prefixing.&lt;/li&gt;
+&lt;li&gt;Add more category data to VanillaPop emails.&lt;/li&gt;
+&lt;li&gt;Update gifv embed to prefer WebM.&lt;/li&gt;
+&lt;li&gt;Various low-level fixes for PHP 7 compatibility.&lt;/li&gt;
+&lt;li&gt;Fix CSRF check when deleting a ban.&lt;/li&gt;
+&lt;li&gt;Close open redirect &amp;amp; fix flood control in database updating endpoint.&lt;/li&gt;
+&lt;li&gt;Improve security in how Vimeo is embedded.&lt;/li&gt;
+&lt;li&gt;Add Wistia embed.&lt;/li&gt;
+&lt;li&gt;Enforce POST data for several endpoints.&lt;/li&gt;
+&lt;li&gt;Improve theme compatibility with Groups.&lt;/li&gt;
+&lt;li&gt;Automatically remove spaces around Banning rules to prevent bad data being entered.&lt;/li&gt;
+&lt;li&gt;Improve image resizing to always use highest quality images possible.&lt;/li&gt;
+&lt;li&gt;Fix Facebook SSO: retrieval of email address, avatar distortion, &amp;amp; name overwriting.&lt;/li&gt;
+&lt;li&gt;Remove &amp;ldquo;dashboard&amp;rdquo; namespace from several dashboard URLs.&lt;/li&gt;
+&lt;li&gt;Fix several MySQL strict mode errors.&lt;/li&gt;
+&lt;li&gt;Remove livequery jQuery extension and all remaining uses of it.&lt;/li&gt;
+&lt;li&gt;Remove base64 encoding from all asynchronous requests.&lt;/li&gt;
+&lt;li&gt;Allow setting of avatar via API.&lt;/li&gt;
+&lt;li&gt;Allow category permissions to be set via API.&lt;/li&gt;
+&lt;li&gt;Allow certain configurations to be set depending on permission level.&lt;/li&gt;
+&lt;li&gt;Re-add user count to the user list whenever possible based on size of table.&lt;/li&gt;
+&lt;li&gt;Give full formatting bar to Activity form.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

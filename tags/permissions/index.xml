@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Permissions on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/tags/permissions/</link>
+    <description>Recent content in Permissions on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://127.0.0.1:8080/tags/permissions/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Default Role Types</title>
+      <link>http://127.0.0.1:8080/help/features/roles-permissions/default-role-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/features/roles-permissions/default-role-types/</guid>
+      <description>
+
+&lt;h2 id=&#34;default-role-types&#34;&gt;Default Role Types&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Roles &amp; Permissions</title>
+      <link>http://127.0.0.1:8080/help/features/roles-permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/help/features/roles-permissions/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Roles and Permissions are used in tandem to control what users can see and do in your community. Upon account creation, there are 6 default Roles in your Vanilla account. Each of the default Roles have permissions that you would expect from the Role name:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Guest&lt;/strong&gt;: This is a special role that represents inactive sessions in Vanilla. You can use this role to restrict what logged out users see when viewing your forum. As Vanilla does not allow anonymous posting, this role cannot be given other permissions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Unconfirmed&lt;/strong&gt;: This Role is given to members who have registered but have not confirmed their email address yet.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Applicant&lt;/strong&gt;: Users who have applied for membership but have not yet been accepted. They have the same permissions as guests.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Member&lt;/strong&gt;: Members can participate in discussions and access all end user functionality.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Moderator&lt;/strong&gt;: Moderators have permission to edit content and use the moderation features.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Administrator&lt;/strong&gt;: Administrators have permission to do everything including configuring the account and creating new Roles.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;making-new-roles&#34;&gt;Making New Roles&lt;/h2&gt;
+
+&lt;p&gt;It’s possible to edit the default Roles and to create new custom Roles. Here are the permissions that can be given to a Role:&lt;/p&gt;
+
+&lt;h3 id=&#34;garden&#34;&gt;Garden&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Delete Activity&lt;/strong&gt; – Delete an activity from the Activity Page. This permission should only be given to admins and mods.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View Activity&lt;/strong&gt; – This allows the user to view the activity on the Activity Page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced Notifications&lt;/strong&gt; – This permission should only be given to mods and admins in small communities. This allows a notification to be sent when a new discussion or comment is posted in a specific category.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community Manage&lt;/strong&gt; - Gives you access to banner, category and reaction settings in the Dashboard if the role has &amp;ldquo;View Settings&amp;rdquo; but not &amp;ldquo;Moderate Settings&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manage Curation&lt;/strong&gt;  – Gives the ‘Promote’ Reaction. The Promote reactions gives 5 points to the promoted content and displays it on the Best of Page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View Email&lt;/strong&gt; – Allows users to receive notifications via email. This &lt;em&gt;does not&lt;/em&gt; reveal email addresses of other users to the role.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manage Moderation&lt;/strong&gt; – Gives access to moderation functionality such as the moderation and SPAM queue.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Allow No Ads&lt;/strong&gt; - Hides Pockets labeled as ads.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View Personal Info&lt;/strong&gt; – Allows viewing of personal info such as email and IP address on the profile page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit Profiles&lt;/strong&gt; – Allows editing of the users own profile. Does not grant the permissions to edit others.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View Profiles&lt;/strong&gt; – Allows viewing other members’ profile page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View Settings&lt;/strong&gt; – Permission to view account settings in the Dashboard. Required for &amp;ldquo;Community Manage&amp;rdquo; and for &amp;ldquo;Manage Moderation&amp;rdquo; to have access to dashboard functionality.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manage Settings&lt;/strong&gt; – Grants full access to all functionality in the dashboard. This is an Admin only permission.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sign In&lt;/strong&gt; – The permission to log in. Can be used to temporarily prevent a group of users from logging in.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Staff&lt;/strong&gt; - For Certain integrations like Zendesk, this allows for staff to access to plugin functionality without gaining forum moderation tools&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Users&lt;/strong&gt; - Grants ability to manually create users on the user page of the dashboard.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Approve Users&lt;/strong&gt; Grants ability to accept users if using the approval registration method.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delete Users&lt;/strong&gt; Grants Ability to delete members from the User page in the dashboard.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit Users&lt;/strong&gt; Allows for the editing of other users profiles.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;vanilla&#34;&gt;Vanilla&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Require Approval&lt;/strong&gt; - if this permission is set, unverified members’ posts will have to be approved before they appear (also known as pre-moderation).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Me Comments&lt;/strong&gt; – Allows user to post a /me action. (Warning, me actions can break your custom theme.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;conversations&#34;&gt;Conversations&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Add Conversations&lt;/strong&gt; - Allows for new private conversations to be added. Removing this from members will still allow them to receive messages from mods and admins.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manage Conversations&lt;/strong&gt; – Admins or mods can view and manage private messages between members. This permission also requires a config setting change that must be requested through support&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;plugins&#34;&gt;Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Allow Attachments Upload&lt;/strong&gt; – Permission to upload files when Advanced Editor or File Upload is in use.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manage Pockets&lt;/strong&gt; - Grants access to the Pockets plugin, if enabled&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Polls&lt;/strong&gt; – Permission to create a poll type discussion when the Polls plugin is enabled.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit Signatures&lt;/strong&gt; – Permission to create and edit a signature when the Signatures plugin is enabled.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tagging&lt;/strong&gt; – Permission to add tags to a discussion when Tags plugin is enabled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reputation&#34;&gt;Reputation&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Give Badges&lt;/strong&gt; – Grants ability to manually award badges from a users profile page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manage Badges&lt;/strong&gt; - Allows for the creation and management of badges in the dashboard.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Request Badges&lt;/strong&gt; - Allows users to request a badge from a particular badges page. It will send a request to /reputation/badge/requests for admins to approve.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;View Badges&lt;/strong&gt; - Ability to see badges on profiles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;groups&#34;&gt;Groups&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Add Group&lt;/strong&gt; - Grants the ability to make new groups&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Moderate Group&lt;/strong&gt; -Grants the ability to moderate groups even if not a group member.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;email&#34;&gt;Email&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Add Comments&lt;/strong&gt; - When using VanillaPop, grants ability to comment by email.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Conversations&lt;/strong&gt; - When using VanillaPop, grants ability to add private messages by email.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Discussions&lt;/strong&gt; - When using VanillaPop, Grants Ability to add Discussions by email.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reactions&#34;&gt;Reactions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Add Flag&lt;/strong&gt;  Allows use of the &amp;ldquo;Spam&amp;rdquo; or &amp;ldquo;Abuse&amp;rdquo; Reactions, which have the ability to accumulate to hide posts for review.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Negative&lt;/strong&gt; Allows use of &amp;ldquo;Dislike&amp;rdquo;, &amp;ldquo;Downvote&amp;rdquo;, &amp;ldquo;Off Topic&amp;rdquo;, and &amp;ldquo;WTF&amp;rdquo; Reactions. Negative Reactions are inactive by default.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Positive&lt;/strong&gt; Allows use of positive Reactions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
