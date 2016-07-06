@@ -110,6 +110,16 @@ module.exports = function (grunt) {
                 source: 'content',
                 dest: 'public'
             }
+        },
+        
+        shell: {
+            push: {
+                command: [
+                    'git subtree split --prefix public -b gh-pages',
+                    'git push -f origin gh-pages:gh-pages',
+                    'git branch -D gh-pages'
+                ].join('&&')
+            }
         }
 
     });
@@ -142,6 +152,10 @@ module.exports = function (grunt) {
     
     grunt.registerTask('index', [
         'lunr_index'
+    ]);
+    
+    grunt.registerTask('push', [
+        'shell:push'
     ]);
     
     grunt.registerTask("lunr_index", function() {
@@ -218,7 +232,7 @@ module.exports = function (grunt) {
         var options = this.options();
         var target = target || 'final';
         
-        var args, done, e, hugo, _i, _len, _ref, _results;
+        var args, done;
         done = this.async();
         args = [
             '--config=' + path.resolve('./config.yaml'),
