@@ -80,8 +80,16 @@
 
 
 
+    <li  class="">
+        <a href="//vanilla.github.io/docs/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
-        <a href="//vanilla.github.io/docs/help/addons/">Addons</a>
+        <a href="//vanilla.github.io/docs/help/features/">Features</a>
     </li>
     
     
@@ -108,7 +116,7 @@
 	    
 	    
                 <li class="">
-                    <a href="//vanilla.github.io/docs/help/cloud/leaving/">Leaving cloud </a>
+                    <a href="//vanilla.github.io/docs/help/cloud/leaving/">Leaving the Cloud </a>
                 </li>
                 
                 
@@ -139,7 +147,7 @@
 
 	    
 	    
-                <li class="active">
+                <li class="active nest">
                     <a href="//vanilla.github.io/docs/help/cloud/releases/">Releases </a>
                 </li>
                 
@@ -148,12 +156,38 @@
                     
                
                     
+                        <ul class="nav-tier3">
+
+                            <li class="">
+                                <a href="//vanilla.github.io/docs/help/cloud/releases/january-2016/">January 2016 Release</a>
+                            </li>
+
+                            
+		    
+                        
+
+                            <li class="">
+                                <a href="//vanilla.github.io/docs/help/cloud/releases/march-2016/">March 2016 Release</a>
+                            </li>
+
+                            
+		    
+                        
+
+                            <li class="">
+                                <a href="//vanilla.github.io/docs/help/cloud/releases/may-2016/">May 2016 Release</a>
+                            </li>
+
+                            
+		    
+                        </ul>
+                    
                 
 
 	    
 	    
                 <li class="">
-                    <a href="//vanilla.github.io/docs/help/cloud/repo/">Repository </a>
+                    <a href="//vanilla.github.io/docs/help/cloud/repository/">Repository </a>
                 </li>
                 
                 
@@ -197,7 +231,7 @@
 
 
     <li  class=" nest">
-        <a href="//vanilla.github.io/docs/help/features/">Features</a>
+        <a href="//vanilla.github.io/docs/help/addons/">Addons</a>
     </li>
     
     
@@ -219,98 +253,9 @@
 
 <h2 id="release-notes">Release Notes</h2>
 
-<p>Our clients on <a href="http://vanillaforums.com/plans">VIP plans</a> receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.</p>
+<p>Our clients on <a href="https://vanillaforums.com/plans">VIP plans</a> receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.</p>
 
 <p>We publish changes after each VIP release below, well after other plan levels may have received it.</p>
-
-<h2 id="march-2016">March 2016</h2>
-
-<h3 id="changes">Changes:</h3>
-
-<ul>
-<li>HTML emails now available.</li>
-<li>Applicants list is now asynchronous with improved UI.</li>
-<li>Spoilers added as core feature with updated formatting.</li>
-<li>Automatic bans (from Banning rules) can now be reversed.</li>
-<li>Reactions will now always show on all devices, instead of on-hover for larger screens (&ldquo;desktop&rdquo;).</li>
-<li>Sign In form now auto-focuses on Username field.</li>
-<li>Fix newest comment data for zero-comment discussions in table view.</li>
-<li>Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.</li>
-<li>Remove line breaks in meta description.</li>
-<li>Added events to support new analytics system.</li>
-<li>Fix styling of &lsquo;/me&rsquo; posts.</li>
-<li>QnA: Allow users to accept their own answer.</li>
-<li>Reactions: Add an option to allow users to react to their own posts.</li>
-<li>Add advanced editor options to New Poll screen.</li>
-<li>Fix plus signs in URLs, especially usernames / profiles.</li>
-<li>Improve SSO workflow for existing usernames.</li>
-<li>Rework discussion sorting and filtering architecture.</li>
-<li>Add no-store header to profiles so read/unread status updates on Back button.</li>
-<li>Pockets: fix repeating pockets between discussions, and enable on table view.</li>
-<li>Subcommunities: Fix category dropdown filtering when in a subcommunity.</li>
-<li>Hide editor toolbar when previewing.</li>
-<li>Fix double-deletion of comment drafts when posting, which could cause a Javascript error.</li>
-<li>Fix scenario where Quotes could interfere with Spoilers.</li>
-<li>Vanillicons: Now defaults to v2.</li>
-<li>NBBC: Fix scenario that could break search results formatting.</li>
-<li>Fix opaque photo cropping box.</li>
-<li>Fix and unify logic for determining permission to edit a user&rsquo;s photo.</li>
-<li>Allow quotes to be collapsed in reported posts.</li>
-<li>Allow collapsing of quotes with alternate formatting.</li>
-<li>Make even deeply-nested quotes minimally legible.</li>
-<li>Update dropdown menu rendering in several places.</li>
-<li>Update number formatting for discussion &amp; comment counts on All Categories page.</li>
-<li>Update stock themes for Ideation.</li>
-<li>Groups: Allow anyone who can edit an event to also delete it.</li>
-</ul>
-
-<h3 id="new-addons-available">New addons available:</h3>
-
-<ul>
-<li>Ideation (vote on ideas) - Contact your CSM for more details</li>
-<li>Microsoft Account SSO</li>
-<li>CAS SSO</li>
-<li>Keyword Blocker (send posts with certain keywords to mod queue)</li>
-<li>Necro Posts (labels recently-revived discussions)</li>
-<li>User Points Booster (allow awarding points for discussions or comments)</li>
-<li>Whitelist (provide an IP whitelist for site access)</li>
-</ul>
-
-<h2 id="january-2016">January 2016</h2>
-
-<h3 id="changes-1">Changes:</h3>
-
-<ul>
-<li>Restore no-store header to discussion &amp; category lists (fixes &ldquo;read&rdquo; markers not updating on &ldquo;Back&rdquo;).</li>
-<li>Improved formatting of Vanilla Comments in certain input formats.</li>
-<li>Updated Smarty template parsing library.</li>
-<li>Fix an issue in draft saving.</li>
-<li>Fix spam deletion error.</li>
-<li>Update Editor to use files&rsquo; real names when downloading.</li>
-<li>Fix RSS feed when table view is in use.</li>
-<li>Remove deprecated form field name prefixing.</li>
-<li>Add more category data to VanillaPop emails.</li>
-<li>Update gifv embed to prefer WebM.</li>
-<li>Various low-level fixes for PHP 7 compatibility.</li>
-<li>Fix CSRF check when deleting a ban.</li>
-<li>Close open redirect &amp; fix flood control in database updating endpoint.</li>
-<li>Improve security in how Vimeo is embedded.</li>
-<li>Add Wistia embed.</li>
-<li>Enforce POST data for several endpoints.</li>
-<li>Improve theme compatibility with Groups.</li>
-<li>Automatically remove spaces around Banning rules to prevent bad data being entered.</li>
-<li>Improve image resizing to always use highest quality images possible.</li>
-<li>Fix Facebook SSO: retrieval of email address, avatar distortion, &amp; name overwriting.</li>
-<li>Remove &ldquo;dashboard&rdquo; namespace from several dashboard URLs.</li>
-<li>Fix several MySQL strict mode errors.</li>
-<li>Remove livequery jQuery extension and all remaining uses of it.</li>
-<li>Remove base64 encoding from all asynchronous requests.</li>
-<li>Allow setting of avatar via API.</li>
-<li>Allow category permissions to be set via API.</li>
-<li>Allow certain configurations to be set depending on permission level.</li>
-<li>Re-add user count to the user list whenever possible based on size of table.</li>
-<li>Give full formatting bar to Activity form.</li>
-</ul>
 
 
             

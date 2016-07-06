@@ -166,6 +166,10 @@
   </url>
   
   <url>
+    <loc>//vanilla.github.io/docs/help/getting-started/</loc>
+  </url>
+  
+  <url>
     <loc>//vanilla.github.io/docs/help/addons/gigya/</loc>
   </url>
   
@@ -218,6 +222,10 @@
   </url>
   
   <url>
+    <loc>//vanilla.github.io/docs/help/cloud/releases/january-2016/</loc>
+  </url>
+  
+  <url>
     <loc>//vanilla.github.io/docs/help/cloud/leaving/</loc>
   </url>
   
@@ -231,6 +239,14 @@
   
   <url>
     <loc>//vanilla.github.io/docs/help/addons/groups/managing-groups/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/help/cloud/releases/march-2016/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/help/cloud/releases/may-2016/</loc>
   </url>
   
   <url>
@@ -314,7 +330,7 @@
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/repo/</loc>
+    <loc>//vanilla.github.io/docs/help/cloud/repository/</loc>
   </url>
   
   <url>

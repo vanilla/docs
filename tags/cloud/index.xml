@@ -15,11 +15,17 @@
       <guid>//vanilla.github.io/docs/help/cloud/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;cloud-services-overview&#34;&gt;Cloud Services Overview&lt;/h2&gt;
 
-&lt;p&gt;This section details services and processes offered exclusively to clients of our &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;cloud service&lt;/a&gt;. It includes workflows between Vanilla Forums and our clients, suggestions for getting the most out of your services, and expectations for how services will be delivered and communicated.&lt;/p&gt;
+&lt;p&gt;This section details services and processes offered exclusively to clients of our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;cloud service&lt;/a&gt;. It includes workflows between Vanilla Forums and our clients, suggestions for getting the most out of your services, and expectations for how services will be delivered and communicated.&lt;/p&gt;
 
-&lt;p&gt;If you are a cloud client and have any questions, please &lt;a href=&#34;http://vanillaforums.com/help&#34;&gt;contact support&lt;/a&gt;, your account representative, or your customer success manager if one has been assigned to you.&lt;/p&gt;
+&lt;p&gt;If you are a cloud client and have any questions, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt;, your account representative, or your customer success manager if one has been assigned to you.&lt;/p&gt;
 </description>
     </item>
     
@@ -33,9 +39,55 @@
 
 &lt;h2 id=&#34;integration-services&#34;&gt;Integration Services&lt;/h2&gt;
 
-&lt;p&gt;Higher &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt; include integration support. Integration support is generally given for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
+&lt;p&gt;Higher &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt; include integration support. Integration support is generally given for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
 
 &lt;p&gt;We will continue to assist you with our outstanding professional support even after your integration support ends. Integration support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>January 2016 Release</title>
+      <link>//vanilla.github.io/docs/help/cloud/releases/january-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/help/cloud/releases/january-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Improved formatting of Vanilla Comments in certain input formats.&lt;/li&gt;
+&lt;li&gt;Updated Smarty template parsing library.&lt;/li&gt;
+&lt;li&gt;Fix an issue in draft saving.&lt;/li&gt;
+&lt;li&gt;Fix spam deletion error.&lt;/li&gt;
+&lt;li&gt;Update Editor to use files&amp;rsquo; real names when downloading.&lt;/li&gt;
+&lt;li&gt;Fix RSS feed when table view is in use.&lt;/li&gt;
+&lt;li&gt;Remove deprecated form field name prefixing.&lt;/li&gt;
+&lt;li&gt;Add more category data to VanillaPop emails.&lt;/li&gt;
+&lt;li&gt;Update gifv embed to prefer WebM.&lt;/li&gt;
+&lt;li&gt;Various low-level fixes for PHP 7 compatibility.&lt;/li&gt;
+&lt;li&gt;Fix CSRF check when deleting a ban.&lt;/li&gt;
+&lt;li&gt;Close open redirect &amp;amp; fix flood control in database updating endpoint.&lt;/li&gt;
+&lt;li&gt;Improve security in how Vimeo is embedded.&lt;/li&gt;
+&lt;li&gt;Add Wistia embed.&lt;/li&gt;
+&lt;li&gt;Enforce POST data for several endpoints.&lt;/li&gt;
+&lt;li&gt;Improve theme compatibility with Groups.&lt;/li&gt;
+&lt;li&gt;Automatically remove spaces around Banning rules to prevent bad data being entered.&lt;/li&gt;
+&lt;li&gt;Improve image resizing to always use highest quality images possible.&lt;/li&gt;
+&lt;li&gt;Fix Facebook SSO: retrieval of email address, avatar distortion, &amp;amp; name overwriting.&lt;/li&gt;
+&lt;li&gt;Remove &amp;ldquo;dashboard&amp;rdquo; namespace from several dashboard URLs.&lt;/li&gt;
+&lt;li&gt;Fix several MySQL strict mode errors.&lt;/li&gt;
+&lt;li&gt;Remove livequery jQuery extension and all remaining uses of it.&lt;/li&gt;
+&lt;li&gt;Remove base64 encoding from all asynchronous requests.&lt;/li&gt;
+&lt;li&gt;Allow setting of avatar via API.&lt;/li&gt;
+&lt;li&gt;Allow category permissions to be set via API.&lt;/li&gt;
+&lt;li&gt;Allow certain configurations to be set depending on permission level.&lt;/li&gt;
+&lt;li&gt;Re-add user count to the user list whenever possible based on size of table.&lt;/li&gt;
+&lt;li&gt;Give full formatting bar to Activity form.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -94,6 +146,135 @@
     </item>
     
     <item>
+      <title>March 2016 Release</title>
+      <link>//vanilla.github.io/docs/help/cloud/releases/march-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/help/cloud/releases/march-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML emails now available.&lt;/li&gt;
+&lt;li&gt;Applicants list is now asynchronous with improved UI.&lt;/li&gt;
+&lt;li&gt;Spoilers added as core feature with updated formatting.&lt;/li&gt;
+&lt;li&gt;Automatic bans (from Banning rules) can now be reversed.&lt;/li&gt;
+&lt;li&gt;Reactions will now always show on all devices, instead of on-hover for larger screens (&amp;ldquo;desktop&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Sign In form now auto-focuses on Username field.&lt;/li&gt;
+&lt;li&gt;Fix newest comment data for zero-comment discussions in table view.&lt;/li&gt;
+&lt;li&gt;Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.&lt;/li&gt;
+&lt;li&gt;Remove line breaks in meta description.&lt;/li&gt;
+&lt;li&gt;Added events to support new analytics system.&lt;/li&gt;
+&lt;li&gt;Fix styling of &amp;lsquo;/me&amp;rsquo; posts.&lt;/li&gt;
+&lt;li&gt;QnA: Allow users to accept their own answer.&lt;/li&gt;
+&lt;li&gt;Reactions: Add an option to allow users to react to their own posts.&lt;/li&gt;
+&lt;li&gt;Add advanced editor options to New Poll screen.&lt;/li&gt;
+&lt;li&gt;Fix plus signs in URLs, especially usernames / profiles.&lt;/li&gt;
+&lt;li&gt;Improve SSO workflow for existing usernames.&lt;/li&gt;
+&lt;li&gt;Rework discussion sorting and filtering architecture.&lt;/li&gt;
+&lt;li&gt;Add no-store header to profiles so read/unread status updates on Back button.&lt;/li&gt;
+&lt;li&gt;Pockets: fix repeating pockets between discussions, and enable on table view.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fix category dropdown filtering when in a subcommunity.&lt;/li&gt;
+&lt;li&gt;Hide editor toolbar when previewing.&lt;/li&gt;
+&lt;li&gt;Fix double-deletion of comment drafts when posting, which could cause a Javascript error.&lt;/li&gt;
+&lt;li&gt;Fix scenario where Quotes could interfere with Spoilers.&lt;/li&gt;
+&lt;li&gt;Vanillicons: Now defaults to v2.&lt;/li&gt;
+&lt;li&gt;NBBC: Fix scenario that could break search results formatting.&lt;/li&gt;
+&lt;li&gt;Fix opaque photo cropping box.&lt;/li&gt;
+&lt;li&gt;Fix and unify logic for determining permission to edit a user&amp;rsquo;s photo.&lt;/li&gt;
+&lt;li&gt;Allow quotes to be collapsed in reported posts.&lt;/li&gt;
+&lt;li&gt;Allow collapsing of quotes with alternate formatting.&lt;/li&gt;
+&lt;li&gt;Make even deeply-nested quotes minimally legible.&lt;/li&gt;
+&lt;li&gt;Update dropdown menu rendering in several places.&lt;/li&gt;
+&lt;li&gt;Update number formatting for discussion &amp;amp; comment counts on All Categories page.&lt;/li&gt;
+&lt;li&gt;Update stock themes for Ideation.&lt;/li&gt;
+&lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;new-addons-available&#34;&gt;New addons available:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
+&lt;li&gt;Microsoft Account SSO&lt;/li&gt;
+&lt;li&gt;CAS SSO&lt;/li&gt;
+&lt;li&gt;Keyword Blocker (send posts with certain keywords to mod queue)&lt;/li&gt;
+&lt;li&gt;Necro Posts (labels recently-revived discussions)&lt;/li&gt;
+&lt;li&gt;User Points Booster (allow awarding points for discussions or comments)&lt;/li&gt;
+&lt;li&gt;Whitelist (provide an IP whitelist for site access)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>May 2016 Release</title>
+      <link>//vanilla.github.io/docs/help/cloud/releases/may-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/help/cloud/releases/may-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upgrade to reCaptcha 2 (&amp;ldquo;NoCaptcha&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Make &amp;ldquo;NBBC&amp;rdquo; our new BBCode parsing library by default (no more plugin).&lt;/li&gt;
+&lt;li&gt;Add ability for SAML SSO to not be the default login method.&lt;/li&gt;
+&lt;li&gt;Allow moving a discussion between subcommunities.&lt;/li&gt;
+&lt;li&gt;Add support for switching subcommunities.&lt;/li&gt;
+&lt;li&gt;Improve category scaling.&lt;/li&gt;
+&lt;li&gt;Make activities self-prune after 2 months to improve performance.&lt;/li&gt;
+&lt;li&gt;Always redirect to the first page after saving a discussion.&lt;/li&gt;
+&lt;li&gt;Add analytics tracking for Q&amp;amp;A&amp;rsquo;s accepted answers (coming soon to analytics).&lt;/li&gt;
+&lt;li&gt;Allow censoring content in conversation message notifications.&lt;/li&gt;
+&lt;li&gt;Allow censoring poll votes in comments.&lt;/li&gt;
+&lt;li&gt;Fix a number of edge cases where certain actions could block other actions without a page refresh.&lt;/li&gt;
+&lt;li&gt;Fix condition where category announcements disappeared from recent discussions page.&lt;/li&gt;
+&lt;li&gt;Add caching for the default authentication provider.&lt;/li&gt;
+&lt;li&gt;Improve security in signin redirects.&lt;/li&gt;
+&lt;li&gt;Improve use of &amp;lsquo;Alt&amp;rsquo; CSS class, which will be removed eventually (now redundant with current CSS specs).&lt;/li&gt;
+&lt;li&gt;Add option to configure a redirect after logout on Auth0 plugin.&lt;/li&gt;
+&lt;li&gt;Update Triple-A and Bootstrap 3 themes.&lt;/li&gt;
+&lt;li&gt;Fix issue where Vimeo and Instagram embeds overflow out of the Best Of Tiles.&lt;/li&gt;
+&lt;li&gt;Fix where SplitMerge addon may be unable to save split discussion with &amp;ldquo;Html&amp;rdquo; format.&lt;/li&gt;
+&lt;li&gt;Fix the love bug (various problems with &amp;lt; 3 in user-generated content).&lt;/li&gt;
+&lt;li&gt;Prevent unneeded recurring updates in dashboard&amp;rsquo;s database updater.&lt;/li&gt;
+&lt;li&gt;Fix Gravatar&amp;rsquo;s use of system default avatar.&lt;/li&gt;
+&lt;li&gt;Add optional rating parameter to Gravatar.&lt;/li&gt;
+&lt;li&gt;Fix GitHub signin and API permission issues.&lt;/li&gt;
+&lt;li&gt;Fix new discussion button showing in subcommunity when user has no permission.&lt;/li&gt;
+&lt;li&gt;Allow the Photo field to be set in /profile/edit.&lt;/li&gt;
+&lt;li&gt;Only use CommentID for spam check if available.&lt;/li&gt;
+&lt;li&gt;Fix incorrect permission being checked in some category management actions.&lt;/li&gt;
+&lt;li&gt;Groups: Simplify &amp;amp; fix event timezone handling.&lt;/li&gt;
+&lt;li&gt;Make initial spoiler text the same colour as its background.&lt;/li&gt;
+&lt;li&gt;Fix RSS title encoding.&lt;/li&gt;
+&lt;li&gt;Add the ability to capture a user&amp;rsquo;s time zone.&lt;/li&gt;
+&lt;li&gt;Fix LinkedIn &amp;ldquo;profile connect&amp;rdquo; feature.&lt;/li&gt;
+&lt;li&gt;Move Recaptcha into a plugin&lt;/li&gt;
+&lt;li&gt;Add support for Instagram embeds in Mobile 2014.&lt;/li&gt;
+&lt;li&gt;Do more image optimizations.&lt;/li&gt;
+&lt;li&gt;Fix Safari issue where back button wouldn&amp;rsquo;t refresh the page.&lt;/li&gt;
+&lt;li&gt;Fixes issue where people can quote a post and see uncensored content.&lt;/li&gt;
+&lt;li&gt;Remove gender from user-facing elements like registration.&lt;/li&gt;
+&lt;li&gt;Prevent &amp;ldquo;Messages&amp;rdquo; from being displayed when you do not have view permission.&lt;/li&gt;
+&lt;li&gt;QnA: Return the correct number of questions for a subcommunity.&lt;/li&gt;
+&lt;li&gt;Switch YouTube links to https.&lt;/li&gt;
+&lt;li&gt;Fix mention issues including using an &amp;lsquo;@&amp;rsquo; in the middle of two words.&lt;/li&gt;
+&lt;li&gt;Fix PNG compression issues in file uploads.&lt;/li&gt;
+&lt;li&gt;Fix some minor issues that could make spoilers malfunction.&lt;/li&gt;
+&lt;li&gt;Add a safety feature to avoid too-big database changes all at once.&lt;/li&gt;
+&lt;li&gt;Allow any user with moderate permission to add discussions and events in a group.&lt;/li&gt;
+&lt;li&gt;Fix aggressive span stripping in the HTML purifier.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Migration Services</title>
       <link>//vanilla.github.io/docs/help/cloud/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -147,38 +328,56 @@
 
 &lt;p&gt;Migration data should always be sent to Vanilla via SFTP, available by request to your Account Manager. Data can optionally be encrypted using Vanilla&amp;rsquo;s Public Key, provided below:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  -----BEGIN PGP PUBLIC KEY BLOCK-----
-  Version: GnuPG/MacGPG2 v2.0.20 (Darwin)
-  Comment: GPGTools - https://gpgtools.org
-
-  mQENBFOPIr0BCACy3qGvAMOG48rmqHwPchaot4YL1W7LoWUaNGNr5YjqnRhdMy8c
-  vca5Si0Z1QJ57N1cYjtG9+75IpUDZ0KhCaVzx4Smaqmx2Ezgp79/Kr4hY5tdHvky
-  0W8B0XNU9U5hJtPuSW0wCpiF68du1d5OcVDDuCe1f4vCwJbiZwluNeIUrUTZeKI1
-  8hO5u1gPQGyIX5LL7X6XWQ9Prvn6wmqscdhg8DlXFfDh64zhqhGC/uPCLXHFcHcz
-  RrBBQ1iXCBd8TRfy8XBOGbzAiWEaO17mhxlIGTdfsAKYc/UU5TkZDQFq+ipuvyrD
-  Zsvjk93FPBd4x1zPFCu+40HFQWh0mmsoe3RpABEBAAG0RFZhbmlsbGEgT3BlcmF0
-  aW9ucyAoVmFuaWxsYSBPcGVyYXRpb25zIFRlYW0pIDxvcHNAdmFuaWxsYWZvcnVt
-  cy5jb20+iQE9BBMBCgAnBQJTjyK9AhsDBQkHhh+ABQsJCAcDBRUKCQgLBRYCAwEA
-  Ah4BAheAAAoJEIkj1hflHtRHKu0IAIJ02m3Q0YsWtVVTQ3RI+yz/5G5ewjp+a3iv
-  oZybmNGInYEIKRNSlSQYf7K7B7fogGr7pAq+aVHE6yUOIwsHiAnK6U2Qpo6/mrlr
-  U2CS24LwSMjX+1x6iV+REEQM9sRZ1olfvrdZAKLgqZZTMyK5/eOyHjgZktHJgzlo
-  mIzd5zHx1xopEKDcZnwqxNWvqaZwRIkdUXWuTVs+HqCG6Cc6sO701k0oJmMmWeoI
-  4khaIokv4VdEibvdD545ru/NjR3zPHUhsrkxX+EggCWJggZ7fiu+98AUbkhGM24T
-  cU4T3TaNsCgjaedgihVb6g1zdKrWCK2AXXOttR8i0PY+ZqSACdy5AQ0EU48ivQEI
-  AL8k9yPxIItjQ398+pZUplLDSufYzeMGGgJRJQUjfSGYBN8aPLWJ/E6MZPVRHmBT
-  jssIYhyxKUXTUY6M+hiTt0vpoYkD9oz3lLyvEzedgUJ8RrisGU+1dL3P5+YJf1/C
-  tC468OkQxAB70oMCag/PXnkljB5fZzgFhfQs8IHeUrdTyVlhrRkUxbh5EjOj3cnE
-  nKlW2eNM2QG/FduBYmPaPf9slcGDBo3SacQ+IcmlEH83ZycRhcoaSfa6sKVdQqq8
-  /FnhtNsOWnu1kYEvX/Qc8Uaoub40ESVTR5Qdj97IiH1NO6q2h5nAwmMC74q0EZzP
-  sQE1vqdsQE+oAEkaNyz5P68AEQEAAYkBJQQYAQoADwUCU48ivQIbDAUJB4YfgAAK
-  CRCJI9YX5R7UR5K8B/970DkBOsiZkSWBVuNVedijD4LSo4LF1o+Xm9/DUH5yXe99
-  CHuiK6iCHRGrJAGlUC2XETB4mA+dwCLQ/Gs4HTLSWoqeWcOfoyyLlYYHk5whWUw3
-  DI3Qj/hH+GvsJoJ2LdgJWBKU8WsXrR/GS9WqhV7sERQbaoUKB8ZbledtXlT7Vjmb
-  U6QvNWXl0gzCnBhdcslYzlZ5KxpQqX67Qo020shfemAKJkwXuMJAMB6Q7p5L+JE9
-  lFkyInx1ZzHOrVfpO9M8l08+9ArpH3+7RvSS60oMF56fNQwuOKiGgHLOZhkiRao7
-  mdgI8Hx09QYcxGjehtMJNzQQ6qryx8UNAaEtB8/w
-  =QysZ
-  -----END PGP PUBLIC KEY BLOCK-----
+&lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
+mQINBFY3hRUBEADXVOVM6ZjiQCJxsYPeS9ob01mBwXuB/RZEOg/f8x9AmNzZHEwr
+BvfpSlBxxflpqT3eK4rmIZpCOwVVY0RRrWa3zs5yCcU&amp;#43;r0Sw6SQXnj3J9sZ37IJ7
+d66ToDoAzTpZ5R6aX3E2EN06Fpi3RdLQTx4RXo7gT5u3q6J&amp;#43;av0e4PPxcYfqJdh&amp;#43;
+wfca40ifoHezvbBQtM9waPNUGFdiPmR1WlrjlvYMe3LFw14zbhPMtMueMa2gnjkg
+znJxUvsSssnv9NFj&amp;#43;XfikhMbigiR/yyBlmI8dvVIwJ5umM&amp;#43;oHkoTwLkuazXdiLJW
+6WBvr&amp;#43;Mv5d50HaW&amp;#43;zwHznlfV75InMhLC/7z47ij8&amp;#43;u2TaDzj9qzj6h9xxEgETtDo
+H5X1K6xdnFmM8meNR8YT4t/rNKCveqehZ1RuAFTcl8Xg0raM8tFa8oeIZfvOJx9m
+vg/AXb01uxcvcyat47HjI1tySoTrbollPd0AhRhA/AJmXJ52iJozMQk8dmllLD2u
+QBIXBlo84zbai4QRn3Ir6exJgsg4uu19EP&amp;#43;7XHJNgKqy3OYqj5q3VNJBIZkhJFgs
+sVA&amp;#43;xfCzo1oKEEvpNz0JtSK5TpwtP0gMUDqR5esG/q47e5eUdCDSsZC3l9nA0x0A
+Q7uoMT9fmtWkFIXVyHg1wYPqOoYLP3pkxQCpM0C5ZCq6lIB/M5JPiiCEGQARAQAB
+tCpWYW5pbGxhIE9wZXJhdGlvbnMgPG9wc0B2YW5pbGxhZm9ydW1zLmNvbT6JAj0E
+EwEKACcFAlY3hRUCGwMFCQeGH4AFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AACgkQ
+Zk9wcykgo0zkgBAArAELOZYV2XMqrZouafWTN9sOwHXe6BY6WDvY3iqckafA0Mdr
+6xtlPWNX/PXtxvJClZU8WOAehp9812kGsSA/JjjwN8OfBfnEvvneaTWL0dGgyuW0
+lp3W0rTrr&amp;#43;KMTLg23rgJ09Z8OTWvQwkEQ4&amp;#43;nt7t3qusLrBPshVBqrxVWhFc0x8cA
+bWuz35p/tMW3NtA&amp;#43;LPrK3zNA4TgctZ2mgdwL/T88qJo2bLk/Gbha/fc5FbpFZWLz
+mh0wWEEL1d4xcxzsy7XxZJyNRWWRHPmuFsj8GEamy3/V8kD3FqLx0jz5CJYP&amp;#43;v4T
+2ABpFZFsNJ6aNaCqmfcsinjg1No/26p8dSb5qQIXiZ0aMwMXMsK3&amp;#43;vTfe5/DcY8c
+acDw6YpCxVOdpSRWKq&amp;#43;RH&amp;#43;5OAPV99kmAYw53L9ijlb1hOR8AXgmyLqYCZMbaDTL7
+JmtW&amp;#43;miCr55ESl9nV6fxy0D/S4oDgMyEsUmXZ5cir&amp;#43;hfrzYA3qjx6&amp;#43;UKjpR/WLfa
+hW3BPr8cMRov4WfmnIuLLGcDiWnMtWUcRzgSuajzV2hAWvL5pE1JTO8hVQsoOVv5
+4PkjA6&amp;#43;GZwx2C&amp;#43;ZNPy5HM6LEGOCIXLVcd3xJlKjPe3hDf2cwdEXBqPcGNex7HTQg
+dOQnr3EA30ng0pcvlV3pFo/nsa5&amp;#43;K/1YqjgD4bTCzm9VrMyPGDD5dJ1voGK5Ag0E
+VjeFFQEQAMJCmKkUJj6UWf5VL/EB8/Ob4p1K/BuYkfL7EMc8gRAcnlfa8p6uUq50
+bk/SigLxslzbqQHLbaP738gxICg99OjEh3GynOv7dIJ0u5y4hCfyDimdk0XVFG7i
+&amp;#43;w7xQLx1bmvDakBVLFXJHNjYrjyzVeOdufDxz/UyHKT7xDbNfen1Fg&amp;#43;FXsocVFWA
+/ZMslsOk&amp;#43;ZPFClcUQqNB54ItU/6lpMT0poUk2MhdR21q9ZMpH1cEeLeGAb3DnqR3
+JjQO20LsjJ8EQH8Ezjl&amp;#43;6bzoxtN0nwRA9ZxHQtdkDsKHbQPPOdd8mo9TD1hLGUY4
+UPo1UMayhAaDUNZ3C2XumfugNqxHKzH10rPulaklOouRzwvV49ZCRHu80wJi/ywC
+c0UKZtnNWKkk/9VJlzy0qyM48Xq53EdVbdXP2rnaZJDlgpRqpBruWTrzVtp67MSb
+nggsiD4xOB/JxC7Ly5F0mkg5U1E&amp;#43;cGk79BUYKXGi3IaRiWn46zLHlouTWeOmmTgh
+NxbU/xMR4AR/a17uR6XS4FdJHviYby0yh&amp;#43;eAlKMPct3odq10HlDnCGCN7Un5Hvs3
+anIQr8OMb1GRTCGT7NpuGMfvXAOPJJhcuS3sbBSMTpcCFd2cYcO2AJ6zcXkqjJK5
+VkMNcDaIUNPLj&amp;#43;kYFx4WQJaYXTCow/f58ewTfWYJgkGR3NEwsYlZABEBAAGJAiUE
+GAEKAA8FAlY3hRUCGwwFCQeGH4AACgkQZk9wcykgo0zpFQ/9HpwqyxbFUcgfLPlG
+yXyrgR28Id4GVZpdXfWWbKs6Et2b53luG&amp;#43;uEO7PvW0Kz2KOKUK1ycs8SuVxpbehA
+v1RBe2vQVfE4rNyuMxSed9FXOiWmiK1A31ZvKPC&amp;#43;170QRqiXID8jH5MxH&amp;#43;uDxRg0
+8egdAje7WNyiSBBrTCcetJmD3GrX3/nk4sfU5hVkY&amp;#43;cdD9U2AHKjmLGQ1tE3G9YG
+OMmb8lPQvkReaO3jWvAECEtV8uo4oz1oWF5g6nskzpwl1wJzDNVvGPgHwuMo7fMP
+MFHN5WYqYXbiKeLgyMIsl3myntgsoIVBdjBqAlxCvojIeyYZ9NxDDN4lpDVTkHsS
+Ahcyv9kbLAQlaefVAwvbrWWSJB/BG8sw8s9hX2svb/DUirlu2IphG2g7eQPc/x70
+QDf3g&amp;#43;nJ3XkQPUdMbq&amp;#43;gEYKpKb5MzaVipC2QUZni/8Lsv9vvnMOXXzEdOK9SSF4q
+bHGwV39bcFOuVDg3uOltOeJ2i/MGMiThRHNJ&amp;#43;xstWg7utrFjcfV7uM&amp;#43;LTjES4MO0
+ng6SOeMhCh11/kHvBG&amp;#43;O7F8aHqJRUlpqsWL&amp;#43;yeY5IXXH3AbLosO/2sS/pH08v5IQ
+egSmtLmeKMxwXxGp5o/P3pRZlCTEaFikeCYLFIFWeLjYWji&amp;#43;c6x&amp;#43;C60utHrTcdZn
+s4HJBD41ZP7DOeVwKwkfwlDHCYY=
+=cgqK
+-----END PGP PUBLIC KEY BLOCK-----
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;personally-identifiable-information&#34;&gt;Personally-identifiable information&lt;/h2&gt;
@@ -275,112 +474,23 @@
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;p&gt;Our clients on &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.&lt;/p&gt;
+&lt;p&gt;Our clients on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.&lt;/p&gt;
 
 &lt;p&gt;We publish changes after each VIP release below, well after other plan levels may have received it.&lt;/p&gt;
-
-&lt;h2 id=&#34;march-2016&#34;&gt;March 2016&lt;/h2&gt;
-
-&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HTML emails now available.&lt;/li&gt;
-&lt;li&gt;Applicants list is now asynchronous with improved UI.&lt;/li&gt;
-&lt;li&gt;Spoilers added as core feature with updated formatting.&lt;/li&gt;
-&lt;li&gt;Automatic bans (from Banning rules) can now be reversed.&lt;/li&gt;
-&lt;li&gt;Reactions will now always show on all devices, instead of on-hover for larger screens (&amp;ldquo;desktop&amp;rdquo;).&lt;/li&gt;
-&lt;li&gt;Sign In form now auto-focuses on Username field.&lt;/li&gt;
-&lt;li&gt;Fix newest comment data for zero-comment discussions in table view.&lt;/li&gt;
-&lt;li&gt;Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.&lt;/li&gt;
-&lt;li&gt;Remove line breaks in meta description.&lt;/li&gt;
-&lt;li&gt;Added events to support new analytics system.&lt;/li&gt;
-&lt;li&gt;Fix styling of &amp;lsquo;/me&amp;rsquo; posts.&lt;/li&gt;
-&lt;li&gt;QnA: Allow users to accept their own answer.&lt;/li&gt;
-&lt;li&gt;Reactions: Add an option to allow users to react to their own posts.&lt;/li&gt;
-&lt;li&gt;Add advanced editor options to New Poll screen.&lt;/li&gt;
-&lt;li&gt;Fix plus signs in URLs, especially usernames / profiles.&lt;/li&gt;
-&lt;li&gt;Improve SSO workflow for existing usernames.&lt;/li&gt;
-&lt;li&gt;Rework discussion sorting and filtering architecture.&lt;/li&gt;
-&lt;li&gt;Add no-store header to profiles so read/unread status updates on Back button.&lt;/li&gt;
-&lt;li&gt;Pockets: fix repeating pockets between discussions, and enable on table view.&lt;/li&gt;
-&lt;li&gt;Subcommunities: Fix category dropdown filtering when in a subcommunity.&lt;/li&gt;
-&lt;li&gt;Hide editor toolbar when previewing.&lt;/li&gt;
-&lt;li&gt;Fix double-deletion of comment drafts when posting, which could cause a Javascript error.&lt;/li&gt;
-&lt;li&gt;Fix scenario where Quotes could interfere with Spoilers.&lt;/li&gt;
-&lt;li&gt;Vanillicons: Now defaults to v2.&lt;/li&gt;
-&lt;li&gt;NBBC: Fix scenario that could break search results formatting.&lt;/li&gt;
-&lt;li&gt;Fix opaque photo cropping box.&lt;/li&gt;
-&lt;li&gt;Fix and unify logic for determining permission to edit a user&amp;rsquo;s photo.&lt;/li&gt;
-&lt;li&gt;Allow quotes to be collapsed in reported posts.&lt;/li&gt;
-&lt;li&gt;Allow collapsing of quotes with alternate formatting.&lt;/li&gt;
-&lt;li&gt;Make even deeply-nested quotes minimally legible.&lt;/li&gt;
-&lt;li&gt;Update dropdown menu rendering in several places.&lt;/li&gt;
-&lt;li&gt;Update number formatting for discussion &amp;amp; comment counts on All Categories page.&lt;/li&gt;
-&lt;li&gt;Update stock themes for Ideation.&lt;/li&gt;
-&lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;new-addons-available&#34;&gt;New addons available:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
-&lt;li&gt;Microsoft Account SSO&lt;/li&gt;
-&lt;li&gt;CAS SSO&lt;/li&gt;
-&lt;li&gt;Keyword Blocker (send posts with certain keywords to mod queue)&lt;/li&gt;
-&lt;li&gt;Necro Posts (labels recently-revived discussions)&lt;/li&gt;
-&lt;li&gt;User Points Booster (allow awarding points for discussions or comments)&lt;/li&gt;
-&lt;li&gt;Whitelist (provide an IP whitelist for site access)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;january-2016&#34;&gt;January 2016&lt;/h2&gt;
-
-&lt;h3 id=&#34;changes-1&#34;&gt;Changes:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
-&lt;li&gt;Improved formatting of Vanilla Comments in certain input formats.&lt;/li&gt;
-&lt;li&gt;Updated Smarty template parsing library.&lt;/li&gt;
-&lt;li&gt;Fix an issue in draft saving.&lt;/li&gt;
-&lt;li&gt;Fix spam deletion error.&lt;/li&gt;
-&lt;li&gt;Update Editor to use files&amp;rsquo; real names when downloading.&lt;/li&gt;
-&lt;li&gt;Fix RSS feed when table view is in use.&lt;/li&gt;
-&lt;li&gt;Remove deprecated form field name prefixing.&lt;/li&gt;
-&lt;li&gt;Add more category data to VanillaPop emails.&lt;/li&gt;
-&lt;li&gt;Update gifv embed to prefer WebM.&lt;/li&gt;
-&lt;li&gt;Various low-level fixes for PHP 7 compatibility.&lt;/li&gt;
-&lt;li&gt;Fix CSRF check when deleting a ban.&lt;/li&gt;
-&lt;li&gt;Close open redirect &amp;amp; fix flood control in database updating endpoint.&lt;/li&gt;
-&lt;li&gt;Improve security in how Vimeo is embedded.&lt;/li&gt;
-&lt;li&gt;Add Wistia embed.&lt;/li&gt;
-&lt;li&gt;Enforce POST data for several endpoints.&lt;/li&gt;
-&lt;li&gt;Improve theme compatibility with Groups.&lt;/li&gt;
-&lt;li&gt;Automatically remove spaces around Banning rules to prevent bad data being entered.&lt;/li&gt;
-&lt;li&gt;Improve image resizing to always use highest quality images possible.&lt;/li&gt;
-&lt;li&gt;Fix Facebook SSO: retrieval of email address, avatar distortion, &amp;amp; name overwriting.&lt;/li&gt;
-&lt;li&gt;Remove &amp;ldquo;dashboard&amp;rdquo; namespace from several dashboard URLs.&lt;/li&gt;
-&lt;li&gt;Fix several MySQL strict mode errors.&lt;/li&gt;
-&lt;li&gt;Remove livequery jQuery extension and all remaining uses of it.&lt;/li&gt;
-&lt;li&gt;Remove base64 encoding from all asynchronous requests.&lt;/li&gt;
-&lt;li&gt;Allow setting of avatar via API.&lt;/li&gt;
-&lt;li&gt;Allow category permissions to be set via API.&lt;/li&gt;
-&lt;li&gt;Allow certain configurations to be set depending on permission level.&lt;/li&gt;
-&lt;li&gt;Re-add user count to the user list whenever possible based on size of table.&lt;/li&gt;
-&lt;li&gt;Give full formatting bar to Activity form.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Repository</title>
-      <link>//vanilla.github.io/docs/help/cloud/repo/</link>
+      <link>//vanilla.github.io/docs/help/cloud/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/cloud/repo/</guid>
+      <guid>//vanilla.github.io/docs/help/cloud/repository/</guid>
       <description>
 
 &lt;h2 id=&#34;private-repository&#34;&gt;Private Repository&lt;/h2&gt;
 
-&lt;p&gt;Our &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.&lt;/p&gt;
+&lt;p&gt;Our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.&lt;/p&gt;
 
 &lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
 
@@ -394,9 +504,9 @@
 
 &lt;h3 id=&#34;local-testing&#34;&gt;Local testing&lt;/h3&gt;
 
-&lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;http://github.com/vanillaforums/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;http://github.com/vanillaforums/Addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -410,7 +520,7 @@
 
 &lt;h2 id=&#34;staging-site-overview&#34;&gt;Staging Site Overview&lt;/h2&gt;
 
-&lt;p&gt;For higher &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt;, we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.&lt;/p&gt;
+&lt;p&gt;For higher &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt;, we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.&lt;/p&gt;
 
 &lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
 
@@ -442,13 +552,13 @@
 
 &lt;h2 id=&#34;cloud-support&#34;&gt;Cloud Support&lt;/h2&gt;
 
-&lt;p&gt;We provide professional support &lt;strong&gt;exclusively&lt;/strong&gt; for our &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;cloud clients&lt;/a&gt;. Because of this, we require the forum owner to request support, or to specifically authorize other users to receive support.&lt;/p&gt;
+&lt;p&gt;We provide professional support &lt;strong&gt;exclusively&lt;/strong&gt; for our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;cloud clients&lt;/a&gt;. Because of this, we require the forum owner to request support, or to specifically authorize other users to receive support.&lt;/p&gt;
 
 &lt;p&gt;Support is available by:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Using the &amp;ldquo;Support&amp;rdquo; form in your Dashboard.&lt;/li&gt;
-&lt;li&gt;Visiting the official support forum at &lt;a href=&#34;http://vanillaforums.com/help&#34;&gt;http://vanillaforums.com/help&lt;/a&gt;. Sign in with the same email you used to register for cloud hosting.&lt;/li&gt;
+&lt;li&gt;Visiting the official support forum at &lt;a href=&#34;https://support.vanillaforums.com&#34;&gt;https://support.vanillaforums.com&lt;/a&gt;. Sign in with the same email you used to register for cloud hosting.&lt;/li&gt;
 &lt;li&gt;Emailing support [at] vanillaforums [dot] com directly.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -470,7 +580,7 @@
 
 &lt;h2 id=&#34;theming-services-overview&#34;&gt;Theming Services Overview&lt;/h2&gt;
 
-&lt;p&gt;Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;higher plan levels&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;higher plan levels&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Contact your customer success manager with your needs. We run the gamut from simple style matching (header, footer, color pallette) to fully customized designs from detailed mockups. Our estimates include the cost of revisions and deploying the theme to our infrastructure.&lt;/p&gt;
 </description>

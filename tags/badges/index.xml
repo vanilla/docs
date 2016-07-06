@@ -15,6 +15,12 @@
       <guid>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;disabling-badges&#34;&gt;Disabling badges&lt;/h2&gt;
 
 &lt;p&gt;To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active.  Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.&lt;/p&gt;
@@ -52,6 +58,12 @@
       
       <guid>//vanilla.github.io/docs/help/addons/badges/giving-and-requesting-badges/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;giving-a-badge&#34;&gt;Giving a badge&lt;/h2&gt;
 

@@ -186,6 +186,135 @@ body {
   font-size: 14px;
 }
 
+.docs-content {
+  background: white;
+  padding: 20px 0px 50px 0px;
+}
+
+.docs-content #content h2 {
+  margin: 0px;
+  color: #F52C6E;
+  font-size: 24px;
+  font-weight: lighter;
+  border-bottom: 1px dotted #E4E4E4;
+  padding-bottom: 15px;
+}
+
+.docs-content #content h3 {
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.docs-content #content h4 {
+  color: #0291DB;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.docs-content #content p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.docs-content #content p + h2 {
+  margin-top: 30px;
+}
+
+.docs-content #content ul, .docs-content #content ol {
+  font-size: 12px;
+}
+
+.docs-content #content ul li, .docs-content #content ol li {
+  margin: 3px 0px;
+}
+
+.docs-content #content a {
+  color: #0291DB;
+}
+
+.docs-content #content pre {
+  background: #fff3f6;
+  color: #F52C6E;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.docs-content #content pre code {
+  background: transparent;
+  padding: 0px;
+}
+
+.docs-content #content code {
+  background: #fff3f6;
+  color: #F52C6E;
+  font-family: "Courier New", Terminal;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.docs-content #content aside {
+  position: relative;
+  font-size: 12px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.docs-content #content aside p:after {
+  position: absolute;
+  display: block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.docs-content #content aside.warning {
+  color: #cc0000;
+  background-color: #ffdcdc;
+}
+
+.docs-content #content aside.note {
+  color: #9E998E;
+  background-color: #FFFBEF;
+}
+
+.docs-content #content aside.cloudfeature {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  color: #0272AC;
+  background-color: #BBE1F5;
+}
+
+.docs-content #content aside.cloudfeature p {
+  margin: 5px 0px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.docs-content #content aside.cloudfeature p * {
+  margin-right: 10px;
+}
+
+.docs-content #content aside.cloudfeature p a {
+  border-bottom: 1px dotted #0291DB;
+  margin-left: auto;
+}
+
+.docs-content #content img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   letter-spacing: 0.5px;
 }
@@ -467,75 +596,6 @@ a:hover {
 .docs-content {
   background: white;
   padding: 20px 0px 50px 0px;
-}
-
-.docs-content #content h2 {
-  margin: 0px;
-  color: #F52C6E;
-  font-size: 24px;
-  font-weight: lighter;
-  border-bottom: 1px dotted #E4E4E4;
-  padding-bottom: 15px;
-}
-
-.docs-content #content h3 {
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.docs-content #content p {
-  font-size: 12px;
-}
-
-.docs-content #content p + h2 {
-  margin-top: 30px;
-}
-
-.docs-content #content ul, .docs-content #content ol {
-  font-size: 12px;
-}
-
-.docs-content #content pre {
-  background: #fff3f6;
-  color: #F52C6E;
-  font-size: 12px;
-  padding: 2px 4px;
-  border-radius: 2px;
-}
-
-.docs-content #content pre code {
-  background: transparent;
-  padding: 0px;
-}
-
-.docs-content #content code {
-  background: #fff3f6;
-  color: #F52C6E;
-  font-family: "Courier New", Terminal;
-  padding: 2px 4px;
-  border-radius: 2px;
-}
-
-.docs-content #content aside {
-  font-size: 12px;
-  padding: 10px 15px;
-  margin: 10px 0px;
-}
-
-.docs-content #content aside.warning {
-  color: #cc0000;
-  background-color: #ffdcdc;
-}
-
-.docs-content #content aside.note {
-  color: #9E998E;
-  background-color: #FFFBEF;
-}
-
-.docs-content #content img {
-  max-width: 100%;
-  height: auto;
 }
 
 .docs-content #sidebar {

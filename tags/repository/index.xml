@@ -9,15 +9,15 @@
     
     <item>
       <title>Repository</title>
-      <link>//vanilla.github.io/docs/help/cloud/repo/</link>
+      <link>//vanilla.github.io/docs/help/cloud/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/cloud/repo/</guid>
+      <guid>//vanilla.github.io/docs/help/cloud/repository/</guid>
       <description>
 
 &lt;h2 id=&#34;private-repository&#34;&gt;Private Repository&lt;/h2&gt;
 
-&lt;p&gt;Our &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.&lt;/p&gt;
+&lt;p&gt;Our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.&lt;/p&gt;
 
 &lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
 
@@ -31,9 +31,9 @@
 
 &lt;h3 id=&#34;local-testing&#34;&gt;Local testing&lt;/h3&gt;
 
-&lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;http://github.com/vanillaforums/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;http://github.com/vanillaforums/Addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

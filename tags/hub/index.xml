@@ -15,6 +15,12 @@
       <guid>//vanilla.github.io/docs/help/addons/vanilla-pop/site-hub/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;differences&#34;&gt;Differences&lt;/h2&gt;
 
 &lt;p&gt;Vanilla Pop works in much the same way on the hub as it does on regular sites. The node email addresses are slightly different and there are a few more features which are detailed below.&lt;/p&gt;

@@ -37,7 +37,7 @@
 
 &lt;h2 id=&#34;theming-consideration&#34;&gt;Theming consideration&lt;/h2&gt;
 
-&lt;p&gt;Most Vanilla Forums customize their theme, which can have a huge impact on accessibility.&lt;/p&gt;
+&lt;aside class=&#34;note&#34;&gt;Most Vanilla Forums customize their theme, which can have a huge impact on accessibility.&lt;/aside&gt;
 
 &lt;p&gt;Choices of color and font size are obvious considerations, but because our powerful theming engine also allows for the override of HTML markup, it&amp;rsquo;s important to consider that individual sites may vary wildly in their degree of accessibility.&lt;/p&gt;
 
@@ -60,6 +60,12 @@
       
       <guid>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;disabling-badges&#34;&gt;Disabling badges&lt;/h2&gt;
 
@@ -163,6 +169,12 @@
       
       <guid>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;selecting-reactions&#34;&gt;Selecting Reactions&lt;/h2&gt;
 
@@ -409,6 +421,12 @@
       <guid>//vanilla.github.io/docs/help/addons/badges/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.&lt;/p&gt;
@@ -508,6 +526,12 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
       
       <guid>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;curating-with-reactions&#34;&gt;Curating with Reactions&lt;/h2&gt;
 

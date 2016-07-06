@@ -755,7 +755,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;h2 id=&#34;theming-services-overview&#34;&gt;Theming Services Overview&lt;/h2&gt;
 
-&lt;p&gt;Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on &lt;a href=&#34;http://vanillaforums.com/plans&#34;&gt;higher plan levels&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;higher plan levels&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Contact your customer success manager with your needs. We run the gamut from simple style matching (header, footer, color pallette) to fully customized designs from detailed mockups. Our estimates include the cost of revisions and deploying the theme to our infrastructure.&lt;/p&gt;
 </description>

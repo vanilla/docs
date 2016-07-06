@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016 on Vanilla Forums Documentation</title>
+    <link>//vanilla.github.io/docs/tags/2016/</link>
+    <description>Recent content in 2016 on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="//vanilla.github.io/docs/tags/2016/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>January 2016 Release</title>
+      <link>//vanilla.github.io/docs/help/cloud/releases/january-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/help/cloud/releases/january-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Improved formatting of Vanilla Comments in certain input formats.&lt;/li&gt;
+&lt;li&gt;Updated Smarty template parsing library.&lt;/li&gt;
+&lt;li&gt;Fix an issue in draft saving.&lt;/li&gt;
+&lt;li&gt;Fix spam deletion error.&lt;/li&gt;
+&lt;li&gt;Update Editor to use files&amp;rsquo; real names when downloading.&lt;/li&gt;
+&lt;li&gt;Fix RSS feed when table view is in use.&lt;/li&gt;
+&lt;li&gt;Remove deprecated form field name prefixing.&lt;/li&gt;
+&lt;li&gt;Add more category data to VanillaPop emails.&lt;/li&gt;
+&lt;li&gt;Update gifv embed to prefer WebM.&lt;/li&gt;
+&lt;li&gt;Various low-level fixes for PHP 7 compatibility.&lt;/li&gt;
+&lt;li&gt;Fix CSRF check when deleting a ban.&lt;/li&gt;
+&lt;li&gt;Close open redirect &amp;amp; fix flood control in database updating endpoint.&lt;/li&gt;
+&lt;li&gt;Improve security in how Vimeo is embedded.&lt;/li&gt;
+&lt;li&gt;Add Wistia embed.&lt;/li&gt;
+&lt;li&gt;Enforce POST data for several endpoints.&lt;/li&gt;
+&lt;li&gt;Improve theme compatibility with Groups.&lt;/li&gt;
+&lt;li&gt;Automatically remove spaces around Banning rules to prevent bad data being entered.&lt;/li&gt;
+&lt;li&gt;Improve image resizing to always use highest quality images possible.&lt;/li&gt;
+&lt;li&gt;Fix Facebook SSO: retrieval of email address, avatar distortion, &amp;amp; name overwriting.&lt;/li&gt;
+&lt;li&gt;Remove &amp;ldquo;dashboard&amp;rdquo; namespace from several dashboard URLs.&lt;/li&gt;
+&lt;li&gt;Fix several MySQL strict mode errors.&lt;/li&gt;
+&lt;li&gt;Remove livequery jQuery extension and all remaining uses of it.&lt;/li&gt;
+&lt;li&gt;Remove base64 encoding from all asynchronous requests.&lt;/li&gt;
+&lt;li&gt;Allow setting of avatar via API.&lt;/li&gt;
+&lt;li&gt;Allow category permissions to be set via API.&lt;/li&gt;
+&lt;li&gt;Allow certain configurations to be set depending on permission level.&lt;/li&gt;
+&lt;li&gt;Re-add user count to the user list whenever possible based on size of table.&lt;/li&gt;
+&lt;li&gt;Give full formatting bar to Activity form.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>March 2016 Release</title>
+      <link>//vanilla.github.io/docs/help/cloud/releases/march-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/help/cloud/releases/march-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML emails now available.&lt;/li&gt;
+&lt;li&gt;Applicants list is now asynchronous with improved UI.&lt;/li&gt;
+&lt;li&gt;Spoilers added as core feature with updated formatting.&lt;/li&gt;
+&lt;li&gt;Automatic bans (from Banning rules) can now be reversed.&lt;/li&gt;
+&lt;li&gt;Reactions will now always show on all devices, instead of on-hover for larger screens (&amp;ldquo;desktop&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Sign In form now auto-focuses on Username field.&lt;/li&gt;
+&lt;li&gt;Fix newest comment data for zero-comment discussions in table view.&lt;/li&gt;
+&lt;li&gt;Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.&lt;/li&gt;
+&lt;li&gt;Remove line breaks in meta description.&lt;/li&gt;
+&lt;li&gt;Added events to support new analytics system.&lt;/li&gt;
+&lt;li&gt;Fix styling of &amp;lsquo;/me&amp;rsquo; posts.&lt;/li&gt;
+&lt;li&gt;QnA: Allow users to accept their own answer.&lt;/li&gt;
+&lt;li&gt;Reactions: Add an option to allow users to react to their own posts.&lt;/li&gt;
+&lt;li&gt;Add advanced editor options to New Poll screen.&lt;/li&gt;
+&lt;li&gt;Fix plus signs in URLs, especially usernames / profiles.&lt;/li&gt;
+&lt;li&gt;Improve SSO workflow for existing usernames.&lt;/li&gt;
+&lt;li&gt;Rework discussion sorting and filtering architecture.&lt;/li&gt;
+&lt;li&gt;Add no-store header to profiles so read/unread status updates on Back button.&lt;/li&gt;
+&lt;li&gt;Pockets: fix repeating pockets between discussions, and enable on table view.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fix category dropdown filtering when in a subcommunity.&lt;/li&gt;
+&lt;li&gt;Hide editor toolbar when previewing.&lt;/li&gt;
+&lt;li&gt;Fix double-deletion of comment drafts when posting, which could cause a Javascript error.&lt;/li&gt;
+&lt;li&gt;Fix scenario where Quotes could interfere with Spoilers.&lt;/li&gt;
+&lt;li&gt;Vanillicons: Now defaults to v2.&lt;/li&gt;
+&lt;li&gt;NBBC: Fix scenario that could break search results formatting.&lt;/li&gt;
+&lt;li&gt;Fix opaque photo cropping box.&lt;/li&gt;
+&lt;li&gt;Fix and unify logic for determining permission to edit a user&amp;rsquo;s photo.&lt;/li&gt;
+&lt;li&gt;Allow quotes to be collapsed in reported posts.&lt;/li&gt;
+&lt;li&gt;Allow collapsing of quotes with alternate formatting.&lt;/li&gt;
+&lt;li&gt;Make even deeply-nested quotes minimally legible.&lt;/li&gt;
+&lt;li&gt;Update dropdown menu rendering in several places.&lt;/li&gt;
+&lt;li&gt;Update number formatting for discussion &amp;amp; comment counts on All Categories page.&lt;/li&gt;
+&lt;li&gt;Update stock themes for Ideation.&lt;/li&gt;
+&lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;new-addons-available&#34;&gt;New addons available:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
+&lt;li&gt;Microsoft Account SSO&lt;/li&gt;
+&lt;li&gt;CAS SSO&lt;/li&gt;
+&lt;li&gt;Keyword Blocker (send posts with certain keywords to mod queue)&lt;/li&gt;
+&lt;li&gt;Necro Posts (labels recently-revived discussions)&lt;/li&gt;
+&lt;li&gt;User Points Booster (allow awarding points for discussions or comments)&lt;/li&gt;
+&lt;li&gt;Whitelist (provide an IP whitelist for site access)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>May 2016 Release</title>
+      <link>//vanilla.github.io/docs/help/cloud/releases/may-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/help/cloud/releases/may-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upgrade to reCaptcha 2 (&amp;ldquo;NoCaptcha&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Make &amp;ldquo;NBBC&amp;rdquo; our new BBCode parsing library by default (no more plugin).&lt;/li&gt;
+&lt;li&gt;Add ability for SAML SSO to not be the default login method.&lt;/li&gt;
+&lt;li&gt;Allow moving a discussion between subcommunities.&lt;/li&gt;
+&lt;li&gt;Add support for switching subcommunities.&lt;/li&gt;
+&lt;li&gt;Improve category scaling.&lt;/li&gt;
+&lt;li&gt;Make activities self-prune after 2 months to improve performance.&lt;/li&gt;
+&lt;li&gt;Always redirect to the first page after saving a discussion.&lt;/li&gt;
+&lt;li&gt;Add analytics tracking for Q&amp;amp;A&amp;rsquo;s accepted answers (coming soon to analytics).&lt;/li&gt;
+&lt;li&gt;Allow censoring content in conversation message notifications.&lt;/li&gt;
+&lt;li&gt;Allow censoring poll votes in comments.&lt;/li&gt;
+&lt;li&gt;Fix a number of edge cases where certain actions could block other actions without a page refresh.&lt;/li&gt;
+&lt;li&gt;Fix condition where category announcements disappeared from recent discussions page.&lt;/li&gt;
+&lt;li&gt;Add caching for the default authentication provider.&lt;/li&gt;
+&lt;li&gt;Improve security in signin redirects.&lt;/li&gt;
+&lt;li&gt;Improve use of &amp;lsquo;Alt&amp;rsquo; CSS class, which will be removed eventually (now redundant with current CSS specs).&lt;/li&gt;
+&lt;li&gt;Add option to configure a redirect after logout on Auth0 plugin.&lt;/li&gt;
+&lt;li&gt;Update Triple-A and Bootstrap 3 themes.&lt;/li&gt;
+&lt;li&gt;Fix issue where Vimeo and Instagram embeds overflow out of the Best Of Tiles.&lt;/li&gt;
+&lt;li&gt;Fix where SplitMerge addon may be unable to save split discussion with &amp;ldquo;Html&amp;rdquo; format.&lt;/li&gt;
+&lt;li&gt;Fix the love bug (various problems with &amp;lt; 3 in user-generated content).&lt;/li&gt;
+&lt;li&gt;Prevent unneeded recurring updates in dashboard&amp;rsquo;s database updater.&lt;/li&gt;
+&lt;li&gt;Fix Gravatar&amp;rsquo;s use of system default avatar.&lt;/li&gt;
+&lt;li&gt;Add optional rating parameter to Gravatar.&lt;/li&gt;
+&lt;li&gt;Fix GitHub signin and API permission issues.&lt;/li&gt;
+&lt;li&gt;Fix new discussion button showing in subcommunity when user has no permission.&lt;/li&gt;
+&lt;li&gt;Allow the Photo field to be set in /profile/edit.&lt;/li&gt;
+&lt;li&gt;Only use CommentID for spam check if available.&lt;/li&gt;
+&lt;li&gt;Fix incorrect permission being checked in some category management actions.&lt;/li&gt;
+&lt;li&gt;Groups: Simplify &amp;amp; fix event timezone handling.&lt;/li&gt;
+&lt;li&gt;Make initial spoiler text the same colour as its background.&lt;/li&gt;
+&lt;li&gt;Fix RSS title encoding.&lt;/li&gt;
+&lt;li&gt;Add the ability to capture a user&amp;rsquo;s time zone.&lt;/li&gt;
+&lt;li&gt;Fix LinkedIn &amp;ldquo;profile connect&amp;rdquo; feature.&lt;/li&gt;
+&lt;li&gt;Move Recaptcha into a plugin&lt;/li&gt;
+&lt;li&gt;Add support for Instagram embeds in Mobile 2014.&lt;/li&gt;
+&lt;li&gt;Do more image optimizations.&lt;/li&gt;
+&lt;li&gt;Fix Safari issue where back button wouldn&amp;rsquo;t refresh the page.&lt;/li&gt;
+&lt;li&gt;Fixes issue where people can quote a post and see uncensored content.&lt;/li&gt;
+&lt;li&gt;Remove gender from user-facing elements like registration.&lt;/li&gt;
+&lt;li&gt;Prevent &amp;ldquo;Messages&amp;rdquo; from being displayed when you do not have view permission.&lt;/li&gt;
+&lt;li&gt;QnA: Return the correct number of questions for a subcommunity.&lt;/li&gt;
+&lt;li&gt;Switch YouTube links to https.&lt;/li&gt;
+&lt;li&gt;Fix mention issues including using an &amp;lsquo;@&amp;rsquo; in the middle of two words.&lt;/li&gt;
+&lt;li&gt;Fix PNG compression issues in file uploads.&lt;/li&gt;
+&lt;li&gt;Fix some minor issues that could make spoilers malfunction.&lt;/li&gt;
+&lt;li&gt;Add a safety feature to avoid too-big database changes all at once.&lt;/li&gt;
+&lt;li&gt;Allow any user with moderate permission to add discussions and events in a group.&lt;/li&gt;
+&lt;li&gt;Fix aggressive span stripping in the HTML purifier.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
