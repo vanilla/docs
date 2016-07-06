@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ranks on Vanilla Forums Documentation</title>
-    <link>http://vanilla.github.io/docs/tags/ranks/</link>
+    <link>//vanilla.github.io/docs/tags/ranks/</link>
     <description>Recent content in Ranks on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://vanilla.github.io/docs/tags/ranks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//vanilla.github.io/docs/tags/ranks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>http://vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -74,10 +74,10 @@
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>http://vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -92,10 +92,10 @@
     
     <item>
       <title>Using Ranks as Incentives</title>
-      <link>http://vanilla.github.io/docs/help/addons/ranks/using-ranks-as-incentives/</link>
+      <link>//vanilla.github.io/docs/help/addons/ranks/using-ranks-as-incentives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/help/addons/ranks/using-ranks-as-incentives/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/ranks/using-ranks-as-incentives/</guid>
       <description>
 
 &lt;h2 id=&#34;using-ranks-incentives&#34;&gt;Using Ranks: Incentives&lt;/h2&gt;
@@ -148,10 +148,10 @@
     
     <item>
       <title>Using Ranks to Defeat Spam or Abuse</title>
-      <link>http://vanilla.github.io/docs/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
+      <link>//vanilla.github.io/docs/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
       <description>
 
 &lt;h2 id=&#34;using-ranks-spam&#34;&gt;Using Ranks: Spam&lt;/h2&gt;

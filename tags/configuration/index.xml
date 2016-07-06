@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Configuration on Vanilla Forums Documentation</title>
-    <link>http://vanilla.github.io/docs/tags/configuration/</link>
+    <link>//vanilla.github.io/docs/tags/configuration/</link>
     <description>Recent content in Configuration on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://vanilla.github.io/docs/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//vanilla.github.io/docs/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Banner Settings</title>
-      <link>http://vanilla.github.io/docs/developer/configuration/banner/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/banner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/developer/configuration/banner/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/banner/</guid>
       <description>
 
 &lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
@@ -33,10 +33,10 @@
     
     <item>
       <title>Configuration</title>
-      <link>http://vanilla.github.io/docs/developer/configuration/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/developer/configuration/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/</guid>
       <description>
 
 &lt;h2 id=&#34;vanilla-configuration-files&#34;&gt;Vanilla configuration files&lt;/h2&gt;
@@ -89,10 +89,10 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
     
     <item>
       <title>Dashboard</title>
-      <link>http://vanilla.github.io/docs/developer/configuration/dashboard/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/dashboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/developer/configuration/dashboard/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/dashboard/</guid>
       <description>
 
 &lt;h2 id=&#34;dashboard&#34;&gt;Dashboard&lt;/h2&gt;
@@ -109,10 +109,10 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
     
     <item>
       <title>Homepage Settings</title>
-      <link>http://vanilla.github.io/docs/developer/configuration/homepage/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/homepage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/developer/configuration/homepage/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/homepage/</guid>
       <description>
 
 &lt;h2 id=&#34;homepage&#34;&gt;Homepage&lt;/h2&gt;
@@ -123,10 +123,10 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
     
     <item>
       <title>Messages</title>
-      <link>http://vanilla.github.io/docs/developer/configuration/message/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/message/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/developer/configuration/message/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/message/</guid>
       <description>
 
 &lt;h2 id=&#34;messages&#34;&gt;Messages&lt;/h2&gt;
@@ -149,21 +149,21 @@ Message options:&lt;/p&gt;
     
     <item>
       <title>Using The Config</title>
-      <link>http://vanilla.github.io/docs/developer/configuration/using/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/using/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://vanilla.github.io/docs/developer/configuration/using/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/using/</guid>
       <description>
 
 &lt;h2 id=&#34;when-to-use-the-config&#34;&gt;When to use the config&lt;/h2&gt;
 
 &lt;p&gt;Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.&lt;/p&gt;
 
-&lt;p&gt;If you have large quantities of data or data that is written frequently, consider using the &lt;a href=&#34;http://vanilla.github.io/docs/developer/framework/database&#34;&gt;database&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;If you have large quantities of data or data that is written frequently, consider using the &lt;a href=&#34;//vanilla.github.io/docs/developer/framework/database&#34;&gt;database&lt;/a&gt; instead.&lt;/p&gt;
 
 &lt;h2 id=&#34;reading-from-config&#34;&gt;Reading from config&lt;/h2&gt;
 
-&lt;p&gt;The &lt;code&gt;c&lt;/code&gt; function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in &lt;a href=&#34;http://vanilla.github.io/docs/developer/configuration&#34;&gt;dot notation&lt;/a&gt;. The second is an optional default value to return if requested config setting is not defined.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;c&lt;/code&gt; function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in &lt;a href=&#34;//vanilla.github.io/docs/developer/configuration&#34;&gt;dot notation&lt;/a&gt;. The second is an optional default value to return if requested config setting is not defined.&lt;/p&gt;
 
 &lt;p&gt;Example:
 &lt;code&gt;$Value = c(&#39;Name.Of.Setting&#39;, &#39;DefaultValue&#39;);&lt;/code&gt;&lt;/p&gt;
