@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jsconnect on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/jsconnect/</link>
+    <link>http://docs.vanillaforums.com/tags/jsconnect/</link>
     <description>Recent content in Jsconnect on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/jsconnect/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://docs.vanillaforums.com/tags/jsconnect/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Embedded</title>
-      <link>http://127.0.0.1:8080/help/features/sso/jsconnect/embed/</link>
+      <link>http://docs.vanillaforums.com/help/features/sso/jsconnect/embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/features/sso/jsconnect/embed/</guid>
+      <guid>http://docs.vanillaforums.com/help/features/sso/jsconnect/embed/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-with-seamless-jsconnect&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;
@@ -83,10 +83,10 @@ That&amp;rsquo;s it! The value of vanilla_sso from above is what you put in your
     
     <item>
       <title>Seamless Setup</title>
-      <link>http://127.0.0.1:8080/help/features/sso/jsconnect/seamless/</link>
+      <link>http://docs.vanillaforums.com/help/features/sso/jsconnect/seamless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/features/sso/jsconnect/seamless/</guid>
+      <guid>http://docs.vanillaforums.com/help/features/sso/jsconnect/seamless/</guid>
       <description>
 
 &lt;h2 id=&#34;seamless-sso-with-jsconnect&#34;&gt;Seamless SSO with jsConnect&lt;/h2&gt;
@@ -269,10 +269,10 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
     
     <item>
       <title>Technical Overview</title>
-      <link>http://127.0.0.1:8080/help/features/sso/jsconnect/overview/</link>
+      <link>http://docs.vanillaforums.com/help/features/sso/jsconnect/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/features/sso/jsconnect/overview/</guid>
+      <guid>http://docs.vanillaforums.com/help/features/sso/jsconnect/overview/</guid>
       <description>
 
 &lt;h2 id=&#34;jsconnect&#34;&gt;jsConnect&lt;/h2&gt;
@@ -309,9 +309,9 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 &lt;li&gt;&lt;a href=&#34;https://github.com/vanillaforums/jsConnectdotNet&#34;&gt;.NET jsConnect client library&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;All of these libraries have one file with all of the library code you&amp;rsquo;ll need and one file that gives an example usage. They also have a readme that tells you which file is which. &lt;em&gt;Please note that these libraries don&amp;rsquo;t support &lt;a href=&#34;http://127.0.0.1:8080/help/features/sso/jsconnect/embed&#34;&gt;embedded SSO&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;All of these libraries have one file with all of the library code you&amp;rsquo;ll need and one file that gives an example usage. They also have a readme that tells you which file is which. &lt;em&gt;Please note that these libraries don&amp;rsquo;t support &lt;a href=&#34;http://docs.vanillaforums.com/help/features/sso/jsconnect/embed&#34;&gt;embedded SSO&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;If your site is programmed in a language that doesn&amp;rsquo;t have a client library then we provide documentation on our jsConnect protocol. Have a look at the &lt;a href=&#34;http://127.0.0.1:8080/help/features/sso/jsconnect/seamless&#34;&gt;jsConnect technical implementation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If your site is programmed in a language that doesn&amp;rsquo;t have a client library then we provide documentation on our jsConnect protocol. Have a look at the &lt;a href=&#34;http://docs.vanillaforums.com/help/features/sso/jsconnect/seamless&#34;&gt;jsConnect technical implementation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;how-jsconnect-maps-users&#34;&gt;How jsConnect maps users&lt;/h2&gt;
 
@@ -383,7 +383,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;&lt;strong&gt;Can we set roles over jsConnect?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Yes, see our &lt;a href=&#34;http://127.0.0.1:8080/help/features/sso/jsconnect/seamless&#34;&gt;technical documentation&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;Yes, see our &lt;a href=&#34;http://docs.vanillaforums.com/help/features/sso/jsconnect/seamless&#34;&gt;technical documentation&lt;/a&gt; for more information.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The settings &amp;amp; endpoint response look correct now, but it&amp;rsquo;s still not working or redirecting properly.&lt;/strong&gt;&lt;/p&gt;
 
@@ -395,10 +395,10 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
     
     <item>
       <title>jsConnect</title>
-      <link>http://127.0.0.1:8080/help/features/sso/jsconnect/</link>
+      <link>http://docs.vanillaforums.com/help/features/sso/jsconnect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/features/sso/jsconnect/</guid>
+      <guid>http://docs.vanillaforums.com/help/features/sso/jsconnect/</guid>
       <description>
 
 &lt;h2 id=&#34;jsconnect-concepts-overview&#34;&gt;jsConnect Concepts Overview&lt;/h2&gt;
@@ -456,7 +456,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;Clicking the &amp;ldquo;Sign In&amp;rdquo; button in Vanilla generates an asynchronous request &lt;strong&gt;in the user&amp;rsquo;s browser session&lt;/strong&gt; back to the main website. This means the user&amp;rsquo;s cookies are sent as if they had visited the page directly, and that your normal login detection logic will work.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8080/img/help/features/sso/jsconnect-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://docs.vanillaforums.com/img/help/features/sso/jsconnect-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;two-flavors-of-sso&#34;&gt;Two Flavors of SSO&lt;/h2&gt;
 
@@ -474,7 +474,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;When setting up a jsConnect connection in full-site mode, you have the option to specify it as &amp;ldquo;default&amp;rdquo;. Doing this attaches it to the special &lt;code&gt;/sso&lt;/code&gt; endpoint in Vanilla. When a user clicks &amp;ldquo;Forum&amp;rdquo; in your website&amp;rsquo;s navigation, instead of linking to the forum homepage, instead link them to the &lt;code&gt;/sso&lt;/code&gt; page. This will auto-fire the asynchronous call back to your website rather than waiting for the user to click &amp;ldquo;sign in&amp;rdquo;, then drops them on the homepage as normal.&lt;/p&gt;
 
-&lt;p&gt;For more information, read our &lt;a href=&#34;http://127.0.0.1:8080/help/features/sso/jsconnect/overview&#34;&gt;technical overview&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more information, read our &lt;a href=&#34;http://docs.vanillaforums.com/help/features/sso/jsconnect/overview&#34;&gt;technical overview&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;wordpress-plugin&#34;&gt;WordPress plugin&lt;/h2&gt;
 

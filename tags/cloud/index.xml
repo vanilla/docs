@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/cloud/</link>
+    <link>http://docs.vanillaforums.com/tags/cloud/</link>
     <description>Recent content in Cloud on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://docs.vanillaforums.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cloud Services</title>
-      <link>http://127.0.0.1:8080/help/cloud/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/</guid>
       <description>
 
 &lt;h2 id=&#34;cloud-services-overview&#34;&gt;Cloud Services Overview&lt;/h2&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>Integration Services</title>
-      <link>http://127.0.0.1:8080/help/cloud/integration/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/integration/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/integration/</guid>
       <description>
 
 &lt;h2 id=&#34;integration-services&#34;&gt;Integration Services&lt;/h2&gt;
@@ -41,10 +41,10 @@
     
     <item>
       <title>Logging</title>
-      <link>http://127.0.0.1:8080/help/cloud/logging/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/logging/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/logging/</guid>
       <description>
 
 &lt;h2 id=&#34;advanced-logging&#34;&gt;Advanced logging&lt;/h2&gt;
@@ -95,10 +95,10 @@
     
     <item>
       <title>Migration Services</title>
-      <link>http://127.0.0.1:8080/help/cloud/migration/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/migration/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/migration/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -187,16 +187,16 @@
 
 &lt;p&gt;Most &lt;a href=&#34;http://docs.vanillaforums.com/features/sso/&#34;&gt;single sign-on services&lt;/a&gt; work by matching accounts based on email address. To work in this scenario, the authentication endpoint must construct (or have on record) an identical dummy email address. This allows the seamless authentication of the user against the correct account without using real personal info.&lt;/p&gt;
 
-&lt;p&gt;More information is available from our &lt;a href=&#34;https://vanillaforums.com/info/privacy&#34;&gt;Privacy Policy&lt;/a&gt; and our &lt;a href=&#34;http://127.0.0.1:8080/developer/data-privacy&#34;&gt;developer docs on data privacy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More information is available from our &lt;a href=&#34;https://vanillaforums.com/info/privacy&#34;&gt;Privacy Policy&lt;/a&gt; and our &lt;a href=&#34;http://docs.vanillaforums.com/developer/data-privacy&#34;&gt;developer docs on data privacy&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Multisite Features</title>
-      <link>http://127.0.0.1:8080/help/cloud/multisite/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/multisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/multisite/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/multisite/</guid>
       <description>
 
 &lt;h2 id=&#34;multisite-features&#34;&gt;Multisite Features&lt;/h2&gt;
@@ -211,7 +211,7 @@
 
 &lt;h3 id=&#34;the-hub&#34;&gt;The Hub&lt;/h3&gt;
 
-&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;http://127.0.0.1:8080/help/cloud/multisite/sync&#34;&gt;synched&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
+&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;http://docs.vanillaforums.com/help/cloud/multisite/sync&#34;&gt;synched&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
 
 &lt;p&gt;Each Node is accessible via either a subdomain &lt;em&gt;or&lt;/em&gt; a subfolder off a domain shared by the whole Hub. This is called the &lt;strong&gt;Hub URL Format&lt;/strong&gt;. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.&lt;/p&gt;
 
@@ -247,16 +247,16 @@
 
 &lt;h3 id=&#34;ssl-certificates&#34;&gt;SSL certificates&lt;/h3&gt;
 
-&lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;http://127.0.0.1:8080/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;http://docs.vanillaforums.com/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Multisite Sync</title>
-      <link>http://127.0.0.1:8080/help/cloud/multisite/sync/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/multisite/sync/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/multisite/sync/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/multisite/sync/</guid>
       <description>
 
 &lt;h2 id=&#34;hub-sync&#34;&gt;Hub Sync&lt;/h2&gt;
@@ -267,10 +267,10 @@
     
     <item>
       <title>Releases</title>
-      <link>http://127.0.0.1:8080/help/cloud/releases/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/releases/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/releases/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -372,10 +372,10 @@
     
     <item>
       <title>Repository</title>
-      <link>http://127.0.0.1:8080/help/cloud/repo/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/repo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/repo/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/repo/</guid>
       <description>
 
 &lt;h2 id=&#34;private-repository&#34;&gt;Private Repository&lt;/h2&gt;
@@ -402,10 +402,10 @@
     
     <item>
       <title>Staging Site</title>
-      <link>http://127.0.0.1:8080/help/cloud/staging/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/staging/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/staging/</guid>
       <description>
 
 &lt;h2 id=&#34;staging-site-overview&#34;&gt;Staging Site Overview&lt;/h2&gt;
@@ -414,7 +414,7 @@
 
 &lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
 
-&lt;p&gt;We will typically use your staging forum as the destination for your &lt;a href=&#34;http://127.0.0.1:8080/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support huge staging datasets in the longer-term.&lt;/p&gt;
+&lt;p&gt;We will typically use your staging forum as the destination for your &lt;a href=&#34;http://docs.vanillaforums.com/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support huge staging datasets in the longer-term.&lt;/p&gt;
 
 &lt;h3 id=&#34;access-precautions&#34;&gt;Access precautions&lt;/h3&gt;
 
@@ -434,10 +434,10 @@
     
     <item>
       <title>Support</title>
-      <link>http://127.0.0.1:8080/help/cloud/support/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/support/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/support/</guid>
       <description>
 
 &lt;h2 id=&#34;cloud-support&#34;&gt;Cloud Support&lt;/h2&gt;
@@ -462,10 +462,10 @@
     
     <item>
       <title>Theming Services</title>
-      <link>http://127.0.0.1:8080/help/cloud/theming/</link>
+      <link>http://docs.vanillaforums.com/help/cloud/theming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/theming/</guid>
+      <guid>http://docs.vanillaforums.com/help/cloud/theming/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-services-overview&#34;&gt;Theming Services Overview&lt;/h2&gt;

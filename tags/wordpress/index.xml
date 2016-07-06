@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/wordpress/</link>
+    <link>http://docs.vanillaforums.com/tags/wordpress/</link>
     <description>Recent content in Wordpress on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://docs.vanillaforums.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>WishList Integration</title>
-      <link>http://127.0.0.1:8080/help/features/wordpress/wishlist/</link>
+      <link>http://docs.vanillaforums.com/help/features/wordpress/wishlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/features/wordpress/wishlist/</guid>
+      <guid>http://docs.vanillaforums.com/help/features/wordpress/wishlist/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WordPress Integration</title>
-      <link>http://127.0.0.1:8080/help/features/wordpress/</link>
+      <link>http://docs.vanillaforums.com/help/features/wordpress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/features/wordpress/</guid>
+      <guid>http://docs.vanillaforums.com/help/features/wordpress/</guid>
       <description></description>
     </item>
     
