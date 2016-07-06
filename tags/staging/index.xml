@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Staging on Vanilla Forums Documentation</title>
-    <link>http://docs.vanillaforums.com/tags/staging/</link>
+    <link>http://vanilla.github.io/docs/tags/staging/</link>
     <description>Recent content in Staging on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://docs.vanillaforums.com/tags/staging/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://vanilla.github.io/docs/tags/staging/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Staging Site</title>
-      <link>http://docs.vanillaforums.com/help/cloud/staging/</link>
+      <link>http://vanilla.github.io/docs/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/help/cloud/staging/</guid>
+      <guid>http://vanilla.github.io/docs/help/cloud/staging/</guid>
       <description>
 
 &lt;h2 id=&#34;staging-site-overview&#34;&gt;Staging Site Overview&lt;/h2&gt;
@@ -21,7 +21,7 @@
 
 &lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
 
-&lt;p&gt;We will typically use your staging forum as the destination for your &lt;a href=&#34;http://docs.vanillaforums.com/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support huge staging datasets in the longer-term.&lt;/p&gt;
+&lt;p&gt;We will typically use your staging forum as the destination for your &lt;a href=&#34;http://vanilla.github.io/docs/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support huge staging datasets in the longer-term.&lt;/p&gt;
 
 &lt;h3 id=&#34;access-precautions&#34;&gt;Access precautions&lt;/h3&gt;
 

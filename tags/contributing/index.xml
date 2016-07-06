@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contributing on Vanilla Forums Documentation</title>
-    <link>http://docs.vanillaforums.com/tags/contributing/</link>
+    <link>http://vanilla.github.io/docs/tags/contributing/</link>
     <description>Recent content in Contributing on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://docs.vanillaforums.com/tags/contributing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://vanilla.github.io/docs/tags/contributing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Code of Conduct</title>
-      <link>http://docs.vanillaforums.com/developer/contributing/conduct/</link>
+      <link>http://vanilla.github.io/docs/developer/contributing/conduct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/developer/contributing/conduct/</guid>
+      <guid>http://vanilla.github.io/docs/developer/contributing/conduct/</guid>
       <description>
 
 &lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h2&gt;
@@ -44,10 +44,10 @@
     
     <item>
       <title>Coding Standard</title>
-      <link>http://docs.vanillaforums.com/developer/contributing/coding-standard/</link>
+      <link>http://vanilla.github.io/docs/developer/contributing/coding-standard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/developer/contributing/coding-standard/</guid>
+      <guid>http://vanilla.github.io/docs/developer/contributing/coding-standard/</guid>
       <description>
 
 &lt;h2 id=&#34;standards&#34;&gt;Standards&lt;/h2&gt;
@@ -739,10 +739,10 @@ other elements of style and practice.&lt;/p&gt;
     
     <item>
       <title>Contributing</title>
-      <link>http://docs.vanillaforums.com/developer/contributing/</link>
+      <link>http://vanilla.github.io/docs/developer/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/developer/contributing/</guid>
+      <guid>http://vanilla.github.io/docs/developer/contributing/</guid>
       <description>
 
 &lt;h2 id=&#34;how-to-contribute&#34;&gt;How to Contribute&lt;/h2&gt;
@@ -756,7 +756,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#triaging-issues&#34;&gt;Triage&lt;/a&gt; issues already reported!&lt;/li&gt;
 &lt;li&gt;Test &lt;a href=&#34;http://vanillaforums.org/categories/blog&#34;&gt;pre-releases&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Contribute &lt;a href=&#34;https://github.com/vanillaforums/VanillaDocs&#34;&gt;docs&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Help &lt;a href=&#34;http://docs.vanillaforums.com/developer/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Help &lt;a href=&#34;http://vanilla.github.io/docs/developer/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Evaluate community addons &amp;amp; offer feedback.&lt;/li&gt;
 &lt;li&gt;Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.&lt;/li&gt;
 &lt;/ol&gt;
@@ -764,9 +764,9 @@ other elements of style and practice.&lt;/p&gt;
 &lt;h3 id=&#34;developers&#34;&gt;Developers&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Contribute code via &lt;a href=&#34;http://docs.vanillaforums.com/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Contribute code via &lt;a href=&#34;http://vanilla.github.io/docs/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Contribute addons &amp;amp; themes to the &lt;a href=&#34;http://vanillaforums.org/addons&#34;&gt;Official Directory&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;http://docs.vanillaforums.com/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;http://vanilla.github.io/docs/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Sections of our contribution guidelines are adapted or copied from &lt;a href=&#34;https://swift.org/contributing/&#34;&gt;Swift&lt;/a&gt; because they are awesome.&lt;/p&gt;
@@ -799,10 +799,10 @@ other elements of style and practice.&lt;/p&gt;
     
     <item>
       <title>Pull Requests</title>
-      <link>http://docs.vanillaforums.com/developer/contributing/pull-requests/</link>
+      <link>http://vanilla.github.io/docs/developer/contributing/pull-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/developer/contributing/pull-requests/</guid>
+      <guid>http://vanilla.github.io/docs/developer/contributing/pull-requests/</guid>
       <description>
 
 &lt;h2 id=&#34;using-pull-requests-to-contribute-code&#34;&gt;Using pull requests to contribute code&lt;/h2&gt;
@@ -842,7 +842,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;li&gt;Did you target the correct branch (usually &lt;code&gt;master&lt;/code&gt;)?&lt;/li&gt;
 &lt;li&gt;Is your title written like a concise release note?&lt;/li&gt;
 &lt;li&gt;Does your description provide rationale for your change?&lt;/li&gt;
-&lt;li&gt;Did you carefully follow our &lt;a href=&#34;http://docs.vanillaforums.com/developer/contributing/coding-standard&#34;&gt;coding standards&lt;/a&gt;?&lt;/li&gt;
+&lt;li&gt;Did you carefully follow our &lt;a href=&#34;http://vanilla.github.io/docs/developer/contributing/coding-standard&#34;&gt;coding standards&lt;/a&gt;?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;feedback-on-pull-requests&#34;&gt;Feedback on pull requests&lt;/h3&gt;

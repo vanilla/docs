@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Saml on Vanilla Forums Documentation</title>
-    <link>http://docs.vanillaforums.com/tags/saml/</link>
+    <link>http://vanilla.github.io/docs/tags/saml/</link>
     <description>Recent content in Saml on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://docs.vanillaforums.com/tags/saml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://vanilla.github.io/docs/tags/saml/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SAML</title>
-      <link>http://docs.vanillaforums.com/help/features/sso/saml/</link>
+      <link>http://vanilla.github.io/docs/help/features/sso/saml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/help/features/sso/saml/</guid>
+      <guid>http://vanilla.github.io/docs/help/features/sso/saml/</guid>
       <description>
 
 &lt;h2 id=&#34;sso-with-saml-overview&#34;&gt;SSO with SAML: Overview&lt;/h2&gt;

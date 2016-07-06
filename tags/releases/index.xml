@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Releases on Vanilla Forums Documentation</title>
-    <link>http://docs.vanillaforums.com/tags/releases/</link>
+    <link>http://vanilla.github.io/docs/tags/releases/</link>
     <description>Recent content in Releases on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://docs.vanillaforums.com/tags/releases/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://vanilla.github.io/docs/tags/releases/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Releases</title>
-      <link>http://docs.vanillaforums.com/help/cloud/releases/</link>
+      <link>http://vanilla.github.io/docs/help/cloud/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/help/cloud/releases/</guid>
+      <guid>http://vanilla.github.io/docs/help/cloud/releases/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;

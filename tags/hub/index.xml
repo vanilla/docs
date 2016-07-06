@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hub on Vanilla Forums Documentation</title>
-    <link>http://docs.vanillaforums.com/tags/hub/</link>
+    <link>http://vanilla.github.io/docs/tags/hub/</link>
     <description>Recent content in Hub on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://docs.vanillaforums.com/tags/hub/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://vanilla.github.io/docs/tags/hub/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Vanilla Pop with Site Hub</title>
-      <link>http://docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</link>
+      <link>http://vanilla.github.io/docs/help/addons/vanilla-pop/site-hub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</guid>
+      <guid>http://vanilla.github.io/docs/help/addons/vanilla-pop/site-hub/</guid>
       <description>
 
 &lt;h2 id=&#34;differences&#34;&gt;Differences&lt;/h2&gt;
