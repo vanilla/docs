@@ -1,4 +1,4 @@
-baseurl: "/"
+baseurl: "//vanilla.github.io/docs"
 title: "Vanilla Forums Documentation"
 
 contentdir: "content"

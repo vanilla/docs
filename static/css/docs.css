@@ -804,6 +804,7 @@ a:hover {
   margin: 0px;
   list-style: none;
   border: 1px solid #DADADA;
+  border-bottom: 0px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 

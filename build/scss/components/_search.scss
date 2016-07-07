@@ -14,6 +14,7 @@
         list-style: none;
         
         border: 1px solid $borderShadow;
+        border-bottom: 0px;
         box-shadow: 0 6px 12px rgba(0,0,0,.175);
         
         &.open {
