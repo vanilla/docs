@@ -1,0 +1,61 @@
+.docs-header-search {
+    position: relative;
+
+    .docs-search-results {
+        position: absolute;
+        top: 42px;
+        right: 0px;
+        width: 280px;
+        display: none;
+        z-index: 15;
+        
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        
+        border: 1px solid $borderShadow;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        
+        &.open {
+            display: block;
+        }
+        
+        a {
+            display: block;
+        }
+        
+        li {
+
+            background: white;
+            text-align: left;
+            border-bottom: 1px solid $borderShadow;
+            padding: 10px;
+
+            .title {
+                font-size: 14px;
+                font-weight: bolder;
+                color: $darkText;
+            }
+
+            .tags {
+                display: block;
+                font-size: 12px;
+                font-weight: light;
+                margin-top: 3px;
+                color: $vanillaPink;
+            }
+
+            &:hover {
+                background: $vanillaBlue;
+
+                .title {
+                    color: white;
+                }
+
+                .tags {
+                    color: white;
+                }
+            }
+        }
+    }
+}

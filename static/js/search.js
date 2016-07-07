@@ -1,16 +1,15 @@
-;
-(function ($, window, document, undefined) {
-
+$(function($){
+    
     var cache = {
         set: function (key, val, exp) {
-            store.set(key, {
+            cache.store.set(key, {
                 val: val,
                 exp: exp,
                 time: new Date().getTime()
             });
         },
         get: function (key) {
-            var info = store.get(key);
+            var info = cache.store.get(key);
 
             if (!info) {
                 return null;
@@ -23,19 +22,20 @@
             return info.val;
         }
     };
+    cache.store = new $.store();
+    cache.store.set('docs', null);
 
     var docs = cache.get('docs'),
-            pages = [],
-            index;
+        pages = [],
+        index;
 
     if (docs) {
         pages = docs.pages;
         index = lunr.Index.load(docs.index);
-    }
-    else {
+    } else {
         index = lunr(function () {
             this.field('title', 10);
-            this.field('categories', 5);
+            this.field('tags', 5);
             this.field('content');
             this.ref('url');
         });
@@ -44,7 +44,7 @@
             url: $('#search-manifest').attr('src')
         })
         .done(function (data) {
-            $.each(data.docs, function (i, doc) {
+            $.each(data, function (i, doc) {
                 // Decode the URL encoded content
                 doc.content = decodeURI(doc.content);
 
@@ -59,14 +59,18 @@
         });
     }
 
-    var $search = $('.js-search'),
-            $results = $('.js-search-results'),
-            $template = $results.find('li');
+    var $results = $('.js-search-results'),
+        $template = $results.find('a');
 
     var searchHandler = function (e) {
         var $input = $(e.currentTarget),
-                matches = [],
-                query = $input.val();
+            matches = [],
+            query = $input.val();
+    
+        if (query.length < 3) {
+            $results.removeClass('open');
+            return;
+        }
 
         index.search(query).map(function (match) {
             $.each(pages, function (i, page) {
@@ -86,29 +90,22 @@
             $.each(matches, function (i, match) {
                 var url = match.url,
                     title = match.title,
-                    categories = match.categories.join(' / '),
+                    categories = match.tags.join(' / '),
                     $item = $template.clone();
 
-                $item.find('a').attr('href', url);
+                $item.attr('href', url);
                 $item.find('.title').text(title);
-                $item.find('.categories').text(categories);
+                $item.find('.tags').text(categories);
 
                 $results.append($item);
             });
 
-            $search.addClass('open');
-        }
-        else {
-            $search.removeClass('open');
+            $results.addClass('open');
+        } else {
+            $results.removeClass('open');
         }
     };
 
     $(document).on('input', '.js-search-input', searchHandler);
 
-//    var $docsNav = $('.js-docs-nav'),
-//            $footer = $('.js-footer'),
-//            $panelCol = $docsNav.parent();
-//
-//    $panelCol.css('min-height', $docsNav.outerHeight(true));
-
-})(jQuery, window, document);
+});

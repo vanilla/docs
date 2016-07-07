@@ -789,6 +789,65 @@ a:hover {
   border-bottom: 1px dotted #0291DB;
 }
 
+.docs-header-search {
+  position: relative;
+}
+
+.docs-header-search .docs-search-results {
+  position: absolute;
+  top: 42px;
+  right: 0px;
+  width: 280px;
+  display: none;
+  z-index: 15;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  border: 1px solid #DADADA;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.docs-header-search .docs-search-results.open {
+  display: block;
+}
+
+.docs-header-search .docs-search-results a {
+  display: block;
+}
+
+.docs-header-search .docs-search-results li {
+  background: white;
+  text-align: left;
+  border-bottom: 1px solid #DADADA;
+  padding: 10px;
+}
+
+.docs-header-search .docs-search-results li .title {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #333333;
+}
+
+.docs-header-search .docs-search-results li .tags {
+  display: block;
+  font-size: 12px;
+  font-weight: light;
+  margin-top: 3px;
+  color: #F52C6E;
+}
+
+.docs-header-search .docs-search-results li:hover {
+  background: #0291DB;
+}
+
+.docs-header-search .docs-search-results li:hover .title {
+  color: white;
+}
+
+.docs-header-search .docs-search-results li:hover .tags {
+  color: white;
+}
+
 .docs.docs-layout-section-developer .docs-header {
   background-color: #333333;
 }

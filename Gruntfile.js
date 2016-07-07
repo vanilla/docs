@@ -27,8 +27,8 @@ module.exports = function (grunt) {
                 tasks: ['sass_globbing', 'sass', 'postcss']
             },
             hugo: {
-                files: ['content/**', 'layouts/**', 'data/**', 'static/**'],
-                tasks: ['hugo:dev']
+                files: ['content/**', 'layouts/**', 'data/**', 'static/**', '!static/js/lunr-index.json'],
+                tasks: ['hugo:dev', 'index']
             }
         },
         
@@ -41,6 +41,15 @@ module.exports = function (grunt) {
                     base: 'public',
                     livereload: true
                 }
+            }
+        },
+        
+        clean: {
+            dist: {
+                src: [
+                    '.tmp',
+                    'public/'
+                ]
             }
         },
         
@@ -66,7 +75,7 @@ module.exports = function (grunt) {
         sass_globbing: {
             docs: {
                 files: {
-                    'build/scss/_componentsMap.scss': 'build/scss/components/**/*.scss'
+                    'build/tmp/_componentsMap.scss': 'build/scss/components/**/*.scss'
                 },
                 options: {
                     useSingleQuotes: false
@@ -98,6 +107,25 @@ module.exports = function (grunt) {
             }
         },
         
+//        filerev: {
+//            options: {
+//                algorithm: 'md5',
+//                length: 8
+//            },
+//            json: {
+//                src: 'public/js/*.json'
+//            },
+//            images: {
+//                src: 'public/img/**/*.{svg,png,jpg}'
+//            },
+//            assets: {
+//                src: [
+//                    'public/js/**/*.js',
+//                    'public/css/**/*.css'
+//                ]
+//            }
+//        },
+        
         lunr_index: {
             options: {
                 source: 'content',
@@ -127,36 +155,81 @@ module.exports = function (grunt) {
         'build'
     ]);
 
+    /*
+     * Builds the whole site from scratch
+     * 
+     * hugo: prepares public/ HTML from content
+     * css: builds css from scss
+     * js: prepares javascript
+     * index: runs lunr index
+     * clean: revisions and minifies files
+     */
     grunt.registerTask('build', [
+        'clean',
+        'hugo',
         'css',
         'js',
-        'hugo',
-        'index'
+        'index',
+        'varnish'
     ]);
     
-    grunt.registerTask('edit', [
-        'connect',
-        'watch'
-    ]);
-    
+    /*
+     * This task builds and prepares css
+     * 
+     * sass_globbing: supports wildcard @import statements
+     * sass: builds scss files into css
+     * postcss: prefixes css statements with browser-specific versions
+     */
     grunt.registerTask('css', [
         'sass_globbing',
         'sass',
         'postcss'
     ]);
     
+    /*
+     * This task would perform javascript related tasks
+     */
     grunt.registerTask('js', [
         
+    ]);
+    
+    /*
+     * This task cleans up the generated HTML
+     */
+    grunt.registerTask('varnish', [
+//        'useminPrepare',
+//        'concat',
+//        'uglify',
+//        'cssmin',
+//        'filerev',
+//        'usemin'
     ]);
     
     grunt.registerTask('index', [
         'lunr_index'
     ]);
     
+    /*
+     * Allows live editing
+     * 
+     * connect: creates a server
+     * watch: waits for changes to source files and re-runs grunt tasks
+     */
+    grunt.registerTask('edit', [
+        'connect',
+        'watch'
+    ]);
+    
+    /*
+     * Deploys dist (public/) files to gh-pages branch
+     */
     grunt.registerTask('push', [
         'gh-pages:push'
     ]);
     
+    /*
+     * Creates lunr.js index of content
+     */
     grunt.registerTask("lunr_index", function() {
 
         grunt.log.writeln("Build lunr index");
@@ -217,7 +290,7 @@ module.exports = function (grunt) {
             pageIndex = {
                 title: frontMatter.title,
                 tags: frontMatter.tags,
-                href: href,
+                url: href,
                 content: S(ydata.content).trim().stripTags().stripPunctuation().s
             };
 
@@ -227,6 +300,9 @@ module.exports = function (grunt) {
         grunt.file.write(options.dest, JSON.stringify(indexPages()));
     });
     
+    /*
+     * Compiles hugo content into HTML
+     */
     grunt.registerTask('hugo', function (target) {
         var options = this.options();
         var target = target || 'final';

@@ -6,3 +6,4 @@ npm-debug.log
 node_modules/
 public/
 .grunt
+build/tmp/_componentsMap.scss
