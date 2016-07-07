@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Helps on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/help/</link>
+    <link>/help/</link>
     <description>Recent content in Helps on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/help/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/help/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Accessibility</title>
-      <link>//vanilla.github.io/docs/help/features/accessibility/</link>
+      <link>/help/features/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/accessibility/</guid>
+      <guid>/help/features/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -55,14 +55,14 @@
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</link>
+      <link>/help/addons/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>/help/addons/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -99,10 +99,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>/help/addons/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -164,14 +164,14 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>/help/addons/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>/help/addons/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -182,7 +182,7 @@
 
 &lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
@@ -204,7 +204,7 @@
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
 
@@ -216,10 +216,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -238,10 +238,10 @@
     
     <item>
       <title>Addons</title>
-      <link>//vanilla.github.io/docs/help/addons/</link>
+      <link>/help/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/</guid>
+      <guid>/help/addons/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-addons&#34;&gt;What Are Addons?&lt;/h2&gt;
@@ -274,10 +274,10 @@
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//vanilla.github.io/docs/help/features/embedding/advanced/</link>
+      <link>/help/features/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/embedding/advanced/</guid>
+      <guid>/help/features/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -397,10 +397,10 @@
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>/help/addons/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -415,14 +415,14 @@
     
     <item>
       <title>Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/</link>
+      <link>/help/addons/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/</guid>
+      <guid>/help/addons/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -451,10 +451,10 @@
     
     <item>
       <title>Categories</title>
-      <link>//vanilla.github.io/docs/help/features/categories/</link>
+      <link>/help/features/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/categories/</guid>
+      <guid>/help/features/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
@@ -521,14 +521,14 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Cloud Services</title>
-      <link>//vanilla.github.io/docs/help/cloud/</link>
+      <link>/help/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/cloud/</guid>
+      <guid>/help/cloud/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -543,14 +543,14 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Curating with Reactions</title>
-      <link>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</link>
+      <link>/help/addons/reactions/curating-with-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</guid>
+      <guid>/help/addons/reactions/curating-with-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -589,10 +589,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Default Role Types</title>
-      <link>//vanilla.github.io/docs/help/features/roles-permissions/default-role-types/</link>
+      <link>/help/features/roles-permissions/default-role-types/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/roles-permissions/default-role-types/</guid>
+      <guid>/help/features/roles-permissions/default-role-types/</guid>
       <description>
 
 &lt;h2 id=&#34;default-role-types&#34;&gt;Default Role Types&lt;/h2&gt;
@@ -601,10 +601,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Emails</title>
-      <link>//vanilla.github.io/docs/help/features/emails/</link>
+      <link>/help/features/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/emails/</guid>
+      <guid>/help/features/emails/</guid>
       <description>
 
 &lt;h2 id=&#34;email-appearance&#34;&gt;Email Appearance&lt;/h2&gt;
@@ -634,10 +634,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Embedded</title>
-      <link>//vanilla.github.io/docs/help/features/sso/jsconnect/embed/</link>
+      <link>/help/features/sso/jsconnect/embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/sso/jsconnect/embed/</guid>
+      <guid>/help/features/sso/jsconnect/embed/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-with-seamless-jsconnect&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;

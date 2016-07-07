@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Functions on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/functions/</link>
+    <link>/tags/functions/</link>
     <description>Recent content in Functions on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/functions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/functions/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Smarty Functions</title>
-      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/</link>
+      <link>/developer/theming/smarty/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/</guid>
+      <guid>/developer/theming/smarty/functions/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-functions&#34;&gt;Smarty Functions&lt;/h2&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installation on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/installation/</link>
+    <link>/tags/installation/</link>
     <description>Recent content in Installation on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/installation/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Installation</title>
-      <link>//vanilla.github.io/docs/developer/installation/</link>
+      <link>/developer/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/installation/</guid>
+      <guid>/developer/installation/</guid>
       <description>
 
 &lt;h2 id=&#34;installing-vanilla&#34;&gt;Installing Vanilla&lt;/h2&gt;

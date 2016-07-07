@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Training on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/training/</link>
+    <link>/tags/training/</link>
     <description>Recent content in Training on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/training/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/training/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Help and Training</title>
-      <link>//vanilla.github.io/docs/help/</link>
+      <link>/help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/</guid>
+      <guid>/help/</guid>
       <description>
 
 &lt;h2 id=&#34;welcome&#34;&gt;Welcome!&lt;/h2&gt;

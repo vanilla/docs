@@ -2,535 +2,535 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//vanilla.github.io/docs/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/accessibility/</loc>
+    <loc>/help/features/accessibility/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</loc>
+    <loc>/help/addons/badges/adding-and-editing-badges/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</loc>
+    <loc>/help/addons/ranks/adding-and-editing-ranks/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</loc>
+    <loc>/help/addons/reactions/adding-and-editing-reactions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</loc>
+    <loc>/help/addons/warnings-and-notes/adding-and-editing-user-notes/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/</loc>
+    <loc>/help/addons/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/embedding/advanced/</loc>
+    <loc>/help/features/embedding/advanced/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</loc>
+    <loc>/help/addons/ranks/applying-ranks-over-sso/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/assets/</loc>
+    <loc>/developer/framework/assets/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/backend/</loc>
+    <loc>/developer/backend/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/badges/</loc>
+    <loc>/help/addons/badges/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/banner/</loc>
+    <loc>/developer/configuration/banner/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/build/</loc>
+    <loc>/developer/importing/build/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/css/</loc>
+    <loc>/developer/theming/css/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/categories/</loc>
+    <loc>/help/features/categories/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/changelog/</loc>
+    <loc>/developer/changelog/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/</loc>
+    <loc>/help/cloud/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/conduct/</loc>
+    <loc>/developer/contributing/conduct/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/coding-standard/</loc>
+    <loc>/developer/contributing/coding-standard/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/community/</loc>
+    <loc>/developer/community/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/</loc>
+    <loc>/developer/configuration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/</loc>
+    <loc>/developer/contributing/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/controllers/</loc>
+    <loc>/developer/framework/controllers/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</loc>
+    <loc>/help/addons/reactions/curating-with-reactions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/dashboard/</loc>
+    <loc>/developer/configuration/dashboard/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/data-privacy/</loc>
+    <loc>/developer/data-privacy/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/database/</loc>
+    <loc>/developer/framework/database/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/datasets/</loc>
+    <loc>/developer/framework/datasets/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/roles-permissions/default-role-types/</loc>
+    <loc>/help/features/roles-permissions/default-role-types/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/tools/</loc>
+    <loc>/developer/tools/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/</loc>
+    <loc>/developer/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/email/</loc>
+    <loc>/developer/framework/email/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/emails/</loc>
+    <loc>/help/features/emails/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/embed/</loc>
+    <loc>/help/features/sso/jsconnect/embed/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/embedding/</loc>
+    <loc>/help/features/embedding/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/emoji/</loc>
+    <loc>/help/features/emoji/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/hooks/</loc>
+    <loc>/developer/theming/hooks/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/</loc>
+    <loc>/help/features/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/forum-merge/</loc>
+    <loc>/help/addons/forum-merge/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/</loc>
+    <loc>/developer/framework/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/getting-started/</loc>
+    <loc>/help/getting-started/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/gigya/</loc>
+    <loc>/help/addons/gigya/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/badges/giving-and-requesting-badges/</loc>
+    <loc>/help/addons/badges/giving-and-requesting-badges/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/googleplus/</loc>
+    <loc>/help/addons/googleplus/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/groups/</loc>
+    <loc>/help/addons/groups/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/</loc>
+    <loc>/help/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/helpers/</loc>
+    <loc>/developer/framework/helpers/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/homepage/</loc>
+    <loc>/developer/configuration/homepage/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ideation/</loc>
+    <loc>/help/addons/ideation/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/</loc>
+    <loc>/developer/importing/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/inform/</loc>
+    <loc>/developer/framework/inform/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/installation/</loc>
+    <loc>/developer/installation/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/integration/</loc>
+    <loc>/help/cloud/integration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/i18n/</loc>
+    <loc>/developer/framework/i18n/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/january-2016/</loc>
+    <loc>/help/cloud/releases/january-2016/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/leaving/</loc>
+    <loc>/help/cloud/leaving/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/locales/</loc>
+    <loc>/developer/locales/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/logging/</loc>
+    <loc>/help/cloud/logging/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/groups/managing-groups/</loc>
+    <loc>/help/addons/groups/managing-groups/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/march-2016/</loc>
+    <loc>/help/cloud/releases/march-2016/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/may-2016/</loc>
+    <loc>/help/cloud/releases/may-2016/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/message/</loc>
+    <loc>/developer/configuration/message/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/migration/</loc>
+    <loc>/help/cloud/migration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/models/</loc>
+    <loc>/developer/framework/models/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/modules/</loc>
+    <loc>/developer/framework/modules/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/multisite/</loc>
+    <loc>/help/cloud/multisite/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/multisite/sync/</loc>
+    <loc>/help/cloud/multisite/sync/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/notifications/</loc>
+    <loc>/help/features/notifications/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/oauth/</loc>
+    <loc>/help/features/sso/oauth/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/page-links/</loc>
+    <loc>/developer/theming/smarty/functions/page-links/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/permissions/</loc>
+    <loc>/developer/framework/permissions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/plugins/quickstart/</loc>
+    <loc>/developer/plugins/quickstart/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/plugins/</loc>
+    <loc>/developer/plugins/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/pockets/</loc>
+    <loc>/help/addons/pockets/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/pull-requests/</loc>
+    <loc>/developer/contributing/pull-requests/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/quickstart/</loc>
+    <loc>/developer/theming/quickstart/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/</loc>
+    <loc>/help/addons/ranks/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reactions/</loc>
+    <loc>/help/addons/reactions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/redirector/</loc>
+    <loc>/help/addons/redirector/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/</loc>
+    <loc>/help/cloud/releases/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reporting/</loc>
+    <loc>/help/addons/reporting/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/repository/</loc>
+    <loc>/help/cloud/repository/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/requests/</loc>
+    <loc>/developer/framework/requests/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/roles-permissions/</loc>
+    <loc>/help/features/roles-permissions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/routes/</loc>
+    <loc>/developer/routes/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/saml/</loc>
+    <loc>/help/features/sso/saml/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/seamless/</loc>
+    <loc>/help/features/sso/jsconnect/seamless/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/ssl/</loc>
+    <loc>/help/cloud/ssl/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/</loc>
+    <loc>/help/features/sso/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/</loc>
+    <loc>/developer/theming/smarty/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/conditionals/</loc>
+    <loc>/developer/theming/smarty/conditionals/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/</loc>
+    <loc>/developer/theming/smarty/functions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/modifiers/</loc>
+    <loc>/developer/theming/smarty/modifiers/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/staging/</loc>
+    <loc>/help/cloud/staging/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/statistics/</loc>
+    <loc>/help/addons/statistics/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/support/</loc>
+    <loc>/help/cloud/support/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/support/</loc>
+    <loc>/developer/importing/support/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/overview/</loc>
+    <loc>/help/features/sso/jsconnect/overview/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/themeoptions/</loc>
+    <loc>/developer/theming/themeoptions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/</loc>
+    <loc>/developer/theming/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/theming/</loc>
+    <loc>/help/cloud/theming/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/troubleshooting/</loc>
+    <loc>/developer/troubleshooting/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/comments/</loc>
+    <loc>/help/features/comments/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/upgrading-from-warnings/</loc>
+    <loc>/help/addons/warnings-and-notes/upgrading-from-warnings/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/wordpress/using-comments/</loc>
+    <loc>/help/features/wordpress/using-comments/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/using-ranks-as-incentives/</loc>
+    <loc>/help/addons/ranks/using-ranks-as-incentives/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
+    <loc>/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/using/</loc>
+    <loc>/developer/configuration/using/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/vanilla-pop/</loc>
+    <loc>/help/addons/vanilla-pop/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/vanilla-pop/site-hub/</loc>
+    <loc>/help/addons/vanilla-pop/site-hub/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/porter/</loc>
+    <loc>/developer/importing/porter/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/views/</loc>
+    <loc>/developer/framework/views/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/views/</loc>
+    <loc>/developer/theming/views/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/warning-a-user/</loc>
+    <loc>/help/addons/warnings-and-notes/warning-a-user/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/</loc>
+    <loc>/help/addons/warnings-and-notes/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/wordpress/wishlist/</loc>
+    <loc>/help/features/wordpress/wishlist/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/wordpress/</loc>
+    <loc>/help/features/wordpress/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/</loc>
+    <loc>/help/features/sso/jsconnect/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/asset/</loc>
+    <loc>/developer/theming/smarty/functions/asset/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/breadcrumbs/</loc>
+    <loc>/developer/theming/smarty/functions/breadcrumbs/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/custom-menu/</loc>
+    <loc>/developer/theming/smarty/functions/custom-menu/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/event/</loc>
+    <loc>/developer/theming/smarty/functions/event/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/include-file/</loc>
+    <loc>/developer/theming/smarty/functions/include-file/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/link/</loc>
+    <loc>/developer/theming/smarty/functions/link/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/logo/</loc>
+    <loc>/developer/theming/smarty/functions/logo/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/mobile-logo/</loc>
+    <loc>/developer/theming/smarty/functions/mobile-logo/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/module/</loc>
+    <loc>/developer/theming/smarty/functions/module/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/permission/</loc>
+    <loc>/developer/theming/smarty/functions/permission/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/pocket/</loc>
+    <loc>/developer/theming/smarty/functions/pocket/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/searchbox/</loc>
+    <loc>/developer/theming/smarty/functions/searchbox/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/text/</loc>
+    <loc>/developer/theming/smarty/functions/text/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/i18n/</loc>
+    <loc>/developer/theming/smarty/functions/i18n/</loc>
   </url>
   
 </urlset>

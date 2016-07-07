@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Migration on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/migration/</link>
+    <link>/tags/migration/</link>
     <description>Recent content in Migration on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/migration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/migration/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Migration Services</title>
-      <link>//vanilla.github.io/docs/help/cloud/migration/</link>
+      <link>/help/cloud/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/cloud/migration/</guid>
+      <guid>/help/cloud/migration/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -119,7 +119,7 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;p&gt;Most &lt;a href=&#34;http://docs.vanillaforums.com/features/sso/&#34;&gt;single sign-on services&lt;/a&gt; work by matching accounts based on email address. To work in this scenario, the authentication endpoint must construct (or have on record) an identical dummy email address. This allows the seamless authentication of the user against the correct account without using real personal info.&lt;/p&gt;
 
-&lt;p&gt;More information is available from our &lt;a href=&#34;https://vanillaforums.com/info/privacy&#34;&gt;Privacy Policy&lt;/a&gt; and our &lt;a href=&#34;//vanilla.github.io/docs/developer/data-privacy&#34;&gt;developer docs on data privacy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More information is available from our &lt;a href=&#34;https://vanillaforums.com/info/privacy&#34;&gt;Privacy Policy&lt;/a&gt; and our &lt;a href=&#34;/developer/data-privacy&#34;&gt;developer docs on data privacy&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

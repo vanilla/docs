@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oauth on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/oauth/</link>
+    <link>/tags/oauth/</link>
     <description>Recent content in Oauth on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OAuth</title>
-      <link>//vanilla.github.io/docs/help/features/sso/oauth/</link>
+      <link>/help/features/sso/oauth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/sso/oauth/</guid>
+      <guid>/help/features/sso/oauth/</guid>
       <description>
 
 &lt;h2 id=&#34;sso-with-oauth-overview&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
