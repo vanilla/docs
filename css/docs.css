@@ -804,6 +804,7 @@ a:hover {
   margin: 0px;
   list-style: none;
   border: 1px solid #DADADA;
+  border-bottom: 0px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
@@ -854,5 +855,9 @@ a:hover {
 
 .docs.docs-layout-section-developer .docs-header .docs-header-tray .docs-header-search .docs-search-wrap {
   background: #232323;
+}
+
+.docs.docs-layout-section-developer .docs-header .docs-header-tray .docs-header-search .docs-search-results li:hover {
+  background: #333333;
 }
 /*# sourceMappingURL=docs.css.map */
