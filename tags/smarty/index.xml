@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Smarty on Vanilla Forums Documentation</title>
-    <link>/tags/smarty/</link>
+    <link>//vanilla.github.io/docs/tags/smarty/</link>
     <description>Recent content in Smarty on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="/tags/smarty/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//vanilla.github.io/docs/tags/smarty/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Page Links</title>
-      <link>/developer/theming/smarty/functions/page-links/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/page-links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/page-links/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/page-links/</guid>
       <description>
 
 &lt;h2 id=&#34;page-links&#34;&gt;Page Links&lt;/h2&gt;
@@ -128,10 +128,10 @@
     
     <item>
       <title>Smarty Conditionals</title>
-      <link>/developer/theming/smarty/conditionals/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/conditionals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/conditionals/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/conditionals/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-conditionals&#34;&gt;Smarty Conditionals&lt;/h2&gt;
@@ -147,7 +147,7 @@
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This example checks to see if the locale matches &amp;lsquo;fr&amp;rsquo; and if so, inserts the contents a pocket named &amp;lsquo;French Pocket&amp;rsquo;. &lt;a href=&#34;/functions/pocket.html.md&#34;&gt;Learn more about the Smarty pocket function.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This example checks to see if the locale matches &amp;lsquo;fr&amp;rsquo; and if so, inserts the contents a pocket named &amp;lsquo;French Pocket&amp;rsquo;. &lt;a href=&#34;//vanilla.github.io/docs/functions/pocket.html.md&#34;&gt;Learn more about the Smarty pocket function.&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{if $CurrentLocale.Lang === &#39;fr&#39;}
     {pocket name=&#39;French Pocket&#39;}
@@ -243,10 +243,10 @@
     
     <item>
       <title>Smarty Functions</title>
-      <link>/developer/theming/smarty/functions/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-functions&#34;&gt;Smarty Functions&lt;/h2&gt;
@@ -259,10 +259,10 @@
     
     <item>
       <title>Smarty Modifiers</title>
-      <link>/developer/theming/smarty/modifiers/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/modifiers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/modifiers/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/modifiers/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h2&gt;
@@ -372,7 +372,7 @@
 
 &lt;h4 id=&#34;translate-example&#34;&gt;&lt;code&gt;translate&lt;/code&gt; Example&lt;/h4&gt;
 
-&lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;//vanilla.github.io/docs/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;{breadcrumbs homelink=&amp;ldquo;Forum&amp;rdquo;|translate}&lt;/p&gt;
 </description>
@@ -380,10 +380,10 @@
     
     <item>
       <title>{asset}</title>
-      <link>/developer/theming/smarty/functions/asset/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/asset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/asset/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/asset/</guid>
       <description>
 
 &lt;h2 id=&#34;function-asset&#34;&gt;Function: &lt;code&gt;{asset}&lt;/code&gt;&lt;/h2&gt;
@@ -444,10 +444,10 @@
     
     <item>
       <title>{breadcrumbs}</title>
-      <link>/developer/theming/smarty/functions/breadcrumbs/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/breadcrumbs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/breadcrumbs/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/breadcrumbs/</guid>
       <description>
 
 &lt;h2 id=&#34;function-breadcrumbs&#34;&gt;Function: &lt;code&gt;{breadcrumbs}&lt;/code&gt;&lt;/h2&gt;
@@ -490,10 +490,10 @@
     
     <item>
       <title>{custom_menu}</title>
-      <link>/developer/theming/smarty/functions/custom-menu/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/custom-menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/custom-menu/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/custom-menu/</guid>
       <description>
 
 &lt;h2 id=&#34;function-custom-menu&#34;&gt;Function: &lt;code&gt;{custom_menu}&lt;/code&gt;&lt;/h2&gt;
@@ -536,10 +536,10 @@
     
     <item>
       <title>{event}</title>
-      <link>/developer/theming/smarty/functions/event/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/event/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/event/</guid>
       <description>
 
 &lt;h2 id=&#34;function-event&#34;&gt;Function: &lt;code&gt;{event}&lt;/code&gt;&lt;/h2&gt;
@@ -575,10 +575,10 @@
     
     <item>
       <title>{include_file}</title>
-      <link>/developer/theming/smarty/functions/include-file/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/include-file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/include-file/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/include-file/</guid>
       <description>
 
 &lt;h2 id=&#34;function-include-file&#34;&gt;Function: &lt;code&gt;{include_file}&lt;/code&gt;&lt;/h2&gt;
@@ -614,10 +614,10 @@
     
     <item>
       <title>{link}</title>
-      <link>/developer/theming/smarty/functions/link/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/link/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/link/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/link/</guid>
       <description>
 
 &lt;h2 id=&#34;function-link&#34;&gt;Function: &lt;code&gt;{link}&lt;/code&gt;&lt;/h2&gt;
@@ -681,10 +681,10 @@
     
     <item>
       <title>{logo}</title>
-      <link>/developer/theming/smarty/functions/logo/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/logo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/logo/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/logo/</guid>
       <description>
 
 &lt;h2 id=&#34;function-logo&#34;&gt;Function: &lt;code&gt;{logo}&lt;/code&gt;&lt;/h2&gt;
@@ -702,10 +702,10 @@
     
     <item>
       <title>{mobile_logo}</title>
-      <link>/developer/theming/smarty/functions/mobile-logo/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/mobile-logo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/mobile-logo/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/mobile-logo/</guid>
       <description>
 
 &lt;h2 id=&#34;function-mobile-logo&#34;&gt;Function: &lt;code&gt;{mobile_logo}&lt;/code&gt;&lt;/h2&gt;
@@ -723,10 +723,10 @@
     
     <item>
       <title>{module}</title>
-      <link>/developer/theming/smarty/functions/module/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/module/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/module/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/module/</guid>
       <description>
 
 &lt;h2 id=&#34;function-module&#34;&gt;Function: &lt;code&gt;{module}&lt;/code&gt;&lt;/h2&gt;
@@ -775,10 +775,10 @@
     
     <item>
       <title>{permission}</title>
-      <link>/developer/theming/smarty/functions/permission/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/permission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/permission/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/permission/</guid>
       <description>
 
 &lt;h2 id=&#34;block-permission&#34;&gt;Block: &lt;code&gt;{permission}&lt;/code&gt;&lt;/h2&gt;
@@ -816,10 +816,10 @@
     
     <item>
       <title>{pocket}</title>
-      <link>/developer/theming/smarty/functions/pocket/</link>
+      <link>//vanilla.github.io/docs/developer/theming/smarty/functions/pocket/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/smarty/functions/pocket/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/smarty/functions/pocket/</guid>
       <description>
 
 &lt;h2 id=&#34;function-pocket&#34;&gt;Function: &lt;code&gt;{pocket}&lt;/code&gt;&lt;/h2&gt;

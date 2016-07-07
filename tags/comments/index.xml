@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Comments on Vanilla Forums Documentation</title>
-    <link>/tags/comments/</link>
+    <link>//vanilla.github.io/docs/tags/comments/</link>
     <description>Recent content in Comments on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="/tags/comments/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//vanilla.github.io/docs/tags/comments/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Universal Comments</title>
-      <link>/help/features/comments/</link>
+      <link>//vanilla.github.io/docs/help/features/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/features/comments/</guid>
+      <guid>//vanilla.github.io/docs/help/features/comments/</guid>
       <description>
 
 &lt;h2 id=&#34;vanilla-comments&#34;&gt;Vanilla Comments&lt;/h2&gt;
@@ -21,7 +21,7 @@
 
 &lt;h2 id=&#34;what-are-universal-comments&#34;&gt;What are Universal Comments?&lt;/h2&gt;
 
-&lt;p&gt;We made Comment integration easy with WordPress (&lt;a href=&#34;/help/features/wordpress/using-comments/&#34;&gt;learn more about that here&lt;/a&gt;.), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.&lt;/p&gt;
+&lt;p&gt;We made Comment integration easy with WordPress (&lt;a href=&#34;//vanilla.github.io/docs/help/features/wordpress/using-comments/&#34;&gt;learn more about that here&lt;/a&gt;.), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.&lt;/p&gt;
 
 &lt;h2 id=&#34;how-to-use-universal-comments&#34;&gt;How to use Universal Comments.&lt;/h2&gt;
 
@@ -31,15 +31,15 @@
 
 &lt;p&gt;Once you&amp;rsquo;ve determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Blog Comments” under the “Forum” heading. You will see the following:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/help/features/comments/settings.png&#34; alt=&#34;Universal Comments&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/features/comments/settings.png&#34; alt=&#34;Universal Comments&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You want to make sure you have enabled embedding. The next step is to select the Universal Code setting tab:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/help/features/comments/universal-code.png&#34; alt=&#34;Universal Comments tab&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/features/comments/universal-code.png&#34; alt=&#34;Universal Comments tab&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On this tab you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/help/features/comments/universal-code-identifier.png&#34; alt=&#34;Universal Comments tab&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/features/comments/universal-code-identifier.png&#34; alt=&#34;Universal Comments tab&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Please note, before you paste the code in your platform’s template or theme, you will need to modify the elements highlighted in yellow.&lt;/p&gt;
 
@@ -62,7 +62,7 @@
 &lt;li&gt;Under advanced settings add your trusted domains.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you are using WordPress, check out our &lt;a href=&#34;/help/features/wordpress/using-comments/&#34;&gt;how to integrate comments with WordPress&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are using WordPress, check out our &lt;a href=&#34;//vanilla.github.io/docs/help/features/wordpress/using-comments/&#34;&gt;how to integrate comments with WordPress&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

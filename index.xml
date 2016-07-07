@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vanilla Forums Documentation</title>
-    <link>/</link>
+    <link>//vanilla.github.io/docs/</link>
     <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//vanilla.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Accessibility</title>
-      <link>/help/features/accessibility/</link>
+      <link>//vanilla.github.io/docs/help/features/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/features/accessibility/</guid>
+      <guid>//vanilla.github.io/docs/help/features/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -55,14 +55,14 @@
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -99,10 +99,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -164,14 +164,14 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -182,7 +182,7 @@
 
 &lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
@@ -204,7 +204,7 @@
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
 
@@ -216,10 +216,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -238,10 +238,10 @@
     
     <item>
       <title>Addons</title>
-      <link>/help/addons/</link>
+      <link>//vanilla.github.io/docs/help/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-addons&#34;&gt;What Are Addons?&lt;/h2&gt;
@@ -274,10 +274,10 @@
     
     <item>
       <title>Advanced Embedding</title>
-      <link>/help/features/embedding/advanced/</link>
+      <link>//vanilla.github.io/docs/help/features/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/features/embedding/advanced/</guid>
+      <guid>//vanilla.github.io/docs/help/features/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -397,10 +397,10 @@
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -415,10 +415,10 @@
     
     <item>
       <title>Assets</title>
-      <link>/developer/framework/assets/</link>
+      <link>//vanilla.github.io/docs/developer/framework/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/framework/assets/</guid>
+      <guid>//vanilla.github.io/docs/developer/framework/assets/</guid>
       <description>
 
 &lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
@@ -433,18 +433,18 @@
 
 &lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;p&gt;A common scenario is using &lt;a href=&#34;/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
+&lt;p&gt;A common scenario is using &lt;a href=&#34;//vanilla.github.io/docs/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
 
-&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//vanilla.github.io/docs/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Backend</title>
-      <link>/developer/backend/</link>
+      <link>//vanilla.github.io/docs/developer/backend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/backend/</guid>
+      <guid>//vanilla.github.io/docs/developer/backend/</guid>
       <description>
 
 &lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
@@ -519,14 +519,14 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Badges</title>
-      <link>/help/addons/badges/</link>
+      <link>//vanilla.github.io/docs/help/addons/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/addons/badges/</guid>
+      <guid>//vanilla.github.io/docs/help/addons/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -555,10 +555,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Banner Settings</title>
-      <link>/developer/configuration/banner/</link>
+      <link>//vanilla.github.io/docs/developer/configuration/banner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/configuration/banner/</guid>
+      <guid>//vanilla.github.io/docs/developer/configuration/banner/</guid>
       <description>
 
 &lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
@@ -579,10 +579,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Building new porters</title>
-      <link>/developer/importing/build/</link>
+      <link>//vanilla.github.io/docs/developer/importing/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/importing/build/</guid>
+      <guid>//vanilla.github.io/docs/developer/importing/build/</guid>
       <description>
 
 &lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
@@ -598,10 +598,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>CSS</title>
-      <link>/developer/theming/css/</link>
+      <link>//vanilla.github.io/docs/developer/theming/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/developer/theming/css/</guid>
+      <guid>//vanilla.github.io/docs/developer/theming/css/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
@@ -684,10 +684,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Categories</title>
-      <link>/help/features/categories/</link>
+      <link>//vanilla.github.io/docs/help/features/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/help/features/categories/</guid>
+      <guid>//vanilla.github.io/docs/help/features/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
