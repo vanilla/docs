@@ -856,4 +856,8 @@ a:hover {
 .docs.docs-layout-section-developer .docs-header .docs-header-tray .docs-header-search .docs-search-wrap {
   background: #232323;
 }
+
+.docs.docs-layout-section-developer .docs-header .docs-header-tray .docs-header-search .docs-search-results li:hover {
+  background: #333333;
+}
 /*# sourceMappingURL=docs.css.map */
