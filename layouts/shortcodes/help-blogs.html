@@ -1,0 +1,17 @@
+<div class="docs-featured docs-help-blogs">
+    <h2>From the blog</h2>
+    
+    <p>
+        We've collected some helpful articles from <a href="https://blog.vanillaforums.com">our blog</a> that might be useful to you as your build your community.
+    </p>
+    
+    <div class="featured-items">
+    {{ range first 3 .Site.Data.blogs.help.articles }}
+        {{ $blog := . }}
+        <a class="featured-item" href="{{ $blog.url }}">
+            <div class="article-title">{{ $blog.title }}</div>
+            <p>{{ $blog.description }}</p>
+        </a>
+    {{end}}
+    </div>
+</div>
