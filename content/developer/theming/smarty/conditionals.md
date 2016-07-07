@@ -59,6 +59,26 @@ This example checks whether the user has either the "Garden.Settings.Manage" or 
 {/if}
 ```
 
+### Homepage
+
+The variable `$Homepage` is set to true if (and only if) the user is on your homepage. 
+
+#### Homepage Example
+
+This example checks whether the user is on the homepage to display one message or another.
+
+```
+{if $Homepage}
+    <p>Welcome home!</p>
+{/if}
+
+<p>Intermediary text that is always displayed.</p>
+
+{if !$Homepage}
+    <p>Far away from home.</p>
+{/if}
+```
+
 ### InSection
 
 Returns true if the user is in a section or one of an array or sections. You can see what section a Vanilla page belongs to by inspecting the body tag using your browser tools and checking its CSS class. There will be an Section-* class, where * is the current section.
