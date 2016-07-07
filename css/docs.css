@@ -327,6 +327,63 @@ a:hover {
   color: #F52C6E;
 }
 
+#content .docs-featured .featured-items {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+#content .docs-featured .featured-items .featured-item {
+  -ms-flex: 1;
+      flex: 1;
+  position: relative;
+  display: block;
+  padding: 20px;
+  margin-right: 30px;
+  min-height: 200px;
+  border-radius: 2px;
+  border: 1px solid #E4E4E4;
+}
+
+#content .docs-featured .featured-items .featured-item:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  border-width: 24px 24px 0 0;
+  border-style: solid;
+  border-color: #E4E4E4 white;
+}
+
+#content .docs-featured .featured-items .featured-item:last-child {
+  margin-right: 0px;
+}
+
+#content .docs-featured .featured-items .featured-item .article-title {
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0px 0px 10px 0px;
+}
+
+#content .docs-featured .featured-items .featured-item p {
+  font-size: 13px;
+  line-height: 20px;
+  color: #505A5F;
+}
+
+#content .docs-featured .featured-items .featured-item:hover {
+  border-color: #F52C6E;
+}
+
+#content .docs-featured .featured-items .featured-item:hover .article-title {
+  color: #F52C6E;
+}
+
+#content .docs-featured .featured-items .featured-item:hover:before {
+  border-color: #F52C6E white;
+}
+
 .docs .docs-footer {
   background-color: #333333;
   font-size: 12px;
