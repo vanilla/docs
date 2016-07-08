@@ -2,123 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/api/</link>
+    <link>//docs.vanillaforums.com/tags/api/</link>
     <description>Recent content in Api on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/api/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>API</title>
-      <link>//vanilla.github.io/docs/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//vanilla.github.io/docs/api/</guid>
-      <description>
-
-&lt;p&gt;Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.&lt;/p&gt;
-
-&lt;h2 id=&#34;configuring-simple-api&#34;&gt;Configuring Simple API&lt;/h2&gt;
-
-&lt;p&gt;Simple API is a plugin. Once you&amp;rsquo;ve enabled the plugin you’ll see a new link in your dashboard called &amp;ldquo;API&amp;rdquo;. This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.&lt;/p&gt;
-
-&lt;h3 id=&#34;access-token&#34;&gt;Access Token&lt;/h3&gt;
-
-&lt;p&gt;The access token is like a password for accessing the API from outside of Vanilla. A suitable token is randomly generated for you when the plugin is first loaded, but you can change it at any time. Changing the token will necessarily invalidate the existing one, so remember to update existing projects if they use the API. Remember though: this token is a kind of password, so make sure it is long and complex, just like the initial token that we pre-filled for you.&lt;/p&gt;
-
-&lt;h3 id=&#34;user&#34;&gt;User&lt;/h3&gt;
-
-&lt;p&gt;When an API call is made, your access token confirms that you are authorized to make API calls, but we need some way to determine what level of access to give the API once you’re authenticated. We do this by &amp;ldquo;logging you in&amp;rdquo; temporarily as the user you specify here. The API session will inherit all of this user&amp;rsquo;s permissions and will have the same level of access as this user. By default, we use the Vanilla System User, who has unrestricted administrative access.&lt;/p&gt;
-
-&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
-
-&lt;p&gt;Considering that the API gives unprecedented access to Vanilla’s data, it is prudent to be concerned with security. For this reason you have the option to ignore API requests that are not secured by HTTPS. HTTPS encrypts the connection, including the request URL, thereby preventing potential hackers from seeing your access token in request URLs. &lt;strong&gt;This setting is highly recommended, but not required&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;making-api-calls&#34;&gt;Making API Calls&lt;/h2&gt;
-
-&lt;p&gt;All API calls should be made against your forum&amp;rsquo;s &amp;ldquo;Vanilla URL&amp;rdquo;, for example: &lt;code&gt;https://mycompany.vanillaforums.com&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;versioned-endpoint&#34;&gt;Versioned Endpoint&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;# Example of versioned endpoint
-https://mycompany.vanillaforums.com/api/v1/categories/list.ext
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The Vanilla API is versioned to allow backwards compatibility during upgrades. &lt;strong&gt;API requests should always be made with a version stub&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;get-vs-post&#34;&gt;&lt;code&gt;GET&lt;/code&gt; vs. &lt;code&gt;POST&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;Calls to the API are strictly separated by HTTP request type. Requests for data (which do not cause modifications) are done using &lt;code&gt;GET&lt;/code&gt;, while changes and updates are done using &lt;code&gt;POST&lt;/code&gt;. When reading the documentation for a method, make sure to take note of its expected request type.&lt;/p&gt;
-
-&lt;h3 id=&#34;wire-format&#34;&gt;Wire Format&lt;/h3&gt;
-
-&lt;p&gt;Regardless of the request type, the &lt;code&gt;access_token&lt;/code&gt; should always be supplied in the query string:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /categories/all.json?access_token=abc123 HTTP/1.1
-Host: mycompany.vanillaforums.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The above request will yield the following response:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;HTTP/1.1 200 OK
-Date: Tue, 19 Jul 2012 19:50:02 GMT
-Content-Type: application/json
-Vary: Accept-Encoding
-Content-Length: 90
-Connection: close
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;api-smart-ids&#34;&gt;API Smart IDs&lt;/h3&gt;
-
-&lt;p&gt;Some API methods ask require a user ID for one or more of their parameters. Sometimes it&amp;rsquo;s difficult to know what their user ID is so the Vanilla API can look up the user if you pass the user in a special way. This is referred to as a smart ID and you can read about it here.&lt;/p&gt;
-
-&lt;h3 id=&#34;request-encoding&#34;&gt;Request Encoding&lt;/h3&gt;
-
-&lt;p&gt;By default, the API expects incoming request data to be &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;. If no &lt;code&gt;Content-Type&lt;/code&gt; is provided, this will be assumed. It is also possible to alter this behaviour and cause the API to parse a JSON-encoded request body by setting the &lt;code&gt;Content-Type&lt;/code&gt; to &lt;code&gt;application/json&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;response-encoding&#34;&gt;Response Encoding&lt;/h3&gt;
-
-&lt;p&gt;The data encoding of the response is determined by the file extension attached to the request&amp;rsquo;s method. In the above example, the controller name is categories and the method is all. The file extension on the method is &lt;code&gt;.json&lt;/code&gt;, which will result in JSON encoded data being returned. If the request is being made to the controller&amp;rsquo;s root method, index, the method may be omitted and the file extension may be applied to the controller instead.&lt;/p&gt;
-
-&lt;h3 id=&#34;recognized-file-extensions&#34;&gt;Recognized file extensions&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Extension&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.json&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;JSON encoded response&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.xml&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;XML encoded response&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;No extension&lt;/td&gt;
-&lt;td&gt;XHTML response, suitable for user interface&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;response-codes&#34;&gt;Response Codes&lt;/h2&gt;
-
-&lt;p&gt;Generally, if an API request is successful it will return the standard response code of  &lt;code&gt;200&lt;/code&gt;. You can check for this response code. If you get an error code (&lt;code&gt;4xx&lt;/code&gt;-&lt;code&gt;5xx&lt;/code&gt;) then you can check the &lt;code&gt;Exception&lt;/code&gt; property of the response some error text that will help you to determine what went wrong.&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="//docs.vanillaforums.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Endpoint: categories</title>
-      <link>//vanilla.github.io/docs/api/categories/</link>
+      <link>//docs.vanillaforums.com/api/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/categories/</guid>
+      <guid>//docs.vanillaforums.com/api/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;categories-add&#34;&gt;/categories/add&lt;/h2&gt;
@@ -372,10 +266,10 @@ If not provided, perspective will be that of a guest.&lt;/p&gt;
     
     <item>
       <title>Endpoint: comments</title>
-      <link>//vanilla.github.io/docs/api/comments/</link>
+      <link>//docs.vanillaforums.com/api/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/comments/</guid>
+      <guid>//docs.vanillaforums.com/api/comments/</guid>
       <description>
 
 &lt;h2 id=&#34;comments-add&#34;&gt;/comments/add&lt;/h2&gt;
@@ -436,10 +330,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Endpoint: discussions</title>
-      <link>//vanilla.github.io/docs/api/discussions/</link>
+      <link>//docs.vanillaforums.com/api/discussions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/discussions/</guid>
+      <guid>//docs.vanillaforums.com/api/discussions/</guid>
       <description>
 
 &lt;h2 id=&#34;discussions-add&#34;&gt;/discussions/add&lt;/h2&gt;
@@ -801,10 +695,10 @@ If not provided, perspective will be that of a guest.&lt;/p&gt;
     
     <item>
       <title>Endpoint: multisites</title>
-      <link>//vanilla.github.io/docs/api/multisites/</link>
+      <link>//docs.vanillaforums.com/api/multisites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/multisites/</guid>
+      <guid>//docs.vanillaforums.com/api/multisites/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -923,10 +817,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Endpoint: roles</title>
-      <link>//vanilla.github.io/docs/api/roles/</link>
+      <link>//docs.vanillaforums.com/api/roles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/roles/</guid>
+      <guid>//docs.vanillaforums.com/api/roles/</guid>
       <description>
 
 &lt;h2 id=&#34;roles-add&#34;&gt;/roles/add&lt;/h2&gt;
@@ -1081,10 +975,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Forum Administration</title>
-      <link>//vanilla.github.io/docs/api/forum-administration/</link>
+      <link>//docs.vanillaforums.com/api/forum-administration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/forum-administration/</guid>
+      <guid>//docs.vanillaforums.com/api/forum-administration/</guid>
       <description>
 
 &lt;h2 id=&#34;configuration&#34;&gt;/configuration&lt;/h2&gt;
@@ -1105,10 +999,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Smart ID</title>
-      <link>//vanilla.github.io/docs/api/smart-id/</link>
+      <link>//docs.vanillaforums.com/api/smart-id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/smart-id/</guid>
+      <guid>//docs.vanillaforums.com/api/smart-id/</guid>
       <description>
 
 &lt;p&gt;Many API methods take a &lt;code&gt;UserID&lt;/code&gt; as one of their required parameters, for example the &lt;code&gt;/badge/give&lt;/code&gt; method. Often, especially in a SSO context, the calling system will not know the native Vanilla &lt;code&gt;UserID&lt;/code&gt;, but will instead know some other identifying characteristic of the user, such as their &lt;code&gt;Email&lt;/code&gt;, &lt;code&gt;Username&lt;/code&gt;, or SSO &lt;code&gt;ForeignID&lt;/code&gt;.&lt;/p&gt;
@@ -1209,10 +1103,10 @@ User&amp;rsquo;s Facebook email address.&lt;/p&gt;
     
     <item>
       <title>Use API on External Sites</title>
-      <link>//vanilla.github.io/docs/api/use-api-on-external-site/</link>
+      <link>//docs.vanillaforums.com/api/use-api-on-external-site/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/api/use-api-on-external-site/</guid>
+      <guid>//docs.vanillaforums.com/api/use-api-on-external-site/</guid>
       <description>
 
 &lt;p&gt;The Vanilla Forums API can be used to display information from your community outside of the community such as your blog. This guide shows a basic example using javascript and jQuery.&lt;/p&gt;
@@ -1264,6 +1158,112 @@ $.ajax({
 &lt;h3 id=&#34;a-real-example&#34;&gt;A Real Example&lt;/h3&gt;
 
 &lt;p&gt;We&amp;rsquo;ve made a simple example using a feed from vanillaforums.com. Check it out on &lt;a href=&#34;http://cdpn.io/zxXwvJ&#34;&gt;codepen.io&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Vanilla API</title>
+      <link>//docs.vanillaforums.com/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/api/</guid>
+      <description>
+
+&lt;p&gt;Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.&lt;/p&gt;
+
+&lt;h2 id=&#34;configuring-simple-api&#34;&gt;Configuring Simple API&lt;/h2&gt;
+
+&lt;p&gt;Simple API is a plugin. Once you&amp;rsquo;ve enabled the plugin you’ll see a new link in your dashboard called &amp;ldquo;API&amp;rdquo;. This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.&lt;/p&gt;
+
+&lt;h3 id=&#34;access-token&#34;&gt;Access Token&lt;/h3&gt;
+
+&lt;p&gt;The access token is like a password for accessing the API from outside of Vanilla. A suitable token is randomly generated for you when the plugin is first loaded, but you can change it at any time. Changing the token will necessarily invalidate the existing one, so remember to update existing projects if they use the API. Remember though: this token is a kind of password, so make sure it is long and complex, just like the initial token that we pre-filled for you.&lt;/p&gt;
+
+&lt;h3 id=&#34;user&#34;&gt;User&lt;/h3&gt;
+
+&lt;p&gt;When an API call is made, your access token confirms that you are authorized to make API calls, but we need some way to determine what level of access to give the API once you’re authenticated. We do this by &amp;ldquo;logging you in&amp;rdquo; temporarily as the user you specify here. The API session will inherit all of this user&amp;rsquo;s permissions and will have the same level of access as this user. By default, we use the Vanilla System User, who has unrestricted administrative access.&lt;/p&gt;
+
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
+
+&lt;p&gt;Considering that the API gives unprecedented access to Vanilla’s data, it is prudent to be concerned with security. For this reason you have the option to ignore API requests that are not secured by HTTPS. HTTPS encrypts the connection, including the request URL, thereby preventing potential hackers from seeing your access token in request URLs. &lt;strong&gt;This setting is highly recommended, but not required&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;making-api-calls&#34;&gt;Making API Calls&lt;/h2&gt;
+
+&lt;p&gt;All API calls should be made against your forum&amp;rsquo;s &amp;ldquo;Vanilla URL&amp;rdquo;, for example: &lt;code&gt;https://mycompany.vanillaforums.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;versioned-endpoint&#34;&gt;Versioned Endpoint&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;# Example of versioned endpoint
+https://mycompany.vanillaforums.com/api/v1/categories/list.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The Vanilla API is versioned to allow backwards compatibility during upgrades. &lt;strong&gt;API requests should always be made with a version stub&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;get-vs-post&#34;&gt;&lt;code&gt;GET&lt;/code&gt; vs. &lt;code&gt;POST&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Calls to the API are strictly separated by HTTP request type. Requests for data (which do not cause modifications) are done using &lt;code&gt;GET&lt;/code&gt;, while changes and updates are done using &lt;code&gt;POST&lt;/code&gt;. When reading the documentation for a method, make sure to take note of its expected request type.&lt;/p&gt;
+
+&lt;h3 id=&#34;wire-format&#34;&gt;Wire Format&lt;/h3&gt;
+
+&lt;p&gt;Regardless of the request type, the &lt;code&gt;access_token&lt;/code&gt; should always be supplied in the query string:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /categories/all.json?access_token=abc123 HTTP/1.1
+Host: mycompany.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above request will yield the following response:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2012 19:50:02 GMT
+Content-Type: application/json
+Vary: Accept-Encoding
+Content-Length: 90
+Connection: close
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;api-smart-ids&#34;&gt;API Smart IDs&lt;/h3&gt;
+
+&lt;p&gt;Some API methods ask require a user ID for one or more of their parameters. Sometimes it&amp;rsquo;s difficult to know what their user ID is so the Vanilla API can look up the user if you pass the user in a special way. This is referred to as a smart ID and you can read about it here.&lt;/p&gt;
+
+&lt;h3 id=&#34;request-encoding&#34;&gt;Request Encoding&lt;/h3&gt;
+
+&lt;p&gt;By default, the API expects incoming request data to be &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;. If no &lt;code&gt;Content-Type&lt;/code&gt; is provided, this will be assumed. It is also possible to alter this behaviour and cause the API to parse a JSON-encoded request body by setting the &lt;code&gt;Content-Type&lt;/code&gt; to &lt;code&gt;application/json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;response-encoding&#34;&gt;Response Encoding&lt;/h3&gt;
+
+&lt;p&gt;The data encoding of the response is determined by the file extension attached to the request&amp;rsquo;s method. In the above example, the controller name is categories and the method is all. The file extension on the method is &lt;code&gt;.json&lt;/code&gt;, which will result in JSON encoded data being returned. If the request is being made to the controller&amp;rsquo;s root method, index, the method may be omitted and the file extension may be applied to the controller instead.&lt;/p&gt;
+
+&lt;h3 id=&#34;recognized-file-extensions&#34;&gt;Recognized file extensions&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Extension&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.json&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;JSON encoded response&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.xml&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;XML encoded response&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;No extension&lt;/td&gt;
+&lt;td&gt;XHTML response, suitable for user interface&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;response-codes&#34;&gt;Response Codes&lt;/h2&gt;
+
+&lt;p&gt;Generally, if an API request is successful it will return the standard response code of  &lt;code&gt;200&lt;/code&gt;. You can check for this response code. If you get an error code (&lt;code&gt;4xx&lt;/code&gt;-&lt;code&gt;5xx&lt;/code&gt;) then you can check the &lt;code&gt;Exception&lt;/code&gt; property of the response some error text that will help you to determine what went wrong.&lt;/p&gt;
 </description>
     </item>
     

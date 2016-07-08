@@ -2,123 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/</link>
+    <link>//docs.vanillaforums.com/</link>
     <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>API</title>
-      <link>//vanilla.github.io/docs/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//vanilla.github.io/docs/api/</guid>
-      <description>
-
-&lt;p&gt;Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.&lt;/p&gt;
-
-&lt;h2 id=&#34;configuring-simple-api&#34;&gt;Configuring Simple API&lt;/h2&gt;
-
-&lt;p&gt;Simple API is a plugin. Once you&amp;rsquo;ve enabled the plugin you’ll see a new link in your dashboard called &amp;ldquo;API&amp;rdquo;. This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.&lt;/p&gt;
-
-&lt;h3 id=&#34;access-token&#34;&gt;Access Token&lt;/h3&gt;
-
-&lt;p&gt;The access token is like a password for accessing the API from outside of Vanilla. A suitable token is randomly generated for you when the plugin is first loaded, but you can change it at any time. Changing the token will necessarily invalidate the existing one, so remember to update existing projects if they use the API. Remember though: this token is a kind of password, so make sure it is long and complex, just like the initial token that we pre-filled for you.&lt;/p&gt;
-
-&lt;h3 id=&#34;user&#34;&gt;User&lt;/h3&gt;
-
-&lt;p&gt;When an API call is made, your access token confirms that you are authorized to make API calls, but we need some way to determine what level of access to give the API once you’re authenticated. We do this by &amp;ldquo;logging you in&amp;rdquo; temporarily as the user you specify here. The API session will inherit all of this user&amp;rsquo;s permissions and will have the same level of access as this user. By default, we use the Vanilla System User, who has unrestricted administrative access.&lt;/p&gt;
-
-&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
-
-&lt;p&gt;Considering that the API gives unprecedented access to Vanilla’s data, it is prudent to be concerned with security. For this reason you have the option to ignore API requests that are not secured by HTTPS. HTTPS encrypts the connection, including the request URL, thereby preventing potential hackers from seeing your access token in request URLs. &lt;strong&gt;This setting is highly recommended, but not required&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;making-api-calls&#34;&gt;Making API Calls&lt;/h2&gt;
-
-&lt;p&gt;All API calls should be made against your forum&amp;rsquo;s &amp;ldquo;Vanilla URL&amp;rdquo;, for example: &lt;code&gt;https://mycompany.vanillaforums.com&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;versioned-endpoint&#34;&gt;Versioned Endpoint&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;# Example of versioned endpoint
-https://mycompany.vanillaforums.com/api/v1/categories/list.ext
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The Vanilla API is versioned to allow backwards compatibility during upgrades. &lt;strong&gt;API requests should always be made with a version stub&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;get-vs-post&#34;&gt;&lt;code&gt;GET&lt;/code&gt; vs. &lt;code&gt;POST&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;Calls to the API are strictly separated by HTTP request type. Requests for data (which do not cause modifications) are done using &lt;code&gt;GET&lt;/code&gt;, while changes and updates are done using &lt;code&gt;POST&lt;/code&gt;. When reading the documentation for a method, make sure to take note of its expected request type.&lt;/p&gt;
-
-&lt;h3 id=&#34;wire-format&#34;&gt;Wire Format&lt;/h3&gt;
-
-&lt;p&gt;Regardless of the request type, the &lt;code&gt;access_token&lt;/code&gt; should always be supplied in the query string:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /categories/all.json?access_token=abc123 HTTP/1.1
-Host: mycompany.vanillaforums.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The above request will yield the following response:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;HTTP/1.1 200 OK
-Date: Tue, 19 Jul 2012 19:50:02 GMT
-Content-Type: application/json
-Vary: Accept-Encoding
-Content-Length: 90
-Connection: close
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;api-smart-ids&#34;&gt;API Smart IDs&lt;/h3&gt;
-
-&lt;p&gt;Some API methods ask require a user ID for one or more of their parameters. Sometimes it&amp;rsquo;s difficult to know what their user ID is so the Vanilla API can look up the user if you pass the user in a special way. This is referred to as a smart ID and you can read about it here.&lt;/p&gt;
-
-&lt;h3 id=&#34;request-encoding&#34;&gt;Request Encoding&lt;/h3&gt;
-
-&lt;p&gt;By default, the API expects incoming request data to be &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;. If no &lt;code&gt;Content-Type&lt;/code&gt; is provided, this will be assumed. It is also possible to alter this behaviour and cause the API to parse a JSON-encoded request body by setting the &lt;code&gt;Content-Type&lt;/code&gt; to &lt;code&gt;application/json&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;response-encoding&#34;&gt;Response Encoding&lt;/h3&gt;
-
-&lt;p&gt;The data encoding of the response is determined by the file extension attached to the request&amp;rsquo;s method. In the above example, the controller name is categories and the method is all. The file extension on the method is &lt;code&gt;.json&lt;/code&gt;, which will result in JSON encoded data being returned. If the request is being made to the controller&amp;rsquo;s root method, index, the method may be omitted and the file extension may be applied to the controller instead.&lt;/p&gt;
-
-&lt;h3 id=&#34;recognized-file-extensions&#34;&gt;Recognized file extensions&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Extension&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.json&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;JSON encoded response&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.xml&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;XML encoded response&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;No extension&lt;/td&gt;
-&lt;td&gt;XHTML response, suitable for user interface&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;response-codes&#34;&gt;Response Codes&lt;/h2&gt;
-
-&lt;p&gt;Generally, if an API request is successful it will return the standard response code of  &lt;code&gt;200&lt;/code&gt;. You can check for this response code. If you get an error code (&lt;code&gt;4xx&lt;/code&gt;-&lt;code&gt;5xx&lt;/code&gt;) then you can check the &lt;code&gt;Exception&lt;/code&gt; property of the response some error text that will help you to determine what went wrong.&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="//docs.vanillaforums.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Accessibility</title>
-      <link>//vanilla.github.io/docs/help/features/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/features/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/features/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -161,14 +55,14 @@ Connection: close
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -205,10 +99,10 @@ Connection: close
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -270,14 +164,14 @@ Connection: close
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -288,7 +182,7 @@ Connection: close
 
 &lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
@@ -310,7 +204,7 @@ Connection: close
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
 
@@ -322,10 +216,10 @@ Connection: close
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -344,10 +238,10 @@ Connection: close
     
     <item>
       <title>Addons</title>
-      <link>//vanilla.github.io/docs/help/addons/</link>
+      <link>//docs.vanillaforums.com/help/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-addons&#34;&gt;What Are Addons?&lt;/h2&gt;
@@ -380,10 +274,10 @@ Connection: close
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//vanilla.github.io/docs/help/features/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/help/features/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/features/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/help/features/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -503,10 +397,10 @@ Connection: close
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -521,10 +415,10 @@ Connection: close
     
     <item>
       <title>Assets</title>
-      <link>//vanilla.github.io/docs/developer/framework/assets/</link>
+      <link>//docs.vanillaforums.com/developer/framework/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/framework/assets/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
       <description>
 
 &lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
@@ -539,18 +433,18 @@ Connection: close
 
 &lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;p&gt;A common scenario is using &lt;a href=&#34;//vanilla.github.io/docs/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
+&lt;p&gt;A common scenario is using &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
 
-&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//vanilla.github.io/docs/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Backend</title>
-      <link>//vanilla.github.io/docs/developer/backend/</link>
+      <link>//docs.vanillaforums.com/developer/backend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/backend/</guid>
+      <guid>//docs.vanillaforums.com/developer/backend/</guid>
       <description>
 
 &lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
@@ -625,14 +519,14 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/</link>
+      <link>//docs.vanillaforums.com/help/addons/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -661,10 +555,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Banner Settings</title>
-      <link>//vanilla.github.io/docs/developer/configuration/banner/</link>
+      <link>//docs.vanillaforums.com/developer/configuration/banner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/configuration/banner/</guid>
+      <guid>//docs.vanillaforums.com/developer/configuration/banner/</guid>
       <description>
 
 &lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
@@ -685,10 +579,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Building new porters</title>
-      <link>//vanilla.github.io/docs/developer/importing/build/</link>
+      <link>//docs.vanillaforums.com/developer/importing/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/importing/build/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
       <description>
 
 &lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
@@ -704,10 +598,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>CSS</title>
-      <link>//vanilla.github.io/docs/developer/theming/css/</link>
+      <link>//docs.vanillaforums.com/developer/theming/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/theming/css/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
@@ -785,6 +679,76 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code&gt;.Section-DiscussionList&lt;/code&gt; targets the discussion page, &lt;code&gt;.FilterMenu&lt;/code&gt; targets a filtering menu, and &lt;code&gt;.Discussions&lt;/code&gt; targets a specific list item in the menu. This is much less likely to have undesired side effects.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Categories</title>
+      <link>//docs.vanillaforums.com/help/features/categories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/features/categories/</guid>
+      <description>
+
+&lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
+
+&lt;p&gt;Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.&lt;/p&gt;
+
+&lt;p&gt;You can find Categories under the “Forum&amp;rdquo; menu in the Dashboard,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png&#34; alt=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/laurasothertest.vanillaforums.com/editor/2o/34let6oiypkp.png&#34; alt=&#34;&amp;quot;Add Category&amp;quot; and &amp;quot;Don&#39;t use Categories&amp;quot; buttons in the Manage Categories section of the dashboard&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disabling categories will streamline your organization, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories weren&amp;rsquo;t in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-categories&#34;&gt;Adding Categories&lt;/h2&gt;
+
+&lt;p&gt;Clicking the &amp;ldquo;Add Category&amp;rdquo; button will take you to the page pictured below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Add-Category.jpg&#34; alt=&#34;/vanilla/settings/addcategory&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By default, the category url will reflect the category’s name. Clicking the edit button next to the url will allow you to change the slug. Below it, you can add a description for the category, which will display on your homepage if your current theme allows it.&lt;/p&gt;
+
+&lt;p&gt;You can add a unique CSS class, which you can use in your theme to control its appearance. The specified text will be added as a class for the category&amp;rsquo;s HTML wrapper.&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;Display As&amp;rdquo; drop down changes the behavior of a category:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt; Uses the category as a plain text header. The category will be not be selectable in the editor, forcing users to post in its sub-categories.
+&lt;strong&gt;Categories:&lt;/strong&gt; Uses the category as a container to display its sub-categories upon clicking through.
+&lt;strong&gt;Discussions:&lt;/strong&gt; The standard view that displays threads&lt;/p&gt;
+
+&lt;h2 id=&#34;category-page-layout&#34;&gt;Category Page Layout&lt;/h2&gt;
+
+&lt;p&gt;&amp;ldquo;Place nested categories in a comma-delimited list&amp;rdquo; is a way of making sub-categories more compact on the Categories page.
+&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/it/ntxs2xgycl7z.png&#34; alt=&#34;&#34; /&gt;
+We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Do not display the categories in the side panel&amp;rdquo; hides the default category list that shows up in the panel as a shortcut. Select this option if you have many categories (more than a dozen) that would make the list unwieldy.&lt;/p&gt;
+
+&lt;h2 id=&#34;organizing-categories&#34;&gt;Organizing Categories&lt;/h2&gt;
+
+&lt;p&gt;Drag and drop your categories to organize them. Slide them to the right slightly to nest them under the category directly above them.&lt;/p&gt;
+
+&lt;p&gt;The option &amp;ldquo;Display root categories as headings&amp;rdquo; turns the top-level categories into plain text &amp;ldquo;headers&amp;rdquo;. Headers are sections that cannot be posted in directly, so be sure to nest a category underneath your root if you select this option.&lt;/p&gt;
+
+&lt;h2 id=&#34;choosing-a-categories-view&#34;&gt;Choosing a Categories view&lt;/h2&gt;
+
+&lt;p&gt;In the &amp;ldquo;Homepage&amp;rdquo; settings page in your Dashboard under &amp;ldquo;Category Layout&amp;rdquo; there are options for how to display the Categories page for your users. The &amp;ldquo;Mixed Layout&amp;rdquo; option shows up to five discussions with the most recent comment under each category.&lt;/p&gt;
+
+&lt;h2 id=&#34;deleting-a-category&#34;&gt;Deleting a Category&lt;/h2&gt;
+
+&lt;p&gt;To delete a category, click the &amp;ldquo;Delete&amp;rdquo; button beside it in the Dashboard. You will be prompted to select a replacement category from a drop down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.&lt;/p&gt;
+
+&lt;h2 id=&#34;unfollow-a-category&#34;&gt;Unfollow a Category&lt;/h2&gt;
+
+&lt;p&gt;On the main categories page, each section has a cogwheel menu with the option to &amp;ldquo;Hide&amp;rdquo; the category from view. By default, you will only see your &amp;ldquo;Followed Categories&amp;rdquo; when viewing forum index, but if you&amp;rsquo;d like to see hidden categories, simple toggle your view to &amp;ldquo;All Categories&amp;rdquo; with the option at the bottom of the sidebar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/4b/edbr9ey86ysk.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When you are viewing all categories, you can unhide sections with the same cogwheel menu.&lt;/p&gt;
 </description>
     </item>
     

@@ -2,571 +2,571 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//vanilla.github.io/docs/</loc>
+    <loc>//docs.vanillaforums.com/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/</loc>
+    <loc>//docs.vanillaforums.com/help/features/accessibility/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/accessibility/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/</loc>
+    <loc>//docs.vanillaforums.com/help/features/embedding/advanced/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/embedding/advanced/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/assets/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/assets/</loc>
+    <loc>//docs.vanillaforums.com/developer/backend/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/backend/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/badges/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/badges/</loc>
+    <loc>//docs.vanillaforums.com/developer/configuration/banner/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/banner/</loc>
+    <loc>//docs.vanillaforums.com/developer/importing/build/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/build/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/css/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/css/</loc>
+    <loc>//docs.vanillaforums.com/help/features/categories/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/categories/</loc>
+    <loc>//docs.vanillaforums.com/developer/changelog/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/changelog/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/</loc>
+    <loc>//docs.vanillaforums.com/developer/contributing/conduct/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/conduct/</loc>
+    <loc>//docs.vanillaforums.com/developer/contributing/coding-standard/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/coding-standard/</loc>
+    <loc>//docs.vanillaforums.com/developer/community/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/community/</loc>
+    <loc>//docs.vanillaforums.com/developer/configuration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/</loc>
+    <loc>//docs.vanillaforums.com/developer/contributing/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/controllers/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/controllers/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</loc>
+    <loc>//docs.vanillaforums.com/developer/configuration/dashboard/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/dashboard/</loc>
+    <loc>//docs.vanillaforums.com/developer/data-privacy/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/data-privacy/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/database/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/database/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/datasets/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/datasets/</loc>
+    <loc>//docs.vanillaforums.com/help/features/roles-permissions/default-role-types/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/roles-permissions/default-role-types/</loc>
+    <loc>//docs.vanillaforums.com/developer/tools/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/tools/</loc>
+    <loc>//docs.vanillaforums.com/developer/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/email/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/email/</loc>
+    <loc>//docs.vanillaforums.com/help/features/emails/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/emails/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/embed/</loc>
+    <loc>//docs.vanillaforums.com/help/features/embedding/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/embedding/</loc>
+    <loc>//docs.vanillaforums.com/help/features/emoji/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/emoji/</loc>
+    <loc>//docs.vanillaforums.com/api/categories/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/categories/</loc>
+    <loc>//docs.vanillaforums.com/api/comments/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/comments/</loc>
+    <loc>//docs.vanillaforums.com/api/discussions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/discussions/</loc>
+    <loc>//docs.vanillaforums.com/api/multisites/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/multisites/</loc>
+    <loc>//docs.vanillaforums.com/api/roles/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/roles/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/hooks/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/hooks/</loc>
+    <loc>//docs.vanillaforums.com/help/features/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/</loc>
+    <loc>//docs.vanillaforums.com/api/forum-administration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/forum-administration/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/forum-merge/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/forum-merge/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/</loc>
+    <loc>//docs.vanillaforums.com/help/getting-started/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/getting-started/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/gigya/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/gigya/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/badges/giving-and-requesting-badges/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/googleplus/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/googleplus/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/groups/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/groups/</loc>
+    <loc>//docs.vanillaforums.com/help/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/helpers/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/helpers/</loc>
+    <loc>//docs.vanillaforums.com/developer/configuration/homepage/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/homepage/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/ideation/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ideation/</loc>
+    <loc>//docs.vanillaforums.com/developer/importing/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/inform/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/inform/</loc>
+    <loc>//docs.vanillaforums.com/developer/installation/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/installation/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/integration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/integration/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/i18n/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/i18n/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/releases/january-2016/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/january-2016/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/leaving/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/leaving/</loc>
+    <loc>//docs.vanillaforums.com/developer/locales/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/locales/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/logging/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/logging/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/groups/managing-groups/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/groups/managing-groups/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/releases/march-2016/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/march-2016/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/releases/may-2016/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/may-2016/</loc>
+    <loc>//docs.vanillaforums.com/developer/configuration/message/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/message/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/migration/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/migration/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/models/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/models/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/modules/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/modules/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/multisite/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/multisite/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/multisite/sync/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/multisite/sync/</loc>
+    <loc>//docs.vanillaforums.com/help/features/notifications/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/notifications/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/oauth/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/oauth/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/page-links/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/permissions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/permissions/</loc>
+    <loc>//docs.vanillaforums.com/developer/plugins/quickstart/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/plugins/quickstart/</loc>
+    <loc>//docs.vanillaforums.com/developer/plugins/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/plugins/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/pockets/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/pockets/</loc>
+    <loc>//docs.vanillaforums.com/developer/contributing/pull-requests/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/contributing/pull-requests/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/quickstart/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/quickstart/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/ranks/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/reactions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reactions/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/redirector/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/redirector/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/releases/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/releases/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/reporting/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/reporting/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/repository/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/repository/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/requests/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/requests/</loc>
+    <loc>//docs.vanillaforums.com/help/features/roles-permissions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/roles-permissions/</loc>
+    <loc>//docs.vanillaforums.com/developer/routes/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/routes/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/saml/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/saml/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/seamless/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/seamless/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/ssl/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/ssl/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/</loc>
+    <loc>//docs.vanillaforums.com/api/smart-id/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/smart-id/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/conditionals/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/modifiers/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/staging/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/staging/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/statistics/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/statistics/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/support/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/support/</loc>
+    <loc>//docs.vanillaforums.com/developer/importing/support/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/support/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/overview/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/overview/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/themeoptions/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/themeoptions/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/theming/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/cloud/theming/</loc>
+    <loc>//docs.vanillaforums.com/developer/troubleshooting/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/troubleshooting/</loc>
+    <loc>//docs.vanillaforums.com/help/features/comments/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/comments/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/upgrading-from-warnings/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/upgrading-from-warnings/</loc>
+    <loc>//docs.vanillaforums.com/api/use-api-on-external-site/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/api/use-api-on-external-site/</loc>
+    <loc>//docs.vanillaforums.com/help/features/wordpress/using-comments/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/wordpress/using-comments/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/ranks/using-ranks-as-incentives/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/using-ranks-as-incentives/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
+    <loc>//docs.vanillaforums.com/developer/configuration/using/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/configuration/using/</loc>
+    <loc>//docs.vanillaforums.com/api/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/vanilla-pop/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/vanilla-pop/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/vanilla-pop/site-hub/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/importing/porter/</loc>
+    <loc>//docs.vanillaforums.com/developer/importing/porter/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/framework/views/</loc>
+    <loc>//docs.vanillaforums.com/developer/framework/views/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/views/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/views/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/warning-a-user/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/warning-a-user/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/wordpress/wishlist/</loc>
+    <loc>//docs.vanillaforums.com/help/features/wordpress/wishlist/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/wordpress/</loc>
+    <loc>//docs.vanillaforums.com/help/features/wordpress/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/help/features/sso/jsconnect/</loc>
+    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/asset/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/breadcrumbs/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/custom-menu/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/event/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/include-file/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/link/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/logo/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/mobile-logo/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/module/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/permission/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/pocket/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/searchbox/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/text/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</loc>
   </url>
   
   <url>
-    <loc>//vanilla.github.io/docs/developer/theming/smarty/functions/i18n/</loc>
+    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</loc>
   </url>
   
 </urlset>

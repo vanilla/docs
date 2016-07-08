@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Addons on Vanilla Forums Documentation</title>
-    <link>//vanilla.github.io/docs/tags/addons/</link>
+    <link>//docs.vanillaforums.com/tags/addons/</link>
     <description>Recent content in Addons on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//vanilla.github.io/docs/tags/addons/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/addons/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -53,10 +53,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -118,14 +118,14 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -136,7 +136,7 @@
 
 &lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
@@ -158,7 +158,7 @@
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
 
@@ -170,10 +170,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -192,10 +192,10 @@
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -210,14 +210,14 @@
     
     <item>
       <title>Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/</link>
+      <link>//docs.vanillaforums.com/help/addons/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -246,14 +246,14 @@
     
     <item>
       <title>Curating with Reactions</title>
-      <link>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</link>
+      <link>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/reactions/curating-with-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -292,10 +292,10 @@
     
     <item>
       <title>Forum Merge</title>
-      <link>//vanilla.github.io/docs/help/addons/forum-merge/</link>
+      <link>//docs.vanillaforums.com/help/addons/forum-merge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/forum-merge/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/forum-merge/</guid>
       <description>
 
 &lt;h2 id=&#34;when-to-use-forum-merge&#34;&gt;When to Use Forum Merge&lt;/h2&gt;
@@ -347,10 +347,10 @@
     
     <item>
       <title>Gigya Sign In</title>
-      <link>//vanilla.github.io/docs/help/addons/gigya/</link>
+      <link>//docs.vanillaforums.com/help/addons/gigya/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/gigya/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/gigya/</guid>
       <description>
 
 &lt;h2 id=&#34;gigya-sign-in&#34;&gt;Gigya Sign In&lt;/h2&gt;
@@ -391,14 +391,14 @@
     
     <item>
       <title>Giving and Requesting Badges</title>
-      <link>//vanilla.github.io/docs/help/addons/badges/giving-and-requesting-badges/</link>
+      <link>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/badges/giving-and-requesting-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -436,10 +436,10 @@
     
     <item>
       <title>Google Plus</title>
-      <link>//vanilla.github.io/docs/help/addons/googleplus/</link>
+      <link>//docs.vanillaforums.com/help/addons/googleplus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/googleplus/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/googleplus/</guid>
       <description>
 
 &lt;h2 id=&#34;google-plus&#34;&gt;Google Plus&lt;/h2&gt;
@@ -460,16 +460,16 @@
 &lt;li&gt;If you have never used Google APIs before you will also need to fill in Consent Screen.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;//vanilla.github.io/docs/img/help/addons/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Groups</title>
-      <link>//vanilla.github.io/docs/help/addons/groups/</link>
+      <link>//docs.vanillaforums.com/help/addons/groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/groups/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/groups/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-groups&#34;&gt;What are Groups?&lt;/h2&gt;
@@ -490,14 +490,14 @@
     
     <item>
       <title>Ideation</title>
-      <link>//vanilla.github.io/docs/help/addons/ideation/</link>
+      <link>//docs.vanillaforums.com/help/addons/ideation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/ideation/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/ideation/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//vanilla.github.io/docs/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -541,10 +541,10 @@
     
     <item>
       <title>Managing Groups</title>
-      <link>//vanilla.github.io/docs/help/addons/groups/managing-groups/</link>
+      <link>//docs.vanillaforums.com/help/addons/groups/managing-groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/help/addons/groups/managing-groups/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/groups/managing-groups/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-your-first-groups&#34;&gt;Adding your first groups&lt;/h2&gt;
@@ -567,16 +567,16 @@
     
     <item>
       <title>Plugin Quickstart</title>
-      <link>//vanilla.github.io/docs/developer/plugins/quickstart/</link>
+      <link>//docs.vanillaforums.com/developer/plugins/quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//vanilla.github.io/docs/developer/plugins/quickstart/</guid>
+      <guid>//docs.vanillaforums.com/developer/plugins/quickstart/</guid>
       <description>
 
 &lt;h2 id=&#34;quickstart-links&#34;&gt;Quickstart Links&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Read about our hooks system: &lt;a href=&#34;//vanilla.github.io/docs/developer/plugins&#34;&gt;Extending Vanilla with plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Read about our hooks system: &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins&#34;&gt;Extending Vanilla with plugins&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Download the official &lt;a href=&#34;http://vanillaforums.org/addon/example-plugin&#34;&gt;Example plugin&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Download other plugins from the &lt;a href=&#34;http://vanillaforums.org/addons&#34;&gt;Addon Directory&lt;/a&gt; and borrow their code.&lt;/li&gt;
 &lt;li&gt;Get help in the &lt;a href=&#34;http://vanillaforums.org/categories/developers&#34;&gt;developer community&lt;/a&gt;&lt;/li&gt;
@@ -679,7 +679,7 @@ $PluginInfo[&#39;FancyPlugin&#39;] = array(
 
 &lt;p&gt;Try the &lt;a href=&#34;http://vanillaforums.org/addon/eventi-plugin&#34;&gt;Eventi plugin&lt;/a&gt; to visualize where events are fired in Vanilla. Use the hooks in the &lt;a href=&#34;http://vanillaforums.org/addon/example-plugin&#34;&gt;Example plugin&lt;/a&gt; to see what they do.&lt;/p&gt;
 
-&lt;p&gt;Read the &lt;a href=&#34;//vanilla.github.io/docs/developer/plugins&#34;&gt;plugin hooks tutorial&lt;/a&gt; for more on how to override &amp;amp; extend Vanilla.&lt;/p&gt;
+&lt;p&gt;Read the &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins&#34;&gt;plugin hooks tutorial&lt;/a&gt; for more on how to override &amp;amp; extend Vanilla.&lt;/p&gt;
 
 &lt;p&gt;Use an IDE and use the project search functionality to locate instances of &lt;code&gt;FireEvent&lt;/code&gt; in the &lt;a href=&#34;http://github.com/vanilla/vanilla&#34;&gt;core repo&lt;/a&gt;. Many doc blocks show what events are fired within their methods. Or, search for &lt;code&gt;_Handler&lt;/code&gt; in the &lt;a href=&#34;http://github.com/vanilla/addons&#34;&gt;addons repo&lt;/a&gt; to see examples and common uses.&lt;/p&gt;
 
@@ -701,7 +701,7 @@ $PluginInfo[&#39;FancyPlugin&#39;] = array(
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Use the &lt;code&gt;$Sender&lt;/code&gt; variable to call methods from the controller or model that triggered your code. Use the &lt;code&gt;$Args&lt;/code&gt; variable to change parameters or detect certain situations. This is where you&amp;rsquo;ll want to start digging into the finer points of &lt;a href=&#34;//vanilla.github.io/docs/developer/plugins&#34;&gt;extending Vanilla with plugins&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;$Sender&lt;/code&gt; variable to call methods from the controller or model that triggered your code. Use the &lt;code&gt;$Args&lt;/code&gt; variable to change parameters or detect certain situations. This is where you&amp;rsquo;ll want to start digging into the finer points of &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins&#34;&gt;extending Vanilla with plugins&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You can also use normal methods to reuse code. For instance, maybe you need 2 different hooks to do the same thing:&lt;/p&gt;
 
@@ -755,12 +755,12 @@ public function CommonMethod($Sender, $Args) {
 &lt;p&gt;Final tips:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Use the &lt;a href=&#34;//vanilla.github.io/docs/developer/troubleshooting&#34;&gt;troubleshooting guide&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use the &lt;a href=&#34;//docs.vanillaforums.com/developer/troubleshooting&#34;&gt;troubleshooting guide&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;decho()&lt;/code&gt; to output variables &amp;amp; &lt;code&gt;Trace()&lt;/code&gt; to leave breadcrumbs.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Wrap all URLs&lt;/strong&gt; with &lt;code&gt;Url()&lt;/code&gt; to account for subfolder&amp;rsquo;d forums.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Never hard-code paths&lt;/strong&gt;. Use constants like &lt;code&gt;PATH_UPLOADS&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Use models&lt;/strong&gt; to access the database rather than writing your own queries. E.g.: Need discussions? Look at &lt;code&gt;DiscussionModel&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Adding your own data to the database? Read about the &lt;a href=&#34;//vanilla.github.io/docs/developer/framework/database&#34;&gt;database query builder&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Adding your own data to the database? Read about the &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/database&#34;&gt;database query builder&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;And, as always, ask the talented &amp;amp; helpful folks on our &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt; when you get stuck.&lt;/p&gt;
