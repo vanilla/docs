@@ -897,6 +897,18 @@ a:hover {
   color: white;
 }
 
+.docs.docs-layout-section-api .docs-header {
+  background-color: #333333;
+}
+
+.docs.docs-layout-section-api .docs-header .docs-header-tray .docs-header-search .docs-search-wrap {
+  background: #232323;
+}
+
+.docs.docs-layout-section-api .docs-header .docs-header-tray .docs-header-search .docs-search-results li:hover {
+  background: #333333;
+}
+
 .docs.docs-layout-section-developer .docs-header {
   background-color: #333333;
 }

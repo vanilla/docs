@@ -1,0 +1,25 @@
+.docs.docs-layout-section-api {
+    .docs-header {
+        background-color: $panelDark;
+            
+        .docs-header-tray {
+            
+            .docs-header-search {
+                
+                .docs-search-wrap {
+                    background: $panelDarkDim;
+                }
+                
+                .docs-search-results {
+                    
+                    li {
+
+                        &:hover {
+                            background: $panelDark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
