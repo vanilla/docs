@@ -660,6 +660,23 @@ a:hover {
   color: white;
 }
 
+.docs-layout-landing .docs-api-gutter {
+  text-align: center;
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 50px 0px 30px 0px;
+}
+
+.docs-layout-landing .docs-api-gutter a {
+  color: #0291DB;
+  border-bottom: 1px dotted #0291DB;
+}
+
+.docs-layout-landing .docs-api-gutter a:hover {
+  color: #F52C6E;
+  border-color: #F52C6E;
+}
+
 .docs-layout-landing .docs-footer {
   margin: 80px 0px 40px 0px;
 }

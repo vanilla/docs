@@ -117,6 +117,23 @@
         }
     }
     
+    .docs-api-gutter {
+        text-align: center;
+        font-size: 18px;
+        font-weight: lighter;
+        margin: 50px 0px 30px 0px;
+        
+        a {
+            color: $vanillaBlue;
+            border-bottom: 1px dotted $vanillaBlue;
+            
+            &:hover {
+                color: $vanillaPink;
+                border-color: $vanillaPink;
+            }
+        }
+    }
+    
     .docs-footer {
         margin: 80px 0px 40px 0px;
         

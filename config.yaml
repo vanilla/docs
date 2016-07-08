@@ -1,4 +1,4 @@
-baseurl: "//vanilla.github.io/docs"
+baseurl: "//docs.vanillaforums.com"
 title: "Vanilla Forums Documentation"
 builddrafts: false
 
@@ -17,6 +17,7 @@ params:
         blog: "https://blog.vanillaforums.com"
         cloud: "https://vanillaforums.com"
         community: "https://vanillaforums.org/discussions"
+        api: "http://docs.vanillaforums.com/api"
         github: "https://github.com/vanilla/vanilla"
         issues: "https://github.com/vanilla/vanilla/issues"
     
