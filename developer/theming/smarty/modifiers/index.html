@@ -321,15 +321,13 @@
 
 <h2 id="smarty-modifiers">Smarty Modifiers</h2>
 
-<p>Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). These modifiers must follow the order of their appearance in the signature. <a href="http://www.smarty.net/docsv2/en/language.modifiers.tpl">Learn more about Smarty modifiers from the Smarty site.</a>.</p>
+<p>Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). <em>These parameters must follow the order of their appearance in the signature</em>.</p>
 
-<p>Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates.</p>
+<p>Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates. <a href="http://www.smarty.net/docsv2/en/language.modifiers.tpl">Learn more about Smarty modifiers from the Smarty site.</a>.</p>
 
-<h3 id="modifier-asset-url">Modifier: <code>asset_url</code></h3>
+<h2 id="modifier-asset-url">Modifier: <em>asset_url</em></h2>
 
 <p>Converts a string to an asset url. Solves the problem of trying to using a relative path when Vanilla exists in a subfolder.</p>
-
-<h4 id="asset-url-parameters-in-order"><code>asset_url</code> Parameters (in order)</h4>
 
 <table>
 <thead>
@@ -358,18 +356,16 @@
 </tbody>
 </table>
 
-<h4 id="asset-url-example"><code>asset_url</code> Example</h4>
+<h3 id="example">Example</h3>
 
 <p>In the following example, if the asset_url modifier was not specified, the image would not work if Vanilla existed in a subfolder. It also adds the domain name to the url and appends the theme version number.</p>
 
 <pre><code>&lt;img alt=&quot;My logo&quot; src=&quot;{&quot;/themes/MyTheme/design/images/my-logo.png&quot;|asset_url:true:true}&quot;&gt;
 </code></pre>
 
-<h3 id="modifier-date">Modifier: <code>date</code></h3>
+<h2 id="modifier-date">Modifier: <em>date</em></h2>
 
 <p>Formats a timestamp consistently with Vanilla&rsquo;s date formatting, which by default varies depending on how much time has passed.</p>
-
-<h4 id="date-parameter"><code>date</code> Parameter</h4>
 
 <table>
 <thead>
@@ -391,18 +387,16 @@
 </tbody>
 </table>
 
-<h4 id="date-example"><code>date</code> Example</h4>
+<h3 id="example-1">Example</h3>
 
 <p>The following example prints out the current year and uses the <a href="http://www.smarty.net/docsv2/en/language.variables.smarty.tpl">{$smarty} reserved variable</a> to get the current timestamp</p>
 
 <pre><code>{$smarty.now|date:&quot;%Y&quot;}
 </code></pre>
 
-<h3 id="modifier-translate">Modifier: <code>translate</code></h3>
+<h2 id="modifier-translate">Modifier: <em>translate</em></h2>
 
 <p>Translates a string into the selected locale&rsquo;s definition.</p>
-
-<h4 id="translate-parameter"><code>translate</code> Parameter</h4>
 
 <table>
 <thead>
@@ -424,11 +418,12 @@
 </tbody>
 </table>
 
-<h4 id="translate-example"><code>translate</code> Example</h4>
+<h3 id="example-2">Example</h3>
 
 <p>This example outputs the breadcrumbs, where the home link text is the translated &lsquo;Forum&rsquo; definition. <a href="//vanilla.github.io/docs/functions/breadcrumbs.html.md">Learn more about the breadcrumbs tag.</a></p>
 
-<p>{breadcrumbs homelink=&ldquo;Forum&rdquo;|translate}</p>
+<pre><code>{breadcrumbs homelink=&quot;Forum&quot;|translate}
+</code></pre>
 
 
             

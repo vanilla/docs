@@ -6,6 +6,10 @@
   </url>
   
   <url>
+    <loc>//vanilla.github.io/docs/api/</loc>
+  </url>
+  
+  <url>
     <loc>//vanilla.github.io/docs/help/features/accessibility/</loc>
   </url>
   
@@ -150,11 +154,35 @@
   </url>
   
   <url>
+    <loc>//vanilla.github.io/docs/api/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/api/comments/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/api/discussions/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/api/multisites/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/api/roles/</loc>
+  </url>
+  
+  <url>
     <loc>//vanilla.github.io/docs/developer/theming/hooks/</loc>
   </url>
   
   <url>
     <loc>//vanilla.github.io/docs/help/features/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/api/forum-administration/</loc>
   </url>
   
   <url>
@@ -362,6 +390,10 @@
   </url>
   
   <url>
+    <loc>//vanilla.github.io/docs/api/smart-id/</loc>
+  </url>
+  
+  <url>
     <loc>//vanilla.github.io/docs/developer/theming/smarty/</loc>
   </url>
   
@@ -419,6 +451,10 @@
   
   <url>
     <loc>//vanilla.github.io/docs/help/addons/warnings-and-notes/upgrading-from-warnings/</loc>
+  </url>
+  
+  <url>
+    <loc>//vanilla.github.io/docs/api/use-api-on-external-site/</loc>
   </url>
   
   <url>

@@ -8,6 +8,128 @@
     <atom:link href="//vanilla.github.io/docs/tags/hub/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Endpoint: multisites</title>
+      <link>//vanilla.github.io/docs/api/multisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/multisites/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The site hub is a special service for VIP customers. It allows you to create sites on your VIP cluster and is used for people that want to integrate communities within their entire organization. You can make hub api calls just like other api calls, but you make those calls against your site hub rather than an individual site. Most hub api calls will be against &lt;code&gt;https://yourdomain.com/hub/api/v1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: All endpoints for multisites require an access token with administrative privileges.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;get-multisites&#34;&gt;GET /multisites&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /hub/api/v1/multisites.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Gets a list of sites in your hub.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;search&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The site name to search for.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;post-multisites&#34;&gt;POST /multisites&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /hub/api/v1/multisites.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a new site and queues it for building. When a site is created it will not be immediately available, but instead be in a &lt;em&gt;Building&lt;/em&gt; status. Usually, sites take about a minute to build.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A human readable name for the site.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Slug&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The site&amp;rsquo;s folder. Make sure to use just alphanumeric, lowercase characters for the slug.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;get-multisites-id&#34;&gt;GET /multisites/{id}&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;GET /hub/api/v1/multisites/1.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get the details of an individual site by ID.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;id&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the site.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;post-multisites-syncnode&#34;&gt;POST /multisites/syncnode&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;POST /hub/api/v1/multisites/syncnode.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Synchronize the sites against the hub. Note that this method doesn&amp;rsquo;t have to be called as the nodes automatically synchronize every 20 minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Vanilla Pop with Site Hub</title>
       <link>//vanilla.github.io/docs/help/addons/vanilla-pop/site-hub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

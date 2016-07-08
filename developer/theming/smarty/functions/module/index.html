@@ -448,6 +448,8 @@
 
 <h2 id="function-module">Function: <code>{module}</code></h2>
 
+<h3 id="usage">Usage</h3>
+
 <pre><code>{module name=&quot;string&quot; ... }
 </code></pre>
 
@@ -457,27 +459,104 @@
 
 <p>There are many modules available in Vanilla and in its addons. They can be found in the modules directory of an application or addon. <a href="../../../developers/framework/modules.html.md">Learn more about modules.</a></p>
 
-<h3 id="parameters">Parameters</h3>
+<h2 id="parameters">Parameters</h2>
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td><strong><code>name</code></strong></td>
-<td><code>string</code></td>
-<td>none</td>
-<td>The full class name of the module</td>
-</tr>
-</tbody>
-</table>
+
+
+    
+    
+    
+    
+        
+        <table class="docs-parameters parameters-type-function">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    
+                    <th>Default</th>
+                    
+                    <th>Description</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                
+                <tr class="docs-parameter parameter-required">
+                    <td class="parameter-name"><code>name</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            none
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The name of the asset</td>
+                </tr>
+                
+                <tr class="docs-parameter">
+                    <td class="parameter-name"><code>tag</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            <code>$name</code>
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The id of the tag if different than the name</td>
+                </tr>
+                
+                <tr class="docs-parameter">
+                    <td class="parameter-name"><code>id</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            none
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The type of tag to wrap the asset in</td>
+                </tr>
+                
+                <tr class="docs-parameter">
+                    <td class="parameter-name"><code>class</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            none
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The class to add to the asset wrapper</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    
+    
+    
+
 
 <p>You can set any property of a module by specifying it as a parameter as long as that property has a setter method or has a visibility of public.</p>
 

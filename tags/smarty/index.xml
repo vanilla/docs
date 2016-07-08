@@ -24,103 +24,151 @@
 &lt;pre&gt;&lt;code&gt;{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;li&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The tag to wrap the link in.&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;varies depending on link&lt;/td&gt;
-&lt;td&gt;What the text for the link should be.&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;%url&amp;quot; class=&amp;quot;%class&amp;quot;&amp;gt;%text&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;li&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The tag to wrap the link in.&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;varies&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;What the text for the link should be.&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;&amp;lt;a href=&amp;#39;%url&amp;#39; class=&amp;#39;%class&amp;#39;&amp;gt;%text&amp;lt;/a&amp;gt;&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
 
-&lt;h3 id=&#34;function-bookmarks-link&#34;&gt;Function: &lt;code&gt;{bookmarks_link}&lt;/code&gt;&lt;/h3&gt;
+
+&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
+
+&lt;h3 id=&#34;function-bookmarks-link&#34;&gt;Function: {bookmarks_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the My Bookmarks page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-categories-link&#34;&gt;Function: &lt;code&gt;{categories_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-categories-link&#34;&gt;Function: {categories_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the categories page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-category-link&#34;&gt;Function: &lt;code&gt;{category_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-category-link&#34;&gt;Function: {category_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the current category page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-dashboard-link&#34;&gt;Function: &lt;code&gt;{dashboard_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-dashboard-link&#34;&gt;Function: {dashboard_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the dashboard.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-discussions-link&#34;&gt;Function: &lt;code&gt;{discussions_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-discussions-link&#34;&gt;Function: {discussions_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the discussions page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-drafts-link&#34;&gt;Function: &lt;code&gt;{drafts_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-drafts-link&#34;&gt;Function: {drafts_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the drafts page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-forum-root-link&#34;&gt;Function: &lt;code&gt;{forum_root_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-forum-root-link&#34;&gt;Function: {forum_root_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the forum root page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-home-link&#34;&gt;Function: &lt;code&gt;{home_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-home-link&#34;&gt;Function: {home_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the home page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-inbox-link&#34;&gt;Function: &lt;code&gt;{inbox_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-inbox-link&#34;&gt;Function: {inbox_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the inbox.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-mydiscussions-link&#34;&gt;Function: &lt;code&gt;{mydiscussions_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-mydiscussions-link&#34;&gt;Function: {mydiscussions_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the My Discussions page.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-nomobile-link&#34;&gt;Function: &lt;code&gt;{nomobile_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-nomobile-link&#34;&gt;Function: {nomobile_link}&lt;/h3&gt;
 
 &lt;p&gt;Link for showing the desktop version of the site.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-photo-link&#34;&gt;Function: &lt;code&gt;{photo_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-photo-link&#34;&gt;Function: {photo_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the session&amp;rsquo;s user profile that displays as the user&amp;rsquo;s avatar.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-profile-link&#34;&gt;Function: &lt;code&gt;{profile_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-profile-link&#34;&gt;Function: {profile_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to session&amp;rsquo;s user profile. The link text is the username. Includes a notification count.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-signin-link&#34;&gt;Function: &lt;code&gt;{signin_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-signin-link&#34;&gt;Function: {signin_link}&lt;/h3&gt;
 
 &lt;p&gt;If there is a valid session, this outputs a signout link, otherwise a signin link.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-signinout-link&#34;&gt;Function: &lt;code&gt;{signinout_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-signinout-link&#34;&gt;Function: {signinout_link}&lt;/h3&gt;
 
 &lt;p&gt;If there is a valid session, this outputs a signout link, otherwise a signin link.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-user-link&#34;&gt;Function: &lt;code&gt;{user_link}&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;function-user-link&#34;&gt;Function: {user_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to session&amp;rsquo;s user profile. The link text is this username. Does not include a notification count.&lt;/p&gt;
 </description>
@@ -156,11 +204,11 @@
 
 &lt;p&gt;The following PHP internal functions are available for use in Smarty if statements: array, list, isset, empty, count, sizeof, in_array, is_array, true, false, and null. We&amp;rsquo;ve also whitelisted some PHP functions in Vanilla that can be used in Smarty if statements. The most useful of these functions are outlined below.&lt;/p&gt;
 
-&lt;h3 id=&#34;category&#34;&gt;Category&lt;/h3&gt;
+&lt;h2 id=&#34;conditional-category&#34;&gt;Conditional: &lt;em&gt;Category&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Returns an array representing the current category.&lt;/p&gt;
 
-&lt;h4 id=&#34;category-example&#34;&gt;Category Example&lt;/h4&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;This example prints out a message if the user is browsing a page in the &amp;ldquo;General&amp;rdquo; category. Also uses the GetValue function, outlined below.&lt;/p&gt;
 
@@ -169,11 +217,11 @@
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;checkpermission&#34;&gt;CheckPermission&lt;/h3&gt;
+&lt;h2 id=&#34;conditional-checkpermission&#34;&gt;Conditional: &lt;em&gt;CheckPermission&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Tests whether the current user has the passed permission or array of permissions and returns true if the current user has one of the given permission(s).&lt;/p&gt;
 
-&lt;h4 id=&#34;checkpermission-example&#34;&gt;CheckPermission Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;This example checks whether the user has either the &amp;ldquo;Garden.Settings.Manage&amp;rdquo; or &amp;ldquo;Garden.Settings.View&amp;rdquo; permission and if so, adds a link to the dashboard.&lt;/p&gt;
 
@@ -182,11 +230,11 @@
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;homepage&#34;&gt;Homepage&lt;/h3&gt;
+&lt;h2 id=&#34;conditional-homepage&#34;&gt;Conditional: &lt;em&gt;Homepage&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;The variable &lt;code&gt;$Homepage&lt;/code&gt; is set to true if (and only if) the user is on your homepage.&lt;/p&gt;
 
-&lt;h4 id=&#34;homepage-example&#34;&gt;Homepage Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;This example checks whether the user is on the homepage to display one message or another.&lt;/p&gt;
 
@@ -201,11 +249,11 @@
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;insection&#34;&gt;InSection&lt;/h3&gt;
+&lt;h2 id=&#34;conditional-insection&#34;&gt;Conditional: &lt;em&gt;InSection&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Returns true if the user is in a section or one of an array or sections. You can see what section a Vanilla page belongs to by inspecting the body tag using your browser tools and checking its CSS class. There will be an Section-* class, where * is the current section.&lt;/p&gt;
 
-&lt;h4 id=&#34;insection-example&#34;&gt;InSection Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-3&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;This example checks whether the user is in either the Profile, Conversation or ActivityList section and if so, adds the panel asset.&lt;/p&gt;
 
@@ -214,11 +262,11 @@
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;incategory&#34;&gt;InCategory&lt;/h3&gt;
+&lt;h2 id=&#34;conditional-incategory&#34;&gt;Conditional: &lt;em&gt;InCategory&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Given a category&amp;rsquo;s url code, returns true if the user is on a page in that category. You can manage the url codes of your forum&amp;rsquo;s categories from the Manage Categories page in the dashboard.&lt;/p&gt;
 
-&lt;h4 id=&#34;incategory-example&#34;&gt;InCategory Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-4&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;This example prints out a message if the user is browsing a page in a category with the url code &amp;lsquo;general-category&amp;rsquo;.&lt;/p&gt;
 
@@ -227,15 +275,15 @@
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;getvalue&#34;&gt;GetValue&lt;/h3&gt;
+&lt;h2 id=&#34;conditional-getvalue&#34;&gt;Conditional: &lt;em&gt;GetValue&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Given an array key or property name, returns its value from an associative array or an object.&lt;/p&gt;
 
-&lt;h4 id=&#34;getvalue-example&#34;&gt;GetValue Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-5&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;See the [Category example](&amp;lsquo;#category-example&amp;rsquo;) above.&lt;/p&gt;
 
-&lt;h3 id=&#34;other-conditional-functions&#34;&gt;Other conditional functions&lt;/h3&gt;
+&lt;h2 id=&#34;other-conditional-functions&#34;&gt;Other conditional functions&lt;/h2&gt;
 
 &lt;p&gt;There are a few other (less useful) functions that can be used in conditional statements in Vanilla&amp;rsquo;s Smarty implementation. These are MultiCheckPermission, SetValue and Url. These function declarations are in &lt;code&gt;/library/core/functions.general.php&lt;/code&gt;. To understand how to use these functions, refer to the source code there.&lt;/p&gt;
 </description>
@@ -267,15 +315,13 @@
 
 &lt;h2 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h2&gt;
 
-&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). These modifiers must follow the order of their appearance in the signature. &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.modifiers.tpl&#34;&gt;Learn more about Smarty modifiers from the Smarty site.&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). &lt;em&gt;These parameters must follow the order of their appearance in the signature&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates.&lt;/p&gt;
+&lt;p&gt;Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates. &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.modifiers.tpl&#34;&gt;Learn more about Smarty modifiers from the Smarty site.&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;modifier-asset-url&#34;&gt;Modifier: &lt;code&gt;asset_url&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;modifier-asset-url&#34;&gt;Modifier: &lt;em&gt;asset_url&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Converts a string to an asset url. Solves the problem of trying to using a relative path when Vanilla exists in a subfolder.&lt;/p&gt;
-
-&lt;h4 id=&#34;asset-url-parameters-in-order&#34;&gt;&lt;code&gt;asset_url&lt;/code&gt; Parameters (in order)&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -304,18 +350,16 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;asset-url-example&#34;&gt;&lt;code&gt;asset_url&lt;/code&gt; Example&lt;/h4&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;In the following example, if the asset_url modifier was not specified, the image would not work if Vanilla existed in a subfolder. It also adds the domain name to the url and appends the theme version number.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;img alt=&amp;quot;My logo&amp;quot; src=&amp;quot;{&amp;quot;/themes/MyTheme/design/images/my-logo.png&amp;quot;|asset_url:true:true}&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;modifier-date&#34;&gt;Modifier: &lt;code&gt;date&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;modifier-date&#34;&gt;Modifier: &lt;em&gt;date&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Formats a timestamp consistently with Vanilla&amp;rsquo;s date formatting, which by default varies depending on how much time has passed.&lt;/p&gt;
-
-&lt;h4 id=&#34;date-parameter&#34;&gt;&lt;code&gt;date&lt;/code&gt; Parameter&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -337,18 +381,16 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;date-example&#34;&gt;&lt;code&gt;date&lt;/code&gt; Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;The following example prints out the current year and uses the &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.variables.smarty.tpl&#34;&gt;{$smarty} reserved variable&lt;/a&gt; to get the current timestamp&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{$smarty.now|date:&amp;quot;%Y&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;modifier-translate&#34;&gt;Modifier: &lt;code&gt;translate&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;modifier-translate&#34;&gt;Modifier: &lt;em&gt;translate&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;Translates a string into the selected locale&amp;rsquo;s definition.&lt;/p&gt;
-
-&lt;h4 id=&#34;translate-parameter&#34;&gt;&lt;code&gt;translate&lt;/code&gt; Parameter&lt;/h4&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -370,11 +412,12 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;translate-example&#34;&gt;&lt;code&gt;translate&lt;/code&gt; Example&lt;/h4&gt;
+&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
 
 &lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;//vanilla.github.io/docs/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;{breadcrumbs homelink=&amp;ldquo;Forum&amp;rdquo;|translate}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;Forum&amp;quot;|translate}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -388,6 +431,8 @@
 
 &lt;h2 id=&#34;function-asset&#34;&gt;Function: &lt;code&gt;{asset}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -397,48 +442,104 @@
 
 &lt;p&gt;Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets. The Panel asset is optional, but you&amp;rsquo;ll likely want to at least include it in the Profile, EditProfile and Conversation sections as it has important functionality in those sections that are not included in the Content asset.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The name of the asset&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;$name&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The id of the tag if different than the name&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The type of tag to wrap the asset in&lt;/td&gt;
-&lt;/tr&gt;
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the asset&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;$name&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The id of the tag if different than the name&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The type of tag to wrap the asset in&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The class to add to the asset wrapper&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The class to add to the asset wrapper&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 </description>
     </item>
     
@@ -452,39 +553,94 @@
 
 &lt;h2 id=&#34;function-breadcrumbs&#34;&gt;Function: &lt;code&gt;{breadcrumbs}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Render a breadcrumb trail for the user based on the page they are on.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;homeurl&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Home&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Title of the first link in the breadcrumbs&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;hidelast&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not to hide the currently active (last) crumb&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;homelink&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;Home&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Title of the first link in the breadcrumbs&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;homeurl&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;/&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;URL of the first link in the breadcrumbs&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;hidelast&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            boolean
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;false&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not to hide the currently active (last) crumb&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 </description>
     </item>
     
@@ -498,39 +654,77 @@
 
 &lt;h2 id=&#34;function-custom-menu&#34;&gt;Function: &lt;code&gt;{custom_menu}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A bucket for addon menu items. Adds links depending on which addons are enabled.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;li&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Element to wrap around each link in the menu&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;li&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Element to wrap around each link in the menu&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 </description>
     </item>
     
@@ -544,32 +738,60 @@
 
 &lt;h2 id=&#34;function-event&#34;&gt;Function: &lt;code&gt;{event}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{event name=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Fire an event with the specified &lt;code&gt;name&lt;/code&gt;. &lt;a href=&#34;../../../developers/plugins/#events-%26-handlers&#34;&gt;Learn more about events in Vanilla.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;Name of the event to fire&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Name of the event to fire&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 </description>
     </item>
     
@@ -583,32 +805,60 @@
 
 &lt;h2 id=&#34;function-include-file&#34;&gt;Function: &lt;code&gt;{include_file}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{include_file name=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The name of the file to include&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the file to include&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 </description>
     </item>
     
@@ -622,60 +872,128 @@
 
 &lt;h2 id=&#34;function-link&#34;&gt;Function: &lt;code&gt;{link}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{link path=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; notag=boolean format=&amp;quot;string&amp;quot; withdomain=boolean}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Takes a route and prepends the web root (expects &lt;code&gt;/controller/action/params&lt;/code&gt; as &lt;code&gt;path&lt;/code&gt;).&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;path&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The relative path for the url. There are some special paths that can be used to return &amp;ldquo;intelligent&amp;rdquo; links&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;HTML text to be put inside an anchor. If this value is set then an HTML &lt;code&gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt; is returned rather than just a url&lt;/td&gt;
-&lt;/tr&gt;
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;notag&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not the output should be wrapped in a tag or just be a URL&lt;/td&gt;
-&lt;/tr&gt;
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The relative path for the url. There are some special paths that can be used to return &amp;lsquo;intelligent&amp;rsquo; links&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;HTML text to be put inside an anchor. If this value is set then an HTML &lt;code&gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt; is returned rather than just a url&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;notag&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            boolean
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;false&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not the output should be wrapped in a tag or just be a URL&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;withdomain&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            boolean
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;false&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not to prepend the base (&lt;code&gt;http://your-forums.com/&lt;/code&gt;) URL to the outputted link&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
 
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;withdomain&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not to prepend the base (&lt;code&gt;http://your-forums.com/&lt;/code&gt;) URL to the outputted link&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 </description>
     </item>
     
@@ -689,12 +1007,14 @@
 
 &lt;h2 id=&#34;function-logo&#34;&gt;Function: &lt;code&gt;{logo}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{logo}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Writes the site logo to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;This tag does not take any parameters.&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -710,12 +1030,14 @@
 
 &lt;h2 id=&#34;function-mobile-logo&#34;&gt;Function: &lt;code&gt;{mobile_logo}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{mobile_logo}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Writes the mobile logo to the page. You can change the mobile logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;This tag does not take any parameters.&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -731,6 +1053,8 @@
 
 &lt;h2 id=&#34;function-module&#34;&gt;Function: &lt;code&gt;{module}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{module name=&amp;quot;string&amp;quot; ... }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -740,27 +1064,104 @@
 
 &lt;p&gt;There are many modules available in Vanilla and in its addons. They can be found in the modules directory of an application or addon. &lt;a href=&#34;../../../developers/framework/modules.html.md&#34;&gt;Learn more about modules.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The full class name of the module&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the asset&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            &lt;code&gt;$name&lt;/code&gt;
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The id of the tag if different than the name&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The type of tag to wrap the asset in&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr class=&#34;docs-parameter&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The class to add to the asset wrapper&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 
 &lt;p&gt;You can set any property of a module by specifying it as a parameter as long as that property has a setter method or has a visibility of public.&lt;/p&gt;
 
@@ -783,6 +1184,8 @@
 
 &lt;h2 id=&#34;block-permission&#34;&gt;Block: &lt;code&gt;{permission}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{permission require=&amp;quot;string&amp;quot;}
     Foo
 {/permission}
@@ -790,27 +1193,53 @@
 
 &lt;p&gt;Only output content if the current user has the specified permission.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;require&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The permission to check for&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;require&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The permission to check / require&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 </description>
     </item>
     
@@ -824,32 +1253,60 @@
 
 &lt;h2 id=&#34;function-pocket&#34;&gt;Function: &lt;code&gt;{pocket}&lt;/code&gt;&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code&gt;{pocket name=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Writes a pocket to the page. Pockets placed in the template in this way should have their location set to &amp;lsquo;custom&amp;rsquo;. You can edit this setting from the &amp;lsquo;Pockets&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
 
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;The name of the pocket&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the pocket&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
 </description>
     </item>
     

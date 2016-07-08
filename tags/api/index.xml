@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Vanilla Forums Documentation</title>
+    <link>//vanilla.github.io/docs/tags/api/</link>
+    <description>Recent content in Api on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="//vanilla.github.io/docs/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>API</title>
+      <link>//vanilla.github.io/docs/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/</guid>
+      <description>
+
+&lt;p&gt;Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.&lt;/p&gt;
+
+&lt;h2 id=&#34;configuring-simple-api&#34;&gt;Configuring Simple API&lt;/h2&gt;
+
+&lt;p&gt;Simple API is a plugin. Once you&amp;rsquo;ve enabled the plugin you’ll see a new link in your dashboard called &amp;ldquo;API&amp;rdquo;. This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.&lt;/p&gt;
+
+&lt;h3 id=&#34;access-token&#34;&gt;Access Token&lt;/h3&gt;
+
+&lt;p&gt;The access token is like a password for accessing the API from outside of Vanilla. A suitable token is randomly generated for you when the plugin is first loaded, but you can change it at any time. Changing the token will necessarily invalidate the existing one, so remember to update existing projects if they use the API. Remember though: this token is a kind of password, so make sure it is long and complex, just like the initial token that we pre-filled for you.&lt;/p&gt;
+
+&lt;h3 id=&#34;user&#34;&gt;User&lt;/h3&gt;
+
+&lt;p&gt;When an API call is made, your access token confirms that you are authorized to make API calls, but we need some way to determine what level of access to give the API once you’re authenticated. We do this by &amp;ldquo;logging you in&amp;rdquo; temporarily as the user you specify here. The API session will inherit all of this user&amp;rsquo;s permissions and will have the same level of access as this user. By default, we use the Vanilla System User, who has unrestricted administrative access.&lt;/p&gt;
+
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
+
+&lt;p&gt;Considering that the API gives unprecedented access to Vanilla’s data, it is prudent to be concerned with security. For this reason you have the option to ignore API requests that are not secured by HTTPS. HTTPS encrypts the connection, including the request URL, thereby preventing potential hackers from seeing your access token in request URLs. &lt;strong&gt;This setting is highly recommended, but not required&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;making-api-calls&#34;&gt;Making API Calls&lt;/h2&gt;
+
+&lt;p&gt;All API calls should be made against your forum&amp;rsquo;s &amp;ldquo;Vanilla URL&amp;rdquo;, for example: &lt;code&gt;https://mycompany.vanillaforums.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;versioned-endpoint&#34;&gt;Versioned Endpoint&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;# Example of versioned endpoint
+https://mycompany.vanillaforums.com/api/v1/categories/list.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The Vanilla API is versioned to allow backwards compatibility during upgrades. &lt;strong&gt;API requests should always be made with a version stub&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;get-vs-post&#34;&gt;&lt;code&gt;GET&lt;/code&gt; vs. &lt;code&gt;POST&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Calls to the API are strictly separated by HTTP request type. Requests for data (which do not cause modifications) are done using &lt;code&gt;GET&lt;/code&gt;, while changes and updates are done using &lt;code&gt;POST&lt;/code&gt;. When reading the documentation for a method, make sure to take note of its expected request type.&lt;/p&gt;
+
+&lt;h3 id=&#34;wire-format&#34;&gt;Wire Format&lt;/h3&gt;
+
+&lt;p&gt;Regardless of the request type, the &lt;code&gt;access_token&lt;/code&gt; should always be supplied in the query string:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /categories/all.json?access_token=abc123 HTTP/1.1
+Host: mycompany.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above request will yield the following response:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;HTTP/1.1 200 OK
+Date: Tue, 19 Jul 2012 19:50:02 GMT
+Content-Type: application/json
+Vary: Accept-Encoding
+Content-Length: 90
+Connection: close
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;api-smart-ids&#34;&gt;API Smart IDs&lt;/h3&gt;
+
+&lt;p&gt;Some API methods ask require a user ID for one or more of their parameters. Sometimes it&amp;rsquo;s difficult to know what their user ID is so the Vanilla API can look up the user if you pass the user in a special way. This is referred to as a smart ID and you can read about it here.&lt;/p&gt;
+
+&lt;h3 id=&#34;request-encoding&#34;&gt;Request Encoding&lt;/h3&gt;
+
+&lt;p&gt;By default, the API expects incoming request data to be &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;. If no &lt;code&gt;Content-Type&lt;/code&gt; is provided, this will be assumed. It is also possible to alter this behaviour and cause the API to parse a JSON-encoded request body by setting the &lt;code&gt;Content-Type&lt;/code&gt; to &lt;code&gt;application/json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;response-encoding&#34;&gt;Response Encoding&lt;/h3&gt;
+
+&lt;p&gt;The data encoding of the response is determined by the file extension attached to the request&amp;rsquo;s method. In the above example, the controller name is categories and the method is all. The file extension on the method is &lt;code&gt;.json&lt;/code&gt;, which will result in JSON encoded data being returned. If the request is being made to the controller&amp;rsquo;s root method, index, the method may be omitted and the file extension may be applied to the controller instead.&lt;/p&gt;
+
+&lt;h3 id=&#34;recognized-file-extensions&#34;&gt;Recognized file extensions&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Extension&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.json&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;JSON encoded response&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.xml&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;XML encoded response&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;No extension&lt;/td&gt;
+&lt;td&gt;XHTML response, suitable for user interface&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;response-codes&#34;&gt;Response Codes&lt;/h2&gt;
+
+&lt;p&gt;Generally, if an API request is successful it will return the standard response code of  &lt;code&gt;200&lt;/code&gt;. You can check for this response code. If you get an error code (&lt;code&gt;4xx&lt;/code&gt;-&lt;code&gt;5xx&lt;/code&gt;) then you can check the &lt;code&gt;Exception&lt;/code&gt; property of the response some error text that will help you to determine what went wrong.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Endpoint: categories</title>
+      <link>//vanilla.github.io/docs/api/categories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/categories/</guid>
+      <description>
+
+&lt;h2 id=&#34;categories-add&#34;&gt;/categories/add&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/categories/add.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Adds a new category.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The name of the category&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;UrlCode&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;URL friendly category stub&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Description&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Description of this category&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Sort&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category sort order rank&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ParentCategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Parent Category (ID, use if no Name)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ParentCategory&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Parent Category (Name, use if no ID)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Archived&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether this category is archived&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Custom permissions for the category. This must be an array with one item per role. Each item contains a role ID and the permissions to set.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.RoleID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the role to set the permissions for.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Each permission is a dot-separated key with a boolean value. The basic permissions are Vanilla.Discussions.View, Vanilla.Discussions.Add, Vanilla.Discussions.Edit, Vanilla.Discussions.Announce, Vanilla.Discussions.Sink, Vanilla.Discussions.Close, Vanilla.Discussions.Delete, Vanilla.Comments.Add, Vanilla.Comments.Edit, Vanilla.Comments.Delete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;categories-edit&#34;&gt;/categories/edit&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/categories/edit.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Edits an existing category.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category to be edited (ID, use if no Name)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Category&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category to be edited (Name, use if no ID)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The name of the category&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;UrlCode&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;URL friendly category stub&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Description&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Description of this category&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ParentCategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Parent Category (ID, use if no Name)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ParentCategory&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Parent Category (Name, use if no ID)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;AllowDiscussions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether this category allows new discussions&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Archived&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether this category is archived&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CustomPermissions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether this category has custom permissions. Setting this to &lt;code&gt;false&lt;/code&gt; will wipe custom permissions.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Custom permissions for the category. This must be an array with one item per role. Each item contains a role ID and the permissions to set.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.RoleID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the role to set the permissions for.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Each permission is a dot-separated key with a boolean value. The basic permissions are Vanilla.Discussions.View, Vanilla.Discussions.Add, Vanilla.Discussions.Edit, Vanilla.Discussions.Announce, Vanilla.Discussions.Sink, Vanilla.Discussions.Close, Vanilla.Discussions.Delete, Vanilla.Comments.Add, Vanilla.Comments.Edit, Vanilla.Comments.Delete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;categories-delete&#34;&gt;/categories/delete&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/categories/delete.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Deletes an existing category.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category to be deleted (ID, use if no Name)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Category&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category to be deleted (Name, use if no ID)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;categories-get&#34;&gt;/categories/get&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/categories/get.ext?CategoryID=123 HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get a single category.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h2 id=&#34;categories-list&#34;&gt;/categories/list&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/categories/list.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get a list of categories.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: optional&lt;br /&gt;
+If not provided, perspective will be that of a guest.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;This method does not take any parameters.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Endpoint: comments</title>
+      <link>//vanilla.github.io/docs/api/comments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/comments/</guid>
+      <description>
+
+&lt;h2 id=&#34;comments-add&#34;&gt;/comments/add&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/comments/add.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creates a new comment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;DiscussionID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion to post comment to&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Comment body&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Format&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Comment output format&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Related foreign content identifier&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Type&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Comment type&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Endpoint: discussions</title>
+      <link>//vanilla.github.io/docs/api/discussions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/discussions/</guid>
+      <description>
+
+&lt;h2 id=&#34;discussions-add&#34;&gt;/discussions/add&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/discussions/add.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creates a new discussion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion name&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion body&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Format&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion output format&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion Category (ID, use if no Name)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Category&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion Category (Name, use if no ID)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Related foreign content identifier&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Tags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;csv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;List of discussion tags&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Type&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion type&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Closed&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion closed state&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Announce&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion announced state&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Sink&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion sunk state&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;discussions-bookmark&#34;&gt;/discussions/bookmark&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/discussions/bookmark.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bookmark or unbookmark a discussion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Discussion&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../smart-id&#34;&gt;&lt;code&gt;smart id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Discussion to be bookmarked&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;User&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../smart-id&#34;&gt;&lt;code&gt;smart id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The user bookmarking the discussion. If blank then the currently authenticated user will be used&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Bookmark&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether or not to bookmark the discussion&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;p&gt;You need the &lt;code&gt;Garden.Moderation.Manage&lt;/code&gt; permission to bookmark a discussion for another user.&lt;/p&gt;
+
+&lt;h2 id=&#34;discussions-bookmarked&#34;&gt;/discussions/bookmarked&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/discussions/bookmarked.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;List a user&amp;rsquo;s bookmarked discussions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h2 id=&#34;discussions-edit&#34;&gt;/discussions/edit&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/discussions/edit.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Edits an existing discussion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Discussion&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../smart-id&#34;&gt;&lt;code&gt;smart id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Discussion to be deleted.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion name&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion body&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Format&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion output format&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion Category (ID, use if no Name)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Category&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion Category (Name, use if no ID)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Related foreign content identifier&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Tags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;csv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;List of discussion tags&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Type&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion type&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Closed&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion closed state&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Announce&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion announced state&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Sink&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Discussion sunk state&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;discussions-list&#34;&gt;/discussions/list&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/discussions/list.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: optional&lt;br /&gt;
+If not provided, perspective will be that of a guest.&lt;/p&gt;
+
+&lt;h2 id=&#34;discussions-category&#34;&gt;/discussions/category&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/discussions/category.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get a list of discussions within a category.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: optional&lt;br /&gt;
+If not provided, perspective will be that of a guest.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;CategoryIdentifier&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt; &lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category identifier (&lt;code&gt;CategoryID&lt;/code&gt; or &lt;code&gt;UrlCode&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Page&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Page number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;discussions-promoted&#34;&gt;/discussions/promoted&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/discussions/promoted.ext HTTP/1.1
+HOST: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get a list of discussions filtered by the selector and selection parameters.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: optional&lt;br /&gt;
+If not provided, perspective will be that of a guest.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;selector&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;What property to filter the discussions by. The available selectors are listed in the Selectors and Selections section below.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;selection&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;What value to filter the discussions by. Learn more about the possible values in the Selectors and Selections section below.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;contenttype&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The value can be &lt;code&gt;all&lt;/code&gt;, &lt;code&gt;discussions&lt;/code&gt;, or &lt;code&gt;comments&lt;/code&gt;. You can choose to fetch only comments or only discussions. The default is all.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;limit&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The number of posts to fetch. The max number is 50.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;expiry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;How long in seconds to cache the content.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&#34;selectors-and-selections&#34;&gt;Selectors and Selections&lt;/h5&gt;
+
+&lt;p&gt;The promoted endpoint only supports filtering by one selector and selection. The available selectors are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;role&lt;/strong&gt;: Filter posts based on the author&amp;rsquo;s role. The selection can be one or more of your forum&amp;rsquo;s role names. Here&amp;rsquo;s an example query string: &lt;code&gt;?selector=role&amp;amp;selection=Moderator%2CAdministrator&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rank&lt;/strong&gt;: Filter posts based on the author&amp;rsquo;s rank. The selection can be any one of your forum&amp;rsquo;s rank names or rank IDs. Here&amp;rsquo;s an example query string selecting by rank name: &lt;code&gt;?selector=rank&amp;amp;selection=Level%201&lt;/code&gt; or by rank ID: &lt;code&gt;?selector=rank&amp;amp;selection=1&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;category&lt;/strong&gt;: Filter posts based on the content&amp;rsquo;s category. The selection can be the category&amp;rsquo;s url code or the category ID. Here&amp;rsquo;s an example query string selecting by url code: &lt;code&gt;?selector=category&amp;amp;selection=general&lt;/code&gt; or by category ID: &lt;code&gt;?selector=category&amp;amp;selection=1&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;score&lt;/strong&gt;: Filter posts based on a minimum score. A post&amp;rsquo;s score is determined by reactions. Will only fetch posts with a score greater than the selection. Here&amp;rsquo;s an example query string: &lt;code&gt;?selector=score&amp;amp;selection=3&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;promoted&lt;/strong&gt;: Filter posts based on whether it has the promoted reaction. Here&amp;rsquo;s an example query string: &lt;code&gt;?selector=promoted&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Endpoint: multisites</title>
+      <link>//vanilla.github.io/docs/api/multisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/multisites/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The site hub is a special service for VIP customers. It allows you to create sites on your VIP cluster and is used for people that want to integrate communities within their entire organization. You can make hub api calls just like other api calls, but you make those calls against your site hub rather than an individual site. Most hub api calls will be against &lt;code&gt;https://yourdomain.com/hub/api/v1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: All endpoints for multisites require an access token with administrative privileges.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;get-multisites&#34;&gt;GET /multisites&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /hub/api/v1/multisites.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Gets a list of sites in your hub.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;search&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The site name to search for.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;post-multisites&#34;&gt;POST /multisites&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /hub/api/v1/multisites.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a new site and queues it for building. When a site is created it will not be immediately available, but instead be in a &lt;em&gt;Building&lt;/em&gt; status. Usually, sites take about a minute to build.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A human readable name for the site.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Slug&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The site&amp;rsquo;s folder. Make sure to use just alphanumeric, lowercase characters for the slug.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;get-multisites-id&#34;&gt;GET /multisites/{id}&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;GET /hub/api/v1/multisites/1.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get the details of an individual site by ID.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;id&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the site.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;post-multisites-syncnode&#34;&gt;POST /multisites/syncnode&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;POST /hub/api/v1/multisites/syncnode.json?access_token=token HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Synchronize the sites against the hub. Note that this method doesn&amp;rsquo;t have to be called as the nodes automatically synchronize every 20 minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Endpoint: roles</title>
+      <link>//vanilla.github.io/docs/api/roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/roles/</guid>
+      <description>
+
+&lt;h2 id=&#34;roles-add&#34;&gt;/roles/add&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/roles/add.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add a new role.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The name of the role&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Description&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Description of this role&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The permissions of the role. Each global permission is a dot-separated key with a boolean value.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.Category&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Custom category permissions. Each item in the array is a permission for a particular category. Note that the category must be configured to have custom permissions to be viable in this array.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.Category.CategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the category to set the permission for.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions.Category.*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Each custom category permission is a dot-separated key with a boolean value.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;roles-edit&#34;&gt;/roles/edit&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/roles/edit.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Edit a role.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;RoleID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;RoleID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the role to edit.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The name of the role&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Description&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Description of this role&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Permissions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The permissions to the role. See roles/add.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;roles-list&#34;&gt;/roles/list&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/roles/list.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get all of the roles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h2 id=&#34;roles-get&#34;&gt;/roles/get&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/roles/get.ext?roleid=123 HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get a single role.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;RoleID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;RoleID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The ID of the role to get.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Forum Administration</title>
+      <link>//vanilla.github.io/docs/api/forum-administration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/forum-administration/</guid>
+      <description>
+
+&lt;h2 id=&#34;configuration&#34;&gt;/configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/configuration.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Retrieve forum configuration.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;This method does not take any parameters.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Smart ID</title>
+      <link>//vanilla.github.io/docs/api/smart-id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/smart-id/</guid>
+      <description>
+
+&lt;p&gt;Many API methods take a &lt;code&gt;UserID&lt;/code&gt; as one of their required parameters, for example the &lt;code&gt;/badge/give&lt;/code&gt; method. Often, especially in a SSO context, the calling system will not know the native Vanilla &lt;code&gt;UserID&lt;/code&gt;, but will instead know some other identifying characteristic of the user, such as their &lt;code&gt;Email&lt;/code&gt;, &lt;code&gt;Username&lt;/code&gt;, or SSO &lt;code&gt;ForeignID&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fields that accept Smart IDs allow these tokens to be supplied instead of a native &lt;code&gt;UserID&lt;/code&gt;. Internally, the &lt;code&gt;Email&lt;/code&gt;, &lt;code&gt;Username&lt;/code&gt; or SSO &lt;code&gt;ForeignID&lt;/code&gt; will be converted into a Vanilla &lt;code&gt;UserID&lt;/code&gt; by the API layer and passed along to the core method.&lt;/p&gt;
+
+&lt;h2 id=&#34;notation&#34;&gt;Notation&lt;/h2&gt;
+
+&lt;p&gt;Passing a Smart ID is easy once you understand Vanilla&amp;rsquo;s naming conventions, and we&amp;rsquo;ll explain these from the perspective of the User table: &lt;code&gt;GDN_User&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;table-names&#34;&gt;Table Names&lt;/h3&gt;
+
+&lt;p&gt;All tables in a Vanilla database are named for their content and use the singular form. In the case of Users, the table is called &lt;code&gt;GDN_User&lt;/code&gt; and we refer to it as &amp;ldquo;the User table&amp;rdquo;. The Discussion table is called &lt;code&gt;GDN_Discussion&lt;/code&gt;, and the Comment table is called &lt;code&gt;GDN_Comment&lt;/code&gt;, and so on.&lt;/p&gt;
+
+&lt;h3 id=&#34;field-names&#34;&gt;Field Names&lt;/h3&gt;
+
+&lt;p&gt;The primary key in a given table will always be the table&amp;rsquo;s name with &lt;code&gt;ID&lt;/code&gt; on the end, so in our case, &lt;code&gt;UserID&lt;/code&gt;. Even when referring to the User table from another table, we&amp;rsquo;ll always be careful to make sure that fields containing &lt;code&gt;UserID&lt;/code&gt;&amp;rsquo;s are named &lt;code&gt;______UserID&lt;/code&gt;. For example, the Comment table has a field called &lt;code&gt;InsertUserID&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The User table contains other fields, like &lt;code&gt;Name&lt;/code&gt; and &lt;code&gt;Email&lt;/code&gt;, and we follow the same referential naming convention for those fields. If there was a field in some table that contained a user&amp;rsquo;s email address, it would end in &lt;code&gt;UserEmail&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;passing-a-smart-id&#34;&gt;Passing a Smart ID&lt;/h3&gt;
+
+&lt;p&gt;In our example case where we are trying to pass a &lt;code&gt;UserID&lt;/code&gt;, but only have the user&amp;rsquo;s email, we can instead use a dotted notation to express the table and field we&amp;rsquo;re passing, and have the API resolve the primary key ID.&lt;/p&gt;
+
+&lt;p&gt;UserIDsmart id
+Required. User.
+can be passed as&lt;/p&gt;
+
+&lt;p&gt;User.Emailstring
+User&amp;rsquo;s Email address.&lt;/p&gt;
+
+&lt;h3 id=&#34;multi-smart-id&#34;&gt;Multi Smart ID&lt;/h3&gt;
+
+&lt;p&gt;Some API methods require lists of item IDs. The &lt;code&gt;Role&lt;/code&gt; parameter of &lt;code&gt;/users/edit&lt;/code&gt; is a good example of this. You may want to assign multiple roles to a certain user. Multi Smart ID allows the caller to specify arrays with simple notation.&lt;/p&gt;
+
+&lt;p&gt;A normal Smart ID containing a valid &lt;code&gt;RoleID&lt;/code&gt; would be passed as &lt;code&gt;Role.ID=56&lt;/code&gt;. In order to pass 2 roles, simply pluralize the table name and use commas to separate the values, like this: &lt;code&gt;Roles.ID=56,87&lt;/code&gt;. This notation works for other suffixes as well, so to refer to two users by their email addresses the caller might specify: &lt;code&gt;Users.Email=test@test.com,other@test.com&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;sso-foreignid&#34;&gt;SSO &lt;code&gt;ForeignID&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;The SSO &lt;code&gt;ForeignID&lt;/code&gt; type is a special case. It is passed with the parameter name &lt;code&gt;User.ForeignID&lt;/code&gt; and its value contains the SSO &lt;code&gt;ClientID&lt;/code&gt; (specified in your Vanilla Dashboard) concatenated with the &lt;code&gt;ForeignID&lt;/code&gt; (usually the user&amp;rsquo;s internal ID in your own system, or whatever system is providing SSO), with a colon (&lt;code&gt;:&lt;/code&gt;) as the field separator. A simple example is referring to a user by their Facebook email address:&lt;/p&gt;
+
+&lt;p&gt;User.ForeignID = Facebook:testuser@someemail.com
+User&amp;rsquo;s Facebook email address.&lt;/p&gt;
+
+&lt;p&gt;In situations where your system is providing SSO services, you would substitute &lt;code&gt;Facebook&lt;/code&gt; with your own SSO &lt;code&gt;ClientID&lt;/code&gt;. Again, this SSO &lt;code&gt;ClientID&lt;/code&gt; can be found in your Vanilla Dashboard under the heading &lt;strong&gt;jsConnect&lt;/strong&gt; (&lt;code&gt;/settings/jsconnect&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h3 id=&#34;supported-tables&#34;&gt;Supported Tables&lt;/h3&gt;
+
+&lt;p&gt;Currently, we support Smart ID for the following tables:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Table&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Badge&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;GDN_Badge&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stores Vanilla badges by &lt;code&gt;BadgeID&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Category&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;GDN_Category&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stores Vanilla categories by &lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Rank&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;GDN_Rank&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stores Vanilla ranks by &lt;code&gt;RankID&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Role&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;GDN_Role&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stores Vanilla roles by &lt;code&gt;RoleID&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;User&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;GDN_User&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stores Vanilla users by &lt;code&gt;UserID&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;caveats&#34;&gt;Caveats&lt;/h3&gt;
+
+&lt;p&gt;Some fields are not unique, so passing them as a Smart ID can be risky and may result in multiple results, and therefore an error. A good example of this is the &lt;code&gt;Name&lt;/code&gt;. Vanilla has the option to allow multiple users with the same name, so if at all possible, use &lt;code&gt;Email&lt;/code&gt; or SSO &lt;code&gt;ForeignID&lt;/code&gt; instead of &lt;code&gt;Name&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use API on External Sites</title>
+      <link>//vanilla.github.io/docs/api/use-api-on-external-site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//vanilla.github.io/docs/api/use-api-on-external-site/</guid>
+      <description>
+
+&lt;p&gt;The Vanilla Forums API can be used to display information from your community outside of the community such as your blog. This guide shows a basic example using javascript and jQuery.&lt;/p&gt;
+
+&lt;h2 id=&#34;jsonp&#34;&gt;JSONP&lt;/h2&gt;
+
+&lt;p&gt;Default browser security does not let you make API calls from an external site. This is necessary to prevent a wide range of hacking and in general keeps the web a safer place. However, to get around this limitation with the API Vanilla uses a technology called JSONP. There are some small differences with the way JSONP is used as apposed to basic AJAX, but most frameworks such as jQuery have built in support for JSONP making it very easy to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In order to use JSONP with the Vanilla API you must have JSONP support turned on for your community. Ask support and they&amp;rsquo;ll be happy to do this for you.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;making-an-api-call-with-jquery-and-jsonp&#34;&gt;Making an API call with jQuery and JSONP&lt;/h2&gt;
+
+&lt;p&gt;To make an API call with jQuery you&amp;rsquo;ll need to look at our [API documentation]() and find the appropriate call. Here is an example call of the basic discussions endpoint.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Get the results of the discussions endpoint and display them in a list.
+$.ajax({
+    // The url of the api endpoint.
+    url: &amp;quot;https://example.vanillaforums.com/api/v1/discussions.json&amp;quot;,
+
+    // The name of the callback parameter which should always be &amp;quot;callback&amp;quot;.
+    jsonp: &amp;quot;callback&amp;quot;,
+
+    // Tell jQuery we&#39;re expecting JSONP.
+    dataType: &amp;quot;jsonp&amp;quot;,
+
+    // Work with the response.
+    success: function(response) {
+        var discussions = response[&#39;Discussions&#39;];
+
+        // The discussions variable now contains the discussions from the API call.
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;p&gt;There are a few things to note about this code.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Notice that &lt;code&gt;jsonp: &amp;quot;callback&amp;quot;&lt;/code&gt; argument? That&amp;rsquo;s telling the forums to use JSONP. jQuery looks for that and handles everything for you. If you are using some other framework you&amp;rsquo;ll have to look up how it handles JSONP. (Also note that older versions of jQuery have different ways of working with JSONP. Be sure to look at the documentation to be sure you are using the right method)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;This call is being made agains https. You can make calls against http, but if you are within an https page then a call to an http page will fail. It&amp;rsquo;s best to look for the right https page and make the call there.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Notice that there is no &lt;code&gt;access_token&lt;/code&gt; query string parameter. Never, ever put the &lt;code&gt;access_token&lt;/code&gt; in a script that is on the client-side. It is like a password and should only be used from the server.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The JSONP call will be made with the credentials of the user that is currently signed in to the forums. If no one is signed in then the call will be made as a guest.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;a-real-example&#34;&gt;A Real Example&lt;/h3&gt;
+
+&lt;p&gt;We&amp;rsquo;ve made a simple example using a feed from vanillaforums.com. Check it out on &lt;a href=&#34;http://cdpn.io/zxXwvJ&#34;&gt;codepen.io&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

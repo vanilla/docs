@@ -448,6 +448,8 @@
 
 <h2 id="function-asset">Function: <code>{asset}</code></h2>
 
+<h3 id="usage">Usage</h3>
+
 <pre><code>{asset name=&quot;string&quot; id=&quot;string&quot; tag=&quot;string&quot; class=&quot;string&quot;}
 </code></pre>
 
@@ -457,48 +459,104 @@
 
 <p>Vanilla&rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets. The Panel asset is optional, but you&rsquo;ll likely want to at least include it in the Profile, EditProfile and Conversation sections as it has important functionality in those sections that are not included in the Content asset.</p>
 
-<h3 id="parameters">Parameters</h3>
+<h2 id="parameters">Parameters</h2>
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td><strong><code>name</code></strong></td>
-<td><code>string</code></td>
-<td>none</td>
-<td>The name of the asset</td>
-</tr>
 
-<tr>
-<td><code>id</code></td>
-<td><code>string</code></td>
-<td><code>$name</code></td>
-<td>The id of the tag if different than the name</td>
-</tr>
 
-<tr>
-<td><code>tag</code></td>
-<td><code>string</code></td>
-<td>none</td>
-<td>The type of tag to wrap the asset in</td>
-</tr>
+    
+    
+    
+    
+        
+        <table class="docs-parameters parameters-type-function">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    
+                    <th>Default</th>
+                    
+                    <th>Description</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                
+                <tr class="docs-parameter parameter-required">
+                    <td class="parameter-name"><code>name</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            none
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The name of the asset</td>
+                </tr>
+                
+                <tr class="docs-parameter">
+                    <td class="parameter-name"><code>tag</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            <code>$name</code>
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The id of the tag if different than the name</td>
+                </tr>
+                
+                <tr class="docs-parameter">
+                    <td class="parameter-name"><code>id</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            none
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The type of tag to wrap the asset in</td>
+                </tr>
+                
+                <tr class="docs-parameter">
+                    <td class="parameter-name"><code>class</code></td>
+                    <td class="parameter-type"><code>
+                        
+                            string
+                        
+                    </code></td>
+                    
+                    <td class="parameter-default">
+                        
+                            none
+                        
+                    </td>
+                    
+                    <td class="parameter-description">The class to add to the asset wrapper</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    
+    
+    
 
-<tr>
-<td><code>class</code></td>
-<td><code>string</code></td>
-<td>none</td>
-<td>The class to add to the asset wrapper</td>
-</tr>
-</tbody>
-</table>
 
 
             

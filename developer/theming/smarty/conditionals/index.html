@@ -341,11 +341,11 @@
 
 <p>The following PHP internal functions are available for use in Smarty if statements: array, list, isset, empty, count, sizeof, in_array, is_array, true, false, and null. We&rsquo;ve also whitelisted some PHP functions in Vanilla that can be used in Smarty if statements. The most useful of these functions are outlined below.</p>
 
-<h3 id="category">Category</h3>
+<h2 id="conditional-category">Conditional: <em>Category</em></h2>
 
 <p>Returns an array representing the current category.</p>
 
-<h4 id="category-example">Category Example</h4>
+<h3 id="example">Example</h3>
 
 <p>This example prints out a message if the user is browsing a page in the &ldquo;General&rdquo; category. Also uses the GetValue function, outlined below.</p>
 
@@ -354,11 +354,11 @@
 {/if}
 </code></pre>
 
-<h3 id="checkpermission">CheckPermission</h3>
+<h2 id="conditional-checkpermission">Conditional: <em>CheckPermission</em></h2>
 
 <p>Tests whether the current user has the passed permission or array of permissions and returns true if the current user has one of the given permission(s).</p>
 
-<h4 id="checkpermission-example">CheckPermission Example</h4>
+<h3 id="example-1">Example</h3>
 
 <p>This example checks whether the user has either the &ldquo;Garden.Settings.Manage&rdquo; or &ldquo;Garden.Settings.View&rdquo; permission and if so, adds a link to the dashboard.</p>
 
@@ -367,11 +367,11 @@
 {/if}
 </code></pre>
 
-<h3 id="homepage">Homepage</h3>
+<h2 id="conditional-homepage">Conditional: <em>Homepage</em></h2>
 
 <p>The variable <code>$Homepage</code> is set to true if (and only if) the user is on your homepage.</p>
 
-<h4 id="homepage-example">Homepage Example</h4>
+<h3 id="example-2">Example</h3>
 
 <p>This example checks whether the user is on the homepage to display one message or another.</p>
 
@@ -386,11 +386,11 @@
 {/if}
 </code></pre>
 
-<h3 id="insection">InSection</h3>
+<h2 id="conditional-insection">Conditional: <em>InSection</em></h2>
 
 <p>Returns true if the user is in a section or one of an array or sections. You can see what section a Vanilla page belongs to by inspecting the body tag using your browser tools and checking its CSS class. There will be an Section-* class, where * is the current section.</p>
 
-<h4 id="insection-example">InSection Example</h4>
+<h3 id="example-3">Example</h3>
 
 <p>This example checks whether the user is in either the Profile, Conversation or ActivityList section and if so, adds the panel asset.</p>
 
@@ -399,11 +399,11 @@
 {/if}
 </code></pre>
 
-<h3 id="incategory">InCategory</h3>
+<h2 id="conditional-incategory">Conditional: <em>InCategory</em></h2>
 
 <p>Given a category&rsquo;s url code, returns true if the user is on a page in that category. You can manage the url codes of your forum&rsquo;s categories from the Manage Categories page in the dashboard.</p>
 
-<h4 id="incategory-example">InCategory Example</h4>
+<h3 id="example-4">Example</h3>
 
 <p>This example prints out a message if the user is browsing a page in a category with the url code &lsquo;general-category&rsquo;.</p>
 
@@ -412,15 +412,15 @@
 {/if}
 </code></pre>
 
-<h3 id="getvalue">GetValue</h3>
+<h2 id="conditional-getvalue">Conditional: <em>GetValue</em></h2>
 
 <p>Given an array key or property name, returns its value from an associative array or an object.</p>
 
-<h4 id="getvalue-example">GetValue Example</h4>
+<h3 id="example-5">Example</h3>
 
 <p>See the [Category example](&lsquo;#category-example&rsquo;) above.</p>
 
-<h3 id="other-conditional-functions">Other conditional functions</h3>
+<h2 id="other-conditional-functions">Other conditional functions</h2>
 
 <p>There are a few other (less useful) functions that can be used in conditional statements in Vanilla&rsquo;s Smarty implementation. These are MultiCheckPermission, SetValue and Url. These function declarations are in <code>/library/core/functions.general.php</code>. To understand how to use these functions, refer to the source code there.</p>
 
