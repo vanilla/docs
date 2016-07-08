@@ -1,0 +1,15 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "c",
+            "required": true,
+            "description": "The string to output or a string short-name"
+        },
+        {
+            "param": "d",
+            "default": "$c",
+            "description": "Default translation. Good idea to set when using short-names"
+        }
+    ]
+}

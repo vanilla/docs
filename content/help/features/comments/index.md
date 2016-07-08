@@ -1,13 +1,16 @@
 ---
-title: "Universal Comments"
-tags: ["Features","Comments"]
-category: "help"
+title: Universal Comments
+tags:
+- Features
+- Comments
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-comments"
+  help:
+    parent: features
+    identifier: features-comments
+aliases:
+- /features/comments
 ---
-
 ## Vanilla Comments
 
 Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.

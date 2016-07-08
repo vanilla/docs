@@ -1,0 +1,14 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "format",
+            "description": "Custom format to use when wrapping links. Available template variables are `%url`, `%class`, and `%text`"
+        },
+        {
+            "param": "wrap",
+            "default": "li",
+            "description": "Element to wrap around each link in the menu"
+        }
+    ]
+}

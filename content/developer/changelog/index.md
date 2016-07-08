@@ -1,12 +1,14 @@
 ---
-title: "Changelog"
-tags: ["Developers"]
-category: "developer"
+title: Changelog
+tags:
+- Developers
+category: developer
 menu:
-    developer:
-        identifier: "changelog"
+  developer:
+    identifier: changelog
+aliases:
+- /developers/changelog
 ---
-
 ## Open Source Change Log
 
 Release notes

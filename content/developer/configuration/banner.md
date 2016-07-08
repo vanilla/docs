@@ -1,12 +1,15 @@
 ---
-title: "Banner Settings"
-tags: ["Developers","Configuration"]
-category: "developer"
+title: Banner Settings
+tags:
+- Developers
+- Configuration
+category: developer
 menu:
-    developer:
-        parent: "configuration"
+  developer:
+    parent: configuration
+aliases:
+- /developers/configuration/banner
 ---
-
 ## Banner Settings
 
 On the Banner Settings page you can control the following aspects of your forum:

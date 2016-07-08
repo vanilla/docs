@@ -1,12 +1,15 @@
 ---
-title: "Code of Conduct"
-tags: ["Developers","Contributing"]
-category: "developer"
+title: Code of Conduct
+tags:
+- Developers
+- Contributing
+category: developer
 menu:
-    developer:
-        parent: "contributing"
+  developer:
+    parent: contributing
+aliases:
+- /developers/contributing/conduct
 ---
-
 ## Code of Conduct
 
 _Adapted from Swift's Code of Conduct v1.3 for now because a copied code is better than no code._

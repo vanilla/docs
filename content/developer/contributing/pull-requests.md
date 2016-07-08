@@ -1,12 +1,15 @@
 ---
-title: "Pull Requests"
-tags: ["Developers","Contributing"]
-category: "developer"
+title: Pull Requests
+tags:
+- Developers
+- Contributing
+category: developer
 menu:
-    developer:
-        parent: "contributing"
+  developer:
+    parent: contributing
+aliases:
+- /developers/contributing/pull-requests
 ---
-
 ## Using pull requests to contribute code
 
 We love pull requests! They're the core of our workflow.

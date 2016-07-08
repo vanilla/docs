@@ -1,0 +1,9 @@
+.docs-parameters {
+    .docs-parameter {
+        &.parameter-required {
+            td.parameter-name {
+                font-weight: bold;
+            }
+        }
+    }
+}

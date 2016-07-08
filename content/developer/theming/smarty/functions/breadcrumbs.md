@@ -1,13 +1,19 @@
 ---
-title: "{breadcrumbs}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{breadcrumbs}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/breadcrumbs
 ---
-
 ## Function: `{breadcrumbs}`
+
+### Usage
 
 ```
 {breadcrumbs homelink="string" hidelast=boolean}
@@ -15,9 +21,6 @@ menu:
 
 Render a breadcrumb trail for the user based on the page they are on.
 
-### Parameters
+## Parameters
 
-Parameter   | Type      | Default   | Description
----         | ---       | ---       | ---
-`homeurl`   | `string`  | `Home`    | Title of the first link in the breadcrumbs
-`hidelast`  | `boolean` | `false`   | Whether or not to hide the currently active (last) crumb
+{{< params "theming/function/breadcrumbs.json" >}}

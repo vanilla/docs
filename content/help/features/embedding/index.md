@@ -1,13 +1,16 @@
 ---
-title: "Embedding"
-tags: ["Features","Embedding"]
-category: "help"
+title: Embedding
+tags:
+- Features
+- Embedding
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-embedding"
+  help:
+    parent: features
+    identifier: features-embedding
+aliases:
+- /features/embedding
 ---
-
 ## Embedding Forum
 
 Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe

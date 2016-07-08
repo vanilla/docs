@@ -1,13 +1,16 @@
 ---
-title: "Notifications"
-tags: ["Features","Notifications"]
-category: "help"
+title: Notifications
+tags:
+- Features
+- Notifications
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-notifications"
+  help:
+    parent: features
+    identifier: features-notifications
+aliases:
+- /features/notifications
 ---
-
 ## Overview
 
 Notifications for certain forum events can be delivered in-app (via Growl-style popups) and/or via email. New users will be opted in to a list of notifications that can be configured by the administrator. Users may edit these preferences in their profile at any time.

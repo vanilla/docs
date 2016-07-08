@@ -1,12 +1,15 @@
 ---
-title: "Models, Forms, & Validation"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Models, Forms, & Validation
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/models
 ---
-
 ## Models
 
 [Datasets](/framework/datasets)

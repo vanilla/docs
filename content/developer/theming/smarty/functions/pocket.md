@@ -1,13 +1,19 @@
 ---
-title: "{pocket}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{pocket}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/pocket
 ---
-
 ## Function: `{pocket}`
+
+### Usage
 
 ```
 {pocket name="string"}
@@ -15,8 +21,6 @@ menu:
 
 Writes a pocket to the page. Pockets placed in the template in this way should have their location set to 'custom'. You can edit this setting from the 'Pockets' settings page in the dashboard.
 
-### Parameters
+## Parameters
 
-Parameter       | Type      | Default   | Description
----             | ---       | ---       | ---
-__`name`__      | `string`  | none      | The name of the pocket
+{{< params "theming/function/pocket.json" >}}

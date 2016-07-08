@@ -1,12 +1,15 @@
 ---
-title: "Helpers"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Helpers
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/helpers
 ---
-
 ## Helper Functions
 
 This is a quickstart guide to some of Vanilla's globally available functions and methods. Familiarizing yourself with them will save you time and effort in the long term, and give you clues about how best to use the framework. 

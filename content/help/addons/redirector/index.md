@@ -1,13 +1,15 @@
 ---
-title: "Redirector"
-tags: ["Addons"]
-category: "help"
+title: Redirector
+tags:
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-redirector"
+  help:
+    parent: addons
+    identifier: addons-redirector
+aliases:
+- /addons/redirector
 ---
-
 ## When to Use Redirector
 
 Redirector is a plug-in that translates URLs from many popular forum platforms into Vanilla-friendly URLs.  If you're moving from one of the supported platforms, installing and enabling this plug-in will magically handle maintaining the previous platform's links, which can be of tremendous SEO value.

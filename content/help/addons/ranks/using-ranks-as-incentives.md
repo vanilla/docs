@@ -1,12 +1,16 @@
 ---
-title: "Using Ranks as Incentives"
-tags: ["Features", "Addons", "Ranks"]
-category: "help"
+title: Using Ranks as Incentives
+tags:
+- Features
+- Addons
+- Ranks
+category: help
 menu:
-    help:
-        parent: "addons-ranks"
+  help:
+    parent: addons-ranks
+aliases:
+- /addons/ranks/using-ranks-as-incentives
 ---
-
 ## Using Ranks: Incentives
 
 You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.

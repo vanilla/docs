@@ -1,13 +1,17 @@
 ---
-title: "Gigya Sign In"
-tags: ["Features", "Addons", "Integrations"]
-category: "help"
+title: Gigya Sign In
+tags:
+- Features
+- Addons
+- Integrations
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-gigya"
+  help:
+    parent: addons
+    identifier: addons-gigya
+aliases:
+- /addons/gigya
 ---
-
 ## Gigya Sign In
 
 The Gigya Sign In adds the ability to sign to your community with Gigya Social Login. You will need to configure your site in your [Gigya dashboard](https://platform.gigya.com/Site/partners/dashboard.aspx) and then set up your login plugin on the [Gigya plugins page](https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin) before you can use the Gigya addon in Vanilla.

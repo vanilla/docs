@@ -1,12 +1,15 @@
 ---
-title: "Importing"
-tags: ["Developers","Importing"]
-category: "developer"
+title: Importing
+tags:
+- Developers
+- Importing
+category: developer
 menu:
-    developer:
-        identifier: "importing"
+  developer:
+    identifier: importing
+aliases:
+- /developers/importing
 ---
-
 ## Importing to Vanilla
 
 Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.

@@ -1,0 +1,10 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "placeholder",
+            "default": "Search",
+            "description": "Optional input box placeholder text"
+        }
+    ]
+}

@@ -1,12 +1,15 @@
 ---
-title: "Vanilla Porter"
-tags: ["Developers","Importing"]
-category: "developer"
+title: Vanilla Porter
+tags:
+- Developers
+- Importing
+category: developer
 menu:
-    developer:
-        parent: "importing"
+  developer:
+    parent: importing
+aliases:
+- /developers/importing/porter
 ---
-
 ## Migrating a forum to Vanilla
 
 Vanilla Porter is the [export tool](http://vanillaforums.org/addon/porter-core)  for converting your legacy forum to Vanilla. The process is four steps:

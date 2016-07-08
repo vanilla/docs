@@ -1,13 +1,15 @@
 ---
-title: "Logging"
-tags: ["Cloud"]
-category: "help"
+title: Logging
+tags:
+- Cloud
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-logging"
+  help:
+    parent: cloud
+    identifier: cloud-logging
+aliases:
+- /cloud/logging
 ---
-
 ## Advanced logging
 
 Additional logging is available on our highest-tier plans for an additional fee to cover the additional load & performance hit incurred by more verbose logs.

@@ -1,12 +1,15 @@
 ---
-title: "Contributing"
-tags: ["Developers","Contributing"]
-category: "developer"
+title: Contributing
+tags:
+- Developers
+- Contributing
+category: developer
 menu:
-    developer:
-        identifier: "contributing"
+  developer:
+    identifier: contributing
+aliases:
+- /developers/contributing
 ---
-
 ## How to Contribute
 
 ### General

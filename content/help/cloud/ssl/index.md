@@ -1,13 +1,16 @@
 ---
-title: "Setting up SSL (https)"
-tags: ["Features","SSL"]
-category: "help"
+title: Setting up SSL (https)
+tags:
+- Features
+- SSL
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-ssl"
+  help:
+    parent: cloud
+    identifier: cloud-ssl
+aliases:
+- /cloud/ssl
 ---
-
 ## Setting up SSL (https) with Vanilla Cloud
 
 Vanilla offers SSL support in Corporate plans and above. In order for us to to enable SSL for your forum, you will need to provide Vanilla with the following:

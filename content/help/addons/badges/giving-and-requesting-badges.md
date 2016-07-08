@@ -1,12 +1,16 @@
 ---
-title: "Giving and Requesting Badges"
-tags: ["Features", "Addons", "Badges"]
-category: "help"
+title: Giving and Requesting Badges
+tags:
+- Features
+- Addons
+- Badges
+category: help
 menu:
-    help:
-        parent: "addons-badges"
+  help:
+    parent: addons-badges
+aliases:
+- /addons/badges/giving-and-requesting-badges
 ---
-
 {{% cloudfeature %}}
 
 ## Giving a badge

@@ -1,0 +1,23 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "name",
+            "required": true,
+            "description": "The name of the asset"
+        },
+        {
+            "param": "tag",
+            "default": "$name",
+            "description": "The id of the tag if different than the name"
+        },
+        {
+            "param": "id",
+            "description": "The type of tag to wrap the asset in"
+        },
+        {
+            "param": "class",
+            "description": "The class to add to the asset wrapper"
+        }
+    ]
+}

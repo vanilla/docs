@@ -1,12 +1,15 @@
 ---
-title: "Assets"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Assets
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/assets
 ---
-
 ## Assets
 
 Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.

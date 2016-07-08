@@ -1,12 +1,14 @@
 ---
-title: "Developer Tools"
-tags: ["Developers"]
-category: "developer"
+title: Developer Tools
+tags:
+- Developers
+category: developer
 menu:
-    developer:
-        identifier: "tools"
+  developer:
+    identifier: tools
+aliases:
+- /developers/tools
 ---
-
 ## Developer Tools
 
 Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem.

@@ -1,13 +1,16 @@
 ---
-title: "Reactions"
-tags: ["Features", "Addons"]
-category: "help"
+title: Reactions
+tags:
+- Features
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-reactions"
+  help:
+    parent: addons
+    identifier: addons-reactions
+aliases:
+- /addons/reactions
 ---
-
 {{% cloudfeature %}}
 
 ## What are reactions?

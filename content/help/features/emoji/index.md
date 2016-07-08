@@ -1,13 +1,16 @@
 ---
-title: "Emoji"
-tags: ["Features","Emoji"]
-category: "help"
+title: Emoji
+tags:
+- Features
+- Emoji
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-emoji"
+  help:
+    parent: features
+    identifier: features-emoji
+aliases:
+- /features/emoji
 ---
-
 ##Emoji
 
 Emoji is a way to express yourself in graphical form in your community. The following are the emoji and the code to use for them to appear.

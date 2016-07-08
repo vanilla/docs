@@ -1,12 +1,16 @@
 ---
-title: "Vanilla Pop with Site Hub"
-tags: ["Features","Vanilla Pop","Hub"]
-category: "help"
+title: Vanilla Pop with Site Hub
+tags:
+- Features
+- Vanilla Pop
+- Hub
+category: help
 menu:
-    help:
-        parent: "addons-vanilla-pop"
+  help:
+    parent: addons-vanilla-pop
+aliases:
+- /addons/vanilla-pop/site-hub
 ---
-
 {{% cloudfeature %}}
 
 ## Differences

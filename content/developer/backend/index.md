@@ -1,12 +1,14 @@
 ---
-title: "Backend"
-tags: ["Developers"]
-category: "developer"
+title: Backend
+tags:
+- Developers
+category: developer
 menu:
-    developer:
-        identifier: "backend"
+  developer:
+    identifier: backend
+aliases:
+- /developers/backend
 ---
-
 ## Server
 
 Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.

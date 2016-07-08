@@ -1,13 +1,15 @@
 ---
-title: "Statistics"
-tags: ["Addons"]
-category: "help"
+title: Statistics
+tags:
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-statistics"
+  help:
+    parent: addons
+    identifier: addons-statistics
+aliases:
+- /addons/statistics
 ---
-
 ## What Are Vanilla Statistics?
 
 The Vanilla Statistics plugin allows forum administrators to review vital activity on their forums over a specific time periods.

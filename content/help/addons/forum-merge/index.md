@@ -1,13 +1,15 @@
 ---
-title: "Forum Merge"
-tags: ["Addons"]
-category: "help"
+title: Forum Merge
+tags:
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-forum-merge"
+  help:
+    parent: addons
+    identifier: addons-forum-merge
+aliases:
+- /addons/forum-merge
 ---
-
 ## When to Use Forum Merge
 
 The ForumMerge plug-in should be used when you want to take one existing Vanilla forum instance and merge it into another existing Vanilla forum.  Core Vanilla data, in addition to some plug-in and addon data, will be carried over from the source into the destination forum and reconciled with existing records to avoid conflicts.

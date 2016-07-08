@@ -1,13 +1,19 @@
 ---
-title: "{permission}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{permission}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/permission
 ---
-
 ## Block: `{permission}`
+
+### Usage
 
 ```
 {permission require="string"}
@@ -17,8 +23,6 @@ menu:
 
 Only output content if the current user has the specified permission.
 
-### Parameters
+## Parameters
 
-Parameter       | Type      | Default   | Description
----             | ---       | ---       | ---
-__`require`__   | `string`  | none      | The permission to check for
+{{< params "theming/function/permission.json" >}}

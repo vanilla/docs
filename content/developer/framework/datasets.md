@@ -1,12 +1,15 @@
 ---
-title: "Datasets"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Datasets
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/datasets
 ---
-
 ## Datasets
 
 The `Gdn_Dataset` object is a way to store data. Most of the time, this data is the result of a query to the database. When you use our [database object](/developer/framework/database) (as you always should) to execute a database select query, it will return a dataset.

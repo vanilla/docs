@@ -1,12 +1,15 @@
 ---
-title: "Requests"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Requests
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/requests
 ---
-
 ## Requests
 
 Vanilla's base Controller class (the class from which all [controllers](/developer/framework/controllers) are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.

@@ -1,12 +1,15 @@
 ---
-title: "Permissions"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Permissions
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/permissions
 ---
-
 ## Permissions Overview
 
 Vanilla uses permissions to restrict access to particular content, options, or workflows. There are a number of functions built into the framework to do this efficiently. We eschew role-detection as a means of access control. 

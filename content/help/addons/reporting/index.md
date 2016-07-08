@@ -1,13 +1,16 @@
 ---
-title: "Reporting"
-tags: ["Features", "Addons"]
-category: "help"
+title: Reporting
+tags:
+- Features
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-reporting"
+  help:
+    parent: addons
+    identifier: addons-reporting
+aliases:
+- /addons/reporting
 ---
-
 ## What is Reporting?
 
 Reporting is a way for members to bring moderators’ attention to content that they believe is inappropriate. “Report” is an option under “Flag” in the Reactions available under each post.

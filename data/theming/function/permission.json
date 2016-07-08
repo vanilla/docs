@@ -1,0 +1,10 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "require",
+            "required": true,
+            "description": "The permission to check / require"
+        }
+    ]
+}

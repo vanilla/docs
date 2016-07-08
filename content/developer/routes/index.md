@@ -1,12 +1,14 @@
 ---
-title: "Routes"
-tags: ["Developers"]
-category: "developer"
+title: Routes
+tags:
+- Developers
+category: developer
 menu:
-    developer:
-        identifier: "routes"
+  developer:
+    identifier: routes
+aliases:
+- /developers/routes
 ---
-
 ## Routes
 
 Route management allows you to create custom urls to specific pages within your Vanilla 2 installation. It also comes with some pre-defined default values.

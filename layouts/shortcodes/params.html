@@ -1,0 +1,55 @@
+{{ $numOfParams := len .Params }}
+{{ if lt $numOfParams 1 }}
+
+    <aside class="warning">PLEASE SUPPLY A DATA FILE PATH</aside>
+    
+{{ else }}
+
+    {{ $path := .Get 0 }}
+    {{ $data := getJSON "data/" $path }}
+    
+    {{ if isset $data "type" }}
+        
+        <table class="docs-parameters parameters-type-{{ $data.type }}">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    {{ if eq $data.type "function" }}
+                    <th>Default</th>
+                    {{ end }}
+                    <th>Description</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                {{ range $data.parameters }}
+                <tr class="docs-parameter{{ if .required }} parameter-required{{ end }}">
+                    <td class="parameter-name"><code>{{ .param }}</code></td>
+                    <td class="parameter-type"><code>
+                        {{ if .type }}
+                            {{ .type }}
+                        {{ else }}
+                            string
+                        {{ end }}
+                    </code></td>
+                    {{ if eq $data.type "function" }}
+                    <td class="parameter-default">
+                        {{ if .default }}
+                            <code>{{ .default }}</code>
+                        {{ else }}
+                            none
+                        {{ end }}
+                    </td>
+                    {{ end }}
+                    <td class="parameter-description">{{ .description | markdownify }}</td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    
+    {{ else }}
+        <aside class="warning">UNABLE TO READ SUPPLIED DATA FILE</aside>
+    {{ end }}
+    
+{{ end }}

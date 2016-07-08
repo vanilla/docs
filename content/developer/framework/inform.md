@@ -1,12 +1,15 @@
 ---
-title: "Inform Messages"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Inform Messages
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/inform
 ---
-
 ## Toaster Notifications
 
 Inform Messages allow you to let users know of some action that your plugin or application has taken. Inform messages allow you to quickly and easily relay information to users, and handle actions based on interaction with those messages. Use them freely to notify users of saved forms, punishments, rewards, etc.

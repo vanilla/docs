@@ -1,12 +1,16 @@
 ---
-title: "Upgrading from Warnings"
-tags: ["Features", "Addons", "Warnings and Notes"]
-category: "help"
+title: Upgrading from Warnings
+tags:
+- Features
+- Addons
+- Warnings and Notes
+category: help
 menu:
-    help:
-        parent: "addons-warnings-and-notes"
+  help:
+    parent: addons-warnings-and-notes
+aliases:
+- /addons/warnings-and-notes/upgrading-from-warnings
 ---
-
 ## Warnings & Notes is version 2
 
 The first version of this addon was titled simply "Warnings". It did not include the User Notes feature. It had more granular controls for Warning a user with particular point levels and durations.

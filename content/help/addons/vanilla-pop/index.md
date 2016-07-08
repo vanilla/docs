@@ -1,13 +1,16 @@
 ---
-title: "Vanilla Pop"
-tags: ["Features","Vanilla Pop"]
-category: "help"
+title: Vanilla Pop
+tags:
+- Features
+- Vanilla Pop
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-vanilla-pop"
+  help:
+    parent: addons
+    identifier: addons-vanilla-pop
+aliases:
+- /addons/vanilla-pop
 ---
-
 {{% cloudfeature %}}
 
 ## Email Interaction

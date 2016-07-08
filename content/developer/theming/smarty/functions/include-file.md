@@ -1,13 +1,19 @@
 ---
-title: "{include_file}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{include_file}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/include-file
 ---
-
 ## Function: `{include_file}`
+
+### Usage
 
 ```
 {include_file name="string"}
@@ -15,8 +21,6 @@ menu:
 
 Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.
 
-### Parameters
+## Parameters
 
-Parameter       | Type      | Default   | Description
----             | ---       | ---       | ---
-__`name`__      | `string`  | none      | The name of the file to include
+{{< params "theming/function/include_file.json" >}}

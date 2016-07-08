@@ -1,13 +1,16 @@
 ---
-title: "Staging Site"
-tags: ["Cloud","Staging"]
-category: "help"
+title: Staging Site
+tags:
+- Cloud
+- Staging
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-staging"
+  help:
+    parent: cloud
+    identifier: cloud-staging
+aliases:
+- /cloud/staging
 ---
-
 ## Staging Site Overview
 
 For higher [plan levels](https://vanillaforums.com/plans), we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.

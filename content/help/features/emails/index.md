@@ -1,13 +1,16 @@
 ---
-title: "Emails"
-tags: ["Features","Emails"]
-category: "help"
+title: Emails
+tags:
+- Features
+- Emails
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-emails"
+  help:
+    parent: features
+    identifier: features-emails
+aliases:
+- /features/emails
 ---
-
 ## Email Appearance
 
 You can choose between sending plaintext or HTML emails. The difference is that HTML emails can include colors, images and other styling while plaintext emails are, well, plain text.

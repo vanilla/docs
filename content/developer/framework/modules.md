@@ -1,12 +1,15 @@
 ---
-title: "Modules"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Modules
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/modules
 ---
-
 <p>If controller methods represent the main content/purpose of a page, modules represent secondary information or functions. Modules are small groupings of functionality or information on a page. Some modules that are bundled with Garden include:</p>
 <ul>
 <li><strong>HeadModule</strong> - Allows addition of javascript, css &amp; meta information to be rendered in the page.</li>

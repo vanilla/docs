@@ -1,13 +1,16 @@
 ---
-title: "Releases"
-tags: ["Cloud","Releases"]
-category: "help"
+title: Releases
+tags:
+- Cloud
+- Releases
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-releases"
+  help:
+    parent: cloud
+    identifier: cloud-releases
+aliases:
+- /cloud/releases
 ---
-
 ## Release Notes
 
 Our clients on [VIP plans](https://vanillaforums.com/plans) receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.

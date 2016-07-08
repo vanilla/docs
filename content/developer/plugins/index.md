@@ -1,12 +1,15 @@
 ---
-title: "Plugins"
-tags: ["Developers","Plugins"]
-category: "developer"
+title: Plugins
+tags:
+- Developers
+- Plugins
+category: developer
 menu:
-    developer:
-        identifier: "plugins"
+  developer:
+    identifier: plugins
+aliases:
+- /developers/plugins
 ---
-
 ## Extending Vanilla with plugins
 
 Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.

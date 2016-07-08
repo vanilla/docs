@@ -1,12 +1,15 @@
 ---
-title: "Supported platforms"
-tags: ["Developers","Importing"]
-category: "developer"
+title: Supported platforms
+tags:
+- Developers
+- Importing
+category: developer
 menu:
-    developer:
-        parent: "importing"
+  developer:
+    parent: importing
+aliases:
+- /developers/importing/support
 ---
-
 ## Supported platforms
 
 Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the [Vanilla Porter](http://vanillaforums.org/addon/porter-core).

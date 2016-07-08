@@ -1,12 +1,15 @@
 ---
-title: "Email"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Email
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/email
 ---
-
 ## Sending Emails
 
 The Garden framework includes an Email object for sending and configuring emails. The formatting of Vanilla Emails is handled by the EmailTemplate property of the Email object.

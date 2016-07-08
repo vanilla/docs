@@ -1,12 +1,14 @@
 ---
-title: "Community"
-tags: ["Developers"]
-category: "developer"
+title: Community
+tags:
+- Developers
+category: developer
 menu:
-    developer:
-        identifier: "community"
+  developer:
+    identifier: community
+aliases:
+- /developers/community
 ---
-
 ## Developers Community
 
 We have a vibrant [developers' community at vanillaforums.org](http://vanillaforums.org/discussions/). Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins & themes to the [official directory](http://vanillaforums.org/addons), and sign the [contributors' agreement](http://vanillaforums.org/contributors).

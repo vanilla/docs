@@ -1,13 +1,16 @@
 ---
-title: "Single Sign-On (SSO)"
-tags: ["Features","Single Sign-On"]
-category: "help"
+title: Single Sign-On (SSO)
+tags:
+- Features
+- Single Sign-On
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-sso"
+  help:
+    parent: features
+    identifier: features-sso
+aliases:
+- /features/sso
 ---
-
 ## Single Sign-On Overview
 
 Single sign-on (SSO) is how to let your users sign on to a third-party system (like a Vanilla Forum) without needing a separate username and password.

@@ -1,12 +1,15 @@
 ---
-title: "Plugin Quickstart"
-tags: ["Developers","Addons"]
-category: "developer"
+title: Plugin Quickstart
+tags:
+- Developers
+- Addons
+category: developer
 menu:
-    developer:
-        parent: "plugins"
+  developer:
+    parent: plugins
+aliases:
+- /developers/plugins/quickstart
 ---
-
 ## Quickstart Links
 
 * Read about our hooks system: [Extending Vanilla with plugins](/developer/plugins)

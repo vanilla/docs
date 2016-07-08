@@ -1,13 +1,16 @@
 ---
-title: "Groups"
-tags: ["Features", "Addons"]
-category: "help"
+title: Groups
+tags:
+- Features
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-groups"
+  help:
+    parent: addons
+    identifier: addons-groups
+aliases:
+- /addons/groups
 ---
-
 ## What are Groups?
 
 Groups is an addon for very large communities to allow their users to form their own discussion groups. These groups allows for having discussions outside the normal forum category structure in self-contained areas. Very large communities can be difficult to approach for new users. Groups can be a useful way for users to find other folks with common interests or backgrounds.

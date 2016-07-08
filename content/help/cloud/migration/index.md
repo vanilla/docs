@@ -1,13 +1,16 @@
 ---
-title: "Migration Services"
-tags: ["Cloud","Migration"]
-category: "help"
+title: Migration Services
+tags:
+- Cloud
+- Migration
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-migration"
+  help:
+    parent: cloud
+    identifier: cloud-migration
+aliases:
+- /cloud/migration
 ---
-
 ## Overview
 
 Vanilla offers full, professional migration services from nearly any platform imaginable. If you provide the data, we'll figure out how to make it work in Vanilla.

@@ -1,13 +1,16 @@
 ---
-title: "Badges"
-tags: ["Features", "Addons"]
-category: "help"
+title: Badges
+tags:
+- Features
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-badges"
+  help:
+    parent: addons
+    identifier: addons-badges
+aliases:
+- /addons/badges
 ---
-
 {{% cloudfeature %}}
 
 ## Purpose

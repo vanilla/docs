@@ -1,0 +1,14 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "name",
+            "required": true,
+            "description": "The full class name of the module"
+        },
+        {
+            "param": "...",
+            "description": "Optional variadic list of named properties"
+        }
+    ]
+}

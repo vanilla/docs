@@ -1,13 +1,16 @@
 ---
-title: "Repository"
-tags: ["Cloud","Repository"]
-category: "help"
+title: Repository
+tags:
+- Cloud
+- Repository
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-repository"
+  help:
+    parent: cloud
+    identifier: cloud-repository
+aliases:
+- /cloud/repository
 ---
-
 ## Private Repository
 
 Our [VIP plans](https://vanillaforums.com/plans) come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.

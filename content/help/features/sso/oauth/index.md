@@ -1,13 +1,17 @@
 ---
-title: "OAuth"
-tags: ["Features","Single Sign-On","OAuth"]
-category: "help"
+title: OAuth
+tags:
+- Features
+- Single Sign-On
+- OAuth
+category: help
 menu:
-    help:
-        parent: "features-sso"
-        identifier: "features-sso-oauth"
+  help:
+    parent: features-sso
+    identifier: features-sso-oauth
+aliases:
+- /features/sso/oauth
 ---
-
 ## SSO with OAuth: Overview
 
 Because OAuth 2.0 is an SSO *framework* and not a narrowly defined protocol, custom services work is typically required to set up an OAuth solution for your forum.

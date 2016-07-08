@@ -200,6 +200,11 @@ body {
   padding-bottom: 15px;
 }
 
+.docs-content #content h2 em, .docs-content #content h2 i {
+  font-style: normal;
+  font-weight: normal;
+}
+
 .docs-content #content h3 {
   color: #333333;
   font-size: 16px;
@@ -229,15 +234,19 @@ body {
   line-height: 22px;
 }
 
+.docs-content #content ul + h2, .docs-content #content ol + h2 {
+  margin-top: 30px;
+}
+
 .docs-content #content a {
   color: #0291DB;
 }
 
 .docs-content #content pre {
-  background: #fff3f6;
+  background: #F5F8FA;
   color: #F52C6E;
   font-size: 12px;
-  padding: 2px 4px;
+  padding: 8px;
   border-radius: 2px;
 }
 
@@ -246,12 +255,47 @@ body {
   padding: 0px;
 }
 
+.docs-content #content pre + h2 {
+  margin-top: 30px;
+}
+
 .docs-content #content code {
   background: #fff3f6;
   color: #F52C6E;
   font-family: "Courier New", Terminal;
   padding: 2px 4px;
   border-radius: 2px;
+}
+
+.docs-content #content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.docs-content #content table + h2 {
+  margin-top: 30px;
+}
+
+.docs-content #content table td, .docs-content #content table th {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.docs-content #content table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #E4E4E4;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.docs-content #content table tbody tr td {
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.docs-content #content table tbody tr:last-child td {
+  border: 0px;
 }
 
 .docs-content #content aside {
@@ -760,6 +804,10 @@ a:hover {
 
 .docs-content #sidebar ul.nav-tier1 > ul {
   border-bottom: 1px dotted #E4E4E4;
+}
+
+.docs-parameters .docs-parameter.parameter-required td.parameter-name {
+  font-weight: bold;
 }
 
 .docs-platform {

@@ -1,13 +1,15 @@
 ---
-title: "Theme Options"
-tags: ["Theming"]
-category: "developer"
+title: Theme Options
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        parent: "theming"
-        weight: 60
+  developer:
+    parent: theming
+    weight: 60
+aliases:
+- /theming/themeoptions
 ---
-
 ## Theme Options
 
 This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.

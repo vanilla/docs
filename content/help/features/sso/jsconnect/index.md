@@ -1,13 +1,17 @@
 ---
-title: "jsConnect"
-tags: ["Features","Single Sign-On","jsConnect"]
-category: "help"
+title: jsConnect
+tags:
+- Features
+- Single Sign-On
+- jsConnect
+category: help
 menu:
-    help:
-        parent: "features-sso"
-        identifier: "features-sso-jsconnect"
+  help:
+    parent: features-sso
+    identifier: features-sso-jsconnect
+aliases:
+- /features/sso/jsconnect
 ---
-
 ## jsConnect Concepts Overview
 
 Our SSO solution has a few basic assumptions:

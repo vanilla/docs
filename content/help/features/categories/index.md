@@ -1,13 +1,16 @@
 ---
-title: "Categories"
-tags: ["Features", "Categories"]
-category: "help"
+title: Categories
+tags:
+- Features
+- Categories
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-categories"
+  help:
+    parent: features
+    identifier: features-categories
+aliases:
+- /features/categories
 ---
-
 ## Using Categories
 
 Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.

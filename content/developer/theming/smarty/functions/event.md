@@ -1,13 +1,19 @@
 ---
-title: "{event}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{event}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/event
 ---
-
 ## Function: `{event}`
+
+### Usage
 
 ```
 {event name="string"}
@@ -15,8 +21,6 @@ menu:
 
 Fire an event with the specified `name`. [Learn more about events in Vanilla.](../../../developers/plugins/#events-%26-handlers)
 
-### Parameters
+## Parameters
 
-Parameter   | Type      | Default   | Description
----         | ---       | ---       | ---
-__`name`__  | `string`  | none      | Name of the event to fire
+{{< params "theming/function/event.json" >}}

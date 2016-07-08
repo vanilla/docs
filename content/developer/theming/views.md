@@ -1,13 +1,15 @@
 ---
-title: "Views / HTML"
-tags: ["Theming"]
-category: "developer"
+title: Views / HTML
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        parent: "theming"
-        weight: 40
+  developer:
+    parent: theming
+    weight: 40
+aliases:
+- /theming/views
 ---
-
 ## Theming Views
 
 ### The master view

@@ -1,13 +1,17 @@
 ---
-title: "Google Plus"
-tags: ["Features", "Addons", "Integrations"]
-category: "help"
+title: Google Plus
+tags:
+- Features
+- Addons
+- Integrations
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-googleplus"
+  help:
+    parent: addons
+    identifier: addons-googleplus
+aliases:
+- /addons/googleplus
 ---
-
 ## Google Plus
 
 The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in [Google API Console](https://code.google.com/apis/console). This [Google+ Video Tutorial](http://youtu.be/OHEb22VrZy4) also shows you how to set this up.

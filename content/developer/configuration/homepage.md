@@ -1,10 +1,14 @@
 ---
-title: "Homepage Settings"
-tags: ["Developers","Configuration"]
-category: "developer"
+title: Homepage Settings
+tags:
+- Developers
+- Configuration
+category: developer
 menu:
-    developer:
-        parent: "configuration"
+  developer:
+    parent: configuration
+aliases:
+- /developers/configuration/homepage
 ---
 ## Homepage
 

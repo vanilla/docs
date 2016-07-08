@@ -1,13 +1,16 @@
 ---
-title: "Ranks"
-tags: ["Features", "Addons"]
-category: "help"
+title: Ranks
+tags:
+- Features
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-ranks"
+  help:
+    parent: addons
+    identifier: addons-ranks
+aliases:
+- /addons/ranks
 ---
-
 ## What is a Rank?
 
 A rank can be assigned to a user to grant or remove certain privileges on your forum. A rank is *not* Roles & Permissions, which govern content access, moderation abilities, and administrator access.

@@ -1,0 +1,14 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "code",
+            "required": true,
+            "description": "The text code set in the theme's information array"
+        },
+        {
+            "param": "default",
+            "description": "The default text if the user hasn't overridden"
+        }
+    ]
+}

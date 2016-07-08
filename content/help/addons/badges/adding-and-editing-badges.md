@@ -1,12 +1,16 @@
 ---
-title: "Adding and Editing Badges"
-tags: ["Features", "Addons", "Badges"]
-category: "help"
+title: Adding and Editing Badges
+tags:
+- Features
+- Addons
+- Badges
+category: help
 menu:
-    help:
-        parent: "addons-badges"
+  help:
+    parent: addons-badges
+aliases:
+- /addons/badges/adding-and-editing-badges
 ---
-
 {{% cloudfeature %}}
 
 ## Disabling badges

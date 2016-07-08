@@ -1,12 +1,16 @@
 ---
-title: "Adding and Editing Ranks"
-tags: ["Features", "Addons", "Ranks"]
-category: "help"
+title: Adding and Editing Ranks
+tags:
+- Features
+- Addons
+- Ranks
+category: help
 menu:
-    help:
-        parent: "addons-ranks"
+  help:
+    parent: addons-ranks
+aliases:
+- /addons/ranks/adding-and-editing-ranks
 ---
-
 ## Adding a Ranks
 
 Go to the "Ranks" page of the Dashboard and click the "Add Rank" button at the bottom of the list.

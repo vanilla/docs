@@ -1,12 +1,16 @@
 ---
-title: "Adding and Editing Reactions"
-tags: ["Features", "Addons", "Reactions"]
-category: "help"
+title: Adding and Editing Reactions
+tags:
+- Features
+- Addons
+- Reactions
+category: help
 menu:
-    help:
-        parent: "addons-reactions"
+  help:
+    parent: addons-reactions
+aliases:
+- /addons/reactions/adding-and-editing-reactions
 ---
-
 {{% cloudfeature %}}
 
 ## Selecting Reactions

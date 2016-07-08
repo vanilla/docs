@@ -1,13 +1,19 @@
 ---
-title: "{module}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{module}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/module
 ---
-
 ## Function: `{module}`
+
+### Usage
 
 ```
 {module name="string" ... }
@@ -19,11 +25,9 @@ The available parameters differ depending on module itself and the available mod
 
 There are many modules available in Vanilla and in its addons. They can be found in the modules directory of an application or addon. [Learn more about modules.](../../../developers/framework/modules.html.md)
 
-### Parameters
+## Parameters
 
-Parameter       | Type      | Default   | Description
----             | ---       | ---       | ---
-__`name`__      | `string`  | none      | The full class name of the module
+{{< params "theming/function/asset.json" >}}
 
 You can set any property of a module by specifying it as a parameter as long as that property has a setter method or has a visibility of public.
 

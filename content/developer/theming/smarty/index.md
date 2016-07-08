@@ -1,14 +1,16 @@
 ---
-title: "Smarty"
-tags: ["Theming"]
-category: "developer"
+title: Smarty
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        parent: "theming"
-        weight: 30
-        identifier: "theming-smarty"
+  developer:
+    parent: theming
+    weight: 30
+    identifier: theming-smarty
+aliases:
+- /theming/smarty
 ---
-
 ## Smarty Overview
 
 Vanilla currently supports both PHP and Smarty views. [Smarty](http://www.smarty.net) is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to `/applications/dashboard/views/default.master.tpl`.

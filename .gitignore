@@ -7,3 +7,4 @@ node_modules/
 public/
 .grunt
 build/tmp/_componentsMap.scss
+build/scss/tmp/_componentsMap.scss

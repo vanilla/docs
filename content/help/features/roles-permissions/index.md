@@ -1,13 +1,17 @@
 ---
-title: "Roles & Permissions"
-tags: ["Features","Roles", "Permissions"]
-category: "help"
+title: Roles & Permissions
+tags:
+- Features
+- Roles
+- Permissions
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-role-permissions"
+  help:
+    parent: features
+    identifier: features-role-permissions
+aliases:
+- /features/roles-permissions
 ---
-
 ## Overview
  Roles and Permissions are used in tandem to control what users can see and do in your community. Upon account creation, there are 6 default Roles in your Vanilla account. Each of the default Roles have permissions that you would expect from the Role name:
 

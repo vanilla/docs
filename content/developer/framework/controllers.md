@@ -1,12 +1,15 @@
 ---
-title: "Controllers & URLs"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Controllers & URLs
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/controllers
 ---
-
 ## Controllers
 
 In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.

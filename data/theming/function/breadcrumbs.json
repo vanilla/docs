@@ -1,0 +1,21 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "homelink",
+            "default": "Home",
+            "description": "Title of the first link in the breadcrumbs"
+        },
+        {
+            "param": "homeurl",
+            "default": "/",
+            "description": "URL of the first link in the breadcrumbs"
+        },
+        {
+            "param": "hidelast",
+            "type": "boolean",
+            "default": "false",
+            "description": "Whether or not to hide the currently active (last) crumb"
+        }
+    ]
+}

@@ -1,12 +1,15 @@
 ---
-title: "Coding Standard"
-tags: ["Developers", "Contributing"]
-category: "developer"
+title: Coding Standard
+tags:
+- Developers
+- Contributing
+category: developer
 menu:
-    developer:
-        parent: "contributing"
+  developer:
+    parent: contributing
+aliases:
+- /developers/contributing/coding-standard
 ---
-
 ## Standards
 
 As of May 2014, Vanilla will adhere to [PSR-2] (and therefore [PSR-1]) with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).

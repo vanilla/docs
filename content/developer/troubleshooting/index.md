@@ -1,12 +1,15 @@
 ---
-title: "Troubleshooting"
-tags: ["Features", "Troubleshooting"]
-category: "developer"
+title: Troubleshooting
+tags:
+- Features
+- Troubleshooting
+category: developer
 menu:
-    developer:
-        identifier: "troubleshooting"
+  developer:
+    identifier: troubleshooting
+aliases:
+- /developers/troubleshooting
 ---
-
 ## Troubleshooting Vanilla
 
 These are some generic tips for addressing problems during an upgrade.

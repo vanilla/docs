@@ -1,13 +1,15 @@
 ---
-title: "Support"
-tags: ["Cloud"]
-category: "help"
+title: Support
+tags:
+- Cloud
+category: help
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-support"
+  help:
+    parent: cloud
+    identifier: cloud-support
+aliases:
+- /cloud/support
 ---
-
 ## Cloud Support
 
 We provide professional support **exclusively** for our [cloud clients](https://vanillaforums.com/plans). Because of this, we require the forum owner to request support, or to specifically authorize other users to receive support.

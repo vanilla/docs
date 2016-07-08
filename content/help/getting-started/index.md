@@ -1,10 +1,11 @@
 ---
-title: "Getting Started"
-category: "help"
+title: Getting Started
+category: help
 menu:
-    help:
-        identifier: "getting-started"
-        weight: 10
+  help:
+    identifier: getting-started
+    weight: 10
+aliases:
+- /getting-started
 ---
-
 ## Getting started

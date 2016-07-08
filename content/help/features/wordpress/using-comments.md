@@ -1,12 +1,15 @@
 ---
-title: "Using Comments"
-tags: ["Features","Embedding"]
-category: "help"
+title: Using Comments
+tags:
+- Features
+- Embedding
+category: help
 menu:
-    help:
-        parent: "features-wordpress"
+  help:
+    parent: features-wordpress
+aliases:
+- /features/wordpress/using-comments
 ---
-
 ## Transition to Vanilla Comments
 
 Vanilla doesn't have access to your WordPress comments, so simply turning off WP's comments and turning on Vanilla's would hide all your existing comments.

@@ -1,13 +1,19 @@
 ---
-title: "{asset}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{asset}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/asset
 ---
-
 ## Function: `{asset}`
+
+### Usage
 
 ```
 {asset name="string" id="string" tag="string" class="string"}
@@ -18,11 +24,6 @@ Assets in Vanilla are containers for different sets of content. The content of e
 
 Vanilla's asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets. The Panel asset is optional, but you'll likely want to at least include it in the Profile, EditProfile and Conversation sections as it has important functionality in those sections that are not included in the Content asset.
 
-### Parameters
+## Parameters
 
-Parameter   | Type      | Default   | Description
----         | ---       | ---       | ---
-__`name`__  | `string`  | none      | The name of the asset
-`id`        | `string`  | `$name`   | The id of the tag if different than the name
-`tag`       | `string`  | none      | The type of tag to wrap the asset in
-`class`     | `string`  | none      | The class to add to the asset wrapper
+{{< params "theming/function/asset.json" >}}

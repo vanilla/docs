@@ -1,13 +1,16 @@
 ---
-title: "Warnings & Notes"
-tags: ["Features", "Addons"]
-category: "help"
+title: Warnings & Notes
+tags:
+- Features
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-warnings-and-notes"
+  help:
+    parent: addons
+    identifier: addons-warnings-and-notes
+aliases:
+- /addons/warnings-and-notes
 ---
-
 ## What are Warnings?
 
 Warnings can be given to users by moderators for behavior that is not appropriate in the community. Warnings use a points system that increases a user’s warning level with successive warnings until the warnings expire. Once users reach certain points thresholds they can be jailed or banned.

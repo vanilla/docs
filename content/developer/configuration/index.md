@@ -1,12 +1,15 @@
 ---
-title: "Configuration"
-tags: ["Developers","Configuration"]
-category: "developer"
+title: Configuration
+tags:
+- Developers
+- Configuration
+category: developer
 menu:
-    developer:
-        identifier: "configuration"
+  developer:
+    identifier: configuration
+aliases:
+- /developers/configuration
 ---
-
 ## Vanilla configuration files
 
 Vanilla uses a file-based configuration system.

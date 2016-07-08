@@ -1,13 +1,15 @@
 ---
-title: "Ideation"
-tags: ["Addons"]
-category: "help"
+title: Ideation
+tags:
+- Addons
+category: help
 menu:
-    help:
-        parent: "addons"
-        identifier: "addons-ideation"
+  help:
+    parent: addons
+    identifier: addons-ideation
+aliases:
+- /addons/ideation
 ---
-
 {{% cloudfeature %}}
 
 ## Ideation

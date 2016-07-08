@@ -1,0 +1,30 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "path",
+            "required": true,
+            "description": "The relative path for the url. There are some special paths that can be used to return 'intelligent' links"
+        },
+        {
+            "param": "text",
+            "description": "HTML text to be put inside an anchor. If this value is set then an HTML `<a></a>` is returned rather than just a url"
+        },
+        {
+            "param": "notag",
+            "type": "boolean",
+            "default": "false",
+            "description": "Whether or not the output should be wrapped in a tag or just be a URL"
+        },
+        {
+            "param": "format",
+            "description": "Custom format to use when wrapping links. Available template variables are `%url`, `%class`, and `%text`"
+        },
+        {
+            "param": "withdomain",
+            "type": "boolean",
+            "default": "false",
+            "description": "Whether or not to prepend the base (`http://your-forums.com/`) URL to the outputted link"
+        }
+    ]
+}

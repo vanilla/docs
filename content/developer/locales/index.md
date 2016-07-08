@@ -1,12 +1,15 @@
 ---
-title: "Locales"
-tags: ["Developers","Locales"]
-category: "developer"
+title: Locales
+tags:
+- Developers
+- Locales
+category: developer
 menu:
-    developer:
-        identifier: "locales"
+  developer:
+    identifier: locales
+aliases:
+- /developers/locales
 ---
-
 ## Translating Vanilla
 
 Want to help us improve our translations? We have a [Transifex project](https://www.transifex.com/projects/p/vanilla/) for contributing to this. Create an account there and submit your improvements.

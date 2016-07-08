@@ -1,12 +1,15 @@
 ---
-title: "Using The Config"
-tags: ["Developers","Configuration"]
-category: "developer"
+title: Using The Config
+tags:
+- Developers
+- Configuration
+category: developer
 menu:
-    developer:
-        parent: "configuration"
+  developer:
+    parent: configuration
+aliases:
+- /developers/configuration/using
 ---
-
 ## When to use the config
 
 Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.

@@ -75,7 +75,7 @@ module.exports = function (grunt) {
         sass_globbing: {
             docs: {
                 files: {
-                    'build/tmp/_componentsMap.scss': 'build/scss/components/**/*.scss'
+                    'build/scss/tmp/_componentsMap.scss': 'build/scss/components/**/*.scss'
                 },
                 options: {
                     useSingleQuotes: false

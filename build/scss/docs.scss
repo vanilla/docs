@@ -1,12 +1,12 @@
 
 // Global styles
 
-@import "globals/grid.scss";
-@import "globals/variables.scss";
-@import "globals/gradient.scss";
+@import "globals/grid";
+@import "globals/variables";
+@import "globals/gradient";
 
-@import "globals/docs.scss";
+@import "globals/docs";
 
 // Application specific styles
 
-@import "componentsMap";
+@import "tmp/componentsMap";

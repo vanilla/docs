@@ -1,0 +1,10 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "name",
+            "required": true,
+            "description": "The name of the pocket"
+        }
+    ]
+}

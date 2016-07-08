@@ -1,12 +1,14 @@
 ---
-title: "Data privacy"
-tags: ["Developers"]
-category: "developer"
+title: Data privacy
+tags:
+- Developers
+category: developer
 menu:
-    developer:
-        identifier: "data-privacy"
+  developer:
+    identifier: data-privacy
+aliases:
+- /developers/data-privacy
 ---
-
 ## Types of Information
 
 Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.

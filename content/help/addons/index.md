@@ -1,13 +1,15 @@
 ---
-title: "Addons"
-tags: ["Features"]
-category: "help"
+title: Addons
+tags:
+- Features
+category: help
 menu:
-    help:
-        identifier: "addons"
-        weight: 40
+  help:
+    identifier: addons
+    weight: 40
+aliases:
+- /addons
 ---
-
 ## What Are Addons?
 
 Addons are like apps for your forum. They can be enabled or disabled from your Dashboard. Each one can add one or more features, or modify how an existing feature works. You can tailor your users' experience to the needs of your community by carefully selecting addons.

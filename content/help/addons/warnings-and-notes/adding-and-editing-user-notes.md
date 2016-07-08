@@ -1,12 +1,16 @@
 ---
-title: "Adding and Editing User Notes"
-tags: ["Features", "Addons", "Warnings and Notes"]
-category: "help"
+title: Adding and Editing User Notes
+tags:
+- Features
+- Addons
+- Warnings and Notes
+category: help
 menu:
-    help:
-        parent: "addons-warnings-and-notes"
+  help:
+    parent: addons-warnings-and-notes
+aliases:
+- /addons/warnings-and-notes/adding-and-editing-user-notes
 ---
-
 ## Adding a Note
 
 To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.

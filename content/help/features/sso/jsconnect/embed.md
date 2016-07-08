@@ -1,13 +1,17 @@
 ---
-title: "Embedded"
-tags: ["Features","Single Sign-On","jsConnect"]
-category: "help"
+title: Embedded
+tags:
+- Features
+- Single Sign-On
+- jsConnect
+category: help
 menu:
-    help:
-        parent: "features-sso-jsconnect"
-        weight: 300
+  help:
+    parent: features-sso-jsconnect
+    weight: 300
+aliases:
+- /features/sso/jsconnect/embed
 ---
-
 ## Embedding with Seamless jsConnect
 
 <a title="jsConnect Technical Documentation Part 1: Site-Wide SSO" href="http://blog.vanillaforums.com/implementing-jsconnect/jsconnect-technical-documentation/">Part 1</a> of this documentation told you how to set up jsConnect SSO for site-wide SSO. However, if you have Vanilla embedded in a page you'll notice that the SSO doesn't automatically sign you in even if users are signed in to the containing page. In order to make the sign in seamless you need to add some SSO information to your embed code.

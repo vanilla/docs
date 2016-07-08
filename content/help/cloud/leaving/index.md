@@ -1,12 +1,15 @@
 ---
-title: "Leaving the Cloud"
-categories: ["Cloud","Leaving"]
+title: Leaving the Cloud
+categories:
+- Cloud
+- Leaving
 menu:
-    help:
-        parent: "cloud"
-        identifier: "cloud-leaving"
+  help:
+    parent: cloud
+    identifier: cloud-leaving
+aliases:
+- /cloud/leaving
 ---
-
 ## The Worst Day
 
 Hey, it happens. On rare occassion, we need to go our separate ways. We hate to see any customer leave, but it's important any cloud providers you use have a strong data ownership policy. Ours is pretty simple: **It's your data.**

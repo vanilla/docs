@@ -1,13 +1,17 @@
 ---
-title: "Technical Overview"
-tags: ["Features","Single Sign-On","jsConnect"]
-category: "help"
+title: Technical Overview
+tags:
+- Features
+- Single Sign-On
+- jsConnect
+category: help
 menu:
-    help:
-        parent: "features-sso-jsconnect"
-        weight: 100
+  help:
+    parent: features-sso-jsconnect
+    weight: 100
+aliases:
+- /features/sso/jsconnect/overview
 ---
-
 ## jsConnect
 
 For jsConnect to work you'll put some code on your site that identifies your users in a way that Vanilla can understand. Vanilla then requests this information when the user wants to sign in and synchronizes the user with Vanilla. This is done via [JSONP](http://en.wikipedia.org/wiki/JSONP), which allows us to send your cookies from your site to you and obtain login information.

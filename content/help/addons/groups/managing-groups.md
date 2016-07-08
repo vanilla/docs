@@ -1,12 +1,16 @@
 ---
-title: "Managing Groups"
-tags: ["Features", "Addons", "Groups"]
-category: "help"
+title: Managing Groups
+tags:
+- Features
+- Addons
+- Groups
+category: help
 menu:
-    help:
-        parent: "addons-groups"
+  help:
+    parent: addons-groups
+aliases:
+- /addons/groups/managing-groups
 ---
-
 ## Adding your first groups
 
 After enabling the Groups addon, "Groups" will appear in your top-level navigation. In a customized theme, this may not be the case and you'll need to go directly to the URL "/groups" from your forum domain (e.g. "yoursite.vanillaforums.com/groups").

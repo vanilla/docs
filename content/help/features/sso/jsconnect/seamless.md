@@ -1,13 +1,17 @@
 ---
-title: "Seamless Setup"
-tags: ["Features","Single Sign-On","jsConnect"]
-category: "help"
+title: Seamless Setup
+tags:
+- Features
+- Single Sign-On
+- jsConnect
+category: help
 menu:
-    help:
-        parent: "features-sso-jsconnect"
-        weight: 200
+  help:
+    parent: features-sso-jsconnect
+    weight: 200
+aliases:
+- /features/sso/jsconnect/seamless
 ---
-
 ## Seamless SSO with jsConnect
 
 jsConnect uses javascript to allow cross-domain single-signon with another site. We provide several <a title="Implementing Vanilla jsConnect Single-Signon on your Site" href="http://blog.vanillaforums.com/help/implementing-jsconnect-single-signon-on/#libraries">client libraries</a> to help you implement jsConnect on your site. If your site has been programmed in a language that doesn't have a client library than this is documentation is for you.

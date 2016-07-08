@@ -1,10 +1,14 @@
 ---
-title: "Messages"
-tags: ["Developers","Configuration"]
-category: "developer"
+title: Messages
+tags:
+- Developers
+- Configuration
+category: developer
 menu:
-    developer:
-        parent: "configuration"
+  developer:
+    parent: configuration
+aliases:
+- /developers/configuration/message
 ---
 ## Messages
 

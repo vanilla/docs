@@ -1,12 +1,14 @@
 ---
-title: "Theming"
-tags: ["Theming"]
-category: "developer"
+title: Theming
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        identifier: "theming"
+  developer:
+    identifier: theming
+aliases:
+- /theming/
 ---
-
 ## Theming Overview
 
 Vanilla themes are built by selectively overriding the views and CSS in the product. They are also imbued with the power of plugins via a special hooks file.

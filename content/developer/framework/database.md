@@ -1,12 +1,15 @@
 ---
-title: "Database access"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Database access
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        parent: "framework"
+  developer:
+    parent: framework
+aliases:
+- /developers/framework/database
 ---
-
 ## Database layer
 
 Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in `/library/databases`). However, at this time, the Vanilla team has no plans to support additional databases.

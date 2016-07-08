@@ -1,13 +1,17 @@
 ---
-title: "January 2016 Release"
-tags: ["Cloud","Releases","2016"]
-category: "help"
+title: January 2016 Release
+tags:
+- Cloud
+- Releases
+- "2016"
+category: help
 menu:
-    help:
-        parent: "cloud-releases"
-        weight: 201601
+  help:
+    parent: cloud-releases
+    weight: 201601
+aliases:
+- /cloud/releases/january-2016
 ---
-
 ## Release Notes
 
 ### Changes:

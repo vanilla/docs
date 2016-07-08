@@ -1,13 +1,15 @@
 ---
-title: "Quickstart"
-tags: ["Theming"]
-category: "developer"
+title: Quickstart
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        parent: "theming"
-        weight: 10
+  developer:
+    parent: theming
+    weight: 10
+aliases:
+- /theming/quickstart
 ---
-
 **Vanilla Forums Cloud Customers, check out our [Ultimate Vanilla Forums Theme Guide](http://blog.vanillaforums.com/help/vanilla-forums-themes/).**
 
 With Vanilla, you have full control over both the CSS and the actual HTML of every page in every application. The easiest thing for most designers is to just alter the CSS, so we'll start there:

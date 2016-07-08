@@ -1,13 +1,15 @@
 ---
-title: "Cloud Services"
-tags: ["Cloud"]
-category: "help"
+title: Cloud Services
+tags:
+- Cloud
+category: help
 menu:
-    help:
-        identifier: "cloud"
-        weight: 30
+  help:
+    identifier: cloud
+    weight: 30
+aliases:
+- /cloud
 ---
-
 {{% cloudfeature %}}
 
 ## Cloud Services Overview

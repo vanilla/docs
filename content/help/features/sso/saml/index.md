@@ -1,13 +1,17 @@
 ---
-title: "SAML"
-tags: ["Features","Single Sign-On","SAML"]
-category: "help"
+title: SAML
+tags:
+- Features
+- Single Sign-On
+- SAML
+category: help
 menu:
-    help:
-        parent: "features-sso"
-        identifier: "features-sso-saml"
+  help:
+    parent: features-sso
+    identifier: features-sso-saml
+aliases:
+- /features/sso/saml
 ---
-
 ## SSO with SAML: Overview
 
 Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAMLSSO addon, and configuring it via its Settings page (Dashboard -> Addons -> SAMLSSO -> Settings button).

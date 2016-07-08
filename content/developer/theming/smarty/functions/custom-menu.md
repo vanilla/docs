@@ -1,13 +1,19 @@
 ---
-title: "{custom_menu}"
-tags: ["Theming", "Smarty", "Smarty Functions"]
-category: "developer"
+title: '{custom_menu}'
+tags:
+- Theming
+- Smarty
+- Smarty Functions
+category: developer
 menu:
-    developer:
-        parent: "theming-smarty-functions"
+  developer:
+    parent: theming-smarty-functions
+aliases:
+- /theming/smarty/functions/custom-menu
 ---
-
 ## Function: `{custom_menu}`
+
+### Usage
 
 ```
 {custom_menu format="string" wrap="string"}
@@ -15,9 +21,6 @@ menu:
 
 A bucket for addon menu items. Adds links depending on which addons are enabled.
 
-### Parameters
+## Parameters
 
-Parameter   | Type      | Default   | Description
----         | ---       | ---       | ---
-`format`    | `string`  | none      | Custom format to use when wrapping links. Available template variables are `%url`, `%class`, and `%text`
-`wrap`      | `string`  | `li`      | Element to wrap around each link in the menu
+{{< params "theming/function/custom_menu.json" >}}

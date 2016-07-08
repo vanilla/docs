@@ -1,12 +1,15 @@
 ---
-title: "Framework"
-tags: ["Developers","Framework"]
-category: "developer"
+title: Framework
+tags:
+- Developers
+- Framework
+category: developer
 menu:
-    developer:
-        identifier: "framework"
+  developer:
+    identifier: framework
+aliases:
+- /developers/framework
 ---
-
 ## Garden's place in Vanilla
 
 Vanilla is built on an MVC framework named Garden. Its purpose is to provide an extensible, pluggable platform on which to build all the addons that make Vanilla awesome. The design of its database handling was influenced by CodeIgniter, but its plugin architecture is pretty unique.

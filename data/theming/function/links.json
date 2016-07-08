@@ -1,0 +1,20 @@
+{
+    "type": "function",
+    "parameters": [
+        {
+            "param": "wrap",
+            "default": "li",
+            "description": "The tag to wrap the link in."
+        },
+        {
+            "param": "text",
+            "default": "varies",
+            "description": "What the text for the link should be."
+        },
+        {
+            "param": "format",
+            "default": "<a href='%url' class='%class'>%text</a>",
+            "description": "Custom format to use when wrapping links. Available template variables are `%url`, `%class`, and `%text`"
+        }
+    ]
+}

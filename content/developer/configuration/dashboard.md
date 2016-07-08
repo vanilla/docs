@@ -1,10 +1,14 @@
 ---
-title: "Dashboard"
-tags: ["Developers","Configuration"]
-category: "developer"
+title: Dashboard
+tags:
+- Developers
+- Configuration
+category: developer
 menu:
-    developer:
-        parent: "configuration"
+  developer:
+    parent: configuration
+aliases:
+- /developers/configuration/dashboard
 ---
 ## Dashboard
 

@@ -1,12 +1,15 @@
 ---
-title: "Building new porters"
-tags: ["Developers","Importing"]
-category: "developer"
+title: Building new porters
+tags:
+- Developers
+- Importing
+category: developer
 menu:
-    developer:
-        parent: "importing"
+  developer:
+    parent: importing
+aliases:
+- /developers/importing/build
 ---
-
 ## Building a new porter file
 
 We don't support your forum? Here are some tips for getting started rolling your own.

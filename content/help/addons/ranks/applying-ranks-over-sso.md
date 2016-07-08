@@ -1,12 +1,16 @@
 ---
-title: "Applying Ranks over SSO"
-tags: ["Features", "Addons", "Ranks"]
-category: "help"
+title: Applying Ranks over SSO
+tags:
+- Features
+- Addons
+- Ranks
+category: help
 menu:
-    help:
-        parent: "addons-ranks"
+  help:
+    parent: addons-ranks
+aliases:
+- /addons/ranks/applying-ranks-over-sso
 ---
-
 ## Applying Ranks over SSO
 
 Create a new rank or edit an existing one, checking "Applied Manually".

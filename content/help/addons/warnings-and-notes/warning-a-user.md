@@ -1,12 +1,16 @@
 ---
-title: "Warning a User"
-tags: ["Features", "Addons", "Warnings and Notes"]
-category: "help"
+title: Warning a User
+tags:
+- Features
+- Addons
+- Warnings and Notes
+category: help
 menu:
-    help:
-        parent: "addons-warnings-and-notes"
+  help:
+    parent: addons-warnings-and-notes
+aliases:
+- /addons/warnings-and-notes/warning-a-user
 ---
-
 ## Warning a User
 
 You can warn a user from their profile, or from a post that they’ve made. Warnings may be given by users with the permission Garden.Moderation.Manage or Moderation.Warnings.Add (if present).

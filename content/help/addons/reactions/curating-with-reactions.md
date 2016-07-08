@@ -1,12 +1,16 @@
 ---
-title: "Curating with Reactions"
-tags: ["Features", "Addons", "Reactions"]
-category: "help"
+title: Curating with Reactions
+tags:
+- Features
+- Addons
+- Reactions
+category: help
 menu:
-    help:
-        parent: "addons-reactions"
+  help:
+    parent: addons-reactions
+aliases:
+- /addons/reactions/curating-with-reactions
 ---
-
 {{% cloudfeature %}}
 
 ## Curating with Reactions

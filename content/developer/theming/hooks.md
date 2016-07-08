@@ -1,13 +1,15 @@
 ---
-title: "Event Hooks"
-tags: ["Theming"]
-category: "developer"
+title: Event Hooks
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        parent: "theming"
-        weight: 50
+  developer:
+    parent: theming
+    weight: 50
+aliases:
+- /theming/hooks
 ---
-
 ## Theming Hooks
 
 Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.

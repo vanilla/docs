@@ -1,13 +1,15 @@
 ---
-title: "CSS"
-tags: ["Theming"]
-category: "developer"
+title: CSS
+tags:
+- Theming
+category: developer
 menu:
-    developer:
-        parent: "theming"
-        weight: 20
+  developer:
+    parent: theming
+    weight: 20
+aliases:
+- /theming/css
 ---
-
 ## Theming with CSS
 
 ### Theming Hosted Vanilla

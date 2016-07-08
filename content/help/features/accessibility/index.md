@@ -1,13 +1,15 @@
 ---
-title: "Accessibility"
-tags: ["Features"]
-category: "help"
+title: Accessibility
+tags:
+- Features
+category: help
 menu:
-    help:
-        parent: "features"
-        identifier: "features-accessibility"
+  help:
+    parent: features
+    identifier: features-accessibility
+aliases:
+- /features/accessibility
 ---
-
 ## Overview
 
 We strive for maximum accessibility in our product design and take defects in it seriously.
