@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Say what?</title>
+        
+        <link href="/css/docs.css" rel="stylesheet">
+        <link href="/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+
+    <body class="docs grid docs-layout-landing docs-layout-notfound">
+        
+        <div class="docs-cap">
+
+            {{ partial "header/slimheader.html" . }}
+
+            <div class="docs-welcome" id="docs-404">
+                <div class="row">
+
+                    <div class="column column-2"></div>
+                    <div class="column column-8">
+                        <h1>404</h1>
+                        <p>
+                            Sorry, we couldn't find the page you requested.
+                        </p>
+                    </div>
+                    <div class="column column-2"></div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="docs-footer docs-landing-footer">
+            <div class="row">
+
+                <div class="column column-3"></div>
+                <div class="column column-6">
+                    {{ partial "footer/copyright.html" . }}
+                </div>
+                <div class="column column-3"></div>
+
+            </div>
+            <div class="row">
+
+                <div class="column column-3"></div>
+                <div class="column column-6">
+                    {{ partial "footer/links.html" . }}
+                </div>
+                <div class="column column-3"></div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

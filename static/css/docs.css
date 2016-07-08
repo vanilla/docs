@@ -686,6 +686,19 @@ a:hover {
       justify-content: center;
 }
 
+.docs-layout-notfound .docs-header-search {
+  display: none;
+}
+
+.docs-layout-notfound #docs-404 h1 {
+  font-size: 140px;
+  margin-bottom: 0px;
+}
+
+.docs-layout-notfound #docs-404 p {
+  font-weight: lighter;
+}
+
 .docs-title-wrapper {
   position: relative;
   background: #F5F8FA;
