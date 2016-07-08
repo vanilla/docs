@@ -9,6 +9,7 @@ menu:
 aliases:
  - /api/site-hub
 ---
+{{% cloudfeature %}}
 
 ## Overview
 
