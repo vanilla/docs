@@ -8,18 +8,24 @@
     <atom:link href="//docs.vanillaforums.com/tags/multisite/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Multisite Features</title>
-      <link>//docs.vanillaforums.com/help/cloud/multisite/</link>
+      <title>Multisite</title>
+      <link>//docs.vanillaforums.com/help/multisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/multisite/</guid>
+      <guid>//docs.vanillaforums.com/help/multisite/</guid>
       <description>
 
-&lt;h2 id=&#34;multisite-features&#34;&gt;Multisite Features&lt;/h2&gt;
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
+&lt;h2 id=&#34;multisite-management&#34;&gt;Multisite management&lt;/h2&gt;
 
 &lt;p&gt;Vanilla&amp;rsquo;s cloud solution offers a number of configuration settings for enterprise-grade deployments.&lt;/p&gt;
 
-&lt;h2 id=&#34;settings&#34;&gt;Settings&lt;/h2&gt;
+&lt;h2 id=&#34;deployment-types&#34;&gt;Deployment Types&lt;/h2&gt;
 
 &lt;h3 id=&#34;single-community&#34;&gt;Single Community&lt;/h3&gt;
 
@@ -69,10 +75,10 @@
     
     <item>
       <title>Multisite Sync</title>
-      <link>//docs.vanillaforums.com/help/cloud/multisite/sync/</link>
+      <link>//docs.vanillaforums.com/help/multisite/sync/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/multisite/sync/</guid>
+      <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
       <description>
 
 &lt;h2 id=&#34;hub-sync&#34;&gt;Hub Sync&lt;/h2&gt;

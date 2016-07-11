@@ -357,6 +357,7 @@ body {
 .docs-content #content img {
   max-width: 100%;
   height: auto;
+  border: 1px solid #E4E4E4;
 }
 
 body {
@@ -841,30 +842,50 @@ a:hover {
 }
 
 .docs-platform {
-  background: #F2F5FA;
-  border-top: 1px solid #E4E4E4;
-  padding: 30px 0px;
+  background: white;
 }
 
 .docs-platform .docs-platform-choice {
-  padding-right: 150px;
+  margin: 20px 0px 40px 0px;
+  background: white;
+  box-shadow: 0px 1px 2px 0px rgba(57, 57, 57, 0.4);
+  padding: 30px;
   color: #808A8F;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
-.docs-platform .docs-platform-choice h3 {
+.docs-platform .docs-platform-choice img {
+  margin-right: 30px;
+}
+
+.docs-platform .docs-platform-choice .choice-details h3 {
   margin: 0px 0px 10px 0px;
   font-size: 26px;
   font-weight: lighter;
 }
 
-.docs-platform .docs-platform-choice p {
-  font-size: 12px;
-  line-height: 18px;
+.docs-platform .docs-platform-choice .choice-details p {
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 420px;
 }
 
 .docs-platform .docs-platform-choice a {
+  display: inline-block;
   color: #0291DB;
-  border-bottom: 1px dotted #0291DB;
+  margin-left: auto;
+  border-color: #0291DB;
+  padding: 10px 30px;
+}
+
+.docs-platform .docs-platform-choice a:hover {
+  border-color: #F52C6E;
+  color: #F52C6E;
 }
 
 .docs-header-search {

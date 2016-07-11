@@ -8,18 +8,18 @@
     <atom:link href="//docs.vanillaforums.com/tags/integration/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Integration Services</title>
-      <link>//docs.vanillaforums.com/help/cloud/integration/</link>
+      <title>Developer Support</title>
+      <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/integration/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
       <description>
 
-&lt;h2 id=&#34;integration-services&#34;&gt;Integration Services&lt;/h2&gt;
+&lt;h2 id=&#34;developer-support&#34;&gt;Developer Support&lt;/h2&gt;
 
-&lt;p&gt;Higher &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt; include integration support. Integration support is generally given for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; include developer support, offered for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
 
-&lt;p&gt;We will continue to assist you with our outstanding professional support even after your integration support ends. Integration support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
+&lt;p&gt;We will continue to assist you with our outstanding professional support even after your developer support ends. Developer support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
 </description>
     </item>
     

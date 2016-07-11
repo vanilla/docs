@@ -30,27 +30,27 @@
     </item>
     
     <item>
-      <title>Integration Services</title>
-      <link>//docs.vanillaforums.com/help/cloud/integration/</link>
+      <title>Developer Support</title>
+      <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/integration/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
       <description>
 
-&lt;h2 id=&#34;integration-services&#34;&gt;Integration Services&lt;/h2&gt;
+&lt;h2 id=&#34;developer-support&#34;&gt;Developer Support&lt;/h2&gt;
 
-&lt;p&gt;Higher &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt; include integration support. Integration support is generally given for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; include developer support, offered for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
 
-&lt;p&gt;We will continue to assist you with our outstanding professional support even after your integration support ends. Integration support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
+&lt;p&gt;We will continue to assist you with our outstanding professional support even after your developer support ends. Developer support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>January 2016 Release</title>
-      <link>//docs.vanillaforums.com/help/cloud/releases/january-2016/</link>
+      <link>//docs.vanillaforums.com/help/releases/january-2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/releases/january-2016/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/january-2016/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -147,10 +147,10 @@
     
     <item>
       <title>March 2016 Release</title>
-      <link>//docs.vanillaforums.com/help/cloud/releases/march-2016/</link>
+      <link>//docs.vanillaforums.com/help/releases/march-2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/releases/march-2016/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/march-2016/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -210,10 +210,10 @@
     
     <item>
       <title>May 2016 Release</title>
-      <link>//docs.vanillaforums.com/help/cloud/releases/may-2016/</link>
+      <link>//docs.vanillaforums.com/help/releases/may-2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/releases/may-2016/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/may-2016/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -275,7 +275,7 @@
     </item>
     
     <item>
-      <title>Migration Services</title>
+      <title>Migration</title>
       <link>//docs.vanillaforums.com/help/cloud/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -391,18 +391,24 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     </item>
     
     <item>
-      <title>Multisite Features</title>
-      <link>//docs.vanillaforums.com/help/cloud/multisite/</link>
+      <title>Multisite</title>
+      <link>//docs.vanillaforums.com/help/multisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/multisite/</guid>
+      <guid>//docs.vanillaforums.com/help/multisite/</guid>
       <description>
 
-&lt;h2 id=&#34;multisite-features&#34;&gt;Multisite Features&lt;/h2&gt;
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
+&lt;h2 id=&#34;multisite-management&#34;&gt;Multisite management&lt;/h2&gt;
 
 &lt;p&gt;Vanilla&amp;rsquo;s cloud solution offers a number of configuration settings for enterprise-grade deployments.&lt;/p&gt;
 
-&lt;h2 id=&#34;settings&#34;&gt;Settings&lt;/h2&gt;
+&lt;h2 id=&#34;deployment-types&#34;&gt;Deployment Types&lt;/h2&gt;
 
 &lt;h3 id=&#34;single-community&#34;&gt;Single Community&lt;/h3&gt;
 
@@ -452,10 +458,10 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Multisite Sync</title>
-      <link>//docs.vanillaforums.com/help/cloud/multisite/sync/</link>
+      <link>//docs.vanillaforums.com/help/multisite/sync/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/multisite/sync/</guid>
+      <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
       <description>
 
 &lt;h2 id=&#34;hub-sync&#34;&gt;Hub Sync&lt;/h2&gt;
@@ -466,10 +472,10 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Releases</title>
-      <link>//docs.vanillaforums.com/help/cloud/releases/</link>
+      <link>//docs.vanillaforums.com/help/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/releases/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;

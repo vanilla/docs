@@ -9,10 +9,10 @@
     
     <item>
       <title>Accessibility</title>
-      <link>//docs.vanillaforums.com/help/features/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -274,10 +274,10 @@
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/help/features/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -451,10 +451,10 @@
     
     <item>
       <title>Categories</title>
-      <link>//docs.vanillaforums.com/help/features/categories/</link>
+      <link>//docs.vanillaforums.com/help/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/categories/</guid>
+      <guid>//docs.vanillaforums.com/help/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
@@ -589,10 +589,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Default Role Types</title>
-      <link>//docs.vanillaforums.com/help/features/roles-permissions/default-role-types/</link>
+      <link>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/roles-permissions/default-role-types/</guid>
+      <guid>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</guid>
       <description>
 
 &lt;h2 id=&#34;default-role-types&#34;&gt;Default Role Types&lt;/h2&gt;
@@ -600,11 +600,27 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Emails</title>
-      <link>//docs.vanillaforums.com/help/features/emails/</link>
+      <title>Developer Support</title>
+      <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/emails/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
+      <description>
+
+&lt;h2 id=&#34;developer-support&#34;&gt;Developer Support&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; include developer support, offered for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.&lt;/p&gt;
+
+&lt;p&gt;We will continue to assist you with our outstanding professional support even after your developer support ends. Developer support refers to the elevated frequency, volume, &amp;amp; speed of communication and the direct one-on-one developer access needed during the critical time of your migration to Vanilla or the start of your new community.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Emails</title>
+      <link>//docs.vanillaforums.com/help/emails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/emails/</guid>
       <description>
 
 &lt;h2 id=&#34;email-appearance&#34;&gt;Email Appearance&lt;/h2&gt;
@@ -629,80 +645,6 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
 &lt;li&gt;Button Text Color: The text color of the button. Note that depending on its content, an email may not contain a button.&lt;/li&gt;
 &lt;li&gt;Button Background Color: The background color of the button. Note that depending on its content, an email may not contain a button.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Embedded</title>
-      <link>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</guid>
-      <description>
-
-&lt;h2 id=&#34;embedding-with-seamless-jsconnect&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;
-
-&lt;p&gt;&lt;a title=&#34;jsConnect Technical Documentation Part 1: Site-Wide SSO&#34; href=&#34;http://blog.vanillaforums.com/implementing-jsconnect/jsconnect-technical-documentation/&#34;&gt;Part 1&lt;/a&gt; of this documentation told you how to set up jsConnect SSO for site-wide SSO. However, if you have Vanilla embedded in a page you&amp;rsquo;ll notice that the SSO doesn&amp;rsquo;t automatically sign you in even if users are signed in to the containing page. In order to make the sign in seamless you need to add some SSO information to your embed code.&lt;/p&gt;
-
-&lt;p&gt;First, we&amp;rsquo;ll address another important issue: Mobile Safari. &lt;strong&gt;Attempting embedded SSO across two domains will not work in this browser (and therefore, on all Apple devices)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;To solve this, your forum must be hosted on a subdomain of your main site. For example, if your site is url.com, you could put your forum on forum.url.com, and then embed it from there. This sidesteps Mobile Safari&amp;rsquo;s issue, and potentially increases your search engine value as well. Our clients can change their forum to a subdomain of their site by going to &amp;ldquo;Customize Domain&amp;rdquo; in their Dashboard and following the instructions there.&lt;/p&gt;
-
-&lt;p&gt;Now, on to revising your embed code with some additional SSO information.&lt;/p&gt;
-
-&lt;h2 id=&#34;vanilla-embed-code&#34;&gt;Vanilla Embed Code&lt;/h2&gt;
-
-&lt;p&gt;Consider the embed code for Vanilla comments:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;amp;gt;
-
-/*** Required Settings: Edit BEFORE pasting into your web page ***/
-
-var vanilla_forum_url = &#39;http://your.url.com/&#39;; // The full http url &amp;amp;amp; path to your vanilla forum
-var vanilla_identifier = &#39;your-content-identifier&#39;; // Your unique identifier for the content being commented on
-&amp;lt;strong&amp;gt;var vanilla_sso = &#39;SSO STRING&#39;; // Your SSO string.&amp;lt;/strong&amp;gt;
-
-/*** DON&#39;T EDIT BELOW THIS LINE ***/
-
-(function() {
-var vanilla = document.createElement(&#39;script&#39;);
-vanilla.type = &#39;text/javascript&#39;;
-var timestamp = new Date().getTime();
-vanilla.src = vanilla_forum_url + &#39;/js/embed.js&#39;;
-
-(document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(vanilla);
-})();
-
-&amp;amp;lt;/script&amp;amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you declare &lt;strong&gt;vanilla_sso&lt;/strong&gt; and give it the proper value then Vanilla will be able to sign in your user. Here is what you need to do to generate your SSO string:
-&lt;ol&gt;
-    &lt;li&gt;Start with the signed in user. This has the same fields as the user from the &lt;a title=&#34;jsConnect Technical Documentation Part 1: Site-Wide SSO&#34; href=&#34;http://blog.vanillaforums.com/implementing-jsconnect/jsconnect-technical-documentation/&#34;&gt;site-wide sso&lt;/a&gt;.&lt;/li&gt;
-    &lt;li&gt;Add your &lt;strong&gt;client_id&lt;/strong&gt; to the user so Vanilla will know how to identify you.&lt;/li&gt;
-    &lt;li&gt;JSON encode the user.&lt;/li&gt;
-    &lt;li&gt;Base64 encode the user in UTF-8. This is your signature string.&lt;/li&gt;
-    &lt;li&gt;Sign the signature string with your signature and the current timestamp using HMAC SHA1. Confirm the signature string is hex encoded.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;signature = hmacsha1(signature_string + &amp;quot; &amp;quot; + timestamp, secret);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/li&gt;
-    &lt;li&gt;Build your final sso string:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;vanilla_sso = signature_string + &amp;quot; &amp;quot; + signature + &amp;quot; &amp;quot; + timestamp + &amp;quot; hmacsha1&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-That&amp;rsquo;s it! The value of vanilla_sso from above is what you put in your embed code. Since this needs to be dynamically generated by your site you can&amp;rsquo;t use SSO on a static page.
-&lt;h2&gt;Gotchas&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;The above example is for blog comments. For a full forum embed, use the code provided under &amp;ldquo;Forum Embed&amp;rdquo; in the Dashboard.&lt;/li&gt;
-    &lt;li&gt;&lt;span style=&#34;line-height: 12.986111640930176px;&#34;&gt;Even though your signature string is base64 encoded make sure the actual signature is hex encoded. The correct string will be 40 characters consisting of the numbers 0-9 and a-f.&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;The timestamp is a unix timestamp. That means it will be an integer and represents the number of seconds since 1 January 1970. Most languages have a way of getting this timestamp.&lt;/li&gt;
-&lt;/ul&gt;
-&amp;nbsp;&lt;/p&gt;
 </description>
     </item>
     

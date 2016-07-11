@@ -9,10 +9,10 @@
     
     <item>
       <title>Embedded</title>
-      <link>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/embed/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-with-seamless-jsconnect&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;
@@ -83,10 +83,10 @@ That&amp;rsquo;s it! The value of vanilla_sso from above is what you put in your
     
     <item>
       <title>OAuth</title>
-      <link>//docs.vanillaforums.com/help/features/sso/oauth/</link>
+      <link>//docs.vanillaforums.com/help/sso/oauth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/oauth/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/oauth/</guid>
       <description>
 
 &lt;h2 id=&#34;sso-with-oauth-overview&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
@@ -108,10 +108,10 @@ That&amp;rsquo;s it! The value of vanilla_sso from above is what you put in your
     
     <item>
       <title>SAML</title>
-      <link>//docs.vanillaforums.com/help/features/sso/saml/</link>
+      <link>//docs.vanillaforums.com/help/sso/saml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/saml/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/saml/</guid>
       <description>
 
 &lt;h2 id=&#34;sso-with-saml-overview&#34;&gt;SSO with SAML: Overview&lt;/h2&gt;
@@ -142,10 +142,10 @@ Photo =&amp;gt; photo
     
     <item>
       <title>Seamless Setup</title>
-      <link>//docs.vanillaforums.com/help/features/sso/jsconnect/seamless/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/jsconnect/seamless/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</guid>
       <description>
 
 &lt;h2 id=&#34;seamless-sso-with-jsconnect&#34;&gt;Seamless SSO with jsConnect&lt;/h2&gt;
@@ -328,10 +328,10 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
     
     <item>
       <title>Single Sign-On (SSO)</title>
-      <link>//docs.vanillaforums.com/help/features/sso/</link>
+      <link>//docs.vanillaforums.com/help/sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/</guid>
       <description>
 
 &lt;h2 id=&#34;single-sign-on-overview&#34;&gt;Single Sign-On Overview&lt;/h2&gt;
@@ -358,10 +358,10 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
     
     <item>
       <title>Technical Overview</title>
-      <link>//docs.vanillaforums.com/help/features/sso/jsconnect/overview/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/jsconnect/overview/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/overview/</guid>
       <description>
 
 &lt;h2 id=&#34;jsconnect&#34;&gt;jsConnect&lt;/h2&gt;
@@ -484,10 +484,10 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
     
     <item>
       <title>jsConnect</title>
-      <link>//docs.vanillaforums.com/help/features/sso/jsconnect/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/jsconnect/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/</guid>
       <description>
 
 &lt;h2 id=&#34;jsconnect-concepts-overview&#34;&gt;jsConnect Concepts Overview&lt;/h2&gt;

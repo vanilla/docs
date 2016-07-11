@@ -6,7 +6,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/accessibility/</loc>
+    <loc>//docs.vanillaforums.com/help/accessibility/</loc>
   </url>
   
   <url>
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/embedding/advanced/</loc>
+    <loc>//docs.vanillaforums.com/help/embedding/advanced/</loc>
   </url>
   
   <url>
@@ -62,7 +62,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/categories/</loc>
+    <loc>//docs.vanillaforums.com/help/categories/</loc>
   </url>
   
   <url>
@@ -118,7 +118,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/roles-permissions/default-role-types/</loc>
+    <loc>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/cloud/developer-support/</loc>
   </url>
   
   <url>
@@ -134,19 +138,19 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/emails/</loc>
+    <loc>//docs.vanillaforums.com/help/emails/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/jsconnect/embed/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/embedding/</loc>
+    <loc>//docs.vanillaforums.com/help/embedding/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/emoji/</loc>
+    <loc>//docs.vanillaforums.com/help/posting/emoji/</loc>
   </url>
   
   <url>
@@ -171,10 +175,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/theming/hooks/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/features/</loc>
   </url>
   
   <url>
@@ -238,15 +238,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/integration/</loc>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/framework/i18n/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/releases/january-2016/</loc>
+    <loc>//docs.vanillaforums.com/help/releases/january-2016/</loc>
   </url>
   
   <url>
@@ -266,11 +262,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/releases/march-2016/</loc>
+    <loc>//docs.vanillaforums.com/help/releases/march-2016/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/releases/may-2016/</loc>
+    <loc>//docs.vanillaforums.com/help/releases/may-2016/</loc>
   </url>
   
   <url>
@@ -290,19 +286,19 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/multisite/</loc>
+    <loc>//docs.vanillaforums.com/help/multisite/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/multisite/sync/</loc>
+    <loc>//docs.vanillaforums.com/help/multisite/sync/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/notifications/</loc>
+    <loc>//docs.vanillaforums.com/help/notifications/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/oauth/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/oauth/</loc>
   </url>
   
   <url>
@@ -326,6 +322,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/posting/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/contributing/pull-requests/</loc>
   </url>
   
@@ -346,7 +346,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/releases/</loc>
+    <loc>//docs.vanillaforums.com/help/releases/</loc>
   </url>
   
   <url>
@@ -362,7 +362,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/roles-permissions/</loc>
+    <loc>//docs.vanillaforums.com/help/roles-permissions/</loc>
   </url>
   
   <url>
@@ -370,11 +370,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/saml/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/saml/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/seamless/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</loc>
   </url>
   
   <url>
@@ -382,7 +382,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/posting/smart-embed/</loc>
   </url>
   
   <url>
@@ -422,7 +426,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/overview/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/jsconnect/overview/</loc>
   </url>
   
   <url>
@@ -442,7 +446,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/comments/</loc>
+    <loc>//docs.vanillaforums.com/help/comments/</loc>
   </url>
   
   <url>
@@ -454,7 +458,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/wordpress/using-comments/</loc>
+    <loc>//docs.vanillaforums.com/help/wordpress/using-comments/</loc>
   </url>
   
   <url>
@@ -502,15 +506,15 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/wordpress/wishlist/</loc>
+    <loc>//docs.vanillaforums.com/help/wordpress/wishlist/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/wordpress/</loc>
+    <loc>//docs.vanillaforums.com/help/wordpress/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/features/sso/jsconnect/</loc>
+    <loc>//docs.vanillaforums.com/help/sso/jsconnect/</loc>
   </url>
   
   <url>

@@ -9,10 +9,10 @@
     
     <item>
       <title>Accessibility</title>
-      <link>//docs.vanillaforums.com/help/features/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -274,10 +274,10 @@
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/help/features/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -451,10 +451,10 @@
     
     <item>
       <title>Categories</title>
-      <link>//docs.vanillaforums.com/help/features/categories/</link>
+      <link>//docs.vanillaforums.com/help/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/categories/</guid>
+      <guid>//docs.vanillaforums.com/help/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
@@ -567,10 +567,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Default Role Types</title>
-      <link>//docs.vanillaforums.com/help/features/roles-permissions/default-role-types/</link>
+      <link>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/roles-permissions/default-role-types/</guid>
+      <guid>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</guid>
       <description>
 
 &lt;h2 id=&#34;default-role-types&#34;&gt;Default Role Types&lt;/h2&gt;
@@ -579,10 +579,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Emails</title>
-      <link>//docs.vanillaforums.com/help/features/emails/</link>
+      <link>//docs.vanillaforums.com/help/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/emails/</guid>
+      <guid>//docs.vanillaforums.com/help/emails/</guid>
       <description>
 
 &lt;h2 id=&#34;email-appearance&#34;&gt;Email Appearance&lt;/h2&gt;
@@ -612,10 +612,10 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
     
     <item>
       <title>Embedded</title>
-      <link>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/sso/jsconnect/embed/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/embed/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-with-seamless-jsconnect&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;
@@ -686,10 +686,10 @@ That&amp;rsquo;s it! The value of vanilla_sso from above is what you put in your
     
     <item>
       <title>Embedding</title>
-      <link>//docs.vanillaforums.com/help/features/embedding/</link>
+      <link>//docs.vanillaforums.com/help/embedding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/features/embedding/</guid>
+      <guid>//docs.vanillaforums.com/help/embedding/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
