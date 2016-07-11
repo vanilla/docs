@@ -30,12 +30,54 @@
     </item>
     
     <item>
+      <title>Code Repository</title>
+      <link>//docs.vanillaforums.com/help/cloud/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/cloud/repository/</guid>
+      <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
+&lt;h2 id=&#34;shared-private-repository&#34;&gt;Shared Private Repository&lt;/h2&gt;
+
+&lt;p&gt;Our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; come with the option to open a private code repository that you share with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.&lt;/p&gt;
+
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;Your customer success manager will provide you with this repository. Please allow the Vanilla team to organize its structure appropriately and name files.&lt;/p&gt;
+
+&lt;p&gt;We use &lt;code&gt;master&lt;/code&gt; branch for production deploys. Anything on that branch should be ready for immediate release. The &lt;code&gt;stage&lt;/code&gt; branch can be periodically deployed to your staging site for testing. Prior to deployments, we merge &lt;code&gt;stage&lt;/code&gt; into &lt;code&gt;master&lt;/code&gt;. New features can go on their own &lt;code&gt;feature/x&lt;/code&gt; branches or on a &lt;code&gt;develop&lt;/code&gt; branch for integration testing prior to staging.&lt;/p&gt;
+
+&lt;h3 id=&#34;accounts&#34;&gt;Accounts&lt;/h3&gt;
+
+&lt;p&gt;You will need a GitHub account for each developer that requires access. We strongly suggest limiting the number of developers on your team with direct access to the repository for workflow and communication clarity.&lt;/p&gt;
+
+&lt;h3 id=&#34;local-testing&#34;&gt;Local testing&lt;/h3&gt;
+
+&lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Developer Support</title>
       <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;developer-support&#34;&gt;Developer Support&lt;/h2&gt;
 
@@ -98,6 +140,12 @@
       
       <guid>//docs.vanillaforums.com/help/cloud/logging/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;advanced-logging&#34;&gt;Advanced logging&lt;/h2&gt;
 
@@ -281,6 +329,12 @@
       
       <guid>//docs.vanillaforums.com/help/cloud/migration/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
@@ -487,42 +541,18 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     </item>
     
     <item>
-      <title>Repository</title>
-      <link>//docs.vanillaforums.com/help/cloud/repository/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/cloud/repository/</guid>
-      <description>
-
-&lt;h2 id=&#34;private-repository&#34;&gt;Private Repository&lt;/h2&gt;
-
-&lt;p&gt;Our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.&lt;/p&gt;
-
-&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
-
-&lt;p&gt;Your customer success manager will provide you with this repository. Please allow the Vanilla team to organize its structure appropriately and name files.&lt;/p&gt;
-
-&lt;p&gt;We use &lt;code&gt;master&lt;/code&gt; branch for production deploys. Anything on that branch should be ready for immediate release. The &lt;code&gt;stage&lt;/code&gt; branch can be periodically deployed to your staging site for testing. Prior to deployments, we merge &lt;code&gt;stage&lt;/code&gt; into &lt;code&gt;master&lt;/code&gt;. New features can go on their own &lt;code&gt;feature/x&lt;/code&gt; branches or on a &lt;code&gt;develop&lt;/code&gt; branch for integration testing prior to staging.&lt;/p&gt;
-
-&lt;h3 id=&#34;accounts&#34;&gt;Accounts&lt;/h3&gt;
-
-&lt;p&gt;You will need a GitHub account for each developer that requires access. We strongly suggest limiting the number of developers on your team with direct access to the repository for workflow and communication clarity.&lt;/p&gt;
-
-&lt;h3 id=&#34;local-testing&#34;&gt;Local testing&lt;/h3&gt;
-
-&lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Staging Site</title>
       <link>//docs.vanillaforums.com/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/cloud/staging/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;staging-site-overview&#34;&gt;Staging Site Overview&lt;/h2&gt;
 
@@ -556,6 +586,12 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
       <guid>//docs.vanillaforums.com/help/cloud/support/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;cloud-support&#34;&gt;Cloud Support&lt;/h2&gt;
 
 &lt;p&gt;We provide professional support &lt;strong&gt;exclusively&lt;/strong&gt; for our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;cloud clients&lt;/a&gt;. Because of this, we require the forum owner to request support, or to specifically authorize other users to receive support.&lt;/p&gt;
@@ -583,6 +619,12 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
       
       <guid>//docs.vanillaforums.com/help/cloud/theming/</guid>
       <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
 
 &lt;h2 id=&#34;theming-services-overview&#34;&gt;Theming Services Overview&lt;/h2&gt;
 

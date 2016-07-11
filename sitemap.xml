@@ -74,6 +74,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/cloud/repository/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/contributing/conduct/</loc>
   </url>
   
@@ -351,10 +355,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/addons/reporting/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/cloud/repository/</loc>
   </url>
   
   <url>

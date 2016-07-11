@@ -15,6 +15,12 @@
       <guid>//docs.vanillaforums.com/help/cloud/staging/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;staging-site-overview&#34;&gt;Staging Site Overview&lt;/h2&gt;
 
 &lt;p&gt;For higher &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt;, we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.&lt;/p&gt;

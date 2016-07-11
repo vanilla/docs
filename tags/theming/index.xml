@@ -815,6 +815,12 @@ if (!function_exists(&#39;filterCountString&#39;)) {
       <guid>//docs.vanillaforums.com/help/cloud/theming/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;theming-services-overview&#34;&gt;Theming Services Overview&lt;/h2&gt;
 
 &lt;p&gt;Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;higher plan levels&lt;/a&gt;.&lt;/p&gt;

@@ -15,6 +15,12 @@
       <guid>//docs.vanillaforums.com/help/cloud/migration/</guid>
       <description>
 
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;Vanilla offers full, professional migration services from nearly any platform imaginable. If you provide the data, we&amp;rsquo;ll figure out how to make it work in Vanilla.&lt;/p&gt;
