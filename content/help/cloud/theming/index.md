@@ -11,6 +11,9 @@ menu:
 aliases:
 - /cloud/theming
 ---
+
+{{% cloudfeature %}}
+
 ## Theming Services Overview
 
 Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on [higher plan levels](https://vanillaforums.com/plans).

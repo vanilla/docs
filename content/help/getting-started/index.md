@@ -22,13 +22,13 @@ daunting experience with numerous choices and decisions to make. Having particip
 hundreds of community launches, we've developed a few tactics that increase the odds of
 success and remove some of the decision making.
 
-![Getting Started](/img/help/getting-started/homepage.png)
-
 ### 1 - Choose a Homepage View
 
 In your dashboard, under `Appearance > Homepage` you'll find a choice of 3 different landing pages. 
 This is what people will see when they visit the main URL of your community. For a brand new
 community we recommend the "Discussions" view.
+
+![Choose a homepage](/img/help/getting-started/homepage.png)
 
 A list of recent discussions across all categories makes it easier for new members and 
 first time visitors to see what’s trending in the community and increase the odds that they will 

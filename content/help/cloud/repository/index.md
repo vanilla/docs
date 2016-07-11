@@ -1,5 +1,5 @@
 ---
-title: Repository
+title: Code Repository
 tags:
 - Cloud
 - Repository
@@ -11,9 +11,12 @@ menu:
 aliases:
 - /cloud/repository
 ---
-## Private Repository
 
-Our [VIP plans](https://vanillaforums.com/plans) come with the option to open a private, shared code repository with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.
+{{% cloudfeature %}}
+
+## Shared Private Repository
+
+Our [VIP plans](https://vanillaforums.com/plans) come with the option to open a private code repository that you share with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.
 
 ### Setup
 

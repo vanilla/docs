@@ -13,6 +13,8 @@ aliases:
 - /cloud/integration
 ---
 
+{{% cloudfeature %}}
+
 ## Developer Support
 
 [VIP plans](https://vanillaforums.com/plans) include developer support, offered for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons & settings.

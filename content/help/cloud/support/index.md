@@ -10,6 +10,9 @@ menu:
 aliases:
 - /cloud/support
 ---
+
+{{% cloudfeature %}}
+
 ## Cloud Support
 
 We provide professional support **exclusively** for our [cloud clients](https://vanillaforums.com/plans). Because of this, we require the forum owner to request support, or to specifically authorize other users to receive support.
