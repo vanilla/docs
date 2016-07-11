@@ -6,10 +6,11 @@ category: help
 menu:
   help:
     identifier: cloud
-    weight: 30
+    weight: 2000
 aliases:
 - /cloud
 ---
+
 {{% cloudfeature %}}
 
 ## Cloud Services Overview

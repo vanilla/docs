@@ -1,5 +1,5 @@
 ---
-title: Migration Services
+title: Migration
 tags:
 - Cloud
 - Migration

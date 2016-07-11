@@ -1,26 +1,46 @@
 .docs-platform {
-    background: $panelSlate;
-    border-top: 1px solid $borderDarken;
-    padding: 30px 0px;
+    background: white;
     
     .docs-platform-choice {
-        padding-right: 150px;
+        margin: 20px 0px 40px 0px;
+        background: white;
+        box-shadow: 0px 1px 2px 0px rgba($borderDark, 0.4);
+        padding: 30px;
         color: $lighterText;
         
-        h3 {
-            margin: 0px 0px 10px 0px;
-            font-size: 26px;
-            font-weight: lighter;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        img {
+            margin-right: 30px;
         }
         
-        p {
-            font-size: 12px;
-            line-height: 18px;
+        .choice-details {
+            h3 {
+                margin: 0px 0px 10px 0px;
+                font-size: 26px;
+                font-weight: lighter;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                max-width: 420px;
+            }
         }
         
         a {
+            display: inline-block;
             color: $vanillaBlue;
-            border-bottom: 1px dotted $vanillaBlue;
+            margin-left: auto;
+            border-color: $vanillaBlue;
+            padding: 10px 30px;
+            
+            &:hover {
+                border-color: $vanillaPink;
+                color: $vanillaPink;
+            }
         }
     }
 }

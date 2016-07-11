@@ -7,6 +7,7 @@ menu:
   help:
     parent: cloud
     identifier: cloud-leaving
+    weight: 1000
 aliases:
 - /cloud/leaving
 ---
