@@ -72,10 +72,10 @@
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>May 2016 Release</h1>
+    <h1>July 2016 Release</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/help/releases/may-2016.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/releases/july-2016.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -186,8 +186,16 @@
 
 	    
 	    
-                <li class="active">
+                <li class="">
                     <a href="//docs.vanillaforums.com/help/releases/may-2016/">May 2016 Release </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="//docs.vanillaforums.com/help/releases/july-2016/">July 2016 Release </a>
                 </li>
                 
                 
@@ -195,14 +203,6 @@
                     
                
                     
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/help/releases/july-2016/">July 2016 Release </a>
-                </li>
-                
                 
 
 	    </ul>
@@ -277,55 +277,81 @@
 <h3 id="changes">Changes:</h3>
 
 <ul>
-<li>Upgrade to reCaptcha 2 (&ldquo;NoCaptcha&rdquo;).</li>
-<li>Make &ldquo;NBBC&rdquo; our new BBCode parsing library by default (no more plugin).</li>
-<li>Add ability for SAML SSO to not be the default login method.</li>
-<li>Allow moving a discussion between subcommunities.</li>
-<li>Add support for switching subcommunities.</li>
-<li>Improve category scaling.</li>
-<li>Make activities self-prune after 2 months to improve performance.</li>
-<li>Always redirect to the first page after saving a discussion.</li>
-<li>Add analytics tracking for Q&amp;A&rsquo;s accepted answers (coming soon to analytics).</li>
-<li>Allow censoring content in conversation message notifications.</li>
-<li>Allow censoring poll votes in comments.</li>
-<li>Fix a number of edge cases where certain actions could block other actions without a page refresh.</li>
-<li>Fix condition where category announcements disappeared from recent discussions page.</li>
-<li>Add caching for the default authentication provider.</li>
-<li>Improve security in signin redirects.</li>
-<li>Improve use of &lsquo;Alt&rsquo; CSS class, which will be removed eventually (now redundant with current CSS specs).</li>
-<li>Add option to configure a redirect after logout on Auth0 plugin.</li>
-<li>Update Triple-A and Bootstrap 3 themes.</li>
-<li>Fix issue where Vimeo and Instagram embeds overflow out of the Best Of Tiles.</li>
-<li>Fix where SplitMerge addon may be unable to save split discussion with &ldquo;Html&rdquo; format.</li>
-<li>Fix the love bug (various problems with &lt; 3 in user-generated content).</li>
-<li>Prevent unneeded recurring updates in dashboard&rsquo;s database updater.</li>
-<li>Fix Gravatar&rsquo;s use of system default avatar.</li>
-<li>Add optional rating parameter to Gravatar.</li>
-<li>Fix GitHub signin and API permission issues.</li>
-<li>Fix new discussion button showing in subcommunity when user has no permission.</li>
-<li>Allow the Photo field to be set in /profile/edit.</li>
-<li>Only use CommentID for spam check if available.</li>
-<li>Fix incorrect permission being checked in some category management actions.</li>
-<li>Groups: Simplify &amp; fix event timezone handling.</li>
-<li>Make initial spoiler text the same colour as its background.</li>
-<li>Fix RSS title encoding.</li>
-<li>Add the ability to capture a user&rsquo;s time zone.</li>
-<li>Fix LinkedIn &ldquo;profile connect&rdquo; feature.</li>
-<li>Move Recaptcha into a plugin</li>
-<li>Add support for Instagram embeds in Mobile 2014.</li>
-<li>Do more image optimizations.</li>
-<li>Fix Safari issue where back button wouldn&rsquo;t refresh the page.</li>
-<li>Fixes issue where people can quote a post and see uncensored content.</li>
-<li>Remove gender from user-facing elements like registration.</li>
-<li>Prevent &ldquo;Messages&rdquo; from being displayed when you do not have view permission.</li>
-<li>QnA: Return the correct number of questions for a subcommunity.</li>
-<li>Switch YouTube links to https.</li>
-<li>Fix mention issues including using an &lsquo;@&rsquo; in the middle of two words.</li>
-<li>Fix PNG compression issues in file uploads.</li>
-<li>Fix some minor issues that could make spoilers malfunction.</li>
-<li>Add a safety feature to avoid too-big database changes all at once.</li>
-<li>Allow any user with moderate permission to add discussions and events in a group.</li>
-<li>Fix aggressive span stripping in the HTML purifier.</li>
+<li><p>New plugin: Role Tracker (aggregates discussions with posts by users in particular roles).</p></li>
+
+<li><p>New plugin: Welcome Post (invites newly registered to start an intro discussion immediately).</p></li>
+
+<li><p>Upgrade to Smarty 3 templating engine for custom themes. It&rsquo;s a little bit stricter, faster, and more secure than Smarty 2 was.</p></li>
+
+<li><p>Further improve scaling for large numbers of categories. Faster page loads!</p></li>
+
+<li><p>Add option to exclude moderators and/or admins from leaderboards.</p></li>
+
+<li><p>Move profile thumbnail editing to same page as photo uploading.</p></li>
+
+<li><p>OpenID: Prevent bad rendering when URL is invalid.</p></li>
+
+<li><p>Don&rsquo;t show Google+ login when enabled but not configured.</p></li>
+
+<li><p>Add support for inline (async) forms for future Vanilla use.</p></li>
+
+<li><p>Keep attachments when a discussion becomes a comment via Split/Merge.</p></li>
+
+<li><p>Automatically update CSRF token with async requests. This is so we can invalidate them more frequently in the future, improving our security.</p></li>
+
+<li><p>Add the ideation page as a target for messages.</p></li>
+
+<li><p>Add the categories page as a target for messages.</p></li>
+
+<li><p>Set a limit on the page number in Best Of (it helps performance to not let pages go infinitely high).</p></li>
+
+<li><p>Fix edge cases where notifications preferences would not display completely.</p></li>
+
+<li><p>Tighten security of Target parameter during sign in to disallow bad redirects.</p></li>
+
+<li><p>Refresh the page after announcing a discussion.</p></li>
+
+<li><p>Markdown: Allow starting lists without a newline.</p></li>
+
+<li><p>Change how IP addresses are logged and allow IPv6 (no more 0.0.0.2 placeholder addresses appearing).</p></li>
+
+<li><p>Remove the invite feature from the Getting Started page.</p></li>
+
+<li><p>Remove site logo from Deflector theme footer.</p></li>
+
+<li><p>Fix Cyrillic character recognition in CivilTongueEx, allowing</p></li>
+
+<li><p>Fix Ideation crashing /discussions/promoted.</p></li>
+
+<li><p>Fix default translation of &ldquo;Post Discussion&rdquo;.</p></li>
+
+<li><p>QnA: Fix &ldquo;unanswered&rdquo; status for discussions converted to questions by an admin.</p></li>
+
+<li><p>Hub: Add synchronize for subcommunities and default locale.</p></li>
+
+<li><p>Fix emoji menu not being properly dismissed.</p></li>
+
+<li><p>Hide &ldquo;Dismiss&rdquo; option on announcements from guests because it didn’t actually do anything.</p></li>
+
+<li><p>Add CSRF prevention and remove redirect from Mark All Viewed option.</p></li>
+
+<li><p>Encode mail subject properly (UTF-8).</p></li>
+
+<li><p>Fix broken reaction pagination on profile pages.</p></li>
+
+<li><p>Fix emoji and mention from rendering inside WYSIWYG code blocks.</p></li>
+
+<li><p>Add $Homepage Smarty variable that is true/false depending on if you are on the homepage.</p></li>
+
+<li><p>Fix double encoding Open Graph title tag. This would have shown up as extra ampersands in Facebook shares and the like.</p></li>
+
+<li><p>Hub: Do not sync category permissions for an overridden role.</p></li>
+
+<li><p>Hub: Add optional landing page.</p></li>
+
+<li><p>Switch to separate library for password hashing. We&rsquo;re compartmentalizing some features like this to make maintenance easier.</p></li>
+
+<li><p>We completed some very large projects to carefully rework several parts of our framework to get ready for API v2, but there&rsquo;s no outward effect of this for you.</p></li>
 </ul>
 
 
