@@ -342,7 +342,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;h2 id=&#34;solutions-we-offer&#34;&gt;Solutions We Offer&lt;/h2&gt;
 
-&lt;p&gt;Vanilla offers three flavors of single sign-on:  &lt;a href=&#34;//docs.vanillaforums.com/help/features/sso/jsconnect&#34;&gt;jsConnect&lt;/a&gt; (our in-house solution), &lt;a href=&#34;//docs.vanillaforums.com/help/features/sso/saml&#34;&gt;SAML&lt;/a&gt;, and &lt;a href=&#34;//docs.vanillaforums.com/help/features/sso/oauth&#34;&gt;OAuth&lt;/a&gt;. SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.&lt;/p&gt;
+&lt;p&gt;Vanilla offers three flavors of single sign-on:  &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect&#34;&gt;jsConnect&lt;/a&gt; (our in-house solution), &lt;a href=&#34;//docs.vanillaforums.com/help/sso/saml&#34;&gt;SAML&lt;/a&gt;, and &lt;a href=&#34;//docs.vanillaforums.com/help/sso/oauth&#34;&gt;OAuth&lt;/a&gt;. SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.&lt;/p&gt;
 
 &lt;h2 id=&#34;why-jsconnect&#34;&gt;Why jsConnect?&lt;/h2&gt;
 
@@ -350,9 +350,9 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;If you have a website that stores your user&amp;rsquo;s identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we&amp;rsquo;ve abstracted most of the work to our side of the connection, and provide sample code for making your side.&lt;/p&gt;
 
-&lt;p&gt;However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our &lt;a href=&#34;//docs.vanillaforums.com/help/features/sso/jsconnect/overview&#34;&gt;technical documentation&lt;/a&gt;. The only exception is &lt;strong&gt;WordPress&lt;/strong&gt; users, for which we&amp;rsquo;ve developed a ready-to-go &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;SSO plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect/overview&#34;&gt;technical documentation&lt;/a&gt;. The only exception is &lt;strong&gt;WordPress&lt;/strong&gt; users, for which we&amp;rsquo;ve developed a ready-to-go &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;SSO plugin&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Ready to learn more about jsConnect? Our &lt;a href=&#34;//docs.vanillaforums.com/help/features/sso/jsconnect&#34;&gt;concepts overview&lt;/a&gt; is where to head next.&lt;/p&gt;
+&lt;p&gt;Ready to learn more about jsConnect? Our &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect&#34;&gt;concepts overview&lt;/a&gt; is where to head next.&lt;/p&gt;
 </description>
     </item>
     
