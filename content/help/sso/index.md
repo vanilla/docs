@@ -20,7 +20,7 @@ In broad terms, an SSO solution defines how two systems securely communicate the
 
 ## Solutions We Offer
 
-Vanilla offers three flavors of single sign-on:  [jsConnect](/help/features/sso/jsconnect) (our in-house solution), [SAML](/help/features/sso/saml), and [OAuth](/help/features/sso/oauth). SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.
+Vanilla offers three flavors of single sign-on:  [jsConnect](/help/sso/jsconnect) (our in-house solution), [SAML](/help/sso/saml), and [OAuth](/help/sso/oauth). SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.
 
 ## Why jsConnect?
 
@@ -28,6 +28,6 @@ SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of
 
 If you have a website that stores your user's identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we've abstracted most of the work to our side of the connection, and provide sample code for making your side.
 
-However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our [technical documentation](/help/features/sso/jsconnect/overview). The only exception is **WordPress** users, for which we've developed a ready-to-go [SSO plugin](https://wordpress.org/plugins/vanilla-forums/).
+However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our [technical documentation](/help/sso/jsconnect/overview). The only exception is **WordPress** users, for which we've developed a ready-to-go [SSO plugin](https://wordpress.org/plugins/vanilla-forums/).
 
-Ready to learn more about jsConnect? Our [concepts overview](/help/features/sso/jsconnect) is where to head next.
+Ready to learn more about jsConnect? Our [concepts overview](/help/sso/jsconnect) is where to head next.
