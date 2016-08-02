@@ -20,7 +20,7 @@ In broad terms, an SSO solution defines how two systems securely communicate the
 
 ## Solutions We Offer
 
-Vanilla offers three flavors of single sign-on:  [jsConnect](/help/features/sso/jsconnect) (our in-house solution), [SAML](/help/features/sso/saml), and [OAuth](/help/features/sso/oauth). SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.
+Vanilla offers three flavors of single sign-on:  [jsConnect](/help/sso/jsconnect) (our in-house solution), [SAML](/help/features/sso/saml), and [OAuth](/help/features/sso/oauth). SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.
 
 ## Why jsConnect?
 
