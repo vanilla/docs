@@ -33,7 +33,7 @@ Here's an example of a themehooks file that sets some config variables, adds loc
  * Sets config variables on enabling MyThemeName, adds locale data to the view,
  * and adds a respond button to the discussion page.
  */
-class MyThemeNameThemeHooks extends Gdn_Plugin() {
+class MyThemeNameThemeHooks extends Gdn_Plugin {
 
     /**
      * Sets some config settings for a modern layout with top-level
