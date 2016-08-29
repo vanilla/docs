@@ -34,7 +34,7 @@ We also have an SSO module for automatically signing in to an embedded forum. If
 </ul>
 <h2>Concepts</h2>
 <h3><strong>JSONP</strong></h3>
-JSONP is a technology that browsers can use to get around the same-origin limitation of bowsers and make cross-domain requests. Vanilla uses jsonp to transmit some of its SSO information. When you program a jsonp page it must follow a specific format. To best illustrate this lets use an example.
+JSONP is a technology that browsers can use to get around the same-origin limitation of browsers and make cross-domain requests. Vanilla uses jsonp to transmit some of its SSO information. When you program a jsonp page it must follow a specific format. To best illustrate this lets use an example.
 
 Let's say I want to request a jsonp response from the <strong>/getname.json</strong> page. What I'd do is make a request to that page with a querystring parameter called <strong>callback</strong> like this: <strong>/getname.json?callback=displayname.</strong>
 
