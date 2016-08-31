@@ -74,7 +74,7 @@ Vanilla also has the ability to be embedded in an html page either as an entire 
 
 When setting up a jsConnect connection in full-site mode, you have the option to specify it as "default". Doing this attaches it to the special `/sso` endpoint in Vanilla. When a user clicks "Forum" in your website's navigation, instead of linking to the forum homepage, instead link them to the `/sso` page. This will auto-fire the asynchronous call back to your website rather than waiting for the user to click "sign in", then drops them on the homepage as normal.
 
-For more information, read our [technical overview](/help/features/sso/jsconnect/overview).
+For more information, read our [technical overview](/help/sso/jsconnect/overview).
 
 ## WordPress plugin
 
