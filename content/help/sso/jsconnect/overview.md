@@ -42,7 +42,7 @@ These libraries are open source and maintained on Github:
 
 All of these libraries have one file with all of the library code you'll need and one file that gives an example usage. They also have a readme that tells you which file is which. _Please note that these libraries don't support [embedded SSO](/help/features/sso/jsconnect/embed)._
 
-If your site is programmed in a language that doesn't have a client library then we provide documentation on our jsConnect protocol. Have a look at the [jsConnect technical implementation](/help/features/sso/jsconnect/seamless).
+If your site is programmed in a language that doesn't have a client library then we provide documentation on our jsConnect protocol. Have a look at the [jsConnect technical implementation](/help/sso/jsconnect/seamless).
 
 ## How jsConnect maps users
 
