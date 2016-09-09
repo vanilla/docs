@@ -136,7 +136,7 @@ Lastly, [find a plugin](http://vanillaforums.org/addon) that does something simi
 After your `$PluginInfo` array, you'll need a class. Always extend `Gdn_Plugin`, and name the class using the slug name of your plugin followed by the word 'Plugin' to avoid namespace conflicts.
 
 ```
-class FancyPlugin extends Gdn_Plugin() {
+class FancyPlugin extends Gdn_Plugin {
 
 }
 ```
