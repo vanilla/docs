@@ -9,8 +9,9 @@ menu:
   developer:
     parent: theming-smarty-functions
 aliases:
-- /theming/smarty/functions/omepage-title}
+- /theming/smarty/functions/homepage-title
 ---
+
 ## Function: `{homepage_title}`
 
 ### Usage
