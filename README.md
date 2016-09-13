@@ -19,6 +19,7 @@ The `content/api` folder is for API documentation and api-related information (s
 ### Formatting
 
 * Every doc file must end in `.md` and be formatted in Markdown.
+* DO NOT put secondary filenames, such as <document>**.html**.md
 * Use H2 (`##` in Markdown) for major sub-topics and H3 (`###`) for minor headings.
 * Document H1 tags are automatically generated, so don't add your own.
 * All images go within [`static/img`](static/img) and must be referenced absolutely (`/img/foo.png`).
@@ -32,6 +33,10 @@ The `content/api` folder is for API documentation and api-related information (s
 * Cross-reference with links liberally.
 * Break up long sentences and paragraphs.
 
+### Porting docs
+
+* If you're moving a doc from an old site to this one, use aliases. Aliases make Hugo redirect old content to the new location
+* If the content is NEW, do not supply any aliases
 
 ### Structure
 
