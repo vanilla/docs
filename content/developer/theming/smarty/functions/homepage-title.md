@@ -20,7 +20,7 @@ aliases:
 {homepage_title}
 ```
 
-Writes the site title to the page. You can change the site logo from the 'Banner' settings page in the dashboard.
+Writes the site title to the page. You can change the site title from the 'Banner' settings page in the dashboard.
 
 ## Parameters
 
