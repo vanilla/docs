@@ -72,10 +72,10 @@
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>{link}</h1>
+    <h1>{homepage_title}</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/developer/theming/smarty/functions/link.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/theming/smarty/functions/homepage-title.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -296,11 +296,16 @@
 			    
                                     
                                         
-                                        <li class="">
+                                        <li class="active">
                                             <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/">{homepage_title} </a>
                                         </li>
 
 					
+                                            
+                                            
+                                            
+                                            
+                                        
 			    
                                     
                                         
@@ -312,16 +317,11 @@
 			    
                                     
                                         
-                                        <li class="active">
+                                        <li class="">
                                             <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/link/">{link} </a>
                                         </li>
 
 					
-                                            
-                                            
-                                            
-                                            
-                                        
 			    
                                     
                                         
@@ -462,130 +462,18 @@
 
                 
 
-<h2 id="function-link">Function: <code>{link}</code></h2>
+<h2 id="function-homepage-title">Function: <code>{homepage_title}</code></h2>
 
 <h3 id="usage">Usage</h3>
 
-<pre><code>{link path=&quot;string&quot; text=&quot;string&quot; notag=boolean format=&quot;string&quot; withdomain=boolean}
+<pre><code>{homepage_title}
 </code></pre>
 
-<p>Takes a route and prepends the web root (expects <code>/controller/action/params</code> as <code>path</code>).</p>
+<p>Writes the site title to the page. You can change the site logo from the &lsquo;Banner&rsquo; settings page in the dashboard.</p>
 
 <h2 id="parameters">Parameters</h2>
 
-
-
-
-    
-    
-    
-    
-        
-        <table class="docs-parameters parameters-type-function">
-            <thead>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Type</th>
-                    
-                    <th>Default</th>
-                    
-                    <th>Description</th>
-                </tr>
-            </thead>
-        
-            <tbody>
-                
-                <tr class="docs-parameter parameter-required">
-                    <td class="parameter-name"><code>path</code></td>
-                    <td class="parameter-type"><code>
-                        
-                            string
-                        
-                    </code></td>
-                    
-                    <td class="parameter-default">
-                        
-                            none
-                        
-                    </td>
-                    
-                    <td class="parameter-description">The relative path for the url. There are some special paths that can be used to return &lsquo;intelligent&rsquo; links</td>
-                </tr>
-                
-                <tr class="docs-parameter">
-                    <td class="parameter-name"><code>text</code></td>
-                    <td class="parameter-type"><code>
-                        
-                            string
-                        
-                    </code></td>
-                    
-                    <td class="parameter-default">
-                        
-                            none
-                        
-                    </td>
-                    
-                    <td class="parameter-description">HTML text to be put inside an anchor. If this value is set then an HTML <code>&lt;a&gt;&lt;/a&gt;</code> is returned rather than just a url</td>
-                </tr>
-                
-                <tr class="docs-parameter">
-                    <td class="parameter-name"><code>notag</code></td>
-                    <td class="parameter-type"><code>
-                        
-                            boolean
-                        
-                    </code></td>
-                    
-                    <td class="parameter-default">
-                        
-                            <code>false</code>
-                        
-                    </td>
-                    
-                    <td class="parameter-description">Whether or not the output should be wrapped in a tag or just be a URL</td>
-                </tr>
-                
-                <tr class="docs-parameter">
-                    <td class="parameter-name"><code>format</code></td>
-                    <td class="parameter-type"><code>
-                        
-                            string
-                        
-                    </code></td>
-                    
-                    <td class="parameter-default">
-                        
-                            none
-                        
-                    </td>
-                    
-                    <td class="parameter-description">Custom format to use when wrapping links. Available template variables are <code>%url</code>, <code>%class</code>, and <code>%text</code></td>
-                </tr>
-                
-                <tr class="docs-parameter">
-                    <td class="parameter-name"><code>withdomain</code></td>
-                    <td class="parameter-type"><code>
-                        
-                            boolean
-                        
-                    </code></td>
-                    
-                    <td class="parameter-default">
-                        
-                            <code>false</code>
-                        
-                    </td>
-                    
-                    <td class="parameter-description">Whether or not to prepend the base (<code>http://your-forums.com/</code>) URL to the outputted link</td>
-                </tr>
-                
-            </tbody>
-        </table>
-    
-    
-    
-
+<p><em>This tag does not take any parameters.</em></p>
 
 
             
