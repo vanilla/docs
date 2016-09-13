@@ -9,8 +9,6 @@ menu:
   help:
     parent: addons
     identifier: addons-social
-aliases:
-- /addons/social
 ---
 
 ## Social Connect Plugins

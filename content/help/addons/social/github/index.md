@@ -7,10 +7,8 @@ tags:
 category: help
 menu:
   help:
-    parent: social
+    parent: addons-social
     identifier: addons-social-github
-aliases:
-- /addons/social/github
 ---
 
 ## Github

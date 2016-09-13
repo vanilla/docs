@@ -7,10 +7,8 @@ tags:
 category: help
 menu:
   help:
-    parent: social
+    parent: addons-social
     identifier: addons-social-zendesk
-aliases:
-- /addons/social/zendesk
 ---
 
 ## Zendesk
