@@ -8,6 +8,30 @@
     <atom:link href="//docs.vanillaforums.com/tags/integrations/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Facebook</title>
+      <link>//docs.vanillaforums.com/help/addons/social/facebook/index.html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/facebook/index.html/</guid>
+      <description>
+
+&lt;h2 id=&#34;facebook&#34;&gt;Facebook&lt;/h2&gt;
+
+&lt;p&gt;Facebook Connect allows users to sign in using their Facebook account. You must register your application with Facebook for this plugin to work.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-to-set-up-facebook-connect&#34;&gt;How to set up Facebook Connect&lt;/h3&gt;
+
+&lt;p&gt;In order to set up Facebook Connect, you must create an &amp;ldquo;application&amp;rdquo; in Facebook at: &lt;a href=&#34;https://developers.facebook.com/apps&#34;&gt;https://developers.facebook.com/apps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once your application has been set up, you must copy the &amp;ldquo;Application ID&amp;rdquo; and &amp;ldquo;Application Secret&amp;rdquo; into your Facebook plugin settings page from your Vanilla dashboard.&lt;/p&gt;
+
+&lt;h3 id=&#34;need-help&#34;&gt;Need help?&lt;/h3&gt;
+
+&lt;p&gt;For a complete walk-through of the steps involved, read &lt;a href=&#34;http://blog.vanillaforums.com/facebook-application-for-vanillaforums-sso/&#34;&gt;How to Create a Facebook Application for Vanillaforums Single Sign-On (SSO)&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Gigya Sign In</title>
       <link>//docs.vanillaforums.com/help/addons/gigya/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -52,11 +76,35 @@
     </item>
     
     <item>
-      <title>Google Plus</title>
-      <link>//docs.vanillaforums.com/help/addons/googleplus/</link>
+      <title>Github</title>
+      <link>//docs.vanillaforums.com/help/addons/social/github/index.html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/googleplus/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/social/github/index.html/</guid>
+      <description>
+
+&lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
+
+&lt;p&gt;This plugin allows you to submit user discussion and comments as GitHub issues.&lt;/p&gt;
+
+&lt;h3 id=&#34;setup-instructions&#34;&gt;Setup Instructions&lt;/h3&gt;
+
+&lt;p&gt;If you already have a Github account, you need to enable API Access for this plugin to work.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Create a new application in GitHub&lt;/a&gt;, and set the callback URL by appending &lt;code&gt;/profile/githubconnect&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your callback URL would be &lt;code&gt;http://example.com/forum/profile/githubconnect&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Once your application has been set up, you must copy the &lt;strong&gt;ClientID&lt;/strong&gt; and &lt;strong&gt;Secret&lt;/strong&gt; into your Github plugin settings page from your Vanilla dashboard.&lt;/li&gt;
+&lt;li&gt;Enter the repositories you want to be allowed into your Github plugin settings page from your Vanilla dashboard.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google Plus</title>
+      <link>//docs.vanillaforums.com/help/addons/social/googleplus/index.html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/googleplus/index.html/</guid>
       <description>
 
 &lt;h2 id=&#34;google-plus&#34;&gt;Google Plus&lt;/h2&gt;
@@ -72,12 +120,108 @@
 &lt;li&gt;Create New ClientID and fill in the form.&lt;/li&gt;
 &lt;li&gt;Select Web Application as Type.&lt;/li&gt;
 &lt;li&gt;For authorized Javascript Origins URL will be your Vanilla Forums URL&lt;/li&gt;
-&lt;li&gt;For authorized redirect URL, add &amp;ldquo;/entry/googleplus&amp;rdquo; to your Vanilla Forums URL.&lt;/li&gt;
+&lt;li&gt;For authorized redirect URL, append &amp;ldquo;/entry/googleplus&amp;rdquo; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your redirect URL would be &lt;code&gt;http://example.com/forum/entry/googleplus&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;Copy over Client ID and Secret into appropriate fields in Vanilla Dashboard.&lt;/li&gt;
 &lt;li&gt;If you have never used Google APIs before you will also need to fill in Consent Screen.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/social/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LinkedIn</title>
+      <link>//docs.vanillaforums.com/help/addons/social/linkedin/index.html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/linkedin/index.html/</guid>
+      <description>
+
+&lt;h2 id=&#34;linkedin&#34;&gt;LinkedIn&lt;/h2&gt;
+
+&lt;p&gt;Linked In social sign in allows users to sign in using their LinkedIn account. You must register your application with LinkedIn for this addon to work.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-to-set-up-linkedin-social-sign-in&#34;&gt;How to Set up LinkedIn Social Sign in&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Go to the LinkedIn Developer Network at &lt;a href=&#34;https://www.linkedin.com/secure/developer&#34;&gt;https://www.linkedin.com/secure/developer&lt;/a&gt;/&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Add New Application&lt;/strong&gt;. When you create the application, you can choose what to enter in most fields, but you have to make sure you enter specific information for some fields.&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Website URL&lt;/strong&gt; enter your forum&amp;rsquo;s root url.&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Default Scope&lt;/strong&gt; make sure you&amp;rsquo;ve selected at least &lt;strong&gt;r_basicprofile&lt;/strong&gt; and &lt;strong&gt;r_emailaddress&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Set the &lt;strong&gt;OAuth 2.0 Redirect URLs&lt;/strong&gt; by appending both &lt;code&gt;/entry/connect/linkedin&lt;/code&gt; and &lt;code&gt;/profile/linkedinconnect&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your Redirect URLs would be &lt;code&gt;http://example.com/forum/entry/connect/linkedin&lt;/code&gt; and &lt;code&gt;http://example.com/forum/profile/linkedinconnect&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Once your application has been set up, you must copy the &lt;strong&gt;Client ID&lt;/strong&gt; and &lt;strong&gt;Client Secret&lt;/strong&gt; into your LinkedIn plugin settings page from your Vanilla dashboard.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/social/linkedin/settings.jpg&#34; alt=&#34;Settings in LinkedIn&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Social Connect Plugins</title>
+      <link>//docs.vanillaforums.com/help/addons/social/index.html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/index.html/</guid>
+      <description>
+
+&lt;h2 id=&#34;social-connect-plugins&#34;&gt;Social Connect Plugins&lt;/h2&gt;
+
+&lt;p&gt;Vanilla Forums integrates with a number of social applications that you can use as SSO solutions. Learn more about configuring these applications to work with your forum in this section.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>//docs.vanillaforums.com/help/addons/social/twitter/index.html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/twitter/index.html/</guid>
+      <description>
+
+&lt;h2 id=&#34;twitter&#34;&gt;Twitter&lt;/h2&gt;
+
+&lt;p&gt;Twitter Connect allows users to sign in using their Twitter account. You must register your application with Twitter for this plugin to work.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-social-login-in-twitter-connect&#34;&gt;Setting up social login in Twitter Connect&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Register Vanilla with Twitter at: &lt;a href=&#34;http://dev.twitter.com/apps/new&#34;&gt;http://dev.twitter.com/apps/new&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set the Callback URL by appending &lt;code&gt;/entry/twauthorize&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your Callback URL would be &lt;code&gt;http://example.com/forum/entry/twauthorize&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;After registering, copy the &amp;ldquo;Consumer Key&amp;rdquo; and &amp;ldquo;Consumer Secret&amp;rdquo; into your Twitter plugin settings page from your Vanilla dashboard.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/social/twitter/settings.png&#34; alt=&#34;Settings in Twitter&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Zendesk</title>
+      <link>//docs.vanillaforums.com/help/addons/social/zendesk/index.html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/zendesk/index.html/</guid>
+      <description>
+
+&lt;h2 id=&#34;zendesk&#34;&gt;Zendesk&lt;/h2&gt;
+
+&lt;p&gt;This plugin allows you to submit user discussion and comments to your hosted Zendesk.&lt;/p&gt;
+
+&lt;h3 id=&#34;setup-instructions&#34;&gt;Setup Instructions&lt;/h3&gt;
+
+&lt;p&gt;If you already have an account you need to enable API Access for this plugin to work.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Login to your Zendesk Site&lt;/li&gt;
+&lt;li&gt;Go to the Admin Setting&lt;/li&gt;
+&lt;li&gt;Under Channels Select API&lt;/li&gt;
+&lt;li&gt;Select the OAuth Clients&lt;/li&gt;
+&lt;li&gt;Add a client&lt;/li&gt;
+&lt;li&gt;Complete the form&lt;/li&gt;
+&lt;li&gt;Copy the Unique Identifier and Secret and enter it below&lt;/li&gt;
+&lt;li&gt;Set the Redirect URLs by appending &lt;code&gt;/profile/zendeskconnect&lt;/code&gt; and then &lt;code&gt;/plugin/zendesk/connect&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your Redirect URLs would be &lt;code&gt;http://example.com/profile/zendeskconnect&lt;/code&gt; and &lt;code&gt;http://example.com/plugin/zendesk/connect&lt;/code&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t have an account you can create one for free at &lt;a href=&#34;http://www.zendesk.com/&#34;&gt;Zendesk&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

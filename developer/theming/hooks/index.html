@@ -300,7 +300,7 @@
 
 <p>Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.</p>
 
-<p>To use hooks, create a file named class.themehooks.php in your theme&rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files implement Gdn_IPlugin, which requires the specification of a setup method, which is run whenever the theme is enabled. The setup method is a good place to set any config variables your theme may rely on.</p>
+<p>To use hooks, create a file named class.themehooks.php in your theme&rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files extends Gdn_Plugin, which allows the specification of a <code>setup()</code> method, which is run whenever the theme is enabled. The setup method is a good place to set any config variables your theme may rely on, but is not required.</p>
 
 <p>To get a better understanding of what the theme hooks are capable of, familiarize yourself with <a href="http://docs.vanillaforums.com/developers/plugins/#custom-events-handlers">custom events &amp; handlers</a>, <a href="http://docs.vanillaforums.com/developers/plugins/#magic-events">magic events</a>, <a href="http://docs.vanillaforums.com/developers/plugins/#function-overrides">function overrides</a>, and <a href="http://docs.vanillaforums.com/developers/plugins/#magic-methods">magic methods</a>.</p>
 
@@ -317,7 +317,7 @@
  * Sets config variables on enabling MyThemeName, adds locale data to the view,
  * and adds a respond button to the discussion page.
  */
-class MyThemeNameThemeHooks implements Gdn_IPlugin() {
+class MyThemeNameThemeHooks extends Gdn_Plugin {
 
     /**
      * Sets some config settings for a modern layout with top-level

@@ -182,6 +182,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/addons/social/facebook/index.html/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/api/forum-administration/</loc>
   </url>
   
@@ -202,11 +206,15 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/addons/social/github/index.html/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/googleplus/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/social/googleplus/index.html/</loc>
   </url>
   
   <url>
@@ -255,6 +263,10 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/cloud/leaving/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/addons/social/linkedin/index.html/</loc>
   </url>
   
   <url>
@@ -414,6 +426,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/addons/social/index.html/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/cloud/staging/</loc>
   </url>
   
@@ -447,6 +463,10 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/addons/social/twitter/index.html/</loc>
   </url>
   
   <url>
@@ -515,6 +535,10 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/addons/social/zendesk/index.html/</loc>
   </url>
   
   <url>
