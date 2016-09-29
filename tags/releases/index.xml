@@ -290,5 +290,88 @@
 </description>
     </item>
     
+    <item>
+      <title>September 2016 Release</title>
+      <link>//docs.vanillaforums.com/help/releases/september-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/releases/september-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New Dashboard! This changed every page in the moderator/admin backend, including all addon settings pages.&lt;/li&gt;
+&lt;li&gt;Add navigation memory to the Dashboard. It will now preserve menu collapsing states &amp;amp; your page within each section between visits.&lt;/li&gt;
+&lt;li&gt;Add &amp;ldquo;Flat Categories&amp;rdquo; feature and optional navigation module. This allows browsing hundreds of categories as an alphabetical directory.&lt;/li&gt;
+&lt;li&gt;Improve how categories are managed in the Dashboard.&lt;/li&gt;
+&lt;li&gt;Categories now default to type &amp;ldquo;Nested&amp;rdquo; and must have a type assigned.&lt;/li&gt;
+&lt;li&gt;Add full recipients list to Badges. Click the &amp;ldquo;Given&amp;rdquo; number from &amp;ldquo;Badges&amp;rdquo; in the Dashboard.&lt;/li&gt;
+&lt;li&gt;Add new &amp;ldquo;Post Numbering&amp;rdquo; addon (by request only, currently).&lt;/li&gt;
+&lt;li&gt;Add new &amp;ldquo;Role Tracker&amp;rdquo; addon (by request only, currently).&lt;/li&gt;
+&lt;li&gt;Add ability to convert discussions to &amp;ldquo;ideas&amp;rdquo; (if Ideation is enabled).&lt;/li&gt;
+&lt;li&gt;Add ability to configure warnings in Warnings &amp;amp; Notes addon.&lt;/li&gt;
+&lt;li&gt;Add redirects for Lithium and Ning community imports (Redirector addon).&lt;/li&gt;
+&lt;li&gt;Add support for vBulletin 3 &amp;amp; 4 showthread.php?p={POSTID} URL redirects.&lt;/li&gt;
+&lt;li&gt;Allow &amp;ldquo;Location&amp;rdquo; and &amp;ldquo;Title&amp;rdquo; to be edited from User Edit.&lt;/li&gt;
+&lt;li&gt;Fix Profile Extender&amp;rsquo;s handling of non-ASCII characters in field names.&lt;/li&gt;
+&lt;li&gt;Refactored how we handle all requests (dispatcher).&lt;/li&gt;
+&lt;li&gt;Update MailChimp addon to use v3 of their API and support MailChimp &amp;ldquo;groups&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Update Facebook addon to use versioned endpoint.&lt;/li&gt;
+&lt;li&gt;Fix &amp;ldquo;Mark All Viewed&amp;rdquo; endpoint to prevent accidental or malicious triggering and fix its redirect.&lt;/li&gt;
+&lt;li&gt;Fix Bootstrap3 theme color schemes &amp;ldquo;paper&amp;rdquo; and &amp;ldquo;sandstone&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Remove &amp;ldquo;SafeStyles&amp;rdquo; option (previously deprecated).&lt;/li&gt;
+&lt;li&gt;General addon code maintenance done on: Groups, Reactions, Ranks, Polls, SAMLSSO, and Badges.&lt;/li&gt;
+&lt;li&gt;Fix issue with embedding where you could stay scrolled down when changing page.&lt;/li&gt;
+&lt;li&gt;Add username validation to /message/add endpoint (when pre-filling &amp;ldquo;To:&amp;rdquo; field via URL).&lt;/li&gt;
+&lt;li&gt;Fix conflict between Discussion Photos addon and Ideation addon.&lt;/li&gt;
+&lt;li&gt;Add ability for Smarty templates to access &lt;code&gt;isMobile&lt;/code&gt; function, &lt;code&gt;userAgentType&lt;/code&gt; function, &lt;code&gt;homepage_title&lt;/code&gt; function, and &lt;code&gt;Homepage&lt;/code&gt; (boolean variable).&lt;/li&gt;
+&lt;li&gt;Fix issue where default role settings weren&amp;rsquo;t transferred from old system correctly.&lt;/li&gt;
+&lt;li&gt;Add additional line break to welcome email.&lt;/li&gt;
+&lt;li&gt;Do not wrap images in a div if they are already in an anchor to fix potential clicking issue.&lt;/li&gt;
+&lt;li&gt;Fix autocomplete dropdown display in modals with Bootstrap3 theme.&lt;/li&gt;
+&lt;li&gt;Add the post that a user was warned for in the email notification.&lt;/li&gt;
+&lt;li&gt;Do not serve empty (or comment-only) CSS files from Custom Theme feature.&lt;/li&gt;
+&lt;li&gt;Fix photos&amp;rsquo; URL for /user/summary API endpoint.&lt;/li&gt;
+&lt;li&gt;Fix quotes that are done on a user with spaces in its name.&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;tabindex&lt;/code&gt; for comments, conversations, discussions (for keyboard navigation around page).&lt;/li&gt;
+&lt;li&gt;Add announcements to discussions RSS (in posting order).&lt;/li&gt;
+&lt;li&gt;Block adding banning rules that would HAL-9000 the entire crew, like &lt;code&gt;*.*&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Fix the basic (not advanced, which had no issue) search pager.&lt;/li&gt;
+&lt;li&gt;Do not revalidate username on edit if no change on user edit.&lt;/li&gt;
+&lt;li&gt;Do not send &lt;code&gt;noindex&lt;/code&gt; meta on error pages to prevent legit pages from being un-indexed.&lt;/li&gt;
+&lt;li&gt;Increase the priority of custom.css to be higher.&lt;/li&gt;
+&lt;li&gt;Fix log link showing when no log exists.&lt;/li&gt;
+&lt;li&gt;Allow &amp;ldquo;Unanswered Questions&amp;rdquo; page title to be translated (Q&amp;amp;A addon).&lt;/li&gt;
+&lt;li&gt;Add support for alternate SAML document structures (SSO).&lt;/li&gt;
+&lt;li&gt;Enforce max tags limit on the front end and cleanup tag validation.&lt;/li&gt;
+&lt;li&gt;Encode slashes in usernames when creating profile links.&lt;/li&gt;
+&lt;li&gt;Allow comment drafts to be orphaned (instead of removed) when their discussion is deleted and rework drafts view.&lt;/li&gt;
+&lt;li&gt;Unregister plugins immediately after it has been disabled instead of waiting until the next page request.&lt;/li&gt;
+&lt;li&gt;Hide email preferences when email is disabled globally.&lt;/li&gt;
+&lt;li&gt;Hide the RSS icon from categories that are type &amp;lsquo;Categories&amp;rsquo; since they contain no discussions.&lt;/li&gt;
+&lt;li&gt;Trim all control characters from discussion title (helps prevent broken or blank titles).&lt;/li&gt;
+&lt;li&gt;Fix scenario where discussion title could be blank.&lt;/li&gt;
+&lt;li&gt;Fix user search to allow numeric usernames as long as it&amp;rsquo;s an exact match.&lt;/li&gt;
+&lt;li&gt;Akismet will now validate your key before accepting it (Cloud customers do not require their own key; it is optional).&lt;/li&gt;
+&lt;li&gt;Improve Akismet addon description and deprecate TypePad option (no longer offered by TypePad).&lt;/li&gt;
+&lt;li&gt;Hide Participated menu for guests (Participated addon).&lt;/li&gt;
+&lt;li&gt;Let welcome email fallback to HomepageTitle when the site&amp;rsquo;s name is not set properly.&lt;/li&gt;
+&lt;li&gt;Turn off autocomplete on text fields when editing users in dashboard (to prevent accidental data insertion).&lt;/li&gt;
+&lt;li&gt;Improve how table layouts choose their column widths according to the content in them.&lt;/li&gt;
+&lt;li&gt;Improve Q&amp;amp;A and how it interacts with Subcommunities, especially displaying an Unanswered count per community.&lt;/li&gt;
+&lt;li&gt;Change H2s for H1s for a few edit profile pages.&lt;/li&gt;
+&lt;li&gt;Improve consistency in module (widget) titles (usually H4) so they are properly configurable.&lt;/li&gt;
+&lt;li&gt;Add invited user data to user exports.&lt;/li&gt;
+&lt;li&gt;Fix button height in Share This widget.&lt;/li&gt;
+&lt;li&gt;Add OAuth2 library to core product for building custom implementations more easily.&lt;/li&gt;
+&lt;li&gt;Fix potential duplicate rank promotion notifications.&lt;/li&gt;
+&lt;li&gt;Change the priority order of the SimpleAPI plugin so Subcommunities does not interfere with API calls.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

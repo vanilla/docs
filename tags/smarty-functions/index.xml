@@ -563,7 +563,7 @@
 &lt;pre&gt;&lt;code&gt;{homepage_title}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Writes the site title to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
+&lt;p&gt;Writes the site title to the page. You can change the site title from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
 
 &lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
