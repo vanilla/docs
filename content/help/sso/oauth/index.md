@@ -32,51 +32,15 @@ Vanilla has created an OAuth2 plugin that, for most use-cases, can provide a plu
 
 OAuth2 accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.
 
-### Workflow 
- 
-This plugin has a workflow of three distinct steps:
-  
- * An **authorization request** (request for a code)
- * A **token request** (the code is exchanged for an authorization token)
- * A **profile request** (by passing the authoriztion token)
-  
-### Assumptions
-
-Besides requiring that you follow the workflow above, this plugin has several assumptions about the setup of the Authorization Server. If your Authorization Server does not meet these assumptions it does not mean that you cannot integrate with a Vanilla forum, it means that you will not be able to use this plugin out of the box and that you will requires some level of customization.
-
- * All requests from Vanilla are sent with the header `Content-Type: application/x-www-form-urlencoded`
- * The Authorization Server will expect an authorization request sent by GET with the following parameters:
-  * `response_type` => `code`
-  * `client_id`
-  * `redirect_uri` => https://*[The url of the forum]*/entry/oauth2
-  * `scope`
-  * `state`
- * The Authorization Server will respond to a successful log in by sending a `code` through GET to the `redirect_uri`
- * The Authorization Server will expect a token request sent by POST with the following parameters:
-  * `code` => *[the code returned from the authorization request]*
-  * `client_id`
-  * `client_secret`
-  * `redirect_uri` => https://*[The url of the forum]*/entry/oauth2
-  * `grant_type` => `authorization_code`
-  * `scope`
- * The Authorization Server will send a JSON response with the variable `access_token`
- * The Authorization Server will accept a request for the user's profile sent by GET with `access_token`
- * The Authorization Server will send a JSON response with at least the following:
-  * A uniqueID for the user
-  * the user's email
-  * the user's name (display name, nickname)
- 
-**NOTE**: Not supported in this work flow are **"nonce" support** (a hash sent in the `state` and verified to be unchanged) and **refresh tokens**.
-
 ### Features
 
 The OAuth2 Plugin attempts to "parameterize" as many aspects of the functionality as possible. A settings form in the dashboard allows you to set:
  
  * The client id
  * The client secret
- * The full path to the authorization URI, registration uri, sign out uri, token endpoint and profile endpoint
+ * The full path to the authorization URI, registration URI, sign out URI, token endpoint and profile endpoint
  * The scope
- * The exepected keys in the json response in the profile request
+ * The exepected keys in the JSON response in the profile request
 
 ### Possible Pitfalls
 
