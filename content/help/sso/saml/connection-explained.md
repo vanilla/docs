@@ -1,7 +1,15 @@
 ---
 title: SAML Connection explained
-layout: docs
-categories: ["Features","Single Sign-On","SAML"]
+tags:
+- Features
+- Single Sign-On
+- SAML
+category: help
+menu:
+  help:
+    parent: sso-saml
+aliases:
+- /features/sso/saml/connection-explained
 ---
 
 ## Creating a new SAML connection

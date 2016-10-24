@@ -38,4 +38,4 @@ Roles => role1,role2 // Optional
 
 `Photo` is the url/path to the user's photo and is optional.
 
-`Roles` consist of a comma-separated list of exact name matches to existing roles on your forum and is optional. e.g. `'Member,MVP,Support'`
+`Roles` consist of a comma-separated list of exact name matches to existing roles on your forum and is optional. e.g. 'Member,MVP,Support'
