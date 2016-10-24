@@ -8,3 +8,6 @@ public/
 .grunt
 build/tmp/_componentsMap.scss
 build/scss/tmp/_componentsMap.scss
+dist/
+.idea
+bower_components/
