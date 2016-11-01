@@ -39,7 +39,7 @@ $schema = $this->schema([
 
 #### Object
 
-```
+```php
 $schema = $this->schema([
     'o:user' => [
         's:name' => 'The username of the user.',
@@ -50,7 +50,7 @@ $schema = $this->schema([
 
 ### Array
 
-```
+```php
 $schema = $this->schema([
     'i:userID' => 'The ID of the user.',
     'a:roleIDs' => [
