@@ -5,7 +5,7 @@ tags:
 category: developer
 menu:
   developer:
-    identifier: routes
+    identifier: schemas
 aliases:
 - /developers/schemas
 ---
