@@ -1,16 +1,24 @@
 ---
 title: Schemas
-layout: docs
-categories: ["Developers"]
+tags:
+- Developers
+category: developer
+menu:
+  developer:
+    identifier: routes
+aliases:
+- /developers/schemas
 ---
 
 # Schemas
 
-In Vanilla, the `Garden\Schema` class is used to whitelist and validate input, primarily for API endpoints.
+## Garden\Schema
 
-## Usage
+In Vanilla, the `Garden\Schema` class is used to whitelist parameters for a data structure and validate array of data.  It is primarily used for filtering input to API endpoints.
 
-### Types
+The constructor of `Garden\Schema` accepts an associative array, describing the expected parameters.  The keys of the array define the type, name and whether or not a parameter is required. The values of the array provide a description for each parameter.
+
+A parameter can be defined as having one of the following types: 
 
 * Array (a) *This must be a numerically-indexed array with a zero index.*
 * Object (o) *This must be an associative array.*
@@ -22,25 +30,48 @@ In Vanilla, the `Garden\Schema` class is used to whitelist and validate input, p
 * Timestamp (ts)
 * Datetime (dt) *This value must be [a valid format.](http://php.net/manual/en/datetime.formats.php)*
 
-### Examples
+If a parameter's name is followed by a question mark (?), it is flagged as optional.
 
-#### Basic
+## Validation Behavior
+
+When `Garden\Schema` encounters a parameter that has not been explicitly defined, it can handle things a few different ways, depending on how it is configured.  Configuring the behavior is done by passing one of the `Garden\Schema::VALIDATE_*` constants to an instance's `Garden\Schema::setValidationBehavior` function.
+
+The available validation constants are:
+
+* `Garden\Schema::VALIDATE_EXCEPTION` - Throw a `Garden\Exception\ValidationException` when an unexpected parameter is encountered.
+* `Garden\Schema::VALIDATE_NOTICE` - This is the default behavior.  Trigger a PHP notice when an unexpected parameter is encountered, then remove it and continue.
+* `Garden\Schema::VALIDATE_REMOVE` - Silently remove any unexpected parameters.
+
+#### Basic Example
+
+This is a basic schema with only top-level parameters.
 
 ```php
-$schema = $this->schema([
+$schema = new Garden\Schema();
+$schema([
     's:name' => 'The title of the discussion.',
     's:body' => 'The body of the discussion.',
-    's:format?' => 'The discussion format.', // The question mark denote that this field is optional
+    's:format?' => 'The discussion format.',
     'i:categoryID' => 'The category to place the discussion.',
 ])
 ->setDescription('Add a new discussion.')
 ->validate($body)
 ```
 
-#### Object
+In this example, there are four parameters:
+
+1. `name` (string, required) - The title of the discussion.
+2. `body` (string, required) - The body of the discussion.
+3. `format` (string, optional) - The discussion format.
+4. `categoryID` (integer, required) - The category to place the discussion. 
+
+#### Nested Example
+
+Schemas can also be written to allow the inclusion of objects as parameters.
 
 ```php
-$schema = $this->schema([
+$schema = new Garden\Schema();
+$schema([
     'o:user' => [
         's:name' => 'The username of the user.',
         's:email' => 'The email address of the user.'
@@ -48,17 +79,4 @@ $schema = $this->schema([
 ])
 ```
 
-### Array
-
-```php
-$schema = $this->schema([
-    'i:userID' => 'The ID of the user.',
-    'a:roleIDs' => [
-        'description' => 'Role IDs for the user.',
-        'items' => [
-            'type' => 'integer',
-            'required' => true
-        ]
-    ]
-])
-```
+This example shows how to define an object as a parameter, as well defining requirements for its properties. `user` __*must*__ be an associative array and it __*must*__ include `name` and `email` keys, each with string values.
