@@ -16,7 +16,7 @@ aliases:
 
 In Vanilla, the `Garden\Schema` class is used to whitelist parameters for a data structure and validate array of data.  It is primarily used for filtering input to API endpoints.
 
-The constructor of `Garden\Schema` accepts an associative array, describing the expected parameters.  The keys of the array define the type, name and whether or not a parameter is required. The values of the array provide a description for each parameter.
+The constructor of `Garden\Schema` accepts an associative array, describing the expected parameters.  The keys of the array define the name of a parameter and its flags (e.g. data type, is required). The values of the array provide a description for each parameter.
 
 A parameter can be defined as having one of the following types: 
 
@@ -28,9 +28,13 @@ A parameter can be defined as having one of the following types:
 * Float (f)
 * Boolean (b)
 * Timestamp (ts)
-* Datetime (dt) *This value must be [a valid format.](http://php.net/manual/en/datetime.formats.php)*
+* Datetime (dt) *This value must be [in a valid format.](http://php.net/manual/en/datetime.formats.php)*
 
 If a parameter's name is followed by a question mark (?), it is flagged as optional.
+
+## Validating
+
+To validate an array, you must pass it to an instance's `Garden\Schema::validate` function.  This will validate the incoming array's structure and data against the schema's configuration.  If a required parameter is not detected, or a configured parameter does not match its specified type, an exception of `Garden\Exception\ValidationException` is thrown, describing all errors encountered while validating the array.  Unexpected parameters are handled based on the schema's configured validation behavior.
 
 ## Validation Behavior
 
