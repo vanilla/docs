@@ -12,64 +12,90 @@ aliases:
 - /features/categories
 ---
 
-## Using Categories
-
-Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
-
-You can find Categories under the “Forum" menu in the Dashboard,
-
-![http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png](http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png)
-
-At the top of the page, you will presented with the option to either add a new category, or disable them completely:
-
-!["Add Category" and "Don't use Categories" buttons in the Manage Categories section of the dashboard](http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/laurasothertest.vanillaforums.com/editor/2o/34let6oiypkp.png)
-
-Disabling categories will streamline your organization, reducing the forum to the "Recent Discussion" view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories weren't in use will be placed into whatever category is at the top of your list.
+## What Are Categories
 
 
-## Adding Categories
-
-Clicking the "Add Category" button will take you to the page pictured below:
-
-![/vanilla/settings/addcategory](http://blog.vanillaforums.com/wp-content/uploads/2013/11/Add-Category.jpg)
-
-By default, the category url will reflect the category’s name. Clicking the edit button next to the url will allow you to change the slug. Below it, you can add a description for the category, which will display on your homepage if your current theme allows it.
-
-You can add a unique CSS class, which you can use in your theme to control its appearance. The specified text will be added as a class for the category's HTML wrapper.
-
-The "Display As" drop down changes the behavior of a category:
-
-**Header:** Uses the category as a plain text header. The category will be not be selectable in the editor, forcing users to post in its sub-categories. 
-**Categories:** Uses the category as a container to display its sub-categories upon clicking through.
-**Discussions:** The standard view that displays threads 
+Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
+You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to /vanilla/settings/categories.
 
 
-## Category Page Layout
+## Choosing Your Category Layout
 
-"Place nested categories in a comma-delimited list" is a way of making sub-categories more compact on the Categories page. 
-![](http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/it/ntxs2xgycl7z.png)
-We recommend keeping the default (2 levels deep) in most cases.
 
-"Do not display the categories in the side panel" hides the default category list that shows up in the panel as a shortcut. Select this option if you have many categories (more than a dozen) that would make the list unwieldy.
+Before modifying your individual categories, you can choose how they will appear on your homepage. In the Dashboard, under the “Homepage" panel there is a "Category Layout" section.  In this area, there are options for how to display the Categories page for your users.
 
-## Organizing Categories
+**The Modern Layout** removes the extra columns for discussion and comment totals, making for a clean look.
 
-Drag and drop your categories to organize them. Slide them to the right slightly to nest them under the category directly above them.
+**The Table Layout** shows discussion and comment totals as columns, along with user avatar and the thread title of the most recent post in the section.
 
-The option "Display root categories as headings" turns the top-level categories into plain text "headers". Headers are sections that cannot be posted in directly, so be sure to nest a category underneath your root if you select this option. 
+**The Mixed Layout** option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.
 
-## Choosing a Categories view
 
-In the "Homepage" settings page in your Dashboard under "Category Layout" there are options for how to display the Categories page for your users. The "Mixed Layout" option shows up to five discussions with the most recent comment under each category.
+## Choosing How Categories Display
+
+
+Categories are easily arranged. Just click on the left side of a specific category to drag and drop it into your desired position. Changes to organization will be reflected immediately on the main forum index.
+
+![Click and drag the small "hamburger menu" icon on the left side of each created category to rearrange them.](/img/help/features/categories/drag_and_drop.jpg)
+
+There are some other options that affect how categories are viewed on the forum. Opening the right drop down will allow you to edit the a category, and will reveal the “Display As” menu. This setting critically changes the way a category behaves.
+
+![](/img/help/features/categories/display_as_menu.jpg)
+
+**Discussions** - The default category, where users can post discussions.
+
+**Heading** - Unclickable Headings that help with forum organization. On the homepage, they will will display differently according to your theme. Generally they are bold, and will split your categories into sections:
+
+![The main page of your forum may be set to recent discussions, best of, or categories. This is an example of a categories page in the "Bootstrap 3" theme, with headings differentiating the sections. ](/img/help/features/categories/categories_index.jpg)
+
+
+**Flat** - This is a paginated directory structure that can handle thousands of categories. They are sorted alphabetically by default, and cannot be manually arranged.
+
+
+Flat categories have a module that can be inserted into your theme. This will blend right in with your index and list a small number of the categories that the section contains. It has a quick search module, allowing for users to shift through hundreds of categories with ease. This is great for sites that have a large number of products.
+
+![The flat categories module is excellent for communities that need to have many sections for different products or subjects](img/help/features/categories/display_as_flat.jpg)
+
+To add this to your theme, use this module:
+{module name="FlatCategoryModule" categoryID=00}
+
+You can find the numerical categoryID in the URL when you are editing a category.
+![You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community.](img/help/features/categories/category_ID.jpg)
+
+**Nested** - Creates a clickable heading that only contains more categories. Unlike Flat categories, this is generally for creating small sections within your forum, and can be manually organized.
+
+
+## Other Settings
+
+
+**Category URL**- You can change the slug for a category to simplify the URL. It will automatically populate with the title of the category. Proper syntax for URLs is required here, so spaces are not allowed.
+
+**Descriptions**- You can add a description to you category. This will appear on the homepage or under the title on the categories page, depending on your theme.   
+
+**Photo**- You can add a picture or icon to your category, which will appear on the main index in some themes.
+
+**CSS class** - The specified text will be added as a class for the category's HTML wrapper. This makes it so that you can target it specifically when building a theme.
+
+**Hide from the recent discussions**- This prevents threads in the category from appearing on /discussions.
+
+**Archived**- This removes the category from the main index and prevents threads in the category from coming up in the site-based search. Archived Categories are still indexed by search engines and can prevent broken links. 
+
+**Permissions**- Enabling “This category has custom permissions” will reveal some new options.
+
+![Custom permission options add another layer of control over a category.](img/help/features/categories/other_options.jpg)
+
+If you have a plugin like Q&A enabled, you can use these options to choose where your users can create those threads. You can also disable polls and file uploads, if they don't suit the category.
+
+Under that will be a list of all of your roles. You can restrict who can view, post in, or perform moderation actions in particular categories.
+
 
 ## Deleting a Category
+You can delete a category from the dashboard, the option is in the right-hand menu of each category:
 
-To delete a category, click the "Delete" button beside it in the Dashboard. You will be prompted to select a replacement category from a drop down menu. If you elect not to choose a replacement category, all threads and posts will be deleted. 
+![The delete option is the bottom of the category menu](img/help/features/categories/delete_menu.jpg)
 
-## Unfollow a Category
+Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.
 
-On the main categories page, each section has a cogwheel menu with the option to "Hide" the category from view. By default, you will only see your "Followed Categories" when viewing forum index, but if you'd like to see hidden categories, simple toggle your view to "All Categories" with the option at the bottom of the sidebar.
+![The red warning that appears on this page is all that stands between you and deleting your content. Head the warning and be sure to transfer the threads to a new location before confirming the action.](img/help/features/categories/delete_warning.jpg)
 
-![](http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/4b/edbr9ey86ysk.png)
-
- When you are viewing all categories, you can unhide sections with the same cogwheel menu. 
+**It is not possible to recover a deleted category.**  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.    
