@@ -40,7 +40,7 @@ Categories are easily arranged. Just click on the left side of a specific catego
 
 There are some other options that affect how categories are viewed on the forum. Opening the right drop down will reveal the “Display As” menu. These settings critically change the way a category behaves.
 
-![The "Display As" options.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/display_as_menu.png)
+![The "Display As" options.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/display_as_menu.png =100x)
 
 **Discussions** - The default category, where users can post discussions.
 
