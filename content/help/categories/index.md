@@ -36,31 +36,29 @@ Before modifying your individual categories, you can choose how they will appear
 
 Categories are easily arranged. Just click on the left side of a specific category to drag and drop it into your desired position. Changes to organization will be reflected immediately on the main forum index.
 
-![Click and drag the small "hamburger menu" icon on the left side of each created category to rearrange them.](/img/help/features/categories/drag_and_drop.png)
+![Click and drag the small "hamburger menu" icon on the left side of each created category to rearrange them.](docs/static/img/help/features/categories/drag_and_drop.png)
 
-There are some other options that affect how categories are viewed on the forum. Opening the right drop down will allow you to edit the a category, and will reveal the “Display As” menu. This setting critically changes the way a category behaves.
+There are some other options that affect how categories are viewed on the forum. Opening the right drop down will reveal the “Display As” menu. These settings critically change the way a category behaves.
 
-![](/img/help/features/categories/display_as_menu.png)
+![The "Display As" options.](docs/static/img/help/features/categories/display_as_menu.png)
 
 **Discussions** - The default category, where users can post discussions.
 
 **Heading** - Unclickable Headings that help with forum organization. On the homepage, they will will display differently according to your theme. Generally they are bold, and will split your categories into sections:
 
-![The main page of your forum may be set to recent discussions, best of, or categories. This is an example of a categories page in the "Bootstrap 3" theme, with headings differentiating the sections. ](/img/help/features/categories/categories_index.png)
-
+![The main page of your forum may be set to recent discussions, best of, or categories. This is an example of a categories page in the "Bootstrap 3" theme, with headings differentiating the sections. ](docs/static/img/help/features/categories/categories_index.png)
 
 **Flat** - This is a paginated directory structure that can handle thousands of categories. They are sorted alphabetically by default, and cannot be manually arranged.
 
-
 Flat categories have a module that can be inserted into your theme. This will blend right in with your index and list a small number of the categories that the section contains. It has a quick search module, allowing for users to shift through hundreds of categories with ease. This is great for sites that have a large number of products.
 
-![The flat categories module is excellent for communities that need to have many sections for different products or subjects](img/help/features/categories/display_as_flat.png)
+![The flat categories module, shown here blending in with the theme.](docs/static/img/help/features/categories/display_as_flat.png)
 
 To add this to your theme, use this module:
 {module name="FlatCategoryModule" categoryID=00}
 
 You can find the numerical categoryID in the URL when you are editing a category.
-![You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community.](img/help/features/categories/category_ID.png)
+![You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community. This shows an example URL.](docs/static/img/help/features/categories/category_ID.png)
 
 **Nested** - Creates a clickable heading that only contains more categories. Unlike Flat categories, this is generally for creating small sections within your forum, and can be manually organized.
 
@@ -82,7 +80,7 @@ You can find the numerical categoryID in the URL when you are editing a category
 
 **Permissions**- Enabling “This category has custom permissions” will reveal some new options.
 
-![Custom permission options add another layer of control over a category.](img/help/features/categories/other_options.png)
+![Custom permission options add another layer of control over a category.](docs/static/img/help/features/categories/other_options.png)
 
 If you have a plugin like Q&A enabled, you can use these options to choose where your users can create those threads. You can also disable polls and file uploads, if they don't suit the category.
 
@@ -92,10 +90,10 @@ Under that will be a list of all of your roles. You can restrict who can view, p
 ## Deleting a Category
 You can delete a category from the dashboard, the option is in the right-hand menu of each category:
 
-![The delete option is the bottom of the category menu](img/help/features/categories/delete_menu.png)
+![The delete option is the very  the bottom of the menu](docs/static/img/help/features/categories/delete_menu.png)
 
 Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.
 
-![The red warning that appears on this page is all that stands between you and deleting your content. Head the warning and be sure to transfer the threads to a new location before confirming the action.](img/help/features/categories/delete_warning.png)
+![The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.](docs/static/img/help/features/categories/delete_warning.png)
 
 **It is not possible to recover a deleted category.**  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.    
