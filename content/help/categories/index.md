@@ -52,13 +52,13 @@ There are some other options that affect how categories are viewed on the forum.
 
 Flat categories have a module that can be inserted into your theme. This will blend right in with your index and list a small number of the categories that the section contains. It has a quick search module, allowing for users to shift through hundreds of categories with ease. This is great for sites that have a large number of products.
 
-![The flat categories module, shown here blending in with the theme.](docs/static/img/help/features/categories/display_as_flat.png)
+![The flat categories module, shown here blending in with the theme.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/display_as_flat.png)
 
 To add this to your theme, use this module:
 {module name="FlatCategoryModule" categoryID=00}
 
 You can find the numerical categoryID in the URL when you are editing a category.
-![You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community. This shows an example URL.](docs/static/img/help/features/categories/category_ID.png)
+![You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community. This shows an example URL.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/category_ID.png)
 
 **Nested** - Creates a clickable heading that only contains more categories. Unlike Flat categories, this is generally for creating small sections within your forum, and can be manually organized.
 
@@ -80,7 +80,7 @@ You can find the numerical categoryID in the URL when you are editing a category
 
 **Permissions**- Enabling “This category has custom permissions” will reveal some new options.
 
-![Custom permission options add another layer of control over a category.](docs/static/img/help/features/categories/other_options.png)
+![Custom permission options add another layer of control over a category.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/other_options.png)
 
 If you have a plugin like Q&A enabled, you can use these options to choose where your users can create those threads. You can also disable polls and file uploads, if they don't suit the category.
 
@@ -90,10 +90,10 @@ Under that will be a list of all of your roles. You can restrict who can view, p
 ## Deleting a Category
 You can delete a category from the dashboard, the option is in the right-hand menu of each category:
 
-![The delete option is the very  the bottom of the menu](docs/static/img/help/features/categories/delete_menu.png)
+![The delete option is the very  the bottom of the menu](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/delete_menu.png)
 
 Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.
 
-![The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.](docs/static/img/help/features/categories/delete_warning.png)
+![The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/delete_warning.png)
 
 **It is not possible to recover a deleted category.**  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.    
