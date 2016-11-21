@@ -44,7 +44,7 @@ There are a few assets that need to appear and an event that needs to be fired f
 3. **The Me module** `{module name="MeModule"}` Adds the Me module. This module contains dropdowns for notifications, bookmarks, conversations and settings. It helps a logged-in user access what's important to them.
 4. **Opening body tag** `<body id="{$BodyID}" class="{$BodyClass}">` This is how we recommend opening your body element. It adds programmatically generated CSS classes and ids to the body block, which are very useful for targeting sections when styling your forum.
 
-The most up-to-date set of Smarty functions and modifiers can be tracked down in /library/vendors/SmartyPlugins.
+The most up-to-date set of Smarty functions and modifiers can be tracked down in `/library/SmartyPlugins`.
 
 ##### More Smarty tips and tricks
 

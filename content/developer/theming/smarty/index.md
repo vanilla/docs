@@ -25,7 +25,7 @@ You can output the content of the current page's controller's data array using S
 
 In the default master view in Vanilla, you'll find tags like `{searchbox}` which calls a function to render a search box in the page and `{breadcrumbs}` which calls a function to render the breadcrumbs. These are tags are mapped to php functions.
 
-Some smarty functions in Vanilla can include parameters. For example, here `{breadcrumbs homelink="My Forum's Home"}`, the "homelink" parameter modifies the rendering of the breadcrumbs so that the "Home" breadcrumb renders as "My Forum's Home". Vanilla's set of smarty functions that can be used in your template can be found by navigating to `library/vendors/SmartyPlugins`. The [Smarty Functions section](/theming/smarty/functions) documents these functions and their available parameters.
+Some smarty functions in Vanilla can include parameters. For example, here `{breadcrumbs homelink="My Forum's Home"}`, the "homelink" parameter modifies the rendering of the breadcrumbs so that the "Home" breadcrumb renders as "My Forum's Home". Vanilla's set of smarty functions that can be used in your template can be found by navigating to `library/SmartyPlugins`. The [Smarty Functions section](/theming/smarty/functions) documents these functions and their available parameters.
 
 ### Smarty Conditional Functions
 
