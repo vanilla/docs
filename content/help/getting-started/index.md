@@ -94,3 +94,5 @@ Another good approach is to create a section of your community dedicated to new 
 where they can introduce themselves to your regular members and learn more about what
 your community has to offer. This kind of area can feel like a safer place for shy members
 to experiment with the forum for the first time.
+
+For more on community building, please consult our [Resource Library](https://library.vanillaforums.com).

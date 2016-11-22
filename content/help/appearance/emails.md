@@ -6,10 +6,10 @@ tags:
 category: help
 menu:
   help:
-    identifier: emails
-    weight: 100
+    parent: appearance
+    weight: 13
 aliases:
-- /features/emails
+- /appearance/emails
 ---
 
 ## Email Appearance
