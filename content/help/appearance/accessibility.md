@@ -1,14 +1,12 @@
 ---
 title: Accessibility
-tags:
-- Features
 category: help
 menu:
   help:
-    identifier: accessibility
-    weight: 100
+    parent: appearance
+    weight: 14
 aliases:
-- /features/accessibility
+- /appearance/accessibility
 ---
 ## Overview
 

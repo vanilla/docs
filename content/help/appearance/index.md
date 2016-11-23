@@ -35,4 +35,4 @@ In your Dashboard under Appearance > Homepage you can set the following:
 
 ### Base Theme 
 
-Under Appearance > Themes you can select a base theme for both desktop and mobile devices. All base themes can be further customized. 
+Under Appearance > Themes you can select a base theme for both desktop and mobile devices. All base themes can be further customized by modifying the HTML and overriding the CSS. 

@@ -1,14 +1,12 @@
 ---
 title: Ideation
-tags:
-- Addons
 category: help
 menu:
   help:
-    parent: addons
-    identifier: addons-ideation
+    identifier: ideation
+    weight: 50
 aliases:
-- /addons/ideation
+- /ideation
 ---
 {{% cloudfeature %}}
 

@@ -18,20 +18,16 @@ Categories are how Vanilla organizes discussions. Categories can be added, edite
 
 You can find Categories under the “Forum" menu in the Dashboard,
 
-![http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png](http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png)
+![Categories Navigation](/img/categories/categories-nav.png)
 
-At the top of the page, you will presented with the option to either add a new category, or disable them completely:
-
-!["Add Category" and "Don't use Categories" buttons in the Manage Categories section of the dashboard](http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/laurasothertest.vanillaforums.com/editor/2o/34let6oiypkp.png)
-
-Disabling categories will streamline your organization, reducing the forum to the "Recent Discussion" view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories weren't in use will be placed into whatever category is at the top of your list.
+At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the "Recent Discussion" view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.
 
 
 ## Adding Categories
 
 Clicking the "Add Category" button will take you to the page pictured below:
 
-![/vanilla/settings/addcategory](http://blog.vanillaforums.com/wp-content/uploads/2013/11/Add-Category.jpg)
+![Add Categories](/img/categories/categories-add.png)
 
 By default, the category url will reflect the category’s name. Clicking the edit button next to the url will allow you to change the slug. Below it, you can add a description for the category, which will display on your homepage if your current theme allows it.
 
