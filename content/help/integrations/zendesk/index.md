@@ -2,13 +2,12 @@
 title: Zendesk
 tags:
 - Features
-- Addons
 - Integrations
 category: help
 menu:
   help:
-    parent: addons-social
-    identifier: addons-social-zendesk
+    parent: integrations
+    identifier: integrations-zendesk
 ---
 
 ## Zendesk

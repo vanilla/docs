@@ -3,7 +3,7 @@ title: Advanced Embedding
 tags:
 - Features
 - Embedding
-category: help
+category: developer
 menu:
   help:
     parent: embedding
