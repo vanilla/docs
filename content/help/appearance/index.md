@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     identifier: appearance
-    weight: 11
+    weight: 20
 aliases:
 - /appearance
 ---

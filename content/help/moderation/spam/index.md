@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     identifier: spam
-    weight: 63
+    weight: 62
 aliases:
 - /moderation/spam
 ---

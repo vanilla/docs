@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     parent: appearance
-    weight: 14
+    weight: 23
 aliases:
 - /appearance/accessibility
 ---

@@ -6,8 +6,8 @@ tags:
 category: help
 menu:
   help:
-    identifier: categories
-    weight: 100
+    parent: forum-settings
+    weight: 31
 aliases:
 - /features/categories
 ---

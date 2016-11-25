@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     parent: appearance
-    weight: 13
+    weight: 22
 aliases:
 - /appearance/emails
 ---

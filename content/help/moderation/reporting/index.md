@@ -8,6 +8,7 @@ menu:
   help:
     parent: addons
     identifier: addons-reporting
+weight: 61
 aliases:
 - /addons/reporting
 ---

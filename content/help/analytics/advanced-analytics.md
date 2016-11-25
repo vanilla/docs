@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     parent: analytics
-    weight: 51
+    weight: 81
 aliases:
 - /analytics/advanced-analytics
 ---

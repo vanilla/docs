@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     parent: getting-started
-    weight: 2
+    weight: 11
 aliases:
 - /getting-started/custom-domain
 ---

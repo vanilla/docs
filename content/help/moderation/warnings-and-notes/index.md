@@ -8,6 +8,7 @@ menu:
   help:
     parent: addons
     identifier: addons-warnings-and-notes
+weight: 63
 aliases:
 - /addons/warnings-and-notes
 ---

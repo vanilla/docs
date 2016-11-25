@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: Q&A
-    weight: 100
+    weight: 40
 aliases:
 - /features/qna
 ---

@@ -6,7 +6,7 @@ category: help
 menu:
   help:
     identifier: analytics
-weight: 50
+weight: 80
 aliases:
 - /analytics
 ---

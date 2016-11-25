@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     parent: appearance
-    weight: 12
+    weight: 21
 aliases:
 - /appearance/custom-theme
 ---
