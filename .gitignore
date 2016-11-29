@@ -8,6 +8,7 @@ public/
 .grunt
 build/tmp/_componentsMap.scss
 build/scss/tmp/_componentsMap.scss
-dist/
+static/js/lunr-index.json
 .idea
 bower_components/
+dist/
