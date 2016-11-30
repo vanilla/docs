@@ -22,7 +22,11 @@ Vanilla currently provides OAuth2 integrations with these third-party services a
 * LinkedIn
 * Google+
 
-Because OAuth 2.0 is an SSO *framework* and not a narrowly defined protocol (see [OAuth 2.0 Spec](https://tools.ietf.org/html/rfc6749)), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins. This base class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage of this class, either create a plug in to extend its features or use the OAuth2 plugin. 
+Because OAuth 2.0 is an SSO *framework* and not a narrowly defined protocol (see [OAuth 2.0 Spec](https://tools.ietf.org/html/rfc6749)), 
+custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom 
+services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins. This base 
+class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage 
+of this class, either create a plug in to extend its features or use the OAuth2 plugin. 
 
 ## OAuth2 Plugin
  
