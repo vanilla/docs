@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Addons on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/addons/</link>
-    <description>Recent content in Addons on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/addons/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/addons/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,13 +21,13 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;disabling-badges:23609298254fc7e518529ff08d090324&#34;&gt;Disabling badges&lt;/h2&gt;
+&lt;h2 id=&#34;disabling-badges&#34;&gt;Disabling badges&lt;/h2&gt;
 
 &lt;p&gt;To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active.  Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.&lt;/p&gt;
 
 &lt;p&gt;It is not currently possible to delete a badge entirely.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-a-badge:23609298254fc7e518529ff08d090324&#34;&gt;Editing a badge&lt;/h2&gt;
+&lt;h2 id=&#34;editing-a-badge&#34;&gt;Editing a badge&lt;/h2&gt;
 
 &lt;p&gt;You can safely edit the Name, Description, and/or Image of any badge without effecting its automated functionality. These will be updated for any users who previously received the badge as well.&lt;/p&gt;
 
@@ -35,7 +35,7 @@
 
 &lt;p&gt;You may change the Points for a badge at any time. Point changes are not retroactive for users who previously received it.&lt;/p&gt;
 
-&lt;h2 id=&#34;creating-your-own-badges:23609298254fc7e518529ff08d090324&#34;&gt;Creating your own badges&lt;/h2&gt;
+&lt;h2 id=&#34;creating-your-own-badges&#34;&gt;Creating your own badges&lt;/h2&gt;
 
 &lt;p&gt;Create a memorable Name for your badge and give it a Description that explains what it is for and how users can earn it. This information will appear on the Badge&amp;rsquo;s page.&lt;/p&gt;
 
@@ -45,7 +45,7 @@
 
 &lt;p&gt;All badges created in your Dashboard must be given manually.&lt;/p&gt;
 
-&lt;h2 id=&#34;creating-automated-badges:23609298254fc7e518529ff08d090324&#34;&gt;Creating automated badges&lt;/h2&gt;
+&lt;h2 id=&#34;creating-automated-badges&#34;&gt;Creating automated badges&lt;/h2&gt;
 
 &lt;p&gt;It is not currently possible to create your own automated badges thru the Dashboard. To discuss custom possibilities for your community, contact sales.&lt;/p&gt;
 </description>
@@ -59,35 +59,35 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-a-ranks:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Adding a Ranks&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
 
 &lt;p&gt;Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-a-rank:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Editing a Rank&lt;/h2&gt;
+&lt;h2 id=&#34;editing-a-rank&#34;&gt;Editing a Rank&lt;/h2&gt;
 
 &lt;p&gt;On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.&lt;/p&gt;
 
-&lt;h2 id=&#34;rank-information:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Rank information&lt;/h2&gt;
+&lt;h2 id=&#34;rank-information&#34;&gt;Rank information&lt;/h2&gt;
 
-&lt;h3 id=&#34;name-label:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
+&lt;h3 id=&#34;name-label&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
 
 &lt;p&gt;The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&amp;rsquo;s name in discussions and comments after they attain the rank.&lt;/p&gt;
 
-&lt;h3 id=&#34;body-message:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
+&lt;h3 id=&#34;body-message&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
 
 &lt;p&gt;These only appear immediately after a user attains a rank. The &amp;ldquo;Body&amp;rdquo; is emailed to the user. The &amp;ldquo;Message&amp;rdquo; appears at the top of the page when the rank is triggered.&lt;/p&gt;
 
-&lt;h3 id=&#34;css-class:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;CSS Class&lt;/h3&gt;
+&lt;h3 id=&#34;css-class&#34;&gt;CSS Class&lt;/h3&gt;
 
 &lt;p&gt;The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&amp;rsquo; content appear more prominently. For example, if you had an &amp;ldquo;Expert&amp;rdquo; rank, maybe you&amp;rsquo;d highlight their comments with a special background color.&lt;/p&gt;
 
-&lt;h3 id=&#34;level:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Level&lt;/h3&gt;
+&lt;h3 id=&#34;level&#34;&gt;Level&lt;/h3&gt;
 
 &lt;p&gt;Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.&lt;/p&gt;
 
 &lt;p&gt;If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-criteria:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Setting Criteria&lt;/h2&gt;
+&lt;h2 id=&#34;setting-criteria&#34;&gt;Setting Criteria&lt;/h2&gt;
 
 &lt;p&gt;You can set thresholds for:&lt;/p&gt;
 
@@ -102,11 +102,11 @@
 
 &lt;p&gt;Checking &amp;ldquo;Assigned Manually&amp;rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&amp;rsquo;s profile and selecting the rank.&lt;/p&gt;
 
-&lt;h2 id=&#34;manually-assigning-a-rank:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
+&lt;h2 id=&#34;manually-assigning-a-rank&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
 
 &lt;p&gt;Rank assignment is done via &amp;ldquo;Edit Profile&amp;rdquo; from the user&amp;rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.&lt;/p&gt;
 
-&lt;h2 id=&#34;abilities:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Abilities&lt;/h2&gt;
+&lt;h2 id=&#34;abilities&#34;&gt;Abilities&lt;/h2&gt;
 
 &lt;p&gt;Each ability may be given the value of &amp;ldquo;Grant&amp;rdquo;, &amp;ldquo;Revoke&amp;rdquo;, or &amp;ldquo;Default&amp;rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.&lt;/p&gt;
 
@@ -130,7 +130,7 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;selecting-reactions:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Selecting Reactions&lt;/h2&gt;
+&lt;h2 id=&#34;selecting-reactions&#34;&gt;Selecting Reactions&lt;/h2&gt;
 
 &lt;p&gt;Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.&lt;/p&gt;
 
@@ -140,7 +140,7 @@
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
-&lt;h2 id=&#34;edit-a-reaction:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Edit a Reaction&lt;/h2&gt;
+&lt;h2 id=&#34;edit-a-reaction&#34;&gt;Edit a Reaction&lt;/h2&gt;
 
 &lt;p&gt;To edit a reaction, go to Reactions in the Dashboard and click the name of the Reaction you wish to edit.&lt;/p&gt;
 
@@ -150,11 +150,11 @@
 
 &lt;p&gt;Doing this allows you to keep any automated badges associated with that reaction, which you can then rename appropriately as well. See the Badges - Adding and Editing Badges to see how to do this safely.&lt;/p&gt;
 
-&lt;h2 id=&#34;adding-a-reaction:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Adding a Reaction&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-reaction&#34;&gt;Adding a Reaction&lt;/h2&gt;
 
 &lt;p&gt;To add a new reaction, contact support or your sales representative.&lt;/p&gt;
 
-&lt;h2 id=&#34;advanced-settings:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Advanced Settings&lt;/h2&gt;
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
@@ -176,15 +176,15 @@
       <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-a-note:47823c22c39cc40df8d021023ea570a1&#34;&gt;Adding a Note&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
 
 &lt;p&gt;To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.&lt;/p&gt;
 
-&lt;h2 id=&#34;viewing-notes:47823c22c39cc40df8d021023ea570a1&#34;&gt;Viewing Notes&lt;/h2&gt;
+&lt;h2 id=&#34;viewing-notes&#34;&gt;Viewing Notes&lt;/h2&gt;
 
 &lt;p&gt;To view a user’s notes go to their profile. There will be a notes link on the side panel. Note that both notes and warnings are displayed in the same list. Notes are identified by a note tag. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.View (if present) to view notes.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-and-deleting-a-note:47823c22c39cc40df8d021023ea570a1&#34;&gt;Editing and Deleting a Note&lt;/h2&gt;
+&lt;h2 id=&#34;editing-and-deleting-a-note&#34;&gt;Editing and Deleting a Note&lt;/h2&gt;
 
 &lt;p&gt;You can edit and delete user notes by hovering over them and clicking the corresponding button. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to edit or delete notes.&lt;/p&gt;
 </description>
@@ -198,7 +198,7 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
-&lt;h2 id=&#34;applying-ranks-over-sso:e677b47741f26590f3902caf1023abc7&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
+&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
 
 &lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
 
@@ -222,23 +222,23 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;purpose:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Purpose&lt;/h2&gt;
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.&lt;/p&gt;
 
-&lt;h2 id=&#34;default-badges:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Default badges&lt;/h2&gt;
+&lt;h2 id=&#34;default-badges&#34;&gt;Default badges&lt;/h2&gt;
 
 &lt;p&gt;Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions). Default badges are typically assigned to users automatically when certain conditions are met.&lt;/p&gt;
 
-&lt;h2 id=&#34;badges-list:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Badges list&lt;/h2&gt;
+&lt;h2 id=&#34;badges-list&#34;&gt;Badges list&lt;/h2&gt;
 
 &lt;p&gt;All badges are listed in the Dashboard under &amp;ldquo;Badges&amp;rdquo;. This includes any badge ever created in your forum, regardless of whether it is currently active or achievable.&lt;/p&gt;
 
-&lt;h2 id=&#34;users-badges:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
+&lt;h2 id=&#34;users-badges&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
 
 &lt;p&gt;A list of a users&amp;rsquo; badges will display, by default, in the panel of their profile as a grid of badge images. Badges awarded incrementally (such as membership anniversaries) will &amp;ldquo;stack&amp;rdquo;, meaning only the highest-increment badge will show.&lt;/p&gt;
 
-&lt;h2 id=&#34;viewing-a-badge:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Viewing a badge&lt;/h2&gt;
+&lt;h2 id=&#34;viewing-a-badge&#34;&gt;Viewing a badge&lt;/h2&gt;
 
 &lt;p&gt;Clicking a badge&amp;rsquo;s name in the badges list will take you to a public page describing the badge. Users can get to this page by clicking the badge in their profile. This page shows the most recent recipients of the badge.&lt;/p&gt;
 </description>
@@ -258,13 +258,13 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;curating-with-reactions:56559b11c2cbdbdaf9047bb5434e27ea&#34;&gt;Curating with Reactions&lt;/h2&gt;
+&lt;h2 id=&#34;curating-with-reactions&#34;&gt;Curating with Reactions&lt;/h2&gt;
 
 &lt;p&gt;Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.&lt;/p&gt;
 
 &lt;p&gt;Any of the thresholds or increment values mentioned in this document can be modified via support.&lt;/p&gt;
 
-&lt;h2 id=&#34;promoting-content:56559b11c2cbdbdaf9047bb5434e27ea&#34;&gt;Promoting content&lt;/h2&gt;
+&lt;h2 id=&#34;promoting-content&#34;&gt;Promoting content&lt;/h2&gt;
 
 &lt;p&gt;Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it. It assigns five points to the discussion or comment. The user that made the post receives the number of points indicated under that reaction in your Dashboard.&lt;/p&gt;
 
@@ -272,17 +272,17 @@
 
 &lt;p&gt;After content is added to the Best Of page, it is never removed, no matter what its future point total is. The &amp;ldquo;promoted&amp;rdquo; CSS class is reevaluated as point totals change. You can use this special class to style promoted content different (like highlighting it with a special background color).&lt;/p&gt;
 
-&lt;h2 id=&#34;burying-content:56559b11c2cbdbdaf9047bb5434e27ea&#34;&gt;Burying content&lt;/h2&gt;
+&lt;h2 id=&#34;burying-content&#34;&gt;Burying content&lt;/h2&gt;
 
 &lt;p&gt;Discussions and comments that reach a score of -5 or lower will be &amp;ldquo;buried&amp;rdquo;. Buried content appears collapsed by default and requires a user to click on the content before it can be read. You can style buried content using the &amp;ldquo;Buried&amp;rdquo; CSS class.&lt;/p&gt;
 
-&lt;h2 id=&#34;abuse-and-spam:56559b11c2cbdbdaf9047bb5434e27ea&#34;&gt;Abuse and Spam&lt;/h2&gt;
+&lt;h2 id=&#34;abuse-and-spam&#34;&gt;Abuse and Spam&lt;/h2&gt;
 
 &lt;p&gt;Abuse and Spam reactions are available to all users when enabled but have special actions attached to them. Five or more Abuse reactions will add the content to the Moderation Queue for moderator review. Ten or more will remove it. Five or more Spam reactions will move the content to the Spam Queue.&lt;/p&gt;
 
 &lt;p&gt;A user with the &amp;ldquo;Curation&amp;rdquo; permission counts as 5 of either of these reactions when they use it.&lt;/p&gt;
 
-&lt;h2 id=&#34;using-negative-reactions:56559b11c2cbdbdaf9047bb5434e27ea&#34;&gt;Using negative reactions&lt;/h2&gt;
+&lt;h2 id=&#34;using-negative-reactions&#34;&gt;Using negative reactions&lt;/h2&gt;
 
 &lt;p&gt;The current default for negative reactions in new installations of Vanilla is for them to remove 1 point from the discussion or comment, but to have no effect on the point total of the user who made the post. This discourages abuse of negative reactions beyond simple voting scenarios.&lt;/p&gt;
 
@@ -298,17 +298,17 @@
       <guid>//docs.vanillaforums.com/help/addons/social/facebook/</guid>
       <description>
 
-&lt;h2 id=&#34;facebook:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Facebook&lt;/h2&gt;
+&lt;h2 id=&#34;facebook&#34;&gt;Facebook&lt;/h2&gt;
 
 &lt;p&gt;Facebook Connect allows users to sign in using their Facebook account. You must register your application with Facebook for this plugin to work.&lt;/p&gt;
 
-&lt;h3 id=&#34;how-to-set-up-facebook-connect:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;How to set up Facebook Connect&lt;/h3&gt;
+&lt;h3 id=&#34;how-to-set-up-facebook-connect&#34;&gt;How to set up Facebook Connect&lt;/h3&gt;
 
 &lt;p&gt;In order to set up Facebook Connect, you must create an &amp;ldquo;application&amp;rdquo; in Facebook at: &lt;a href=&#34;https://developers.facebook.com/apps&#34;&gt;https://developers.facebook.com/apps&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Once your application has been set up, you must copy the &amp;ldquo;Application ID&amp;rdquo; and &amp;ldquo;Application Secret&amp;rdquo; into your Facebook plugin settings page from your Vanilla dashboard.&lt;/p&gt;
 
-&lt;h3 id=&#34;need-help:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Need help?&lt;/h3&gt;
+&lt;h3 id=&#34;need-help&#34;&gt;Need help?&lt;/h3&gt;
 
 &lt;p&gt;For a complete walk-through of the steps involved, read &lt;a href=&#34;http://blog.vanillaforums.com/facebook-application-for-vanillaforums-sso/&#34;&gt;How to Create a Facebook Application for Vanillaforums Single Sign-On (SSO)&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -322,11 +322,11 @@
       <guid>//docs.vanillaforums.com/help/addons/forum-merge/</guid>
       <description>
 
-&lt;h2 id=&#34;when-to-use-forum-merge:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;When to Use Forum Merge&lt;/h2&gt;
+&lt;h2 id=&#34;when-to-use-forum-merge&#34;&gt;When to Use Forum Merge&lt;/h2&gt;
 
 &lt;p&gt;The ForumMerge plug-in should be used when you want to take one existing Vanilla forum instance and merge it into another existing Vanilla forum.  Core Vanilla data, in addition to some plug-in and addon data, will be carried over from the source into the destination forum and reconciled with existing records to avoid conflicts.&lt;/p&gt;
 
-&lt;h2 id=&#34;what-data-is-merged:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;What Data is Merged&lt;/h2&gt;
+&lt;h2 id=&#34;what-data-is-merged&#34;&gt;What Data is Merged&lt;/h2&gt;
 
 &lt;p&gt;The following Vanilla data will be considered during the merge process:&lt;/p&gt;
 
@@ -348,7 +348,7 @@
 &lt;li&gt;Tagging&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;the-process-of-merging-forums:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;The Process of Merging Forums&lt;/h2&gt;
+&lt;h2 id=&#34;the-process-of-merging-forums&#34;&gt;The Process of Merging Forums&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Ensure your source forum database is on the same server and accessible by the same database user configured for your destination forum.&lt;/li&gt;
@@ -360,7 +360,7 @@
 &lt;li&gt;If you&amp;rsquo;ll be merging in another forum, you can visit /utility/mergereset to reset all existing OldID fields.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;notes:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Notes&lt;/h2&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Do not enable the Forum Merge plug-in on the source forum.  If it has been enabled in the past, you&amp;rsquo;ll need to remove all OldID and OldCategoryID columns from the relevant tables prior to running the merge.  Failure to do so will cause a fatal SQL error during the merge, because the merge-specific columns (OldID, OldCategoryID) are being selected twice.&lt;/li&gt;
@@ -377,25 +377,25 @@
       <guid>//docs.vanillaforums.com/help/addons/gigya/</guid>
       <description>
 
-&lt;h2 id=&#34;gigya-sign-in:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Gigya Sign In&lt;/h2&gt;
+&lt;h2 id=&#34;gigya-sign-in&#34;&gt;Gigya Sign In&lt;/h2&gt;
 
 &lt;p&gt;The Gigya Sign In adds the ability to sign to your community with Gigya Social Login. You will need to configure your site in your &lt;a href=&#34;https://platform.gigya.com/Site/partners/dashboard.aspx&#34;&gt;Gigya dashboard&lt;/a&gt; and then set up your login plugin on the &lt;a href=&#34;https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin&#34;&gt;Gigya plugins page&lt;/a&gt; before you can use the Gigya addon in Vanilla.&lt;/p&gt;
 
-&lt;h3 id=&#34;setting-up-your-site-in-gigya:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Setting up your site in Gigya&lt;/h3&gt;
+&lt;h3 id=&#34;setting-up-your-site-in-gigya&#34;&gt;Setting up your site in Gigya&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Instructions on setting up a a site in Gigya can be found in their &lt;a href=&#34;http://developers.gigya.com/010_Developer_Guide/82_Socialize_Setup&#34;&gt;site setup documentation&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Once you&amp;rsquo;ve set up your site you&amp;rsquo;ll need to copy and paste your &lt;strong&gt;Client ID&lt;/strong&gt; and &lt;strong&gt;Client secret&lt;/strong&gt; into your Vanilla dashboard.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;setting-up-the-login-plugin-in-gigya:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Setting up the login plugin in Gigya&lt;/h3&gt;
+&lt;h3 id=&#34;setting-up-the-login-plugin-in-gigya&#34;&gt;Setting up the login plugin in Gigya&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;You&amp;rsquo;ll need to configure the look and feel of your login widget on the &lt;a href=&#34;https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin&#34;&gt;Gigya plugins page&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Once you&amp;rsquo;ve set up your login plugin you&amp;rsquo;ll need to copy and paste the &lt;strong&gt;head template&lt;/strong&gt; and &lt;strong&gt;body template&lt;/strong&gt; into your Vanilla dashboard.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;setting-up-the-gigya-addon-in-vanilla:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Setting up the Gigya Addon in Vanilla&lt;/h3&gt;
+&lt;h3 id=&#34;setting-up-the-gigya-addon-in-vanilla&#34;&gt;Setting up the Gigya Addon in Vanilla&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go to your dashboard/addons and find the &lt;strong&gt;Gigya Sign In&lt;/strong&gt; plugin.&lt;/li&gt;
@@ -404,7 +404,7 @@
 &lt;li&gt;Click save.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;notes:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Notes&lt;/h3&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;The default Vanilla theme gives 170px to alternate sign in methods. There is a place to set the login width on the &lt;a href=&#34;https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin&#34;&gt;Gigya plugins page&lt;/a&gt;.&lt;/li&gt;
@@ -421,11 +421,11 @@
       <guid>//docs.vanillaforums.com/help/addons/social/github/</guid>
       <description>
 
-&lt;h2 id=&#34;github:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Github&lt;/h2&gt;
+&lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
 
 &lt;p&gt;This plugin allows you to submit user discussion and comments as GitHub issues.&lt;/p&gt;
 
-&lt;h3 id=&#34;setup-instructions:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Setup Instructions&lt;/h3&gt;
+&lt;h3 id=&#34;setup-instructions&#34;&gt;Setup Instructions&lt;/h3&gt;
 
 &lt;p&gt;If you already have a Github account, you need to enable API Access for this plugin to work.&lt;/p&gt;
 
@@ -451,7 +451,7 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;giving-a-badge:4855e0ce3af3806cdadf055a2b0e34ba&#34;&gt;Giving a badge&lt;/h2&gt;
+&lt;h2 id=&#34;giving-a-badge&#34;&gt;Giving a badge&lt;/h2&gt;
 
 &lt;p&gt;Badges-&amp;gt;Give is the permission that defines who can give badges. By default, moderators and administrators have it.&lt;/p&gt;
 
@@ -459,11 +459,11 @@
 
 &lt;p&gt;From a user&amp;rsquo;s profile, you may select &amp;ldquo;Give Badge&amp;rdquo; from their options menu to give that user a particular badge.&lt;/p&gt;
 
-&lt;h2 id=&#34;revoking-a-badge:4855e0ce3af3806cdadf055a2b0e34ba&#34;&gt;Revoking a badge&lt;/h2&gt;
+&lt;h2 id=&#34;revoking-a-badge&#34;&gt;Revoking a badge&lt;/h2&gt;
 
 &lt;p&gt;To revoke a badge from one or more users, contact support. It is not currently possible to revoke the points assigned.&lt;/p&gt;
 
-&lt;h2 id=&#34;requesting-a-badge:4855e0ce3af3806cdadf055a2b0e34ba&#34;&gt;Requesting a badge&lt;/h2&gt;
+&lt;h2 id=&#34;requesting-a-badge&#34;&gt;Requesting a badge&lt;/h2&gt;
 
 &lt;p&gt;Badges-&amp;gt;Request is the permission that defines who can request a badge.&lt;/p&gt;
 
@@ -473,7 +473,7 @@
 
 &lt;p&gt;Users with permission to Give badges will be able to see the Badge Requests page. They will also have an option under Notification Preferences in their profile to be notified of new badge requests.&lt;/p&gt;
 
-&lt;h2 id=&#34;addons-that-assign-badges:4855e0ce3af3806cdadf055a2b0e34ba&#34;&gt;Addons that assign badges&lt;/h2&gt;
+&lt;h2 id=&#34;addons-that-assign-badges&#34;&gt;Addons that assign badges&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Reactions: Gives badges for incremental levels of positive reactions received by a user&amp;rsquo;s content.&lt;/li&gt;
@@ -490,11 +490,11 @@
       <guid>//docs.vanillaforums.com/help/addons/social/googleplus/</guid>
       <description>
 
-&lt;h2 id=&#34;google-plus:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Google Plus&lt;/h2&gt;
+&lt;h2 id=&#34;google-plus&#34;&gt;Google Plus&lt;/h2&gt;
 
 &lt;p&gt;The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in &lt;a href=&#34;https://code.google.com/apis/console&#34;&gt;Google API Console&lt;/a&gt;. This &lt;a href=&#34;http://youtu.be/OHEb22VrZy4&#34;&gt;Google+ Video Tutorial&lt;/a&gt; also shows you how to set this up.&lt;/p&gt;
 
-&lt;h3 id=&#34;setting-up-social-login-in-google-plus:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Setting up social login in Google Plus&lt;/h3&gt;
+&lt;h3 id=&#34;setting-up-social-login-in-google-plus&#34;&gt;Setting up social login in Google Plus&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Once you have enabled the Google+ Plugin in your Vanilla Dashboard, go to your API Console at Google.&lt;/li&gt;
@@ -520,17 +520,17 @@
       <guid>//docs.vanillaforums.com/help/addons/groups/</guid>
       <description>
 
-&lt;h2 id=&#34;what-are-groups:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;What are Groups?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-groups&#34;&gt;What are Groups?&lt;/h2&gt;
 
 &lt;p&gt;Groups is an addon for very large communities to allow their users to form their own discussion groups. These groups allows for having discussions outside the normal forum category structure in self-contained areas. Very large communities can be difficult to approach for new users. Groups can be a useful way for users to find other folks with common interests or backgrounds.&lt;/p&gt;
 
 &lt;p&gt;Groups have an events list, their own announcements, and leaders who run the show. Users can join a group freely, by application, or by invitation. Your normal moderators (with the permission Moderation.Manage) will have the ability to moderate inside groups as well.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-only-very-large-communities:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Why only very large communities?&lt;/h2&gt;
+&lt;h2 id=&#34;why-only-very-large-communities&#34;&gt;Why only very large communities?&lt;/h2&gt;
 
 &lt;p&gt;Groups can cause discussion segregation and draw attention away from your main forum categories. Cliques can form within your community which hurt its cohesion and growth. We strongly recommend against using Groups on sites with less than several thousand currently active users (users that participate once a month or more).&lt;/p&gt;
 
-&lt;h2 id=&#34;getting-started-with-groups:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Getting started with Groups&lt;/h2&gt;
+&lt;h2 id=&#34;getting-started-with-groups&#34;&gt;Getting started with Groups&lt;/h2&gt;
 
 &lt;p&gt;Try creating three to eight groups as a pilot program to introduce groups to your community. Carefully managing the list of groups available can encourage the creation of fewer groups with higher quality and participation. Ten groups with 30 members each will create a far better experience than 100 groups with three members each.&lt;/p&gt;
 </description>
@@ -550,15 +550,15 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;ideation:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Ideation&lt;/h2&gt;
+&lt;h2 id=&#34;ideation&#34;&gt;Ideation&lt;/h2&gt;
 
 &lt;p&gt;Ideation gives forum users the ability to upvote and optionally downvote discussions.&lt;/p&gt;
 
-&lt;h3 id=&#34;ideas-overview:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Ideas Overview&lt;/h3&gt;
+&lt;h3 id=&#34;ideas-overview&#34;&gt;Ideas Overview&lt;/h3&gt;
 
 &lt;p&gt;An idea is a discussion that can be voted on by forum users. It has a status that lets moderators easily communicate decisions made on the idea, and determines whether it&amp;rsquo;s open or closed for voting. You can modify, add or delete available statuses from the dashboard. Ideas can only be created in idea-specific categories an idea-specific categories can only contain ideas.&lt;/p&gt;
 
-&lt;h3 id=&#34;enabling-ideation:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Enabling Ideation&lt;/h3&gt;
+&lt;h3 id=&#34;enabling-ideation&#34;&gt;Enabling Ideation&lt;/h3&gt;
 
 &lt;p&gt;To enable Ideation you&amp;rsquo;ll need to:&lt;/p&gt;
 
@@ -571,15 +571,15 @@
 
 &lt;p&gt;Note that once an idea category is created, it can never be converted to a regular category and regular categories can never be converted to idea categories.&lt;/p&gt;
 
-&lt;h3 id=&#34;idea-statuses:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Idea Statuses&lt;/h3&gt;
+&lt;h3 id=&#34;idea-statuses&#34;&gt;Idea Statuses&lt;/h3&gt;
 
 &lt;p&gt;Idea statuses communicate to users what state the idea is in, and whether the idea is open to voting or not. The Ideation plugin ships with these default statuses: Active, Already Offered, Declined, Completed, In Progress, and In Review. The available statuses are completely configurable and can be changed to suit your community&amp;rsquo;s needs.&lt;/p&gt;
 
-&lt;h4 id=&#34;adding-and-editing-available-idea-statuses:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Adding and Editing Available Idea Statuses&lt;/h4&gt;
+&lt;h4 id=&#34;adding-and-editing-available-idea-statuses&#34;&gt;Adding and Editing Available Idea Statuses&lt;/h4&gt;
 
 &lt;p&gt;To edit the available idea statuses, navigate to the &amp;lsquo;Idea Statuses&amp;rsquo; page from the link in the dashboard panel. From there, you can add, remove and edit statuses. You can also configure the default status for new ideas that are created and specify whether a status is open or closed for voting. Users need to have the Garden.Settings.Manage permission in order to configure the available statuses.&lt;/p&gt;
 
-&lt;h3 id=&#34;changing-an-idea-s-status:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Changing An Idea&amp;rsquo;s Status&lt;/h3&gt;
+&lt;h3 id=&#34;changing-an-idea-s-status&#34;&gt;Changing An Idea&amp;rsquo;s Status&lt;/h3&gt;
 
 &lt;p&gt;You can change the status of an idea by navigating to the idea in the forum and clicking on its options dropdown menu. You&amp;rsquo;ll find an &amp;lsquo;Idea Status&amp;rsquo; option there. From there, you can select a new status for the idea. You can also add notes to explain the status change. For example, if an idea is marked as a duplicate of another, you may want to link to the idea it is a duplicate of. Users need to have the Vanilla.Moderation.Manage permission in order to change the status on an idea.&lt;/p&gt;
 

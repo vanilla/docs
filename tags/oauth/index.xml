@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oauth on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/oauth/</link>
-    <description>Recent content in Oauth on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/oauth/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <guid>//docs.vanillaforums.com/help/sso/oauth/</guid>
       <description>
 
-&lt;h2 id=&#34;sso-with-oauth-overview:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
+&lt;h2 id=&#34;sso-with-oauth-overview&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
 
 &lt;p&gt;Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:&lt;/p&gt;
 
@@ -32,15 +32,15 @@ services required to create SSO integrations, Vanilla has created a base class t
 class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage
 of this class, either create a plug in to extend its features or use the OAuth2 plugin.&lt;/p&gt;
 
-&lt;h2 id=&#34;oauth2-plugin:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;OAuth2 Plugin&lt;/h2&gt;
+&lt;h2 id=&#34;oauth2-plugin&#34;&gt;OAuth2 Plugin&lt;/h2&gt;
 
-&lt;h3 id=&#34;overview:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Overview&lt;/h3&gt;
+&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
 
 &lt;p&gt;Vanilla has created an OAuth2 plugin that, for most use-cases, can provide a plug-and-play SSO solution.&lt;/p&gt;
 
 &lt;p&gt;OAuth2 accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.&lt;/p&gt;
 
-&lt;h3 id=&#34;features:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Features&lt;/h3&gt;
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
 
 &lt;p&gt;The OAuth2 Plugin attempts to &amp;ldquo;parameterize&amp;rdquo; as many aspects of the functionality as possible. A settings form in the dashboard allows you to set:&lt;/p&gt;
 
@@ -52,7 +52,7 @@ of this class, either create a plug in to extend its features or use the OAuth2 
 &lt;li&gt;The exepected keys in the JSON response in the profile request&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;possible-pitfalls:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Possible Pitfalls&lt;/h3&gt;
+&lt;h3 id=&#34;possible-pitfalls&#34;&gt;Possible Pitfalls&lt;/h3&gt;
 
 &lt;p&gt;A number of things can go wrong when trying to implement SSO with this plugin:&lt;/p&gt;
 

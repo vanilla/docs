@@ -296,13 +296,13 @@
 
                 
 
-<h2 id="when-to-use-the-config:adf76c8799fa48ff52a94fa55a2a42a6">When to use the config</h2>
+<h2 id="when-to-use-the-config">When to use the config</h2>
 
 <p>Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.</p>
 
 <p>If you have large quantities of data or data that is written frequently, consider using the <a href="//docs.vanillaforums.com/developer/framework/database">database</a> instead.</p>
 
-<h2 id="reading-from-config:adf76c8799fa48ff52a94fa55a2a42a6">Reading from config</h2>
+<h2 id="reading-from-config">Reading from config</h2>
 
 <p>The <code>c</code> function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in <a href="//docs.vanillaforums.com/developer/configuration">dot notation</a>. The second is an optional default value to return if requested config setting is not defined.</p>
 
@@ -317,7 +317,7 @@ $Configuration['Example']['Settings']['B'] = 2;
 
 <p>Now calling <code>c('Examples.Settings');</code> will return <code>array('A'=&gt;1, 'B'=&gt;2)</code>.</p>
 
-<h2 id="writing-to-config:adf76c8799fa48ff52a94fa55a2a42a6">Writing to config</h2>
+<h2 id="writing-to-config">Writing to config</h2>
 
 <p>Save to the config with the <code>SaveToConfig</code> function. It takes the name of the config value, a new value to associate with it, and an optional options array. In the options array, you can pass the key <code>Save</code> with the value <code>FALSE</code> to make the config change only apply for this pageload.</p>
 
@@ -329,7 +329,7 @@ $Configuration['Example']['Settings']['B'] = 2;
 
 <aside class="warning">Do not used numeric-key arrays as config values. Associative arrays are fine.</aside>
 
-<h2 id="configuration-module:adf76c8799fa48ff52a94fa55a2a42a6">Configuration module</h2>
+<h2 id="configuration-module">Configuration module</h2>
 
 <p>We&rsquo;ve created a shortcut for making simple settings pages using the <code>ConfigurationModule</code>.</p>
 

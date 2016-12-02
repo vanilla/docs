@@ -249,9 +249,9 @@
 
                 
 
-<h1 id="schemas:d680e8a854a7cbad6d490c445cba2eba">Schemas</h1>
+<h1 id="schemas">Schemas</h1>
 
-<h2 id="garden-schema:d680e8a854a7cbad6d490c445cba2eba">Garden\Schema</h2>
+<h2 id="garden-schema">Garden\Schema</h2>
 
 <p>In Vanilla, the <code>Garden\Schema</code> class is used to whitelist parameters for a data structure and validate array of data.  It is primarily used for filtering input to API endpoints.</p>
 
@@ -273,11 +273,11 @@
 
 <p>If a parameter&rsquo;s name is followed by a question mark (?), it is flagged as optional.</p>
 
-<h2 id="validating:d680e8a854a7cbad6d490c445cba2eba">Validating</h2>
+<h2 id="validating">Validating</h2>
 
 <p>To validate an array, you must pass it to an instance&rsquo;s <code>Garden\Schema::validate</code> function.  This will validate the incoming array&rsquo;s structure and data against the schema&rsquo;s configuration.  If a required parameter is not detected, or a configured parameter does not match its specified type, an exception of <code>Garden\Exception\ValidationException</code> is thrown, describing all errors encountered while validating the array.  Unexpected parameters are handled based on the schema&rsquo;s configured validation behavior.</p>
 
-<h2 id="validation-behavior:d680e8a854a7cbad6d490c445cba2eba">Validation Behavior</h2>
+<h2 id="validation-behavior">Validation Behavior</h2>
 
 <p>When <code>Garden\Schema</code> encounters a parameter that has not been explicitly defined, it can handle things a few different ways, depending on how it is configured.  Configuring the behavior is done by passing one of the <code>Garden\Schema::VALIDATE_*</code> constants to an instance&rsquo;s <code>Garden\Schema::setValidationBehavior</code> function.</p>
 
@@ -289,7 +289,7 @@
 <li><code>Garden\Schema::VALIDATE_REMOVE</code> - Silently remove any unexpected parameters.</li>
 </ul>
 
-<h4 id="basic-example:d680e8a854a7cbad6d490c445cba2eba">Basic Example</h4>
+<h4 id="basic-example">Basic Example</h4>
 
 <p>This is a basic schema with only top-level parameters.</p>
 
@@ -313,7 +313,7 @@ $schema([
 <li><code>categoryID</code> (integer, required) - The category to place the discussion.</li>
 </ol>
 
-<h4 id="nested-example:d680e8a854a7cbad6d490c445cba2eba">Nested Example</h4>
+<h4 id="nested-example">Nested Example</h4>
 
 <p>Schemas can also be written to allow the inclusion of objects as parameters.</p>
 

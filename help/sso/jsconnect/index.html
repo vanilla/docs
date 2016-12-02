@@ -290,7 +290,7 @@
 
                 
 
-<h2 id="jsconnect-concepts-overview:d680e8a854a7cbad6d490c445cba2eba">jsConnect Concepts Overview</h2>
+<h2 id="jsconnect-concepts-overview">jsConnect Concepts Overview</h2>
 
 <p>Our SSO solution has a few basic assumptions:</p>
 
@@ -306,7 +306,7 @@
 <li>You have confirmed, unique <strong>email addresses</strong> for users.</li>
 </ul>
 
-<h2 id="creating-mapping-users:d680e8a854a7cbad6d490c445cba2eba">Creating &amp; mapping users</h2>
+<h2 id="creating-mapping-users">Creating &amp; mapping users</h2>
 
 <p>Data that can currently be passed over SSO with jsConnect:</p>
 
@@ -328,7 +328,7 @@
 
 <p><strong>We strongly recommend against creating new users via the API.</strong> Our SSO solution lazy-creates new users for maximum robustness and reliability. Once a new user is created, you can optionally sync additional data about the user over API as needed.</p>
 
-<h2 id="unified-user-experience:d680e8a854a7cbad6d490c445cba2eba">Unified user experience</h2>
+<h2 id="unified-user-experience">Unified user experience</h2>
 
 <p>In Vanilla, these optional configuration changes are possible:</p>
 
@@ -341,31 +341,31 @@
 
 <p>Cloud users can contact support to make these changes.</p>
 
-<h2 id="how-it-connects:d680e8a854a7cbad6d490c445cba2eba">How it connects</h2>
+<h2 id="how-it-connects">How it connects</h2>
 
 <p>Clicking the &ldquo;Sign In&rdquo; button in Vanilla generates an asynchronous request <strong>in the user&rsquo;s browser session</strong> back to the main website. This means the user&rsquo;s cookies are sent as if they had visited the page directly, and that your normal login detection logic will work.</p>
 
 <p><img src="//docs.vanillaforums.com/img/help/features/sso/jsconnect-overview.png" alt="" /></p>
 
-<h2 id="two-flavors-of-sso:d680e8a854a7cbad6d490c445cba2eba">Two Flavors of SSO</h2>
+<h2 id="two-flavors-of-sso">Two Flavors of SSO</h2>
 
 <p>There are two implementations of SSO that jsConnect supports. You can implement either of the methods or both as they serve different purposes.</p>
 
-<h3 id="method-1-site-wide-sso:d680e8a854a7cbad6d490c445cba2eba">Method 1: Site-Wide SSO</h3>
+<h3 id="method-1-site-wide-sso">Method 1: Site-Wide SSO</h3>
 
 <p>You implement site-wide SSO when Vanilla is as a full site. With this method you need to create a page that provides your login information in jsonp format.</p>
 
-<h3 id="method-2-embedded-sso:d680e8a854a7cbad6d490c445cba2eba">Method 2: Embedded SSO</h3>
+<h3 id="method-2-embedded-sso">Method 2: Embedded SSO</h3>
 
 <p>Vanilla also has the ability to be embedded in an html page either as an entire site or just as embedded comments. With this scenario you need to create a special SSO string that can be passed to the embedded Vanilla and provide login information.</p>
 
-<h2 id="make-it-seamless:d680e8a854a7cbad6d490c445cba2eba">Make it seamless</h2>
+<h2 id="make-it-seamless">Make it seamless</h2>
 
 <p>When setting up a jsConnect connection in full-site mode, you have the option to specify it as &ldquo;default&rdquo;. Doing this attaches it to the special <code>/sso</code> endpoint in Vanilla. When a user clicks &ldquo;Forum&rdquo; in your website&rsquo;s navigation, instead of linking to the forum homepage, instead link them to the <code>/sso</code> page. This will auto-fire the asynchronous call back to your website rather than waiting for the user to click &ldquo;sign in&rdquo;, then drops them on the homepage as normal.</p>
 
 <p>For more information, read our <a href="//docs.vanillaforums.com/help/sso/jsconnect/overview">technical overview</a>.</p>
 
-<h2 id="wordpress-plugin:d680e8a854a7cbad6d490c445cba2eba">WordPress plugin</h2>
+<h2 id="wordpress-plugin">WordPress plugin</h2>
 
 <p>If your site is using WordPress then we make a plugin that allows you to use SSO with your WordPress site. It also helps you set up an embedded forum and embedded comments on your site. <a href="https://wordpress.org/plugins/vanilla-forums/" target="_blank">Get the plugin</a>.</p>
 

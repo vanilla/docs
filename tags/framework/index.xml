@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Framework on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/framework/</link>
-    <description>Recent content in Framework on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/framework/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,15 +15,15 @@
       <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
       <description>
 
-&lt;h2 id=&#34;assets:ee118ebf16a4069ead6ee055bd1afe43&#34;&gt;Assets&lt;/h2&gt;
+&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
 
 &lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
 
-&lt;h3 id=&#34;default-assets:ee118ebf16a4069ead6ee055bd1afe43&#34;&gt;Default assets&lt;/h3&gt;
+&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
 
 &lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
 
-&lt;h3 id=&#34;using-assets:ee118ebf16a4069ead6ee055bd1afe43&#34;&gt;Using assets&lt;/h3&gt;
+&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
 
 &lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
 
@@ -41,15 +41,15 @@
       <guid>//docs.vanillaforums.com/developer/framework/controllers/</guid>
       <description>
 
-&lt;h2 id=&#34;controllers:568eb592fd969d4a574c5d9eabbcb4c8&#34;&gt;Controllers&lt;/h2&gt;
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
 
 &lt;p&gt;In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.&lt;/p&gt;
 
-&lt;h3 id=&#34;dispatcher:568eb592fd969d4a574c5d9eabbcb4c8&#34;&gt;Dispatcher&lt;/h3&gt;
+&lt;h3 id=&#34;dispatcher&#34;&gt;Dispatcher&lt;/h3&gt;
 
 &lt;p&gt;Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (&lt;code&gt;Gdn_Dispatcher&lt;/code&gt;) receives incoming &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/requests&#34;&gt;requests&lt;/a&gt; and invokes the appropriate controller(s).&lt;/p&gt;
 
-&lt;h3 id=&#34;mapping-urls:568eb592fd969d4a574c5d9eabbcb4c8&#34;&gt;Mapping URLs&lt;/h3&gt;
+&lt;h3 id=&#34;mapping-urls&#34;&gt;Mapping URLs&lt;/h3&gt;
 
 &lt;p&gt;First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.&lt;/p&gt;
 
@@ -61,7 +61,7 @@ $ProfileController-&amp;gt;notifications(&#39;1&#39;, &#39;Lincoln&#39;);
 
 &lt;p&gt;If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the &lt;code&gt;Index()&lt;/code&gt; method will be invoked. Therefore, the basic profile URL &lt;code&gt;/profile/1/Lincoln&lt;/code&gt; could be more verbosely written as &lt;code&gt;/dashboard/profile/index/1/Lincoln&lt;/code&gt; to more clearly understand what code it is invoking.&lt;/p&gt;
 
-&lt;h3 id=&#34;pretty-urls:568eb592fd969d4a574c5d9eabbcb4c8&#34;&gt;Pretty URLs&lt;/h3&gt;
+&lt;h3 id=&#34;pretty-urls&#34;&gt;Pretty URLs&lt;/h3&gt;
 
 &lt;p&gt;All requests are dispatched thru the index.php file. While it&amp;rsquo;s possible to use the framework by passing a &amp;lsquo;p&amp;rsquo; parameter with the rest of the path (e.g. &lt;code&gt;/index.php?p=/profile&lt;/code&gt;), it&amp;rsquo;s best to configure your server to handle &amp;ldquo;pretty&amp;rdquo; URLs.&lt;/p&gt;
 
@@ -91,13 +91,13 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
       <guid>//docs.vanillaforums.com/developer/framework/database/</guid>
       <description>
 
-&lt;h2 id=&#34;database-layer:1e080c892326e5bba749587eba8bcf9e&#34;&gt;Database layer&lt;/h2&gt;
+&lt;h2 id=&#34;database-layer&#34;&gt;Database layer&lt;/h2&gt;
 
 &lt;p&gt;Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in &lt;code&gt;/library/databases&lt;/code&gt;). However, at this time, the Vanilla team has no plans to support additional databases.&lt;/p&gt;
 
 &lt;p&gt;The best way to access the database is via existing &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/models&#34;&gt;models&lt;/a&gt;. For instance, to get a list of discussions, use the &lt;code&gt;Get&lt;/code&gt; method in the &lt;code&gt;DiscussionModel&lt;/code&gt;. You can rely on model-based access to already be optimized for performance and utilize caching if it&amp;rsquo;s available.&lt;/p&gt;
 
-&lt;h3 id=&#34;building-queries:1e080c892326e5bba749587eba8bcf9e&#34;&gt;Building queries&lt;/h3&gt;
+&lt;h3 id=&#34;building-queries&#34;&gt;Building queries&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code&gt;SQL&lt;/code&gt; object supports chaining. You can call it with &lt;code&gt;Gdn::sql()&lt;/code&gt;.&lt;/p&gt;
 
@@ -139,7 +139,7 @@ $DiscussionModel-&amp;gt;getID($DiscussionID);
 
 &lt;p&gt;Notice the use of limit, offset, where groups, where conditions including less than &amp;amp; null, aliasing, and multiple joins.&lt;/p&gt;
 
-&lt;h3 id=&#34;updates-and-inserts:1e080c892326e5bba749587eba8bcf9e&#34;&gt;Updates and inserts&lt;/h3&gt;
+&lt;h3 id=&#34;updates-and-inserts&#34;&gt;Updates and inserts&lt;/h3&gt;
 
 &lt;p&gt;An insert is a single step that takes the table name and an array of values to insert as parameters:&lt;/p&gt;
 
@@ -157,14 +157,14 @@ $DiscussionModel-&amp;gt;getID($DiscussionID);
    -&amp;gt;put();
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;direct-queries:1e080c892326e5bba749587eba8bcf9e&#34;&gt;Direct queries&lt;/h3&gt;
+&lt;h3 id=&#34;direct-queries&#34;&gt;Direct queries&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code&gt;query()&lt;/code&gt; method allows for sending unfiltered SQL queries to the database. This is strongly discouraged because it can easily cause security flaws, performance problems, and compatibility problems.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;query(&amp;quot;select * from GDN_Comments&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;structure:1e080c892326e5bba749587eba8bcf9e&#34;&gt;Structure&lt;/h3&gt;
+&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
 
 &lt;p&gt;Vanilla allows you to define database structures in code. Use the &lt;code&gt;Gdn::structure()&lt;/code&gt; method to use this object. Here we&amp;rsquo;ll look at part of the definition of the User table as an example:&lt;/p&gt;
 
@@ -196,7 +196,7 @@ $DiscussionModel-&amp;gt;getID($DiscussionID);
       <guid>//docs.vanillaforums.com/developer/framework/datasets/</guid>
       <description>
 
-&lt;h2 id=&#34;datasets:df3b084c6c220ccc2d397b19d02263b5&#34;&gt;Datasets&lt;/h2&gt;
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
 
 &lt;p&gt;The &lt;code&gt;Gdn_Dataset&lt;/code&gt; object is a way to store data. Most of the time, this data is the result of a query to the database. When you use our &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/database&#34;&gt;database object&lt;/a&gt; (as you always should) to execute a database select query, it will return a dataset.&lt;/p&gt;
 
@@ -244,11 +244,11 @@ foreach ($result-&amp;gt;resultArray() as $user) {
       <guid>//docs.vanillaforums.com/developer/framework/email/</guid>
       <description>
 
-&lt;h2 id=&#34;sending-emails:8cbe6fdacc355e0e29b05b303dd46e82&#34;&gt;Sending Emails&lt;/h2&gt;
+&lt;h2 id=&#34;sending-emails&#34;&gt;Sending Emails&lt;/h2&gt;
 
 &lt;p&gt;The Garden framework includes an Email object for sending and configuring emails. The formatting of Vanilla Emails is handled by the EmailTemplate property of the Email object.&lt;/p&gt;
 
-&lt;h2 id=&#34;emailtemplate:8cbe6fdacc355e0e29b05b303dd46e82&#34;&gt;EmailTemplate&lt;/h2&gt;
+&lt;h2 id=&#34;emailtemplate&#34;&gt;EmailTemplate&lt;/h2&gt;
 
 &lt;p&gt;The EmailTemplate object helps to organize the components of an email and prepare them for output.&lt;/p&gt;
 
@@ -269,7 +269,7 @@ foreach ($result-&amp;gt;resultArray() as $user) {
 
 &lt;p&gt;The EmailTemplate object also has a set of colors that can be used in the template view for background colors and text colors.&lt;/p&gt;
 
-&lt;h3 id=&#34;emailtemplate-view:8cbe6fdacc355e0e29b05b303dd46e82&#34;&gt;EmailTemplate View&lt;/h3&gt;
+&lt;h3 id=&#34;emailtemplate-view&#34;&gt;EmailTemplate View&lt;/h3&gt;
 
 &lt;p&gt;The layout and use of the HTML EmailTemplate components is left up to the view. Vanilla provides a basic Smarty template with inline css styles for rendering. This template lives in dashboard/views/email/email-basic.tpl. This is the default view for all HTML emails in Vanilla.&lt;/p&gt;
 
@@ -277,11 +277,11 @@ foreach ($result-&amp;gt;resultArray() as $user) {
 
 &lt;p&gt;For more info on overriding view from a plugin or theme, check out our &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;docs on overriding views in a theme&lt;/a&gt;. The same principles found there can be used to override a view in a plugin.&lt;/p&gt;
 
-&lt;h3 id=&#34;default-emailtemplate-values:8cbe6fdacc355e0e29b05b303dd46e82&#34;&gt;Default EmailTemplate Values&lt;/h3&gt;
+&lt;h3 id=&#34;default-emailtemplate-values&#34;&gt;Default EmailTemplate Values&lt;/h3&gt;
 
 &lt;p&gt;The default color and image values for your forum&amp;rsquo;s emails can be uploaded and configured from the Email settings page in the dashboard. These values can be overridden by explicitly setting the values in the setButton() or setImage() methods of an individual email&amp;rsquo;s EmailTemplate.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-up-an-email:8cbe6fdacc355e0e29b05b303dd46e82&#34;&gt;Setting Up an Email&lt;/h2&gt;
+&lt;h2 id=&#34;setting-up-an-email&#34;&gt;Setting Up an Email&lt;/h2&gt;
 
 &lt;p&gt;Here&amp;rsquo;s an example of setting up a basic email in Vanilla:&lt;/p&gt;
 
@@ -318,7 +318,7 @@ $emailer-&amp;gt;send();
       <guid>//docs.vanillaforums.com/developer/framework/</guid>
       <description>
 
-&lt;h2 id=&#34;garden-s-place-in-vanilla:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Garden&amp;rsquo;s place in Vanilla&lt;/h2&gt;
+&lt;h2 id=&#34;garden-s-place-in-vanilla&#34;&gt;Garden&amp;rsquo;s place in Vanilla&lt;/h2&gt;
 
 &lt;p&gt;Vanilla is built on an MVC framework named Garden. Its purpose is to provide an extensible, pluggable platform on which to build all the addons that make Vanilla awesome. The design of its database handling was influenced by CodeIgniter, but its plugin architecture is pretty unique.&lt;/p&gt;
 
@@ -328,7 +328,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;The framework is a secondary concern to the forum. In practice, this means if you request an enhancement or find a bug in a framework piece that isn&amp;rsquo;t used anywhere in the forum, we&amp;rsquo;d love a pull request but it&amp;rsquo;s unlikely we&amp;rsquo;ll devote developer time to it. Time is precious, and we&amp;rsquo;re building awesome forums not CodeIgniter 2 (or whatever the hip kids are using these days).&lt;/p&gt;
 
-&lt;h2 id=&#34;addons-are-everything:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Addons are everything&lt;/h2&gt;
+&lt;h2 id=&#34;addons-are-everything&#34;&gt;Addons are everything&lt;/h2&gt;
 
 &lt;p&gt;Addons are the most important feature of the framework. Our crown jewel, the Vanilla forum itself, is technically an addon. There are many ways for addons to hook into each other, and we&amp;rsquo;re constantly refining their integration.&lt;/p&gt;
 
@@ -345,7 +345,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;Themes have the full power of plugins via their hooks file, but we suggest only using it for aesthetic changes.&lt;/p&gt;
 
-&lt;h2 id=&#34;file-structure:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;File structure&lt;/h2&gt;
+&lt;h2 id=&#34;file-structure&#34;&gt;File structure&lt;/h2&gt;
 
 &lt;p&gt;The core framework files are located in &lt;code&gt;/library/core&lt;/code&gt;. The database layer is contained in &lt;code&gt;/library/database&lt;/code&gt; and third-party libraries are in &lt;code&gt;/library/vendors&lt;/code&gt;. All our junk is in &lt;code&gt;/trunk&lt;/code&gt;.&lt;/p&gt;
 
@@ -355,7 +355,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;Non-view PHP files are named in the format &lt;code&gt;{type}.{name}.php&lt;/code&gt;. &amp;ldquo;Type&amp;rdquo; is one of class, functions, or interface. We do not rename third-party files included in Vanilla. Classes in addons nearly always inherit from one or more framework classes.&lt;/p&gt;
 
-&lt;h2 id=&#34;default-applications:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Default applications&lt;/h2&gt;
+&lt;h2 id=&#34;default-applications&#34;&gt;Default applications&lt;/h2&gt;
 
 &lt;p&gt;Three applications come pre-installed &amp;amp; enabled by default: Dashboard, Vanilla, and Conversations. On a technical level, &amp;lsquo;Vanilla&amp;rsquo; is simply a Garden addon that works in concert with others to create your forum experience. The Vanilla application is only responsible for discussions, comments, and categories.&lt;/p&gt;
 
@@ -363,13 +363,13 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;If you just want to use the Garden framework, you could, theoretically, disable all the core Applications and roll your own from scratch. In reality, we recommend always at least using Dashboard. Even if you&amp;rsquo;re not building a forum with Garden, it&amp;rsquo;s definitely built with a user-centric website in mind.&lt;/p&gt;
 
-&lt;h2 id=&#34;let-the-code-guide-you:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Let the code guide you&lt;/h2&gt;
+&lt;h2 id=&#34;let-the-code-guide-you&#34;&gt;Let the code guide you&lt;/h2&gt;
 
 &lt;p&gt;Because so much is possible with the framework, it can be intimidating to get started. Our best advice is: look at an existing plugin that does something &lt;em&gt;close&lt;/em&gt; to what you&amp;rsquo;re attempting to see how they do it. Code examples can guide you to new solutions you didn&amp;rsquo;t know were possible.&lt;/p&gt;
 
 &lt;p&gt;The Skeleton application in &lt;code&gt;/applications/skeleton&lt;/code&gt; is heavily documented inline to help you get started. Make a copy and get coding, but remember: forgetting to delete the extraneous docs is like leaving the price tag on your clothes. We&amp;rsquo;ll judge you.&lt;/p&gt;
 
-&lt;h2 id=&#34;where-to-start:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Where to start&lt;/h2&gt;
+&lt;h2 id=&#34;where-to-start&#34;&gt;Where to start&lt;/h2&gt;
 
 &lt;p&gt;Not sure what doc to read next? We recommend reading the &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins/quickstart&#34;&gt;plugin quickstart&lt;/a&gt;, then try &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/controllers&#34;&gt;Controller&lt;/a&gt; and &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/models&#34;&gt;Models&lt;/a&gt;. It&amp;rsquo;s a self-guided tour from there! Don&amp;rsquo;t forget to stop by the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt; for guidance. When in doubt, dance.&lt;/p&gt;
 </description>
@@ -383,13 +383,13 @@ $emailer-&amp;gt;send();
       <guid>//docs.vanillaforums.com/developer/framework/helpers/</guid>
       <description>
 
-&lt;h2 id=&#34;helper-functions:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;Helper Functions&lt;/h2&gt;
+&lt;h2 id=&#34;helper-functions&#34;&gt;Helper Functions&lt;/h2&gt;
 
 &lt;p&gt;This is a quickstart guide to some of Vanilla&amp;rsquo;s globally available functions and methods. Familiarizing yourself with them will save you time and effort in the long term, and give you clues about how best to use the framework.&lt;/p&gt;
 
 &lt;p&gt;This is by no means an exhaustive list, nor full signature documentation. You&amp;rsquo;ll want to find them in the source code (files at &lt;code&gt;/library/core/functions.*.php&lt;/code&gt;) for more info.&lt;/p&gt;
 
-&lt;h2 id=&#34;getting-setting:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;Getting &amp;amp; setting&lt;/h2&gt;
+&lt;h2 id=&#34;getting-setting&#34;&gt;Getting &amp;amp; setting&lt;/h2&gt;
 
 &lt;p&gt;See &lt;code&gt;functions.compatibility.php&lt;/code&gt; for more info.&lt;/p&gt;
 
@@ -400,7 +400,7 @@ $emailer-&amp;gt;send();
 &lt;li&gt;&lt;code&gt;Gdn::set()&lt;/code&gt; places data into the &lt;code&gt;GDN_UserMeta&lt;/code&gt; table with the given key against UserID 0.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;configuration:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;Configuration&lt;/h2&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 
 &lt;p&gt;See &lt;code&gt;functions.general.php&lt;/code&gt; for more info.&lt;/p&gt;
 
@@ -409,7 +409,7 @@ $emailer-&amp;gt;send();
 &lt;li&gt;&lt;code&gt;saveToConfig()&lt;/code&gt; saves a value to the config. Pass &lt;code&gt;false&lt;/code&gt; as the third parameter to only set the config for the current runtime.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;html:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;HTML&lt;/h2&gt;
+&lt;h2 id=&#34;html&#34;&gt;HTML&lt;/h2&gt;
 
 &lt;p&gt;See &lt;code&gt;functions.render.php&lt;/code&gt; for more info.&lt;/p&gt;
 
@@ -421,7 +421,7 @@ $emailer-&amp;gt;send();
 &lt;li&gt;&lt;code&gt;wrap()&lt;/code&gt; places HTML tags around content.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;safety-tips:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;Safety tips&lt;/h2&gt;
+&lt;h2 id=&#34;safety-tips&#34;&gt;Safety tips&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Use the &lt;code&gt;Form&lt;/code&gt; object to generate HTML forms.&lt;/li&gt;
@@ -431,7 +431,7 @@ $emailer-&amp;gt;send();
 &lt;li&gt;Use &lt;code&gt;checkPermission()&lt;/code&gt; to do just what it says on the tin.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;forum-assets:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;Forum assets&lt;/h2&gt;
+&lt;h2 id=&#34;forum-assets&#34;&gt;Forum assets&lt;/h2&gt;
 
 &lt;p&gt;See &lt;code&gt;functions.render.php&lt;/code&gt; for more info.&lt;/p&gt;
 
@@ -441,7 +441,7 @@ $emailer-&amp;gt;send();
 &lt;li&gt;&lt;code&gt;categoryUrl()&lt;/code&gt; generates a category&amp;rsquo;s URL.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;developer-tools:dc76c6d1ac20ba23be57617bde6f314c&#34;&gt;Developer tools&lt;/h2&gt;
+&lt;h2 id=&#34;developer-tools&#34;&gt;Developer tools&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;decho()&lt;/code&gt; outputs nicely-formatted debug information nicer than &lt;code&gt;print_r()&lt;/code&gt;.&lt;/li&gt;
@@ -458,7 +458,7 @@ $emailer-&amp;gt;send();
       <guid>//docs.vanillaforums.com/developer/framework/inform/</guid>
       <description>
 
-&lt;h2 id=&#34;toaster-notifications:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Toaster Notifications&lt;/h2&gt;
+&lt;h2 id=&#34;toaster-notifications&#34;&gt;Toaster Notifications&lt;/h2&gt;
 
 &lt;p&gt;Inform Messages allow you to let users know of some action that your plugin or application has taken. Inform messages allow you to quickly and easily relay information to users, and handle actions based on interaction with those messages. Use them freely to notify users of saved forms, punishments, rewards, etc.&lt;/p&gt;
 
@@ -468,7 +468,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;They can be passed with JavaScript callbacks to fire on dismissal so some kind of further action can be taken. There are even CSS definitions that allow you access to over 100 readymade icon sprites you can use to denote meaning in your messaging.&lt;/p&gt;
 
-&lt;h2 id=&#34;using-in-core:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Using in core&lt;/h2&gt;
+&lt;h2 id=&#34;using-in-core&#34;&gt;Using in core&lt;/h2&gt;
 
 &lt;p&gt;An example native inform message in Vanilla: saving drafts.&lt;/p&gt;
 
@@ -482,7 +482,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;The &lt;code&gt;t()&lt;/code&gt; function is Vanilla&amp;rsquo;s native &amp;ldquo;Translate&amp;rdquo; function so that the string can be converted to other languages.&lt;/p&gt;
 
-&lt;h2 id=&#34;using-in-a-plugin:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Using in a plugin&lt;/h2&gt;
+&lt;h2 id=&#34;using-in-a-plugin&#34;&gt;Using in a plugin&lt;/h2&gt;
 
 &lt;p&gt;Adding a message to the screen with a plugin.&lt;/p&gt;
 
@@ -504,7 +504,7 @@ $emailer-&amp;gt;send();
 &lt;li&gt;&lt;strong&gt;DismissCallbackUrl:&lt;/strong&gt; An optional javascript callback url that gets requested when the &amp;ldquo;close&amp;rdquo; button is clicked on a message. If a dismissCallback is specified, this option will be ignored.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;static-messages:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Static messages&lt;/h2&gt;
+&lt;h2 id=&#34;static-messages&#34;&gt;Static messages&lt;/h2&gt;
 
 &lt;p&gt;Let&amp;rsquo;s say you want to deliver a message to a particular user, and have that message stay on the screen on every page load until that user dismisses the message. You can achieve it like this:&lt;/p&gt;
 
@@ -514,7 +514,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;This message appears for me because my UserID is 1, and it keeps showing up on every page until I dismiss it. At that point the callback url is requested via ajax, and the dismissal preference is saved so the message will no longer appear for me.&lt;/p&gt;
 
-&lt;h2 id=&#34;styling-a-message:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Styling a message&lt;/h2&gt;
+&lt;h2 id=&#34;styling-a-message&#34;&gt;Styling a message&lt;/h2&gt;
 
 &lt;p&gt;Let&amp;rsquo;s look at how we can change the appearance of these messages.&lt;/p&gt;
 
@@ -528,7 +528,7 @@ $emailer-&amp;gt;send();
 
 &lt;p&gt;Note the span at the front of the message. This will contain the &amp;ldquo;Skull&amp;rdquo; image you see above. It&amp;rsquo;s also necessary for the CSS definition in the second argument to contain &amp;ldquo;HasSprite&amp;rdquo; so that the spacing &amp;amp; alignment of the icon all works properly.&lt;/p&gt;
 
-&lt;h2 id=&#34;message-origin:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Message origin&lt;/h2&gt;
+&lt;h2 id=&#34;message-origin&#34;&gt;Message origin&lt;/h2&gt;
 
 &lt;p&gt;You can also style the inform messages to appear &amp;ldquo;From&amp;rdquo; a specific user. &lt;img style=&#34;border: 1px solid #333; margin: 20px 0; display: block;&#34; src=&#34;http://farm6.static.flickr.com/5098/5503917812_cfa84f0c24_o.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -536,14 +536,14 @@ $emailer-&amp;gt;send();
 
 &lt;pre lang=&#34;php&#34;&gt;$User = Gdn::UserModel-&amp;gt;Get(1); // Load the user who&#39;s icon you want to show&lt;br /&gt;$String = UserPhoto($User, &#39;Icon&#39;); // IMPORTANT: Give the icon a css class of &#34;Icon&#34; &lt;br /&gt;$String .= &#39;This is a test!&#39;; // Append some message&lt;br /&gt;$Sender-&amp;gt;InformMessage($String, &#39;Dismissable HasIcon&#39;); // Send to the screen&lt;/pre&gt;
 
-&lt;h2 id=&#34;inform-via-javascript:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Inform via JavaScript&lt;/h2&gt;
+&lt;h2 id=&#34;inform-via-javascript&#34;&gt;Inform via JavaScript&lt;/h2&gt;
 
 &lt;p&gt;At some point you may need to write a message to the screen from JavaScript instead of from the server side. This can be achieved with a similar, JavaScript-based method:&lt;/p&gt;
 &lt;pre lang=&#34;javascript&#34;&gt;gdn.informMessage(&amp;lsquo;This is a test!&amp;rsquo;);&lt;/pre&gt;
 &lt;p&gt;And all of the same properties exist, so you can be as elaborate as you like:&lt;/p&gt;
 &lt;pre lang=&#34;javascript&#34;&gt;gdn.informMessage(&amp;lsquo;This is a test!&amp;rsquo;, {&amp;lsquo;CssClass&amp;rsquo; : &amp;lsquo;Dismissable&amp;rsquo;, &amp;lsquo;DismissCallback&amp;rsquo; : &amp;lsquo;some_function&amp;rsquo;, &amp;lsquo;DismissCallbackUrl&amp;rsquo; : &amp;lsquo;/relative/path/to/callback/url&amp;rsquo;});&lt;/pre&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;duplication-and-stacking:7655156534b7d9747b51d44f6c4c963a&#34;&gt;Duplication and stacking&lt;/h2&gt;
+&lt;h2 id=&#34;duplication-and-stacking&#34;&gt;Duplication and stacking&lt;/h2&gt;
 
 &lt;p&gt;You can add as many messages to as many pages as you like. If a message is already present on the screen, it will not be added a second time, and new messages will simply stack one-on-top-of-the-next. &lt;img style=&#34;border: 1px solid #333; margin: 20px 0; display: block;&#34; src=&#34;http://farm6.static.flickr.com/5300/5503917872_92042ca343_o.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
@@ -557,7 +557,7 @@ $emailer-&amp;gt;send();
       <guid>//docs.vanillaforums.com/developer/framework/i18n/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-translatable-phrases-to-vanilla:b3f11a10fc5f1b8fde3dbc96930453bd&#34;&gt;Adding translatable phrases to Vanilla&lt;/h2&gt;
+&lt;h2 id=&#34;adding-translatable-phrases-to-vanilla&#34;&gt;Adding translatable phrases to Vanilla&lt;/h2&gt;
 
 &lt;p&gt;Considerations for adding phrases to Vanilla or your addon:&lt;/p&gt;
 
@@ -579,7 +579,7 @@ $emailer-&amp;gt;send();
       <guid>//docs.vanillaforums.com/developer/framework/models/</guid>
       <description>
 
-&lt;h2 id=&#34;models:51a6638e467c1c44d967197424e8e0e5&#34;&gt;Models&lt;/h2&gt;
+&lt;h2 id=&#34;models&#34;&gt;Models&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;//docs.vanillaforums.com/framework/datasets&#34;&gt;Datasets&lt;/a&gt;
 &lt;a href=&#34;//docs.vanillaforums.com/framework/controllers&#34;&gt;Controllers&lt;/a&gt;
@@ -641,7 +641,7 @@ Array (
 
 &lt;p&gt;The validation object will always collect as much information about what is wrong with the data as possible. It is then up to the developer what to do with that information. Luckily, 99% of the time the developer will just let the Form handle the validation results.&lt;/p&gt;
 
-&lt;h2 id=&#34;forms-validation:51a6638e467c1c44d967197424e8e0e5&#34;&gt;Forms &amp;amp; Validation&lt;/h2&gt;
+&lt;h2 id=&#34;forms-validation&#34;&gt;Forms &amp;amp; Validation&lt;/h2&gt;
 
 &lt;p&gt;In order for the database, models, validation, &amp;amp; datasets to shine, we need to get the information out and editable by the users. This is where the Form class comes into play. Let’s take a look at an actual example of how the controller, model, validator, and form work together. Let’s say we get the following request: &lt;code&gt;/bloggingtool/post/new&lt;/code&gt; Which is the same as calling the following controller in an imaginary “bloggingtool” application: &lt;code&gt;$Post-&amp;gt;New();&lt;/code&gt;My “New” method on the post controller would contain:&lt;/p&gt;
 
@@ -768,7 +768,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
       <guid>//docs.vanillaforums.com/developer/framework/oauth/</guid>
       <description>
 
-&lt;h2 id=&#34;sso-with-oauth-overview:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
+&lt;h2 id=&#34;sso-with-oauth-overview&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
 
 &lt;p&gt;Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:&lt;/p&gt;
 
@@ -781,15 +781,15 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;Because OAuth 2.0 is an SSO &lt;em&gt;framework&lt;/em&gt; and not a narrowly defined protocol (see &lt;a href=&#34;https://tools.ietf.org/html/rfc6749&#34;&gt;OAuth 2.0 Spec&lt;/a&gt;), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins. This base class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage of this class, either use our &lt;strong&gt;OAuth2 Plugin&lt;/strong&gt; or &lt;strong&gt;Create Your Own OAuth2 Plugin&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;oauth2-plugin:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;OAuth2 Plugin&lt;/h2&gt;
+&lt;h2 id=&#34;oauth2-plugin&#34;&gt;OAuth2 Plugin&lt;/h2&gt;
 
-&lt;h3 id=&#34;overview:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;Overview&lt;/h3&gt;
+&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
 
 &lt;p&gt;Vanilla has created an OAuth2 plugin that, for most use-cases, can provide a plug-and-play SSO solution.&lt;/p&gt;
 
 &lt;p&gt;OAuth2 accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.&lt;/p&gt;
 
-&lt;h3 id=&#34;workflow:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;Workflow&lt;/h3&gt;
+&lt;h3 id=&#34;workflow&#34;&gt;Workflow&lt;/h3&gt;
 
 &lt;p&gt;This plugin has a workflow of three distinct steps:&lt;/p&gt;
 
@@ -799,7 +799,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 &lt;li&gt;A &lt;strong&gt;profile request&lt;/strong&gt; (by passing the authoriztion token)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;assumptions:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;Assumptions&lt;/h3&gt;
+&lt;h3 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h3&gt;
 
 &lt;p&gt;Besides requiring that you follow the workflow above, this plugin has several assumptions about the setup of the Authorization Server. If your Authorization Server does not meet these assumptions it does not mean that you cannot integrate with a Vanilla forum, it means that you will not be able to use this plugin out of the box and that you will requires some level of customization.&lt;/p&gt;
 
@@ -838,7 +838,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Not supported in this work flow are &lt;strong&gt;&amp;ldquo;nonce&amp;rdquo; support&lt;/strong&gt; (a hash sent in the &lt;code&gt;state&lt;/code&gt; and verified to be unchanged) and &lt;strong&gt;refresh tokens&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;features:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;Features&lt;/h3&gt;
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
 
 &lt;p&gt;The OAuth2 Plugin attempts to &amp;ldquo;parameterize&amp;rdquo; as many aspects of the functionality as possible. A settings form in the dashboard allows you to set:&lt;/p&gt;
 
@@ -850,7 +850,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 &lt;li&gt;The exepected keys in the json response in the profile request&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;possible-pitfalls:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;Possible Pitfalls&lt;/h3&gt;
+&lt;h3 id=&#34;possible-pitfalls&#34;&gt;Possible Pitfalls&lt;/h3&gt;
 
 &lt;p&gt;A number of things can go wrong when trying to implement SSO with this plugin:&lt;/p&gt;
 
@@ -860,7 +860,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 &lt;li&gt;Your Authorization Server will usually need to &amp;ldquo;whitelist&amp;rdquo; the redirect URI (i.e. https://&lt;em&gt;[The url of the forum]&lt;/em&gt;/entry/oauth2)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;create-your-own-oauth2-plugin:5f5c5ed4532f8be47b04fa12fcf4df1d&#34;&gt;Create Your Own OAuth2 Plugin&lt;/h2&gt;
+&lt;h2 id=&#34;create-your-own-oauth2-plugin&#34;&gt;Create Your Own OAuth2 Plugin&lt;/h2&gt;
 
 &lt;p&gt;For more on how to create your own plugin see our docs on &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins/&#34;&gt;Plugins&lt;/a&gt;.&lt;/p&gt;
 
@@ -882,13 +882,13 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
       <guid>//docs.vanillaforums.com/developer/framework/permissions/</guid>
       <description>
 
-&lt;h2 id=&#34;permissions-overview:3c50fd23dd09a00769d1d546bd814760&#34;&gt;Permissions Overview&lt;/h2&gt;
+&lt;h2 id=&#34;permissions-overview&#34;&gt;Permissions Overview&lt;/h2&gt;
 
 &lt;p&gt;Vanilla uses permissions to restrict access to particular content, options, or workflows. There are a number of functions built into the framework to do this efficiently. We eschew role-detection as a means of access control.&lt;/p&gt;
 
 &lt;p&gt;For example, we would never check to make sure someone was in a role named Moderator before granting access to an option, we would check a permission like &lt;code&gt;Garden.Moderation.Manage&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;naming-permissions:3c50fd23dd09a00769d1d546bd814760&#34;&gt;Naming Permissions&lt;/h3&gt;
+&lt;h3 id=&#34;naming-permissions&#34;&gt;Naming Permissions&lt;/h3&gt;
 
 &lt;p&gt;We use the same dot notation syntax for permissions as we do for config settings. A typical scheme would be: &lt;code&gt;Namespace.Keyword.Action&lt;/code&gt;.&lt;/p&gt;
 
@@ -910,7 +910,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;Other action names are avoided and may be renamed or refactored out of the framework in the future. However, they are not forbidden and never will be.&lt;/p&gt;
 
-&lt;h3 id=&#34;using-permissions:3c50fd23dd09a00769d1d546bd814760&#34;&gt;Using Permissions&lt;/h3&gt;
+&lt;h3 id=&#34;using-permissions&#34;&gt;Using Permissions&lt;/h3&gt;
 
 &lt;p&gt;There are two basic ways to check a permission. One is to use a true/false conditional, typically to &lt;code&gt;CheckPermission()&lt;/code&gt; in an &lt;code&gt;if&lt;/code&gt; statement:&lt;/p&gt;
 
@@ -929,7 +929,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;Typically we don&amp;rsquo;t use the first convention to trigger a permission exception manually because the second will cover it.&lt;/p&gt;
 
-&lt;h3 id=&#34;multiple-permissions:3c50fd23dd09a00769d1d546bd814760&#34;&gt;Multiple Permissions&lt;/h3&gt;
+&lt;h3 id=&#34;multiple-permissions&#34;&gt;Multiple Permissions&lt;/h3&gt;
 
 &lt;p&gt;You can use either method above to check multiple permissions by passing an array of permission names as the first parameter.&lt;/p&gt;
 
@@ -937,7 +937,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;You may find additional permission checks in Vanilla for permission names that do not appear in the Dashboard using this style: a normal permission name is passed in an array along with an &amp;ldquo;invisible&amp;rdquo; one. This is to allow plugins to define the additional permissions for more granular checks if needed.&lt;/p&gt;
 
-&lt;h3 id=&#34;the-owner-flag:3c50fd23dd09a00769d1d546bd814760&#34;&gt;The Owner Flag&lt;/h3&gt;
+&lt;h3 id=&#34;the-owner-flag&#34;&gt;The Owner Flag&lt;/h3&gt;
 
 &lt;p&gt;The forum owner&amp;rsquo;s account (the one you create when installing Vanilla) gets a special flag set on it. This is accomplished by setting the &lt;code&gt;Admin&lt;/code&gt; column equal to &lt;code&gt;1&lt;/code&gt; in the &lt;code&gt;User&lt;/code&gt; table.&lt;/p&gt;
 
@@ -945,13 +945,13 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;For this reason, it is extremely important to test your addons with a non-owner account to see your permission checks in action.&lt;/p&gt;
 
-&lt;h3 id=&#34;the-system-flag:3c50fd23dd09a00769d1d546bd814760&#34;&gt;The System Flag&lt;/h3&gt;
+&lt;h3 id=&#34;the-system-flag&#34;&gt;The System Flag&lt;/h3&gt;
 
 &lt;p&gt;The System account is generated for general use by addons and cases where content must be generated by the forum. This account is designated by setting the &lt;code&gt;Admin&lt;/code&gt; column equal to &lt;code&gt;2&lt;/code&gt; in the &lt;code&gt;User&lt;/code&gt; table.&lt;/p&gt;
 
 &lt;p&gt;This grants the same privileges as the Owner flag, and protects the account from deletion or banning.&lt;/p&gt;
 
-&lt;h3 id=&#34;reversed-permission:3c50fd23dd09a00769d1d546bd814760&#34;&gt;Reversed Permission&lt;/h3&gt;
+&lt;h3 id=&#34;reversed-permission&#34;&gt;Reversed Permission&lt;/h3&gt;
 
 &lt;p&gt;A special case in the framework is the &lt;code&gt;Vanilla.Approval.Require&lt;/code&gt; permission. It is checked with the &lt;code&gt;CheckRequirement&lt;/code&gt; function. A &lt;code&gt;true&lt;/code&gt; result means their content must go to the Moderation queue for approval. Therefore, a &lt;code&gt;true&lt;/code&gt; result actually grants you &lt;em&gt;less&lt;/em&gt; permission. We don&amp;rsquo;t generally recommend using this construct.&lt;/p&gt;
 </description>
@@ -965,11 +965,11 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
       <guid>//docs.vanillaforums.com/developer/framework/requests/</guid>
       <description>
 
-&lt;h2 id=&#34;requests:37761f46d18f7235fb5e44a287e8ecc2&#34;&gt;Requests&lt;/h2&gt;
+&lt;h2 id=&#34;requests&#34;&gt;Requests&lt;/h2&gt;
 
 &lt;p&gt;Vanilla&amp;rsquo;s base Controller class (the class from which all &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/controllers&#34;&gt;controllers&lt;/a&gt; are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.&lt;/p&gt;
 
-&lt;h3 id=&#34;deliverytype:37761f46d18f7235fb5e44a287e8ecc2&#34;&gt;DeliveryType&lt;/h3&gt;
+&lt;h3 id=&#34;deliverytype&#34;&gt;DeliveryType&lt;/h3&gt;
 
 &lt;p&gt;There are four delivery types available:&lt;/p&gt;
 
@@ -986,7 +986,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;A &lt;code&gt;DELIVERY_TYPE_VIEW&lt;/code&gt; request can be easily used for progressive data loading. That or a &lt;code&gt;DELIVERY_TYPE_ASSET&lt;/code&gt; request could be used to update part of a page. A &lt;code&gt;DELIVERY_TYPE_BOOL&lt;/code&gt; request is used for actions like closing a discussion.&lt;/p&gt;
 
-&lt;h3 id=&#34;deliverymethod:37761f46d18f7235fb5e44a287e8ecc2&#34;&gt;DeliveryMethod&lt;/h3&gt;
+&lt;h3 id=&#34;deliverymethod&#34;&gt;DeliveryMethod&lt;/h3&gt;
 
 &lt;p&gt;The DeliveryMethod defines what format you want the response in.&lt;/p&gt;
 
@@ -1003,7 +1003,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;You can define a &lt;code&gt;DeliveryMethod&lt;/code&gt; by appending it to your request like &lt;code&gt;DeliveryType&lt;/code&gt;, or by appending an extension to your request after the method. For example, try viewing &lt;code&gt;/profile&lt;/code&gt; on your forum vs. &lt;code&gt;/profile.json&lt;/code&gt;. Note that arguments are added normally after another slash. Supposing you wanted to view userid 2&amp;rsquo;s profile with the name Lincoln, you would use &lt;code&gt;/profile.json/2/Lincoln&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;parsing-requests:37761f46d18f7235fb5e44a287e8ecc2&#34;&gt;Parsing Requests&lt;/h3&gt;
+&lt;h3 id=&#34;parsing-requests&#34;&gt;Parsing Requests&lt;/h3&gt;
 
 &lt;p&gt;Vanilla parses incoming URLs and parameters for you. There is rarely any reason to directly access PHP globals like &lt;code&gt;$_GET&lt;/code&gt;. The &lt;code&gt;Gdn_Request&lt;/code&gt; class (in &lt;code&gt;/library/core/class.request.php&lt;/code&gt;) handles this for you.&lt;/p&gt;
 
@@ -1027,7 +1027,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
       <guid>//docs.vanillaforums.com/developer/framework/views/</guid>
       <description>
 
-&lt;h2 id=&#34;views:26ec5f5c36efaeaee4a3ac86cdec358e&#34;&gt;Views&lt;/h2&gt;
+&lt;h2 id=&#34;views&#34;&gt;Views&lt;/h2&gt;
 
 &lt;p&gt;Once a controller method is called to handle the request, how is the xhtml of the page put together? &lt;strong&gt;Views&lt;/strong&gt;. There are two types of views in Garden: &amp;ldquo;Views&amp;rdquo; and &amp;ldquo;Master Views&amp;rdquo;. A view relates directly to the controller method that called it and handles rendering content related to that request. You can typically think of a view as the content for that page. For example, if a &lt;code&gt;Vanilla-&amp;gt;Discussion-&amp;gt;All()&lt;/code&gt; method is called, the view for that method would handle rendering all of the discussions. Everything that is rendered around the discussions is handled by the Master View. The Master View allows you to create a consistent layout for the pages in the application. A single master view defines the look and feel and standard behavior for all of the pages (or a group of pages) in the application. Let&amp;rsquo;s go back to the filesystem so you can get a better picture. In the following example, the request in the url would have been: &lt;code&gt;http://myserver.com/garden/profile/index/mark&lt;/code&gt;. So, this means that Garden&amp;rsquo;s &amp;ldquo;Profile&amp;rdquo; controller was requested, the &amp;ldquo;index&amp;rdquo; method was requested from the profile controller, and the first argument into the index method is &amp;ldquo;mark&amp;rdquo;. In other words, the request was: &lt;code&gt;$ProfileController-&amp;gt;Index(&#39;mark&#39;);&lt;/code&gt;&lt;/p&gt;
 
@@ -1052,7 +1052,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;In the most simple example, the view will be as it appears in the image above: in a &amp;ldquo;profile&amp;rdquo; folder within the &amp;ldquo;views&amp;rdquo; folder, and named after the method that was called: &lt;code&gt;/views/profile/index.php&lt;/code&gt;. By default, the controller will fetch that view from the context of the FetchView method of the base controller class. In plain-English: the view file is included within a method on the Controller class called &amp;ldquo;FetchView&amp;rdquo;. That is why I placed the user data within a &lt;code&gt;$this-&amp;gt;User&lt;/code&gt; property in my &lt;code&gt;$ProfileController-&amp;gt;Index()&lt;/code&gt; method, above; so it could be accessible from within my view file. The view file likely will contain something as simple as this:&lt;/p&gt;
 
-&lt;h3 id=&#34;basic-information:26ec5f5c36efaeaee4a3ac86cdec358e&#34;&gt;Basic Information&lt;/h3&gt;
+&lt;h3 id=&#34;basic-information&#34;&gt;Basic Information&lt;/h3&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -1087,7 +1087,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 
 &lt;p&gt;As you can see, the master view handles the basic structure of a page. As I mentioned above, by default the view that is fetched by the controller is added to an asset collection called &amp;ldquo;Content&amp;rdquo;, and that asset collection is rendered in this master view when the &lt;code&gt;$this-&amp;gt;RenderAsset(&#39;Content&#39;)&lt;/code&gt; method is called - right there in the middle of the master view. As you can see in the master view above, there are a number of different asset collections available for application and plugin authors (Head, Menu, Content, and Foot). An application author has the ability to add as many of these as he/she desires and add to them as necessary. The idea behind these asset collections is that while the basic request can be handled and placed into the &amp;ldquo;Content&amp;rdquo; asset (ie. the profile information being displayed from the example above), there are still a lot of other elements a person may want on a page. Plugin authors may want to add assets to the head, menu, or foot. They may even want to add assets to the content collection. Garden itself has other UI components that get rendered in the head and menu asset collections (which will be discussed in a later preview). So, in the most basic example, the &amp;ldquo;index&amp;rdquo; view is requested from it&amp;rsquo;s controller&amp;rsquo;s view folder, the default.screen.css file is requested from the application&amp;rsquo;s design folder, and the master view is requested from the root of the application&amp;rsquo;s &amp;ldquo;view&amp;rdquo; folder. What other ways could the views and css have been retrieved? The controller uses Garden&amp;rsquo;s FileSystem object to search the application for the appropriate file to handle the request. Whatever the filesystem object finds first, it will use.&lt;/p&gt;
 
-&lt;h3 id=&#34;views-are-retrieved-with-the-following-precedence:26ec5f5c36efaeaee4a3ac86cdec358e&#34;&gt;Views are retrieved with the following precedence:&lt;/h3&gt;
+&lt;h3 id=&#34;views-are-retrieved-with-the-following-precedence&#34;&gt;Views are retrieved with the following precedence:&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;An explicitly defined path to a view.&lt;/strong&gt; ie. a plugin&amp;rsquo;s custom view location&lt;/li&gt;
@@ -1096,7 +1096,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 &lt;li&gt;&lt;strong&gt;Application default.&lt;/strong&gt; ie. &lt;code&gt;/path/to/garden/applications/app_name/views/controller_name/view.php&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;master-views-are-retrieved-with-the-following-precedence:26ec5f5c36efaeaee4a3ac86cdec358e&#34;&gt;Master views are retrieved with the following precedence:&lt;/h3&gt;
+&lt;h3 id=&#34;master-views-are-retrieved-with-the-following-precedence&#34;&gt;Master views are retrieved with the following precedence:&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Application-specific theme view.&lt;/strong&gt; ie. &lt;code&gt;/path/to/garden/themes/theme_name/app_name/views/default.master&lt;/code&gt;&lt;/li&gt;
@@ -1105,7 +1105,7 @@ $Configuration[&amp;lsquo;Modules&amp;rsquo;][&amp;lsquo;Conversations&amp;rsquo
 &lt;li&gt;&lt;strong&gt;Garden default.&lt;/strong&gt; ie. &lt;code&gt;/path/to/garden/applications/garden/views/default.master&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;css-files-are-retrieved-with-the-following-precedence:26ec5f5c36efaeaee4a3ac86cdec358e&#34;&gt;CSS files are retrieved with the following precedence:&lt;/h3&gt;
+&lt;h3 id=&#34;css-files-are-retrieved-with-the-following-precedence&#34;&gt;CSS files are retrieved with the following precedence:&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Application-specific css.&lt;/strong&gt; ie. &lt;code&gt;/path/to/garden/themes/theme_name/app_name/design/default.screen.css&lt;/code&gt;&lt;/li&gt;

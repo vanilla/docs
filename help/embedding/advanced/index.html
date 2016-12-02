@@ -248,11 +248,11 @@
 
                 
 
-<h2 id="overview:d850dec582534d3561c49f2ffda8ca6b">Overview</h2>
+<h2 id="overview">Overview</h2>
 
 <p>The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs <a href="http://easyxdm.net/wp/">easyXDM</a> and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&rsquo;s basic embed solution.</p>
 
-<h2 id="setting-up-advanced-embedding:d850dec582534d3561c49f2ffda8ca6b">Setting Up Advanced Embedding</h2>
+<h2 id="setting-up-advanced-embedding">Setting Up Advanced Embedding</h2>
 
 <p>Enable forum embedding via the Dashboard. Then set <code>Garden.Embed.Allow</code> to <code>2</code> in your config. <em>Cloud customers will have this done by support staff</em>.</p>
 
@@ -263,7 +263,7 @@
 <li>Call <code>Vanilla.embed({options})</code>.</li>
 </ol>
 
-<h3 id="options:d850dec582534d3561c49f2ffda8ca6b">Options</h3>
+<h3 id="options">Options</h3>
 
 <p>Vanilla.embed() takes an associative array of options:</p>
 
@@ -283,17 +283,17 @@
 
 <p><code>height(x)</code> <strong>Optional</strong>. A function that is called to set the height of the embedded iframe. If you override this method then you can access the embedded iframe using <code>this.iframe</code>.</p>
 
-<h3 id="methods:d850dec582534d3561c49f2ffda8ca6b">Methods</h3>
+<h3 id="methods">Methods</h3>
 
 <p><code>start()</code> Start the embed. Only call this method if you set autoStart to <code>false</code>.</p>
 
 <p><code>setLocation(path)</code> Manually set the location of the embedded iframe. Just specify the path and not the full domain of the embed.</p>
 
-<h2 id="custom-callbacks:d850dec582534d3561c49f2ffda8ca6b">Custom Callbacks</h2>
+<h2 id="custom-callbacks">Custom Callbacks</h2>
 
 <p>The embed API allows custom Javascript to be called between the parent and child iframes.</p>
 
-<h2 id="exposing-a-method-to-vanilla:d850dec582534d3561c49f2ffda8ca6b">Exposing a method to Vanilla</h2>
+<h2 id="exposing-a-method-to-vanilla">Exposing a method to Vanilla</h2>
 
 <p>You can expose a method to the child iframe with the following code:</p>
 
@@ -304,7 +304,7 @@
 
 <p>Vanilla embed supports a callback function on both ends of the embed. If you want to support a callback function then declare it as the last argument of your function. When the other endpoint of the embed calls your function using <code>callRemote()</code> it can then specify a callback and the framework will handle calling the callback across the domain.</p>
 
-<h2 id="calling-a-method-in-vanilla:d850dec582534d3561c49f2ffda8ca6b">Calling a method in Vanilla</h2>
+<h2 id="calling-a-method-in-vanilla">Calling a method in Vanilla</h2>
 
 <p>You can call a method in Vanilla with the following code:</p>
 
@@ -313,11 +313,11 @@
 
 <p>If you supply the callback argument to <code>callRemote()</code> then it will be supplied as the last argument to the remote function. It is the remote function’s job to call the function. Keep in mind that using <code>call()</code>, <code>apply()</code>, etc. to set a context for the function will not work as a context cannot be passed across the domain.</p>
 
-<h3 id="functions-you-can-call-on-vanilla:d850dec582534d3561c49f2ffda8ca6b">Functions you can call on Vanilla</h3>
+<h3 id="functions-you-can-call-on-vanilla">Functions you can call on Vanilla</h3>
 
 <p><code>Vanilla.embed.signout()</code> Calling this function will sign the user out of Vanilla. It won’t refresh the page so you may want to do that afterwards.</p>
 
-<h2 id="example-implementation:d850dec582534d3561c49f2ffda8ca6b">Example implementation</h2>
+<h2 id="example-implementation">Example implementation</h2>
 
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

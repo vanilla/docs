@@ -249,23 +249,23 @@
     <a href="https://vanillaforums.com">Learn More...</a>
 </p></aside>
 
-<h2 id="multisite-management:d680e8a854a7cbad6d490c445cba2eba">Multisite management</h2>
+<h2 id="multisite-management">Multisite management</h2>
 
 <p>Vanilla&rsquo;s cloud solution offers a number of configuration settings for enterprise-grade deployments.</p>
 
-<h2 id="deployment-types:d680e8a854a7cbad6d490c445cba2eba">Deployment Types</h2>
+<h2 id="deployment-types">Deployment Types</h2>
 
-<h3 id="single-community:d680e8a854a7cbad6d490c445cba2eba">Single Community</h3>
+<h3 id="single-community">Single Community</h3>
 
 <p>This is a classic forum setup. It is the equivalent of 1 installation of forum software. It can have any number of <strong>categories</strong> (what other products call “topic areas” or “forums/subforums”) arranged in a hierarchy. Each <strong>Single Community</strong> needs a domain or subdomain assigned.</p>
 
-<h3 id="the-hub:d680e8a854a7cbad6d490c445cba2eba">The Hub</h3>
+<h3 id="the-hub">The Hub</h3>
 
 <p>A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each <strong>Node</strong> is a <strong>Single Community</strong> with the added ability of being <a href="//docs.vanillaforums.com/help/cloud/multisite/sync">synched</a> with changes made on the Hub. Each Node is otherwise independent from each other - <strong>separate</strong> user lists, private message exchanges, and activity streams.</p>
 
 <p>Each Node is accessible via either a subdomain <em>or</em> a subfolder off a domain shared by the whole Hub. This is called the <strong>Hub URL Format</strong>. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.</p>
 
-<h3 id="subcommunities:d680e8a854a7cbad6d490c445cba2eba">Subcommunities</h3>
+<h3 id="subcommunities">Subcommunities</h3>
 
 <p>This artificially divides a <strong>Single Community</strong> <em>or</em> a <strong>Node</strong> into different areas by making each of the <strong>top tier of categories</strong> into subcommunities. While in any particular subcommunity, all other content outside the subcommunity is completely hidden. A common use case for subcommunities is localization.</p>
 
@@ -275,27 +275,27 @@
 
 <p>A common way of combining this feature with the <strong>Hub</strong> is to create a <strong>Node</strong> per product, and use subcommunities for each locale within that product.</p>
 
-<h2 id="architectural-considerations:d680e8a854a7cbad6d490c445cba2eba">Architectural considerations</h2>
+<h2 id="architectural-considerations">Architectural considerations</h2>
 
-<h3 id="cluster-management:d680e8a854a7cbad6d490c445cba2eba">Cluster management</h3>
+<h3 id="cluster-management">Cluster management</h3>
 
 <p>Our physical server assets are arranged into clusters. Each cluster can hold many Single Communities, or a single Hub + its Nodes. They cannot be mixed.</p>
 
-<h3 id="scaling-capabilities:d680e8a854a7cbad6d490c445cba2eba">Scaling capabilities</h3>
+<h3 id="scaling-capabilities">Scaling capabilities</h3>
 
 <p>Because each Node is a separate entity, there are significant scaling advantages to choosing a hub setup over a single community + subcommunities setup.</p>
 
-<h3 id="suggested-setups:d680e8a854a7cbad6d490c445cba2eba">Suggested setups</h3>
+<h3 id="suggested-setups">Suggested setups</h3>
 
 <p>For small-to-medium sites, use a single community. Add subcommunities for multi-locale support or to combine several micro-forums into a single instance.</p>
 
 <p>For very large or franchise sites, use a dedicated Hub with a Node per locale. This provides maximum scaling potential.</p>
 
-<h3 id="embedding-iframes:d680e8a854a7cbad6d490c445cba2eba">Embedding (iframes)</h3>
+<h3 id="embedding-iframes">Embedding (iframes)</h3>
 
 <p>While we do support robust embedding (iframe) solutions, we strongly recommend avoiding it whenever possible. It drastically increases project complexity and negatively impacts user experience with longer page load time.</p>
 
-<h3 id="ssl-certificates:d680e8a854a7cbad6d490c445cba2eba">SSL certificates</h3>
+<h3 id="ssl-certificates">SSL certificates</h3>
 
 <p>We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on <a href="//docs.vanillaforums.com/help/cloud/ssl">providing SSL certificates</a>.</p>
 

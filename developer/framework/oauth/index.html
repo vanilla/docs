@@ -368,7 +368,7 @@
 
                 
 
-<h2 id="sso-with-oauth-overview:5f5c5ed4532f8be47b04fa12fcf4df1d">SSO with OAuth: Overview</h2>
+<h2 id="sso-with-oauth-overview">SSO with OAuth: Overview</h2>
 
 <p>Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:</p>
 
@@ -381,15 +381,15 @@
 
 <p>Because OAuth 2.0 is an SSO <em>framework</em> and not a narrowly defined protocol (see <a href="https://tools.ietf.org/html/rfc6749">OAuth 2.0 Spec</a>), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins. This base class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage of this class, either use our <strong>OAuth2 Plugin</strong> or <strong>Create Your Own OAuth2 Plugin</strong>.</p>
 
-<h2 id="oauth2-plugin:5f5c5ed4532f8be47b04fa12fcf4df1d">OAuth2 Plugin</h2>
+<h2 id="oauth2-plugin">OAuth2 Plugin</h2>
 
-<h3 id="overview:5f5c5ed4532f8be47b04fa12fcf4df1d">Overview</h3>
+<h3 id="overview">Overview</h3>
 
 <p>Vanilla has created an OAuth2 plugin that, for most use-cases, can provide a plug-and-play SSO solution.</p>
 
 <p>OAuth2 accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.</p>
 
-<h3 id="workflow:5f5c5ed4532f8be47b04fa12fcf4df1d">Workflow</h3>
+<h3 id="workflow">Workflow</h3>
 
 <p>This plugin has a workflow of three distinct steps:</p>
 
@@ -399,7 +399,7 @@
 <li>A <strong>profile request</strong> (by passing the authoriztion token)</li>
 </ul>
 
-<h3 id="assumptions:5f5c5ed4532f8be47b04fa12fcf4df1d">Assumptions</h3>
+<h3 id="assumptions">Assumptions</h3>
 
 <p>Besides requiring that you follow the workflow above, this plugin has several assumptions about the setup of the Authorization Server. If your Authorization Server does not meet these assumptions it does not mean that you cannot integrate with a Vanilla forum, it means that you will not be able to use this plugin out of the box and that you will requires some level of customization.</p>
 
@@ -438,7 +438,7 @@
 
 <p><strong>NOTE</strong>: Not supported in this work flow are <strong>&ldquo;nonce&rdquo; support</strong> (a hash sent in the <code>state</code> and verified to be unchanged) and <strong>refresh tokens</strong>.</p>
 
-<h3 id="features:5f5c5ed4532f8be47b04fa12fcf4df1d">Features</h3>
+<h3 id="features">Features</h3>
 
 <p>The OAuth2 Plugin attempts to &ldquo;parameterize&rdquo; as many aspects of the functionality as possible. A settings form in the dashboard allows you to set:</p>
 
@@ -450,7 +450,7 @@
 <li>The exepected keys in the json response in the profile request</li>
 </ul>
 
-<h3 id="possible-pitfalls:5f5c5ed4532f8be47b04fa12fcf4df1d">Possible Pitfalls</h3>
+<h3 id="possible-pitfalls">Possible Pitfalls</h3>
 
 <p>A number of things can go wrong when trying to implement SSO with this plugin:</p>
 
@@ -460,7 +460,7 @@
 <li>Your Authorization Server will usually need to &ldquo;whitelist&rdquo; the redirect URI (i.e. https://<em>[The url of the forum]</em>/entry/oauth2)</li>
 </ul>
 
-<h2 id="create-your-own-oauth2-plugin:5f5c5ed4532f8be47b04fa12fcf4df1d">Create Your Own OAuth2 Plugin</h2>
+<h2 id="create-your-own-oauth2-plugin">Create Your Own OAuth2 Plugin</h2>
 
 <p>For more on how to create your own plugin see our docs on <a href="//docs.vanillaforums.com/developer/plugins/">Plugins</a>.</p>
 

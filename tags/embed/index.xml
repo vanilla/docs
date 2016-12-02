@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Embed on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/embed/</link>
-    <description>Recent content in Embed on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/embed/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/embed/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <guid>//docs.vanillaforums.com/help/posting/smart-embed/</guid>
       <description>
 
-&lt;h2 id=&#34;coming-soon:f26701c4a204f1b40e7765bfd2bdf2f0&#34;&gt;Coming soon!&lt;/h2&gt;
+&lt;h2 id=&#34;coming-soon&#34;&gt;Coming soon!&lt;/h2&gt;
 </description>
     </item>
     

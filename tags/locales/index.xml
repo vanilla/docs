@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Locales on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/locales/</link>
-    <description>Recent content in Locales on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/locales/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/locales/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,13 +15,13 @@
       <guid>//docs.vanillaforums.com/developer/locales/</guid>
       <description>
 
-&lt;h2 id=&#34;translating-vanilla:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Translating Vanilla&lt;/h2&gt;
+&lt;h2 id=&#34;translating-vanilla&#34;&gt;Translating Vanilla&lt;/h2&gt;
 
 &lt;p&gt;Want to help us improve our translations? We have a &lt;a href=&#34;https://www.transifex.com/projects/p/vanilla/&#34;&gt;Transifex project&lt;/a&gt; for contributing to this. Create an account there and submit your improvements.&lt;/p&gt;
 
 &lt;p&gt;Need to customize the phrasing just on your site in particular? See &amp;ldquo;Overriding locales&amp;rdquo; below.&lt;/p&gt;
 
-&lt;h2 id=&#34;translation-tips:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Translation tips&lt;/h2&gt;
+&lt;h2 id=&#34;translation-tips&#34;&gt;Translation tips&lt;/h2&gt;
 
 &lt;p&gt;Want to help translate? Awesome! Here are some tips for creating great translations.&lt;/p&gt;
 
@@ -30,7 +30,7 @@
 &lt;li&gt;Avoid HTML encoding of UTF-8 characters. For example, just use &lt;code&gt;ö&lt;/code&gt;, not &lt;code&gt;&amp;amp;ouml;&lt;/code&gt;. Vanilla&amp;rsquo;s entire stack is UTF-8 so the former &lt;em&gt;always&lt;/em&gt; works, but our default emails are not HTML, so the latter will fail.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;installing-locales:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Installing locales&lt;/h2&gt;
+&lt;h2 id=&#34;installing-locales&#34;&gt;Installing locales&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download the locale you want from the &lt;a href=&#34;http://vanillaforums.org/addon/browse/locales/popular/2&#34;&gt;Addon Directory&lt;/a&gt;.&lt;/li&gt;
@@ -40,11 +40,11 @@
 &lt;li&gt;Change the Default Locale at the top of the page, and Save.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;using-multiple-locales:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Using multiple locales&lt;/h2&gt;
+&lt;h2 id=&#34;using-multiple-locales&#34;&gt;Using multiple locales&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://vanillaforums.org/addon/multilingual-plugin&#34;&gt;Multilingual plugin&lt;/a&gt; allows each user select their preference from all enabled locales.&lt;/p&gt;
 
-&lt;h2 id=&#34;overriding-locales:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Overriding locales&lt;/h2&gt;
+&lt;h2 id=&#34;overriding-locales&#34;&gt;Overriding locales&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if (!defined(&#39;APPLICATION&#39;)) exit();
 

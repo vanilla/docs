@@ -368,15 +368,15 @@
 
                 
 
-<h2 id="controllers:568eb592fd969d4a574c5d9eabbcb4c8">Controllers</h2>
+<h2 id="controllers">Controllers</h2>
 
 <p>In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.</p>
 
-<h3 id="dispatcher:568eb592fd969d4a574c5d9eabbcb4c8">Dispatcher</h3>
+<h3 id="dispatcher">Dispatcher</h3>
 
 <p>Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (<code>Gdn_Dispatcher</code>) receives incoming <a href="//docs.vanillaforums.com/developer/framework/requests">requests</a> and invokes the appropriate controller(s).</p>
 
-<h3 id="mapping-urls:568eb592fd969d4a574c5d9eabbcb4c8">Mapping URLs</h3>
+<h3 id="mapping-urls">Mapping URLs</h3>
 
 <p>First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.</p>
 
@@ -388,7 +388,7 @@ $ProfileController-&gt;notifications('1', 'Lincoln');
 
 <p>If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the <code>Index()</code> method will be invoked. Therefore, the basic profile URL <code>/profile/1/Lincoln</code> could be more verbosely written as <code>/dashboard/profile/index/1/Lincoln</code> to more clearly understand what code it is invoking.</p>
 
-<h3 id="pretty-urls:568eb592fd969d4a574c5d9eabbcb4c8">Pretty URLs</h3>
+<h3 id="pretty-urls">Pretty URLs</h3>
 
 <p>All requests are dispatched thru the index.php file. While it&rsquo;s possible to use the framework by passing a &lsquo;p&rsquo; parameter with the rest of the path (e.g. <code>/index.php?p=/profile</code>), it&rsquo;s best to configure your server to handle &ldquo;pretty&rdquo; URLs.</p>
 

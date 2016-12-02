@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plugins on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/plugins/</link>
-    <description>Recent content in Plugins on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/plugins/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/plugins/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,11 @@
       <guid>//docs.vanillaforums.com/developer/plugins/</guid>
       <description>
 
-&lt;h2 id=&#34;extending-vanilla-with-plugins:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Extending Vanilla with plugins&lt;/h2&gt;
+&lt;h2 id=&#34;extending-vanilla-with-plugins&#34;&gt;Extending Vanilla with plugins&lt;/h2&gt;
 
 &lt;p&gt;Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.&lt;/p&gt;
 
-&lt;h2 id=&#34;events-handlers:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Events &amp;amp; Handlers&lt;/h2&gt;
+&lt;h2 id=&#34;events-handlers&#34;&gt;Events &amp;amp; Handlers&lt;/h2&gt;
 
 &lt;p&gt;Any class that extends the class &amp;ldquo;Pluggable&amp;rdquo; has the ability to call&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 
 &lt;p&gt;Notice that 2 parameters are passed. The first is the object invoking the event (usually &lt;code&gt;$this&lt;/code&gt;). The second is &lt;em&gt;optional&lt;/em&gt;, and is an array of event arguments being passed as additional info or options to be modified.&lt;/p&gt;
 
-&lt;h2 id=&#34;eventarguments:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;EventArguments&lt;/h2&gt;
+&lt;h2 id=&#34;eventarguments&#34;&gt;EventArguments&lt;/h2&gt;
 
 &lt;p&gt;Usually these arguments are the data being set up by the object, a toggle the handler can switch on or off, or other contextual info.&lt;/p&gt;
 
@@ -58,13 +58,13 @@ $this-&amp;gt;fireEvent(&#39;Kaboom&#39;);
 
 &lt;p&gt;Custom events are added on a case-by-case basis as the need arises. If you feel you need a new event, request it on the community forum.&lt;/p&gt;
 
-&lt;h2 id=&#34;magic-events:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Magic Events&lt;/h2&gt;
+&lt;h2 id=&#34;magic-events&#34;&gt;Magic Events&lt;/h2&gt;
 
 &lt;p&gt;Magic events were an elaborate system of hook possibilities that involved the method prefix &amp;lsquo;x&amp;rsquo; and PHP&amp;rsquo;s &lt;code&gt;__call()&lt;/code&gt; method. Currently, there is only one undeprecated magic event in Vanilla: &lt;code&gt;render_before&lt;/code&gt;. It invokes just before the page is rendered. Example use: &lt;code&gt;base_render_before($Sender)&lt;/code&gt;. &lt;strong&gt;It is best to avoid when another event is usable.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;For a better alternative hook that reliably fires early on every request, try &lt;code&gt;gdn_dispatcher_appStartup_handler&lt;/code&gt; instead. To universally include a CSS file, use &lt;code&gt;assetModel_styleCss_handler&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;function-overrides:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Function Overrides&lt;/h2&gt;
+&lt;h2 id=&#34;function-overrides&#34;&gt;Function Overrides&lt;/h2&gt;
 
 &lt;p&gt;All functions in the framework are declared like so:&lt;/p&gt;
 
@@ -77,7 +77,7 @@ $this-&amp;gt;fireEvent(&#39;Kaboom&#39;);
 
 &lt;p&gt;Plugin authors may therefore override any core function simply by defining it in a plugin or theme hook file, which are included before the core functions.&lt;/p&gt;
 
-&lt;h2 id=&#34;magic-methods:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Magic Methods&lt;/h2&gt;
+&lt;h2 id=&#34;magic-methods&#34;&gt;Magic Methods&lt;/h2&gt;
 
 &lt;p&gt;Magic methods allow you to create new methods and add them to existing objects. They are created in much the same way that you plug into events. Imagine you wanted to add a method named &lt;code&gt;Kaboom&lt;/code&gt; to the DiscussionsController:&lt;/p&gt;
 
@@ -94,13 +94,13 @@ $this-&amp;gt;fireEvent(&#39;Kaboom&#39;);
 
 &lt;p&gt;Magic methods only work in classes that extend &lt;code&gt;Gdn_Pluggable&lt;/code&gt;. For example, notice the &lt;code&gt;Gdn_Form&lt;/code&gt; class does, but the &lt;code&gt;Gdn_Format&lt;/code&gt; class does not. All models and controllers do.&lt;/p&gt;
 
-&lt;h2 id=&#34;controllers:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Controllers&lt;/h2&gt;
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
 
 &lt;p&gt;Is your addon a bit more complex? Add a &lt;code&gt;controllers&lt;/code&gt; folder and add your own controller classes. They will automatically be detected and be dispatched to like normal controllers. This functionality is new in Vanilla 2.2.&lt;/p&gt;
 
 &lt;p&gt;As a reminder, controllers should extend Gdn_Controller. &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/controllers&#34;&gt;Read more about controllers&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;virtual-controller-deprecated:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Virtual Controller (deprecated)&lt;/h2&gt;
+&lt;h2 id=&#34;virtual-controller-deprecated&#34;&gt;Virtual Controller (deprecated)&lt;/h2&gt;
 
 &lt;p&gt;A virtual controller let you simulate a single controller within a plugin. First, create a magic method using the namespace you want for your controller. Example: &lt;code&gt;pluginController_newNamespace_create&lt;/code&gt;. This creates content under the URL &lt;code&gt;/plugin/newnamespace&lt;/code&gt;. To put NewNamespace as the first level (instead of under &amp;ldquo;plugins&amp;rdquo;) use the RootController. End the magic method with a re-dispatch: &lt;code&gt;$this-&amp;gt;dispatch($Sender, $Sender-&amp;gt;RequestArgs);&lt;/code&gt;.&lt;/p&gt;
 

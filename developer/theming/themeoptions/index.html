@@ -304,7 +304,7 @@
 
                 
 
-<h2 id="theme-options:3a986a5c4f91ee929d4ae8b678388077">Theme Options</h2>
+<h2 id="theme-options">Theme Options</h2>
 
 <p>This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.</p>
 
@@ -312,7 +312,7 @@
 
 <p>This functionality can be added simply by editing your theme&rsquo;s about.php file by adding an &lsquo;Options&rsquo; key to your theme info array with an array as its value. The content of the &lsquo;Options&rsquo; array is discussed below.</p>
 
-<h3 id="choosing-between-stylesheets:3a986a5c4f91ee929d4ae8b678388077">Choosing Between Stylesheets</h3>
+<h3 id="choosing-between-stylesheets">Choosing Between Stylesheets</h3>
 
 <p>In the design folder of your theme, you can add any number of CSS files. The naming convention is <code>custom_*.css</code>, where * is the theme variant.</p>
 
@@ -331,7 +331,7 @@
 
 <p>The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of <code>screenshot_*.ext</code> where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use <code>screenshot.ext</code> for the default theme.</p>
 
-<h3 id="adding-custom-text-to-a-theme:3a986a5c4f91ee929d4ae8b678388077">Adding Custom Text to a Theme</h3>
+<h3 id="adding-custom-text-to-a-theme">Adding Custom Text to a Theme</h3>
 
 <p>To add custom text to a theme, add a &lsquo;Text&rsquo; key to the &lsquo;Options&rsquo; array. The value of of the &lsquo;Text&rsquo; key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of &lsquo;textbox&rsquo;, which is a regular text input, or &lsquo;textarea&rsquo;, the default, which is a multiline textarea element.</p>
 
@@ -354,7 +354,7 @@
 
 <p>The text is saved in your config, so you could also access it in PHP using <code>c('ThemeOption.Custom&amp;nbsp;Text', &quot;Some default custom text&quot;);</code> <a href="../developers/configuration/using.html.md">Learn more about the config here.</a></p>
 
-<h3 id="example:3a986a5c4f91ee929d4ae8b678388077">Example</h3>
+<h3 id="example">Example</h3>
 
 <p>Here&rsquo;s an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.</p>
 

@@ -335,13 +335,13 @@
 
                 
 
-<h2 id="smarty-modifiers:9ddbbc31f4753081ec8cd78168356c5b">Smarty Modifiers</h2>
+<h2 id="smarty-modifiers">Smarty Modifiers</h2>
 
 <p>Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). <em>These parameters must follow the order of their appearance in the signature</em>.</p>
 
 <p>Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates. <a href="http://www.smarty.net/docsv2/en/language.modifiers.tpl">Learn more about Smarty modifiers from the Smarty site.</a>.</p>
 
-<h2 id="modifier-asset-url:9ddbbc31f4753081ec8cd78168356c5b">Modifier: <em>asset_url</em></h2>
+<h2 id="modifier-asset-url">Modifier: <em>asset_url</em></h2>
 
 <p>Converts a string to an asset url. Solves the problem of trying to using a relative path when Vanilla exists in a subfolder.</p>
 
@@ -372,14 +372,14 @@
 </tbody>
 </table>
 
-<h3 id="example:9ddbbc31f4753081ec8cd78168356c5b">Example</h3>
+<h3 id="example">Example</h3>
 
 <p>In the following example, if the asset_url modifier was not specified, the image would not work if Vanilla existed in a subfolder. It also adds the domain name to the url and appends the theme version number.</p>
 
 <pre><code>&lt;img alt=&quot;My logo&quot; src=&quot;{&quot;/themes/MyTheme/design/images/my-logo.png&quot;|asset_url:true:true}&quot;&gt;
 </code></pre>
 
-<h2 id="modifier-date:9ddbbc31f4753081ec8cd78168356c5b">Modifier: <em>date</em></h2>
+<h2 id="modifier-date">Modifier: <em>date</em></h2>
 
 <p>Formats a timestamp consistently with Vanilla&rsquo;s date formatting, which by default varies depending on how much time has passed.</p>
 
@@ -403,14 +403,14 @@
 </tbody>
 </table>
 
-<h3 id="example-1:9ddbbc31f4753081ec8cd78168356c5b">Example</h3>
+<h3 id="example-1">Example</h3>
 
 <p>The following example prints out the current year and uses the <a href="http://www.smarty.net/docsv2/en/language.variables.smarty.tpl">{$smarty} reserved variable</a> to get the current timestamp</p>
 
 <pre><code>{$smarty.now|date:&quot;%Y&quot;}
 </code></pre>
 
-<h2 id="modifier-translate:9ddbbc31f4753081ec8cd78168356c5b">Modifier: <em>translate</em></h2>
+<h2 id="modifier-translate">Modifier: <em>translate</em></h2>
 
 <p>Translates a string into the selected locale&rsquo;s definition.</p>
 
@@ -434,7 +434,7 @@
 </tbody>
 </table>
 
-<h3 id="example-2:9ddbbc31f4753081ec8cd78168356c5b">Example</h3>
+<h3 id="example-2">Example</h3>
 
 <p>This example outputs the breadcrumbs, where the home link text is the translated &lsquo;Forum&rsquo; definition. <a href="//docs.vanillaforums.com/functions/breadcrumbs.html.md">Learn more about the breadcrumbs tag.</a></p>
 

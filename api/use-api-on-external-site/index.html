@@ -179,13 +179,13 @@
 
 <p>The Vanilla Forums API can be used to display information from your community outside of the community such as your blog. This guide shows a basic example using javascript and jQuery.</p>
 
-<h2 id="jsonp:1f16d88285d44001a7b9b93d696d04e0">JSONP</h2>
+<h2 id="jsonp">JSONP</h2>
 
 <p>Default browser security does not let you make API calls from an external site. This is necessary to prevent a wide range of hacking and in general keeps the web a safer place. However, to get around this limitation with the API Vanilla uses a technology called JSONP. There are some small differences with the way JSONP is used as apposed to basic AJAX, but most frameworks such as jQuery have built in support for JSONP making it very easy to use.</p>
 
 <p><em>In order to use JSONP with the Vanilla API you must have JSONP support turned on for your community. Ask support and they&rsquo;ll be happy to do this for you.</em></p>
 
-<h2 id="making-an-api-call-with-jquery-and-jsonp:1f16d88285d44001a7b9b93d696d04e0">Making an API call with jQuery and JSONP</h2>
+<h2 id="making-an-api-call-with-jquery-and-jsonp">Making an API call with jQuery and JSONP</h2>
 
 <p>To make an API call with jQuery you&rsquo;ll need to look at our [API documentation]() and find the appropriate call. Here is an example call of the basic discussions endpoint.</p>
 
@@ -209,7 +209,7 @@ $.ajax({
 });
 </code></pre>
 
-<h3 id="notes:1f16d88285d44001a7b9b93d696d04e0">Notes</h3>
+<h3 id="notes">Notes</h3>
 
 <p>There are a few things to note about this code.</p>
 
@@ -223,7 +223,7 @@ $.ajax({
 <li><p>The JSONP call will be made with the credentials of the user that is currently signed in to the forums. If no one is signed in then the call will be made as a guest.</p></li>
 </ol>
 
-<h3 id="a-real-example:1f16d88285d44001a7b9b93d696d04e0">A Real Example</h3>
+<h3 id="a-real-example">A Real Example</h3>
 
 <p>We&rsquo;ve made a simple example using a feed from vanillaforums.com. Check it out on <a href="http://cdpn.io/zxXwvJ">codepen.io</a>.</p>
 

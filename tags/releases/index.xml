@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Releases on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/releases/</link>
-    <description>Recent content in Releases on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/releases/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <atom:link href="//docs.vanillaforums.com/tags/releases/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,9 @@
       <guid>//docs.vanillaforums.com/help/releases/december-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:1731942d71274a37597ab5456c507f85&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes:1731942d71274a37597ab5456c507f85&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Add full IPv6 support.&lt;/li&gt;
@@ -94,9 +94,9 @@
       <guid>//docs.vanillaforums.com/help/releases/january-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:38721665cf506194debf30c643022dcd&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes:38721665cf506194debf30c643022dcd&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
@@ -140,9 +140,9 @@
       <guid>//docs.vanillaforums.com/help/releases/july-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:9971f99c339014111db0d9919dfe3d97&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes:9971f99c339014111db0d9919dfe3d97&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;New plugin: Role Tracker (aggregates discussions with posts by users in particular roles).&lt;/p&gt;&lt;/li&gt;
@@ -232,9 +232,9 @@
       <guid>//docs.vanillaforums.com/help/releases/march-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:e88284be3a382d3f451e794b4a88180e&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes:e88284be3a382d3f451e794b4a88180e&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;HTML emails now available.&lt;/li&gt;
@@ -273,7 +273,7 @@
 &lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;new-addons-available:e88284be3a382d3f451e794b4a88180e&#34;&gt;New addons available:&lt;/h3&gt;
+&lt;h3 id=&#34;new-addons-available&#34;&gt;New addons available:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
@@ -295,9 +295,9 @@
       <guid>//docs.vanillaforums.com/help/releases/may-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:7f185bab92d791608f6d84af803810ad&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes:7f185bab92d791608f6d84af803810ad&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Upgrade to reCaptcha 2 (&amp;ldquo;NoCaptcha&amp;rdquo;).&lt;/li&gt;
@@ -361,7 +361,7 @@
       <guid>//docs.vanillaforums.com/help/releases/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
 &lt;p&gt;Our clients on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.&lt;/p&gt;
 
@@ -377,9 +377,9 @@
       <guid>//docs.vanillaforums.com/help/releases/september-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes:1c74d392bcfae8e8027f7fb75e0ed5c9&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes:1c74d392bcfae8e8027f7fb75e0ed5c9&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;New Dashboard! This changed every page in the moderator/admin backend, including all addon settings pages.&lt;/li&gt;

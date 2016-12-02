@@ -368,7 +368,7 @@
 
                 
 
-<h2 id="views:26ec5f5c36efaeaee4a3ac86cdec358e">Views</h2>
+<h2 id="views">Views</h2>
 
 <p>Once a controller method is called to handle the request, how is the xhtml of the page put together? <strong>Views</strong>. There are two types of views in Garden: &ldquo;Views&rdquo; and &ldquo;Master Views&rdquo;. A view relates directly to the controller method that called it and handles rendering content related to that request. You can typically think of a view as the content for that page. For example, if a <code>Vanilla-&gt;Discussion-&gt;All()</code> method is called, the view for that method would handle rendering all of the discussions. Everything that is rendered around the discussions is handled by the Master View. The Master View allows you to create a consistent layout for the pages in the application. A single master view defines the look and feel and standard behavior for all of the pages (or a group of pages) in the application. Let&rsquo;s go back to the filesystem so you can get a better picture. In the following example, the request in the url would have been: <code>http://myserver.com/garden/profile/index/mark</code>. So, this means that Garden&rsquo;s &ldquo;Profile&rdquo; controller was requested, the &ldquo;index&rdquo; method was requested from the profile controller, and the first argument into the index method is &ldquo;mark&rdquo;. In other words, the request was: <code>$ProfileController-&gt;Index('mark');</code></p>
 
@@ -393,7 +393,7 @@
 
 <p>In the most simple example, the view will be as it appears in the image above: in a &ldquo;profile&rdquo; folder within the &ldquo;views&rdquo; folder, and named after the method that was called: <code>/views/profile/index.php</code>. By default, the controller will fetch that view from the context of the FetchView method of the base controller class. In plain-English: the view file is included within a method on the Controller class called &ldquo;FetchView&rdquo;. That is why I placed the user data within a <code>$this-&gt;User</code> property in my <code>$ProfileController-&gt;Index()</code> method, above; so it could be accessible from within my view file. The view file likely will contain something as simple as this:</p>
 
-<h3 id="basic-information:26ec5f5c36efaeaee4a3ac86cdec358e">Basic Information</h3>
+<h3 id="basic-information">Basic Information</h3>
 
 <table>
 <thead>
@@ -428,7 +428,7 @@
 
 <p>As you can see, the master view handles the basic structure of a page. As I mentioned above, by default the view that is fetched by the controller is added to an asset collection called &ldquo;Content&rdquo;, and that asset collection is rendered in this master view when the <code>$this-&gt;RenderAsset('Content')</code> method is called - right there in the middle of the master view. As you can see in the master view above, there are a number of different asset collections available for application and plugin authors (Head, Menu, Content, and Foot). An application author has the ability to add as many of these as he/she desires and add to them as necessary. The idea behind these asset collections is that while the basic request can be handled and placed into the &ldquo;Content&rdquo; asset (ie. the profile information being displayed from the example above), there are still a lot of other elements a person may want on a page. Plugin authors may want to add assets to the head, menu, or foot. They may even want to add assets to the content collection. Garden itself has other UI components that get rendered in the head and menu asset collections (which will be discussed in a later preview). So, in the most basic example, the &ldquo;index&rdquo; view is requested from it&rsquo;s controller&rsquo;s view folder, the default.screen.css file is requested from the application&rsquo;s design folder, and the master view is requested from the root of the application&rsquo;s &ldquo;view&rdquo; folder. What other ways could the views and css have been retrieved? The controller uses Garden&rsquo;s FileSystem object to search the application for the appropriate file to handle the request. Whatever the filesystem object finds first, it will use.</p>
 
-<h3 id="views-are-retrieved-with-the-following-precedence:26ec5f5c36efaeaee4a3ac86cdec358e">Views are retrieved with the following precedence:</h3>
+<h3 id="views-are-retrieved-with-the-following-precedence">Views are retrieved with the following precedence:</h3>
 
 <ol>
 <li><strong>An explicitly defined path to a view.</strong> ie. a plugin&rsquo;s custom view location</li>
@@ -437,7 +437,7 @@
 <li><strong>Application default.</strong> ie. <code>/path/to/garden/applications/app_name/views/controller_name/view.php</code></li>
 </ol>
 
-<h3 id="master-views-are-retrieved-with-the-following-precedence:26ec5f5c36efaeaee4a3ac86cdec358e">Master views are retrieved with the following precedence:</h3>
+<h3 id="master-views-are-retrieved-with-the-following-precedence">Master views are retrieved with the following precedence:</h3>
 
 <ol>
 <li><strong>Application-specific theme view.</strong> ie. <code>/path/to/garden/themes/theme_name/app_name/views/default.master</code></li>
@@ -446,7 +446,7 @@
 <li><strong>Garden default.</strong> ie. <code>/path/to/garden/applications/garden/views/default.master</code></li>
 </ol>
 
-<h3 id="css-files-are-retrieved-with-the-following-precedence:26ec5f5c36efaeaee4a3ac86cdec358e">CSS files are retrieved with the following precedence:</h3>
+<h3 id="css-files-are-retrieved-with-the-following-precedence">CSS files are retrieved with the following precedence:</h3>
 
 <ol>
 <li><strong>Application-specific css.</strong> ie. <code>/path/to/garden/themes/theme_name/app_name/design/default.screen.css</code></li>

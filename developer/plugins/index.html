@@ -259,11 +259,11 @@
 
                 
 
-<h2 id="extending-vanilla-with-plugins:d680e8a854a7cbad6d490c445cba2eba">Extending Vanilla with plugins</h2>
+<h2 id="extending-vanilla-with-plugins">Extending Vanilla with plugins</h2>
 
 <p>Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.</p>
 
-<h2 id="events-handlers:d680e8a854a7cbad6d490c445cba2eba">Events &amp; Handlers</h2>
+<h2 id="events-handlers">Events &amp; Handlers</h2>
 
 <p>Any class that extends the class &ldquo;Pluggable&rdquo; has the ability to call</p>
 
@@ -286,7 +286,7 @@
 
 <p>Notice that 2 parameters are passed. The first is the object invoking the event (usually <code>$this</code>). The second is <em>optional</em>, and is an array of event arguments being passed as additional info or options to be modified.</p>
 
-<h2 id="eventarguments:d680e8a854a7cbad6d490c445cba2eba">EventArguments</h2>
+<h2 id="eventarguments">EventArguments</h2>
 
 <p>Usually these arguments are the data being set up by the object, a toggle the handler can switch on or off, or other contextual info.</p>
 
@@ -302,13 +302,13 @@ $this-&gt;fireEvent('Kaboom');
 
 <p>Custom events are added on a case-by-case basis as the need arises. If you feel you need a new event, request it on the community forum.</p>
 
-<h2 id="magic-events:d680e8a854a7cbad6d490c445cba2eba">Magic Events</h2>
+<h2 id="magic-events">Magic Events</h2>
 
 <p>Magic events were an elaborate system of hook possibilities that involved the method prefix &lsquo;x&rsquo; and PHP&rsquo;s <code>__call()</code> method. Currently, there is only one undeprecated magic event in Vanilla: <code>render_before</code>. It invokes just before the page is rendered. Example use: <code>base_render_before($Sender)</code>. <strong>It is best to avoid when another event is usable.</strong></p>
 
 <p>For a better alternative hook that reliably fires early on every request, try <code>gdn_dispatcher_appStartup_handler</code> instead. To universally include a CSS file, use <code>assetModel_styleCss_handler</code>.</p>
 
-<h2 id="function-overrides:d680e8a854a7cbad6d490c445cba2eba">Function Overrides</h2>
+<h2 id="function-overrides">Function Overrides</h2>
 
 <p>All functions in the framework are declared like so:</p>
 
@@ -321,7 +321,7 @@ $this-&gt;fireEvent('Kaboom');
 
 <p>Plugin authors may therefore override any core function simply by defining it in a plugin or theme hook file, which are included before the core functions.</p>
 
-<h2 id="magic-methods:d680e8a854a7cbad6d490c445cba2eba">Magic Methods</h2>
+<h2 id="magic-methods">Magic Methods</h2>
 
 <p>Magic methods allow you to create new methods and add them to existing objects. They are created in much the same way that you plug into events. Imagine you wanted to add a method named <code>Kaboom</code> to the DiscussionsController:</p>
 
@@ -338,13 +338,13 @@ $this-&gt;fireEvent('Kaboom');
 
 <p>Magic methods only work in classes that extend <code>Gdn_Pluggable</code>. For example, notice the <code>Gdn_Form</code> class does, but the <code>Gdn_Format</code> class does not. All models and controllers do.</p>
 
-<h2 id="controllers:d680e8a854a7cbad6d490c445cba2eba">Controllers</h2>
+<h2 id="controllers">Controllers</h2>
 
 <p>Is your addon a bit more complex? Add a <code>controllers</code> folder and add your own controller classes. They will automatically be detected and be dispatched to like normal controllers. This functionality is new in Vanilla 2.2.</p>
 
 <p>As a reminder, controllers should extend Gdn_Controller. <a href="//docs.vanillaforums.com/developer/framework/controllers">Read more about controllers</a>.</p>
 
-<h2 id="virtual-controller-deprecated:d680e8a854a7cbad6d490c445cba2eba">Virtual Controller (deprecated)</h2>
+<h2 id="virtual-controller-deprecated">Virtual Controller (deprecated)</h2>
 
 <p>A virtual controller let you simulate a single controller within a plugin. First, create a magic method using the namespace you want for your controller. Example: <code>pluginController_newNamespace_create</code>. This creates content under the URL <code>/plugin/newnamespace</code>. To put NewNamespace as the first level (instead of under &ldquo;plugins&rdquo;) use the RootController. End the magic method with a re-dispatch: <code>$this-&gt;dispatch($Sender, $Sender-&gt;RequestArgs);</code>.</p>
 

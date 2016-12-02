@@ -280,7 +280,7 @@
 
                 
 
-<h2 id="standards:599827d193cc1720160c699f8f7d5861">Standards</h2>
+<h2 id="standards">Standards</h2>
 
 <p>As of May 2014, Vanilla will adhere to <a href="and therefore [PSR-1]">PSR-2</a> with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).</p>
 
@@ -288,7 +288,7 @@
 
 <p>We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&rsquo;s annoying and hard to read when everything is styled differently. Key words in this document (&ldquo;MUST&rdquo;, &ldquo;SHOULD&rdquo;, etc.) are used as described in <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> which is as boring and obvious as you expect but mercifully brief.</p>
 
-<h3 id="php-version:599827d193cc1720160c699f8f7d5861">PHP Version</h3>
+<h3 id="php-version">PHP Version</h3>
 
 <p>All code in <code>master</code> must work under PHP 5.4.</p>
 
@@ -296,7 +296,7 @@
 
 <p>We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.</p>
 
-<h3 id="check-out-codesniffer:599827d193cc1720160c699f8f7d5861">Check out CodeSniffer</h3>
+<h3 id="check-out-codesniffer">Check out CodeSniffer</h3>
 
 <p>CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.</p>
 
@@ -313,7 +313,7 @@
 
 <p>Thus ends the readable part of your adventure as you descend into the dry, technical blather of a coding standard. Godspeed, coding warrior.</p>
 
-<h2 id="1-overview:599827d193cc1720160c699f8f7d5861">1. Overview</h2>
+<h2 id="1-overview">1. Overview</h2>
 
 <ul>
 <li><p>Code MUST use 4 spaces for indenting, not tabs.</p></li>
@@ -351,7 +351,7 @@ but SHOULD NOT do both.</p></li>
 <li><p>View files are excluded from this standard.  You SHOULD try to follow as many rules as possible.</p></li>
 </ul>
 
-<h3 id="1-1-example:599827d193cc1720160c699f8f7d5861">1.1. Example</h3>
+<h3 id="1-1-example">1.1. Example</h3>
 
 <p>This example encompasses some of the rules below as a quick overview:</p>
 
@@ -395,9 +395,9 @@ class Foo extends Bar implements FooInterface {
 }
 </code></pre>
 
-<h2 id="2-general:599827d193cc1720160c699f8f7d5861">2. General</h2>
+<h2 id="2-general">2. General</h2>
 
-<h3 id="2-1-files:599827d193cc1720160c699f8f7d5861">2.1. Files</h3>
+<h3 id="2-1-files">2.1. Files</h3>
 
 <p>All PHP files MUST use the Unix LF (linefeed) line ending.</p>
 
@@ -407,16 +407,16 @@ class Foo extends Bar implements FooInterface {
 
 <p>All view files are excluded from this standard.  You SHOULD try to follow as many rules as possible.</p>
 
-<h3 id="2-2-php-tags:599827d193cc1720160c699f8f7d5861">2.2. PHP Tags</h3>
+<h3 id="2-2-php-tags">2.2. PHP Tags</h3>
 
 <p>PHP code MUST use the long <code>&lt;?php ?&gt;</code> tags; it
 MUST NOT use the other tag variations.</p>
 
-<h3 id="2-3-character-encoding:599827d193cc1720160c699f8f7d5861">2.3. Character Encoding</h3>
+<h3 id="2-3-character-encoding">2.3. Character Encoding</h3>
 
 <p>PHP code MUST use only UTF-8 without BOM.</p>
 
-<h3 id="2-4-side-effects:599827d193cc1720160c699f8f7d5861">2.4. Side Effects</h3>
+<h3 id="2-4-side-effects">2.4. Side Effects</h3>
 
 <p>A file SHOULD declare new symbols (classes, functions, constants,
 etc.) and cause no other side effects, or it SHOULD execute logic with side
@@ -467,7 +467,7 @@ if (! function_exists('bar')) {
 }
 </code></pre>
 
-<h3 id="2-5-lines:599827d193cc1720160c699f8f7d5861">2.5. Lines</h3>
+<h3 id="2-5-lines">2.5. Lines</h3>
 
 <p>There MUST NOT be a hard limit on line length.</p>
 
@@ -484,7 +484,7 @@ blocks of code.</p>
 
 <p>There MUST NOT be more than one statement per line.</p>
 
-<h3 id="2-6-indenting:599827d193cc1720160c699f8f7d5861">2.6. Indenting</h3>
+<h3 id="2-6-indenting">2.6. Indenting</h3>
 
 <p>Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.</p>
 
@@ -495,21 +495,21 @@ also makes it easy to insert fine-grained sub-indentation for inter-line
 alignment.
 </aside>
 
-<h3 id="2-7-keywords-and-true-false-null:599827d193cc1720160c699f8f7d5861">2.7. Keywords and True/False/Null</h3>
+<h3 id="2-7-keywords-and-true-false-null">2.7. Keywords and True/False/Null</h3>
 
 <p>PHP <a href="http://php.net/manual/en/reserved.keywords.php">keywords</a> MUST be in lower case.</p>
 
 <p>The PHP constants <code>true</code>, <code>false</code>, and <code>null</code> MUST be in lower case.</p>
 
-<h2 id="3-namespace-and-use-declarations:599827d193cc1720160c699f8f7d5861">3. Namespace and Use Declarations</h2>
+<h2 id="3-namespace-and-use-declarations">3. Namespace and Use Declarations</h2>
 
 <p>No requirements.</p>
 
-<h3 id="4-class-constants-properties-and-methods:599827d193cc1720160c699f8f7d5861">4. Class Constants, Properties, and Methods</h3>
+<h3 id="4-class-constants-properties-and-methods">4. Class Constants, Properties, and Methods</h3>
 
 <p>The term &ldquo;class&rdquo; refers to all classes, interfaces, and traits.</p>
 
-<h3 id="4-1-constants:599827d193cc1720160c699f8f7d5861">4.1. Constants</h3>
+<h3 id="4-1-constants">4.1. Constants</h3>
 
 <p>Class constants MUST be declared in all upper case with underscore separators.
 For example:</p>
@@ -523,7 +523,7 @@ class Foo {
 }
 </code></pre>
 
-<h3 id="4-2-extends-and-implements:599827d193cc1720160c699f8f7d5861">4.2. Extends and Implements</h3>
+<h3 id="4-2-extends-and-implements">4.2. Extends and Implements</h3>
 
 <p>The <code>extends</code> and <code>implements</code> keywords MUST be declared on the same line as
 the class name.</p>
@@ -553,7 +553,7 @@ class ClassName extends ParentClass implements
 }
 </code></pre>
 
-<h3 id="4-3-properties:599827d193cc1720160c699f8f7d5861">4.3. Properties</h3>
+<h3 id="4-3-properties">4.3. Properties</h3>
 
 <p>Visibility MUST be declared on all properties.</p>
 
@@ -573,7 +573,7 @@ class ClassName {
 }
 </code></pre>
 
-<h3 id="4-4-methods:599827d193cc1720160c699f8f7d5861">4.4. Methods</h3>
+<h3 id="4-4-methods">4.4. Methods</h3>
 
 <p>Method names MUST be declared in <code>camelCase()</code>.</p>
 
@@ -611,7 +611,7 @@ class ClassName {
 
 <p>Event methods MUST be <code>camelCase</code> separated by <code>_</code>.</p>
 
-<h3 id="4-5-method-arguments:599827d193cc1720160c699f8f7d5861">4.5. Method Arguments</h3>
+<h3 id="4-5-method-arguments">4.5. Method Arguments</h3>
 
 <p>In the argument list, there MUST NOT be a space before each comma, and there
 MUST be one space after each comma.</p>
@@ -649,14 +649,14 @@ class ClassName {
 }
 </code></pre>
 
-<h3 id="4-6-global-functions:599827d193cc1720160c699f8f7d5861">4.6. Global Functions</h3>
+<h3 id="4-6-global-functions">4.6. Global Functions</h3>
 
 <p>Global function names SHOULD be declared in <code>camelCase()</code>.</p>
 
 <p>Global function names that match php style; such as array_something() are allowed
 and MUST be declared in lowercase.</p>
 
-<h3 id="4-7-abstract-final-and-static:599827d193cc1720160c699f8f7d5861">4.7. <code>abstract</code>, <code>final</code>, and <code>static</code></h3>
+<h3 id="4-7-abstract-final-and-static">4.7. <code>abstract</code>, <code>final</code>, and <code>static</code></h3>
 
 <p>When present, the <code>abstract</code> and <code>final</code> declarations MUST precede the
 visibility declaration.</p>
@@ -677,7 +677,7 @@ abstract class ClassName {
 }
 </code></pre>
 
-<h3 id="4-8-method-and-function-calls:599827d193cc1720160c699f8f7d5861">4.8. Method and Function Calls</h3>
+<h3 id="4-8-method-and-function-calls">4.8. Method and Function Calls</h3>
 
 <p>When making a method or function call, there MUST NOT be a space between the
 method or function name and the opening parenthesis, there MUST NOT be a space
@@ -703,7 +703,7 @@ $foo-&gt;bar(
 );
 </code></pre>
 
-<h2 id="5-control-structures:599827d193cc1720160c699f8f7d5861">5. Control Structures</h2>
+<h2 id="5-control-structures">5. Control Structures</h2>
 
 <p>The general style rules for control structures are as follows:</p>
 
@@ -721,7 +721,7 @@ brace</li>
 the structures look, and reduces the likelihood of introducing errors as new
 lines get added to the body.</p>
 
-<h3 id="5-1-if-elseif-else:599827d193cc1720160c699f8f7d5861">5.1. <code>if</code>, <code>elseif</code>, <code>else</code></h3>
+<h3 id="5-1-if-elseif-else">5.1. <code>if</code>, <code>elseif</code>, <code>else</code></h3>
 
 <p>An <code>if</code> structure looks like the following. Note the placement of parentheses,
 spaces, and braces; and that <code>else</code> and <code>elseif</code> are on the same line as the
@@ -740,7 +740,7 @@ if ($expr1) {
 <p>The keyword <code>elseif</code> SHOULD be used instead of <code>else if</code> so that all control
 keywords look like single words.</p>
 
-<h3 id="5-2-switch-case:599827d193cc1720160c699f8f7d5861">5.2. <code>switch</code>, <code>case</code></h3>
+<h3 id="5-2-switch-case">5.2. <code>switch</code>, <code>case</code></h3>
 
 <p>A <code>switch</code> structure looks like the following. Note the placement of
 parentheses, spaces, and braces. The <code>case</code> statement MUST be indented once
@@ -767,7 +767,7 @@ switch ($expr) {
 }
 </code></pre>
 
-<h3 id="5-3-while-do-while:599827d193cc1720160c699f8f7d5861">5.3. <code>while</code>, <code>do while</code></h3>
+<h3 id="5-3-while-do-while">5.3. <code>while</code>, <code>do while</code></h3>
 
 <p>A <code>while</code> statement looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
@@ -787,7 +787,7 @@ do {
 } while ($expr);
 </code></pre>
 
-<h3 id="5-4-for:599827d193cc1720160c699f8f7d5861">5.4. <code>for</code></h3>
+<h3 id="5-4-for">5.4. <code>for</code></h3>
 
 <p>A <code>for</code> statement looks like the following. Note the placement of parentheses,
 spaces, and braces.</p>
@@ -798,7 +798,7 @@ for ($i = 0; $i &lt; 10; $i++) {
 }
 </code></pre>
 
-<h3 id="5-5-foreach:599827d193cc1720160c699f8f7d5861">5.5. <code>foreach</code></h3>
+<h3 id="5-5-foreach">5.5. <code>foreach</code></h3>
 
 <p>A <code>foreach</code> statement looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
@@ -809,7 +809,7 @@ foreach ($iterable as $key =&gt; $value) {
 }
 </code></pre>
 
-<h3 id="5-6-try-catch:599827d193cc1720160c699f8f7d5861">5.6. <code>try</code>, <code>catch</code></h3>
+<h3 id="5-6-try-catch">5.6. <code>try</code>, <code>catch</code></h3>
 
 <p>A <code>try catch</code> block looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
@@ -824,7 +824,7 @@ try {
 }
 </code></pre>
 
-<h2 id="6-closures:599827d193cc1720160c699f8f7d5861">6. Closures</h2>
+<h2 id="6-closures">6. Closures</h2>
 
 <p>Closures MUST be declared with a space after the <code>function</code> keyword, and a
 space before and after the <code>use</code> keyword.</p>
@@ -926,7 +926,7 @@ $foo-&gt;bar(
 );
 </code></pre>
 
-<h2 id="7-doc-blocks:599827d193cc1720160c699f8f7d5861">7. Doc Blocks</h2>
+<h2 id="7-doc-blocks">7. Doc Blocks</h2>
 
 <ul>
 <li><p>Descriptions MUST BE a full sentence with a capital to start and period to end</p></li>
@@ -945,7 +945,7 @@ $foo-&gt;bar(
  */
 </code></pre>
 
-<h2 id="8-conclusion:599827d193cc1720160c699f8f7d5861">8. Conclusion</h2>
+<h2 id="8-conclusion">8. Conclusion</h2>
 
 <p>There are many elements of style and practice intentionally omitted by this
 guide. These include but are not limited to:</p>

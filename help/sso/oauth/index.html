@@ -264,7 +264,7 @@
 
                 
 
-<h2 id="sso-with-oauth-overview:d680e8a854a7cbad6d490c445cba2eba">SSO with OAuth: Overview</h2>
+<h2 id="sso-with-oauth-overview">SSO with OAuth: Overview</h2>
 
 <p>Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:</p>
 
@@ -281,15 +281,15 @@ services required to create SSO integrations, Vanilla has created a base class t
 class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage
 of this class, either create a plug in to extend its features or use the OAuth2 plugin.</p>
 
-<h2 id="oauth2-plugin:d680e8a854a7cbad6d490c445cba2eba">OAuth2 Plugin</h2>
+<h2 id="oauth2-plugin">OAuth2 Plugin</h2>
 
-<h3 id="overview:d680e8a854a7cbad6d490c445cba2eba">Overview</h3>
+<h3 id="overview">Overview</h3>
 
 <p>Vanilla has created an OAuth2 plugin that, for most use-cases, can provide a plug-and-play SSO solution.</p>
 
 <p>OAuth2 accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.</p>
 
-<h3 id="features:d680e8a854a7cbad6d490c445cba2eba">Features</h3>
+<h3 id="features">Features</h3>
 
 <p>The OAuth2 Plugin attempts to &ldquo;parameterize&rdquo; as many aspects of the functionality as possible. A settings form in the dashboard allows you to set:</p>
 
@@ -301,7 +301,7 @@ of this class, either create a plug in to extend its features or use the OAuth2 
 <li>The exepected keys in the JSON response in the profile request</li>
 </ul>
 
-<h3 id="possible-pitfalls:d680e8a854a7cbad6d490c445cba2eba">Possible Pitfalls</h3>
+<h3 id="possible-pitfalls">Possible Pitfalls</h3>
 
 <p>A number of things can go wrong when trying to implement SSO with this plugin:</p>
 

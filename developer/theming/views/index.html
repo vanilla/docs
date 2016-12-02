@@ -304,9 +304,9 @@
 
                 
 
-<h2 id="theming-views:26ec5f5c36efaeaee4a3ac86cdec358e">Theming Views</h2>
+<h2 id="theming-views">Theming Views</h2>
 
-<h3 id="the-master-view:26ec5f5c36efaeaee4a3ac86cdec358e">The master view</h3>
+<h3 id="the-master-view">The master view</h3>
 
 <p>The master view for your forum is the wrapper for each page in your forum. Often, this is the only view you&rsquo;ll have to manipulate in your theme. The master view file is called the default.master.tpl (Smarty template) or the default.master.php. We recommend using Smarty templates for your master view, however you can decide to use a regular ol&rsquo; php view if you like.</p>
 
@@ -319,11 +319,11 @@
 
 <p>If you&rsquo;re new to this, it&rsquo;s probably a good idea to copy the content of /applications/dashboard/views/default.master.tpl into your theme&rsquo;s master view and manipulate it from there.</p>
 
-<h4 id="smarty-tags-in-the-master-view:26ec5f5c36efaeaee4a3ac86cdec358e">Smarty tags in the master view</h4>
+<h4 id="smarty-tags-in-the-master-view">Smarty tags in the master view</h4>
 
 <p>You can accomplish a great deal of things using Smarty in your default master view. We highly recommend checking out our <a href="//docs.vanillaforums.com/theming/smarty">complete Smarty docs</a> to get a bearing on this, but here&rsquo;s what you need to know to get started.</p>
 
-<h5 id="required-tags:26ec5f5c36efaeaee4a3ac86cdec358e">Required tags</h5>
+<h5 id="required-tags">Required tags</h5>
 
 <p>There are a few assets that need to appear and an event that needs to be fired from your master view in order for everything to run smoothly. (To learn more about assets and events, check out <a href="//docs.vanillaforums.com/developer/framework">our framework docs</a>.) The contents of these tags are programmatically generated, depending on your forum&rsquo;s data and configuration. Omitting any one of these tags may result in some strange behaviour on your forum.</p>
 
@@ -335,7 +335,7 @@
 <li><strong>The AfterBody event</strong> <code>{event name=&quot;AfterBody&quot;}</code> This should appear just before the closing body tag <code>&lt;/body&gt;</code> of your html. Plugins and applications hook into this event to generate content.</li>
 </ol>
 
-<h5 id="useful-tags-and-practices:26ec5f5c36efaeaee4a3ac86cdec358e">Useful tags and practices</h5>
+<h5 id="useful-tags-and-practices">Useful tags and practices</h5>
 
 <ol>
 <li><strong>Searchbox</strong> <code>{searchbox}</code> Adds a handy little searchbox.</li>
@@ -346,14 +346,14 @@
 
 <p>The most up-to-date set of Smarty functions and modifiers can be tracked down in <code>/library/SmartyPlugins</code>.</p>
 
-<h5 id="more-smarty-tips-and-tricks:26ec5f5c36efaeaee4a3ac86cdec358e">More Smarty tips and tricks</h5>
+<h5 id="more-smarty-tips-and-tricks">More Smarty tips and tricks</h5>
 
 <ol>
 <li><strong>Signed in users</strong> You can add content to your forum depending on whether a user is signed in or not. For example: <code>{if $User.SignedIn}Welcome back!{/if}</code> This  snippet adds a welcome message for any signed in user.</li>
 <li><strong>Forum sections</strong> You can add content to your forum depending on what section you&rsquo;re in. For example: <code>{if inSection(array('Profile', 'Conversation'))}{asset name=&quot;Panel&quot;}{/if}</code> This snippet adds the panel asset to the Profile and Conversation sections of the forum. You can find the section name of any page in the forum by using your browser&rsquo;s web tools to inspect the body element. One of the CSS classes on the body element will be Section-*, where * is the section name. (Assuming you have adhered to the opening body tag tip above.)</li>
 </ol>
 
-<h5 id="smarty-variables-and-setting-page-data-advanced:26ec5f5c36efaeaee4a3ac86cdec358e">Smarty variables and setting page data (Advanced)</h5>
+<h5 id="smarty-variables-and-setting-page-data-advanced">Smarty variables and setting page data (Advanced)</h5>
 
 <p>If you&rsquo;ve read this far, you may have noticed we&rsquo;ve used some variables above to determine the logged-in state of the user (<code>$User</code>) and to add body classes to and ids to the body tag (<code>$BodyID</code> and <code>$BodyClass</code>). You&rsquo;ll probably not be surprised to learn that there are even more variables you can access and use!</p>
 
@@ -361,7 +361,7 @@
 
 <p>To go even further, you can use <a href="//docs.vanillaforums.com/theming/hooks">themehooks</a> to assign data to variables that you can then use in your view.</p>
 
-<h4 id="smarty-default-master-view-example:26ec5f5c36efaeaee4a3ac86cdec358e">Smarty default master view example</h4>
+<h4 id="smarty-default-master-view-example">Smarty default master view example</h4>
 
 <p>To see how it all fits together, here&rsquo;s a default master view using Smarty:</p>
 
@@ -413,7 +413,7 @@
 &lt;/html&gt;
 </code></pre>
 
-<h3 id="overriding-other-views:26ec5f5c36efaeaee4a3ac86cdec358e">Overriding other views</h3>
+<h3 id="overriding-other-views">Overriding other views</h3>
 
 <p>Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it&rsquo;s possible to accomplish what you&rsquo;re trying to do using good ol&rsquo; CSS, or <a href="//docs.vanillaforums.com/theming/themehooks">themehooks</a>, or by being clever with the configuration of your master view, those are probably better ways to go.</p>
 
@@ -424,7 +424,7 @@
 <li>Place it in the view folder in your theme folder <em>following the same file path</em> (i.e., copy the view from /applications/vanilla/views<strong>/discussions/index.php</strong> to /themes/your_theme_name/views<strong>/discussions/index.php</strong>)</li>
 </ol>
 
-<h4 id="overriding-helper-functions:26ec5f5c36efaeaee4a3ac86cdec358e">Overriding helper functions</h4>
+<h4 id="overriding-helper-functions">Overriding helper functions</h4>
 
 <p>Many views use helper functions to generate their markup. This helper file can be overridden, as well. However, most of the time you&rsquo;ll only need to override one or two functions from this file. Rather than overriding the entire file, it&rsquo;s better to override just the functions that you need to override. To do this:</p>
 
