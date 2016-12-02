@@ -243,6 +243,14 @@
 	    
 	    
                 <li class="">
+                    <a href="//docs.vanillaforums.com/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
                     <a href="//docs.vanillaforums.com/developer/framework/permissions/">Permissions </a>
                 </li>
                 
@@ -310,6 +318,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -347,7 +363,7 @@
 
                 
 
-<h2 id="garden-s-place-in-vanilla">Garden&rsquo;s place in Vanilla</h2>
+<h2 id="garden-s-place-in-vanilla:d680e8a854a7cbad6d490c445cba2eba">Garden&rsquo;s place in Vanilla</h2>
 
 <p>Vanilla is built on an MVC framework named Garden. Its purpose is to provide an extensible, pluggable platform on which to build all the addons that make Vanilla awesome. The design of its database handling was influenced by CodeIgniter, but its plugin architecture is pretty unique.</p>
 
@@ -357,7 +373,7 @@
 
 <p>The framework is a secondary concern to the forum. In practice, this means if you request an enhancement or find a bug in a framework piece that isn&rsquo;t used anywhere in the forum, we&rsquo;d love a pull request but it&rsquo;s unlikely we&rsquo;ll devote developer time to it. Time is precious, and we&rsquo;re building awesome forums not CodeIgniter 2 (or whatever the hip kids are using these days).</p>
 
-<h2 id="addons-are-everything">Addons are everything</h2>
+<h2 id="addons-are-everything:d680e8a854a7cbad6d490c445cba2eba">Addons are everything</h2>
 
 <p>Addons are the most important feature of the framework. Our crown jewel, the Vanilla forum itself, is technically an addon. There are many ways for addons to hook into each other, and we&rsquo;re constantly refining their integration.</p>
 
@@ -374,7 +390,7 @@
 
 <p>Themes have the full power of plugins via their hooks file, but we suggest only using it for aesthetic changes.</p>
 
-<h2 id="file-structure">File structure</h2>
+<h2 id="file-structure:d680e8a854a7cbad6d490c445cba2eba">File structure</h2>
 
 <p>The core framework files are located in <code>/library/core</code>. The database layer is contained in <code>/library/database</code> and third-party libraries are in <code>/library/vendors</code>. All our junk is in <code>/trunk</code>.</p>
 
@@ -384,7 +400,7 @@
 
 <p>Non-view PHP files are named in the format <code>{type}.{name}.php</code>. &ldquo;Type&rdquo; is one of class, functions, or interface. We do not rename third-party files included in Vanilla. Classes in addons nearly always inherit from one or more framework classes.</p>
 
-<h2 id="default-applications">Default applications</h2>
+<h2 id="default-applications:d680e8a854a7cbad6d490c445cba2eba">Default applications</h2>
 
 <p>Three applications come pre-installed &amp; enabled by default: Dashboard, Vanilla, and Conversations. On a technical level, &lsquo;Vanilla&rsquo; is simply a Garden addon that works in concert with others to create your forum experience. The Vanilla application is only responsible for discussions, comments, and categories.</p>
 
@@ -392,13 +408,13 @@
 
 <p>If you just want to use the Garden framework, you could, theoretically, disable all the core Applications and roll your own from scratch. In reality, we recommend always at least using Dashboard. Even if you&rsquo;re not building a forum with Garden, it&rsquo;s definitely built with a user-centric website in mind.</p>
 
-<h2 id="let-the-code-guide-you">Let the code guide you</h2>
+<h2 id="let-the-code-guide-you:d680e8a854a7cbad6d490c445cba2eba">Let the code guide you</h2>
 
 <p>Because so much is possible with the framework, it can be intimidating to get started. Our best advice is: look at an existing plugin that does something <em>close</em> to what you&rsquo;re attempting to see how they do it. Code examples can guide you to new solutions you didn&rsquo;t know were possible.</p>
 
 <p>The Skeleton application in <code>/applications/skeleton</code> is heavily documented inline to help you get started. Make a copy and get coding, but remember: forgetting to delete the extraneous docs is like leaving the price tag on your clothes. We&rsquo;ll judge you.</p>
 
-<h2 id="where-to-start">Where to start</h2>
+<h2 id="where-to-start:d680e8a854a7cbad6d490c445cba2eba">Where to start</h2>
 
 <p>Not sure what doc to read next? We recommend reading the <a href="//docs.vanillaforums.com/developer/plugins/quickstart">plugin quickstart</a>, then try <a href="//docs.vanillaforums.com/developer/framework/controllers">Controller</a> and <a href="//docs.vanillaforums.com/developer/framework/models">Models</a>. It&rsquo;s a self-guided tour from there! Don&rsquo;t forget to stop by the <a href="http://vanillaforums.org/discussions">community forum</a> for guidance. When in doubt, dance.</p>
 

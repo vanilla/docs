@@ -204,6 +204,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -241,15 +249,15 @@
 
                 
 
-<h2 id="server">Server</h2>
+<h2 id="server:d680e8a854a7cbad6d490c445cba2eba">Server</h2>
 
 <p>Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.</p>
 
-<h3 id="apache">Apache</h3>
+<h3 id="apache:d680e8a854a7cbad6d490c445cba2eba">Apache</h3>
 
 <p>Vanilla includes an <code>.htaccess</code> file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.</p>
 
-<h3 id="nginx">nginx</h3>
+<h3 id="nginx:d680e8a854a7cbad6d490c445cba2eba">nginx</h3>
 
 <p>The key to specifically running Vanilla under nginx is getting the basic rewrite rule in <code>nginx.conf</code> correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.</p>
 
@@ -277,17 +285,17 @@
 
 <p>In <strong>Vanilla 2.3</strong>, these rules change because the <code>p</code> parameter has been removed in favor of strict usage of <code>PATH_INFO</code>, and therefore no rewrite is needed. However, it&rsquo;s important that your fastcgi params are setup to pass this information to PHP.</p>
 
-<h3 id="iis">IIS</h3>
+<h3 id="iis:d680e8a854a7cbad6d490c445cba2eba">IIS</h3>
 
 <p>We do not officially support this server, but information and help may be provided on our <a href="https://vanillaforums.org/discussions">community forum</a>. We welcome additions to this documentation.</p>
 
-<h2 id="caching">Caching</h2>
+<h2 id="caching:d680e8a854a7cbad6d490c445cba2eba">Caching</h2>
 
-<h3 id="opcache">OPcache</h3>
+<h3 id="opcache:d680e8a854a7cbad6d490c445cba2eba">OPcache</h3>
 
 <p>OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.</p>
 
-<h3 id="memcached">Memcached</h3>
+<h3 id="memcached:d680e8a854a7cbad6d490c445cba2eba">Memcached</h3>
 
 <p>Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.</p>
 

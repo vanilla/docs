@@ -15,35 +15,35 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-ranks:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Adding a Ranks&lt;/h2&gt;
 
 &lt;p&gt;Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-a-rank&#34;&gt;Editing a Rank&lt;/h2&gt;
+&lt;h2 id=&#34;editing-a-rank:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Editing a Rank&lt;/h2&gt;
 
 &lt;p&gt;On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.&lt;/p&gt;
 
-&lt;h2 id=&#34;rank-information&#34;&gt;Rank information&lt;/h2&gt;
+&lt;h2 id=&#34;rank-information:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Rank information&lt;/h2&gt;
 
-&lt;h3 id=&#34;name-label&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
+&lt;h3 id=&#34;name-label:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
 
 &lt;p&gt;The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&amp;rsquo;s name in discussions and comments after they attain the rank.&lt;/p&gt;
 
-&lt;h3 id=&#34;body-message&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
+&lt;h3 id=&#34;body-message:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
 
 &lt;p&gt;These only appear immediately after a user attains a rank. The &amp;ldquo;Body&amp;rdquo; is emailed to the user. The &amp;ldquo;Message&amp;rdquo; appears at the top of the page when the rank is triggered.&lt;/p&gt;
 
-&lt;h3 id=&#34;css-class&#34;&gt;CSS Class&lt;/h3&gt;
+&lt;h3 id=&#34;css-class:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;CSS Class&lt;/h3&gt;
 
 &lt;p&gt;The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&amp;rsquo; content appear more prominently. For example, if you had an &amp;ldquo;Expert&amp;rdquo; rank, maybe you&amp;rsquo;d highlight their comments with a special background color.&lt;/p&gt;
 
-&lt;h3 id=&#34;level&#34;&gt;Level&lt;/h3&gt;
+&lt;h3 id=&#34;level:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Level&lt;/h3&gt;
 
 &lt;p&gt;Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.&lt;/p&gt;
 
 &lt;p&gt;If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-criteria&#34;&gt;Setting Criteria&lt;/h2&gt;
+&lt;h2 id=&#34;setting-criteria:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Setting Criteria&lt;/h2&gt;
 
 &lt;p&gt;You can set thresholds for:&lt;/p&gt;
 
@@ -58,11 +58,11 @@
 
 &lt;p&gt;Checking &amp;ldquo;Assigned Manually&amp;rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&amp;rsquo;s profile and selecting the rank.&lt;/p&gt;
 
-&lt;h2 id=&#34;manually-assigning-a-rank&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
+&lt;h2 id=&#34;manually-assigning-a-rank:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
 
 &lt;p&gt;Rank assignment is done via &amp;ldquo;Edit Profile&amp;rdquo; from the user&amp;rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.&lt;/p&gt;
 
-&lt;h2 id=&#34;abilities&#34;&gt;Abilities&lt;/h2&gt;
+&lt;h2 id=&#34;abilities:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Abilities&lt;/h2&gt;
 
 &lt;p&gt;Each ability may be given the value of &amp;ldquo;Grant&amp;rdquo;, &amp;ldquo;Revoke&amp;rdquo;, or &amp;ldquo;Default&amp;rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.&lt;/p&gt;
 
@@ -80,7 +80,7 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
-&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
+&lt;h2 id=&#34;applying-ranks-over-sso:e677b47741f26590f3902caf1023abc7&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
 
 &lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
 
@@ -98,17 +98,17 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/using-ranks-as-incentives/</guid>
       <description>
 
-&lt;h2 id=&#34;using-ranks-incentives&#34;&gt;Using Ranks: Incentives&lt;/h2&gt;
+&lt;h2 id=&#34;using-ranks-incentives:c8fbf39628049dddd75b2b36972af676&#34;&gt;Using Ranks: Incentives&lt;/h2&gt;
 
 &lt;p&gt;You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.&lt;/p&gt;
 
-&lt;h3 id=&#34;example-case&#34;&gt;Example Case&lt;/h3&gt;
+&lt;h3 id=&#34;example-case:c8fbf39628049dddd75b2b36972af676&#34;&gt;Example Case&lt;/h3&gt;
 
 &lt;p&gt;What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.&lt;/p&gt;
 
 &lt;p&gt;Gaining points on your site is done thru addons such as Badges and Reactions. Users who gain the point levels of the default ranks have demonstrated their ability to positively contribute to your community.&lt;/p&gt;
 
-&lt;h3 id=&#34;suggested-abilities&#34;&gt;Suggested abilities&lt;/h3&gt;
+&lt;h3 id=&#34;suggested-abilities:c8fbf39628049dddd75b2b36972af676&#34;&gt;Suggested abilities&lt;/h3&gt;
 
 &lt;p&gt;Levels 1 and 2 will remain as default, or you can assign them abilities according the &lt;em&gt;Using Ranks to Defeat Spam and Abuse&lt;/em&gt; document.&lt;/p&gt;
 
@@ -154,15 +154,15 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
       <description>
 
-&lt;h2 id=&#34;using-ranks-spam&#34;&gt;Using Ranks: Spam&lt;/h2&gt;
+&lt;h2 id=&#34;using-ranks-spam:2908fcccc1b037189a3eb8a9ddfe40f5&#34;&gt;Using Ranks: Spam&lt;/h2&gt;
 
 &lt;p&gt;Ranks can be used to limit the ability of spammers to take advantage of your site and protect members from abuse. To do this, limit the abilities of your newest users until they have been proven their value to the community.&lt;/p&gt;
 
-&lt;h2 id=&#34;who-is-this-for&#34;&gt;Who is this for?&lt;/h2&gt;
+&lt;h2 id=&#34;who-is-this-for:2908fcccc1b037189a3eb8a9ddfe40f5&#34;&gt;Who is this for?&lt;/h2&gt;
 
 &lt;p&gt;This guide is for communities currently having spam problems that have already tried other automated filtering solutions like Akismet and Stop Forum Spam. Because this solution inhibits new user actions which can have a detrimental effect, it should be used as a response to issues not as preemptive prevention.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-up-ranks-to-inhibit-spam-and-abuse&#34;&gt;Setting up Ranks to inhibit spam and abuse&lt;/h2&gt;
+&lt;h2 id=&#34;setting-up-ranks-to-inhibit-spam-and-abuse:2908fcccc1b037189a3eb8a9ddfe40f5&#34;&gt;Setting up Ranks to inhibit spam and abuse&lt;/h2&gt;
 
 &lt;p&gt;What follows is a generalized recommendation for a large, high-traffic site. Please adjust the suggested values to match your needs and community.&lt;/p&gt;
 
@@ -192,7 +192,7 @@
 
 &lt;p&gt;Finally, for Levels 3 set a higher Criteria like 50 posts or points. For this level (and any higher) you can leave default values or grant additional abilities with the &amp;ldquo;Give&amp;rdquo; option.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-up-ranks-to-prevent-false-positives-on-spam&#34;&gt;Setting up Ranks to prevent false-positives on spam&lt;/h2&gt;
+&lt;h2 id=&#34;setting-up-ranks-to-prevent-false-positives-on-spam:2908fcccc1b037189a3eb8a9ddfe40f5&#34;&gt;Setting up Ranks to prevent false-positives on spam&lt;/h2&gt;
 
 &lt;p&gt;For your higher ranks, set the Ability &amp;ldquo;Verified&amp;rdquo; to &amp;ldquo;bypass&amp;rdquo;. This will prevent your trusted members&amp;rsquo; content from being evaluated by the spam filter, which means their content will never be put into the spam queue.&lt;/p&gt;
 </description>

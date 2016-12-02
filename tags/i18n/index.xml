@@ -15,16 +15,16 @@
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</guid>
       <description>
 
-&lt;h2 id=&#34;function-t&#34;&gt;Function: &lt;code&gt;{t}&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;function-t:b3f11a10fc5f1b8fde3dbc96930453bd&#34;&gt;Function: &lt;code&gt;{t}&lt;/code&gt;&lt;/h2&gt;
 
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;h3 id=&#34;usage:b3f11a10fc5f1b8fde3dbc96930453bd&#34;&gt;Usage&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;{t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Output a translatable string with an optional default.&lt;/p&gt;
 
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
+&lt;h2 id=&#34;parameters:b3f11a10fc5f1b8fde3dbc96930453bd&#34;&gt;Parameters&lt;/h2&gt;
 
 
 

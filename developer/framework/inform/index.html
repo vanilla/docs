@@ -248,6 +248,14 @@
 	    
 	    
                 <li class="">
+                    <a href="//docs.vanillaforums.com/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
                     <a href="//docs.vanillaforums.com/developer/framework/permissions/">Permissions </a>
                 </li>
                 
@@ -315,6 +323,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -352,7 +368,7 @@
 
                 
 
-<h2 id="toaster-notifications">Toaster Notifications</h2>
+<h2 id="toaster-notifications:7655156534b7d9747b51d44f6c4c963a">Toaster Notifications</h2>
 
 <p>Inform Messages allow you to let users know of some action that your plugin or application has taken. Inform messages allow you to quickly and easily relay information to users, and handle actions based on interaction with those messages. Use them freely to notify users of saved forms, punishments, rewards, etc.</p>
 
@@ -362,7 +378,7 @@
 
 <p>They can be passed with JavaScript callbacks to fire on dismissal so some kind of further action can be taken. There are even CSS definitions that allow you access to over 100 readymade icon sprites you can use to denote meaning in your messaging.</p>
 
-<h2 id="using-in-core">Using in core</h2>
+<h2 id="using-in-core:7655156534b7d9747b51d44f6c4c963a">Using in core</h2>
 
 <p>An example native inform message in Vanilla: saving drafts.</p>
 
@@ -376,7 +392,7 @@
 
 <p>The <code>t()</code> function is Vanilla&rsquo;s native &ldquo;Translate&rdquo; function so that the string can be converted to other languages.</p>
 
-<h2 id="using-in-a-plugin">Using in a plugin</h2>
+<h2 id="using-in-a-plugin:7655156534b7d9747b51d44f6c4c963a">Using in a plugin</h2>
 
 <p>Adding a message to the screen with a plugin.</p>
 
@@ -398,7 +414,7 @@
 <li><strong>DismissCallbackUrl:</strong> An optional javascript callback url that gets requested when the &ldquo;close&rdquo; button is clicked on a message. If a dismissCallback is specified, this option will be ignored.</li>
 </ul>
 
-<h2 id="static-messages">Static messages</h2>
+<h2 id="static-messages:7655156534b7d9747b51d44f6c4c963a">Static messages</h2>
 
 <p>Let&rsquo;s say you want to deliver a message to a particular user, and have that message stay on the screen on every page load until that user dismisses the message. You can achieve it like this:</p>
 
@@ -408,7 +424,7 @@
 
 <p>This message appears for me because my UserID is 1, and it keeps showing up on every page until I dismiss it. At that point the callback url is requested via ajax, and the dismissal preference is saved so the message will no longer appear for me.</p>
 
-<h2 id="styling-a-message">Styling a message</h2>
+<h2 id="styling-a-message:7655156534b7d9747b51d44f6c4c963a">Styling a message</h2>
 
 <p>Let&rsquo;s look at how we can change the appearance of these messages.</p>
 
@@ -422,7 +438,7 @@
 
 <p>Note the span at the front of the message. This will contain the &ldquo;Skull&rdquo; image you see above. It&rsquo;s also necessary for the CSS definition in the second argument to contain &ldquo;HasSprite&rdquo; so that the spacing &amp; alignment of the icon all works properly.</p>
 
-<h2 id="message-origin">Message origin</h2>
+<h2 id="message-origin:7655156534b7d9747b51d44f6c4c963a">Message origin</h2>
 
 <p>You can also style the inform messages to appear &ldquo;From&rdquo; a specific user. <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5098/5503917812_cfa84f0c24_o.png" alt="" /></p>
 
@@ -430,14 +446,14 @@
 
 <pre lang="php">$User = Gdn::UserModel-&gt;Get(1); // Load the user who's icon you want to show<br />$String = UserPhoto($User, 'Icon'); // IMPORTANT: Give the icon a css class of "Icon" <br />$String .= 'This is a test!'; // Append some message<br />$Sender-&gt;InformMessage($String, 'Dismissable HasIcon'); // Send to the screen</pre>
 
-<h2 id="inform-via-javascript">Inform via JavaScript</h2>
+<h2 id="inform-via-javascript:7655156534b7d9747b51d44f6c4c963a">Inform via JavaScript</h2>
 
 <p>At some point you may need to write a message to the screen from JavaScript instead of from the server side. This can be achieved with a similar, JavaScript-based method:</p>
 <pre lang="javascript">gdn.informMessage(&lsquo;This is a test!&rsquo;);</pre>
 <p>And all of the same properties exist, so you can be as elaborate as you like:</p>
 <pre lang="javascript">gdn.informMessage(&lsquo;This is a test!&rsquo;, {&lsquo;CssClass&rsquo; : &lsquo;Dismissable&rsquo;, &lsquo;DismissCallback&rsquo; : &lsquo;some_function&rsquo;, &lsquo;DismissCallbackUrl&rsquo; : &lsquo;/relative/path/to/callback/url&rsquo;});</pre></p>
 
-<h2 id="duplication-and-stacking">Duplication and stacking</h2>
+<h2 id="duplication-and-stacking:7655156534b7d9747b51d44f6c4c963a">Duplication and stacking</h2>
 
 <p>You can add as many messages to as many pages as you like. If a message is already present on the screen, it will not be added a second time, and new messages will simply stack one-on-top-of-the-next. <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5300/5503917872_92042ca343_o.png" alt="" /></p>
 

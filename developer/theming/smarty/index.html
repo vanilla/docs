@@ -199,6 +199,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class="active nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -322,27 +330,27 @@
 
                 
 
-<h2 id="smarty-overview">Smarty Overview</h2>
+<h2 id="smarty-overview:d680e8a854a7cbad6d490c445cba2eba">Smarty Overview</h2>
 
 <p>Vanilla currently supports both PHP and Smarty views. <a href="http://www.smarty.net">Smarty</a> is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to <code>/applications/dashboard/views/default.master.tpl</code>.</p>
 
 <p>You can <a href="//docs.vanillaforums.com/theming/views">override this view</a> in a theme or plugin, or by using the Custom Theme plugin which allows you to modify your current theme&rsquo;s master view from the dashboard. This section will give you some ideas how you can customize your master view to suit your community&rsquo;s needs.</p>
 
-<h3 id="accessing-controller-data-with-smarty">Accessing Controller Data with Smarty</h3>
+<h3 id="accessing-controller-data-with-smarty:d680e8a854a7cbad6d490c445cba2eba">Accessing Controller Data with Smarty</h3>
 
 <p>You can output the content of the current page&rsquo;s controller&rsquo;s data array using Smarty by using <code>{$ArrayKey.NestedArrayKey}</code> syntax. For instance, <code>{$BodyClass}</code> in Vanilla&rsquo;s master view outputs the css class names for the current page. <code>{$User.Name}</code> would render the session&rsquo;s username. To see what data you have available to you on any given page, you can insert a <code>{debug}</code> tag into your Smarty template and a popup listing the data in the data array will appear.</p>
 
-<h3 id="smarty-functions">Smarty Functions</h3>
+<h3 id="smarty-functions:d680e8a854a7cbad6d490c445cba2eba">Smarty Functions</h3>
 
 <p>In the default master view in Vanilla, you&rsquo;ll find tags like <code>{searchbox}</code> which calls a function to render a search box in the page and <code>{breadcrumbs}</code> which calls a function to render the breadcrumbs. These are tags are mapped to php functions.</p>
 
-<p>Some smarty functions in Vanilla can include parameters. For example, here <code>{breadcrumbs homelink=&quot;My Forum's Home&quot;}</code>, the &ldquo;homelink&rdquo; parameter modifies the rendering of the breadcrumbs so that the &ldquo;Home&rdquo; breadcrumb renders as &ldquo;My Forum&rsquo;s Home&rdquo;. Vanilla&rsquo;s set of smarty functions that can be used in your template can be found by navigating to <code>library/vendors/SmartyPlugins</code>. The <a href="//docs.vanillaforums.com/theming/smarty/functions">Smarty Functions section</a> documents these functions and their available parameters.</p>
+<p>Some smarty functions in Vanilla can include parameters. For example, here <code>{breadcrumbs homelink=&quot;My Forum's Home&quot;}</code>, the &ldquo;homelink&rdquo; parameter modifies the rendering of the breadcrumbs so that the &ldquo;Home&rdquo; breadcrumb renders as &ldquo;My Forum&rsquo;s Home&rdquo;. Vanilla&rsquo;s set of smarty functions that can be used in your template can be found by navigating to <code>library/SmartyPlugins</code>. The <a href="//docs.vanillaforums.com/theming/smarty/functions">Smarty Functions section</a> documents these functions and their available parameters.</p>
 
-<h3 id="smarty-conditional-functions">Smarty Conditional Functions</h3>
+<h3 id="smarty-conditional-functions:d680e8a854a7cbad6d490c445cba2eba">Smarty Conditional Functions</h3>
 
 <p>Vanilla&rsquo;s Smarty implementation has whitelisted a number of functions that can be used in Smarty conditional statements. For example, you can insert a Smarty tag or a snippet of HTML into your template only if the user is in a specific section or has a specific permission. These functions and how they can be used in your template, as well as a basic overview on using Smarty conditionals are outlined in <a href="//docs.vanillaforums.com/theming/smarty/conditionals">Smarty Conditionals</a>.</p>
 
-<h3 id="smarty-modifiers">Smarty Modifiers</h3>
+<h3 id="smarty-modifiers:d680e8a854a7cbad6d490c445cba2eba">Smarty Modifiers</h3>
 
 <p>Smarty modifiers can be applied to variables, custom functions or strings. Vanilla-implemented modifiers and a general overview of modifiers can be found on the <a href="//docs.vanillaforums.com/theming/smarty/modifiers">Smarty Modifiers</a> page.</p>
 

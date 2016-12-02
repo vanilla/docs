@@ -21,11 +21,11 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;the-worst-day&#34;&gt;The Worst Day&lt;/h2&gt;
+&lt;h2 id=&#34;the-worst-day:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;The Worst Day&lt;/h2&gt;
 
 &lt;p&gt;Hey, it happens. On rare occassion, we need to go our separate ways. We hate to see any customer leave, but it&amp;rsquo;s important any cloud providers you use have a strong data ownership policy. Ours is pretty simple: &lt;strong&gt;It&amp;rsquo;s your data.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;getting-your-data&#34;&gt;Getting your data&lt;/h2&gt;
+&lt;h2 id=&#34;getting-your-data:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Getting your data&lt;/h2&gt;
 
 &lt;p&gt;There are four custom components to any forum:&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 
 &lt;p&gt;We provide complete database backups and uploaded files. There is no charge for this, with the reasonable caveats explained below. However, your billing must be up to date without exception.&lt;/p&gt;
 
-&lt;h3 id=&#34;database&#34;&gt;Database&lt;/h3&gt;
+&lt;h3 id=&#34;database:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Database&lt;/h3&gt;
 
 &lt;p&gt;We require two business days notice to get a database backup (with exceptions). They are provided as a standard MySQL dump. No other format is provided, because this format lets you create any &lt;em&gt;other&lt;/em&gt; format you want; it&amp;rsquo;s the master tape, if you will.&lt;/p&gt;
 
@@ -58,13 +58,13 @@
 
 &lt;p&gt;We only provide one database dump per month. If you are leaving, we will make a one-time exception so that you can get an advanced copy for preparation. We can coordinate a final backup for a specific time of a weekday during the hours 10am-4pm Eastern time if requested. Doing so outside of those hours may cost a fee to schedule staff to be available.&lt;/p&gt;
 
-&lt;h3 id=&#34;uploaded-files&#34;&gt;Uploaded files&lt;/h3&gt;
+&lt;h3 id=&#34;uploaded-files:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Uploaded files&lt;/h3&gt;
 
 &lt;p&gt;We typically need two working days&amp;rsquo; notice to provide your uploaded files. For sites with exceptional amounts of files (in excess of 10GB) we may require a week&amp;rsquo;s notice.&lt;/p&gt;
 
 &lt;p&gt;Please only request this once. We generally cannot coordinate a &amp;ldquo;final backup&amp;rdquo; of these files for a specific time (downloading from a CDN is very slow) unless it&amp;rsquo;s very small.&lt;/p&gt;
 
-&lt;h2 id=&#34;open-source&#34;&gt;Open source&lt;/h2&gt;
+&lt;h2 id=&#34;open-source:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Open source&lt;/h2&gt;
 
 &lt;p&gt;If you plan to continue using Vanilla on your own, there&amp;rsquo;s both good news and bad. The good news is that we don&amp;rsquo;t maintain a private fork of Vanilla. Therefore, your data will mostly work as-is without further data conversions. The bad news is it&amp;rsquo;s a little more complicated than that.&lt;/p&gt;
 
@@ -76,7 +76,7 @@
 
 &lt;p&gt;You may find additional help from the &lt;a href=&#34;https://vanillaforums.org/discussions&#34;&gt;volunteer community&lt;/a&gt; and the &lt;a href=&#34;//docs.vanillaforums.com/developer/&#34;&gt;developer docs&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
+&lt;h2 id=&#34;support:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Support&lt;/h2&gt;
 
 &lt;p&gt;We do not provide support for leaving the cloud beyond this document and delivering your data as promised. It&amp;rsquo;s a hard goodbye, but if you roll up your sleeves, we&amp;rsquo;re confident you&amp;rsquo;ll have the tools you need to build your own future.&lt;/p&gt;
 

@@ -219,6 +219,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -256,7 +264,7 @@
 
                 
 
-<h2 id="quickstart-links">Quickstart Links</h2>
+<h2 id="quickstart-links:09c84f91027bd18b03251c05a0da4abb">Quickstart Links</h2>
 
 <ul>
 <li>Read about our hooks system: <a href="//docs.vanillaforums.com/developer/plugins">Extending Vanilla with plugins</a></li>
@@ -265,7 +273,7 @@
 <li>Get help in the <a href="http://vanillaforums.org/categories/developers">developer community</a></li>
 </ul>
 
-<h2 id="quickstart-guide">Quickstart Guide</h2>
+<h2 id="quickstart-guide:09c84f91027bd18b03251c05a0da4abb">Quickstart Guide</h2>
 
 <p>Vanilla is built on an object-oriented, MVC framework. If you&rsquo;re coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That&rsquo;s OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.</p>
 
@@ -279,13 +287,13 @@
 <li>Add helper files.</li>
 </ol>
 
-<h3 id="1-name-your-plugin">1. Name your plugin</h3>
+<h3 id="1-name-your-plugin:09c84f91027bd18b03251c05a0da4abb">1. Name your plugin</h3>
 
 <p>Conventionally, Vanilla uses, well, pretty vanilla plugin names. We often favor descriptive names over clever ones or mini-brands.</p>
 
 <p>Your plugin needs a user-facing name, and a &lsquo;slug&rsquo; name without spaces or special characters. If your plugin is named &ldquo;Lincoln&rsquo;s Fancy Plugin&rdquo; a good slug name would be <code>LincolnsFancyPlugin</code> or even just <code>FancyPlugin</code>.</p>
 
-<h3 id="2-define-your-plugin">2. Define your plugin</h3>
+<h3 id="2-define-your-plugin:09c84f91027bd18b03251c05a0da4abb">2. Define your plugin</h3>
 
 <p>First, create a folder in the <code>plugin</code> directory, using the slug name you selected (e.g. <code>FancyPlugin</code>). Inside the folder, create a file that includes the slug name (e.g. <code>class.fancyplugin.php</code>). Next, open the file and add the plugin definition at the top, like this:</p>
 
@@ -304,7 +312,7 @@ $PluginInfo['FancyPlugin'] = array(
 
 <p>The array key (<code>FancyPlugin</code> above) <strong><em>must exactly match</em></strong> the folder name, including capitalization.</p>
 
-<h4 id="define-basic-info">Define basic info</h4>
+<h4 id="define-basic-info:09c84f91027bd18b03251c05a0da4abb">Define basic info</h4>
 
 <p>The <code>Name</code> parameter is optional; it will default to the slug if omitted. To include special characters here or in the description, use their HTML code.</p>
 
@@ -316,7 +324,7 @@ $PluginInfo['FancyPlugin'] = array(
 
 <p>All further optional parameters described below default to <code>FALSE</code> if not defined.</p>
 
-<h4 id="define-a-settings-page">Define a settings page</h4>
+<h4 id="define-a-settings-page:09c84f91027bd18b03251c05a0da4abb">Define a settings page</h4>
 
 <p>To create a &ldquo;Settings&rdquo; button that will appear on the plugin after it is enabled, add these to your definition:</p>
 
@@ -324,7 +332,7 @@ $PluginInfo['FancyPlugin'] = array(
    'SettingsPermission' =&gt; 'Garden.Settings.Manage',
 </code></pre>
 
-<h4 id="define-requirements">Define requirements</h4>
+<h4 id="define-requirements:09c84f91027bd18b03251c05a0da4abb">Define requirements</h4>
 
 <p>You can require a certain version of Vanilla or that other plugins be enabled before yours can be enabled. Require a certain version of Vanilla by adding this:</p>
 
@@ -338,7 +346,7 @@ $PluginInfo['FancyPlugin'] = array(
 
 <p>Note that this only requires them at the time of enabling. A user could later disable the plugin(s). Therefore, it is very important to <strong>use defensive programming techniques to guard against missing prerequisites</strong>, rather than simply assuming they will always be there just because you put it in the requirements.</p>
 
-<h4 id="define-new-permissions">Define new permissions</h4>
+<h4 id="define-new-permissions:09c84f91027bd18b03251c05a0da4abb">Define new permissions</h4>
 
 <p>Adding new permissions via plugin is easy. Any defined here will be added as soon as the plugin is enabled. It&rsquo;s important to know more about <a href="http://docs.vanillaforums.com/developers/framework/permissions/">using permissions in Vanilla</a> before doing this.</p>
 
@@ -354,11 +362,11 @@ $PluginInfo['FancyPlugin'] = array(
 
 <p>This allows you to set good defaults while allowing them to be changed independently in the future.</p>
 
-<h4 id="whew">Whew!</h4>
+<h4 id="whew:09c84f91027bd18b03251c05a0da4abb">Whew!</h4>
 
 <p>That whole definitions section probably didn&rsquo;t <em>seem</em> very quick, but you just did a huge amount of work in just a few lines of code.</p>
 
-<h3 id="3-find-your-hooks">3. Find your hooks</h3>
+<h3 id="3-find-your-hooks:09c84f91027bd18b03251c05a0da4abb">3. Find your hooks</h3>
 
 <p>Try the <a href="http://vanillaforums.org/addon/eventi-plugin">Eventi plugin</a> to visualize where events are fired in Vanilla. Use the hooks in the <a href="http://vanillaforums.org/addon/example-plugin">Example plugin</a> to see what they do.</p>
 
@@ -368,7 +376,7 @@ $PluginInfo['FancyPlugin'] = array(
 
 <p>Lastly, <a href="http://vanillaforums.org/addon">find a plugin</a> that does something similar to what you&rsquo;re trying to do, and check out its code. Maybe between 3 or 4 plugins you can find a good portion of what you&rsquo;re trying to accomplish.</p>
 
-<h3 id="4-write-your-code">4. Write your code</h3>
+<h3 id="4-write-your-code:09c84f91027bd18b03251c05a0da4abb">4. Write your code</h3>
 
 <p>After your <code>$PluginInfo</code> array, you&rsquo;ll need a class. Always extend <code>Gdn_Plugin</code>, and name the class using the slug name of your plugin followed by the word &lsquo;Plugin&rsquo; to avoid namespace conflicts.</p>
 
@@ -405,7 +413,7 @@ public function CommonMethod($Sender, $Args) {
 
 <p>After your class, you can define any functions from core that you wish to override. Do this very conservatively and carefully.</p>
 
-<h3 id="5-add-helper-files">5. Add helper files</h3>
+<h3 id="5-add-helper-files:09c84f91027bd18b03251c05a0da4abb">5. Add helper files</h3>
 
 <p>By convention, place CSS files in a folder named <code>design</code>, Javascript files in a folder named <code>js</code>, views (templates) in a folder named <code>views</code>.</p>
 
@@ -431,7 +439,7 @@ public function CommonMethod($Sender, $Args) {
 
 <p>Again, for a simple settings page, don&rsquo;t create your own views. Use the <code>ConfigurationModule</code>.</p>
 
-<h2 id="quickstart-epilogue">Quickstart Epilogue</h2>
+<h2 id="quickstart-epilogue:09c84f91027bd18b03251c05a0da4abb">Quickstart Epilogue</h2>
 
 <p>That should put you well on your way to your first Vanilla plugin! Dream big, but pick something small for your first attempt. You&rsquo;ll learn a ton, and be better positioned to go big after that.</p>
 

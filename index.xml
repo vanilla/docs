@@ -15,7 +15,7 @@
       <guid>//docs.vanillaforums.com/help/accessibility/</guid>
       <description>
 
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&#34;overview:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;We strive for maximum accessibility in our product design and take defects in it seriously.&lt;/p&gt;
 
@@ -23,7 +23,7 @@
 
 &lt;p&gt;We believe Vanilla Forums to be both Section 508 and WCAG AAA compliant.&lt;/p&gt;
 
-&lt;h3 id=&#34;key-points&#34;&gt;Key points&lt;/h3&gt;
+&lt;h3 id=&#34;key-points:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Key points&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Our default UI is primarily text-based and high-contrast.&lt;/li&gt;
@@ -35,7 +35,7 @@
 
 &lt;p&gt;If you find an area where Vanilla could improve its accessibility, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt; or &lt;a href=&#34;http://github.com/vanilla/vanilla/issues&#34;&gt;file an issue&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;theming-consideration&#34;&gt;Theming consideration&lt;/h2&gt;
+&lt;h2 id=&#34;theming-consideration:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Theming consideration&lt;/h2&gt;
 
 &lt;aside class=&#34;note&#34;&gt;Most Vanilla Forums customize their theme, which can have a huge impact on accessibility.&lt;/aside&gt;
 
@@ -43,7 +43,7 @@
 
 &lt;p&gt;Conversely, themes can also augment the interface to improve Vanilla&amp;rsquo;s core accessibility.&lt;/p&gt;
 
-&lt;h2 id=&#34;further-reading&#34;&gt;Further reading&lt;/h2&gt;
+&lt;h2 id=&#34;further-reading:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Further reading&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.508checker.com/best-practices&#34;&gt;Best Practices for 508 Compliance&lt;/a&gt;&lt;/li&gt;
@@ -67,13 +67,13 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;disabling-badges&#34;&gt;Disabling badges&lt;/h2&gt;
+&lt;h2 id=&#34;disabling-badges:23609298254fc7e518529ff08d090324&#34;&gt;Disabling badges&lt;/h2&gt;
 
 &lt;p&gt;To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active.  Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.&lt;/p&gt;
 
 &lt;p&gt;It is not currently possible to delete a badge entirely.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-a-badge&#34;&gt;Editing a badge&lt;/h2&gt;
+&lt;h2 id=&#34;editing-a-badge:23609298254fc7e518529ff08d090324&#34;&gt;Editing a badge&lt;/h2&gt;
 
 &lt;p&gt;You can safely edit the Name, Description, and/or Image of any badge without effecting its automated functionality. These will be updated for any users who previously received the badge as well.&lt;/p&gt;
 
@@ -81,7 +81,7 @@
 
 &lt;p&gt;You may change the Points for a badge at any time. Point changes are not retroactive for users who previously received it.&lt;/p&gt;
 
-&lt;h2 id=&#34;creating-your-own-badges&#34;&gt;Creating your own badges&lt;/h2&gt;
+&lt;h2 id=&#34;creating-your-own-badges:23609298254fc7e518529ff08d090324&#34;&gt;Creating your own badges&lt;/h2&gt;
 
 &lt;p&gt;Create a memorable Name for your badge and give it a Description that explains what it is for and how users can earn it. This information will appear on the Badge&amp;rsquo;s page.&lt;/p&gt;
 
@@ -91,7 +91,7 @@
 
 &lt;p&gt;All badges created in your Dashboard must be given manually.&lt;/p&gt;
 
-&lt;h2 id=&#34;creating-automated-badges&#34;&gt;Creating automated badges&lt;/h2&gt;
+&lt;h2 id=&#34;creating-automated-badges:23609298254fc7e518529ff08d090324&#34;&gt;Creating automated badges&lt;/h2&gt;
 
 &lt;p&gt;It is not currently possible to create your own automated badges thru the Dashboard. To discuss custom possibilities for your community, contact sales.&lt;/p&gt;
 </description>
@@ -105,35 +105,35 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-ranks:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Adding a Ranks&lt;/h2&gt;
 
 &lt;p&gt;Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-a-rank&#34;&gt;Editing a Rank&lt;/h2&gt;
+&lt;h2 id=&#34;editing-a-rank:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Editing a Rank&lt;/h2&gt;
 
 &lt;p&gt;On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.&lt;/p&gt;
 
-&lt;h2 id=&#34;rank-information&#34;&gt;Rank information&lt;/h2&gt;
+&lt;h2 id=&#34;rank-information:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Rank information&lt;/h2&gt;
 
-&lt;h3 id=&#34;name-label&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
+&lt;h3 id=&#34;name-label:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
 
 &lt;p&gt;The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&amp;rsquo;s name in discussions and comments after they attain the rank.&lt;/p&gt;
 
-&lt;h3 id=&#34;body-message&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
+&lt;h3 id=&#34;body-message:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
 
 &lt;p&gt;These only appear immediately after a user attains a rank. The &amp;ldquo;Body&amp;rdquo; is emailed to the user. The &amp;ldquo;Message&amp;rdquo; appears at the top of the page when the rank is triggered.&lt;/p&gt;
 
-&lt;h3 id=&#34;css-class&#34;&gt;CSS Class&lt;/h3&gt;
+&lt;h3 id=&#34;css-class:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;CSS Class&lt;/h3&gt;
 
 &lt;p&gt;The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&amp;rsquo; content appear more prominently. For example, if you had an &amp;ldquo;Expert&amp;rdquo; rank, maybe you&amp;rsquo;d highlight their comments with a special background color.&lt;/p&gt;
 
-&lt;h3 id=&#34;level&#34;&gt;Level&lt;/h3&gt;
+&lt;h3 id=&#34;level:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Level&lt;/h3&gt;
 
 &lt;p&gt;Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.&lt;/p&gt;
 
 &lt;p&gt;If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-criteria&#34;&gt;Setting Criteria&lt;/h2&gt;
+&lt;h2 id=&#34;setting-criteria:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Setting Criteria&lt;/h2&gt;
 
 &lt;p&gt;You can set thresholds for:&lt;/p&gt;
 
@@ -148,11 +148,11 @@
 
 &lt;p&gt;Checking &amp;ldquo;Assigned Manually&amp;rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&amp;rsquo;s profile and selecting the rank.&lt;/p&gt;
 
-&lt;h2 id=&#34;manually-assigning-a-rank&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
+&lt;h2 id=&#34;manually-assigning-a-rank:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
 
 &lt;p&gt;Rank assignment is done via &amp;ldquo;Edit Profile&amp;rdquo; from the user&amp;rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.&lt;/p&gt;
 
-&lt;h2 id=&#34;abilities&#34;&gt;Abilities&lt;/h2&gt;
+&lt;h2 id=&#34;abilities:b8c250df90e4348df13e192a6ba7c7a4&#34;&gt;Abilities&lt;/h2&gt;
 
 &lt;p&gt;Each ability may be given the value of &amp;ldquo;Grant&amp;rdquo;, &amp;ldquo;Revoke&amp;rdquo;, or &amp;ldquo;Default&amp;rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.&lt;/p&gt;
 
@@ -176,7 +176,7 @@
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;selecting-reactions&#34;&gt;Selecting Reactions&lt;/h2&gt;
+&lt;h2 id=&#34;selecting-reactions:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Selecting Reactions&lt;/h2&gt;
 
 &lt;p&gt;Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.&lt;/p&gt;
 
@@ -186,7 +186,7 @@
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
-&lt;h2 id=&#34;edit-a-reaction&#34;&gt;Edit a Reaction&lt;/h2&gt;
+&lt;h2 id=&#34;edit-a-reaction:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Edit a Reaction&lt;/h2&gt;
 
 &lt;p&gt;To edit a reaction, go to Reactions in the Dashboard and click the name of the Reaction you wish to edit.&lt;/p&gt;
 
@@ -196,11 +196,11 @@
 
 &lt;p&gt;Doing this allows you to keep any automated badges associated with that reaction, which you can then rename appropriately as well. See the Badges - Adding and Editing Badges to see how to do this safely.&lt;/p&gt;
 
-&lt;h2 id=&#34;adding-a-reaction&#34;&gt;Adding a Reaction&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-reaction:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Adding a Reaction&lt;/h2&gt;
 
 &lt;p&gt;To add a new reaction, contact support or your sales representative.&lt;/p&gt;
 
-&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+&lt;h2 id=&#34;advanced-settings:7b87200d60f59939f7c9201dc3b4a6cf&#34;&gt;Advanced Settings&lt;/h2&gt;
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
@@ -222,15 +222,15 @@
       <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
+&lt;h2 id=&#34;adding-a-note:47823c22c39cc40df8d021023ea570a1&#34;&gt;Adding a Note&lt;/h2&gt;
 
 &lt;p&gt;To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.&lt;/p&gt;
 
-&lt;h2 id=&#34;viewing-notes&#34;&gt;Viewing Notes&lt;/h2&gt;
+&lt;h2 id=&#34;viewing-notes:47823c22c39cc40df8d021023ea570a1&#34;&gt;Viewing Notes&lt;/h2&gt;
 
 &lt;p&gt;To view a user’s notes go to their profile. There will be a notes link on the side panel. Note that both notes and warnings are displayed in the same list. Notes are identified by a note tag. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.View (if present) to view notes.&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-and-deleting-a-note&#34;&gt;Editing and Deleting a Note&lt;/h2&gt;
+&lt;h2 id=&#34;editing-and-deleting-a-note:47823c22c39cc40df8d021023ea570a1&#34;&gt;Editing and Deleting a Note&lt;/h2&gt;
 
 &lt;p&gt;You can edit and delete user notes by hovering over them and clicking the corresponding button. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to edit or delete notes.&lt;/p&gt;
 </description>
@@ -244,27 +244,27 @@
       <guid>//docs.vanillaforums.com/help/addons/</guid>
       <description>
 
-&lt;h2 id=&#34;what-are-addons&#34;&gt;What Are Addons?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-addons:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;What Are Addons?&lt;/h2&gt;
 
 &lt;p&gt;Addons are like apps for your forum. They can be enabled or disabled from your Dashboard. Each one can add one or more features, or modify how an existing feature works. You can tailor your users&amp;rsquo; experience to the needs of your community by carefully selecting addons.&lt;/p&gt;
 
 &lt;p&gt;Vanilla is structured such that its baseline installation only contains features that we feel are essential to every community. Addons let you flavor Vanilla to the specific needs of the community you are building. You&amp;rsquo;ll be surprised at the rich levels of functionality you can add via addons.&lt;/p&gt;
 
-&lt;h2 id=&#34;enabling-addons&#34;&gt;Enabling Addons&lt;/h2&gt;
+&lt;h2 id=&#34;enabling-addons:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Enabling Addons&lt;/h2&gt;
 
 &lt;p&gt;Enabling an addon immediately makes it active and available. To do this, visit the addons list and click &amp;ldquo;Enable&amp;rdquo; next to the addon. There may be a delay while enabling a new addon for the first time while it makes whatever changes are needed to your database.&lt;/p&gt;
 
-&lt;h2 id=&#34;configuring-addons&#34;&gt;Configuring Addons&lt;/h2&gt;
+&lt;h2 id=&#34;configuring-addons:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Configuring Addons&lt;/h2&gt;
 
 &lt;p&gt;After enabling, some addons will have a &amp;ldquo;Settings&amp;rdquo; button that appear next to them in the Addons list. Always visit the Settings page for an addon after enabling it, if it has one, to see if additional setup is required.&lt;/p&gt;
 
 &lt;p&gt;You can return to the addon&amp;rsquo;s settings at any time to adjust it in the future.&lt;/p&gt;
 
-&lt;h2 id=&#34;disabling-addons&#34;&gt;Disabling Addons&lt;/h2&gt;
+&lt;h2 id=&#34;disabling-addons:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Disabling Addons&lt;/h2&gt;
 
 &lt;p&gt;Disabling an addon will remove whatever features it added, but it never destroys the data associated with it. For instance, turning off the Polls addon does not delete any Polls that were created, it just hides them until the addon is enabled again.&lt;/p&gt;
 
-&lt;h2 id=&#34;discovering-addon-features&#34;&gt;Discovering Addon Features&lt;/h2&gt;
+&lt;h2 id=&#34;discovering-addon-features:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Discovering Addon Features&lt;/h2&gt;
 
 &lt;p&gt;Addons can do many things. Some common changes include adding new options to the Dashboard&amp;rsquo;s menu, adding information to discussions or comments, changing how parts of the forum work or appear, adding information to user accounts or profiles, or adding new pages of content to your forum.&lt;/p&gt;
 
@@ -280,11 +280,11 @@
       <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
       <description>
 
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&#34;overview:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs &lt;a href=&#34;http://easyxdm.net/wp/&#34;&gt;easyXDM&lt;/a&gt; and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-up-advanced-embedding&#34;&gt;Setting Up Advanced Embedding&lt;/h2&gt;
+&lt;h2 id=&#34;setting-up-advanced-embedding:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Setting Up Advanced Embedding&lt;/h2&gt;
 
 &lt;p&gt;Enable forum embedding via the Dashboard. Then set &lt;code&gt;Garden.Embed.Allow&lt;/code&gt; to &lt;code&gt;2&lt;/code&gt; in your config. &lt;em&gt;Cloud customers will have this done by support staff&lt;/em&gt;.&lt;/p&gt;
 
@@ -295,7 +295,7 @@
 &lt;li&gt;Call &lt;code&gt;Vanilla.embed({options})&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;options&#34;&gt;Options&lt;/h3&gt;
+&lt;h3 id=&#34;options:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Options&lt;/h3&gt;
 
 &lt;p&gt;Vanilla.embed() takes an associative array of options:&lt;/p&gt;
 
@@ -315,17 +315,17 @@
 
 &lt;p&gt;&lt;code&gt;height(x)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that is called to set the height of the embedded iframe. If you override this method then you can access the embedded iframe using &lt;code&gt;this.iframe&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h3 id=&#34;methods:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Methods&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;start()&lt;/code&gt; Start the embed. Only call this method if you set autoStart to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;setLocation(path)&lt;/code&gt; Manually set the location of the embedded iframe. Just specify the path and not the full domain of the embed.&lt;/p&gt;
 
-&lt;h2 id=&#34;custom-callbacks&#34;&gt;Custom Callbacks&lt;/h2&gt;
+&lt;h2 id=&#34;custom-callbacks:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Custom Callbacks&lt;/h2&gt;
 
 &lt;p&gt;The embed API allows custom Javascript to be called between the parent and child iframes.&lt;/p&gt;
 
-&lt;h2 id=&#34;exposing-a-method-to-vanilla&#34;&gt;Exposing a method to Vanilla&lt;/h2&gt;
+&lt;h2 id=&#34;exposing-a-method-to-vanilla:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Exposing a method to Vanilla&lt;/h2&gt;
 
 &lt;p&gt;You can expose a method to the child iframe with the following code:&lt;/p&gt;
 
@@ -336,7 +336,7 @@
 
 &lt;p&gt;Vanilla embed supports a callback function on both ends of the embed. If you want to support a callback function then declare it as the last argument of your function. When the other endpoint of the embed calls your function using &lt;code&gt;callRemote()&lt;/code&gt; it can then specify a callback and the framework will handle calling the callback across the domain.&lt;/p&gt;
 
-&lt;h2 id=&#34;calling-a-method-in-vanilla&#34;&gt;Calling a method in Vanilla&lt;/h2&gt;
+&lt;h2 id=&#34;calling-a-method-in-vanilla:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Calling a method in Vanilla&lt;/h2&gt;
 
 &lt;p&gt;You can call a method in Vanilla with the following code:&lt;/p&gt;
 
@@ -345,11 +345,11 @@
 
 &lt;p&gt;If you supply the callback argument to &lt;code&gt;callRemote()&lt;/code&gt; then it will be supplied as the last argument to the remote function. It is the remote function’s job to call the function. Keep in mind that using &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt;, etc. to set a context for the function will not work as a context cannot be passed across the domain.&lt;/p&gt;
 
-&lt;h3 id=&#34;functions-you-can-call-on-vanilla&#34;&gt;Functions you can call on Vanilla&lt;/h3&gt;
+&lt;h3 id=&#34;functions-you-can-call-on-vanilla:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Functions you can call on Vanilla&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;Vanilla.embed.signout()&lt;/code&gt; Calling this function will sign the user out of Vanilla. It won’t refresh the page so you may want to do that afterwards.&lt;/p&gt;
 
-&lt;h2 id=&#34;example-implementation&#34;&gt;Example implementation&lt;/h2&gt;
+&lt;h2 id=&#34;example-implementation:d850dec582534d3561c49f2ffda8ca6b&#34;&gt;Example implementation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
 &amp;lt;html&amp;gt;
@@ -403,7 +403,7 @@
       <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
       <description>
 
-&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
+&lt;h2 id=&#34;applying-ranks-over-sso:e677b47741f26590f3902caf1023abc7&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
 
 &lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
 
@@ -421,15 +421,15 @@
       <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
       <description>
 
-&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
+&lt;h2 id=&#34;assets:ee118ebf16a4069ead6ee055bd1afe43&#34;&gt;Assets&lt;/h2&gt;
 
 &lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
 
-&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
+&lt;h3 id=&#34;default-assets:ee118ebf16a4069ead6ee055bd1afe43&#34;&gt;Default assets&lt;/h3&gt;
 
 &lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
 
-&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
+&lt;h3 id=&#34;using-assets:ee118ebf16a4069ead6ee055bd1afe43&#34;&gt;Using assets&lt;/h3&gt;
 
 &lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
 
@@ -447,15 +447,15 @@
       <guid>//docs.vanillaforums.com/developer/backend/</guid>
       <description>
 
-&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
+&lt;h2 id=&#34;server:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Server&lt;/h2&gt;
 
 &lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.&lt;/p&gt;
 
-&lt;h3 id=&#34;apache&#34;&gt;Apache&lt;/h3&gt;
+&lt;h3 id=&#34;apache:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Apache&lt;/h3&gt;
 
 &lt;p&gt;Vanilla includes an &lt;code&gt;.htaccess&lt;/code&gt; file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.&lt;/p&gt;
 
-&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
+&lt;h3 id=&#34;nginx:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;nginx&lt;/h3&gt;
 
 &lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in &lt;code&gt;nginx.conf&lt;/code&gt; correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.&lt;/p&gt;
 
@@ -483,17 +483,17 @@
 
 &lt;p&gt;In &lt;strong&gt;Vanilla 2.3&lt;/strong&gt;, these rules change because the &lt;code&gt;p&lt;/code&gt; parameter has been removed in favor of strict usage of &lt;code&gt;PATH_INFO&lt;/code&gt;, and therefore no rewrite is needed. However, it&amp;rsquo;s important that your fastcgi params are setup to pass this information to PHP.&lt;/p&gt;
 
-&lt;h3 id=&#34;iis&#34;&gt;IIS&lt;/h3&gt;
+&lt;h3 id=&#34;iis:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;IIS&lt;/h3&gt;
 
 &lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
 
-&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
+&lt;h2 id=&#34;caching:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Caching&lt;/h2&gt;
 
-&lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
+&lt;h3 id=&#34;opcache:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;OPcache&lt;/h3&gt;
 
 &lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
 
-&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
+&lt;h3 id=&#34;memcached:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Memcached&lt;/h3&gt;
 
 &lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
 
@@ -531,23 +531,23 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
+&lt;h2 id=&#34;purpose:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Purpose&lt;/h2&gt;
 
 &lt;p&gt;Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.&lt;/p&gt;
 
-&lt;h2 id=&#34;default-badges&#34;&gt;Default badges&lt;/h2&gt;
+&lt;h2 id=&#34;default-badges:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Default badges&lt;/h2&gt;
 
 &lt;p&gt;Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions). Default badges are typically assigned to users automatically when certain conditions are met.&lt;/p&gt;
 
-&lt;h2 id=&#34;badges-list&#34;&gt;Badges list&lt;/h2&gt;
+&lt;h2 id=&#34;badges-list:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Badges list&lt;/h2&gt;
 
 &lt;p&gt;All badges are listed in the Dashboard under &amp;ldquo;Badges&amp;rdquo;. This includes any badge ever created in your forum, regardless of whether it is currently active or achievable.&lt;/p&gt;
 
-&lt;h2 id=&#34;users-badges&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
+&lt;h2 id=&#34;users-badges:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
 
 &lt;p&gt;A list of a users&amp;rsquo; badges will display, by default, in the panel of their profile as a grid of badge images. Badges awarded incrementally (such as membership anniversaries) will &amp;ldquo;stack&amp;rdquo;, meaning only the highest-increment badge will show.&lt;/p&gt;
 
-&lt;h2 id=&#34;viewing-a-badge&#34;&gt;Viewing a badge&lt;/h2&gt;
+&lt;h2 id=&#34;viewing-a-badge:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Viewing a badge&lt;/h2&gt;
 
 &lt;p&gt;Clicking a badge&amp;rsquo;s name in the badges list will take you to a public page describing the badge. Users can get to this page by clicking the badge in their profile. This page shows the most recent recipients of the badge.&lt;/p&gt;
 </description>
@@ -561,7 +561,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <guid>//docs.vanillaforums.com/developer/configuration/banner/</guid>
       <description>
 
-&lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
+&lt;h2 id=&#34;banner-settings:46ef5fa8749c2a7209af606440705f1b&#34;&gt;Banner Settings&lt;/h2&gt;
 
 &lt;p&gt;On the Banner Settings page you can control the following aspects of your forum:&lt;/p&gt;
 
@@ -585,7 +585,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
       <description>
 
-&lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
+&lt;h2 id=&#34;building-a-new-porter-file:aba878e576894cc4457876fdf276811e&#34;&gt;Building a new porter file&lt;/h2&gt;
 
 &lt;p&gt;We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.&lt;/p&gt;
 
@@ -604,13 +604,13 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
       <description>
 
-&lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
+&lt;h2 id=&#34;theming-with-css:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Theming with CSS&lt;/h2&gt;
 
-&lt;h3 id=&#34;theming-hosted-vanilla&#34;&gt;Theming Hosted Vanilla&lt;/h3&gt;
+&lt;h3 id=&#34;theming-hosted-vanilla:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Theming Hosted Vanilla&lt;/h3&gt;
 
 &lt;p&gt;You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our &lt;a href=&#34;https://blog.vanillaforums.com/tag/fridaytips/&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;adding-css-to-your-theme&#34;&gt;Adding CSS to your theme&lt;/h3&gt;
+&lt;h3 id=&#34;adding-css-to-your-theme:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Adding CSS to your theme&lt;/h3&gt;
 
 &lt;p&gt;There are two options for adding CSS to your theme in our open source version. You can completely override the existing base CSS file (style.css) or you can add an additional CSS file (custom.css) that gets added after the base CSS file.&lt;/p&gt;
 
@@ -622,7 +622,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;Clarity: It&amp;rsquo;s easier for you to see what your specific customizations to Vanilla are, as they are self-contained in custom.css.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;adding-additional-css&#34;&gt;Adding additional CSS&lt;/h4&gt;
+&lt;h4 id=&#34;adding-additional-css:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Adding additional CSS&lt;/h4&gt;
 
 &lt;p&gt;To add additional CSS to the existing base Vanilla CSS file:&lt;/p&gt;
 
@@ -633,7 +633,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 
 &lt;p&gt;This CSS file is added after the base CSS file and all other plugin and application-specific CSS files.&lt;/p&gt;
 
-&lt;h4 id=&#34;overriding-the-base-css&#34;&gt;Overriding the base CSS&lt;/h4&gt;
+&lt;h4 id=&#34;overriding-the-base-css:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Overriding the base CSS&lt;/h4&gt;
 
 &lt;p&gt;This option should be used only if you know what you&amp;rsquo;re doing. To completely override the existing base Vanilla CSS file:&lt;/p&gt;
 
@@ -646,21 +646,21 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 
 &lt;p&gt;This CSS file is added before the plugin and application-specific CSS files. You may still want a custom.css file to override CSS rules in the plugin and application-specific CSS files.&lt;/p&gt;
 
-&lt;h3 id=&#34;tips-and-troubleshooting&#34;&gt;Tips and troubleshooting&lt;/h3&gt;
+&lt;h3 id=&#34;tips-and-troubleshooting:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Tips and troubleshooting&lt;/h3&gt;
 
 &lt;p&gt;Here are a few gotchas that can occur when styling Vanilla.&lt;/p&gt;
 
-&lt;h4 id=&#34;layouts&#34;&gt;Layouts&lt;/h4&gt;
+&lt;h4 id=&#34;layouts:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Layouts&lt;/h4&gt;
 
 &lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. This layout can be specified in the dashboard&amp;rsquo;s Homepage section. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme.&lt;/p&gt;
 
-&lt;h4 id=&#34;plugins&#34;&gt;Plugins&lt;/h4&gt;
+&lt;h4 id=&#34;plugins:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Plugins&lt;/h4&gt;
 
 &lt;p&gt;Plugins have the ability to add CSS files to your forum or HTML elements to views. As such, enabling a plugin can sometimes mess with your forum&amp;rsquo;s CSS and layout. To mitigate this, it&amp;rsquo;s best to enable all the plugins you anticipate using while you work on your theme.&lt;/p&gt;
 
 &lt;p&gt;If you do enable a plugin and encounter some undesirable CSS side effects, it&amp;rsquo;s good to know that your theme&amp;rsquo;s custom.css file is added after the plugins&amp;rsquo; CSS files, so overriding the CSS rules defined in the plugin&amp;rsquo;s CSS should be a breeze.&lt;/p&gt;
 
-&lt;h4 id=&#34;hiding-content&#34;&gt;Hiding content&lt;/h4&gt;
+&lt;h4 id=&#34;hiding-content:8e16fb2d1effa54b214f3c3d60bed6cd&#34;&gt;Hiding content&lt;/h4&gt;
 
 &lt;p&gt;Using &lt;code&gt;display: none;&lt;/code&gt; to hide elements on a page is often a good choice for removing content that is not valuable to you or your community. However, when doing so, make sure to make the CSS rule as specific as possible.&lt;/p&gt;
 
@@ -690,7 +690,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <guid>//docs.vanillaforums.com/help/categories/</guid>
       <description>
 
-&lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
+&lt;h2 id=&#34;using-categories:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Using Categories&lt;/h2&gt;
 
 &lt;p&gt;Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.&lt;/p&gt;
 
@@ -704,7 +704,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 
 &lt;p&gt;Disabling categories will streamline your organization, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories weren&amp;rsquo;t in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
 
-&lt;h2 id=&#34;adding-categories&#34;&gt;Adding Categories&lt;/h2&gt;
+&lt;h2 id=&#34;adding-categories:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Adding Categories&lt;/h2&gt;
 
 &lt;p&gt;Clicking the &amp;ldquo;Add Category&amp;rdquo; button will take you to the page pictured below:&lt;/p&gt;
 
@@ -720,7 +720,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;strong&gt;Categories:&lt;/strong&gt; Uses the category as a container to display its sub-categories upon clicking through.
 &lt;strong&gt;Discussions:&lt;/strong&gt; The standard view that displays threads&lt;/p&gt;
 
-&lt;h2 id=&#34;category-page-layout&#34;&gt;Category Page Layout&lt;/h2&gt;
+&lt;h2 id=&#34;category-page-layout:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Category Page Layout&lt;/h2&gt;
 
 &lt;p&gt;&amp;ldquo;Place nested categories in a comma-delimited list&amp;rdquo; is a way of making sub-categories more compact on the Categories page.
 &lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/it/ntxs2xgycl7z.png&#34; alt=&#34;&#34; /&gt;
@@ -728,21 +728,21 @@ We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Do not display the categories in the side panel&amp;rdquo; hides the default category list that shows up in the panel as a shortcut. Select this option if you have many categories (more than a dozen) that would make the list unwieldy.&lt;/p&gt;
 
-&lt;h2 id=&#34;organizing-categories&#34;&gt;Organizing Categories&lt;/h2&gt;
+&lt;h2 id=&#34;organizing-categories:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Organizing Categories&lt;/h2&gt;
 
 &lt;p&gt;Drag and drop your categories to organize them. Slide them to the right slightly to nest them under the category directly above them.&lt;/p&gt;
 
 &lt;p&gt;The option &amp;ldquo;Display root categories as headings&amp;rdquo; turns the top-level categories into plain text &amp;ldquo;headers&amp;rdquo;. Headers are sections that cannot be posted in directly, so be sure to nest a category underneath your root if you select this option.&lt;/p&gt;
 
-&lt;h2 id=&#34;choosing-a-categories-view&#34;&gt;Choosing a Categories view&lt;/h2&gt;
+&lt;h2 id=&#34;choosing-a-categories-view:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Choosing a Categories view&lt;/h2&gt;
 
 &lt;p&gt;In the &amp;ldquo;Homepage&amp;rdquo; settings page in your Dashboard under &amp;ldquo;Category Layout&amp;rdquo; there are options for how to display the Categories page for your users. The &amp;ldquo;Mixed Layout&amp;rdquo; option shows up to five discussions with the most recent comment under each category.&lt;/p&gt;
 
-&lt;h2 id=&#34;deleting-a-category&#34;&gt;Deleting a Category&lt;/h2&gt;
+&lt;h2 id=&#34;deleting-a-category:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Deleting a Category&lt;/h2&gt;
 
 &lt;p&gt;To delete a category, click the &amp;ldquo;Delete&amp;rdquo; button beside it in the Dashboard. You will be prompted to select a replacement category from a drop down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.&lt;/p&gt;
 
-&lt;h2 id=&#34;unfollow-a-category&#34;&gt;Unfollow a Category&lt;/h2&gt;
+&lt;h2 id=&#34;unfollow-a-category:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Unfollow a Category&lt;/h2&gt;
 
 &lt;p&gt;On the main categories page, each section has a cogwheel menu with the option to &amp;ldquo;Hide&amp;rdquo; the category from view. By default, you will only see your &amp;ldquo;Followed Categories&amp;rdquo; when viewing forum index, but if you&amp;rsquo;d like to see hidden categories, simple toggle your view to &amp;ldquo;All Categories&amp;rdquo; with the option at the bottom of the sidebar.&lt;/p&gt;
 

@@ -248,6 +248,14 @@
 	    
 	    
                 <li class="">
+                    <a href="//docs.vanillaforums.com/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
                     <a href="//docs.vanillaforums.com/developer/framework/permissions/">Permissions </a>
                 </li>
                 
@@ -315,6 +323,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -352,13 +368,13 @@
 
                 
 
-<h2 id="database-layer">Database layer</h2>
+<h2 id="database-layer:1e080c892326e5bba749587eba8bcf9e">Database layer</h2>
 
 <p>Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in <code>/library/databases</code>). However, at this time, the Vanilla team has no plans to support additional databases.</p>
 
 <p>The best way to access the database is via existing <a href="//docs.vanillaforums.com/developer/framework/models">models</a>. For instance, to get a list of discussions, use the <code>Get</code> method in the <code>DiscussionModel</code>. You can rely on model-based access to already be optimized for performance and utilize caching if it&rsquo;s available.</p>
 
-<h3 id="building-queries">Building queries</h3>
+<h3 id="building-queries:1e080c892326e5bba749587eba8bcf9e">Building queries</h3>
 
 <p>The <code>SQL</code> object supports chaining. You can call it with <code>Gdn::sql()</code>.</p>
 
@@ -400,7 +416,7 @@ $DiscussionModel-&gt;getID($DiscussionID);
 
 <p>Notice the use of limit, offset, where groups, where conditions including less than &amp; null, aliasing, and multiple joins.</p>
 
-<h3 id="updates-and-inserts">Updates and inserts</h3>
+<h3 id="updates-and-inserts:1e080c892326e5bba749587eba8bcf9e">Updates and inserts</h3>
 
 <p>An insert is a single step that takes the table name and an array of values to insert as parameters:</p>
 
@@ -418,14 +434,14 @@ $DiscussionModel-&gt;getID($DiscussionID);
    -&gt;put();
 </code></pre>
 
-<h3 id="direct-queries">Direct queries</h3>
+<h3 id="direct-queries:1e080c892326e5bba749587eba8bcf9e">Direct queries</h3>
 
 <p>The <code>query()</code> method allows for sending unfiltered SQL queries to the database. This is strongly discouraged because it can easily cause security flaws, performance problems, and compatibility problems.</p>
 
 <pre><code>Gdn::sql()-&gt;query(&quot;select * from GDN_Comments&quot;);
 </code></pre>
 
-<h3 id="structure">Structure</h3>
+<h3 id="structure:1e080c892326e5bba749587eba8bcf9e">Structure</h3>
 
 <p>Vanilla allows you to define database structures in code. Use the <code>Gdn::structure()</code> method to use this object. Here we&rsquo;ll look at part of the definition of the User table as an example:</p>
 

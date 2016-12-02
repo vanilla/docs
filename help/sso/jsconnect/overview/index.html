@@ -194,7 +194,7 @@
 
 	    
 	    
-                <li class="">
+                <li class=" nest">
                     <a href="//docs.vanillaforums.com/help/sso/saml/">SAML </a>
                 </li>
                 
@@ -295,7 +295,7 @@
 
                 
 
-<h2 id="jsconnect">jsConnect</h2>
+<h2 id="jsconnect:68f80267fa3a50980dbb745a782b8dca">jsConnect</h2>
 
 <p>For jsConnect to work you&rsquo;ll put some code on your site that identifies your users in a way that Vanilla can understand. Vanilla then requests this information when the user wants to sign in and synchronizes the user with Vanilla. This is done via <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>, which allows us to send your cookies from your site to you and obtain login information.</p>
 
@@ -308,7 +308,7 @@
 
 <p>jsConnect pings your endpoint whenever it wants to know if a user is logged in on your site. It does this using the user&rsquo;s current session, so you can use your normal &ldquo;is logged in&rdquo; detection to determine this - nothing fancy here.</p>
 
-<h2 id="your-endpoint">Your endpoint</h2>
+<h2 id="your-endpoint:68f80267fa3a50980dbb745a782b8dca">Your endpoint</h2>
 
 <p>Your endpoint needs to say 1 of 3 things when it&rsquo;s called:</p>
 
@@ -333,7 +333,7 @@
 
 <p>If your site is programmed in a language that doesn&rsquo;t have a client library then we provide documentation on our jsConnect protocol. Have a look at the <a href="//docs.vanillaforums.com/help/sso/jsconnect/seamless">jsConnect technical implementation</a>.</p>
 
-<h2 id="how-jsconnect-maps-users">How jsConnect maps users</h2>
+<h2 id="how-jsconnect-maps-users:68f80267fa3a50980dbb745a782b8dca">How jsConnect maps users</h2>
 
 <p>After calling your endpoint and getting a &ldquo;signed in&rdquo; reply, jsConnect looks up the user. If they&rsquo;ve <em>already</em> used SSO, we&rsquo;ve permanently mapped their unique ID to our UserID, so we sign them into that account. If they <em>haven&rsquo;t</em> used SSO before, 1 of 3 things happens:</p>
 
@@ -345,7 +345,7 @@
 
 <p>Vanilla Cloud customers should request Support enable <code>AutoConnect</code> if they desire it. That is an important component of a seamless experience.</p>
 
-<h2 id="tightening-the-integration">Tightening the integration</h2>
+<h2 id="tightening-the-integration:68f80267fa3a50980dbb745a782b8dca">Tightening the integration</h2>
 
 <p>To get very tight SSO integration, you will also want to follow these steps. Always carefully test your <em>basic</em> SSO authentication <strong>before</strong> tightening your integration.</p>
 
@@ -357,13 +357,13 @@
 <li>For seamless SSO on an embedded forum, see our <a href="http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/">embedded SSO solution</a>.</li>
 </ol>
 
-<h2 id="testing-the-integration">Testing the integration</h2>
+<h2 id="testing-the-integration:68f80267fa3a50980dbb745a782b8dca">Testing the integration</h2>
 
 <p>Use the &ldquo;Test URL&rdquo; link under your jsConnect settings to see if your endpoint is returning a good response.</p>
 
 <p>Try using your browser&rsquo;s Incognite/Private window mode for testing. This allows you to have a separate &ldquo;test&rdquo; session while you stay logged in as the administrator in your main session to make changes quickly.</p>
 
-<h2 id="common-questions">Common questions</h2>
+<h2 id="common-questions:68f80267fa3a50980dbb745a782b8dca">Common questions</h2>
 
 <p><strong>What do we do if SSO breaks and we&rsquo;re locked out?</strong></p>
 

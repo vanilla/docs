@@ -3,6 +3,7 @@
   
   <url>
     <loc>//docs.vanillaforums.com/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -119,6 +120,10 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/framework/datasets/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/releases/december-2016/</loc>
   </url>
   
   <url>
@@ -318,6 +323,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/developer/framework/oauth/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/sso/oauth/</loc>
   </url>
   
@@ -387,6 +396,14 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/sso/saml/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/sso/saml/connection-explained/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/developer/schemas/</loc>
   </url>
   
   <url>

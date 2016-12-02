@@ -8,6 +8,85 @@
     <atom:link href="//docs.vanillaforums.com/tags/2016/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>December 2016 Release</title>
+      <link>//docs.vanillaforums.com/help/releases/december-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/releases/december-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes:1731942d71274a37597ab5456c507f85&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;changes:1731942d71274a37597ab5456c507f85&#34;&gt;Changes:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add full IPv6 support.&lt;/li&gt;
+&lt;li&gt;Add and improve addon icons.&lt;/li&gt;
+&lt;li&gt;Add meta tags for discussion links to generate Twitter cards (when added to tweets).&lt;/li&gt;
+&lt;li&gt;Add settings to Dashboard for category max display depth.&lt;/li&gt;
+&lt;li&gt;Add some padding to HTML tables in posts (improve legibility).&lt;/li&gt;
+&lt;li&gt;Add support for our new CDN.&lt;/li&gt;
+&lt;li&gt;Add accessibility attributes to Customize Theme.&lt;/li&gt;
+&lt;li&gt;Add pager to log views.&lt;/li&gt;
+&lt;li&gt;Improve category headings detection and table view support.&lt;/li&gt;
+&lt;li&gt;Improve markup of category settings page.&lt;/li&gt;
+&lt;li&gt;Ensure password editing fields toggle appropriately.&lt;/li&gt;
+&lt;li&gt;Allow removal of button from HTML email.&lt;/li&gt;
+&lt;li&gt;Restore Theme Preview functionality (except for Mobile 2014).&lt;/li&gt;
+&lt;li&gt;Default to secure cookies if &amp;ldquo;ForceSSL&amp;rdquo; is set and using HTTPS.&lt;/li&gt;
+&lt;li&gt;Skip validating discussion title when a draft is saved.&lt;/li&gt;
+&lt;li&gt;Improve markup and make further enhancements to Dashboard v3.&lt;/li&gt;
+&lt;li&gt;Restrict upload filename to be per post instead of by entire discussion.&lt;/li&gt;
+&lt;li&gt;Allow uploading a Photo when creating a new category.&lt;/li&gt;
+&lt;li&gt;Avoid auto-scrolling to top when in comment embed.&lt;/li&gt;
+&lt;li&gt;Confirm that user wants to delete images before deleting (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Update documentation links for Social Connect addons.&lt;/li&gt;
+&lt;li&gt;Replace &amp;ldquo;Hide Category&amp;rdquo; with &amp;ldquo;Mute Category&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Allow new messages to accept a subject parameter (if enabled) via URL.&lt;/li&gt;
+&lt;li&gt;Fix delete message button (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Fix delete ban button (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Fix category depth calculation in subcommunities.&lt;/li&gt;
+&lt;li&gt;Fix IP filtering on user management page&lt;/li&gt;
+&lt;li&gt;Fix heading categories sometimes being wrapped in an anchor.&lt;/li&gt;
+&lt;li&gt;Fix dashboard pager next button when there are 0 results.&lt;/li&gt;
+&lt;li&gt;Fix the user photo in search.&lt;/li&gt;
+&lt;li&gt;Fix extra &amp;lt;br&amp;gt; tags in plain text emails.&lt;/li&gt;
+&lt;li&gt;Fix issue where nav is cut off on category add/edit.&lt;/li&gt;
+&lt;li&gt;Fix wrong heading for &amp;ldquo;activity&amp;rdquo; on profile page&lt;/li&gt;
+&lt;li&gt;Fix activity notifications falsely flagging as sent when it was skipped.&lt;/li&gt;
+&lt;li&gt;Fix ICO transparency issue after upload (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Fix permission check for Change Log page to allow moderators (Moderation.Manage).&lt;/li&gt;
+&lt;li&gt;Fix avatar cropping in profile.&lt;/li&gt;
+&lt;li&gt;jsConnect: Add warning to jsConnect dashboard when provider is in test mode.&lt;/li&gt;
+&lt;li&gt;jsConnect: [Security] Add content-type to callback endpoint to prevent potential XSS.&lt;/li&gt;
+&lt;li&gt;Badges: Add badge name as alt text to badge images.&lt;/li&gt;
+&lt;li&gt;Badges: Add the ability to edit thresholds for some badges.&lt;/li&gt;
+&lt;li&gt;Polls: Fix results percentage.&lt;/li&gt;
+&lt;li&gt;Polls: Fix cancel button.&lt;/li&gt;
+&lt;li&gt;Polls: Hide category dropdown when already inside a category.&lt;/li&gt;
+&lt;li&gt;Polls: Fix auto-selecting first child category in category dropdown.&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A: Fix auto-selecting first child category in category dropdown.&lt;/li&gt;
+&lt;li&gt;Reactions: Add inform message to Reactions enable toggle (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Reactions: Fix RSS view when BestOf is configured as tiles.&lt;/li&gt;
+&lt;li&gt;Reactions: Fix customizations reverting after database updates.&lt;/li&gt;
+&lt;li&gt;Reactions: [Security] Add missing CSRF protection on &amp;ldquo;react&amp;rdquo; endpoint.&lt;/li&gt;
+&lt;li&gt;Reactions: Fix reactions popup possible overlap.&lt;/li&gt;
+&lt;li&gt;Reactions: Translate reaction names in navigation breadcrumbs.&lt;/li&gt;
+&lt;li&gt;MailChimp: Fix issue with synchronizing lists.&lt;/li&gt;
+&lt;li&gt;Profile Extender: Fix checkbox display on registration.&lt;/li&gt;
+&lt;li&gt;Ignore: Fix failure to unignore user if their ignore privileges have been revoked.&lt;/li&gt;
+&lt;li&gt;Groups: Fix search in groups when the category is not viewable.&lt;/li&gt;
+&lt;li&gt;Warnings &amp;amp; Notes: Fix extra line after quote.&lt;/li&gt;
+&lt;li&gt;Civil Tongue: Add support for groups and group events.&lt;/li&gt;
+&lt;li&gt;Salesforce: Remove from options on profile social connect.&lt;/li&gt;
+&lt;li&gt;Split/Merge: Make the System user the new discussion&amp;rsquo;s author when splitting comments.&lt;/li&gt;
+&lt;li&gt;SAML: Allow SAML to accommodate differently-configured XML responses.&lt;/li&gt;
+&lt;li&gt;SimpleAPI: Fix situations where other addons could conflict with API endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>January 2016 Release</title>
       <link>//docs.vanillaforums.com/help/releases/january-2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -15,9 +94,9 @@
       <guid>//docs.vanillaforums.com/help/releases/january-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes:38721665cf506194debf30c643022dcd&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes:38721665cf506194debf30c643022dcd&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
@@ -61,9 +140,9 @@
       <guid>//docs.vanillaforums.com/help/releases/july-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes:9971f99c339014111db0d9919dfe3d97&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes:9971f99c339014111db0d9919dfe3d97&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;New plugin: Role Tracker (aggregates discussions with posts by users in particular roles).&lt;/p&gt;&lt;/li&gt;
@@ -153,9 +232,9 @@
       <guid>//docs.vanillaforums.com/help/releases/march-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes:e88284be3a382d3f451e794b4a88180e&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes:e88284be3a382d3f451e794b4a88180e&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;HTML emails now available.&lt;/li&gt;
@@ -194,7 +273,7 @@
 &lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;new-addons-available&#34;&gt;New addons available:&lt;/h3&gt;
+&lt;h3 id=&#34;new-addons-available:e88284be3a382d3f451e794b4a88180e&#34;&gt;New addons available:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
@@ -216,9 +295,9 @@
       <guid>//docs.vanillaforums.com/help/releases/may-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes:7f185bab92d791608f6d84af803810ad&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes:7f185bab92d791608f6d84af803810ad&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Upgrade to reCaptcha 2 (&amp;ldquo;NoCaptcha&amp;rdquo;).&lt;/li&gt;
@@ -282,9 +361,9 @@
       <guid>//docs.vanillaforums.com/help/releases/september-2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes:1c74d392bcfae8e8027f7fb75e0ed5c9&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;h3 id=&#34;changes:1c74d392bcfae8e8027f7fb75e0ed5c9&#34;&gt;Changes:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;New Dashboard! This changed every page in the moderator/admin backend, including all addon settings pages.&lt;/li&gt;

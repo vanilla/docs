@@ -15,7 +15,7 @@
       <guid>//docs.vanillaforums.com/help/sso/jsconnect/embed/</guid>
       <description>
 
-&lt;h2 id=&#34;embedding-with-seamless-jsconnect&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;
+&lt;h2 id=&#34;embedding-with-seamless-jsconnect:194993da8acd87e33c0a9d8c38018503&#34;&gt;Embedding with Seamless jsConnect&lt;/h2&gt;
 
 &lt;p&gt;&lt;a title=&#34;jsConnect Technical Documentation Part 1: Site-Wide SSO&#34; href=&#34;http://blog.vanillaforums.com/implementing-jsconnect/jsconnect-technical-documentation/&#34;&gt;Part 1&lt;/a&gt; of this documentation told you how to set up jsConnect SSO for site-wide SSO. However, if you have Vanilla embedded in a page you&amp;rsquo;ll notice that the SSO doesn&amp;rsquo;t automatically sign you in even if users are signed in to the containing page. In order to make the sign in seamless you need to add some SSO information to your embed code.&lt;/p&gt;
 
@@ -25,7 +25,7 @@
 
 &lt;p&gt;Now, on to revising your embed code with some additional SSO information.&lt;/p&gt;
 
-&lt;h2 id=&#34;vanilla-embed-code&#34;&gt;Vanilla Embed Code&lt;/h2&gt;
+&lt;h2 id=&#34;vanilla-embed-code:194993da8acd87e33c0a9d8c38018503&#34;&gt;Vanilla Embed Code&lt;/h2&gt;
 
 &lt;p&gt;Consider the embed code for Vanilla comments:&lt;/p&gt;
 
@@ -89,7 +89,7 @@ That&amp;rsquo;s it! The value of vanilla_sso from above is what you put in your
       <guid>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</guid>
       <description>
 
-&lt;h2 id=&#34;seamless-sso-with-jsconnect&#34;&gt;Seamless SSO with jsConnect&lt;/h2&gt;
+&lt;h2 id=&#34;seamless-sso-with-jsconnect:505d0950033c8555e7cb5af1b40aff62&#34;&gt;Seamless SSO with jsConnect&lt;/h2&gt;
 
 &lt;p&gt;jsConnect uses javascript to allow cross-domain single-signon with another site. We provide several &lt;a title=&#34;Implementing Vanilla jsConnect Single-Signon on your Site&#34; href=&#34;http://blog.vanillaforums.com/help/implementing-jsconnect-single-signon-on/#libraries&#34;&gt;client libraries&lt;/a&gt; to help you implement jsConnect on your site. If your site has been programmed in a language that doesn&amp;rsquo;t have a client library than this is documentation is for you.&lt;/p&gt;
 
@@ -275,7 +275,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
       <guid>//docs.vanillaforums.com/help/sso/jsconnect/overview/</guid>
       <description>
 
-&lt;h2 id=&#34;jsconnect&#34;&gt;jsConnect&lt;/h2&gt;
+&lt;h2 id=&#34;jsconnect:68f80267fa3a50980dbb745a782b8dca&#34;&gt;jsConnect&lt;/h2&gt;
 
 &lt;p&gt;For jsConnect to work you&amp;rsquo;ll put some code on your site that identifies your users in a way that Vanilla can understand. Vanilla then requests this information when the user wants to sign in and synchronizes the user with Vanilla. This is done via &lt;a href=&#34;http://en.wikipedia.org/wiki/JSONP&#34;&gt;JSONP&lt;/a&gt;, which allows us to send your cookies from your site to you and obtain login information.&lt;/p&gt;
 
@@ -288,7 +288,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;jsConnect pings your endpoint whenever it wants to know if a user is logged in on your site. It does this using the user&amp;rsquo;s current session, so you can use your normal &amp;ldquo;is logged in&amp;rdquo; detection to determine this - nothing fancy here.&lt;/p&gt;
 
-&lt;h2 id=&#34;your-endpoint&#34;&gt;Your endpoint&lt;/h2&gt;
+&lt;h2 id=&#34;your-endpoint:68f80267fa3a50980dbb745a782b8dca&#34;&gt;Your endpoint&lt;/h2&gt;
 
 &lt;p&gt;Your endpoint needs to say 1 of 3 things when it&amp;rsquo;s called:&lt;/p&gt;
 
@@ -313,7 +313,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;If your site is programmed in a language that doesn&amp;rsquo;t have a client library then we provide documentation on our jsConnect protocol. Have a look at the &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect/seamless&#34;&gt;jsConnect technical implementation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-jsconnect-maps-users&#34;&gt;How jsConnect maps users&lt;/h2&gt;
+&lt;h2 id=&#34;how-jsconnect-maps-users:68f80267fa3a50980dbb745a782b8dca&#34;&gt;How jsConnect maps users&lt;/h2&gt;
 
 &lt;p&gt;After calling your endpoint and getting a &amp;ldquo;signed in&amp;rdquo; reply, jsConnect looks up the user. If they&amp;rsquo;ve &lt;em&gt;already&lt;/em&gt; used SSO, we&amp;rsquo;ve permanently mapped their unique ID to our UserID, so we sign them into that account. If they &lt;em&gt;haven&amp;rsquo;t&lt;/em&gt; used SSO before, 1 of 3 things happens:&lt;/p&gt;
 
@@ -325,7 +325,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;Vanilla Cloud customers should request Support enable &lt;code&gt;AutoConnect&lt;/code&gt; if they desire it. That is an important component of a seamless experience.&lt;/p&gt;
 
-&lt;h2 id=&#34;tightening-the-integration&#34;&gt;Tightening the integration&lt;/h2&gt;
+&lt;h2 id=&#34;tightening-the-integration:68f80267fa3a50980dbb745a782b8dca&#34;&gt;Tightening the integration&lt;/h2&gt;
 
 &lt;p&gt;To get very tight SSO integration, you will also want to follow these steps. Always carefully test your &lt;em&gt;basic&lt;/em&gt; SSO authentication &lt;strong&gt;before&lt;/strong&gt; tightening your integration.&lt;/p&gt;
 
@@ -337,13 +337,13 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 &lt;li&gt;For seamless SSO on an embedded forum, see our &lt;a href=&#34;http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/&#34;&gt;embedded SSO solution&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;testing-the-integration&#34;&gt;Testing the integration&lt;/h2&gt;
+&lt;h2 id=&#34;testing-the-integration:68f80267fa3a50980dbb745a782b8dca&#34;&gt;Testing the integration&lt;/h2&gt;
 
 &lt;p&gt;Use the &amp;ldquo;Test URL&amp;rdquo; link under your jsConnect settings to see if your endpoint is returning a good response.&lt;/p&gt;
 
 &lt;p&gt;Try using your browser&amp;rsquo;s Incognite/Private window mode for testing. This allows you to have a separate &amp;ldquo;test&amp;rdquo; session while you stay logged in as the administrator in your main session to make changes quickly.&lt;/p&gt;
 
-&lt;h2 id=&#34;common-questions&#34;&gt;Common questions&lt;/h2&gt;
+&lt;h2 id=&#34;common-questions:68f80267fa3a50980dbb745a782b8dca&#34;&gt;Common questions&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;What do we do if SSO breaks and we&amp;rsquo;re locked out?&lt;/strong&gt;&lt;/p&gt;
 
@@ -401,7 +401,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
       <guid>//docs.vanillaforums.com/help/sso/jsconnect/</guid>
       <description>
 
-&lt;h2 id=&#34;jsconnect-concepts-overview&#34;&gt;jsConnect Concepts Overview&lt;/h2&gt;
+&lt;h2 id=&#34;jsconnect-concepts-overview:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;jsConnect Concepts Overview&lt;/h2&gt;
 
 &lt;p&gt;Our SSO solution has a few basic assumptions:&lt;/p&gt;
 
@@ -417,7 +417,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 &lt;li&gt;You have confirmed, unique &lt;strong&gt;email addresses&lt;/strong&gt; for users.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;creating-mapping-users&#34;&gt;Creating &amp;amp; mapping users&lt;/h2&gt;
+&lt;h2 id=&#34;creating-mapping-users:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Creating &amp;amp; mapping users&lt;/h2&gt;
 
 &lt;p&gt;Data that can currently be passed over SSO with jsConnect:&lt;/p&gt;
 
@@ -439,7 +439,7 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;&lt;strong&gt;We strongly recommend against creating new users via the API.&lt;/strong&gt; Our SSO solution lazy-creates new users for maximum robustness and reliability. Once a new user is created, you can optionally sync additional data about the user over API as needed.&lt;/p&gt;
 
-&lt;h2 id=&#34;unified-user-experience&#34;&gt;Unified user experience&lt;/h2&gt;
+&lt;h2 id=&#34;unified-user-experience:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Unified user experience&lt;/h2&gt;
 
 &lt;p&gt;In Vanilla, these optional configuration changes are possible:&lt;/p&gt;
 
@@ -452,31 +452,31 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 
 &lt;p&gt;Cloud users can contact support to make these changes.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-it-connects&#34;&gt;How it connects&lt;/h2&gt;
+&lt;h2 id=&#34;how-it-connects:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;How it connects&lt;/h2&gt;
 
 &lt;p&gt;Clicking the &amp;ldquo;Sign In&amp;rdquo; button in Vanilla generates an asynchronous request &lt;strong&gt;in the user&amp;rsquo;s browser session&lt;/strong&gt; back to the main website. This means the user&amp;rsquo;s cookies are sent as if they had visited the page directly, and that your normal login detection logic will work.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/features/sso/jsconnect-overview.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;two-flavors-of-sso&#34;&gt;Two Flavors of SSO&lt;/h2&gt;
+&lt;h2 id=&#34;two-flavors-of-sso:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Two Flavors of SSO&lt;/h2&gt;
 
 &lt;p&gt;There are two implementations of SSO that jsConnect supports. You can implement either of the methods or both as they serve different purposes.&lt;/p&gt;
 
-&lt;h3 id=&#34;method-1-site-wide-sso&#34;&gt;Method 1: Site-Wide SSO&lt;/h3&gt;
+&lt;h3 id=&#34;method-1-site-wide-sso:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Method 1: Site-Wide SSO&lt;/h3&gt;
 
 &lt;p&gt;You implement site-wide SSO when Vanilla is as a full site. With this method you need to create a page that provides your login information in jsonp format.&lt;/p&gt;
 
-&lt;h3 id=&#34;method-2-embedded-sso&#34;&gt;Method 2: Embedded SSO&lt;/h3&gt;
+&lt;h3 id=&#34;method-2-embedded-sso:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Method 2: Embedded SSO&lt;/h3&gt;
 
 &lt;p&gt;Vanilla also has the ability to be embedded in an html page either as an entire site or just as embedded comments. With this scenario you need to create a special SSO string that can be passed to the embedded Vanilla and provide login information.&lt;/p&gt;
 
-&lt;h2 id=&#34;make-it-seamless&#34;&gt;Make it seamless&lt;/h2&gt;
+&lt;h2 id=&#34;make-it-seamless:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Make it seamless&lt;/h2&gt;
 
 &lt;p&gt;When setting up a jsConnect connection in full-site mode, you have the option to specify it as &amp;ldquo;default&amp;rdquo;. Doing this attaches it to the special &lt;code&gt;/sso&lt;/code&gt; endpoint in Vanilla. When a user clicks &amp;ldquo;Forum&amp;rdquo; in your website&amp;rsquo;s navigation, instead of linking to the forum homepage, instead link them to the &lt;code&gt;/sso&lt;/code&gt; page. This will auto-fire the asynchronous call back to your website rather than waiting for the user to click &amp;ldquo;sign in&amp;rdquo;, then drops them on the homepage as normal.&lt;/p&gt;
 
 &lt;p&gt;For more information, read our &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect/overview&#34;&gt;technical overview&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;wordpress-plugin&#34;&gt;WordPress plugin&lt;/h2&gt;
+&lt;h2 id=&#34;wordpress-plugin:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;WordPress plugin&lt;/h2&gt;
 
 &lt;p&gt;If your site is using WordPress then we make a plugin that allows you to use SSO with your WordPress site. It also helps you set up an embedded forum and embedded comments on your site. &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34; target=&#34;_blank&#34;&gt;Get the plugin&lt;/a&gt;.&lt;/p&gt;
 </description>

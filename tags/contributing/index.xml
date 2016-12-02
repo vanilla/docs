@@ -15,7 +15,7 @@
       <guid>//docs.vanillaforums.com/developer/contributing/conduct/</guid>
       <description>
 
-&lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h2&gt;
+&lt;h2 id=&#34;code-of-conduct:102cddd805ad66d3e769233af629d8b3&#34;&gt;Code of Conduct&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Adapted from Swift&amp;rsquo;s Code of Conduct v1.3 for now because a copied code is better than no code.&lt;/em&gt;&lt;/p&gt;
 
@@ -50,7 +50,7 @@
       <guid>//docs.vanillaforums.com/developer/contributing/coding-standard/</guid>
       <description>
 
-&lt;h2 id=&#34;standards&#34;&gt;Standards&lt;/h2&gt;
+&lt;h2 id=&#34;standards:599827d193cc1720160c699f8f7d5861&#34;&gt;Standards&lt;/h2&gt;
 
 &lt;p&gt;As of May 2014, Vanilla will adhere to &lt;a href=&#34;and therefore [PSR-1]&#34;&gt;PSR-2&lt;/a&gt; with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).&lt;/p&gt;
 
@@ -58,7 +58,7 @@
 
 &lt;p&gt;We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently. Key words in this document (&amp;ldquo;MUST&amp;rdquo;, &amp;ldquo;SHOULD&amp;rdquo;, etc.) are used as described in &lt;a href=&#34;http://www.ietf.org/rfc/rfc2119.txt&#34;&gt;RFC 2119&lt;/a&gt; which is as boring and obvious as you expect but mercifully brief.&lt;/p&gt;
 
-&lt;h3 id=&#34;php-version&#34;&gt;PHP Version&lt;/h3&gt;
+&lt;h3 id=&#34;php-version:599827d193cc1720160c699f8f7d5861&#34;&gt;PHP Version&lt;/h3&gt;
 
 &lt;p&gt;All code in &lt;code&gt;master&lt;/code&gt; must work under PHP 5.4.&lt;/p&gt;
 
@@ -66,7 +66,7 @@
 
 &lt;p&gt;We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.&lt;/p&gt;
 
-&lt;h3 id=&#34;check-out-codesniffer&#34;&gt;Check out CodeSniffer&lt;/h3&gt;
+&lt;h3 id=&#34;check-out-codesniffer:599827d193cc1720160c699f8f7d5861&#34;&gt;Check out CodeSniffer&lt;/h3&gt;
 
 &lt;p&gt;CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.&lt;/p&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;p&gt;Thus ends the readable part of your adventure as you descend into the dry, technical blather of a coding standard. Godspeed, coding warrior.&lt;/p&gt;
 
-&lt;h2 id=&#34;1-overview&#34;&gt;1. Overview&lt;/h2&gt;
+&lt;h2 id=&#34;1-overview:599827d193cc1720160c699f8f7d5861&#34;&gt;1. Overview&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Code MUST use 4 spaces for indenting, not tabs.&lt;/p&gt;&lt;/li&gt;
@@ -121,7 +121,7 @@ but SHOULD NOT do both.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;View files are excluded from this standard.  You SHOULD try to follow as many rules as possible.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;1-1-example&#34;&gt;1.1. Example&lt;/h3&gt;
+&lt;h3 id=&#34;1-1-example:599827d193cc1720160c699f8f7d5861&#34;&gt;1.1. Example&lt;/h3&gt;
 
 &lt;p&gt;This example encompasses some of the rules below as a quick overview:&lt;/p&gt;
 
@@ -165,9 +165,9 @@ class Foo extends Bar implements FooInterface {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;2-general&#34;&gt;2. General&lt;/h2&gt;
+&lt;h2 id=&#34;2-general:599827d193cc1720160c699f8f7d5861&#34;&gt;2. General&lt;/h2&gt;
 
-&lt;h3 id=&#34;2-1-files&#34;&gt;2.1. Files&lt;/h3&gt;
+&lt;h3 id=&#34;2-1-files:599827d193cc1720160c699f8f7d5861&#34;&gt;2.1. Files&lt;/h3&gt;
 
 &lt;p&gt;All PHP files MUST use the Unix LF (linefeed) line ending.&lt;/p&gt;
 
@@ -177,16 +177,16 @@ class Foo extends Bar implements FooInterface {
 
 &lt;p&gt;All view files are excluded from this standard.  You SHOULD try to follow as many rules as possible.&lt;/p&gt;
 
-&lt;h3 id=&#34;2-2-php-tags&#34;&gt;2.2. PHP Tags&lt;/h3&gt;
+&lt;h3 id=&#34;2-2-php-tags:599827d193cc1720160c699f8f7d5861&#34;&gt;2.2. PHP Tags&lt;/h3&gt;
 
 &lt;p&gt;PHP code MUST use the long &lt;code&gt;&amp;lt;?php ?&amp;gt;&lt;/code&gt; tags; it
 MUST NOT use the other tag variations.&lt;/p&gt;
 
-&lt;h3 id=&#34;2-3-character-encoding&#34;&gt;2.3. Character Encoding&lt;/h3&gt;
+&lt;h3 id=&#34;2-3-character-encoding:599827d193cc1720160c699f8f7d5861&#34;&gt;2.3. Character Encoding&lt;/h3&gt;
 
 &lt;p&gt;PHP code MUST use only UTF-8 without BOM.&lt;/p&gt;
 
-&lt;h3 id=&#34;2-4-side-effects&#34;&gt;2.4. Side Effects&lt;/h3&gt;
+&lt;h3 id=&#34;2-4-side-effects:599827d193cc1720160c699f8f7d5861&#34;&gt;2.4. Side Effects&lt;/h3&gt;
 
 &lt;p&gt;A file SHOULD declare new symbols (classes, functions, constants,
 etc.) and cause no other side effects, or it SHOULD execute logic with side
@@ -237,7 +237,7 @@ if (! function_exists(&#39;bar&#39;)) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;2-5-lines&#34;&gt;2.5. Lines&lt;/h3&gt;
+&lt;h3 id=&#34;2-5-lines:599827d193cc1720160c699f8f7d5861&#34;&gt;2.5. Lines&lt;/h3&gt;
 
 &lt;p&gt;There MUST NOT be a hard limit on line length.&lt;/p&gt;
 
@@ -254,7 +254,7 @@ blocks of code.&lt;/p&gt;
 
 &lt;p&gt;There MUST NOT be more than one statement per line.&lt;/p&gt;
 
-&lt;h3 id=&#34;2-6-indenting&#34;&gt;2.6. Indenting&lt;/h3&gt;
+&lt;h3 id=&#34;2-6-indenting:599827d193cc1720160c699f8f7d5861&#34;&gt;2.6. Indenting&lt;/h3&gt;
 
 &lt;p&gt;Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.&lt;/p&gt;
 
@@ -265,21 +265,21 @@ also makes it easy to insert fine-grained sub-indentation for inter-line
 alignment.
 &lt;/aside&gt;
 
-&lt;h3 id=&#34;2-7-keywords-and-true-false-null&#34;&gt;2.7. Keywords and True/False/Null&lt;/h3&gt;
+&lt;h3 id=&#34;2-7-keywords-and-true-false-null:599827d193cc1720160c699f8f7d5861&#34;&gt;2.7. Keywords and True/False/Null&lt;/h3&gt;
 
 &lt;p&gt;PHP &lt;a href=&#34;http://php.net/manual/en/reserved.keywords.php&#34;&gt;keywords&lt;/a&gt; MUST be in lower case.&lt;/p&gt;
 
 &lt;p&gt;The PHP constants &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, and &lt;code&gt;null&lt;/code&gt; MUST be in lower case.&lt;/p&gt;
 
-&lt;h2 id=&#34;3-namespace-and-use-declarations&#34;&gt;3. Namespace and Use Declarations&lt;/h2&gt;
+&lt;h2 id=&#34;3-namespace-and-use-declarations:599827d193cc1720160c699f8f7d5861&#34;&gt;3. Namespace and Use Declarations&lt;/h2&gt;
 
 &lt;p&gt;No requirements.&lt;/p&gt;
 
-&lt;h3 id=&#34;4-class-constants-properties-and-methods&#34;&gt;4. Class Constants, Properties, and Methods&lt;/h3&gt;
+&lt;h3 id=&#34;4-class-constants-properties-and-methods:599827d193cc1720160c699f8f7d5861&#34;&gt;4. Class Constants, Properties, and Methods&lt;/h3&gt;
 
 &lt;p&gt;The term &amp;ldquo;class&amp;rdquo; refers to all classes, interfaces, and traits.&lt;/p&gt;
 
-&lt;h3 id=&#34;4-1-constants&#34;&gt;4.1. Constants&lt;/h3&gt;
+&lt;h3 id=&#34;4-1-constants:599827d193cc1720160c699f8f7d5861&#34;&gt;4.1. Constants&lt;/h3&gt;
 
 &lt;p&gt;Class constants MUST be declared in all upper case with underscore separators.
 For example:&lt;/p&gt;
@@ -293,7 +293,7 @@ class Foo {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-2-extends-and-implements&#34;&gt;4.2. Extends and Implements&lt;/h3&gt;
+&lt;h3 id=&#34;4-2-extends-and-implements:599827d193cc1720160c699f8f7d5861&#34;&gt;4.2. Extends and Implements&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code&gt;extends&lt;/code&gt; and &lt;code&gt;implements&lt;/code&gt; keywords MUST be declared on the same line as
 the class name.&lt;/p&gt;
@@ -323,7 +323,7 @@ class ClassName extends ParentClass implements
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-3-properties&#34;&gt;4.3. Properties&lt;/h3&gt;
+&lt;h3 id=&#34;4-3-properties:599827d193cc1720160c699f8f7d5861&#34;&gt;4.3. Properties&lt;/h3&gt;
 
 &lt;p&gt;Visibility MUST be declared on all properties.&lt;/p&gt;
 
@@ -343,7 +343,7 @@ class ClassName {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-4-methods&#34;&gt;4.4. Methods&lt;/h3&gt;
+&lt;h3 id=&#34;4-4-methods:599827d193cc1720160c699f8f7d5861&#34;&gt;4.4. Methods&lt;/h3&gt;
 
 &lt;p&gt;Method names MUST be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
 
@@ -381,7 +381,7 @@ class ClassName {
 
 &lt;p&gt;Event methods MUST be &lt;code&gt;camelCase&lt;/code&gt; separated by &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;4-5-method-arguments&#34;&gt;4.5. Method Arguments&lt;/h3&gt;
+&lt;h3 id=&#34;4-5-method-arguments:599827d193cc1720160c699f8f7d5861&#34;&gt;4.5. Method Arguments&lt;/h3&gt;
 
 &lt;p&gt;In the argument list, there MUST NOT be a space before each comma, and there
 MUST be one space after each comma.&lt;/p&gt;
@@ -419,14 +419,14 @@ class ClassName {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-6-global-functions&#34;&gt;4.6. Global Functions&lt;/h3&gt;
+&lt;h3 id=&#34;4-6-global-functions:599827d193cc1720160c699f8f7d5861&#34;&gt;4.6. Global Functions&lt;/h3&gt;
 
 &lt;p&gt;Global function names SHOULD be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Global function names that match php style; such as array_something() are allowed
 and MUST be declared in lowercase.&lt;/p&gt;
 
-&lt;h3 id=&#34;4-7-abstract-final-and-static&#34;&gt;4.7. &lt;code&gt;abstract&lt;/code&gt;, &lt;code&gt;final&lt;/code&gt;, and &lt;code&gt;static&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;4-7-abstract-final-and-static:599827d193cc1720160c699f8f7d5861&#34;&gt;4.7. &lt;code&gt;abstract&lt;/code&gt;, &lt;code&gt;final&lt;/code&gt;, and &lt;code&gt;static&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;When present, the &lt;code&gt;abstract&lt;/code&gt; and &lt;code&gt;final&lt;/code&gt; declarations MUST precede the
 visibility declaration.&lt;/p&gt;
@@ -447,7 +447,7 @@ abstract class ClassName {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-8-method-and-function-calls&#34;&gt;4.8. Method and Function Calls&lt;/h3&gt;
+&lt;h3 id=&#34;4-8-method-and-function-calls:599827d193cc1720160c699f8f7d5861&#34;&gt;4.8. Method and Function Calls&lt;/h3&gt;
 
 &lt;p&gt;When making a method or function call, there MUST NOT be a space between the
 method or function name and the opening parenthesis, there MUST NOT be a space
@@ -473,7 +473,7 @@ $foo-&amp;gt;bar(
 );
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;5-control-structures&#34;&gt;5. Control Structures&lt;/h2&gt;
+&lt;h2 id=&#34;5-control-structures:599827d193cc1720160c699f8f7d5861&#34;&gt;5. Control Structures&lt;/h2&gt;
 
 &lt;p&gt;The general style rules for control structures are as follows:&lt;/p&gt;
 
@@ -491,7 +491,7 @@ brace&lt;/li&gt;
 the structures look, and reduces the likelihood of introducing errors as new
 lines get added to the body.&lt;/p&gt;
 
-&lt;h3 id=&#34;5-1-if-elseif-else&#34;&gt;5.1. &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elseif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5-1-if-elseif-else:599827d193cc1720160c699f8f7d5861&#34;&gt;5.1. &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elseif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;An &lt;code&gt;if&lt;/code&gt; structure looks like the following. Note the placement of parentheses,
 spaces, and braces; and that &lt;code&gt;else&lt;/code&gt; and &lt;code&gt;elseif&lt;/code&gt; are on the same line as the
@@ -510,7 +510,7 @@ if ($expr1) {
 &lt;p&gt;The keyword &lt;code&gt;elseif&lt;/code&gt; SHOULD be used instead of &lt;code&gt;else if&lt;/code&gt; so that all control
 keywords look like single words.&lt;/p&gt;
 
-&lt;h3 id=&#34;5-2-switch-case&#34;&gt;5.2. &lt;code&gt;switch&lt;/code&gt;, &lt;code&gt;case&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5-2-switch-case:599827d193cc1720160c699f8f7d5861&#34;&gt;5.2. &lt;code&gt;switch&lt;/code&gt;, &lt;code&gt;case&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;A &lt;code&gt;switch&lt;/code&gt; structure looks like the following. Note the placement of
 parentheses, spaces, and braces. The &lt;code&gt;case&lt;/code&gt; statement MUST be indented once
@@ -537,7 +537,7 @@ switch ($expr) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;5-3-while-do-while&#34;&gt;5.3. &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;do while&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5-3-while-do-while:599827d193cc1720160c699f8f7d5861&#34;&gt;5.3. &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;do while&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;A &lt;code&gt;while&lt;/code&gt; statement looks like the following. Note the placement of
 parentheses, spaces, and braces.&lt;/p&gt;
@@ -557,7 +557,7 @@ do {
 } while ($expr);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;5-4-for&#34;&gt;5.4. &lt;code&gt;for&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5-4-for:599827d193cc1720160c699f8f7d5861&#34;&gt;5.4. &lt;code&gt;for&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;A &lt;code&gt;for&lt;/code&gt; statement looks like the following. Note the placement of parentheses,
 spaces, and braces.&lt;/p&gt;
@@ -568,7 +568,7 @@ for ($i = 0; $i &amp;lt; 10; $i++) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;5-5-foreach&#34;&gt;5.5. &lt;code&gt;foreach&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5-5-foreach:599827d193cc1720160c699f8f7d5861&#34;&gt;5.5. &lt;code&gt;foreach&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;A &lt;code&gt;foreach&lt;/code&gt; statement looks like the following. Note the placement of
 parentheses, spaces, and braces.&lt;/p&gt;
@@ -579,7 +579,7 @@ foreach ($iterable as $key =&amp;gt; $value) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;5-6-try-catch&#34;&gt;5.6. &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5-6-try-catch:599827d193cc1720160c699f8f7d5861&#34;&gt;5.6. &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;A &lt;code&gt;try catch&lt;/code&gt; block looks like the following. Note the placement of
 parentheses, spaces, and braces.&lt;/p&gt;
@@ -594,7 +594,7 @@ try {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;6-closures&#34;&gt;6. Closures&lt;/h2&gt;
+&lt;h2 id=&#34;6-closures:599827d193cc1720160c699f8f7d5861&#34;&gt;6. Closures&lt;/h2&gt;
 
 &lt;p&gt;Closures MUST be declared with a space after the &lt;code&gt;function&lt;/code&gt; keyword, and a
 space before and after the &lt;code&gt;use&lt;/code&gt; keyword.&lt;/p&gt;
@@ -696,7 +696,7 @@ $foo-&amp;gt;bar(
 );
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;7-doc-blocks&#34;&gt;7. Doc Blocks&lt;/h2&gt;
+&lt;h2 id=&#34;7-doc-blocks:599827d193cc1720160c699f8f7d5861&#34;&gt;7. Doc Blocks&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Descriptions MUST BE a full sentence with a capital to start and period to end&lt;/p&gt;&lt;/li&gt;
@@ -715,7 +715,7 @@ $foo-&amp;gt;bar(
  */
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;8-conclusion&#34;&gt;8. Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;8-conclusion:599827d193cc1720160c699f8f7d5861&#34;&gt;8. Conclusion&lt;/h2&gt;
 
 &lt;p&gt;There are many elements of style and practice intentionally omitted by this
 guide. These include but are not limited to:&lt;/p&gt;
@@ -745,9 +745,9 @@ other elements of style and practice.&lt;/p&gt;
       <guid>//docs.vanillaforums.com/developer/contributing/</guid>
       <description>
 
-&lt;h2 id=&#34;how-to-contribute&#34;&gt;How to Contribute&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-contribute:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;How to Contribute&lt;/h2&gt;
 
-&lt;h3 id=&#34;general&#34;&gt;General&lt;/h3&gt;
+&lt;h3 id=&#34;general:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;General&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Welcome folks to the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community&lt;/a&gt; and be awesome!&lt;/li&gt;
@@ -761,7 +761,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;li&gt;Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;developers&#34;&gt;Developers&lt;/h3&gt;
+&lt;h3 id=&#34;developers:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Developers&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Contribute code via &lt;a href=&#34;//docs.vanillaforums.com/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
@@ -771,7 +771,7 @@ other elements of style and practice.&lt;/p&gt;
 
 &lt;p&gt;Sections of our contribution guidelines are adapted or copied from &lt;a href=&#34;https://swift.org/contributing/&#34;&gt;Swift&lt;/a&gt; because they are awesome.&lt;/p&gt;
 
-&lt;h2 id=&#34;reporting-issues-like-a-pro&#34;&gt;Reporting issues like a pro&lt;/h2&gt;
+&lt;h2 id=&#34;reporting-issues-like-a-pro:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Reporting issues like a pro&lt;/h2&gt;
 
 &lt;p&gt;First, check for duplicates by searching on GitHub. All clear? Then make sure you cover three points:&lt;/p&gt;
 
@@ -783,7 +783,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Include the precise Vanilla version number and any relevant system information (ex: OS, PHP version &amp;amp; settings, MySQL settings).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;triaging-issues&#34;&gt;Triaging issues&lt;/h2&gt;
+&lt;h2 id=&#34;triaging-issues:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Triaging issues&lt;/h2&gt;
 
 &lt;p&gt;There are a number of things you can do to help triage issues in the issue tracker.&lt;/p&gt;
 
@@ -805,13 +805,13 @@ other elements of style and practice.&lt;/p&gt;
       <guid>//docs.vanillaforums.com/developer/contributing/pull-requests/</guid>
       <description>
 
-&lt;h2 id=&#34;using-pull-requests-to-contribute-code&#34;&gt;Using pull requests to contribute code&lt;/h2&gt;
+&lt;h2 id=&#34;using-pull-requests-to-contribute-code:aa209d9b47e048e5dd34349ecfa70a25&#34;&gt;Using pull requests to contribute code&lt;/h2&gt;
 
 &lt;p&gt;We love pull requests! They&amp;rsquo;re the core of our workflow.&lt;/p&gt;
 
 &lt;p&gt;All code is added to Vanilla via pull requests (PRs). A pull request is simply a request to merge code from a particular branch into another (usually a &lt;code&gt;feature&lt;/code&gt; or &lt;code&gt;hotfix&lt;/code&gt; branch into &lt;code&gt;master&lt;/code&gt;). GitHub&amp;rsquo;s pull request feature tracks discussion, labels, assignments, and changes over time to a pull request.&lt;/p&gt;
 
-&lt;h3 id=&#34;creating-a-pull-request&#34;&gt;Creating a pull request&lt;/h3&gt;
+&lt;h3 id=&#34;creating-a-pull-request:aa209d9b47e048e5dd34349ecfa70a25&#34;&gt;Creating a pull request&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Branch from &lt;code&gt;master&lt;/code&gt; and checkout that branch.&lt;/li&gt;
@@ -819,7 +819,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;li&gt;Use GitHub to open a pull request against master.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;writing-a-great-pull-request&#34;&gt;Writing a great pull request&lt;/h3&gt;
+&lt;h3 id=&#34;writing-a-great-pull-request:aa209d9b47e048e5dd34349ecfa70a25&#34;&gt;Writing a great pull request&lt;/h3&gt;
 
 &lt;p&gt;Pull request titles (and commit messages) should be in the present imperative tense. This means they should read like a command. Examples:&lt;/p&gt;
 
@@ -835,7 +835,7 @@ other elements of style and practice.&lt;/p&gt;
 
 &lt;p&gt;Never try to address multiple, unrelated issues in a single pull request.&lt;/p&gt;
 
-&lt;h3 id=&#34;pull-request-checklist&#34;&gt;Pull request checklist&lt;/h3&gt;
+&lt;h3 id=&#34;pull-request-checklist:aa209d9b47e048e5dd34349ecfa70a25&#34;&gt;Pull request checklist&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Have you signed the &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;contributors&amp;rsquo; agreement&lt;/a&gt;?&lt;/li&gt;
@@ -845,7 +845,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;li&gt;Did you carefully follow our &lt;a href=&#34;//docs.vanillaforums.com/developer/contributing/coding-standard&#34;&gt;coding standards&lt;/a&gt;?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;feedback-on-pull-requests&#34;&gt;Feedback on pull requests&lt;/h3&gt;
+&lt;h3 id=&#34;feedback-on-pull-requests:aa209d9b47e048e5dd34349ecfa70a25&#34;&gt;Feedback on pull requests&lt;/h3&gt;
 
 &lt;p&gt;It doesn&amp;rsquo;t stop there! Here&amp;rsquo;s what you can do for currently open pull requests you didn&amp;rsquo;t write:&lt;/p&gt;
 

@@ -248,6 +248,14 @@
 	    
 	    
                 <li class="">
+                    <a href="//docs.vanillaforums.com/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
                     <a href="//docs.vanillaforums.com/developer/framework/permissions/">Permissions </a>
                 </li>
                 
@@ -315,6 +323,14 @@
 	    
 
 
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
     <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
@@ -352,15 +368,15 @@
 
                 
 
-<h2 id="assets">Assets</h2>
+<h2 id="assets:ee118ebf16a4069ead6ee055bd1afe43">Assets</h2>
 
 <p>Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.</p>
 
-<h3 id="default-assets">Default assets</h3>
+<h3 id="default-assets:ee118ebf16a4069ead6ee055bd1afe43">Default assets</h3>
 
 <p>Vanilla uses these assets by default: <code>Head</code>, <code>Content</code>, <code>Panel</code>, and <code>Foot</code>. You cannot rely on every theme having a <code>Panel</code>, which is typically used as a sidebar. The <code>Content</code> asset is required, because it is where the view is rendered. You can, however, assign it additional content.</p>
 
-<h3 id="using-assets">Using assets</h3>
+<h3 id="using-assets:ee118ebf16a4069ead6ee055bd1afe43">Using assets</h3>
 
 <p>You can create your own arbitrary assets in your templates and simply add content to them using <code>Gdn::controller()-&gt;addAsset('AssetName', $Content, 'ContentName')</code>. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the <code>default.master.tpl</code> file.</p>
 

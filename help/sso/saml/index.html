@@ -194,7 +194,7 @@
 
 	    
 	    
-                <li class="active">
+                <li class="active nest">
                     <a href="//docs.vanillaforums.com/help/sso/saml/">SAML </a>
                 </li>
                 
@@ -202,6 +202,16 @@
                     
                     
                
+                    
+                        <ul class="nav-tier3">
+
+                            <li class="">
+                                <a href="//docs.vanillaforums.com/help/sso/saml/connection-explained/">SAML Connection explained</a>
+                            </li>
+
+                            
+		    
+                        </ul>
                     
                 
 
@@ -264,9 +274,10 @@
 
                 
 
-<h2 id="sso-with-saml-overview">SSO with SAML: Overview</h2>
+<h2 id="sso-with-saml-overview:d680e8a854a7cbad6d490c445cba2eba">SSO with SAML: Overview</h2>
 
-<p>Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAMLSSO addon, and configuring it via its Settings page (Dashboard -&gt; Addons -&gt; SAMLSSO -&gt; Settings button).</p>
+<p>Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAML SSO addon,
+and configuring it via its Settings page (Dashboard -&gt; Addons -&gt; SAML SSO -&gt; Settings button).</p>
 
 <p>SAML accounts are mapped to existing forum accounts by <strong>email address</strong>, or a new account is created if no match is found.</p>
 
@@ -275,18 +286,19 @@
 <pre><code>UniqueID =&gt; id
 Name =&gt; uid
 Email =&gt; mail
-Photo =&gt; photo
+Photo =&gt; photo // Optional
+Roles =&gt; role1,role2 // Optional
 </code></pre>
-
-<p>We also accept a <code>roles</code> field optionally. <code>Photo</code> is likewise optional.</p>
 
 <p><code>UniqueID</code> is whatever you&rsquo;re using to absolutely uniquely identify the user on your side that will never change.</p>
 
 <p><code>Name</code> is the username. We recommend keeping it within the normal rules (alphanumerics and underscores only, 50-character limit, must be unique) but we do not validate its formatting on our side over SSO because we don&rsquo;t want to fail a login. It would just make @mentions impossible to use if it had spaces or special characters in it. However, in the case where there&rsquo;s a duplicate name or none provided, it will send the user to a &ldquo;Connect&rdquo; page to provide a valid, unique username which will then also be validated for formatting.</p>
 
-<p>We don&rsquo;t validate emails on our side either. In general, we are assuming you&rsquo;ve done the data validation on your side and adding more would gum up the works.</p>
+<p><code>Email</code> is not validated on our side either. In general, we are assuming you&rsquo;ve done the data validation on your side and adding more would gum up the works.</p>
 
-<p>Roles consist of a comma-separated list of exact name matches to existing roles on your forum.</p>
+<p><code>Photo</code> is the url/path to the user&rsquo;s photo and is optional.</p>
+
+<p><code>Roles</code> consist of a comma-separated list of exact name matches to existing roles on your forum and is optional. e.g. &lsquo;Member,MVP,Support&rsquo;</p>
 
 
             

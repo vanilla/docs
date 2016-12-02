@@ -15,13 +15,13 @@
       <guid>//docs.vanillaforums.com/help/notifications/</guid>
       <description>
 
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&#34;overview:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;Notifications for certain forum events can be delivered in-app (via Growl-style popups) and/or via email. New users will be opted in to a list of notifications that can be configured by the administrator. Users may edit these preferences in their profile at any time.&lt;/p&gt;
 
 &lt;p&gt;Any notification level may be selectively disabled globally. It is also possible to globally disable all email sending by setting &lt;code&gt;Garden.Email = false&lt;/code&gt; in your config.&lt;/p&gt;
 
-&lt;h2 id=&#34;basic-notifications&#34;&gt;Basic notifications&lt;/h2&gt;
+&lt;h2 id=&#34;basic-notifications:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Basic notifications&lt;/h2&gt;
 
 &lt;p&gt;Notifications available by default to all users.&lt;/p&gt;
 
@@ -36,29 +36,29 @@
 &lt;li&gt;Notify me when I am added to private conversations.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;addon-notifications&#34;&gt;Addon notifications&lt;/h2&gt;
+&lt;h2 id=&#34;addon-notifications:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Addon notifications&lt;/h2&gt;
 
 &lt;p&gt;Addons may add more notifications.&lt;/p&gt;
 
-&lt;h3 id=&#34;badges-cloud-only&#34;&gt;Badges (cloud-only)&lt;/h3&gt;
+&lt;h3 id=&#34;badges-cloud-only:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Badges (cloud-only)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Notify me when I earn a badge.&lt;/li&gt;
 &lt;li&gt;Notify me when a badge is requested. [Moderator only]&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ideation-cloud-only&#34;&gt;Ideation (cloud-only)&lt;/h3&gt;
+&lt;h3 id=&#34;ideation-cloud-only:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Ideation (cloud-only)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Notify me when my ideas&amp;rsquo; statuses change.    &lt;/li&gt;
 &lt;li&gt;Notify me when the status changes on an idea I&amp;rsquo;ve voted on.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;advanced-notifications&#34;&gt;Advanced notifications&lt;/h2&gt;
+&lt;h2 id=&#34;advanced-notifications:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Advanced notifications&lt;/h2&gt;
 
 &lt;p&gt;Moderators and administrators have permission to be notified for every new comment or discussion, and they can set this per category. These are available on the same Edit Preferences page under Edit Profile. &lt;em&gt;Do not enable this feature for all users.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-defaults&#34;&gt;Setting defaults&lt;/h2&gt;
+&lt;h2 id=&#34;setting-defaults:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Setting defaults&lt;/h2&gt;
 
 &lt;p&gt;You can set default notification levels for new users in your config. Setting a value to &lt;code&gt;1&lt;/code&gt; is on, &lt;code&gt;0&lt;/code&gt; is off, and &lt;code&gt;false&lt;/code&gt; disables it globally. Any user has already chosen their preferences will be unaffected.&lt;/p&gt;
 
