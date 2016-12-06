@@ -16,7 +16,7 @@ aliases:
 
 
 Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
-You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to /vanilla/settings/categories.
+You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to `/vanilla/settings/categories`.
 
 
 ## Choosing Your Category Layout
@@ -40,11 +40,11 @@ Categories are easily arranged. Just click on the left side of a specific catego
 
 There are some other options that affect how categories are viewed on the forum. Opening the right drop down will reveal the “Display As” menu. These settings critically change the way a category behaves.
 
-![The "Display As" options.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/display_as_menu.png)
+![The "Display As" options.](https://images.v-cdn.net/docs/display_as_menu.png)
 
 **Discussions** - The default category, where users can post discussions.
 
-**Heading** - Unclickable Headings that help with forum organization. On the homepage, they will will display differently according to your theme. Generally they are bold, and will split your categories into sections:
+**Heading** - Unclickable Headings that help with forum organization. On the homepage, they will display differently according to your theme. Generally they are bold, and will split your categories into sections:
 
 ![The main page of your forum may be set to recent discussions, best of, or categories. This is an example of a categories page in the "Bootstrap 3" theme, with headings differentiating the sections. ](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/categories_index.png)
 
@@ -52,10 +52,10 @@ There are some other options that affect how categories are viewed on the forum.
 
 Flat categories have a module that can be inserted into your theme. This will blend right in with your index and list a small number of the categories that the section contains. It has a quick search module, allowing for users to shift through hundreds of categories with ease. This is great for sites that have a large number of products.
 
-![The flat categories module, shown here blending in with the theme.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/display_as_flat.png)
+![The flat categories module, shown here blending in with the theme.](https://images.v-cdn.net/docs/display_as_flat.png)
 
 To add this to your theme, use this module:
-{module name="FlatCategoryModule" categoryID=00}
+`{module name="FlatCategoryModule" categoryID=00}`
 
 You can find the numerical categoryID in the URL when you are editing a category.
 ![You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community. This shows an example URL.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/category_ID.png)
@@ -74,9 +74,9 @@ You can find the numerical categoryID in the URL when you are editing a category
 
 **CSS class** - The specified text will be added as a class for the category's HTML wrapper. This makes it so that you can target it specifically when building a theme.
 
-**Hide from the recent discussions**- This prevents threads in the category from appearing on /discussions.
+**Hide from the recent discussions**- This prevents threads in the category from appearing on `/discussions`.
 
-**Archived**- This removes the category from the main index and prevents threads in the category from coming up in the site-based search. Archived Categories are still indexed by search engines and can prevent broken links. 
+**Archived**- This removes the category from the main index and prevents threads in the category from coming up in the site-based search. Archived Categories are still indexed by search engines and can prevent broken links.
 
 **Permissions**- Enabling “This category has custom permissions” will reveal some new options.
 
@@ -90,10 +90,10 @@ Under that will be a list of all of your roles. You can restrict who can view, p
 ## Deleting a Category
 You can delete a category from the dashboard, the option is in the right-hand menu of each category:
 
-![The delete option is the very  the bottom of the menu](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/delete_menu.png)
+![The delete option is the very  the bottom of the menu](https://images.v-cdn.net/docs/delete_menu.png)
 
 Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.
 
-![The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/delete_warning.png)
+![The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.](https://images.v-cdn.net/docs/delete_warning.png)
 
 **It is not possible to recover a deleted category.**  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.    
