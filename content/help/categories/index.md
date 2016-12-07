@@ -80,17 +80,21 @@ You can find the numerical categoryID in the URL when you are editing a category
 
 **Permissions**- Enabling “This category has custom permissions” will reveal some new options.
 
-![Custom permission options add another layer of control over a category.](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/other_options.png)
+![Custom permission options add another layer of control over a category. This image shows the list of options that appear.  ](https://raw.githubusercontent.com/vanilla/docs/New-categories-doc-/static/img/help/features/categories/other_options.png)
 
 If you have a plugin like Q&A enabled, you can use these options to choose where your users can create those threads. You can also disable polls and file uploads, if they don't suit the category.
 
 Under that will be a list of all of your roles. You can restrict who can view, post in, or perform moderation actions in particular categories.
 
+**Maximum Category Display Depth** - This setting is located in the Advanced section of the dashboard, `vanilla/settings/advanced`. The default setting is "No Limit", but you can choose to set a level at which nested categories will be placed in a comma-delimited list. The subcategories will appear as hyperlinks under their root category when viewing the forum index.
+
+![The comma-delimited list, displayed as "child categories" under the root. ](https://images.v-cdn.net/docs/category_depth.png)
+
 
 ## Deleting a Category
 You can delete a category from the dashboard, the option is in the right-hand menu of each category:
 
-![The delete option is the very  the bottom of the menu](https://images.v-cdn.net/docs/delete_menu.png)
+![The delete option is the very the bottom of the menu.](https://images.v-cdn.net/docs/delete_menu.png)
 
 Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.
 
