@@ -12,7 +12,7 @@ aliases:
 ---
 ## Advanced Analytics
 
-Available as on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community. 
+Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community. 
 
 ! [Customize Theme](/img/help/analytics/analytics-advanced.png)
 
