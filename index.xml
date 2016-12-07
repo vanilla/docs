@@ -273,6 +273,236 @@
     </item>
     
     <item>
+      <title>Advanced Analytics</title>
+      <link>//docs.vanillaforums.com/help/analytics/advanced-analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
+      <description>
+
+&lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
+
+&lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;visualization-of-analytics&#34;&gt;Visualization of Analytics&lt;/h2&gt;
+
+&lt;p&gt;The analytics data are presented using three different formats:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Metrics&lt;/strong&gt;&lt;br /&gt;
+Metrics a single number that quantify something for the selected time range.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Leaderboards&lt;/strong&gt;&lt;br /&gt;
+Leaderboards are tables showing the ranking of specific items for the selected time range. The &amp;ldquo;previous&amp;rdquo; rankings are calculated using the rankings of the previous time range.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Graphs&lt;/strong&gt;&lt;br /&gt;
+Graphs can come in multiple forms! They always use information fetched using the selected time range. Line, Area, and Bar graphs use the selected interval to group the fetched information. Pie charts represent multiple values for the whole selected time range.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;traffic&#34;&gt;Traffic&lt;/h2&gt;
+
+&lt;p&gt;Traffic analytics can be filtered by date and by category and in some cases by Role.  The analytics presented include:&lt;/p&gt;
+
+&lt;h3 id=&#34;metrics&#34;&gt;Metrics&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Page views&lt;/strong&gt;&lt;br /&gt;
+Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Active Users&lt;/strong&gt;&lt;br /&gt;
+Active users include all registered members and Do Not include unregistered vistors (guests)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visits&lt;/strong&gt;&lt;br /&gt;
+Visits include all user types and DO include non registered visitors (guests). Unique visits within the time period are counted.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;leaderboards&#34;&gt;Leaderboards&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Discussions with Most Views&lt;/strong&gt;&lt;br /&gt;
+Discussions ordered by the highest number of accumulated views.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;graphs&#34;&gt;Graphs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Active Users&lt;/strong&gt;&lt;br /&gt;
+Active users include all registered members and Do Not include unregistered vistors&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visits&lt;/strong&gt;&lt;br /&gt;
+Visits include all user types and DO include non registered visitors (guests). Unique visits within the time period are counted.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Unique Visits by Role Type&lt;/strong&gt;&lt;br /&gt;
+Number of vianalyticssits, from users, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Page Views&lt;/strong&gt;&lt;br /&gt;
+Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;New Users&lt;/strong&gt;&lt;br /&gt;
+Number of new users.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;posting&#34;&gt;Posting&lt;/h2&gt;
+
+&lt;p&gt;Posting analytics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;h3 id=&#34;metrics-1&#34;&gt;Metrics&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions&lt;/strong&gt;&lt;br /&gt;
+Number of discussions created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Comments&lt;/strong&gt;&lt;br /&gt;
+Number of comments created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors&lt;/strong&gt;&lt;br /&gt;
+Number of distinct members who created a post.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;leaderboards-1&#34;&gt;Leaderboards&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Posts&lt;/strong&gt;&lt;br /&gt;
+Members ordered by the highest number of post created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Discussions&lt;/strong&gt;&lt;br /&gt;
+Members ordered by the highest number of discussions created.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;graphs-1&#34;&gt;Graphs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions&lt;/strong&gt;&lt;br /&gt;
+Number of discussions created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Comments&lt;/strong&gt;&lt;br /&gt;
+Number of comments created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts&lt;/strong&gt;&lt;br /&gt;
+Number of posts created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts by Type&lt;/strong&gt;&lt;br /&gt;
+Number of created posts grouped by posts type (Dicsussions and Comment are the 2 post types).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts by Category&lt;/strong&gt;&lt;br /&gt;
+Number of created posts grouped by categories.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts by Role Type&lt;/strong&gt;&lt;br /&gt;
+Number of created posts grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors&lt;/strong&gt;&lt;br /&gt;
+Number of distinct members having created a post.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors by Category&lt;/strong&gt;&lt;br /&gt;
+Number of distinct members, having created a post, grouped by categories.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors by Role Type&lt;/strong&gt;&lt;br /&gt;
+Number of distinct members, having created a post, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
+
+&lt;p&gt;Q &amp;amp; A analytics can be filtered by time period and category. &lt;strong&gt;NB:&lt;/strong&gt; When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
+
+&lt;h3 id=&#34;metrics-2&#34;&gt;Metrics&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Asked&lt;/strong&gt;&lt;br /&gt;
+Number of questions asked.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Answered&lt;/strong&gt;&lt;br /&gt;
+Number of questions having at least one answer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Answers Accepted&lt;/strong&gt;&lt;br /&gt;
+Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Time to Answer&lt;/strong&gt;&lt;br /&gt;
+Average amount of time it took for questions to have their first answer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Time to Accept&lt;/strong&gt;&lt;br /&gt;
+Average amount of time it took for questions to have an accepted answer.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;leaderboards-2&#34;&gt;Leaderboards&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions with Most Views&lt;/strong&gt;&lt;br /&gt;
+Questions ordered by the highest number of accumulated views.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Answers&lt;/strong&gt;&lt;br /&gt;
+Members ordered by the highest number of answers created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Accepted Answers&lt;/strong&gt;&lt;br /&gt;
+Members ordered by the highest number of answers created and then accepted as the best answer.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;graphs-2&#34;&gt;Graphs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Asked&lt;/strong&gt;&lt;br /&gt;
+Number of questions created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Answered&lt;/strong&gt;&lt;br /&gt;
+Number of questions having at least one answer&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Accepted Answers&lt;/strong&gt;&lt;br /&gt;
+Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;engagement&#34;&gt;Engagement&lt;/h2&gt;
+
+&lt;p&gt;Engagement analytics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;h3 id=&#34;metrics-3&#34;&gt;Metrics&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts Positivity Rate&lt;/strong&gt;&lt;br /&gt;
+Number of posts having a positive reaction divided by the number of posts having a negative reaction.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Time to First Comment&lt;/strong&gt;&lt;br /&gt;
+Average amount of time it took for discussions to have their first comment.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;leaderboards-3&#34;&gt;Leaderboards&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Members by Accumulated Reputation&lt;/strong&gt;&lt;br /&gt;
+Members ordered by the highest sum of reputation point accumulated.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions with Most Comments&lt;/strong&gt;&lt;br /&gt;
+Discussions ordered by highest number of comments made in it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions with Most Positive Reactions&lt;/strong&gt;&lt;br /&gt;
+Discussions ordered by highest sum of positive reactions given to them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions with Most Negative Reactions&lt;/strong&gt;&lt;br /&gt;
+Discussions ordered by highest sum of negative reactions given to them. This leaderboard will not be displayed if negative reactions are not in use.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;graphs-3&#34;&gt;Graphs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Participation Rate&lt;/strong&gt;&lt;br /&gt;
+Number of distinct members that viewed a page on the forum vs the number of visits by distinct users.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Sentiment Ratio&lt;/strong&gt;&lt;br /&gt;
+Number of posts having a positive reaction vs the number of posts having a bad reaction.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visits per Active User&lt;/strong&gt;&lt;br /&gt;
+See Visits and Active users under the Traffic section for definitions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Posts per Active User&lt;/strong&gt;&lt;br /&gt;
+Average number of created posts grouped by active-users.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Comments per Discussion&lt;/strong&gt;&lt;br /&gt;
+Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Advanced Embedding</title>
       <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -392,6 +622,46 @@
    &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analytics</title>
+      <link>//docs.vanillaforums.com/help/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/analytics/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
+
+&lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
+
+&lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
+
+&lt;p&gt;The site overview will present you with the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Number of page views generated for the time period&lt;/li&gt;
+&lt;li&gt;Number of new users that have joined the community for the time period&lt;/li&gt;
+&lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
+&lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
+
+&lt;p&gt;Vanilla will also create a rolling table of data on the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Most Active Users&lt;/li&gt;
+&lt;li&gt;Most popular discussions discussions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This too can be modified by changing the time period, you select to view.&lt;/p&gt;
 </description>
     </item>
     
@@ -593,162 +863,6 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;Copy an existing class, like &lt;code&gt;class.smf.php&lt;/code&gt; and rename it.&lt;/li&gt;
 &lt;li&gt;Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CSS</title>
-      <link>//docs.vanillaforums.com/developer/theming/css/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
-      <description>
-
-&lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
-
-&lt;h3 id=&#34;theming-hosted-vanilla&#34;&gt;Theming Hosted Vanilla&lt;/h3&gt;
-
-&lt;p&gt;You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our &lt;a href=&#34;https://blog.vanillaforums.com/tag/fridaytips/&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;adding-css-to-your-theme&#34;&gt;Adding CSS to your theme&lt;/h3&gt;
-
-&lt;p&gt;There are two options for adding CSS to your theme in our open source version. You can completely override the existing base CSS file (style.css) or you can add an additional CSS file (custom.css) that gets added after the base CSS file.&lt;/p&gt;
-
-&lt;p&gt;Especially for beginners or new Vanilla users, adding an additional CSS file (custom.css) is is often preferable to completely overriding the base CSS for a number of reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Support: Any upgrades to the base CSS file will still be applied to your theme.&lt;/li&gt;
-&lt;li&gt;Completeness: There will still be styling applied to anything missed by your new CSS file.&lt;/li&gt;
-&lt;li&gt;Clarity: It&amp;rsquo;s easier for you to see what your specific customizations to Vanilla are, as they are self-contained in custom.css.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&#34;adding-additional-css&#34;&gt;Adding additional CSS&lt;/h4&gt;
-
-&lt;p&gt;To add additional CSS to the existing base Vanilla CSS file:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a new file called custom.css&lt;/li&gt;
-&lt;li&gt;Place it in the design folder in your theme folder (i.e., /themes/your_theme_name/design/custom.css)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This CSS file is added after the base CSS file and all other plugin and application-specific CSS files.&lt;/p&gt;
-
-&lt;h4 id=&#34;overriding-the-base-css&#34;&gt;Overriding the base CSS&lt;/h4&gt;
-
-&lt;p&gt;This option should be used only if you know what you&amp;rsquo;re doing. To completely override the existing base Vanilla CSS file:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a new file called style.css&lt;/li&gt;
-&lt;li&gt;Place it in the design folder in your theme folder (i.e., /themes/your_theme_name/design/style.css)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Starting from scratch can be a daunting task so you may want to copy the existing base CSS from /applications/dashboard/design/style.css into your new style.css file and then edit the existing CSS.&lt;/p&gt;
-
-&lt;p&gt;This CSS file is added before the plugin and application-specific CSS files. You may still want a custom.css file to override CSS rules in the plugin and application-specific CSS files.&lt;/p&gt;
-
-&lt;h3 id=&#34;tips-and-troubleshooting&#34;&gt;Tips and troubleshooting&lt;/h3&gt;
-
-&lt;p&gt;Here are a few gotchas that can occur when styling Vanilla.&lt;/p&gt;
-
-&lt;h4 id=&#34;layouts&#34;&gt;Layouts&lt;/h4&gt;
-
-&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. This layout can be specified in the dashboard&amp;rsquo;s Homepage section. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme.&lt;/p&gt;
-
-&lt;h4 id=&#34;plugins&#34;&gt;Plugins&lt;/h4&gt;
-
-&lt;p&gt;Plugins have the ability to add CSS files to your forum or HTML elements to views. As such, enabling a plugin can sometimes mess with your forum&amp;rsquo;s CSS and layout. To mitigate this, it&amp;rsquo;s best to enable all the plugins you anticipate using while you work on your theme.&lt;/p&gt;
-
-&lt;p&gt;If you do enable a plugin and encounter some undesirable CSS side effects, it&amp;rsquo;s good to know that your theme&amp;rsquo;s custom.css file is added after the plugins&amp;rsquo; CSS files, so overriding the CSS rules defined in the plugin&amp;rsquo;s CSS should be a breeze.&lt;/p&gt;
-
-&lt;h4 id=&#34;hiding-content&#34;&gt;Hiding content&lt;/h4&gt;
-
-&lt;p&gt;Using &lt;code&gt;display: none;&lt;/code&gt; to hide elements on a page is often a good choice for removing content that is not valuable to you or your community. However, when doing so, make sure to make the CSS rule as specific as possible.&lt;/p&gt;
-
-&lt;p&gt;For instance, let&amp;rsquo;s say you want to hide the discussions link in the side panel navigation on the Discussions page. A very bad way to accomplish this would be by using the CSS rule:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.Discussions {
-  display: none;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This rule will succeed in hiding the link, but also the body of the Discussions page, as the body element includes the Discussions CSS class. A better, safer rule would be:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.Section-DiscussionList .FilterMenu .Discussions {
-  display: none;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;.Section-DiscussionList&lt;/code&gt; targets the discussion page, &lt;code&gt;.FilterMenu&lt;/code&gt; targets a filtering menu, and &lt;code&gt;.Discussions&lt;/code&gt; targets a specific list item in the menu. This is much less likely to have undesired side effects.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Categories</title>
-      <link>//docs.vanillaforums.com/help/categories/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/categories/</guid>
-      <description>
-
-&lt;h2 id=&#34;using-categories&#34;&gt;Using Categories&lt;/h2&gt;
-
-&lt;p&gt;Categories are how Vanilla organizes discussions. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.&lt;/p&gt;
-
-&lt;p&gt;You can find Categories under the “Forum&amp;rdquo; menu in the Dashboard,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png&#34; alt=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Categories.png&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/laurasothertest.vanillaforums.com/editor/2o/34let6oiypkp.png&#34; alt=&#34;&amp;quot;Add Category&amp;quot; and &amp;quot;Don&#39;t use Categories&amp;quot; buttons in the Manage Categories section of the dashboard&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Disabling categories will streamline your organization, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories weren&amp;rsquo;t in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
-
-&lt;h2 id=&#34;adding-categories&#34;&gt;Adding Categories&lt;/h2&gt;
-
-&lt;p&gt;Clicking the &amp;ldquo;Add Category&amp;rdquo; button will take you to the page pictured below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.vanillaforums.com/wp-content/uploads/2013/11/Add-Category.jpg&#34; alt=&#34;/vanilla/settings/addcategory&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;By default, the category url will reflect the category’s name. Clicking the edit button next to the url will allow you to change the slug. Below it, you can add a description for the category, which will display on your homepage if your current theme allows it.&lt;/p&gt;
-
-&lt;p&gt;You can add a unique CSS class, which you can use in your theme to control its appearance. The specified text will be added as a class for the category&amp;rsquo;s HTML wrapper.&lt;/p&gt;
-
-&lt;p&gt;The &amp;ldquo;Display As&amp;rdquo; drop down changes the behavior of a category:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt; Uses the category as a plain text header. The category will be not be selectable in the editor, forcing users to post in its sub-categories.
-&lt;strong&gt;Categories:&lt;/strong&gt; Uses the category as a container to display its sub-categories upon clicking through.
-&lt;strong&gt;Discussions:&lt;/strong&gt; The standard view that displays threads&lt;/p&gt;
-
-&lt;h2 id=&#34;category-page-layout&#34;&gt;Category Page Layout&lt;/h2&gt;
-
-&lt;p&gt;&amp;ldquo;Place nested categories in a comma-delimited list&amp;rdquo; is a way of making sub-categories more compact on the Categories page.
-&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/it/ntxs2xgycl7z.png&#34; alt=&#34;&#34; /&gt;
-We recommend keeping the default (2 levels deep) in most cases.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Do not display the categories in the side panel&amp;rdquo; hides the default category list that shows up in the panel as a shortcut. Select this option if you have many categories (more than a dozen) that would make the list unwieldy.&lt;/p&gt;
-
-&lt;h2 id=&#34;organizing-categories&#34;&gt;Organizing Categories&lt;/h2&gt;
-
-&lt;p&gt;Drag and drop your categories to organize them. Slide them to the right slightly to nest them under the category directly above them.&lt;/p&gt;
-
-&lt;p&gt;The option &amp;ldquo;Display root categories as headings&amp;rdquo; turns the top-level categories into plain text &amp;ldquo;headers&amp;rdquo;. Headers are sections that cannot be posted in directly, so be sure to nest a category underneath your root if you select this option.&lt;/p&gt;
-
-&lt;h2 id=&#34;choosing-a-categories-view&#34;&gt;Choosing a Categories view&lt;/h2&gt;
-
-&lt;p&gt;In the &amp;ldquo;Homepage&amp;rdquo; settings page in your Dashboard under &amp;ldquo;Category Layout&amp;rdquo; there are options for how to display the Categories page for your users. The &amp;ldquo;Mixed Layout&amp;rdquo; option shows up to five discussions with the most recent comment under each category.&lt;/p&gt;
-
-&lt;h2 id=&#34;deleting-a-category&#34;&gt;Deleting a Category&lt;/h2&gt;
-
-&lt;p&gt;To delete a category, click the &amp;ldquo;Delete&amp;rdquo; button beside it in the Dashboard. You will be prompted to select a replacement category from a drop down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.&lt;/p&gt;
-
-&lt;h2 id=&#34;unfollow-a-category&#34;&gt;Unfollow a Category&lt;/h2&gt;
-
-&lt;p&gt;On the main categories page, each section has a cogwheel menu with the option to &amp;ldquo;Hide&amp;rdquo; the category from view. By default, you will only see your &amp;ldquo;Followed Categories&amp;rdquo; when viewing forum index, but if you&amp;rsquo;d like to see hidden categories, simple toggle your view to &amp;ldquo;All Categories&amp;rdquo; with the option at the bottom of the sidebar.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://cd8ba0b44a15c10065fd-24461f391e20b7336331d5789078af53.r23.cf1.rackcdn.com/blorf.vanillacommunity.com/editor/4b/edbr9ey86ysk.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;When you are viewing all categories, you can unhide sections with the same cogwheel menu.&lt;/p&gt;
 </description>
     </item>
     

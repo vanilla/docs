@@ -30,7 +30,15 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/analytics/advanced-analytics/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/embedding/advanced/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/analytics/</loc>
   </url>
   
   <url>
@@ -451,10 +459,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/cloud/staging/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/addons/statistics/</loc>
   </url>
   
   <url>
