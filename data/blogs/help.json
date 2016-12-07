@@ -1,0 +1,34 @@
+{
+    "articles": [
+        {
+            "title": "5 Tips for Launching a Community",
+            "url": "https://blog.vanillaforums.com/community/5-tips-launch-forum-scratch/",
+            "description": "Where do you start when building a community from scratch? We share some practical steps to follow when launching a brand new community."
+        },
+        {
+            "title": "Mistakes To Avoid When Promoting Your Community",
+            "url": "https://blog.vanillaforums.com/community/five-mistakes-to-avoid-when-promoting-your-online-community/",
+            "description": "Your social media and marketing channels can work to help your community succeed, but you need to plan properly to use them effectively."
+        },
+        {
+            "title": "Five Tips to Help Your Community Succeed",
+            "url": "https://blog.vanillaforums.com/help/the-5-tips-to-help-your-community-succeed/",
+            "description": "A community is not something you can just 'build' and hope people will come. It takes work and planning."
+        },
+        {
+            "title": "Moderating your Vanilla Community",
+            "url": "https://blog.vanillaforums.com/help/moderating-your-vanilla-community/",
+            "description": " Allowing the community to self-moderate reduces the workload on moderators and involves the community in deciding what is and is not acceptable behaviour."
+        },
+        {
+            "title": "Integrating Social Media in your Community",
+            "url": "https://blog.vanillaforums.com/help/social-media-integrations-vanilla-forums/",
+            "description": "Use social integrations to make it easy for members to sign up and share content."
+        },
+        {
+            "title": "Theme Tips: If Statements and Variables",
+            "url": "https://blog.vanillaforums.com/help/friday-theme-tip-statements-variables/",
+            "description": "A Vanilla Forums theme is highly flexible. One way you can take advantage of this can be by using if statements and variables."
+        }
+    ]
+}

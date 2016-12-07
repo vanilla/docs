@@ -86,3 +86,4 @@ No extension  | XHTML response, suitable for user interface
 ## Response Codes
 
 Generally, if an API request is successful it will return the standard response code of  `200`. You can check for this response code. If you get an error code (`4xx`-`5xx`) then you can check the `Exception` property of the response some error text that will help you to determine what went wrong.
+
