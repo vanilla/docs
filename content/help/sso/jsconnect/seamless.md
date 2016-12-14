@@ -74,16 +74,15 @@ For site-wide SSO you'll need to make a page on <strong>your site</strong> that 
 <h3> <strong>Response</strong></h3>
 There are four valid responses you can return depending on the request and whether or not the user is signed in.
 <h4>No User Response: The user is not signed in to your site .</h4>
-callback({"name": "", "photourl": ""});
+<pre>callback({"name": "", "photourl": ""});</pre>
+<p><strong>Notes</strong>: Even if there is no user signed in you still must return a valid jsonp response. So in this case we just return an empty user.</p>
 
-<strong>Notes</strong>: Even if there is no user signed in you still must return a valid jsonp response. So in this case we just return an empty user.
-
-<strong>User Stub Response: The user is signed in to your site, but the request hasn't been signed.</strong>
+<h4>User Stub Response: The user is signed in to your site, but the request hasn't been signed.</h4>
 <pre>callback({
     "name": "John Doe",
     "photourl": "http://nosite.com/johndoe.png"
 });</pre>
-<strong>Notes</strong>: Vanilla sends an un-signed request to your page just to provide a picture and photo to the user as a notice that they are signed on to your site.
+<p><strong>Notes</strong>: Vanilla sends an un-signed request to your page just to provide a picture and photo to the user as a notice that they are signed on to your site.</p>
 <h4>User Response: The user is signed in to your site, and the request is signed (or you are testing).</h4>
 <pre>callback({
     "uniqueid": "1234", // REQUIRED. The ID that uniquely identifies the user on your site.
@@ -94,7 +93,7 @@ callback({"name": "", "photourl": ""});
     "client_id": "123456789", // REQUIRED. Your client ID.
     "signature": "cdb398fdab244999d8ba301eb6334298" // REQUIRED. The signature of this response.
 });</pre>
-<strong>Notes</strong>: This response is the heart of jsConnect. It tells Vanilla about the user signed in to your system so that Vanilla can sign the user into Vanilla too. There are a few important points about this response.
+<p><strong>Notes</strong>: This response is the heart of jsConnect. It tells Vanilla about the user signed in to your system so that Vanilla can sign the user into Vanilla too. There are a few important points about this response.</p>
 <ul>
 	<li><strong>uniqueid, name, client_id, </strong>and <strong>signature</strong> are required. Make sure you provide us with these values in your response and make sure they have values.</li>
 	<li>The <strong>uniqueid</strong> field must never change for a given user. Your site usually has some sort of integer or guid that uniquely identifies a user. Use this.</li>
@@ -106,7 +105,7 @@ callback({"name": "", "photourl": ""});
     "error": "invalid_client", // REQUIRED. A string identifier for the error.
     "message": "Client ID does not match.", // REQUIRED. A user-readable error message.
 });</pre>
-<strong>Notes</strong>: You usually return an error response if a request has invalid security information. However, you can also return an error response if your application encounters an unknown error on its own.
+<p><strong>Notes</strong>: You usually return an error response if a request has invalid security information. However, you can also return an error response if your application encounters an unknown error on its own.</p>
 
 </div>
 <h3>Other Notes on your Response</h3>
