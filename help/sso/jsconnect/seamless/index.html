@@ -365,16 +365,15 @@ For site-wide SSO you&rsquo;ll need to make a page on <strong>your site</strong>
 <h3> <strong>Response</strong></h3>
 There are four valid responses you can return depending on the request and whether or not the user is signed in.
 <h4>No User Response: The user is not signed in to your site .</h4>
-callback({&ldquo;name&rdquo;: &ldquo;&rdquo;, &ldquo;photourl&rdquo;: &ldquo;&rdquo;});</p>
+<pre>callback({&ldquo;name&rdquo;: &ldquo;&rdquo;, &ldquo;photourl&rdquo;: &ldquo;&rdquo;});</pre>
+<p><strong>Notes</strong>: Even if there is no user signed in you still must return a valid jsonp response. So in this case we just return an empty user.</p></p>
 
-<p><strong>Notes</strong>: Even if there is no user signed in you still must return a valid jsonp response. So in this case we just return an empty user.</p>
-
-<p><strong>User Stub Response: The user is signed in to your site, but the request hasn&rsquo;t been signed.</strong>
+<p><h4>User Stub Response: The user is signed in to your site, but the request hasn&rsquo;t been signed.</h4>
 <pre>callback({
     &ldquo;name&rdquo;: &ldquo;John Doe&rdquo;,
     &ldquo;photourl&rdquo;: &ldquo;<a href="http://nosite.com/johndoe.png&quot;">http://nosite.com/johndoe.png&quot;</a>
 });</pre>
-<strong>Notes</strong>: Vanilla sends an un-signed request to your page just to provide a picture and photo to the user as a notice that they are signed on to your site.
+<p><strong>Notes</strong>: Vanilla sends an un-signed request to your page just to provide a picture and photo to the user as a notice that they are signed on to your site.</p>
 <h4>User Response: The user is signed in to your site, and the request is signed (or you are testing).</h4>
 <pre>callback({
     &ldquo;uniqueid&rdquo;: &ldquo;1234&rdquo;, // REQUIRED. The ID that uniquely identifies the user on your site.
@@ -385,7 +384,7 @@ callback({&ldquo;name&rdquo;: &ldquo;&rdquo;, &ldquo;photourl&rdquo;: &ldquo;&rd
     &ldquo;client_id&rdquo;: &ldquo;123456789&rdquo;, // REQUIRED. Your client ID.
     &ldquo;signature&rdquo;: &ldquo;cdb398fdab244999d8ba301eb6334298&rdquo; // REQUIRED. The signature of this response.
 });</pre>
-<strong>Notes</strong>: This response is the heart of jsConnect. It tells Vanilla about the user signed in to your system so that Vanilla can sign the user into Vanilla too. There are a few important points about this response.
+<p><strong>Notes</strong>: This response is the heart of jsConnect. It tells Vanilla about the user signed in to your system so that Vanilla can sign the user into Vanilla too. There are a few important points about this response.</p>
 <ul>
     <li><strong>uniqueid, name, client_id, </strong>and <strong>signature</strong> are required. Make sure you provide us with these values in your response and make sure they have values.</li>
     <li>The <strong>uniqueid</strong> field must never change for a given user. Your site usually has some sort of integer or guid that uniquely identifies a user. Use this.</li>
@@ -397,7 +396,7 @@ callback({&ldquo;name&rdquo;: &ldquo;&rdquo;, &ldquo;photourl&rdquo;: &ldquo;&rd
     &ldquo;error&rdquo;: &ldquo;invalid_client&rdquo;, // REQUIRED. A string identifier for the error.
     &ldquo;message&rdquo;: &ldquo;Client ID does not match.&rdquo;, // REQUIRED. A user-readable error message.
 });</pre>
-<strong>Notes</strong>: You usually return an error response if a request has invalid security information. However, you can also return an error response if your application encounters an unknown error on its own.</p>
+<p><strong>Notes</strong>: You usually return an error response if a request has invalid security information. However, you can also return an error response if your application encounters an unknown error on its own.</p></p>
 
 <p></div>
 <h3>Other Notes on your Response</h3>

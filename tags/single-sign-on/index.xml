@@ -290,16 +290,15 @@ For site-wide SSO you&amp;rsquo;ll need to make a page on &lt;strong&gt;your sit
 &lt;h3&gt; &lt;strong&gt;Response&lt;/strong&gt;&lt;/h3&gt;
 There are four valid responses you can return depending on the request and whether or not the user is signed in.
 &lt;h4&gt;No User Response: The user is not signed in to your site .&lt;/h4&gt;
-callback({&amp;ldquo;name&amp;rdquo;: &amp;ldquo;&amp;rdquo;, &amp;ldquo;photourl&amp;rdquo;: &amp;ldquo;&amp;rdquo;});&lt;/p&gt;
+&lt;pre&gt;callback({&amp;ldquo;name&amp;rdquo;: &amp;ldquo;&amp;rdquo;, &amp;ldquo;photourl&amp;rdquo;: &amp;ldquo;&amp;rdquo;});&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;: Even if there is no user signed in you still must return a valid jsonp response. So in this case we just return an empty user.&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;: Even if there is no user signed in you still must return a valid jsonp response. So in this case we just return an empty user.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;User Stub Response: The user is signed in to your site, but the request hasn&amp;rsquo;t been signed.&lt;/strong&gt;
+&lt;p&gt;&lt;h4&gt;User Stub Response: The user is signed in to your site, but the request hasn&amp;rsquo;t been signed.&lt;/h4&gt;
 &lt;pre&gt;callback({
     &amp;ldquo;name&amp;rdquo;: &amp;ldquo;John Doe&amp;rdquo;,
     &amp;ldquo;photourl&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;http://nosite.com/johndoe.png&amp;quot;&#34;&gt;http://nosite.com/johndoe.png&amp;quot;&lt;/a&gt;
 });&lt;/pre&gt;
-&lt;strong&gt;Notes&lt;/strong&gt;: Vanilla sends an un-signed request to your page just to provide a picture and photo to the user as a notice that they are signed on to your site.
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;: Vanilla sends an un-signed request to your page just to provide a picture and photo to the user as a notice that they are signed on to your site.&lt;/p&gt;
 &lt;h4&gt;User Response: The user is signed in to your site, and the request is signed (or you are testing).&lt;/h4&gt;
 &lt;pre&gt;callback({
     &amp;ldquo;uniqueid&amp;rdquo;: &amp;ldquo;1234&amp;rdquo;, // REQUIRED. The ID that uniquely identifies the user on your site.
@@ -310,7 +309,7 @@ callback({&amp;ldquo;name&amp;rdquo;: &amp;ldquo;&amp;rdquo;, &amp;ldquo;photour
     &amp;ldquo;client_id&amp;rdquo;: &amp;ldquo;123456789&amp;rdquo;, // REQUIRED. Your client ID.
     &amp;ldquo;signature&amp;rdquo;: &amp;ldquo;cdb398fdab244999d8ba301eb6334298&amp;rdquo; // REQUIRED. The signature of this response.
 });&lt;/pre&gt;
-&lt;strong&gt;Notes&lt;/strong&gt;: This response is the heart of jsConnect. It tells Vanilla about the user signed in to your system so that Vanilla can sign the user into Vanilla too. There are a few important points about this response.
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;: This response is the heart of jsConnect. It tells Vanilla about the user signed in to your system so that Vanilla can sign the user into Vanilla too. There are a few important points about this response.&lt;/p&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;strong&gt;uniqueid, name, client_id, &lt;/strong&gt;and &lt;strong&gt;signature&lt;/strong&gt; are required. Make sure you provide us with these values in your response and make sure they have values.&lt;/li&gt;
     &lt;li&gt;The &lt;strong&gt;uniqueid&lt;/strong&gt; field must never change for a given user. Your site usually has some sort of integer or guid that uniquely identifies a user. Use this.&lt;/li&gt;
@@ -322,7 +321,7 @@ callback({&amp;ldquo;name&amp;rdquo;: &amp;ldquo;&amp;rdquo;, &amp;ldquo;photour
     &amp;ldquo;error&amp;rdquo;: &amp;ldquo;invalid_client&amp;rdquo;, // REQUIRED. A string identifier for the error.
     &amp;ldquo;message&amp;rdquo;: &amp;ldquo;Client ID does not match.&amp;rdquo;, // REQUIRED. A user-readable error message.
 });&lt;/pre&gt;
-&lt;strong&gt;Notes&lt;/strong&gt;: You usually return an error response if a request has invalid security information. However, you can also return an error response if your application encounters an unknown error on its own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;: You usually return an error response if a request has invalid security information. However, you can also return an error response if your application encounters an unknown error on its own.&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;
 &lt;h3&gt;Other Notes on your Response&lt;/h3&gt;
