@@ -5,7 +5,7 @@ category: "api"
 menu:
   api:
     identifier: analytics
-    weight: 100
+    weight: 600
 ---
 
 *This is preliminary documentation.*
