@@ -5,7 +5,7 @@ category: "api"
 menu:
   api:
     identifier: moderation
-    weight: 600
+    weight: 500
 draft: true
 ---
 

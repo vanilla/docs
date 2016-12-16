@@ -5,7 +5,7 @@ category: "api"
 menu:
   api:
     identifier: categories
-    weight: 100
+    weight: 200
 ---
 
 ## /categories/add
