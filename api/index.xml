@@ -8,6 +8,424 @@
     <atom:link href="//docs.vanillaforums.com/api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Endpoint: analytics</title>
+      <link>//docs.vanillaforums.com/api/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/api/analytics/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;This is preliminary documentation.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;analytics-leaderboard&#34;&gt;/analytics/leaderboard&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/analytics/leaderboard.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Retrieve data for a site leaderboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Board&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#leaderboards&#34;&gt;Type of leaderboard&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Start&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Start of the time range (ISO 8601).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;End&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;End of the time range (ISO 8601).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Limit&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Maximum number of rows to return.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Default: 10.
+&lt;code&gt;Previous&lt;/code&gt;            |&lt;code&gt;bool&lt;/code&gt;      | Whether or not to include the previous timeframe. Including the previous time&lt;/p&gt;
+
+&lt;h3 id=&#34;leaderboards&#34;&gt;Leaderboards&lt;/h3&gt;
+
+&lt;p&gt;Leaderboards are specified by the &lt;code&gt;Board&lt;/code&gt; parameter.  The following are valid values for that parameter:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;top-posters&lt;/strong&gt;: Users with most posts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-discussion-starters&lt;/strong&gt;: Users with most discussions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-question-answerers&lt;/strong&gt;: Users with most answers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-best-answerers&lt;/strong&gt;: Users with most accepted answers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-member-by-total-reputation&lt;/strong&gt;: Users by total reputation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-member-by-accumulated-reputation&lt;/strong&gt;: Users by accumulated reputation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-viewed-discussions&lt;/strong&gt;: Discussions with most views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-commented-discussions&lt;/strong&gt;: Discussions with most comments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-positive-discussions&lt;/strong&gt;: Discussions with most positive reactions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-negative-discussions&lt;/strong&gt;: Discussions with most negative reactions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-viewed-qna-discussions&lt;/strong&gt;: Questions with most views.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
+
+&lt;p&gt;The following is output from an example request for a user leaderboard.  It assumes a &lt;code&gt;Limit&lt;/code&gt; of three.  The record property contains user row data, because this was a user leaderboard.  If it had been a discussion leaderboard request, the property would contain details about a discussion.&lt;/p&gt;
+
+&lt;p&gt;The record property has been pruned for this example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;result&amp;quot;: [
+    {
+      &amp;quot;record&amp;quot;: {
+        &amp;quot;userID&amp;quot;: 344,
+        &amp;quot;name&amp;quot;: &amp;quot;userOne&amp;quot;,
+        &amp;quot;url&amp;quot;: &amp;quot;https://example.com/profile/userOne&amp;quot;
+        ...
+      },
+      &amp;quot;value&amp;quot;: 737,
+      &amp;quot;position&amp;quot;: 1,
+      &amp;quot;previous&amp;quot;: 9
+    },
+    {
+      &amp;quot;record&amp;quot;: {
+        &amp;quot;userID&amp;quot;: 127,
+        &amp;quot;name&amp;quot;: &amp;quot;userTwo&amp;quot;,
+        &amp;quot;url&amp;quot;: &amp;quot;https://example.com/profile/userTwo&amp;quot;
+        ...
+      },
+      &amp;quot;value&amp;quot;: 679,
+      &amp;quot;position&amp;quot;: 2,
+      &amp;quot;previous&amp;quot;: 5
+    },
+    {
+      &amp;quot;record&amp;quot;: {
+        &amp;quot;userID&amp;quot;: 449,
+        &amp;quot;name&amp;quot;: &amp;quot;userThree&amp;quot;,
+        &amp;quot;link&amp;quot;: &amp;quot;https://example.com/profile/userThree&amp;quot;
+        ...
+      },
+      &amp;quot;value&amp;quot;: 460,
+      &amp;quot;position&amp;quot;: 3,
+      &amp;quot;previous&amp;quot;: 1
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;analytics-query&#34;&gt;/analytics/query&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;POST /api/v1/analytics/query.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perform a query against collected analytics data.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
+
+&lt;p&gt;The body of the request must be a JSON-encoded object.  Each property of the object should be a supported parameter.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;AnalysisType&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#analysis-types&#34;&gt;Type of analysis to perform&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;EventCollection&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#event-collections&#34;&gt;Collection of events&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Timeframe&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#timeframe&#34;&gt;Range of time to target&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TargetProperty&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;An event property to perform the analysis on&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Filters&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#filters&#34;&gt;Event property filters&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Interval&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#interval&#34;&gt;Result interval&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;analysis-types&#34;&gt;Analysis Types&lt;/h3&gt;
+
+&lt;p&gt;Analytics queries require an analysis type.  This type will dictate how the data is compiled in the response.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;count&lt;/strong&gt;: Count the total records.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sum&lt;/strong&gt;: Add up all values for a property.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;maximum&lt;/strong&gt;: Get the maximum value for a property.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;count_unique&lt;/strong&gt;: Count the total number of unique property values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;median&lt;/strong&gt;: Calculate the median value for a property.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most analysis types are performed on a specific event property, so they require the &lt;code&gt;TargetProperty&lt;/code&gt; parameter to be specified. &lt;strong&gt;count&lt;/strong&gt; does not require a &lt;code&gt;target_property&lt;/code&gt; parameter.&lt;/p&gt;
+
+&lt;h3 id=&#34;event-collections&#34;&gt;Event Collections&lt;/h3&gt;
+
+&lt;p&gt;All events captured by Vanilla are grouped into one of the following categories.  The collection is specified by passing the &lt;code&gt;EventCollection&lt;/code&gt; parameter to the analytics query.&lt;/p&gt;
+
+&lt;h4 id=&#34;page&#34;&gt;page&lt;/h4&gt;
+
+&lt;p&gt;Page views are captured in the &lt;code&gt;page&lt;/code&gt; collection.  Any time a guest or registered user loads up a page, it is captured and filed into this collection.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the page collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discussion_view&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;page_view&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Commonly used properties for the page collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;user.userID&lt;/strong&gt;: The ID of the user, if available.  If there is no current user, either because they aren&amp;rsquo;t signed in or are a guest, this value will be &lt;code&gt;0&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;point&#34;&gt;point&lt;/h4&gt;
+
+&lt;p&gt;Events involving actions affecting a user&amp;rsquo;s points are stored in the &lt;code&gt;point&lt;/code&gt; collection.  Both giving and removing points are recorded.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the point collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;user_point_add&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;user_point_remove&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Commonly used properties for the point collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;point.given.points&lt;/strong&gt;: The total number of points granted or revoked in this event.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;post&#34;&gt;post&lt;/h4&gt;
+
+&lt;p&gt;When a discussion or comment is made, it is tracked in the &lt;code&gt;post&lt;/code&gt; collection.  All posts are contained in this collection: comments, discussions, questions, ideas.  There are no restrictions on the type of post.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the post collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discussion_add&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;comment_add&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Commonly used properties for the post collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discussionType&lt;/strong&gt;: The type of discussion related to this post.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;commentMetric.time&lt;/strong&gt;: If the event was triggered by a comment, this property will be populated with the time, in seconds, between when the discussion and comment were added.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;commentMetric.firstComment&lt;/strong&gt;: Will be true if this event was triggered by a comment and it was the first comment on the discussion.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;post-modify&#34;&gt;post_modify&lt;/h4&gt;
+
+&lt;p&gt;If a post is modified, the action is captured in the &lt;code&gt;post_modify&lt;/code&gt; collection.  Similar to &amp;ldquo;post&amp;rdquo;, the type does not matter.  Two primary types of modification events are captured: edits and deletes.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the post_modify collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discussion_edit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;discussion_delete&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;comment_add&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;comment_delete&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;qna&#34;&gt;qna&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;qna&lt;/code&gt; collection contains events specifically related to the Q&amp;amp;A plug-in, such as answering a question.  Adding, editing or deleting a question would be recorded in the &amp;ldquo;post&amp;rdquo; collection.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the qna collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;answer_accepted&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;reaction&#34;&gt;reaction&lt;/h4&gt;
+
+&lt;p&gt;When a user submits a reaction to a post, it is captured in &lt;code&gt;reaction&lt;/code&gt;.  This includes adding and removing reactions.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the reaction collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;reaction_add&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reaction_delete&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Commonly used properties for the reaction collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;reaction.reactionClass&lt;/strong&gt;: The class of the reaction.  This is typically &amp;ldquo;Positive&amp;rdquo; or &amp;ldquo;Negative&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reaction.recordType&lt;/strong&gt;: The type of post this reaction was performed on.  This is typically &amp;ldquo;discussion&amp;rdquo; or &amp;ldquo;comment&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;registration&#34;&gt;registration&lt;/h4&gt;
+
+&lt;p&gt;Successful sign-ups on the forum are recorded in the &lt;code&gt;registration&lt;/code&gt; collection.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the registration collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;registration_success&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;session&#34;&gt;session&lt;/h4&gt;
+
+&lt;p&gt;Session events are captured in the &lt;code&gt;session&lt;/code&gt; collection.  These events typically include when a user initiates sign-in, starting their session, and when they sign-out, ending their session.&lt;/p&gt;
+
+&lt;p&gt;Valid types for the session collection are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;session_start&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;session_end&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;filters&#34;&gt;Filters&lt;/h3&gt;
+
+&lt;p&gt;Data queried from analytics can be filtered by collection and event properties.  The most common type of filtering would be based on the &lt;code&gt;type&lt;/code&gt; property.  For example, if you wanted to see new discussions, you&amp;rsquo;d query the &lt;code&gt;post&lt;/code&gt; collection and set a filter on the &lt;code&gt;type&lt;/code&gt; property being equal to &amp;ldquo;discussion_add&amp;rdquo;.  The available types for the various collections are documented in their individual sections.  In addition to &lt;code&gt;type&lt;/code&gt;, some additional commonly-used filtering properties are included in those sections, if available.&lt;/p&gt;
+
+&lt;p&gt;Each element in the &lt;code&gt;Filters&lt;/code&gt; array should be an object with two properties: &lt;code&gt;propertyName&lt;/code&gt; and &lt;code&gt;propertyValue&lt;/code&gt;.  An optional property, &lt;code&gt;operator&lt;/code&gt;, can be specified.  There are several comparison operators to choose from:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;eq&lt;/strong&gt;: Equal&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ne&lt;/strong&gt;: Not equal&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gt&lt;/strong&gt;: Greater than&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gte&lt;/strong&gt;: Greater than or equal to&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;lt&lt;/strong&gt;: Less than&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;lte&lt;/strong&gt;: Less than or equal to&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;in&lt;/strong&gt;: Verify a property&amp;rsquo;s value is in an array&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If &lt;code&gt;operator&lt;/code&gt; is not specified, it is assumed to be &amp;ldquo;eq&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;For example, when querying the post collection, you could apply a set of filters that only queried the first answers to a question with the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;Filters&amp;quot;: [
+  {
+    &amp;quot;propertyName&amp;quot;: &amp;quot;type&amp;quot;,
+    &amp;quot;propertyValue&amp;quot;: &amp;quot;comment_add&amp;quot;
+  },
+  {
+    &amp;quot;propertyName&amp;quot;: &amp;quot;discussionType&amp;quot;,
+    &amp;quot;propertyValue&amp;quot;: &amp;quot;Question&amp;quot;
+  },
+  {
+    &amp;quot;propertyName&amp;quot;: &amp;quot;commentMetric.firstComment&amp;quot;,
+    &amp;quot;propertyValue&amp;quot;: &amp;quot;1&amp;quot;
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;timeframe&#34;&gt;Timeframe&lt;/h3&gt;
+
+&lt;p&gt;Timeframes should be specified as an object with two properties: &lt;code&gt;start&lt;/code&gt; and &lt;code&gt;end&lt;/code&gt;.  These values should be ISO 8601 datetime strings (e.g. 2016-12-01T00:00:00.000Z).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;Timeframe&amp;quot;: {
+  &amp;quot;start&amp;quot;: &amp;quot;2016-12-01T00:00:00.000Z&amp;quot;,
+  &amp;quot;end&amp;quot;: &amp;quot;2016-12-31T00:00:00.000Z&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;interval&#34;&gt;Interval&lt;/h3&gt;
+
+&lt;p&gt;An optional &lt;code&gt;interval&lt;/code&gt; parameter may be specified in an analytics query.  If a valid &lt;code&gt;interval&lt;/code&gt; is specified, the results are broken down into the specified increments over the timeframe.&lt;/p&gt;
+
+&lt;p&gt;The valid values for interval are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;hourly&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;daily&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;weekly&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;monthly&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;output-1&#34;&gt;Output&lt;/h3&gt;
+
+&lt;p&gt;Depending on whether or not an &lt;code&gt;interval&lt;/code&gt; parameter was specified, the result may be in two different formats.&lt;/p&gt;
+
+&lt;p&gt;Without an &lt;code&gt;interval&lt;/code&gt; parameter, a single value is returned: &lt;code&gt;result&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{&amp;quot;result&amp;quot;: 1370}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If an &lt;code&gt;interval&lt;/code&gt; value was provided, the &lt;code&gt;result&lt;/code&gt; value will be an array.  Each interval will be returned as an object in that array.  The interval&amp;rsquo;s subset of the overall timeframe will be specified as the &lt;code&gt;timeframe&lt;/code&gt; property.  A &lt;code&gt;value&lt;/code&gt; property will indicate the query result for the specified subset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;result&amp;quot;: [
+    {
+      &amp;quot;value&amp;quot;: 458,
+      &amp;quot;timeframe&amp;quot;: {
+        &amp;quot;start&amp;quot;: &amp;quot;2016-12-01T00:00:00.000Z&amp;quot;,
+        &amp;quot;end&amp;quot;: &amp;quot;2016-12-02T00:00:00.000Z&amp;quot;
+      }
+    },
+    {
+      &amp;quot;value&amp;quot;: 431,
+      &amp;quot;timeframe&amp;quot;: {
+        &amp;quot;start&amp;quot;: &amp;quot;2016-12-02T00:00:00.000Z&amp;quot;,
+        &amp;quot;end&amp;quot;: &amp;quot;2016-12-03T00:00:00.000Z&amp;quot;
+      }
+    },
+    {
+      &amp;quot;value&amp;quot;: 481,
+      &amp;quot;timeframe&amp;quot;: {
+        &amp;quot;start&amp;quot;: &amp;quot;2016-12-03T00:00:00.000Z&amp;quot;,
+        &amp;quot;end&amp;quot;: &amp;quot;2016-12-04T00:00:00.000Z&amp;quot;
+      }
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Endpoint: categories</title>
       <link>//docs.vanillaforums.com/api/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
