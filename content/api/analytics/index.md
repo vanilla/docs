@@ -28,8 +28,7 @@ Parameter             | Type       | Description
 __`Board`__           | `string`   | [Type of leaderboard](#leaderboards).
 `Start`               | `string`   | Start of the time range (ISO 8601).
 `End`                 | `string`   | End of the time range (ISO 8601).
-`Limit`               | `integer`  | Maximum number of rows to return.
-Default: 10.
+`Limit`               | `integer`  | Maximum number of rows to return. Default: 10.
 `Previous`            |`bool`      | Whether or not to include the previous timeframe. Including the previous time 
 
 ### Leaderboards
