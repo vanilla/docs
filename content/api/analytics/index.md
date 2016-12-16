@@ -207,7 +207,7 @@ Valid types for the reaction collection are:
 Commonly used properties for the reaction collection are:
 
  * **reaction.reactionClass**: The class of the reaction.  This is typically "Positive" or "Negative".
- * **reaction.reactionType**: The specific type of the reaction. (Ex. Like, VoteUp, Agree, etc)
+ * **reaction.reactionType**: The specific type of the reaction. (Ex. Like, Up, Down, Agree, etc)
  * **reaction.recordType**: The type of post this reaction was performed on.  This is typically "discussion" or "comment".
 
 #### registration
