@@ -312,7 +312,7 @@ Host: https://yoursite.vanillaforums.com
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;reaction.reactionClass&lt;/strong&gt;: The class of the reaction.  This is typically &amp;ldquo;Positive&amp;rdquo; or &amp;ldquo;Negative&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;reaction.reactionType&lt;/strong&gt;: The specific type of the reaction. (Ex. Like, VoteUp, Agree, etc)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reaction.reactionType&lt;/strong&gt;: The specific type of the reaction. (Ex. Like, Up, Down, Agree, etc)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;reaction.recordType&lt;/strong&gt;: The type of post this reaction was performed on.  This is typically &amp;ldquo;discussion&amp;rdquo; or &amp;ldquo;comment&amp;rdquo;.&lt;/li&gt;
 &lt;/ul&gt;
 
