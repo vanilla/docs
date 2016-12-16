@@ -29,6 +29,7 @@ __`Board`__           | `string`   | [Type of leaderboard](#leaderboards).
 `Start`               | `string`   | Start of the time range (ISO 8601).
 `End`                 | `string`   | End of the time range (ISO 8601).
 `Limit`               | `integer`  | Maximum number of rows to return. Default: 10.
+`Filters`             | `array`    | [Event property filters](#filters)
 `Previous`            |`bool`      | Whether or not to include the previous timeframe. Including the previous time 
 
 ### Leaderboards
@@ -40,6 +41,7 @@ Leaderboards are specified by the `Board` parameter.  The following are valid va
  * **top-question-answerers**: Users with most answers.
  * **top-best-answerers**: Users with most accepted answers.
  * **top-member-by-total-reputation**: Users by total reputation.
+ * **top-positive-users**: Users with the most positive reactions.
  * **top-member-by-accumulated-reputation**: Users by accumulated reputation.
  * **top-viewed-discussions**: Discussions with most views.
  * **top-commented-discussions**: Discussions with most comments.
@@ -205,6 +207,7 @@ Valid types for the reaction collection are:
 Commonly used properties for the reaction collection are:
 
  * **reaction.reactionClass**: The class of the reaction.  This is typically "Positive" or "Negative".
+ * **reaction.reactionType**: The specific type of the reaction. (Ex. Like, VoteUp, Agree, etc)
  * **reaction.recordType**: The type of post this reaction was performed on.  This is typically "discussion" or "comment".
 
 #### registration
