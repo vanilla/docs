@@ -64,6 +64,12 @@ Host: https://yoursite.vanillaforums.com
 &lt;/tr&gt;
 
 &lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Filters&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#filters&#34;&gt;Event property filters&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
 &lt;td&gt;&lt;code&gt;Previous&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;bool&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Whether or not to include the previous timeframe. Including the previous time&lt;/td&gt;
@@ -81,6 +87,7 @@ Host: https://yoursite.vanillaforums.com
 &lt;li&gt;&lt;strong&gt;top-question-answerers&lt;/strong&gt;: Users with most answers.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;top-best-answerers&lt;/strong&gt;: Users with most accepted answers.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;top-member-by-total-reputation&lt;/strong&gt;: Users by total reputation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;top-positive-users&lt;/strong&gt;: Users with the most positive reactions.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;top-member-by-accumulated-reputation&lt;/strong&gt;: Users by accumulated reputation.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;top-viewed-discussions&lt;/strong&gt;: Discussions with most views.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;top-commented-discussions&lt;/strong&gt;: Discussions with most comments.&lt;/li&gt;
@@ -305,6 +312,7 @@ Host: https://yoursite.vanillaforums.com
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;reaction.reactionClass&lt;/strong&gt;: The class of the reaction.  This is typically &amp;ldquo;Positive&amp;rdquo; or &amp;ldquo;Negative&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reaction.reactionType&lt;/strong&gt;: The specific type of the reaction. (Ex. Like, VoteUp, Agree, etc)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;reaction.recordType&lt;/strong&gt;: The type of post this reaction was performed on.  This is typically &amp;ldquo;discussion&amp;rdquo; or &amp;ldquo;comment&amp;rdquo;.&lt;/li&gt;
 &lt;/ul&gt;
 

@@ -234,6 +234,12 @@ Host: https://yoursite.vanillaforums.com
 </tr>
 
 <tr>
+<td><code>Filters</code></td>
+<td><code>array</code></td>
+<td><a href="#filters">Event property filters</a></td>
+</tr>
+
+<tr>
 <td><code>Previous</code></td>
 <td><code>bool</code></td>
 <td>Whether or not to include the previous timeframe. Including the previous time</td>
@@ -251,6 +257,7 @@ Host: https://yoursite.vanillaforums.com
 <li><strong>top-question-answerers</strong>: Users with most answers.</li>
 <li><strong>top-best-answerers</strong>: Users with most accepted answers.</li>
 <li><strong>top-member-by-total-reputation</strong>: Users by total reputation.</li>
+<li><strong>top-positive-users</strong>: Users with the most positive reactions.</li>
 <li><strong>top-member-by-accumulated-reputation</strong>: Users by accumulated reputation.</li>
 <li><strong>top-viewed-discussions</strong>: Discussions with most views.</li>
 <li><strong>top-commented-discussions</strong>: Discussions with most comments.</li>
@@ -475,6 +482,7 @@ Host: https://yoursite.vanillaforums.com
 
 <ul>
 <li><strong>reaction.reactionClass</strong>: The class of the reaction.  This is typically &ldquo;Positive&rdquo; or &ldquo;Negative&rdquo;.</li>
+<li><strong>reaction.reactionType</strong>: The specific type of the reaction. (Ex. Like, VoteUp, Agree, etc)</li>
 <li><strong>reaction.recordType</strong>: The type of post this reaction was performed on.  This is typically &ldquo;discussion&rdquo; or &ldquo;comment&rdquo;.</li>
 </ul>
 
