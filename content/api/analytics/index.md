@@ -20,12 +20,12 @@ Retrieve data for a site leaderboard.
 
 ### Parameters
 
-Parameter             | Type      | Description
----                   | ---       | ---
-__`Board`__           | `string`  | [Type of leaderboard](#leaderboards)
-`Start`               | `string`  | [Start of the time range](#timeframe)
-`End`                 | `string`  | [End of the time range](#timeframe)
-`Limit`               | `integer` | Maximum number of rows to return. Default: 10.
+Parameter             | Type       | Description
+---                   | ---        | ---
+__`Board`__           | `string`   | [Type of leaderboard](#leaderboards)
+`Start`               | `string`   | Start of the time range (ISO 8601)
+`End`                 | `string`   | End of the time range (ISO 8601)
+`Limit`               | `integer`  | Maximum number of rows to return. Default: 10.
 
 ### Leaderboards
 
@@ -100,15 +100,17 @@ Perform a query against collected analytics data.
 
 [__Authentication__](../#making-api-calls): required
 
+The body of the request must be a JSON-encoded object.  Each property of the object should be a supported parameter.
+
 ### Parameters
 
 Parameter             | Type      | Description
 ---                   | ---       | ---
 __`AnalysisType`__    | `string`  | [Type of analysis to perform](#analysis-types)
 __`EventCollection`__ | `string`  | [Collection of events](#event-collections)
-__`Start`__           | `string`  | [Start of the time range](#timeframe)
-__`End`__             | `string`  | [End of the time range](#timeframe)
-`Filters`             | `csv`     | [Event property filters](#filters)
+__`Timeframe`__       | `array`   | [Range of time to target](#timeframe)
+`TargetProperty`      | `string`  | An event property to perform the analysis on
+`Filters`             | `array`   | [Event property filters](#filters)
 `Interval`            | `string`  | [Result interval](#interval)
 
 ### Analysis Types
@@ -121,11 +123,11 @@ Analytics queries require an analysis type.  This type will dictate how the data
  * **count_unique**: Count the total number of unique property values.
  * **median**: Calculate the median value for a property.
 
-Most analysis types are performed on a specific event property, so they require the `target_property` parameter to be specified. **count** does not require a `target_property` parameter.
+Most analysis types are performed on a specific event property, so they require the `TargetProperty` parameter to be specified. **count** does not require a `target_property` parameter.
 
 ### Event Collections
 
-All events captured by Vanilla are grouped into one of the following categories.  The collection is specified by passing the `event_collection` parameter to the analytics query.
+All events captured by Vanilla are grouped into one of the following categories.  The collection is specified by passing the `EventCollection` parameter to the analytics query.
 
 #### page
 
@@ -222,7 +224,7 @@ Valid types for the session collection are:
 
 Data queried from analytics can be filtered by collection and event properties.  The most common type of filtering would be based on the `type` property.  For example, if you wanted to see new discussions, you'd query the `post` collection and set a filter on the `type` property being equal to "discussion_add".  The available types for the various collections are documented in their individual sections.  In addition to `type`, some additional commonly-used filtering properties are included in those sections, if available.
 
-There are several comparison operators to choose from:
+Each element in the `Filters` array should be an object with two properties: `propertyName` and `propertyValue`.  An optional property, `operator`, can be specified.  There are several comparison operators to choose from:
 
  * **eq**: Equal
  * **ne**: Not equal
@@ -232,11 +234,37 @@ There are several comparison operators to choose from:
  * **lte**: Less than or equal to
  * **in**: Verify a property's value is in an array
 
-For example, when querying the post collection, you could apply a filter that only returned the first answers to a question with the following: `type eq comment_add; discussionType eq Question; commentMetric.firstComment eq 1`
+If `operator` is not specified, it is assumed to be "eq"
+
+For example, when querying the post collection, you could apply a set of filters that only queried the first answers to a question with the following:
+
+```json
+"Filters": [
+  {
+    "propertyName": "type",
+    "propertyValue": "comment_add"
+  },
+  {
+    "propertyName": "discussionType",
+    "propertyValue": "Question"
+  },
+  {
+    "propertyName": "commentMetric.firstComment",
+    "propertyValue": "1"
+  }
+]
+```
 
 ### Timeframe
 
-The timeframe should be specified with two separate parameters: `Start` and `End`.  These values should be ISO 8601 datetime strings (e.g. 2016-12-01T00:00:00.000Z).
+Timeframes should be specified as an object with two properties: `start` and `end`.  These values should be ISO 8601 datetime strings (e.g. 2016-12-01T00:00:00.000Z).
+
+```json
+"Timeframe": {
+  "start": "2016-12-01T00:00:00.000Z",
+  "end": "2016-12-31T00:00:00.000Z"
+}
+```
 
 ### Interval
 
@@ -256,35 +284,35 @@ Depending on whether or not an `interval` parameter was specified, the result ma
 Without an `interval` parameter, a single value is returned: `result`.
 
 ```json
-{"result": 3350631}
+{"result": 1370}
 ```
 
 If an `interval` value was provided, the `result` value will be an array.  Each interval will be returned as an object in that array.  The interval's subset of the overall timeframe will be specified as the `timeframe` property.  A `value` property will indicate the query result for the specified subset.
 
 ```json
 {
-    "result": [
-        {
-            "value": 458,
-            "timeframe": {
-                "start": "2016-12-01T00:00:00.000Z",
-                "end": "2016-12-02T00:00:00.000Z"
-            }
-        },
-        {
-            "value": 431,
-            "timeframe": {
-                "start": "2016-12-02T00:00:00.000Z",
-                "end": "2016-12-03T00:00:00.000Z"
-            }
-        },
-        {
-            "value": 481,
-            "timeframe": {
-                "start": "2016-12-03T00:00:00.000Z",
-                "end": "2016-12-04T00:00:00.000Z"
-            }
-        }
-    ]
+  "result": [
+    {
+      "value": 458,
+      "timeframe": {
+        "start": "2016-12-01T00:00:00.000Z",
+        "end": "2016-12-02T00:00:00.000Z"
+      }
+    },
+    {
+      "value": 431,
+      "timeframe": {
+        "start": "2016-12-02T00:00:00.000Z",
+        "end": "2016-12-03T00:00:00.000Z"
+      }
+    },
+    {
+      "value": 481,
+      "timeframe": {
+        "start": "2016-12-03T00:00:00.000Z",
+        "end": "2016-12-04T00:00:00.000Z"
+      }
+    }
+  ]
 }
 ```
