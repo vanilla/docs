@@ -7,10 +7,13 @@ menu:
     identifier: analytics
     weight: 100
 ---
+
+*This is preliminary documentation.*
+
 ## /analytics/leaderboard
 
 ```http
-GET /api/v1/analytics/leaderboard.ext HTTP/1.1
+POST /api/v1/analytics/leaderboard.ext HTTP/1.1
 Host: https://yoursite.vanillaforums.com
 ```
 
@@ -22,10 +25,12 @@ Retrieve data for a site leaderboard.
 
 Parameter             | Type       | Description
 ---                   | ---        | ---
-__`Board`__           | `string`   | [Type of leaderboard](#leaderboards)
-`Start`               | `string`   | Start of the time range (ISO 8601)
-`End`                 | `string`   | End of the time range (ISO 8601)
-`Limit`               | `integer`  | Maximum number of rows to return. Default: 10.
+__`Board`__           | `string`   | [Type of leaderboard](#leaderboards).
+`Start`               | `string`   | Start of the time range (ISO 8601).
+`End`                 | `string`   | End of the time range (ISO 8601).
+`Limit`               | `integer`  | Maximum number of rows to return.
+Default: 10.
+`Previous`            |`bool`      | Whether or not to include the previous timeframe. Including the previous time 
 
 ### Leaderboards
 
@@ -54,9 +59,9 @@ The record property has been pruned for this example.
   "result": [
     {
       "record": {
-        "UserID": 344,
-        "Name": "userOne",
-        "Email": "one@example.com"
+        "userID": 344,
+        "name": "userOne",
+        "url": "https://example.com/profile/userOne"
         ...
       },
       "value": 737,
@@ -65,9 +70,9 @@ The record property has been pruned for this example.
     },
     {
       "record": {
-        "UserID": 127,
-        "Name": "userTwo",
-        "Email": "two@example.com"
+        "userID": 127,
+        "name": "userTwo",
+        "url": "https://example.com/profile/userTwo"
         ...
       },
       "value": 679,
@@ -76,9 +81,9 @@ The record property has been pruned for this example.
     },
     {
       "record": {
-        "UserID": 449,
-        "Name": "userThree",
-        "Email": "three@example.com"
+        "userID": 449,
+        "name": "userThree",
+        "link": "https://example.com/profile/userThree"
         ...
       },
       "value": 460,
