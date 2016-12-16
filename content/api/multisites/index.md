@@ -5,7 +5,7 @@ category: "api"
 menu:
   api:
     identifier: multisites
-    weight: 500
+    weight: 600
 aliases:
  - /api/site-hub
 ---
