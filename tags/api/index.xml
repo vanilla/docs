@@ -60,13 +60,16 @@ Host: https://yoursite.vanillaforums.com
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;Limit&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;integer&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Maximum number of rows to return.&lt;/td&gt;
+&lt;td&gt;Maximum number of rows to return. Default: 10.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Previous&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;bool&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether or not to include the previous timeframe. Including the previous time&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;p&gt;Default: 10.
-&lt;code&gt;Previous&lt;/code&gt;            |&lt;code&gt;bool&lt;/code&gt;      | Whether or not to include the previous timeframe. Including the previous time&lt;/p&gt;
 
 &lt;h3 id=&#34;leaderboards&#34;&gt;Leaderboards&lt;/h3&gt;
 
