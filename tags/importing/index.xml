@@ -131,7 +131,7 @@
 
 &lt;li&gt;&lt;p&gt;Do one or more &lt;strong&gt;test runs&lt;/strong&gt; to work out any issues and familiarize yourself with the process.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Prepare &amp;amp; test redirects&lt;/strong&gt; from your old forum&amp;rsquo;s content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under &lt;strong&gt;Special Steps &amp;amp; Notes&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Prepare &amp;amp; &lt;a href=&#34;#redirects&#34;&gt;test redirects&lt;/a&gt;&lt;/strong&gt; from your old forum&amp;rsquo;s content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under &lt;strong&gt;&lt;a href=&#34;#special-steps-notes&#34;&gt;Special Steps &amp;amp; Notes&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Doing these things will help your members, moderators, and yourself have a better migration experience and set good expectations for everyone.&lt;/p&gt;
@@ -236,15 +236,64 @@
 
 &lt;h4 id=&#34;redirects&#34;&gt;Redirects&lt;/h4&gt;
 
-&lt;p&gt;Many legacy platform redirects can be handled by the &lt;strong&gt;Redirector&lt;/strong&gt; plugin in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt;. Simply enable the plugin. Check the description for what it supports currently.&lt;/p&gt;
+&lt;p&gt;For everything to work properly you will probably need to do two redirects:
+one for the &lt;a href=&#34;#redirect-the-path&#34;&gt;path&lt;/a&gt; and one for the &lt;a href=&#34;#redirect-the-domain&#34;&gt;domain&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You can create custom redirects as needed using the &lt;a href=&#34;//docs.vanillaforums.com/developer/routes&#34;&gt;Routes&lt;/a&gt; feature in the Dashboard. Use regular expressions to match incoming URL patterns and 301 redirects to their new place. Some imports will automatically create Routes for you, so check to see.&lt;/p&gt;
+&lt;p&gt;When setup properly, users visiting your old forum should be globally redirected to your new Vanilla Forums domain.
+Once the user arrives at the new forum, a second redirect will translate the request and forward users to the proper Vanilla URL.&lt;/p&gt;
 
-&lt;p&gt;If you run the import on localhost and then copy the database to production, be sure to manually transfer those special Routes as well.&lt;/p&gt;
+&lt;h5 id=&#34;redirect-the-path&#34;&gt;Redirect the path&lt;/h5&gt;
 
-&lt;p&gt;Once you have correct redirects set in Vanilla, you must set up a global redirect from your old forum address to Vanilla. See the &lt;code&gt;forum-redirector&lt;/code&gt; folder in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt; for help setting this up. This is &lt;em&gt;not&lt;/em&gt; the same as the Redirector plugin above (which is at &lt;code&gt;plugins/Redirector&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;path&amp;rdquo; is everything that comes after the domain.
+In &lt;code&gt;http://domain.com/forum/thread.php?id=10&amp;amp;pageNumber=2&lt;/code&gt; that would be &lt;code&gt;/forum/thread.php?id=10&amp;amp;pageNumber=2&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Users hitting your old forum should then be 1) globally 301 redirected to Vanilla which will then 2) 301 redirect to the correct content based on the URL requested. Yes, 2 redirects are used in this technique.&lt;/p&gt;
+&lt;p&gt;Many legacy platform path redirects can be handled by the &lt;strong&gt;Redirector&lt;/strong&gt; plugin in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt;.
+Simply enable the plugin. Check the description for what it supports currently.&lt;/p&gt;
+
+&lt;p&gt;You may also create custom redirects, as needed, using the &lt;a href=&#34;//docs.vanillaforums.com/developer/routes&#34;&gt;Routes&lt;/a&gt; feature in the Dashboard.
+Regular expressions can be used to perform pattern matching against incoming paths which will allow you to 301 redirects to the new paths.&lt;/p&gt;
+
+&lt;p&gt;An example of a path redirect would be:
+&lt;code&gt;/forum/discussion.php?id=10&amp;amp;pageNumber=2&lt;/code&gt;
+being redirected to
+&lt;code&gt;/discussion/10?page=2&lt;/code&gt;
+which is the correct path for the discussion number 10 on page 2.&lt;/p&gt;
+
+&lt;h5 id=&#34;what-paths-should-be-redirected&#34;&gt;What paths should be redirected?&lt;/h5&gt;
+
+&lt;p&gt;It depends greatly on your old forum but here is a list of what &lt;em&gt;should&lt;/em&gt; be redirected
+- Categories / Forums
+- Discussions / Threads
+- Comments / Replies
+- User profiles&lt;/p&gt;
+
+&lt;p&gt;To summarize, all public pages &lt;strong&gt;with relevant content&lt;/strong&gt; that were ported to Vanilla &lt;em&gt;should&lt;/em&gt; be redirected.&lt;/p&gt;
+
+&lt;h5 id=&#34;testing-the-redirects&#34;&gt;Testing the redirects&lt;/h5&gt;
+
+&lt;p&gt;Once you setup the paths redirects you should test them thoroughly to make sure that everything works fine.
+To test you can simple copy an URL from your old forum to the new one.&lt;/p&gt;
+
+&lt;p&gt;Example:
+If your new forum resides on a different domain you will need to change the domain name like so
+&lt;code&gt;http://olddomain.com/forum/discussion.php?id=10&amp;amp;page=2&lt;/code&gt; to &lt;code&gt;http://newdomain.com/forum/discussion.php?id=10&amp;amp;page=2&lt;/code&gt;
+This should result in &lt;code&gt;http://newdomain.com/forum/discussion.php?id=10&amp;amp;page=2&lt;/code&gt; being redirected to &lt;code&gt;http://newdomain.com/discussion/10?page=2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: For the pages to work properly you need to configure Vanilla to have the same number of comments per page as your old forum had.&lt;/p&gt;
+
+&lt;h5 id=&#34;redirect-the-domain&#34;&gt;Redirect the domain&lt;/h5&gt;
+
+&lt;p&gt;If the domain where your new forum resides is different than where your old forum was you will need to redirect the domain.
+Let&amp;rsquo;s say that your old domain is olddomain.com and your new domain is newdomain.com (original right?):&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://olddomain.com/...&lt;/code&gt; should redirect to &lt;code&gt;http://newdomain.com/...&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It would be the same principle if you were to move your forum on a subdomain:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://domain.com/...&lt;/code&gt; would need to be redirected to &lt;code&gt;http://forumsubdomain.domain.com/...&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To help set this up you you can use the &lt;code&gt;forum-redirector&lt;/code&gt; folder in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt;.
+*Do not confound the &lt;strong&gt;Redirector&lt;/strong&gt; plugin with the &lt;code&gt;forum-redirector&lt;/code&gt; folder.*&lt;/p&gt;
 
 &lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
 

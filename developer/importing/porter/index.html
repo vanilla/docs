@@ -304,7 +304,7 @@
 
 <li><p>Do one or more <strong>test runs</strong> to work out any issues and familiarize yourself with the process.</p></li>
 
-<li><p><strong>Prepare &amp; test redirects</strong> from your old forum&rsquo;s content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under <strong>Special Steps &amp; Notes</strong>.</p></li>
+<li><p><strong>Prepare &amp; <a href="#redirects">test redirects</a></strong> from your old forum&rsquo;s content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under <strong><a href="#special-steps-notes">Special Steps &amp; Notes</a></strong>.</p></li>
 </ol>
 
 <p>Doing these things will help your members, moderators, and yourself have a better migration experience and set good expectations for everyone.</p>
@@ -409,15 +409,64 @@
 
 <h4 id="redirects">Redirects</h4>
 
-<p>Many legacy platform redirects can be handled by the <strong>Redirector</strong> plugin in the <a href="https://github.com/vanilla/addons">Addons repository</a>. Simply enable the plugin. Check the description for what it supports currently.</p>
+<p>For everything to work properly you will probably need to do two redirects:
+one for the <a href="#redirect-the-path">path</a> and one for the <a href="#redirect-the-domain">domain</a>.</p>
 
-<p>You can create custom redirects as needed using the <a href="//docs.vanillaforums.com/developer/routes">Routes</a> feature in the Dashboard. Use regular expressions to match incoming URL patterns and 301 redirects to their new place. Some imports will automatically create Routes for you, so check to see.</p>
+<p>When setup properly, users visiting your old forum should be globally redirected to your new Vanilla Forums domain.
+Once the user arrives at the new forum, a second redirect will translate the request and forward users to the proper Vanilla URL.</p>
 
-<p>If you run the import on localhost and then copy the database to production, be sure to manually transfer those special Routes as well.</p>
+<h5 id="redirect-the-path">Redirect the path</h5>
 
-<p>Once you have correct redirects set in Vanilla, you must set up a global redirect from your old forum address to Vanilla. See the <code>forum-redirector</code> folder in the <a href="https://github.com/vanilla/addons">Addons repository</a> for help setting this up. This is <em>not</em> the same as the Redirector plugin above (which is at <code>plugins/Redirector</code>).</p>
+<p>The &ldquo;path&rdquo; is everything that comes after the domain.
+In <code>http://domain.com/forum/thread.php?id=10&amp;pageNumber=2</code> that would be <code>/forum/thread.php?id=10&amp;pageNumber=2</code></p>
 
-<p>Users hitting your old forum should then be 1) globally 301 redirected to Vanilla which will then 2) 301 redirect to the correct content based on the URL requested. Yes, 2 redirects are used in this technique.</p>
+<p>Many legacy platform path redirects can be handled by the <strong>Redirector</strong> plugin in the <a href="https://github.com/vanilla/addons">Addons repository</a>.
+Simply enable the plugin. Check the description for what it supports currently.</p>
+
+<p>You may also create custom redirects, as needed, using the <a href="//docs.vanillaforums.com/developer/routes">Routes</a> feature in the Dashboard.
+Regular expressions can be used to perform pattern matching against incoming paths which will allow you to 301 redirects to the new paths.</p>
+
+<p>An example of a path redirect would be:
+<code>/forum/discussion.php?id=10&amp;pageNumber=2</code>
+being redirected to
+<code>/discussion/10?page=2</code>
+which is the correct path for the discussion number 10 on page 2.</p>
+
+<h5 id="what-paths-should-be-redirected">What paths should be redirected?</h5>
+
+<p>It depends greatly on your old forum but here is a list of what <em>should</em> be redirected
+- Categories / Forums
+- Discussions / Threads
+- Comments / Replies
+- User profiles</p>
+
+<p>To summarize, all public pages <strong>with relevant content</strong> that were ported to Vanilla <em>should</em> be redirected.</p>
+
+<h5 id="testing-the-redirects">Testing the redirects</h5>
+
+<p>Once you setup the paths redirects you should test them thoroughly to make sure that everything works fine.
+To test you can simple copy an URL from your old forum to the new one.</p>
+
+<p>Example:
+If your new forum resides on a different domain you will need to change the domain name like so
+<code>http://olddomain.com/forum/discussion.php?id=10&amp;page=2</code> to <code>http://newdomain.com/forum/discussion.php?id=10&amp;page=2</code>
+This should result in <code>http://newdomain.com/forum/discussion.php?id=10&amp;page=2</code> being redirected to <code>http://newdomain.com/discussion/10?page=2</code>.</p>
+
+<p><em>Note</em>: For the pages to work properly you need to configure Vanilla to have the same number of comments per page as your old forum had.</p>
+
+<h5 id="redirect-the-domain">Redirect the domain</h5>
+
+<p>If the domain where your new forum resides is different than where your old forum was you will need to redirect the domain.
+Let&rsquo;s say that your old domain is olddomain.com and your new domain is newdomain.com (original right?):</p>
+
+<p><code>http://olddomain.com/...</code> should redirect to <code>http://newdomain.com/...</code></p>
+
+<p>It would be the same principle if you were to move your forum on a subdomain:</p>
+
+<p><code>http://domain.com/...</code> would need to be redirected to <code>http://forumsubdomain.domain.com/...</code></p>
+
+<p>To help set this up you you can use the <code>forum-redirector</code> folder in the <a href="https://github.com/vanilla/addons">Addons repository</a>.
+*Do not confound the <strong>Redirector</strong> plugin with the <code>forum-redirector</code> folder.*</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 
