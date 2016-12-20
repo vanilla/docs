@@ -32,7 +32,7 @@ We recommend these best practices:
 
 1. Do one or more **test runs** to work out any issues and familiarize yourself with the process.
 
-1. **Prepare & test redirects** from your old forum's content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under **Special Steps & Notes**.
+1. **Prepare & [test redirects](#redirects)** from your old forum's content to its new location. This is important for search engine traffic, preserving links between discussions, and browser bookmarks. More information about this is below under **[Special Steps & Notes](#special-steps-notes)**.
 
 Doing these things will help your members, moderators, and yourself have a better migration experience and set good expectations for everyone.
 
@@ -49,15 +49,15 @@ To use it:
 
 1. **Grab** the [export tool](http://vanillaforums.org/addon/porter-core) and unzip it. It will be a single file named `vanilla2export.php`.
 
-2. **Upload** the file to *writable* web directory on the server with your legacy database. Most forums have a `files` or `uploads` directory which is an easy place to put it.
+1. **Upload** the file to *writable* web directory on the server with your legacy database. Most forums have a `files` or `uploads` directory which is an easy place to put it.
 
-3. **Browse** to vanilla2export.php in your web browser. You should see a "Vanilla Porter" web page.
+1. **Browse** to vanilla2export.php in your web browser. You should see a "Vanilla Porter" web page.
 
 1. *If this is the final export, now is the time to put your legacy forum into read-only mode to prevent posts from being lost during the migration.*
 
-4. **Enter** information about your forum database into the form and click **Begin Export**. If you can’t remember, try looking at your forum’s configuration file.
+1. **Enter** information about your forum database into the form and click **Begin Export**. If you can’t remember, try looking at your forum’s configuration file.
 
-5. **Download** the Porter file it generates
+1. **Download** the Porter file it generates
 
 Got problems? See the **Troubleshooting** section below.
 
@@ -141,26 +141,73 @@ If you run into problems, your platform isn't supported, or want to reset them a
 
 #### Redirects
 
-Many legacy platform redirects can be handled by the **Redirector** plugin in the [Addons repository](https://github.com/vanilla/addons). Simply enable the plugin. Check the description for what it supports currently.
+For everything to work properly you will probably need to do two redirects:
+one for the [path](#redirect-the-path) and one for the [domain](#redirect-the-domain).
 
-You can create custom redirects as needed using the [Routes](/developer/routes) feature in the Dashboard. Use regular expressions to match incoming URL patterns and 301 redirects to their new place. Some imports will automatically create Routes for you, so check to see.
+When setup properly, users visiting your old forum should be globally redirected to your new Vanilla Forums domain.
+Once the user arrives at the new forum, a second redirect will translate the request and forward users to the proper Vanilla URL.
 
-If you run the import on localhost and then copy the database to production, be sure to manually transfer those special Routes as well.
+##### Redirect the path
 
-Once you have correct redirects set in Vanilla, you must set up a global redirect from your old forum address to Vanilla. See the `forum-redirector` folder in the [Addons repository](https://github.com/vanilla/addons) for help setting this up. This is *not* the same as the Redirector plugin above (which is at `plugins/Redirector`).
+The "path" is everything that comes after the domain.
+In `http://domain.com/forum/thread.php?id=10&pageNumber=2` that would be `/forum/thread.php?id=10&pageNumber=2`
 
-Users hitting your old forum should then be 1) globally 301 redirected to Vanilla which will then 2) 301 redirect to the correct content based on the URL requested. Yes, 2 redirects are used in this technique.
+Many legacy platform path redirects can be handled by the **Redirector** plugin in the [Addons repository](https://github.com/vanilla/addons).
+Simply enable the plugin. Check the description for what it supports currently.
 
+You may also create custom redirects, as needed, using the [Routes](/developer/routes) feature in the Dashboard.
+Regular expressions can be used to perform pattern matching against incoming paths which will allow you to 301 redirects to the new paths.
+
+An example of a path redirect would be:
+`/forum/discussion.php?id=10&pageNumber=2`
+being redirected to
+`/discussion/10?page=2`
+which is the correct path for the discussion number 10 on page 2.
+
+##### What paths should be redirected?
+
+It depends greatly on your old forum but here is a list of what *should* be redirected
+- Categories / Forums
+- Discussions / Threads
+- Comments / Replies
+- User profiles
+
+To summarize, all public pages **with relevant content** that were ported to Vanilla *should* be redirected.
+
+##### Testing the redirects
+
+Once you setup the paths redirects you should test them thoroughly to make sure that everything works fine.
+To test you can simple copy an URL from your old forum to the new one.
+
+Example:
+If your new forum resides on a different domain you will need to change the domain name like so
+`http://olddomain.com/forum/discussion.php?id=10&page=2` to `http://newdomain.com/forum/discussion.php?id=10&page=2`
+This should result in `http://newdomain.com/forum/discussion.php?id=10&page=2` being redirected to `http://newdomain.com/discussion/10?page=2`.
+
+*Note*: For the pages to work properly you need to configure Vanilla to have the same number of comments per page as your old forum had.
+
+##### Redirect the domain
+
+If the domain where your new forum resides is different than where your old forum was you will need to redirect the domain.
+Let's say that your old domain is olddomain.com and your new domain is newdomain.com (original right?):
+
+`http://olddomain.com/...` should redirect to `http://newdomain.com/...`
+
+It would be the same principle if you were to move your forum on a subdomain:
+
+`http://domain.com/...` would need to be redirected to `http://forumsubdomain.domain.com/...`
+
+To help set this up you you can use the `forum-redirector` folder in the [Addons repository](https://github.com/vanilla/addons).
+*Do not confound the **Redirector** plugin with the `forum-redirector` folder.*
 
 ## Troubleshooting
-
 
 #### Common problems using Porter
 
 1. Not placing the file `vanilla2export.php` in a web-enabled folder accessible from the Internet.
 1. Not placing the file `vanilla2export.php` in a folder that the web server has permission to *write* to.
-2. Attempting to export from an MSSQL database. You must first convert to MySQL. Try the [dbdump tool](https://github.com/tburry/dbdump).
-3. Attempting to export from a non-PHP server. Try setting up a tool like MAMP or WAMP on your computer and copying your database there instead.
+1. Attempting to export from an MSSQL database. You must first convert to MySQL. Try the [dbdump tool](https://github.com/tburry/dbdump).
+1. Attempting to export from a non-PHP server. Try setting up a tool like MAMP or WAMP on your computer and copying your database there instead.
 
 Still having trouble? Ask on the [community forum](http://vanillaforums.org/discussions).
 
@@ -168,10 +215,10 @@ Still having trouble? Ask on the [community forum](http://vanillaforums.org/disc
 #### Common problems while importing
 
 1. Entering a user email address that does not exist in the legacy forum.
-2. Unzipping the generated porter file. Leave it zipped and *do not rename it*.
-3. Not having `zlib` installed AND enabled in your PHP install. Confirm this with your host if the file cannot be read.
-2. Not placing the generated porter file directly in the `uploads` folder.
-3. Attempting to 'Browse' for the file rather than selecting it with the multiple choice selector above that.
+1. Unzipping the generated porter file. Leave it zipped and *do not rename it*.
+1. Not having `zlib` installed AND enabled in your PHP install. Confirm this with your host if the file cannot be read.
+1. Not placing the generated porter file directly in the `uploads` folder.
+1. Attempting to 'Browse' for the file rather than selecting it with the multiple choice selector above that.
 
 Still having trouble? Ask on the [community forum](http://vanillaforums.org/discussions).
 
