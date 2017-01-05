@@ -210,7 +210,15 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 
 &lt;h4 id=&#34;layouts&#34;&gt;Layouts&lt;/h4&gt;
 
-&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. This layout can be specified in the dashboard&amp;rsquo;s Homepage section. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme.&lt;/p&gt;
+&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&amp;rsquo;s Homepage section. You can also specify your theme&amp;rsquo;s layout in the $ThemeInfo array in your theme&amp;rsquo;s about.php file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a &lt;code&gt;Layout&lt;/code&gt; key with content looking like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Layout&#39; =&amp;gt; [
+    &#39;Discussions&#39; =&amp;gt; &#39;table&#39;,
+    &#39;Categories&#39; =&amp;gt; &#39;modern&#39;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The layout options for discussions are currently &amp;lsquo;table&amp;rsquo; or &amp;lsquo;modern&amp;rsquo;. For categories, you can choose &amp;lsquo;table&amp;rsquo;, &amp;lsquo;modern&amp;rsquo;, or &amp;lsquo;mixed&amp;rsquo;. The mixed layout includes discussions on the categories page.&lt;/p&gt;
 
 &lt;h4 id=&#34;plugins&#34;&gt;Plugins&lt;/h4&gt;
 

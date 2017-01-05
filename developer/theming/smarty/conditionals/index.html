@@ -378,7 +378,7 @@
 
 <p>This example checks whether the user has either the &ldquo;Garden.Settings.Manage&rdquo; or &ldquo;Garden.Settings.View&rdquo; permission and if so, adds a link to the dashboard.</p>
 
-<pre><code>{if CheckPermission(array('Garden.Settings.Manage', 'Garden.Settings.View'))}
+<pre><code>{if CheckPermission(['Garden.Settings.Manage', 'Garden.Settings.View'])}
     {dashboard_link}
 {/if}
 </code></pre>
@@ -478,7 +478,7 @@
         
         <div class="column column-6">
             <div class="docs-copyright">
-    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
 </div>
         </div>
         

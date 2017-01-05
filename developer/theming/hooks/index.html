@@ -322,26 +322,9 @@
  */
 
 /**
- * Sets config variables on enabling MyThemeName, adds locale data to the view,
- * and adds a respond button to the discussion page.
+ * Adds locale data to the view, and adds a respond button to the discussion page.
  */
 class MyThemeNameThemeHooks extends Gdn_Plugin {
-
-    /**
-     * Sets some config settings for a modern layout with top-level
-     * categories displayed as headings.
-     *
-     * @return boolean Whether setup was successful.
-     */
-    public function setup() {
-        // Set some config settings for a modern layout with top-level categories displayed as headings.
-        saveToConfig(array(
-            'Vanilla.Discussions.Layout'     =&gt; 'modern',
-            'Vanilla.Categories.Layout'      =&gt; 'modern',
-            'Vanilla.Categories.DoHeadings'  =&gt; true,
-            ), null, true);
-        return true;
-    }
 
     /**
      * Fetches the current locale and sets the data for the theme view.
@@ -430,7 +413,7 @@ if (!function_exists('filterCountString')) {
         
         <div class="column column-6">
             <div class="docs-copyright">
-    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
 </div>
         </div>
         

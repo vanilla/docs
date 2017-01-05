@@ -320,13 +320,13 @@
 
 <p>So, let&rsquo;s say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:</p>
 
-<pre><code class="language-php">'Options' =&gt; array(
-    'Styles' =&gt; array(
+<pre><code class="language-php">'Options' =&gt; [
+    'Styles' =&gt; [
         'Default' =&gt; '%s',
         'Blue' =&gt; '%s_blue',
         'Green' =&gt; '%s_green',
-    ),
-)
+    ],
+]
 </code></pre>
 
 <p>The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of <code>screenshot_*.ext</code> where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use <code>screenshot.ext</code> for the default theme.</p>
@@ -337,14 +337,14 @@
 
 <p>The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the <a href="//docs.vanillaforums.com/functions/text.html.md">text function</a> to insert the text in the theme, using the Text array&rsquo;s key as the &lsquo;code&rsquo; parameter. For example, if you had this options array:</p>
 
-<pre><code class="language-php">'Options' =&gt; array(
-    'Text' =&gt; array(
-        'Custom&amp;nbsp;Text' =&gt; array(
+<pre><code class="language-php">'Options' =&gt; [
+    'Text' =&gt; [
+        'Custom&amp;nbsp;Text' =&gt; [
                 'Description' =&gt; 'Custom text to be inserted in the theme.',
                 'Type' =&gt; 'textbox'
-        )
-    )
-)
+        ]
+    ]
+]
 </code></pre>
 
 <p>Then you could insert the text into your theme using the Smarty tag:</p>
@@ -358,28 +358,28 @@
 
 <p>Here&rsquo;s an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.</p>
 
-<pre><code class="language-php">$ThemeInfo['mytheme'] = array(
+<pre><code class="language-php">$ThemeInfo['mytheme'] = [
     'Name' =&gt; 'My Theme',
-    'Description' =&gt; &quot;My Theme is the greatest.&quot;,
+    'Description' =&gt; 'My Theme is the greatest.',
     'Version' =&gt; '1.0.0',
-    'Author' =&gt; &quot;Your Name&quot;,
+    'Author' =&gt; 'Your Name',
     'AuthorEmail' =&gt; 'your@email.com',
     'AuthorUrl' =&gt; 'http://yourwebsite.com',
-    'Options' =&gt; array(
+    'Options' =&gt; [
         'Description' =&gt; 'This theme has an alternative colour scheme and custom text.',
-        'Styles' =&gt; array(
+        'Styles' =&gt; [
             'Default' =&gt; '%s_default',
             'Dark' =&gt; '%s_dark',
             'Blue' =&gt; '%s_blue',
-        ),
-        'Text' =&gt; array(
-            'Custom&amp;nbsp;Text' =&gt; array(
+        ],
+        'Text' =&gt; [
+            'Custom&amp;nbsp;Text' =&gt; [
                     'Description' =&gt; 'Custom text to be inserted in the theme.',
                     'Type' =&gt; 'textbox'
-            )
-        )
-    )
-);
+            ]
+        ]
+    ]
+];
 </code></pre>
 
 
@@ -420,7 +420,7 @@
         
         <div class="column column-6">
             <div class="docs-copyright">
-    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
 </div>
         </div>
         

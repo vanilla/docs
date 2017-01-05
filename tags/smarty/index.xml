@@ -225,7 +225,7 @@
 
 &lt;p&gt;This example checks whether the user has either the &amp;ldquo;Garden.Settings.Manage&amp;rdquo; or &amp;ldquo;Garden.Settings.View&amp;rdquo; permission and if so, adds a link to the dashboard.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{if CheckPermission(array(&#39;Garden.Settings.Manage&#39;, &#39;Garden.Settings.View&#39;))}
+&lt;pre&gt;&lt;code&gt;{if CheckPermission([&#39;Garden.Settings.Manage&#39;, &#39;Garden.Settings.View&#39;])}
     {dashboard_link}
 {/if}
 &lt;/code&gt;&lt;/pre&gt;

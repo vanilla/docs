@@ -352,7 +352,15 @@
 
 <h4 id="layouts">Layouts</h4>
 
-<p>Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. This layout can be specified in the dashboard&rsquo;s Homepage section. Each layout has its own set of CSS classes, so it&rsquo;s best to decide which layout you&rsquo;d like to use before you start styling your theme.</p>
+<p>Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&rsquo;s best to decide which layout you&rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&rsquo;s Homepage section. You can also specify your theme&rsquo;s layout in the $ThemeInfo array in your theme&rsquo;s about.php file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a <code>Layout</code> key with content looking like this:</p>
+
+<pre><code class="language-php">'Layout' =&gt; [
+    'Discussions' =&gt; 'table',
+    'Categories' =&gt; 'modern'
+]
+</code></pre>
+
+<p>The layout options for discussions are currently &lsquo;table&rsquo; or &lsquo;modern&rsquo;. For categories, you can choose &lsquo;table&rsquo;, &lsquo;modern&rsquo;, or &lsquo;mixed&rsquo;. The mixed layout includes discussions on the categories page.</p>
 
 <h4 id="plugins">Plugins</h4>
 
@@ -418,7 +426,7 @@
         
         <div class="column column-6">
             <div class="docs-copyright">
-    Copyright &copy 2009-2016 Vanilla Forums, Inc. All rights reserved.
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
 </div>
         </div>
         

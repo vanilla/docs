@@ -63,7 +63,15 @@
 
 &lt;h4 id=&#34;layouts&#34;&gt;Layouts&lt;/h4&gt;
 
-&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. This layout can be specified in the dashboard&amp;rsquo;s Homepage section. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme.&lt;/p&gt;
+&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&amp;rsquo;s Homepage section. You can also specify your theme&amp;rsquo;s layout in the $ThemeInfo array in your theme&amp;rsquo;s about.php file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a &lt;code&gt;Layout&lt;/code&gt; key with content looking like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Layout&#39; =&amp;gt; [
+    &#39;Discussions&#39; =&amp;gt; &#39;table&#39;,
+    &#39;Categories&#39; =&amp;gt; &#39;modern&#39;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The layout options for discussions are currently &amp;lsquo;table&amp;rsquo; or &amp;lsquo;modern&amp;rsquo;. For categories, you can choose &amp;lsquo;table&amp;rsquo;, &amp;lsquo;modern&amp;rsquo;, or &amp;lsquo;mixed&amp;rsquo;. The mixed layout includes discussions on the categories page.&lt;/p&gt;
 
 &lt;h4 id=&#34;plugins&#34;&gt;Plugins&lt;/h4&gt;
 
@@ -119,26 +127,9 @@
  */
 
 /**
- * Sets config variables on enabling MyThemeName, adds locale data to the view,
- * and adds a respond button to the discussion page.
+ * Adds locale data to the view, and adds a respond button to the discussion page.
  */
 class MyThemeNameThemeHooks extends Gdn_Plugin {
-
-    /**
-     * Sets some config settings for a modern layout with top-level
-     * categories displayed as headings.
-     *
-     * @return boolean Whether setup was successful.
-     */
-    public function setup() {
-        // Set some config settings for a modern layout with top-level categories displayed as headings.
-        saveToConfig(array(
-            &#39;Vanilla.Discussions.Layout&#39;     =&amp;gt; &#39;modern&#39;,
-            &#39;Vanilla.Categories.Layout&#39;      =&amp;gt; &#39;modern&#39;,
-            &#39;Vanilla.Categories.DoHeadings&#39;  =&amp;gt; true,
-            ), null, true);
-        return true;
-    }
 
     /**
      * Fetches the current locale and sets the data for the theme view.
@@ -497,7 +488,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;This example checks whether the user has either the &amp;ldquo;Garden.Settings.Manage&amp;rdquo; or &amp;ldquo;Garden.Settings.View&amp;rdquo; permission and if so, adds a link to the dashboard.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{if CheckPermission(array(&#39;Garden.Settings.Manage&#39;, &#39;Garden.Settings.View&#39;))}
+&lt;pre&gt;&lt;code&gt;{if CheckPermission([&#39;Garden.Settings.Manage&#39;, &#39;Garden.Settings.View&#39;])}
     {dashboard_link}
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
@@ -717,13 +708,13 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;So, let&amp;rsquo;s say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; array(
-    &#39;Styles&#39; =&amp;gt; array(
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; [
+    &#39;Styles&#39; =&amp;gt; [
         &#39;Default&#39; =&amp;gt; &#39;%s&#39;,
         &#39;Blue&#39; =&amp;gt; &#39;%s_blue&#39;,
         &#39;Green&#39; =&amp;gt; &#39;%s_green&#39;,
-    ),
-)
+    ],
+]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of &lt;code&gt;screenshot_*.ext&lt;/code&gt; where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use &lt;code&gt;screenshot.ext&lt;/code&gt; for the default theme.&lt;/p&gt;
@@ -734,14 +725,14 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the &lt;a href=&#34;//docs.vanillaforums.com/functions/text.html.md&#34;&gt;text function&lt;/a&gt; to insert the text in the theme, using the Text array&amp;rsquo;s key as the &amp;lsquo;code&amp;rsquo; parameter. For example, if you had this options array:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; array(
-    &#39;Text&#39; =&amp;gt; array(
-        &#39;Custom&amp;amp;nbsp;Text&#39; =&amp;gt; array(
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; [
+    &#39;Text&#39; =&amp;gt; [
+        &#39;Custom&amp;amp;nbsp;Text&#39; =&amp;gt; [
                 &#39;Description&#39; =&amp;gt; &#39;Custom text to be inserted in the theme.&#39;,
                 &#39;Type&#39; =&amp;gt; &#39;textbox&#39;
-        )
-    )
-)
+        ]
+    ]
+]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Then you could insert the text into your theme using the Smarty tag:&lt;/p&gt;
@@ -755,28 +746,28 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;Here&amp;rsquo;s an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$ThemeInfo[&#39;mytheme&#39;] = array(
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$ThemeInfo[&#39;mytheme&#39;] = [
     &#39;Name&#39; =&amp;gt; &#39;My Theme&#39;,
-    &#39;Description&#39; =&amp;gt; &amp;quot;My Theme is the greatest.&amp;quot;,
+    &#39;Description&#39; =&amp;gt; &#39;My Theme is the greatest.&#39;,
     &#39;Version&#39; =&amp;gt; &#39;1.0.0&#39;,
-    &#39;Author&#39; =&amp;gt; &amp;quot;Your Name&amp;quot;,
+    &#39;Author&#39; =&amp;gt; &#39;Your Name&#39;,
     &#39;AuthorEmail&#39; =&amp;gt; &#39;your@email.com&#39;,
     &#39;AuthorUrl&#39; =&amp;gt; &#39;http://yourwebsite.com&#39;,
-    &#39;Options&#39; =&amp;gt; array(
+    &#39;Options&#39; =&amp;gt; [
         &#39;Description&#39; =&amp;gt; &#39;This theme has an alternative colour scheme and custom text.&#39;,
-        &#39;Styles&#39; =&amp;gt; array(
+        &#39;Styles&#39; =&amp;gt; [
             &#39;Default&#39; =&amp;gt; &#39;%s_default&#39;,
             &#39;Dark&#39; =&amp;gt; &#39;%s_dark&#39;,
             &#39;Blue&#39; =&amp;gt; &#39;%s_blue&#39;,
-        ),
-        &#39;Text&#39; =&amp;gt; array(
-            &#39;Custom&amp;amp;nbsp;Text&#39; =&amp;gt; array(
+        ],
+        &#39;Text&#39; =&amp;gt; [
+            &#39;Custom&amp;amp;nbsp;Text&#39; =&amp;gt; [
                     &#39;Description&#39; =&amp;gt; &#39;Custom text to be inserted in the theme.&#39;,
                     &#39;Type&#39; =&amp;gt; &#39;textbox&#39;
-            )
-        )
-    )
-);
+            ]
+        ]
+    ]
+];
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -883,7 +874,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Signed in users&lt;/strong&gt; You can add content to your forum depending on whether a user is signed in or not. For example: &lt;code&gt;{if $User.SignedIn}Welcome back!{/if}&lt;/code&gt; This  snippet adds a welcome message for any signed in user.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Forum sections&lt;/strong&gt; You can add content to your forum depending on what section you&amp;rsquo;re in. For example: &lt;code&gt;{if inSection(array(&#39;Profile&#39;, &#39;Conversation&#39;))}{asset name=&amp;quot;Panel&amp;quot;}{/if}&lt;/code&gt; This snippet adds the panel asset to the Profile and Conversation sections of the forum. You can find the section name of any page in the forum by using your browser&amp;rsquo;s web tools to inspect the body element. One of the CSS classes on the body element will be Section-*, where * is the section name. (Assuming you have adhered to the opening body tag tip above.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Forum sections&lt;/strong&gt; You can add content to your forum depending on what section you&amp;rsquo;re in. For example: &lt;code&gt;{if inSection([&#39;Profile&#39;, &#39;Conversation&#39;])}{asset name=&amp;quot;Panel&amp;quot;}{/if}&lt;/code&gt; This snippet adds the panel asset to the Profile and Conversation sections of the forum. You can find the section name of any page in the forum by using your browser&amp;rsquo;s web tools to inspect the body element. One of the CSS classes on the body element will be Section-*, where * is the section name. (Assuming you have adhered to the opening body tag tip above.)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h5 id=&#34;smarty-variables-and-setting-page-data-advanced&#34;&gt;Smarty variables and setting page data (Advanced)&lt;/h5&gt;
