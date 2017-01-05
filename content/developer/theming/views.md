@@ -49,7 +49,7 @@ The most up-to-date set of Smarty functions and modifiers can be tracked down in
 ##### More Smarty tips and tricks
 
 1. **Signed in users** You can add content to your forum depending on whether a user is signed in or not. For example: `{if $User.SignedIn}Welcome back!{/if}` This  snippet adds a welcome message for any signed in user.
-2. **Forum sections** You can add content to your forum depending on what section you're in. For example: `{if inSection(array('Profile', 'Conversation'))}{asset name="Panel"}{/if}` This snippet adds the panel asset to the Profile and Conversation sections of the forum. You can find the section name of any page in the forum by using your browser's web tools to inspect the body element. One of the CSS classes on the body element will be Section-\*, where \* is the section name. (Assuming you have adhered to the opening body tag tip above.)
+2. **Forum sections** You can add content to your forum depending on what section you're in. For example: `{if inSection(['Profile', 'Conversation'])}{asset name="Panel"}{/if}` This snippet adds the panel asset to the Profile and Conversation sections of the forum. You can find the section name of any page in the forum by using your browser's web tools to inspect the body element. One of the CSS classes on the body element will be Section-\*, where \* is the section name. (Assuming you have adhered to the opening body tag tip above.)
 
 ##### Smarty variables and setting page data (Advanced)
 

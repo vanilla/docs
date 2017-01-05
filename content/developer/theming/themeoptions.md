@@ -27,13 +27,13 @@ You will still need to have the custom.css file as a default for when the theme 
 So, let's say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:
 
 ```php
-'Options' => array(
-    'Styles' => array(
+'Options' => [
+    'Styles' => [
         'Default' => '%s',
         'Blue' => '%s_blue',
         'Green' => '%s_green',
-    ),
-)
+    ],
+]
 ```
 
 The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of `screenshot_*.ext` where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use `screenshot.ext` for the default theme.
@@ -45,14 +45,14 @@ To add custom text to a theme, add a 'Text' key to the 'Options' array. The valu
 The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the [text function](/functions/text.html.md) to insert the text in the theme, using the Text array's key as the 'code' parameter. For example, if you had this options array:
 
 ```php
-'Options' => array(
-    'Text' => array(
-        'Custom&nbsp;Text' => array(
+'Options' => [
+    'Text' => [
+        'Custom&nbsp;Text' => [
                 'Description' => 'Custom text to be inserted in the theme.',
                 'Type' => 'textbox'
-        )
-    )
-)
+        ]
+    ]
+]
 ```
 Then you could insert the text into your theme using the Smarty tag:
 
@@ -67,26 +67,26 @@ The text is saved in your config, so you could also access it in PHP using `c('T
 Here's an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.
 
 ```php
-$ThemeInfo['mytheme'] = array(
+$ThemeInfo['mytheme'] = [
     'Name' => 'My Theme',
-    'Description' => "My Theme is the greatest.",
+    'Description' => 'My Theme is the greatest.',
     'Version' => '1.0.0',
-    'Author' => "Your Name",
+    'Author' => 'Your Name',
     'AuthorEmail' => 'your@email.com',
     'AuthorUrl' => 'http://yourwebsite.com',
-    'Options' => array(
+    'Options' => [
         'Description' => 'This theme has an alternative colour scheme and custom text.',
-        'Styles' => array(
+        'Styles' => [
             'Default' => '%s_default',
             'Dark' => '%s_dark',
             'Blue' => '%s_blue',
-        ),
-        'Text' => array(
-            'Custom&nbsp;Text' => array(
+        ],
+        'Text' => [
+            'Custom&nbsp;Text' => [
                     'Description' => 'Custom text to be inserted in the theme.',
                     'Type' => 'textbox'
-            )
-        )
-    )
-);
+            ]
+        ]
+    ]
+];
 ```

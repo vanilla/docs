@@ -57,14 +57,14 @@ Tests whether the current user has the passed permission or array of permissions
 This example checks whether the user has either the "Garden.Settings.Manage" or "Garden.Settings.View" permission and if so, adds a link to the dashboard.
 
 ```
-{if CheckPermission(array('Garden.Settings.Manage', 'Garden.Settings.View'))}
+{if CheckPermission(['Garden.Settings.Manage', 'Garden.Settings.View'])}
     {dashboard_link}
 {/if}
 ```
 
 ## Conditional: *Homepage*
 
-The variable `$Homepage` is set to true if (and only if) the user is on your homepage. 
+The variable `$Homepage` is set to true if (and only if) the user is on your homepage.
 
 ### Example
 
