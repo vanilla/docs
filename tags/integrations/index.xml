@@ -185,7 +185,7 @@
 &lt;h3 id=&#34;setting-up-social-login-in-twitter-connect&#34;&gt;Setting up social login in Twitter Connect&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Register Vanilla with Twitter at: &lt;a href=&#34;http://dev.twitter.com/apps/new&#34;&gt;http://dev.twitter.com/apps/new&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Register Vanilla with Twitter at: &lt;a href=&#34;https://apps.twitter.com/app/new&#34;&gt;https://apps.twitter.com/app/new&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Set the Callback URL by appending &lt;code&gt;/entry/twauthorize&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your Callback URL would be &lt;code&gt;http://example.com/forum/entry/twauthorize&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;After registering, copy the &amp;ldquo;Consumer Key&amp;rdquo; and &amp;ldquo;Consumer Secret&amp;rdquo; into your Twitter plugin settings page from your Vanilla dashboard.&lt;/li&gt;
 &lt;/ol&gt;
