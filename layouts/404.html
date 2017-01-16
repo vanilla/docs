@@ -18,6 +18,9 @@
                 table-layout: fixed;
             }
         </style>
+        
+        {{ partial "trackers.html" . }}
+        
     </head>
 
     <body class="docs grid docs-layout-landing docs-layout-notfound">
@@ -64,7 +67,5 @@
             </div>
         </div>
         
-        {{ partial "trackers.html" . }}
-
     </body>
 </html>
