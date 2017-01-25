@@ -12,7 +12,7 @@ aliases:
 ---
 ## Migrating a forum to Vanilla
 
-Vanilla Porter is the [export tool](http://vanillaforums.org/addon/porter-core)  for converting your legacy forum to Vanilla. The process is four steps:
+Vanilla Porter is the [export tool](https://open.vanillaforums.com/addon/porter-core)  for converting your legacy forum to Vanilla. The process is four steps:
 
 1. Export your old forum data to a special "Porter file".
 2. Create a new Vanilla forum.
@@ -47,7 +47,7 @@ If you have a very large forum (millions of posts), see the **Special Steps & No
 
 To use it:
 
-1. **Grab** the [export tool](http://vanillaforums.org/addon/porter-core) and unzip it. It will be a single file named `vanilla2export.php`.
+1. **Grab** the [export tool](https://open.vanillaforums.com/addon/porter-core) and unzip it. It will be a single file named `vanilla2export.php`.
 
 1. **Upload** the file to *writable* web directory on the server with your legacy database. Most forums have a `files` or `uploads` directory which is an easy place to put it.
 
@@ -64,7 +64,7 @@ Got problems? See the **Troubleshooting** section below.
 
 ### 2. Create a new Vanilla forum
 
-In order to import your data, you will need a fresh installation of [Vanilla](http://vanillaforums.org/addon/vanilla-core). When you do the import, all data in your fresh installation will be overwritten, so make sure you don’t have any discussions you want to keep there. See the README file for help.
+In order to import your data, you will need a fresh installation of [Vanilla](https://open.vanillaforums.com/addon/vanilla-core). When you do the import, all data in your fresh installation will be overwritten, so make sure you don’t have any discussions you want to keep there. See the README file for help.
 
 
 ### 3. Import your data
@@ -124,7 +124,7 @@ File attachments and avatars may be stored in the file system or as binary blobs
 
 The Porter can export binary blobs for vBulletin. When navigating to the `vanilla2export.php` file, add `?avatars=1&files=1` to the URL. This will create folders for `attachments` and `customavatars` that should each be directly copied to Vanilla's `uploads` folder.
 
-To rename vBulletin's attachments to have correct extensions, use `filepath=/path/to/attachments` in the URL to process them. Renaming phpBB's attachments requires the special `utilities/phpbb.extensions.php` file in the repository. These are currently advanced user tools and may require consulting the inline documentation in the appropriate package file. If you get stuck, ask on the [community forum](http://vanillaforums.org/discussions).
+To rename vBulletin's attachments to have correct extensions, use `filepath=/path/to/attachments` in the URL to process them. Renaming phpBB's attachments requires the special `utilities/phpbb.extensions.php` file in the repository. These are currently advanced user tools and may require consulting the inline documentation in the appropriate package file. If you get stuck, ask on the [community forum](https://open.vanillaforums.com).
 
 
 #### Non-MySQL data
@@ -209,7 +209,7 @@ To help set this up you you can use the `forum-redirector` folder in the [Addons
 1. Attempting to export from an MSSQL database. You must first convert to MySQL. Try the [dbdump tool](https://github.com/tburry/dbdump).
 1. Attempting to export from a non-PHP server. Try setting up a tool like MAMP or WAMP on your computer and copying your database there instead.
 
-Still having trouble? Ask on the [community forum](http://vanillaforums.org/discussions).
+Still having trouble? Ask on the [community forum](https://open.vanillaforums.com).
 
 
 #### Common problems while importing
@@ -220,14 +220,14 @@ Still having trouble? Ask on the [community forum](http://vanillaforums.org/disc
 1. Not placing the generated porter file directly in the `uploads` folder.
 1. Attempting to 'Browse' for the file rather than selecting it with the multiple choice selector above that.
 
-Still having trouble? Ask on the [community forum](http://vanillaforums.org/discussions).
+Still having trouble? Ask on the [community forum](https://open.vanillaforums.com).
 
 
 #### Data missing
 
 Review the support table included in the vanilla2export.php file (by browsing to it in a web browser and clicking the link) and verify that data is included in that platform.
 
-**Is it supported?** If so, ask on the [community forum](http://vanillaforums.org/discussions). If you can find the technical reason it didn't work, please file an [issue on the GitHub repository](https://github.com/vanilla/porter/issues).
+**Is it supported?** If so, ask on the [community forum](https://open.vanillaforums.com). If you can find the technical reason it didn't work, please file an [issue on the GitHub repository](https://github.com/vanilla/porter/issues).
 
 **Not supported?** You can request support be added on the GitHub repository. If you do this, *please be prepared to supply a copy of your forum database* as a sample. For password support, first create a new user with a password you can share for testing purposes.
 

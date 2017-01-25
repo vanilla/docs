@@ -14,20 +14,20 @@ aliases:
 
 ### General
 
-1. Welcome folks to the [community](http://vanillaforums.org/discussions) and be awesome!
+1. Welcome folks to the [community](https://open.vanillaforums.com) and be awesome!
 1. Answer questions.
 1. Report [issues](https://github.com/vanillaforums/vanilla) like a pro (see below).
 1. [Triage](#triaging-issues) issues already reported!
-1. Test [pre-releases](http://vanillaforums.org/categories/blog).
-1. Contribute [docs](https://github.com/vanillaforums/VanillaDocs).
+1. Test [pre-releases](https://open.vanillaforums.com/categories/blog).
+1. Contribute [docs](https://github.com/vanilla/docs).
 1. Help [translate Vanilla](/developer/locales).
 1. Evaluate community addons & offer feedback.
 1. Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it's like to use Vanilla.
 
 ### Developers
 
-1. Contribute code via [pull requests](/developer/contributing/pull-requests) (requires [Contributor Agreement](http://vanillaforums.org/contributors))
-1. Contribute addons & themes to the [Official Directory](http://vanillaforums.org/addons).
+1. Contribute code via [pull requests](/developer/contributing/pull-requests) (requires [Contributor Agreement](https://open.vanillaforums.com/contributors))
+1. Contribute addons & themes to the [Official Directory](https://open.vanillaforums.com/addons).
 1. Audit code for security & disclose issues [responsibly](/developers).
 
 Sections of our contribution guidelines are adapted or copied from [Swift](https://swift.org/contributing/) because they are awesome.

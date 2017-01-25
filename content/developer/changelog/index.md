@@ -16,7 +16,7 @@ Release notes
 ## 2.1
 
 ### 2.1.6
-*[Released 21 Nov 2014](http://vanillaforums.org/discussion/28555/vanilla-2-1-6-released)*
+*[Released 21 Nov 2014](https://open.vanillaforums.com/discussion/28555/vanilla-2-1-6-released)*
 
 * Security: Fixes an SQL injection vector.
 * Security: Adds a PDO option to harden against SQL injection.
@@ -24,7 +24,7 @@ Release notes
 * Adds vBulletin 5.1 password hashing to allow seamless password migrations. All previous versions continue to be supported.
 
 ### 2.1.5
-*[Released 31 Oct 2014](http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14)*
+*[Released 31 Oct 2014](https://open.vanillaforums.com/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14)*
 
 * Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.
 * Security: Potential CSRF vectors were closed, including one that could allow account hijacking.
@@ -35,7 +35,7 @@ Release notes
 * 2.1.4 had a merge conflict which this release replaced.
 
 ### 2.1.3
-*[Released 9 Sept 2014](http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release)*
+*[Released 9 Sept 2014](https://open.vanillaforums.com/discussion/27822/vanilla-2-1-3-security-release)*
 
 * 3 newly discovered XSS vectors were fixed.
 * The timezone bug introduced in 2.1.1 is fixed.
@@ -44,7 +44,7 @@ Release notes
 
 ### 2.1.1
 
-*[Released 2 Aug 2014](http://vanillaforums.org/discussion/27540/vanilla-2-1-1-important-security-bug-release)*
+*[Released 2 Aug 2014](https://open.vanillaforums.com/discussion/27540/vanilla-2-1-1-important-security-bug-release)*
 
 
 * HtmLawed was upgraded to close an XSS vector (thanks to Psych0tr1a for responsibly disclosing this to us & to HtmLawed for a fast patch in response).
@@ -61,7 +61,7 @@ Release notes
 
 ### 2.1
 
-*[Released 28 April 2014](http://vanillaforums.org/discussion/26685/vanilla-2-1-stable-released)*
+*[Released 28 April 2014](https://open.vanillaforums.com/discussion/26685/vanilla-2-1-stable-released)*
 
 Vanilla internals were completely revamped for 2.1. Many views and several plugin hooks were changed, so **themes and plugins must be tested** and may need to be refactored before upgrading.
 
@@ -72,23 +72,23 @@ Vanilla internals were completely revamped for 2.1. Many views and several plugi
 * Framework improvements.
 * Hundreds of bug fixes.
 
-Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discussion/23322/vanilla-2-1b1-released) thru RC1 can be found in their individual release announcements:
+Incremental changelogs from the [first 2.1 beta](https://open.vanillaforums.com/discussion/23322/vanilla-2-1b1-released) thru RC1 can be found in their individual release announcements:
 
-* [Beta 2](http://vanillaforums.org/discussion/24845/vanilla-2-1b2-released)
-* [Beta 3](http://vanillaforums.org/discussion/26518/vanillla-2-1-beta-3)
-* [Release Candidate 1](http://vanillaforums.org/discussion/26626/vanilla-2-1-release-candidate)
+* [Beta 2](https://open.vanillaforums.com/discussion/24845/vanilla-2-1b2-released)
+* [Beta 3](https://open.vanillaforums.com/discussion/26518/vanillla-2-1-beta-3)
+* [Release Candidate 1](https://open.vanillaforums.com/discussion/26626/vanilla-2-1-release-candidate)
 
 ## 2.0.18
 
 ### 2.0.18.14
-*[Released 30 Oct 2014](http://vanillaforums.org/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14)*
+*[Released 30 Oct 2014](https://open.vanillaforums.com/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14)*
 
 * Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.
 * Security: Potential CSRF vectors were closed, including one that could allow account hijacking.
 * Fixes DeliveryType issue in plugins managements.
 
 ### 2.0.18.13
-*[Released 5 Aug 2014](http://vanillaforums.org/discussion/27541/vanilla-2-0-18-13-security-release-for-old-2-0-18-installs)*
+*[Released 5 Aug 2014](https://open.vanillaforums.com/discussion/27541/vanilla-2-0-18-13-security-release-for-old-2-0-18-installs)*
 
 * HtmLawed is upgraded and its filtering tightened (thanks @x00 & Psych0tr1a)
 * parseJSON() is substituted for eval() in 2 places
@@ -96,18 +96,18 @@ Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discus
 * Fixes HTMLawed error in 2.0.18.12 which this immediately replaced.
 
 ### 2.0.18.11  
-*[Released 21 Apr 2014](http://vanillaforums.org/discussion/26627/vanilla-2-0-18-11-security-release)*
+*[Released 21 Apr 2014](https://open.vanillaforums.com/discussion/26627/vanilla-2-0-18-11-security-release)*
 
 * 3 security patches.
 * Ditches troublesome "Remove" option on the plugins page.
 
 ### 2.0.18.10
-*[Released 21 Dec 2013](http://vanillaforums.org/discussion/25668/dec-2013-security-update-2-0-18-10-and-2-1b2)*
+*[Released 21 Dec 2013](https://open.vanillaforums.com/discussion/25668/dec-2013-security-update-2-0-18-10-and-2-1b2)*
 
 * Removes flawed update checker.
 
 ### 2.0.18.9
-*[Released 26 Nov 2013](http://vanillaforums.org/discussion/25458/security-update-vanilla-2-0-18-9)*
+*[Released 26 Nov 2013](https://open.vanillaforums.com/discussion/25458/security-update-vanilla-2-0-18-9)*
 
 * Use SafeRedirect() instead of Redirect() in the discussion controller.
 * Added TrustedDomains() and SafeRedirect().
@@ -120,7 +120,7 @@ Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discus
 * Do not add linebreaks twice on search.
 
 ### 2.0.18.8
-*[Released 4 Apr 2013](http://vanillaforums.org/discussion/23339/security-update-vanilla-2-0-18-8)*
+*[Released 4 Apr 2013](https://open.vanillaforums.com/discussion/23339/security-update-vanilla-2-0-18-8)*
 
 * Call & check for FilterForm() properly.
 
@@ -145,18 +145,18 @@ Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discus
 * Added joomla password hashing.
 
 ### 2.0.18.4
-*[Released 26 Mar 2012](http://vanillaforums.org/discussion/19542/vanilla-2-0-18-4-released)*
+*[Released 26 Mar 2012](https://open.vanillaforums.com/discussion/19542/vanilla-2-0-18-4-released)*
 
 * Patch form tampering possibility.
 * Fix canonical URL issues.
 
 ### 2.0.18.3
-*[Released 5 Mar 2012](http://vanillaforums.org/discussion/19285/security-vulnerability-flagging-plugin-2-0-18-2-and-earlier)*
+*[Released 5 Mar 2012](https://open.vanillaforums.com/discussion/19285/security-vulnerability-flagging-plugin-2-0-18-2-and-earlier)*
 
 * Flagging plugin security fixes.
 
 ### 2.0.18.2
-*[Released 21 Jan 2012](http://vanillaforums.org/discussion/18749/vanilla-2-0-18-2-release)*
+*[Released 21 Jan 2012](https://open.vanillaforums.com/discussion/18749/vanilla-2-0-18-2-release)*
 
 * Fixed bug where Gravatar was using name instead of email for Vanillicons.
 * vBulletin import improvements.
@@ -167,7 +167,7 @@ Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discus
 * Various other bug fixes.
 
 ### 2.0.18.1
-*[Released 7 Nov 2011](http://vanillaforums.org/discussion/17643/vanilla-2-0-18-final-release)*
+*[Released 7 Nov 2011](https://open.vanillaforums.com/discussion/17643/vanilla-2-0-18-final-release)*
 
 * Fixed bug in the Twitter plugin.
 * Fixed some bugs with connecting.
@@ -179,7 +179,7 @@ Incremental changelogs from the [first 2.1 beta](http://vanillaforums.org/discus
 * Fixed jQuery syntax errors.
 
 ### 2.0.18
-*[Released 3 Nov 2011](http://vanillaforums.org/discussion/17643/vanilla-2-0-18-final-release)*
+*[Released 3 Nov 2011](https://open.vanillaforums.com/discussion/17643/vanilla-2-0-18-final-release)*
 
 Major Features:
 

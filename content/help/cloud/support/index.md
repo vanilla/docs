@@ -27,4 +27,4 @@ Please know they **all go to exactly the same queue** for attention from our ent
 
 You will receive faster support and answers by using the methods above than emailing your account representative. After your forum is launched, we strongly recommend going directly to support for most needs to ensure the fastest turnaround.
 
-Please note the open source community forum at [vanillaforums.org](http://vanillaforums.org) (note the '.org' instead of '.com') is not an official support channel. While full of great volunteers, they are under no obligation to assist and may not be able to anyway.
+Please note the open source community forum at [open.vanillaforums.com](https://open.vanillaforums.com) is not an official support channel. While full of great volunteers, they are under no obligation to assist and may not be able to anyway.
