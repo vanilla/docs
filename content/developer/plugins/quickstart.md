@@ -13,15 +13,15 @@ aliases:
 ## Quickstart Links
 
 * Read about our hooks system: [Extending Vanilla with plugins](/developer/plugins)
-* Download the official [Example plugin](http://vanillaforums.org/addon/example-plugin)
-* Download other plugins from the [Addon Directory](http://vanillaforums.org/addons) and borrow their code.
-* Get help in the [developer community](http://vanillaforums.org/categories/developers)
+* Download the official [Example plugin](https://open.vanillaforums.com/addon/example-plugin)
+* Download other plugins from the [Addon Directory](https://open.vanillaforums.com/addons) and borrow their code.
+* Get help in the [developer community](https://open.vanillaforums.com/categories/developers)
 
 ## Quickstart Guide
 
 Vanilla is built on an object-oriented, MVC framework. If you're coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That's OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.
 
-Ready to code? Grab the [Example plugin](http://vanillaforums.org/addon/example-plugin) and use it below for an even quicker start. Hang onto your butts, here we go:
+Ready to code? Grab the [Example plugin](https://open.vanillaforums.com/addon/example-plugin) and use it below for an even quicker start. Hang onto your butts, here we go:
 
 1. Name your plugin.
 1. Define your plugin.
@@ -123,13 +123,13 @@ That whole definitions section probably didn't *seem* very quick, but you just d
 
 ### 3. Find your hooks
 
-Try the [Eventi plugin](http://vanillaforums.org/addon/eventi-plugin) to visualize where events are fired in Vanilla. Use the hooks in the [Example plugin](http://vanillaforums.org/addon/example-plugin) to see what they do.
+Try the [Eventi plugin](https://open.vanillaforums.com/addon/eventi-plugin) to visualize where events are fired in Vanilla. Use the hooks in the [Example plugin](https://open.vanillaforums.com/addon/example-plugin) to see what they do.
 
 Read the [plugin hooks tutorial](/developer/plugins) for more on how to override & extend Vanilla.
 
 Use an IDE and use the project search functionality to locate instances of `FireEvent` in the [core repo](http://github.com/vanilla/vanilla). Many doc blocks show what events are fired within their methods. Or, search for `_Handler` in the [addons repo](http://github.com/vanilla/addons) to see examples and common uses.
 
-Lastly, [find a plugin](http://vanillaforums.org/addon) that does something similar to what you're trying to do, and check out its code. Maybe between 3 or 4 plugins you can find a good portion of what you're trying to accomplish.
+Lastly, [find a plugin](https://open.vanillaforums.com/addons) that does something similar to what you're trying to do, and check out its code. Maybe between 3 or 4 plugins you can find a good portion of what you're trying to accomplish.
 
 ### 4. Write your code
 
@@ -214,4 +214,4 @@ Final tips:
 * **Use models** to access the database rather than writing your own queries. E.g.: Need discussions? Look at `DiscussionModel`.
 * Adding your own data to the database? Read about the [database query builder](/developer/framework/database).
 
-And, as always, ask the talented & helpful folks on our [community forum](http://vanillaforums.org/discussions) when you get stuck.
+And, as always, ask the talented & helpful folks on our [community forum](https://open.vanillaforums.com) when you get stuck.

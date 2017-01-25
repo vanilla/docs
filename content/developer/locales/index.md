@@ -25,7 +25,7 @@ Want to help translate? Awesome! Here are some tips for creating great translati
 
 ## Installing locales
 
-1. Download the locale you want from the [Addon Directory](http://vanillaforums.org/addon/browse/locales/popular/2).
+1. Download the locale you want from the [Addon Directory](https://open.vanillaforums.com/addon/browse/all/popular/recent/).
 2. Upload the folder to your `locales` folder.
 3. In the Dashboard, go to `Addons > Locales`.
 4. Enable the locale.
@@ -33,7 +33,7 @@ Want to help translate? Awesome! Here are some tips for creating great translati
 
 ## Using multiple locales
 
-The [Multilingual plugin](http://vanillaforums.org/addon/multilingual-plugin) allows each user select their preference from all enabled locales.
+The [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) allows each user select their preference from all enabled locales.
 
 ## Overriding locales
 

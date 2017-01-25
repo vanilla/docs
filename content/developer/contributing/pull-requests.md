@@ -38,7 +38,7 @@ Never try to address multiple, unrelated issues in a single pull request.
 
 ### Pull request checklist
 
-* Have you signed the [contributors' agreement](http://vanillaforums.org/contributors)?
+* Have you signed the [contributors' agreement](https://open.vanillaforums.com/contributors)?
 * Did you target the correct branch (usually `master`)?
 * Is your title written like a concise release note?
 * Does your description provide rationale for your change?
