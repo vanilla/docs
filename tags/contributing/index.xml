@@ -750,12 +750,12 @@ other elements of style and practice.&lt;/p&gt;
 &lt;h3 id=&#34;general&#34;&gt;General&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Welcome folks to the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community&lt;/a&gt; and be awesome!&lt;/li&gt;
+&lt;li&gt;Welcome folks to the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community&lt;/a&gt; and be awesome!&lt;/li&gt;
 &lt;li&gt;Answer questions.&lt;/li&gt;
 &lt;li&gt;Report &lt;a href=&#34;https://github.com/vanillaforums/vanilla&#34;&gt;issues&lt;/a&gt; like a pro (see below).&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#triaging-issues&#34;&gt;Triage&lt;/a&gt; issues already reported!&lt;/li&gt;
-&lt;li&gt;Test &lt;a href=&#34;http://vanillaforums.org/categories/blog&#34;&gt;pre-releases&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Contribute &lt;a href=&#34;https://github.com/vanillaforums/VanillaDocs&#34;&gt;docs&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Test &lt;a href=&#34;https://open.vanillaforums.com/categories/blog&#34;&gt;pre-releases&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Contribute &lt;a href=&#34;https://github.com/vanilla/docs&#34;&gt;docs&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Help &lt;a href=&#34;//docs.vanillaforums.com/developer/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Evaluate community addons &amp;amp; offer feedback.&lt;/li&gt;
 &lt;li&gt;Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.&lt;/li&gt;
@@ -764,8 +764,8 @@ other elements of style and practice.&lt;/p&gt;
 &lt;h3 id=&#34;developers&#34;&gt;Developers&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Contribute code via &lt;a href=&#34;//docs.vanillaforums.com/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Contribute addons &amp;amp; themes to the &lt;a href=&#34;http://vanillaforums.org/addons&#34;&gt;Official Directory&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Contribute code via &lt;a href=&#34;//docs.vanillaforums.com/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;https://open.vanillaforums.com/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Contribute addons &amp;amp; themes to the &lt;a href=&#34;https://open.vanillaforums.com/addons&#34;&gt;Official Directory&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;//docs.vanillaforums.com/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -838,7 +838,7 @@ other elements of style and practice.&lt;/p&gt;
 &lt;h3 id=&#34;pull-request-checklist&#34;&gt;Pull request checklist&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Have you signed the &lt;a href=&#34;http://vanillaforums.org/contributors&#34;&gt;contributors&amp;rsquo; agreement&lt;/a&gt;?&lt;/li&gt;
+&lt;li&gt;Have you signed the &lt;a href=&#34;https://open.vanillaforums.com/contributors&#34;&gt;contributors&amp;rsquo; agreement&lt;/a&gt;?&lt;/li&gt;
 &lt;li&gt;Did you target the correct branch (usually &lt;code&gt;master&lt;/code&gt;)?&lt;/li&gt;
 &lt;li&gt;Is your title written like a concise release note?&lt;/li&gt;
 &lt;li&gt;Does your description provide rationale for your change?&lt;/li&gt;

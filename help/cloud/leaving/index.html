@@ -405,13 +405,13 @@ n.id = i;
 
 <p>If you plan to continue using Vanilla on your own, there&rsquo;s both good news and bad. The good news is that we don&rsquo;t maintain a private fork of Vanilla. Therefore, your data will mostly work as-is without further data conversions. The bad news is it&rsquo;s a little more complicated than that.</p>
 
-<p>First, you may need to build the <a href="https://github.com/vanilla/vanilla">latest version</a> of the code from GitHub (<code>master</code> branch). Try the <a href="https://vanillaforums.org/addon/vanilla-core">latest stable release</a> of Vanilla first, but if that doesn&rsquo;t work, you&rsquo;ll need to use Composer.</p>
+<p>First, you may need to build the <a href="https://github.com/vanilla/vanilla">latest version</a> of the code from GitHub (<code>master</code> branch). Try the <a href="https://open.vanillaforums.com/addon/vanilla-core">latest stable release</a> of Vanilla first, but if that doesn&rsquo;t work, you&rsquo;ll need to use Composer.</p>
 
 <p>Second, not all cloud-based addons are open source. There are open source alternatives for some, but you may need to convert the data yourself (We <strong>do</strong> provide any cloud-based addon data in your database). One example of this is Badges.</p>
 
 <p>Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You&rsquo;ll want to unzip what we send you into your <code>/uploads</code> folder if you&rsquo;re moving to open source. You may need to find and delete any instance of <code>cf:</code> or <code>~cf/</code> in file paths stored in the database (try <code>GDN_User.Photo</code> and <code>GDN_Media.Path</code>). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the <code>/uploads</code> folder (which you should not need to prepend).</p>
 
-<p>You may find additional help from the <a href="https://vanillaforums.org/discussions">volunteer community</a> and the <a href="//docs.vanillaforums.com/developer/">developer docs</a>.</p>
+<p>You may find additional help from the <a href="https://open.vanillaforums.com">volunteer community</a> and the <a href="//docs.vanillaforums.com/developer/">developer docs</a>.</p>
 
 <h2 id="support">Support</h2>
 

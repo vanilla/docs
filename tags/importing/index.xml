@@ -38,7 +38,7 @@
 
 &lt;p&gt;Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;Download Vanilla Porter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://open.vanillaforums.com/addon/porter-core&#34;&gt;Download Vanilla Porter&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Vanilla Porter is a tool that you can upload to your current web server to run in your web browser. It exports any platform to a generic format that the &amp;ldquo;Import&amp;rdquo; option in your new Vanilla Forum can read.&lt;/p&gt;
 
@@ -60,7 +60,7 @@
 
 &lt;h2 id=&#34;supported-platforms&#34;&gt;Supported platforms&lt;/h2&gt;
 
-&lt;p&gt;Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the &lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;Vanilla Porter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the &lt;a href=&#34;https://open.vanillaforums.com/addon/porter-core&#34;&gt;Vanilla Porter&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;php-forums&#34;&gt;PHP forums&lt;/h3&gt;
 
@@ -109,7 +109,7 @@
 
 &lt;h2 id=&#34;migrating-a-forum-to-vanilla&#34;&gt;Migrating a forum to Vanilla&lt;/h2&gt;
 
-&lt;p&gt;Vanilla Porter is the &lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;export tool&lt;/a&gt;  for converting your legacy forum to Vanilla. The process is four steps:&lt;/p&gt;
+&lt;p&gt;Vanilla Porter is the &lt;a href=&#34;https://open.vanillaforums.com/addon/porter-core&#34;&gt;export tool&lt;/a&gt;  for converting your legacy forum to Vanilla. The process is four steps:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Export your old forum data to a special &amp;ldquo;Porter file&amp;rdquo;.&lt;/li&gt;
@@ -147,7 +147,7 @@
 &lt;p&gt;To use it:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grab&lt;/strong&gt; the &lt;a href=&#34;http://vanillaforums.org/addon/porter-core&#34;&gt;export tool&lt;/a&gt; and unzip it. It will be a single file named &lt;code&gt;vanilla2export.php&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grab&lt;/strong&gt; the &lt;a href=&#34;https://open.vanillaforums.com/addon/porter-core&#34;&gt;export tool&lt;/a&gt; and unzip it. It will be a single file named &lt;code&gt;vanilla2export.php&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Upload&lt;/strong&gt; the file to &lt;em&gt;writable&lt;/em&gt; web directory on the server with your legacy database. Most forums have a &lt;code&gt;files&lt;/code&gt; or &lt;code&gt;uploads&lt;/code&gt; directory which is an easy place to put it.&lt;/p&gt;&lt;/li&gt;
 
@@ -164,7 +164,7 @@
 
 &lt;h3 id=&#34;2-create-a-new-vanilla-forum&#34;&gt;2. Create a new Vanilla forum&lt;/h3&gt;
 
-&lt;p&gt;In order to import your data, you will need a fresh installation of &lt;a href=&#34;http://vanillaforums.org/addon/vanilla-core&#34;&gt;Vanilla&lt;/a&gt;. When you do the import, all data in your fresh installation will be overwritten, so make sure you don’t have any discussions you want to keep there. See the README file for help.&lt;/p&gt;
+&lt;p&gt;In order to import your data, you will need a fresh installation of &lt;a href=&#34;https://open.vanillaforums.com/addon/vanilla-core&#34;&gt;Vanilla&lt;/a&gt;. When you do the import, all data in your fresh installation will be overwritten, so make sure you don’t have any discussions you want to keep there. See the README file for help.&lt;/p&gt;
 
 &lt;h3 id=&#34;3-import-your-data&#34;&gt;3. Import your data&lt;/h3&gt;
 
@@ -222,7 +222,7 @@
 
 &lt;p&gt;The Porter can export binary blobs for vBulletin. When navigating to the &lt;code&gt;vanilla2export.php&lt;/code&gt; file, add &lt;code&gt;?avatars=1&amp;amp;files=1&lt;/code&gt; to the URL. This will create folders for &lt;code&gt;attachments&lt;/code&gt; and &lt;code&gt;customavatars&lt;/code&gt; that should each be directly copied to Vanilla&amp;rsquo;s &lt;code&gt;uploads&lt;/code&gt; folder.&lt;/p&gt;
 
-&lt;p&gt;To rename vBulletin&amp;rsquo;s attachments to have correct extensions, use &lt;code&gt;filepath=/path/to/attachments&lt;/code&gt; in the URL to process them. Renaming phpBB&amp;rsquo;s attachments requires the special &lt;code&gt;utilities/phpbb.extensions.php&lt;/code&gt; file in the repository. These are currently advanced user tools and may require consulting the inline documentation in the appropriate package file. If you get stuck, ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To rename vBulletin&amp;rsquo;s attachments to have correct extensions, use &lt;code&gt;filepath=/path/to/attachments&lt;/code&gt; in the URL to process them. Renaming phpBB&amp;rsquo;s attachments requires the special &lt;code&gt;utilities/phpbb.extensions.php&lt;/code&gt; file in the repository. These are currently advanced user tools and may require consulting the inline documentation in the appropriate package file. If you get stuck, ask on the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&#34;non-mysql-data&#34;&gt;Non-MySQL data&lt;/h4&gt;
 
@@ -306,7 +306,7 @@ Let&amp;rsquo;s say that your old domain is olddomain.com and your new domain is
 &lt;li&gt;Attempting to export from a non-PHP server. Try setting up a tool like MAMP or WAMP on your computer and copying your database there instead.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Still having trouble? Ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Still having trouble? Ask on the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&#34;common-problems-while-importing&#34;&gt;Common problems while importing&lt;/h4&gt;
 
@@ -318,13 +318,13 @@ Let&amp;rsquo;s say that your old domain is olddomain.com and your new domain is
 &lt;li&gt;Attempting to &amp;lsquo;Browse&amp;rsquo; for the file rather than selecting it with the multiple choice selector above that.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Still having trouble? Ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Still having trouble? Ask on the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&#34;data-missing&#34;&gt;Data missing&lt;/h4&gt;
 
 &lt;p&gt;Review the support table included in the vanilla2export.php file (by browsing to it in a web browser and clicking the link) and verify that data is included in that platform.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Is it supported?&lt;/strong&gt; If so, ask on the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt;. If you can find the technical reason it didn&amp;rsquo;t work, please file an &lt;a href=&#34;https://github.com/vanilla/porter/issues&#34;&gt;issue on the GitHub repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Is it supported?&lt;/strong&gt; If so, ask on the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;. If you can find the technical reason it didn&amp;rsquo;t work, please file an &lt;a href=&#34;https://github.com/vanilla/porter/issues&#34;&gt;issue on the GitHub repository&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Not supported?&lt;/strong&gt; You can request support be added on the GitHub repository. If you do this, &lt;em&gt;please be prepared to supply a copy of your forum database&lt;/em&gt; as a sample. For password support, first create a new user with a password you can share for testing purposes.&lt;/p&gt;
 

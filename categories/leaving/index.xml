@@ -68,13 +68,13 @@
 
 &lt;p&gt;If you plan to continue using Vanilla on your own, there&amp;rsquo;s both good news and bad. The good news is that we don&amp;rsquo;t maintain a private fork of Vanilla. Therefore, your data will mostly work as-is without further data conversions. The bad news is it&amp;rsquo;s a little more complicated than that.&lt;/p&gt;
 
-&lt;p&gt;First, you may need to build the &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;latest version&lt;/a&gt; of the code from GitHub (&lt;code&gt;master&lt;/code&gt; branch). Try the &lt;a href=&#34;https://vanillaforums.org/addon/vanilla-core&#34;&gt;latest stable release&lt;/a&gt; of Vanilla first, but if that doesn&amp;rsquo;t work, you&amp;rsquo;ll need to use Composer.&lt;/p&gt;
+&lt;p&gt;First, you may need to build the &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;latest version&lt;/a&gt; of the code from GitHub (&lt;code&gt;master&lt;/code&gt; branch). Try the &lt;a href=&#34;https://open.vanillaforums.com/addon/vanilla-core&#34;&gt;latest stable release&lt;/a&gt; of Vanilla first, but if that doesn&amp;rsquo;t work, you&amp;rsquo;ll need to use Composer.&lt;/p&gt;
 
 &lt;p&gt;Second, not all cloud-based addons are open source. There are open source alternatives for some, but you may need to convert the data yourself (We &lt;strong&gt;do&lt;/strong&gt; provide any cloud-based addon data in your database). One example of this is Badges.&lt;/p&gt;
 
 &lt;p&gt;Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You&amp;rsquo;ll want to unzip what we send you into your &lt;code&gt;/uploads&lt;/code&gt; folder if you&amp;rsquo;re moving to open source. You may need to find and delete any instance of &lt;code&gt;cf:&lt;/code&gt; or &lt;code&gt;~cf/&lt;/code&gt; in file paths stored in the database (try &lt;code&gt;GDN_User.Photo&lt;/code&gt; and &lt;code&gt;GDN_Media.Path&lt;/code&gt;). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the &lt;code&gt;/uploads&lt;/code&gt; folder (which you should not need to prepend).&lt;/p&gt;
 
-&lt;p&gt;You may find additional help from the &lt;a href=&#34;https://vanillaforums.org/discussions&#34;&gt;volunteer community&lt;/a&gt; and the &lt;a href=&#34;//docs.vanillaforums.com/developer/&#34;&gt;developer docs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You may find additional help from the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;volunteer community&lt;/a&gt; and the &lt;a href=&#34;//docs.vanillaforums.com/developer/&#34;&gt;developer docs&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
 

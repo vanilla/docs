@@ -371,7 +371,7 @@ $emailer-&amp;gt;send();
 
 &lt;h2 id=&#34;where-to-start&#34;&gt;Where to start&lt;/h2&gt;
 
-&lt;p&gt;Not sure what doc to read next? We recommend reading the &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins/quickstart&#34;&gt;plugin quickstart&lt;/a&gt;, then try &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/controllers&#34;&gt;Controller&lt;/a&gt; and &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/models&#34;&gt;Models&lt;/a&gt;. It&amp;rsquo;s a self-guided tour from there! Don&amp;rsquo;t forget to stop by the &lt;a href=&#34;http://vanillaforums.org/discussions&#34;&gt;community forum&lt;/a&gt; for guidance. When in doubt, dance.&lt;/p&gt;
+&lt;p&gt;Not sure what doc to read next? We recommend reading the &lt;a href=&#34;//docs.vanillaforums.com/developer/plugins/quickstart&#34;&gt;plugin quickstart&lt;/a&gt;, then try &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/controllers&#34;&gt;Controller&lt;/a&gt; and &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/models&#34;&gt;Models&lt;/a&gt;. It&amp;rsquo;s a self-guided tour from there! Don&amp;rsquo;t forget to stop by the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt; for guidance. When in doubt, dance.&lt;/p&gt;
 </description>
     </item>
     

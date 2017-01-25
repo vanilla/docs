@@ -33,7 +33,7 @@
 &lt;h2 id=&#34;installing-locales&#34;&gt;Installing locales&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download the locale you want from the &lt;a href=&#34;http://vanillaforums.org/addon/browse/locales/popular/2&#34;&gt;Addon Directory&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download the locale you want from the &lt;a href=&#34;https://open.vanillaforums.com/addon/browse/all/popular/recent/&#34;&gt;Addon Directory&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Upload the folder to your &lt;code&gt;locales&lt;/code&gt; folder.&lt;/li&gt;
 &lt;li&gt;In the Dashboard, go to &lt;code&gt;Addons &amp;gt; Locales&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Enable the locale.&lt;/li&gt;
@@ -42,7 +42,7 @@
 
 &lt;h2 id=&#34;using-multiple-locales&#34;&gt;Using multiple locales&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a href=&#34;http://vanillaforums.org/addon/multilingual-plugin&#34;&gt;Multilingual plugin&lt;/a&gt; allows each user select their preference from all enabled locales.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://open.vanillaforums.com/addon/multilingual-plugin&#34;&gt;Multilingual plugin&lt;/a&gt; allows each user select their preference from all enabled locales.&lt;/p&gt;
 
 &lt;h2 id=&#34;overriding-locales&#34;&gt;Overriding locales&lt;/h2&gt;
 
