@@ -814,7 +814,7 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
 
-&lt;p&gt;We will typically use your staging forum as the destination for your &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. For very large sites, we will need to prune back this data to a smaller size after your launch. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support huge staging datasets in the longer-term.&lt;/p&gt;
+&lt;p&gt;We do not typically use your staging forum as the destination for your &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. However, we can import a truncated dataset to your staging site for testing purposes. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support large staging datasets.&lt;/p&gt;
 
 &lt;h3 id=&#34;access-precautions&#34;&gt;Access precautions&lt;/h3&gt;
 
