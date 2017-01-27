@@ -30,26 +30,9 @@ Here's an example of a themehooks file that sets some config variables, adds loc
  */
 
 /**
- * Sets config variables on enabling MyThemeName, adds locale data to the view,
- * and adds a respond button to the discussion page.
+ * Adds locale data to the view, and adds a respond button to the discussion page.
  */
 class MyThemeNameThemeHooks extends Gdn_Plugin {
-
-    /**
-     * Sets some config settings for a modern layout with top-level
-     * categories displayed as headings.
-     *
-     * @return boolean Whether setup was successful.
-     */
-    public function setup() {
-        // Set some config settings for a modern layout with top-level categories displayed as headings.
-        saveToConfig(array(
-            'Vanilla.Discussions.Layout'     => 'modern',
-            'Vanilla.Categories.Layout'      => 'modern',
-            'Vanilla.Categories.DoHeadings'  => true,
-            ), null, true);
-        return true;
-    }
 
     /**
      * Fetches the current locale and sets the data for the theme view.

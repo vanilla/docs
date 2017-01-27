@@ -14,7 +14,7 @@ aliases:
 
 Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.
 
-[Download Vanilla Porter](http://vanillaforums.org/addon/porter-core)
+[Download Vanilla Porter](https://open.vanillaforums.com/addon/porter-core)
 
 Vanilla Porter is a tool that you can upload to your current web server to run in your web browser. It exports any platform to a generic format that the "Import" option in your new Vanilla Forum can read.
 
