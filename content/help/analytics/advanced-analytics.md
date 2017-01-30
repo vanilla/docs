@@ -1,15 +1,11 @@
 ---
 title: Advanced Analytics
-<<<<<<< HEAD
-=======
 tags: 
 - analytics
->>>>>>> master
 category: help
 menu:
   help:
     parent: analytics
-<<<<<<< HEAD
     weight: 81
 aliases:
 - /analytics/advanced-analytics
@@ -257,4 +253,3 @@ Average number of created posts grouped by active-users.
 * __Average Comments per Discussion__  
 Average number of created comments grouped by discussions.
 
->>>>>>> master
