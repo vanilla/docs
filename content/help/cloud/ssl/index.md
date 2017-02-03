@@ -34,6 +34,10 @@ Private keys start like this:
 
 3. The optional **Intermediate SSL Certificate** for your certificate issuing authority.
 
+### What kind of certificates can we use?
+
+Vanilla requires certificates from reputable CAs with a minimum expiry of 1 year. Vanilla **does not** currently support free certificate providers such as Lets Encrypt and ZeroSSl with short 3 month certificates.
+
 ### How to obtain your SSL certificates
 
 Usually, you'll get an SSL certificate in one of two ways:
