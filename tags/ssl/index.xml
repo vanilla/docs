@@ -41,6 +41,10 @@
 &lt;li&gt;&lt;p&gt;The optional &lt;strong&gt;Intermediate SSL Certificate&lt;/strong&gt; for your certificate issuing authority.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h3 id=&#34;what-kind-of-certificates-can-we-use&#34;&gt;What kind of certificates can we use?&lt;/h3&gt;
+
+&lt;p&gt;Vanilla requires certificates from reputable CAs with a minimum expiry of 1 year. Vanilla &lt;strong&gt;does not&lt;/strong&gt; currently support free certificate providers such as Lets Encrypt and ZeroSSl with short 3 month certificates.&lt;/p&gt;
+
 &lt;h3 id=&#34;how-to-obtain-your-ssl-certificates&#34;&gt;How to obtain your SSL certificates&lt;/h3&gt;
 
 &lt;p&gt;Usually, you&amp;rsquo;ll get an SSL certificate in one of two ways:&lt;/p&gt;
