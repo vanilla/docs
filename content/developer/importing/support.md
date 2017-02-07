@@ -25,8 +25,8 @@ Migration tools are available for the following platforms. All migration tools m
 * PunBB 1
 * IP.Board 3
 * XenForo
-* Joomla Kuena
-* Drupal Forum
+* Joomla Kunena
+* Drupal Advanced Forum
 * MyBB
 * esoTalk
 * Expression Engine
