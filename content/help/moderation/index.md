@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     identifier: moderation
-    weight: 60
+    weight: 7
 aliases:
 - /moderation
 ---

@@ -1,5 +1,5 @@
 ---
-title: Leaving the Cloud
+title: Cancellation
 categories:
 - Cloud
 - Leaving

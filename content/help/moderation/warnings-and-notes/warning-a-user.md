@@ -2,14 +2,13 @@
 title: Warning a User
 tags:
 - Features
-- Addons
 - Warnings and Notes
 category: help
 menu:
   help:
-    parent: addons-warnings-and-notes
+    parent: warnings
 aliases:
-- /addons/warnings-and-notes/warning-a-user
+- /moderation/warnings-and-notes/warning-a-user
 ---
 ## Warning a User
 

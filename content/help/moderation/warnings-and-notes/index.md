@@ -1,16 +1,15 @@
 ---
-title: Warnings & Notes
+title: Warnings and Notes
 tags:
 - Features
-- Addons
+- Moderation
 category: help
 menu:
   help:
-    parent: addons
-    identifier: addons-warnings-and-notes
-weight: 63
+    parent: moderation
+    identifier: warnings
 aliases:
-- /addons/warnings-and-notes
+- /moderation/warnings
 ---
 ## What are Warnings?
 

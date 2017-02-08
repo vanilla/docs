@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: multisite
-    weight: 100
+    weight: 17
 aliases:
 - /cloud/multisite
 ---

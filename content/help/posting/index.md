@@ -8,7 +8,7 @@ category: help
 menu:
   help:
     identifier: posting
-    weight: 100
+    weight: 18
 ---
 
 ## Coming soon!

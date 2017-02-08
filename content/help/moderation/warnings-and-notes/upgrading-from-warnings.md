@@ -2,14 +2,13 @@
 title: Upgrading from Warnings
 tags:
 - Features
-- Addons
 - Warnings and Notes
 category: help
 menu:
   help:
-    parent: addons-warnings-and-notes
+    parent: warnings
 aliases:
-- /addons/warnings-and-notes/upgrading-from-warnings
+- /moderation/warnings-and-notes/upgrading-from-warnings
 ---
 ## Warnings & Notes is version 2
 

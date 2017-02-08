@@ -3,8 +3,8 @@ title: Spam
 category: help
 menu:
   help:
-    identifier: spam
-    weight: 62
+    parent: moderation
+    identifier: moderation-spam
 aliases:
 - /moderation/spam
 ---

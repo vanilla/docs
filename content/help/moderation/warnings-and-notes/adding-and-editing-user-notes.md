@@ -2,14 +2,14 @@
 title: Adding and Editing User Notes
 tags:
 - Features
-- Addons
+
 - Warnings and Notes
 category: help
 menu:
   help:
-    parent: addons-warnings-and-notes
+    parent: warnings
 aliases:
-- /addons/warnings-and-notes/adding-and-editing-user-notes
+- /moderation/warnings-and-notes/adding-and-editing-user-notes
 ---
 ## Adding a Note
 

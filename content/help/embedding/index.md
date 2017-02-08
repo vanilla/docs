@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: embedding
-    weight: 100
+    weight: 16
 aliases:
 - /features/embedding
 ---

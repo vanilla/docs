@@ -9,6 +9,7 @@ menu:
   help:
     parent: addons-social
     identifier: addons-social-github
+    weight: 2
 ---
 
 ## Github

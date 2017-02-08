@@ -6,11 +6,11 @@ tags:
 category: help
 menu:
   help:
-    parent: addons
-    identifier: addons-reporting
-weight: 61
+    parent: moderation
+    identifier: moderation-reporting
+weight: 1
 aliases:
-- /addons/reporting
+- /moderation/reporting
 ---
 ## What is Reporting?
 

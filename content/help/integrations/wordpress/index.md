@@ -6,8 +6,8 @@ tags:
 category: help
 menu:
   help:
+    parent: integrations
     identifier: wordpress
-    weight: 100
 aliases:
 - /integrations/wordpress
 ---
