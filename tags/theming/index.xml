@@ -307,6 +307,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;Link to the drafts page.&lt;/p&gt;
 
+&lt;h3 id=&#34;function-activity-link&#34;&gt;Function: {activity_link}&lt;/h3&gt;
+
+&lt;p&gt;Link to the recent activity page.&lt;/p&gt;
+
 &lt;h3 id=&#34;function-forum-root-link&#34;&gt;Function: {forum_root_link}&lt;/h3&gt;
 
 &lt;p&gt;Link to the forum root page.&lt;/p&gt;
