@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     parent: forum-settings
-    weight: 31
+    weight: 1
 aliases:
 - /features/categories
 ---
@@ -18,7 +18,7 @@ aliases:
 Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
 You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to `/vanilla/settings/categories`.
 
-![Categories Navigation](/img/categories/categories-nav.png)
+![Categories Navigation](/img/help/categories/categories-nav.png)
 
 At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the "Recent Discussion" view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.
 
@@ -34,7 +34,7 @@ Before modifying your individual categories, you can choose how they will appear
 
 **The Mixed Layout** option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.
 
-![Add Categories](/img/categories/categories-add.png)
+![Add Categories](/img/help/categories/categories-add.png)
 
 ## Choosing How Categories Display
 

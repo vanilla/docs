@@ -6,8 +6,9 @@ tags:
 category: help
 menu:
   help:
+    parent: forum-settings
     identifier: embedding
-    weight: 16
+    weight: 2
 aliases:
 - /features/embedding
 ---

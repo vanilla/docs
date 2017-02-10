@@ -47,3 +47,11 @@ Pockets are placeholders where you can add snippets of HTML or Javascript. They 
 
  * [Using Pockets for Banner Ads](https://blog.vanillaforums.com/help/pockets-banner-ads/) 
  * [Video: Pockets: Adding Custom HTML and Javascript to Your Vanilla Forum](https://blog.vanillaforums.com/help/power-pockets-adding-custom-html-js-vanilla-forum/)
+
+### Customizing Theme HTML and CSS 
+
+Vanilla's base themes can be customized to match your website. More information can be found [here](custom-theme/).
+
+### Professional Services 
+
+If you don't have the time or resorces, Vanilla's PS team can customize a theme to your specifications. Pls contact your Customer Success Manager for more information. 
