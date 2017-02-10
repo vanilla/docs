@@ -12,7 +12,7 @@ aliases:
 - /addons/advanced-search
 ---
 
-## What Is Advanced Search?
+## Overview
 
 Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.
 
@@ -29,7 +29,7 @@ To enable Advanced Search, you will need to enable the addon and then make a cha
  * In the HTML tab, look for the following code  {searchbox}
  * Change that code to  {searchbox_advanced}
 
-### Using Advanced Search
+## Using Advanced Search
 
 Navigating to `/search` will bring you to a page with an expandable search bar. Clicking the arrow on the right side of the bar will show you all the extra parameters you have available for search:
 ![You can search threads by title, author, and tags. You can narrow results down to a specific category, and choose what discussion types to search.](https://images.v-cdn.net/docs/search_expanded.jpg)

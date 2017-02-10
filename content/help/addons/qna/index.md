@@ -12,14 +12,31 @@ aliases:
 - /addons/qna
 ---
 
+## Overview
+
+Vanilla supports question and answer type discussions. Q&A discussions differ in the following ways:
+
+ * When a question is answered, the member who asked the question will receive a notification and will be prompted to indicate if the answer answered the question or not.  
+ * Valid answers are highlighted and displayed at the top of the discussion list. 
+ * Members who answer questions will receive badges (if badges are turned on). 
+ * A shortcut can be displayed in the side menu to show all unanswered questions. 
+
+### Enabling Q&A
+
+The Q&A addon can be enabled from the Dashboard on any plan level. You can find it in the list of addons by searching for Q&A.
+
+### Configuration
+
+There is only one setting for the Q&A addon. You can decide if reputation points should be awarded to members for answering questions.
+
 ## Using Questions and Answers
 
-If you’re building a support community, the Questions and Answers plugin adds essential features to help you manage your user’s inquiries. The plugin can be enabled from the Dashboard on any plan level. You can find it in the list of addons by searching for Q&A. Once it’s enabled, it will add an option to the “New Discussion” button on your forum:
+Q&A adds an option to the “New Discussion” button on your forum:
 
 ![The arrow to the right of the "New Discussion" button expands the menu, revealing the "Ask a Question" option](https://images.v-cdn.net/docs/QNA_discussion_dropdown.jpg)
 
 Creating a question will create status labels in the discussion view.
-![Status labels appear next to thread titles](https://images.v-cdn.net/docs/QNA_status_label.jpg)
+![Status labels appear next to thread titles](https://images.v-cdn.net/docs/QNA_status_labels.jpg)
 
 Users will receive pop up notifications when their questions have new comments, prompting them to mark a post as the solution.
 
@@ -31,7 +48,7 @@ In your side navigation, you’ll notice a new option:
 
 Navigating to `/discussions/unanswered` will allow you to see all the questions that still need attention in your community.
 
-## Restricting Q&A
+### Restricting Q&A
 
 You can set the ability to create questions with category permissions. When creating or editing a category, check the option “This category has custom permissions.” This will reveal the “Discussion Type” options.
 
@@ -41,8 +58,13 @@ You can choose to disable discussions in a category, which will change the “Ne
 
 Discussions that have already been created can be changed into questions by Moderators and Admins. Simply use the cogwheel menu on a post, and select Q&A:
 
-![choosing the Q&A option in the cogwheel menu will open a pop-up that allows you to change the discussions type.](https://images.v-cdn.net/docs/QNA_converting_discussions.jpg)
+![Choosing the Q&A option in the cogwheel menu will open a pop-up that allows you to change the discussions type.](https://images.v-cdn.net/docs/QNA_converting_discussions.jpg)
 
-## Customizing Q&A
+### Customizing Q&A
 
-Q&A can be easily themed to match the look and feel of your community. We have some theme tips on our blog to help you get started: https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-css-tip-modifying-q-a/
+Q&A can be easily customized to match the look and feel of your community. We have some theme tips on our blog to help you get started: https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-css-tip-modifying-q-a/
+
+## Additional Resources:
+
+ * [Video: Creating a Q&A Community](https://www.youtube.com/watch?v=zBwG0Fm4Xoc)
+ * [Blog: Modifying Questions and Answers](https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-css-tip-modifying-q-a/)
