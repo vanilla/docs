@@ -19,7 +19,7 @@ The master view for your forum is the wrapper for each page in your forum. Often
 To override the default master view:
 
 1. Create a new file called default.master.tpl (or default.master.php)
-2. Place it in the view folder in your theme folder (i.e., /themes/your_theme_name/design/custom.css)
+2. Place it in the views folder in your theme folder (i.e., /themes/your_theme_name/views/)
 
 If you're new to this, it's probably a good idea to copy the content of /applications/dashboard/views/default.master.tpl into your theme's master view and manipulate it from there.
 
