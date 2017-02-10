@@ -11,6 +11,7 @@ category: help
 menu:
   help:
     parent: posting
+    identifier: posting-smart-embed
 ---
 
 ## Smart Embed
