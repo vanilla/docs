@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: sso
-    weight: 100
+    weight: 9
 aliases:
 - /features/sso
 ---

@@ -1,5 +1,5 @@
 ---
-title: Releases
+title: Release Notes
 tags:
 - Cloud
 - Releases
@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: releases
-    weight: 100
+    weight: 20
 aliases:
 - /cloud/releases
 ---

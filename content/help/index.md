@@ -3,7 +3,7 @@ title: Help and Training
 tags:
 - Training
 category: help
-aliases: []
+aliases: 
 ---
 
 ## Welcome!
