@@ -176,7 +176,7 @@
       <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>
 
-&lt;h2 id=&#34;what-is-advanced-search&#34;&gt;What Is Advanced Search?&lt;/h2&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.&lt;/p&gt;
 
@@ -197,7 +197,7 @@
 &lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;using-advanced-search&#34;&gt;Using Advanced Search&lt;/h3&gt;
+&lt;h2 id=&#34;using-advanced-search&#34;&gt;Using Advanced Search&lt;/h2&gt;
 
 &lt;p&gt;Navigating to &lt;code&gt;/search&lt;/code&gt; will bring you to a page with an expandable search bar. Clicking the arrow on the right side of the bar will show you all the extra parameters you have available for search:
 &lt;img src=&#34;https://images.v-cdn.net/docs/search_expanded.jpg&#34; alt=&#34;You can search threads by title, author, and tags. You can narrow results down to a specific category, and choose what discussion types to search.&#34; /&gt;&lt;/p&gt;
