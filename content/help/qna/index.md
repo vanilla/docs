@@ -30,3 +30,7 @@ The Q&A addon must be turned on to enable Q&A. It can be found in the Dashboard 
 ## Addon Settings
 
 There is only one setting for the Q&A plugin:  you can decided if reputation points should be awarded to members for answering questions. 
+
+Additional Resources:
+
+ * [Video: Creating a Q&A Community](https://www.youtube.com/watch?v=zBwG0Fm4Xoc)

@@ -42,3 +42,8 @@ To edit the available idea statuses, navigate to the 'Idea Statuses' page from t
 You can change the status of an idea by navigating to the idea in the forum and clicking on its options dropdown menu. You'll find an 'Idea Status' option there. From there, you can select a new status for the idea. You can also add notes to explain the status change. For example, if an idea is marked as a duplicate of another, you may want to link to the idea it is a duplicate of. Users need to have the Vanilla.Moderation.Manage permission in order to change the status on an idea.
 
 Changing an idea's status will send out notifications to the idea author and the idea's voters if they have enabled these notifications for their accounts.
+
+
+Additional Resources:
+
+ * [Video: How to Use Ideation](https://www.youtube.com/watch?v=o5YW4pTafoM)

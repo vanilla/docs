@@ -32,3 +32,8 @@ Here are the configurable settings for HTML emails. From the settings page, you 
 * Page Color: The color of the foreground container of the email.
 * Button Text Color: The text color of the button. Note that depending on its content, an email may not contain a button.
 * Button Background Color: The background color of the button. Note that depending on its content, an email may not contain a button.
+
+
+Additional Resouces:
+
+ * [Blog: HTML Emails](https://blog.vanillaforums.com/help/introducing-html-emails-for-system-messages/)

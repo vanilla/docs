@@ -107,3 +107,6 @@ Upon deleting a category, you will be prompted to select a replacement category 
 
 **It is not possible to recover a deleted category.**  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.    
 
+Additional Resources:
+
+ * [Blog: How to Structure Categories](https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/)

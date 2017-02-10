@@ -63,3 +63,7 @@ While we do support robust embedding (iframe) solutions, we strongly recommend a
 ### SSL certificates
 
 We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on [providing SSL certificates](/help/cloud/ssl).
+
+Additional Resources:
+
+ * [Blog: Multi-site Deployment of Vanilla](https://blog.vanillaforums.com/features/multi-forum-deployment-of-vanilla/)
