@@ -803,28 +803,6 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     </item>
     
     <item>
-      <title>Theming Services</title>
-      <link>//docs.vanillaforums.com/help/cloud/theming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/cloud/theming/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;theming-services-overview&#34;&gt;Theming Services Overview&lt;/h2&gt;
-
-&lt;p&gt;Vanilla provides excellent, efficient, and performant theming solutions that are a terrific value. We offer these services exclusively on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;higher plan levels&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Contact your customer success manager with your needs. We run the gamut from simple style matching (header, footer, color pallette) to fully customized designs from detailed mockups. Our estimates include the cost of revisions and deploying the theme to our infrastructure.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Views / HTML</title>
       <link>//docs.vanillaforums.com/developer/theming/views/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1279,6 +1257,73 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
                     &lt;/td&gt;
                     
                     &lt;td class=&#34;parameter-description&#34;&gt;Element to wrap around each link in the menu&lt;/td&gt;
+                &lt;/tr&gt;
+                
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+    
+    
+
+</description>
+    </item>
+    
+    <item>
+      <title>{event}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</guid>
+      <description>
+
+&lt;h2 id=&#34;function-event&#34;&gt;Function: &lt;code&gt;{event}&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{event name=&amp;quot;string&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fire an event with the specified &lt;code&gt;name&lt;/code&gt;. &lt;a href=&#34;../../../developers/plugins/#events-%26-handlers&#34;&gt;Learn more about events in Vanilla.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
+
+
+
+
+    
+    
+    
+    
+        
+        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Parameter&lt;/th&gt;
+                    &lt;th&gt;Type&lt;/th&gt;
+                    
+                    &lt;th&gt;Default&lt;/th&gt;
+                    
+                    &lt;th&gt;Description&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        
+            &lt;tbody&gt;
+                
+                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
+                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
+                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
+                        
+                            string
+                        
+                    &lt;/code&gt;&lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-default&#34;&gt;
+                        
+                            none
+                        
+                    &lt;/td&gt;
+                    
+                    &lt;td class=&#34;parameter-description&#34;&gt;Name of the event to fire&lt;/td&gt;
                 &lt;/tr&gt;
                 
             &lt;/tbody&gt;

@@ -9,10 +9,10 @@
     
     <item>
       <title>Accessibility</title>
-      <link>//docs.vanillaforums.com/help/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/appearance/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -99,10 +99,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -164,10 +164,10 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -216,10 +216,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -282,6 +282,61 @@
 
 &lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
 
+&lt;p&gt;Available as on certain plans or as an add-on, Advanced Aanalytics give you further insights into your community.&lt;/p&gt;
+
+&lt;p&gt;! &lt;a href=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
+
+&lt;p&gt;Traffic statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; A count on unique users that logged in to the community.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unique Visits by Role Type:&lt;/strong&gt; A count of total visits for each user role.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page Views:&lt;/strong&gt; A count of total page views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New Users:&lt;/strong&gt; A count of all new registrants to the community.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;posting&#34;&gt;Posting&lt;/h3&gt;
+
+&lt;p&gt;Posting statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Discussions:&lt;/strong&gt; A count of all new discussions created.
+ *&lt;strong&gt;Comments:&lt;/strong&gt; A count of all new comments created.
+ *&lt;strong&gt;Posts:&lt;/strong&gt; A count of all posts (discussion post + comments) created.
+ *&lt;strong&gt;Posts by type:&lt;/strong&gt; A count of discussions and of posts created.
+ *&lt;strong&gt;Posts by Category:&lt;/strong&gt; A count of posts (discussions + comments) for each category.
+ *&lt;strong&gt;Contributors:&lt;/strong&gt; A count of unique contributors (created a discussion or made a comment).
+ *&lt;strong&gt;Contributors by Category:&lt;/strong&gt; A count of unique contributors in each category.
+ *&lt;strong&gt;Contributors by Role Type:&lt;/strong&gt; A count of unique contributors by role type.&lt;/p&gt;
+
+&lt;h3 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h3&gt;
+
+&lt;p&gt;Q &amp;amp; A statistics can be filtered by time period and category. When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Questions Asked:&lt;/strong&gt; The number of questions created within the time period.
+ *&lt;strong&gt;Questions Answered:&lt;/strong&gt; The number of questions answered within the time period, including answers to questions that were created outside the time period selected.
+ *&lt;strong&gt;Answers Accepted:&lt;/strong&gt; The number of answers accepted by either the user who created the question or by a moderator/admin. This includes acceptance of questions created outside of the time period selected.
+ *&lt;strong&gt;Average Time to Ansnwer:&lt;/strong&gt; The average time taken for a question that was answered within the time period to have been answered.  Questions that were not answered are not included.
+ *&lt;strong&gt;Average Time to Accept:&lt;/strong&gt; The average time taken for a question that was accepted to have been accepted. Questions that were not answered or not accepted are not included.&lt;/p&gt;
+
+&lt;h3 id=&#34;engagement&#34;&gt;Engagement&lt;/h3&gt;
+
+&lt;p&gt;Engagement statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Visits per Active Users:&lt;/strong&gt; The total number of visits divided by the number of active users.&lt;/p&gt;
+
+&lt;h1 id=&#34;average-posts-per-active-users-the-total-number-of-posts-divided-by-the-number-of-active-users&#34;&gt;*&lt;strong&gt;Average Posts per Active Users:&lt;/strong&gt; The total number of posts divided by the number of active users.&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;weight: 101
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aliases:&lt;/p&gt;
+
+&lt;h2 id=&#34;features-analytics-advanced-analytics&#34;&gt;- /features/analytics/advanced-analytics&lt;/h2&gt;
+
+&lt;h2 id=&#34;advanced-analytics-1&#34;&gt;Advanced Analytics&lt;/h2&gt;
+
 &lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
@@ -301,7 +356,7 @@ Leaderboards are tables showing the ranking of specific items for the selected t
 Graphs can come in multiple forms! They always use information fetched using the selected time range. Line, Area, and Bar graphs use the selected interval to group the fetched information. Pie charts represent multiple values for the whole selected time range.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;traffic&#34;&gt;Traffic&lt;/h2&gt;
+&lt;h2 id=&#34;traffic-1&#34;&gt;Traffic&lt;/h2&gt;
 
 &lt;p&gt;Traffic analytics can be filtered by date and by category and in some cases by Role.  The analytics presented include:&lt;/p&gt;
 
@@ -344,7 +399,7 @@ Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
 Number of new users.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;posting&#34;&gt;Posting&lt;/h2&gt;
+&lt;h2 id=&#34;posting-1&#34;&gt;Posting&lt;/h2&gt;
 
 &lt;p&gt;Posting analytics can be filtered by date and by category and include:&lt;/p&gt;
 
@@ -402,7 +457,7 @@ Number of distinct members, having created a post, grouped by categories.&lt;/p&
 Number of distinct members, having created a post, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
+&lt;h2 id=&#34;q-a-1&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
 
 &lt;p&gt;Q &amp;amp; A analytics can be filtered by time period and category. &lt;strong&gt;NB:&lt;/strong&gt; When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
 
@@ -451,7 +506,7 @@ Number of questions having at least one answer&lt;/p&gt;&lt;/li&gt;
 Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;engagement&#34;&gt;Engagement&lt;/h2&gt;
+&lt;h2 id=&#34;engagement-1&#34;&gt;Engagement&lt;/h2&gt;
 
 &lt;p&gt;Engagement analytics can be filtered by date and by category and include:&lt;/p&gt;
 
@@ -503,174 +558,136 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     </item>
     
     <item>
-      <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
+      <title>Advanced Search</title>
+      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>
 
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
 
-&lt;p&gt;The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs &lt;a href=&#34;http://easyxdm.net/wp/&#34;&gt;easyXDM&lt;/a&gt; and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.&lt;/p&gt;
+&lt;p&gt;Advanced search will enhance search functionality:&lt;/p&gt;
 
-&lt;h2 id=&#34;setting-up-advanced-embedding&#34;&gt;Setting Up Advanced Embedding&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Better indexing of content&lt;/li&gt;
+&lt;li&gt;The ability to apply filters to searches&lt;/li&gt;
+&lt;li&gt;Auto-complete of results as the user types the search terms&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Enable forum embedding via the Dashboard. Then set &lt;code&gt;Garden.Embed.Allow&lt;/code&gt; to &lt;code&gt;2&lt;/code&gt; in your config. &lt;em&gt;Cloud customers will have this done by support staff&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Include easyXDM: &lt;code&gt;/js/easyXDM/easyXDM.min.js&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Include Vanilla&amp;rsquo;s advanced embed script: &lt;code&gt;/js/vanilla.embed.js&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create a div to contain Vanilla and give it an ID.&lt;/li&gt;
-&lt;li&gt;Call &lt;code&gt;Vanilla.embed({options})&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;On the addons page of the Dashboard, enable Advanced Search&lt;/li&gt;
+&lt;li&gt;Under the Appearance section of the Dashboard, go to the Customer Theme page&lt;/li&gt;
+&lt;li&gt;In the HTML tab, look for the following code  {searchbox}&lt;/li&gt;
+&lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&#34;options&#34;&gt;Options&lt;/h3&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
 
-&lt;p&gt;Vanilla.embed() takes an associative array of options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Advanced search is not available on all plan levels.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;root&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The root url of your Vanilla forum. Example: &lt;a href=&#34;http://community.yoursite.com&#34;&gt;http://community.yoursite.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Additional Resources:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;container&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The ID or DOM element of the container for Vanilla.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;initialPath&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. The initial path to browse to when embedding the forum. Our example below demonstrates using the hash part of the URL to automatically set this, e.g. &lt;code&gt;site.com/embedpage#/categories/some-category&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sso&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. An SSO string that will automatically sign the user into Vanilla. See &lt;a href=&#34;https://github.com/vanillaforums/jsConnectPHP/blob/master/functions.jsconnect.php#L130&#34;&gt;our example code&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;autoStart&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. Whether or not to start the embed when &lt;code&gt;embed()&lt;/code&gt; is called. If this is false then you must call embed.start() to start the embed. Default: &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;onReady()&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A callback function to call when the embed is ready.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;notifyLocation(path)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that will be called when the url of the embedded iframe changes. You can use this callback to update your history. By default this function adds the path as the current location&amp;rsquo;s # fragment. Combine this with initialPath to implement your own custom history.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;height(x)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that is called to set the height of the embedded iframe. If you override this method then you can access the embedded iframe using &lt;code&gt;this.iframe&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;start()&lt;/code&gt; Start the embed. Only call this method if you set autoStart to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;setLocation(path)&lt;/code&gt; Manually set the location of the embedded iframe. Just specify the path and not the full domain of the embed.&lt;/p&gt;
-
-&lt;h2 id=&#34;custom-callbacks&#34;&gt;Custom Callbacks&lt;/h2&gt;
-
-&lt;p&gt;The embed API allows custom Javascript to be called between the parent and child iframes.&lt;/p&gt;
-
-&lt;h2 id=&#34;exposing-a-method-to-vanilla&#34;&gt;Exposing a method to Vanilla&lt;/h2&gt;
-
-&lt;p&gt;You can expose a method to the child iframe with the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.fn.functionName = function(args,...) { … }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The embed requires all functions on both sides to be explicitly registered to prevent a third party hijacking the embed and calling functions with unforeseen consequences.&lt;/p&gt;
-
-&lt;p&gt;Vanilla embed supports a callback function on both ends of the embed. If you want to support a callback function then declare it as the last argument of your function. When the other endpoint of the embed calls your function using &lt;code&gt;callRemote()&lt;/code&gt; it can then specify a callback and the framework will handle calling the callback across the domain.&lt;/p&gt;
-
-&lt;h2 id=&#34;calling-a-method-in-vanilla&#34;&gt;Calling a method in Vanilla&lt;/h2&gt;
-
-&lt;p&gt;You can call a method in Vanilla with the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.callRemote(&amp;quot;functionName&amp;quot;, args [, callback]);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you supply the callback argument to &lt;code&gt;callRemote()&lt;/code&gt; then it will be supplied as the last argument to the remote function. It is the remote function’s job to call the function. Keep in mind that using &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt;, etc. to set a context for the function will not work as a context cannot be passed across the domain.&lt;/p&gt;
-
-&lt;h3 id=&#34;functions-you-can-call-on-vanilla&#34;&gt;Functions you can call on Vanilla&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;Vanilla.embed.signout()&lt;/code&gt; Calling this function will sign the user out of Vanilla. It won’t refresh the page so you may want to do that afterwards.&lt;/p&gt;
-
-&lt;h2 id=&#34;example-implementation&#34;&gt;Example implementation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-   &amp;lt;head&amp;gt;
-   	  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-   	  &amp;lt;title&amp;gt;Sample Embed&amp;lt;/title&amp;gt;
-   	  &amp;lt;style&amp;gt;
-         body {
-            margin: 0;
-         }
-         #embedVanilla iframe {
-            width: 100%;
-         }
-      &amp;lt;/style&amp;gt;
-      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/easyXDM/easyXDM.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/vanilla.embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-   &amp;lt;/head&amp;gt;
-   &amp;lt;body style=&amp;quot;background: #ff6600;&amp;quot;&amp;gt;
-      &amp;lt;div style=&amp;quot;height: 50px&amp;quot;&amp;gt;foo&amp;lt;/div&amp;gt;
-      &amp;lt;div id=&amp;quot;embedVanilla&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-      &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-        // Help older browsers parse JSON.
-        easyXDM.DomHelper.requiresJSON(&amp;quot;js/easyXDM/json2.js&amp;quot;);
-
-        var vanillaEmbed = new Vanilla.embed({
-          // The element or its ID.
-          container: &amp;quot;embedVanilla&amp;quot;,
-          // This is the location of the forum.
-          root: &amp;quot;http://yoursite.local&amp;quot;,
-          // initial path, please start it with a &amp;quot;/&amp;quot;
-          initialPath: window.location.hash.substring(1),
-          onReady: function() {
-            // A lot of the functions need to be done after the embed is ready.
-
-            // This how you set the location of the embedded frame.
-            // vanillaEmbed.setLocation(&#39;/categories&#39;);
-          }
-        });
-      &amp;lt;/script&amp;gt;
-   &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/&#34;&gt;Blog: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gLLtlTsC4h8&#34;&gt;Video: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
     <item>
-      <title>Analytics</title>
-      <link>//docs.vanillaforums.com/help/analytics/</link>
+      <title>Advanced Settings</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/analytics/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
       <description>
 
-&lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
 
-&lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
-
-&lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
-
-&lt;p&gt;The site overview will present you with the following:&lt;/p&gt;
+&lt;p&gt;The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Number of page views generated for the time period&lt;/li&gt;
-&lt;li&gt;Number of new users that have joined the community for the time period&lt;/li&gt;
-&lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
-&lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
+&lt;li&gt;Discussions per page  (the number of discussions displayed on a page)&lt;/li&gt;
+&lt;li&gt;Comments per page (the number of comments displayed on a page)&lt;/li&gt;
+&lt;li&gt;Editing time limit (this can be used to prevent edits after a certain time period.  Some user  Roles and permissions will may override this limit)&lt;/li&gt;
+&lt;li&gt;Enable checkboxes (this&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Appearance</title>
+      <link>//docs.vanillaforums.com/help/appearance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/appearance/</guid>
+      <description>
 
-&lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
+&lt;h2 id=&#34;customizing-your-forum-s-appearance&#34;&gt;Customizing Your Forum&amp;rsquo;s Appearance&lt;/h2&gt;
 
-&lt;p&gt;Vanilla will also create a rolling table of data on the following:&lt;/p&gt;
+&lt;p&gt;Your community should have a unique look and feel to match your website, app or product.  The appearance section of your Dashboard lets you control how your community forum will look.&lt;/p&gt;
+
+&lt;h3 id=&#34;site-title-and-logo&#34;&gt;Site Title and Logo&lt;/h3&gt;
+
+&lt;p&gt;In your Dashboard under Appearance &amp;gt; Banner you can set the following:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Most Active Users&lt;/li&gt;
-&lt;li&gt;Most popular discussions discussions&lt;/li&gt;
+&lt;li&gt;Home page title&lt;/li&gt;
+&lt;li&gt;Site description&lt;/li&gt;
+&lt;li&gt;Banner title (what is displayed in the browser title bar)&lt;/li&gt;
+&lt;li&gt;Banner logo&lt;/li&gt;
+&lt;li&gt;Mobile banner logo&lt;/li&gt;
+&lt;li&gt;Favicon  (the small logo that appears on the browser tab)&lt;/li&gt;
+&lt;li&gt;Share image (an image that is sometimes displayed when someone posts a link to your community to a social media site)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This too can be modified by changing the time period, you select to view.&lt;/p&gt;
+&lt;h3 id=&#34;homepage&#34;&gt;Homepage&lt;/h3&gt;
+
+&lt;p&gt;In your Dashboard under Appearance &amp;gt; Homepage you can set the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The default homepage view. Typically, the Discussions view is the best choice. If your community is very large, the Categories view might make more sense.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Modern vs table layout. A table layout looks more like traditional forums.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;base-theme&#34;&gt;Base Theme&lt;/h3&gt;
+
+&lt;p&gt;Under Appearance &amp;gt; Themes you can select a base theme for both desktop and mobile devices. All base themes can be further customized by modifying the HTML and overriding the CSS.&lt;/p&gt;
+
+&lt;h3 id=&#34;avatars&#34;&gt;Avatars&lt;/h3&gt;
+
+&lt;p&gt;The Appearance &amp;gt; Avatars page lets you set a default avatar (profile picture).   You can also enable the Vanillicon plugin to create a unique avatar for each member or the Gravatar plugin to use members&amp;rsquo; Gravatars.&lt;/p&gt;
+
+&lt;h3 id=&#34;pockets&#34;&gt;Pockets&lt;/h3&gt;
+
+&lt;p&gt;Pockets are placeholders where you can add snippets of HTML or Javascript. They are useful for placing ads or widgets throughout your community.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/pockets-banner-ads/&#34;&gt;Using Pockets for Banner Ads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/power-pockets-adding-custom-html-js-vanilla-forum/&#34;&gt;Video: Pockets: Adding Custom HTML and Javascript to Your Vanilla Forum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;customizing-theme-html-and-css&#34;&gt;Customizing Theme HTML and CSS&lt;/h3&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s base themes can be customized to match your website. More information can be found &lt;a href=&#34;custom-theme/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;professional-services&#34;&gt;Professional Services&lt;/h3&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t have the time or resorces, Vanilla&amp;rsquo;s PS team can customize a theme to your specifications. Pls contact your Customer Success Manager for more information.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -685,10 +702,10 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -720,17 +737,98 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     </item>
     
     <item>
-      <title>Categories</title>
-      <link>//docs.vanillaforums.com/help/categories/</link>
+      <title>Cancellation</title>
+      <link>//docs.vanillaforums.com/help/cloud/leaving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/categories/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/leaving/</guid>
+      <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
+&lt;h2 id=&#34;the-worst-day&#34;&gt;The Worst Day&lt;/h2&gt;
+
+&lt;p&gt;Hey, it happens. On rare occassion, we need to go our separate ways. We hate to see any customer leave, but it&amp;rsquo;s important any cloud providers you use have a strong data ownership policy. Ours is pretty simple: &lt;strong&gt;It&amp;rsquo;s your data.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-your-data&#34;&gt;Getting your data&lt;/h2&gt;
+
+&lt;p&gt;There are four custom components to any forum:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Database&lt;/li&gt;
+&lt;li&gt;Uploaded files (avatars, images, etc)&lt;/li&gt;
+&lt;li&gt;Theme or plugin done as a &lt;em&gt;customer-specific&lt;/em&gt; customization&lt;/li&gt;
+&lt;li&gt;Config&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of these, the only one we do not ever provide is the config. This is simply because it would not help you at all (useless data &amp;amp; incompatible anyway).&lt;/p&gt;
+
+&lt;p&gt;We only provide custom themes or plugins that you created yourself, or that we created from scratch on your behalf under contract. If you customized one of our &lt;em&gt;proprietary&lt;/em&gt; cloud themes via your Dashboard, we cannot assist with transitioning that theme.&lt;/p&gt;
+
+&lt;p&gt;We provide complete database backups and uploaded files. There is no charge for this, with the reasonable caveats explained below. However, your billing must be up to date without exception.&lt;/p&gt;
+
+&lt;h3 id=&#34;database&#34;&gt;Database&lt;/h3&gt;
+
+&lt;p&gt;We require two business days notice to get a database backup (with exceptions). They are provided as a standard MySQL dump. No other format is provided, because this format lets you create any &lt;em&gt;other&lt;/em&gt; format you want; it&amp;rsquo;s the master tape, if you will.&lt;/p&gt;
+
+&lt;p&gt;Here is the exception: if your site exceeds any of the following limits, we may need up to a week to shedule your backup. We might be able to do it quicker, we&amp;rsquo;re just playing it safe here because it&amp;rsquo;s a lot of data to move around.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 million users&lt;/li&gt;
+&lt;li&gt;10 million discussions&lt;/li&gt;
+&lt;li&gt;100 million comments&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Barring your objection, we may truncate your activity or log tables because they&amp;rsquo;re not very helpful and can make the dump exponentially larger (and therefore more difficult for you).&lt;/p&gt;
+
+&lt;p&gt;We only provide one database dump per month. If you are leaving, we will make a one-time exception so that you can get an advanced copy for preparation. We can coordinate a final backup for a specific time of a weekday during the hours 10am-4pm Eastern time if requested. Doing so outside of those hours may cost a fee to schedule staff to be available.&lt;/p&gt;
+
+&lt;h3 id=&#34;uploaded-files&#34;&gt;Uploaded files&lt;/h3&gt;
+
+&lt;p&gt;We typically need two working days&amp;rsquo; notice to provide your uploaded files. For sites with exceptional amounts of files (in excess of 10GB) we may require a week&amp;rsquo;s notice.&lt;/p&gt;
+
+&lt;p&gt;Please only request this once. We generally cannot coordinate a &amp;ldquo;final backup&amp;rdquo; of these files for a specific time (downloading from a CDN is very slow) unless it&amp;rsquo;s very small.&lt;/p&gt;
+
+&lt;h2 id=&#34;open-source&#34;&gt;Open source&lt;/h2&gt;
+
+&lt;p&gt;If you plan to continue using Vanilla on your own, there&amp;rsquo;s both good news and bad. The good news is that we don&amp;rsquo;t maintain a private fork of Vanilla. Therefore, your data will mostly work as-is without further data conversions. The bad news is it&amp;rsquo;s a little more complicated than that.&lt;/p&gt;
+
+&lt;p&gt;First, you may need to build the &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;latest version&lt;/a&gt; of the code from GitHub (&lt;code&gt;master&lt;/code&gt; branch). Try the &lt;a href=&#34;https://open.vanillaforums.com/addon/vanilla-core&#34;&gt;latest stable release&lt;/a&gt; of Vanilla first, but if that doesn&amp;rsquo;t work, you&amp;rsquo;ll need to use Composer.&lt;/p&gt;
+
+&lt;p&gt;Second, not all cloud-based addons are open source. There are open source alternatives for some, but you may need to convert the data yourself (We &lt;strong&gt;do&lt;/strong&gt; provide any cloud-based addon data in your database). One example of this is Badges.&lt;/p&gt;
+
+&lt;p&gt;Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You&amp;rsquo;ll want to unzip what we send you into your &lt;code&gt;/uploads&lt;/code&gt; folder if you&amp;rsquo;re moving to open source. You may need to find and delete any instance of &lt;code&gt;cf:&lt;/code&gt; or &lt;code&gt;~cf/&lt;/code&gt; in file paths stored in the database (try &lt;code&gt;GDN_User.Photo&lt;/code&gt; and &lt;code&gt;GDN_Media.Path&lt;/code&gt;). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the &lt;code&gt;/uploads&lt;/code&gt; folder (which you should not need to prepend).&lt;/p&gt;
+
+&lt;p&gt;You may find additional help from the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;volunteer community&lt;/a&gt; and the &lt;a href=&#34;//docs.vanillaforums.com/developer/&#34;&gt;developer docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;We do not provide support for leaving the cloud beyond this document and delivering your data as promised. It&amp;rsquo;s a hard goodbye, but if you roll up your sleeves, we&amp;rsquo;re confident you&amp;rsquo;ll have the tools you need to build your own future.&lt;/p&gt;
+
+&lt;p&gt;That said, never forget: We offer free migrations from Vanilla open source to cloud if you ever want to return.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Categories</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/categories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/forum-settings/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-categories&#34;&gt;What Are Categories&lt;/h2&gt;
 
 &lt;p&gt;Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
 You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to &lt;code&gt;/vanilla/settings/categories&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-nav.png&#34; alt=&#34;Categories Navigation&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
 
 &lt;h2 id=&#34;choosing-your-category-layout&#34;&gt;Choosing Your Category Layout&lt;/h2&gt;
 
@@ -741,6 +839,8 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;&lt;strong&gt;The Table Layout&lt;/strong&gt; shows discussion and comment totals as columns, along with user avatar and the thread title of the most recent post in the section.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The Mixed Layout&lt;/strong&gt; option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-add.png&#34; alt=&#34;Add Categories&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;choosing-how-categories-display&#34;&gt;Choosing How Categories Display&lt;/h2&gt;
 
@@ -809,28 +909,12 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/delete_warning.png&#34; alt=&#34;The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;It is not possible to recover a deleted category.&lt;/strong&gt;  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cloud Services</title>
-      <link>//docs.vanillaforums.com/help/cloud/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/cloud/</guid>
-      <description>
 
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
+&lt;p&gt;Additional Resources:&lt;/p&gt;
 
-&lt;h2 id=&#34;cloud-services-overview&#34;&gt;Cloud Services Overview&lt;/h2&gt;
-
-&lt;p&gt;This section details services and processes offered exclusively to clients of our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;cloud service&lt;/a&gt;. It includes workflows between Vanilla Forums and our clients, suggestions for getting the most out of your services, and expectations for how services will be delivered and communicated.&lt;/p&gt;
-
-&lt;p&gt;If you are a cloud client and have any questions, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt;, your account representative, or your customer success manager if one has been assigned to you.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/&#34;&gt;Blog: How to Structure Categories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -867,52 +951,6 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;If you&amp;rsquo;d like to use a local install of Vanilla for testing, please use the &lt;code&gt;master&lt;/code&gt; branch from our &lt;a href=&#34;https://github.com/vanilla/vanilla&#34;&gt;main repository&lt;/a&gt;. Please follow the installation instruction in the README.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, we are not able to provide cloud-exclusive addons for local installation. However, some additional addons may be found in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;addons repository&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Curating with Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;curating-with-reactions&#34;&gt;Curating with Reactions&lt;/h2&gt;
-
-&lt;p&gt;Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.&lt;/p&gt;
-
-&lt;p&gt;Any of the thresholds or increment values mentioned in this document can be modified via support.&lt;/p&gt;
-
-&lt;h2 id=&#34;promoting-content&#34;&gt;Promoting content&lt;/h2&gt;
-
-&lt;p&gt;Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it. It assigns five points to the discussion or comment. The user that made the post receives the number of points indicated under that reaction in your Dashboard.&lt;/p&gt;
-
-&lt;p&gt;Discussions or comments with five or more points assigned to it will be added to the Best Of page and will get the &amp;ldquo;promoted&amp;rdquo; CSS class added to them. These points can come from any type of reaction.&lt;/p&gt;
-
-&lt;p&gt;After content is added to the Best Of page, it is never removed, no matter what its future point total is. The &amp;ldquo;promoted&amp;rdquo; CSS class is reevaluated as point totals change. You can use this special class to style promoted content different (like highlighting it with a special background color).&lt;/p&gt;
-
-&lt;h2 id=&#34;burying-content&#34;&gt;Burying content&lt;/h2&gt;
-
-&lt;p&gt;Discussions and comments that reach a score of -5 or lower will be &amp;ldquo;buried&amp;rdquo;. Buried content appears collapsed by default and requires a user to click on the content before it can be read. You can style buried content using the &amp;ldquo;Buried&amp;rdquo; CSS class.&lt;/p&gt;
-
-&lt;h2 id=&#34;abuse-and-spam&#34;&gt;Abuse and Spam&lt;/h2&gt;
-
-&lt;p&gt;Abuse and Spam reactions are available to all users when enabled but have special actions attached to them. Five or more Abuse reactions will add the content to the Moderation Queue for moderator review. Ten or more will remove it. Five or more Spam reactions will move the content to the Spam Queue.&lt;/p&gt;
-
-&lt;p&gt;A user with the &amp;ldquo;Curation&amp;rdquo; permission counts as 5 of either of these reactions when they use it.&lt;/p&gt;
-
-&lt;h2 id=&#34;using-negative-reactions&#34;&gt;Using negative reactions&lt;/h2&gt;
-
-&lt;p&gt;The current default for negative reactions in new installations of Vanilla is for them to remove 1 point from the discussion or comment, but to have no effect on the point total of the user who made the post. This discourages abuse of negative reactions beyond simple voting scenarios.&lt;/p&gt;
-
-&lt;p&gt;There is always the potential for abuse when you open up avenues of self-curation in a community. In general, we discourage the use of any negative reactions unless there are established guidelines for their use in your community.&lt;/p&gt;
 </description>
     </item>
     

@@ -9,10 +9,10 @@
     
     <item>
       <title>Accessibility</title>
-      <link>//docs.vanillaforums.com/help/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/appearance/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -99,10 +99,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -164,10 +164,10 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -216,10 +216,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -282,6 +282,61 @@
 
 &lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
 
+&lt;p&gt;Available as on certain plans or as an add-on, Advanced Aanalytics give you further insights into your community.&lt;/p&gt;
+
+&lt;p&gt;! &lt;a href=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
+
+&lt;p&gt;Traffic statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; A count on unique users that logged in to the community.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unique Visits by Role Type:&lt;/strong&gt; A count of total visits for each user role.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page Views:&lt;/strong&gt; A count of total page views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New Users:&lt;/strong&gt; A count of all new registrants to the community.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;posting&#34;&gt;Posting&lt;/h3&gt;
+
+&lt;p&gt;Posting statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Discussions:&lt;/strong&gt; A count of all new discussions created.
+ *&lt;strong&gt;Comments:&lt;/strong&gt; A count of all new comments created.
+ *&lt;strong&gt;Posts:&lt;/strong&gt; A count of all posts (discussion post + comments) created.
+ *&lt;strong&gt;Posts by type:&lt;/strong&gt; A count of discussions and of posts created.
+ *&lt;strong&gt;Posts by Category:&lt;/strong&gt; A count of posts (discussions + comments) for each category.
+ *&lt;strong&gt;Contributors:&lt;/strong&gt; A count of unique contributors (created a discussion or made a comment).
+ *&lt;strong&gt;Contributors by Category:&lt;/strong&gt; A count of unique contributors in each category.
+ *&lt;strong&gt;Contributors by Role Type:&lt;/strong&gt; A count of unique contributors by role type.&lt;/p&gt;
+
+&lt;h3 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h3&gt;
+
+&lt;p&gt;Q &amp;amp; A statistics can be filtered by time period and category. When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Questions Asked:&lt;/strong&gt; The number of questions created within the time period.
+ *&lt;strong&gt;Questions Answered:&lt;/strong&gt; The number of questions answered within the time period, including answers to questions that were created outside the time period selected.
+ *&lt;strong&gt;Answers Accepted:&lt;/strong&gt; The number of answers accepted by either the user who created the question or by a moderator/admin. This includes acceptance of questions created outside of the time period selected.
+ *&lt;strong&gt;Average Time to Ansnwer:&lt;/strong&gt; The average time taken for a question that was answered within the time period to have been answered.  Questions that were not answered are not included.
+ *&lt;strong&gt;Average Time to Accept:&lt;/strong&gt; The average time taken for a question that was accepted to have been accepted. Questions that were not answered or not accepted are not included.&lt;/p&gt;
+
+&lt;h3 id=&#34;engagement&#34;&gt;Engagement&lt;/h3&gt;
+
+&lt;p&gt;Engagement statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Visits per Active Users:&lt;/strong&gt; The total number of visits divided by the number of active users.&lt;/p&gt;
+
+&lt;h1 id=&#34;average-posts-per-active-users-the-total-number-of-posts-divided-by-the-number-of-active-users&#34;&gt;*&lt;strong&gt;Average Posts per Active Users:&lt;/strong&gt; The total number of posts divided by the number of active users.&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;weight: 101
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aliases:&lt;/p&gt;
+
+&lt;h2 id=&#34;features-analytics-advanced-analytics&#34;&gt;- /features/analytics/advanced-analytics&lt;/h2&gt;
+
+&lt;h2 id=&#34;advanced-analytics-1&#34;&gt;Advanced Analytics&lt;/h2&gt;
+
 &lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
@@ -301,7 +356,7 @@ Leaderboards are tables showing the ranking of specific items for the selected t
 Graphs can come in multiple forms! They always use information fetched using the selected time range. Line, Area, and Bar graphs use the selected interval to group the fetched information. Pie charts represent multiple values for the whole selected time range.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;traffic&#34;&gt;Traffic&lt;/h2&gt;
+&lt;h2 id=&#34;traffic-1&#34;&gt;Traffic&lt;/h2&gt;
 
 &lt;p&gt;Traffic analytics can be filtered by date and by category and in some cases by Role.  The analytics presented include:&lt;/p&gt;
 
@@ -344,7 +399,7 @@ Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
 Number of new users.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;posting&#34;&gt;Posting&lt;/h2&gt;
+&lt;h2 id=&#34;posting-1&#34;&gt;Posting&lt;/h2&gt;
 
 &lt;p&gt;Posting analytics can be filtered by date and by category and include:&lt;/p&gt;
 
@@ -402,7 +457,7 @@ Number of distinct members, having created a post, grouped by categories.&lt;/p&
 Number of distinct members, having created a post, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
+&lt;h2 id=&#34;q-a-1&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
 
 &lt;p&gt;Q &amp;amp; A analytics can be filtered by time period and category. &lt;strong&gt;NB:&lt;/strong&gt; When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
 
@@ -451,7 +506,7 @@ Number of questions having at least one answer&lt;/p&gt;&lt;/li&gt;
 Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;engagement&#34;&gt;Engagement&lt;/h2&gt;
+&lt;h2 id=&#34;engagement-1&#34;&gt;Engagement&lt;/h2&gt;
 
 &lt;p&gt;Engagement analytics can be filtered by date and by category and include:&lt;/p&gt;
 
@@ -504,10 +559,10 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -626,51 +681,136 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     </item>
     
     <item>
-      <title>Analytics</title>
-      <link>//docs.vanillaforums.com/help/analytics/</link>
+      <title>Advanced Search</title>
+      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/analytics/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>
 
-&lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
+&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
 
-&lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
-
-&lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
-
-&lt;p&gt;The site overview will present you with the following:&lt;/p&gt;
+&lt;p&gt;Advanced search will enhance search functionality:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Number of page views generated for the time period&lt;/li&gt;
-&lt;li&gt;Number of new users that have joined the community for the time period&lt;/li&gt;
-&lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
-&lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
+&lt;li&gt;Better indexing of content&lt;/li&gt;
+&lt;li&gt;The ability to apply filters to searches&lt;/li&gt;
+&lt;li&gt;Auto-complete of results as the user types the search terms&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
-
-&lt;p&gt;Vanilla will also create a rolling table of data on the following:&lt;/p&gt;
+&lt;p&gt;To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Most Active Users&lt;/li&gt;
-&lt;li&gt;Most popular discussions discussions&lt;/li&gt;
+&lt;li&gt;On the addons page of the Dashboard, enable Advanced Search&lt;/li&gt;
+&lt;li&gt;Under the Appearance section of the Dashboard, go to the Customer Theme page&lt;/li&gt;
+&lt;li&gt;In the HTML tab, look for the following code  {searchbox}&lt;/li&gt;
+&lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This too can be modified by changing the time period, you select to view.&lt;/p&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Advanced search is not available on all plan levels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/&#34;&gt;Blog: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gLLtlTsC4h8&#34;&gt;Video: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advanced Settings</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
+      <description>
+
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+
+&lt;p&gt;The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discussions per page  (the number of discussions displayed on a page)&lt;/li&gt;
+&lt;li&gt;Comments per page (the number of comments displayed on a page)&lt;/li&gt;
+&lt;li&gt;Editing time limit (this can be used to prevent edits after a certain time period.  Some user  Roles and permissions will may override this limit)&lt;/li&gt;
+&lt;li&gt;Enable checkboxes (this&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Appearance</title>
+      <link>//docs.vanillaforums.com/help/appearance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/appearance/</guid>
+      <description>
+
+&lt;h2 id=&#34;customizing-your-forum-s-appearance&#34;&gt;Customizing Your Forum&amp;rsquo;s Appearance&lt;/h2&gt;
+
+&lt;p&gt;Your community should have a unique look and feel to match your website, app or product.  The appearance section of your Dashboard lets you control how your community forum will look.&lt;/p&gt;
+
+&lt;h3 id=&#34;site-title-and-logo&#34;&gt;Site Title and Logo&lt;/h3&gt;
+
+&lt;p&gt;In your Dashboard under Appearance &amp;gt; Banner you can set the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Home page title&lt;/li&gt;
+&lt;li&gt;Site description&lt;/li&gt;
+&lt;li&gt;Banner title (what is displayed in the browser title bar)&lt;/li&gt;
+&lt;li&gt;Banner logo&lt;/li&gt;
+&lt;li&gt;Mobile banner logo&lt;/li&gt;
+&lt;li&gt;Favicon  (the small logo that appears on the browser tab)&lt;/li&gt;
+&lt;li&gt;Share image (an image that is sometimes displayed when someone posts a link to your community to a social media site)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;homepage&#34;&gt;Homepage&lt;/h3&gt;
+
+&lt;p&gt;In your Dashboard under Appearance &amp;gt; Homepage you can set the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The default homepage view. Typically, the Discussions view is the best choice. If your community is very large, the Categories view might make more sense.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Modern vs table layout. A table layout looks more like traditional forums.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;base-theme&#34;&gt;Base Theme&lt;/h3&gt;
+
+&lt;p&gt;Under Appearance &amp;gt; Themes you can select a base theme for both desktop and mobile devices. All base themes can be further customized by modifying the HTML and overriding the CSS.&lt;/p&gt;
+
+&lt;h3 id=&#34;avatars&#34;&gt;Avatars&lt;/h3&gt;
+
+&lt;p&gt;The Appearance &amp;gt; Avatars page lets you set a default avatar (profile picture).   You can also enable the Vanillicon plugin to create a unique avatar for each member or the Gravatar plugin to use members&amp;rsquo; Gravatars.&lt;/p&gt;
+
+&lt;h3 id=&#34;pockets&#34;&gt;Pockets&lt;/h3&gt;
+
+&lt;p&gt;Pockets are placeholders where you can add snippets of HTML or Javascript. They are useful for placing ads or widgets throughout your community.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/pockets-banner-ads/&#34;&gt;Using Pockets for Banner Ads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/power-pockets-adding-custom-html-js-vanilla-forum/&#34;&gt;Video: Pockets: Adding Custom HTML and Javascript to Your Vanilla Forum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;customizing-theme-html-and-css&#34;&gt;Customizing Theme HTML and CSS&lt;/h3&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s base themes can be customized to match your website. More information can be found &lt;a href=&#34;custom-theme/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;professional-services&#34;&gt;Professional Services&lt;/h3&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t have the time or resorces, Vanilla&amp;rsquo;s PS team can customize a theme to your specifications. Pls contact your Customer Success Manager for more information.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -789,10 +929,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -820,49 +960,6 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;h2 id=&#34;viewing-a-badge&#34;&gt;Viewing a badge&lt;/h2&gt;
 
 &lt;p&gt;Clicking a badge&amp;rsquo;s name in the badges list will take you to a public page describing the badge. Users can get to this page by clicking the badge in their profile. This page shows the most recent recipients of the badge.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Banner Settings</title>
-      <link>//docs.vanillaforums.com/developer/configuration/banner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/configuration/banner/</guid>
-      <description>
-
-&lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
-
-&lt;p&gt;On the Banner Settings page you can control the following aspects of your forum:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Homepage title: This is the title displayed on your home page. This title will also appear in search engines.&lt;/li&gt;
-&lt;li&gt;Site Description: This is the site description for your homepage. Other pages will have description generated by the content.&lt;/li&gt;
-&lt;li&gt;Banner Title: This is the title will in your community&amp;rsquo;s banner, if you have not uploaded a banner image.&lt;/li&gt;
-&lt;li&gt;Banner Logo: This will replace the Banner Title. You have the freedom to use whatever size you want, but 250px x 50px is a great size that works nice.&lt;/li&gt;
-&lt;li&gt;Mobile Banner Logo: This allows you to add a small banner for the mobile theme.&lt;/li&gt;
-&lt;li&gt;Favicon: This is the icon usually seen in the URL bar and when someone bookmarks a link from your site.&lt;/li&gt;
-&lt;li&gt;Share Image: This is the image that will be included when content is shared on social networks (like Reddit or Google+) if no image is present in the content.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Building new porters</title>
-      <link>//docs.vanillaforums.com/developer/importing/build/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
-      <description>
-
-&lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
-
-&lt;p&gt;We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Copy an existing class, like &lt;code&gt;class.smf.php&lt;/code&gt; and rename it.&lt;/li&gt;
-&lt;li&gt;Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

@@ -9,10 +9,10 @@
     
     <item>
       <title>Emails</title>
-      <link>//docs.vanillaforums.com/help/emails/</link>
+      <link>//docs.vanillaforums.com/help/appearance/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/emails/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/emails/</guid>
       <description>
 
 &lt;h2 id=&#34;email-appearance&#34;&gt;Email Appearance&lt;/h2&gt;
@@ -36,6 +36,12 @@
 &lt;li&gt;Page Color: The color of the foreground container of the email.&lt;/li&gt;
 &lt;li&gt;Button Text Color: The text color of the button. Note that depending on its content, an email may not contain a button.&lt;/li&gt;
 &lt;li&gt;Button Background Color: The background color of the button. Note that depending on its content, an email may not contain a button.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional Resouces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/introducing-html-emails-for-system-messages/&#34;&gt;Blog: HTML Emails&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

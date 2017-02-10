@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/moderation/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="//docs.vanillaforums.com/tags/moderation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Warnings and Notes</title>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-are-warnings&#34;&gt;What are Warnings?&lt;/h2&gt;
+
+&lt;p&gt;Warnings can be given to users by moderators for behavior that is not appropriate in the community. Warnings use a points system that increases a user’s warning level with successive warnings until the warnings expire. Once users reach certain points thresholds they can be jailed or banned.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-are-notes&#34;&gt;What are Notes?&lt;/h2&gt;
+
+&lt;p&gt;User notes are notes attached to individual users that only moderators can add and see. They allow moderators to keep track of information about users that may be important to other moderators.&lt;/p&gt;
+
+&lt;h2 id=&#34;warning-levels-and-expiry&#34;&gt;Warning Levels and Expiry&lt;/h2&gt;
+
+&lt;p&gt;When a moderator warns a user the severity of the warning determines how many points it adds to the user’s warning level and when the warning expires. Admins can see a user’s warning level from the member profile via a banner at the top. Moderators can see the details of warning and expiry from the notes tab.&lt;/p&gt;
+
+&lt;p&gt;When a user’s warnings expire then their warning level will be reset to zero and the user will have a clean slate.&lt;/p&gt;
+
+&lt;p&gt;If you warn a user that has already been warned then the points from the new warning will be added their warning level and their expiry will be extended. When a user reaches certain warning levels they will be punished.&lt;/p&gt;
+
+&lt;h3 id=&#34;warning-level-3-jailed&#34;&gt;Warning Level 3: Jailed&lt;/h3&gt;
+
+&lt;p&gt;Users that reach warning level 3 are considered jailed. Being jailed means the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A jail icon is overlaid over the user’s avatar.&lt;/li&gt;
+&lt;li&gt;The user can’t start new discussions.&lt;/li&gt;
+&lt;li&gt;The user is flood controlled so they can only post once every 150 seconds.&lt;/li&gt;
+&lt;li&gt;The user’s signature is hidden.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The idea behind being jailed is to punish the user a little bit to let them know that you’re serious, but to let them continue to be a part of the community to correct their behavior.&lt;/p&gt;
+
+&lt;h3 id=&#34;warning-level-5-banned&#34;&gt;Warning Level 5: Banned&lt;/h3&gt;
+
+&lt;p&gt;Users that reach warning level 5 are banned from the community completely.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

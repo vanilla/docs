@@ -8,57 +8,11 @@
     <atom:link href="//docs.vanillaforums.com/tags/features/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Accessibility</title>
-      <link>//docs.vanillaforums.com/help/accessibility/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/accessibility/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;We strive for maximum accessibility in our product design and take defects in it seriously.&lt;/p&gt;
-
-&lt;p&gt;&amp;lsquo;508 Compliance&amp;rsquo; refers to a US law that requires that US government websites to be accessible to persons with disabilities (e.g. visual or physical impairment).   Accessibility means, among many other things, that a person must be able to use the website with software that reads the website aloud and/or using only a keyboard. Many private companies use the 508 guidelines to ensure websites are accessible.&lt;/p&gt;
-
-&lt;p&gt;We believe Vanilla Forums to be both Section 508 and WCAG AAA compliant.&lt;/p&gt;
-
-&lt;h3 id=&#34;key-points&#34;&gt;Key points&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Our default UI is primarily text-based and high-contrast.&lt;/li&gt;
-&lt;li&gt;Our interface is keyboard-friendly.&lt;/li&gt;
-&lt;li&gt;We limit the use of colors, images, and symbols as navigation aids or primary content.&lt;/li&gt;
-&lt;li&gt;We use modern HTML5 markup and accessible forms.&lt;/li&gt;
-&lt;li&gt;We cannot control the accessibility of user generated content within a forum.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you find an area where Vanilla could improve its accessibility, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt; or &lt;a href=&#34;http://github.com/vanilla/vanilla/issues&#34;&gt;file an issue&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;theming-consideration&#34;&gt;Theming consideration&lt;/h2&gt;
-
-&lt;aside class=&#34;note&#34;&gt;Most Vanilla Forums customize their theme, which can have a huge impact on accessibility.&lt;/aside&gt;
-
-&lt;p&gt;Choices of color and font size are obvious considerations, but because our powerful theming engine also allows for the override of HTML markup, it&amp;rsquo;s important to consider that individual sites may vary wildly in their degree of accessibility.&lt;/p&gt;
-
-&lt;p&gt;Conversely, themes can also augment the interface to improve Vanilla&amp;rsquo;s core accessibility.&lt;/p&gt;
-
-&lt;h2 id=&#34;further-reading&#34;&gt;Further reading&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.508checker.com/best-practices&#34;&gt;Best Practices for 508 Compliance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://alistapart.com/topic/accessibility&#34;&gt;A List Apart reading list on Accessibility&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.w3.org/TR/WCAG20&#34;&gt;WCAG 2.0 Recommendation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Adding and Editing Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -99,10 +53,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -164,10 +118,10 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -216,10 +170,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -274,10 +228,10 @@
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -396,6 +350,69 @@
     </item>
     
     <item>
+      <title>Advanced Search</title>
+      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
+      <description>
+
+&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
+
+&lt;p&gt;Advanced search will enhance search functionality:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Better indexing of content&lt;/li&gt;
+&lt;li&gt;The ability to apply filters to searches&lt;/li&gt;
+&lt;li&gt;Auto-complete of results as the user types the search terms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On the addons page of the Dashboard, enable Advanced Search&lt;/li&gt;
+&lt;li&gt;Under the Appearance section of the Dashboard, go to the Customer Theme page&lt;/li&gt;
+&lt;li&gt;In the HTML tab, look for the following code  {searchbox}&lt;/li&gt;
+&lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Advanced search is not available on all plan levels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/&#34;&gt;Blog: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gLLtlTsC4h8&#34;&gt;Video: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advanced Settings</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
+      <description>
+
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+
+&lt;p&gt;The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discussions per page  (the number of discussions displayed on a page)&lt;/li&gt;
+&lt;li&gt;Comments per page (the number of comments displayed on a page)&lt;/li&gt;
+&lt;li&gt;Editing time limit (this can be used to prevent edits after a certain time period.  Some user  Roles and permissions will may override this limit)&lt;/li&gt;
+&lt;li&gt;Enable checkboxes (this&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Analytics</title>
       <link>//docs.vanillaforums.com/help/analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -409,6 +426,10 @@
 
 &lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&#34;how-to-use-vanilla-statistics&#34;&gt;How to use Vanilla Statistics&lt;/h2&gt;
+
+&lt;p&gt;The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server.  We generate and present you with the statistics in a graphical format for the following:&lt;/p&gt;
+
 &lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
 
 &lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
@@ -421,6 +442,10 @@
 &lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
 &lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Using the tabs at the top, you can view daily or monthly stats. The arrows will let you move the time period you are viewing.&lt;/p&gt;
+
+&lt;p&gt;Vanilla Statistics will also create a rolling table of data on the following:&lt;/p&gt;
 
 &lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
 
@@ -437,10 +462,10 @@
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -455,10 +480,10 @@
     
     <item>
       <title>Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -491,16 +516,20 @@
     
     <item>
       <title>Categories</title>
-      <link>//docs.vanillaforums.com/help/categories/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/categories/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-categories&#34;&gt;What Are Categories&lt;/h2&gt;
 
 &lt;p&gt;Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
 You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to &lt;code&gt;/vanilla/settings/categories&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-nav.png&#34; alt=&#34;Categories Navigation&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
 
 &lt;h2 id=&#34;choosing-your-category-layout&#34;&gt;Choosing Your Category Layout&lt;/h2&gt;
 
@@ -511,6 +540,8 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;&lt;strong&gt;The Table Layout&lt;/strong&gt; shows discussion and comment totals as columns, along with user avatar and the thread title of the most recent post in the section.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The Mixed Layout&lt;/strong&gt; option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-add.png&#34; alt=&#34;Add Categories&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;choosing-how-categories-display&#34;&gt;Choosing How Categories Display&lt;/h2&gt;
 
@@ -579,15 +610,21 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/delete_warning.png&#34; alt=&#34;The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;It is not possible to recover a deleted category.&lt;/strong&gt;  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/&#34;&gt;Blog: How to Structure Categories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Curating with Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -629,23 +666,11 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
     </item>
     
     <item>
-      <title>Default Role Types</title>
-      <link>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</guid>
-      <description>
-
-&lt;h2 id=&#34;default-role-types&#34;&gt;Default Role Types&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Emails</title>
-      <link>//docs.vanillaforums.com/help/emails/</link>
+      <link>//docs.vanillaforums.com/help/appearance/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/emails/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/emails/</guid>
       <description>
 
 &lt;h2 id=&#34;email-appearance&#34;&gt;Email Appearance&lt;/h2&gt;
@@ -669,6 +694,12 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;li&gt;Page Color: The color of the foreground container of the email.&lt;/li&gt;
 &lt;li&gt;Button Text Color: The text color of the button. Note that depending on its content, an email may not contain a button.&lt;/li&gt;
 &lt;li&gt;Button Background Color: The background color of the button. Note that depending on its content, an email may not contain a button.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional Resouces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/introducing-html-emails-for-system-messages/&#34;&gt;Blog: HTML Emails&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

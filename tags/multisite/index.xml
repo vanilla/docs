@@ -70,6 +70,12 @@
 &lt;h3 id=&#34;ssl-certificates&#34;&gt;SSL certificates&lt;/h3&gt;
 
 &lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/features/multi-forum-deployment-of-vanilla/&#34;&gt;Blog: Multi-site Deployment of Vanilla&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

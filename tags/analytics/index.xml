@@ -17,6 +17,61 @@
 
 &lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
 
+&lt;p&gt;Available as on certain plans or as an add-on, Advanced Aanalytics give you further insights into your community.&lt;/p&gt;
+
+&lt;p&gt;! &lt;a href=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
+
+&lt;p&gt;Traffic statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; A count on unique users that logged in to the community.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unique Visits by Role Type:&lt;/strong&gt; A count of total visits for each user role.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page Views:&lt;/strong&gt; A count of total page views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New Users:&lt;/strong&gt; A count of all new registrants to the community.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;posting&#34;&gt;Posting&lt;/h3&gt;
+
+&lt;p&gt;Posting statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Discussions:&lt;/strong&gt; A count of all new discussions created.
+ *&lt;strong&gt;Comments:&lt;/strong&gt; A count of all new comments created.
+ *&lt;strong&gt;Posts:&lt;/strong&gt; A count of all posts (discussion post + comments) created.
+ *&lt;strong&gt;Posts by type:&lt;/strong&gt; A count of discussions and of posts created.
+ *&lt;strong&gt;Posts by Category:&lt;/strong&gt; A count of posts (discussions + comments) for each category.
+ *&lt;strong&gt;Contributors:&lt;/strong&gt; A count of unique contributors (created a discussion or made a comment).
+ *&lt;strong&gt;Contributors by Category:&lt;/strong&gt; A count of unique contributors in each category.
+ *&lt;strong&gt;Contributors by Role Type:&lt;/strong&gt; A count of unique contributors by role type.&lt;/p&gt;
+
+&lt;h3 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h3&gt;
+
+&lt;p&gt;Q &amp;amp; A statistics can be filtered by time period and category. When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Questions Asked:&lt;/strong&gt; The number of questions created within the time period.
+ *&lt;strong&gt;Questions Answered:&lt;/strong&gt; The number of questions answered within the time period, including answers to questions that were created outside the time period selected.
+ *&lt;strong&gt;Answers Accepted:&lt;/strong&gt; The number of answers accepted by either the user who created the question or by a moderator/admin. This includes acceptance of questions created outside of the time period selected.
+ *&lt;strong&gt;Average Time to Ansnwer:&lt;/strong&gt; The average time taken for a question that was answered within the time period to have been answered.  Questions that were not answered are not included.
+ *&lt;strong&gt;Average Time to Accept:&lt;/strong&gt; The average time taken for a question that was accepted to have been accepted. Questions that were not answered or not accepted are not included.&lt;/p&gt;
+
+&lt;h3 id=&#34;engagement&#34;&gt;Engagement&lt;/h3&gt;
+
+&lt;p&gt;Engagement statistics can be filtered by date and by category and include:&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Visits per Active Users:&lt;/strong&gt; The total number of visits divided by the number of active users.&lt;/p&gt;
+
+&lt;h1 id=&#34;average-posts-per-active-users-the-total-number-of-posts-divided-by-the-number-of-active-users&#34;&gt;*&lt;strong&gt;Average Posts per Active Users:&lt;/strong&gt; The total number of posts divided by the number of active users.&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;weight: 101
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;aliases:&lt;/p&gt;
+
+&lt;h2 id=&#34;features-analytics-advanced-analytics&#34;&gt;- /features/analytics/advanced-analytics&lt;/h2&gt;
+
+&lt;h2 id=&#34;advanced-analytics-1&#34;&gt;Advanced Analytics&lt;/h2&gt;
+
 &lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
@@ -36,7 +91,7 @@ Leaderboards are tables showing the ranking of specific items for the selected t
 Graphs can come in multiple forms! They always use information fetched using the selected time range. Line, Area, and Bar graphs use the selected interval to group the fetched information. Pie charts represent multiple values for the whole selected time range.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;traffic&#34;&gt;Traffic&lt;/h2&gt;
+&lt;h2 id=&#34;traffic-1&#34;&gt;Traffic&lt;/h2&gt;
 
 &lt;p&gt;Traffic analytics can be filtered by date and by category and in some cases by Role.  The analytics presented include:&lt;/p&gt;
 
@@ -79,7 +134,7 @@ Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
 Number of new users.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;posting&#34;&gt;Posting&lt;/h2&gt;
+&lt;h2 id=&#34;posting-1&#34;&gt;Posting&lt;/h2&gt;
 
 &lt;p&gt;Posting analytics can be filtered by date and by category and include:&lt;/p&gt;
 
@@ -137,7 +192,7 @@ Number of distinct members, having created a post, grouped by categories.&lt;/p&
 Number of distinct members, having created a post, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
+&lt;h2 id=&#34;q-a-1&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
 
 &lt;p&gt;Q &amp;amp; A analytics can be filtered by time period and category. &lt;strong&gt;NB:&lt;/strong&gt; When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
 
@@ -186,7 +241,7 @@ Number of questions having at least one answer&lt;/p&gt;&lt;/li&gt;
 Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;engagement&#34;&gt;Engagement&lt;/h2&gt;
+&lt;h2 id=&#34;engagement-1&#34;&gt;Engagement&lt;/h2&gt;
 
 &lt;p&gt;Engagement analytics can be filtered by date and by category and include:&lt;/p&gt;
 

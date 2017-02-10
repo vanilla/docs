@@ -6,23 +6,23 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/accessibility/</loc>
+    <loc>//docs.vanillaforums.com/help/appearance/accessibility/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</loc>
+    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</loc>
   </url>
   
   <url>
@@ -34,15 +34,23 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/embedding/advanced/</loc>
+    <loc>//docs.vanillaforums.com/developer/embedding/advanced/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/analytics/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/advanced-search/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</loc>
+    <loc>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/appearance/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</loc>
   </url>
   
   <url>
@@ -54,7 +62,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/badges/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/badges/</loc>
   </url>
   
   <url>
@@ -70,15 +78,15 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/categories/</loc>
+    <loc>//docs.vanillaforums.com/help/cloud/leaving/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/forum-settings/categories/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/changelog/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/cloud/</loc>
   </url>
   
   <url>
@@ -110,7 +118,15 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/getting-started/custom-domain/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/appearance/custom-theme/</loc>
   </url>
   
   <url>
@@ -134,10 +150,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/roles-permissions/default-role-types/</loc>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/cloud/developer-support/</loc>
   </url>
   
@@ -154,7 +166,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/emails/</loc>
+    <loc>//docs.vanillaforums.com/help/appearance/emails/</loc>
   </url>
   
   <url>
@@ -162,7 +174,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/embedding/</loc>
+    <loc>//docs.vanillaforums.com/developer/embedding/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/forum-settings/embedding/</loc>
   </url>
   
   <url>
@@ -206,6 +222,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/forum-settings/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/framework/</loc>
   </url>
   
@@ -218,11 +238,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/github/</loc>
+    <loc>//docs.vanillaforums.com/help/integrations/github/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</loc>
   </url>
   
   <url>
@@ -246,7 +266,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/ideation/</loc>
+    <loc>//docs.vanillaforums.com/help/ideation/</loc>
   </url>
   
   <url>
@@ -262,6 +282,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/integrations/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/framework/i18n/</loc>
   </url>
   
@@ -271,10 +295,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/releases/july-2016/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/cloud/leaving/</loc>
   </url>
   
   <url>
@@ -311,6 +331,10 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/framework/models/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/moderation/</loc>
   </url>
   
   <url>
@@ -362,7 +386,19 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/cloud/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/roles-permissions/private-community/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/contributing/pull-requests/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/qna/</loc>
   </url>
   
   <url>
@@ -370,11 +406,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/ranks/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/ranks/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/reactions/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/reactions/</loc>
   </url>
   
   <url>
@@ -383,10 +419,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/releases/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/addons/reporting/</loc>
   </url>
   
   <url>
@@ -458,6 +490,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/moderation/spam/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/cloud/staging/</loc>
   </url>
   
@@ -482,10 +518,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/theming/</loc>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/troubleshooting/</loc>
   </url>
   
@@ -498,7 +530,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/upgrading-from-warnings/</loc>
+    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/upgrading-from-warnings/</loc>
   </url>
   
   <url>
@@ -506,19 +538,23 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/wordpress/using-comments/</loc>
+    <loc>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/ranks/using-ranks-as-incentives/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
+    <loc>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/configuration/using/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/appearance/custom-theme/webfont/</loc>
   </url>
   
   <url>
@@ -546,23 +582,23 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/warning-a-user/</loc>
+    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/warning-a-user/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/warnings-and-notes/</loc>
+    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/wordpress/wishlist/</loc>
+    <loc>//docs.vanillaforums.com/help/integrations/wordpress/wishlist/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/wordpress/</loc>
+    <loc>//docs.vanillaforums.com/help/integrations/wordpress/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/zendesk/</loc>
+    <loc>//docs.vanillaforums.com/help/integrations/zendesk/</loc>
   </url>
   
   <url>
@@ -627,6 +663,18 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/moderation/reporting/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/analytics/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/api/</loc>
   </url>
   
 </urlset>

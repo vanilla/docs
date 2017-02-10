@@ -8,6 +8,129 @@
     <atom:link href="//docs.vanillaforums.com/developer/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Advanced Embedding</title>
+      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs &lt;a href=&#34;http://easyxdm.net/wp/&#34;&gt;easyXDM&lt;/a&gt; and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-advanced-embedding&#34;&gt;Setting Up Advanced Embedding&lt;/h2&gt;
+
+&lt;p&gt;Enable forum embedding via the Dashboard. Then set &lt;code&gt;Garden.Embed.Allow&lt;/code&gt; to &lt;code&gt;2&lt;/code&gt; in your config. &lt;em&gt;Cloud customers will have this done by support staff&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Include easyXDM: &lt;code&gt;/js/easyXDM/easyXDM.min.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Include Vanilla&amp;rsquo;s advanced embed script: &lt;code&gt;/js/vanilla.embed.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a div to contain Vanilla and give it an ID.&lt;/li&gt;
+&lt;li&gt;Call &lt;code&gt;Vanilla.embed({options})&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;options&#34;&gt;Options&lt;/h3&gt;
+
+&lt;p&gt;Vanilla.embed() takes an associative array of options:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;root&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The root url of your Vanilla forum. Example: &lt;a href=&#34;http://community.yoursite.com&#34;&gt;http://community.yoursite.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;container&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The ID or DOM element of the container for Vanilla.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;initialPath&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. The initial path to browse to when embedding the forum. Our example below demonstrates using the hash part of the URL to automatically set this, e.g. &lt;code&gt;site.com/embedpage#/categories/some-category&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sso&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. An SSO string that will automatically sign the user into Vanilla. See &lt;a href=&#34;https://github.com/vanillaforums/jsConnectPHP/blob/master/functions.jsconnect.php#L130&#34;&gt;our example code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autoStart&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. Whether or not to start the embed when &lt;code&gt;embed()&lt;/code&gt; is called. If this is false then you must call embed.start() to start the embed. Default: &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;onReady()&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A callback function to call when the embed is ready.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;notifyLocation(path)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that will be called when the url of the embedded iframe changes. You can use this callback to update your history. By default this function adds the path as the current location&amp;rsquo;s # fragment. Combine this with initialPath to implement your own custom history.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;height(x)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that is called to set the height of the embedded iframe. If you override this method then you can access the embedded iframe using &lt;code&gt;this.iframe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;start()&lt;/code&gt; Start the embed. Only call this method if you set autoStart to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;setLocation(path)&lt;/code&gt; Manually set the location of the embedded iframe. Just specify the path and not the full domain of the embed.&lt;/p&gt;
+
+&lt;h2 id=&#34;custom-callbacks&#34;&gt;Custom Callbacks&lt;/h2&gt;
+
+&lt;p&gt;The embed API allows custom Javascript to be called between the parent and child iframes.&lt;/p&gt;
+
+&lt;h2 id=&#34;exposing-a-method-to-vanilla&#34;&gt;Exposing a method to Vanilla&lt;/h2&gt;
+
+&lt;p&gt;You can expose a method to the child iframe with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.fn.functionName = function(args,...) { … }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The embed requires all functions on both sides to be explicitly registered to prevent a third party hijacking the embed and calling functions with unforeseen consequences.&lt;/p&gt;
+
+&lt;p&gt;Vanilla embed supports a callback function on both ends of the embed. If you want to support a callback function then declare it as the last argument of your function. When the other endpoint of the embed calls your function using &lt;code&gt;callRemote()&lt;/code&gt; it can then specify a callback and the framework will handle calling the callback across the domain.&lt;/p&gt;
+
+&lt;h2 id=&#34;calling-a-method-in-vanilla&#34;&gt;Calling a method in Vanilla&lt;/h2&gt;
+
+&lt;p&gt;You can call a method in Vanilla with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.callRemote(&amp;quot;functionName&amp;quot;, args [, callback]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you supply the callback argument to &lt;code&gt;callRemote()&lt;/code&gt; then it will be supplied as the last argument to the remote function. It is the remote function’s job to call the function. Keep in mind that using &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt;, etc. to set a context for the function will not work as a context cannot be passed across the domain.&lt;/p&gt;
+
+&lt;h3 id=&#34;functions-you-can-call-on-vanilla&#34;&gt;Functions you can call on Vanilla&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;Vanilla.embed.signout()&lt;/code&gt; Calling this function will sign the user out of Vanilla. It won’t refresh the page so you may want to do that afterwards.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-implementation&#34;&gt;Example implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+   &amp;lt;head&amp;gt;
+   	  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+   	  &amp;lt;title&amp;gt;Sample Embed&amp;lt;/title&amp;gt;
+   	  &amp;lt;style&amp;gt;
+         body {
+            margin: 0;
+         }
+         #embedVanilla iframe {
+            width: 100%;
+         }
+      &amp;lt;/style&amp;gt;
+      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/easyXDM/easyXDM.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/vanilla.embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+   &amp;lt;/head&amp;gt;
+   &amp;lt;body style=&amp;quot;background: #ff6600;&amp;quot;&amp;gt;
+      &amp;lt;div style=&amp;quot;height: 50px&amp;quot;&amp;gt;foo&amp;lt;/div&amp;gt;
+      &amp;lt;div id=&amp;quot;embedVanilla&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        // Help older browsers parse JSON.
+        easyXDM.DomHelper.requiresJSON(&amp;quot;js/easyXDM/json2.js&amp;quot;);
+
+        var vanillaEmbed = new Vanilla.embed({
+          // The element or its ID.
+          container: &amp;quot;embedVanilla&amp;quot;,
+          // This is the location of the forum.
+          root: &amp;quot;http://yoursite.local&amp;quot;,
+          // initial path, please start it with a &amp;quot;/&amp;quot;
+          initialPath: window.location.hash.substring(1),
+          onReady: function() {
+            // A lot of the functions need to be done after the embed is ready.
+
+            // This how you set the location of the embedded frame.
+            // vanillaEmbed.setLocation(&#39;/categories&#39;);
+          }
+        });
+      &amp;lt;/script&amp;gt;
+   &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Assets</title>
       <link>//docs.vanillaforums.com/developer/framework/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1580,111 +1703,6 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
 &lt;h2 id=&#34;personal-user-info&#34;&gt;Personal user info&lt;/h2&gt;
 
 &lt;p&gt;We consider emails (&lt;code&gt;User.Email&lt;/code&gt;) and IP addresses (recorded in multiple contexts) to be personal info. Access to this data is governed by a special permission that, by default, is only granted to moderators, community managers, and administrators. You can customize this for your community.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Database access</title>
-      <link>//docs.vanillaforums.com/developer/framework/database/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/framework/database/</guid>
-      <description>
-
-&lt;h2 id=&#34;database-layer&#34;&gt;Database layer&lt;/h2&gt;
-
-&lt;p&gt;Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in &lt;code&gt;/library/databases&lt;/code&gt;). However, at this time, the Vanilla team has no plans to support additional databases.&lt;/p&gt;
-
-&lt;p&gt;The best way to access the database is via existing &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/models&#34;&gt;models&lt;/a&gt;. For instance, to get a list of discussions, use the &lt;code&gt;Get&lt;/code&gt; method in the &lt;code&gt;DiscussionModel&lt;/code&gt;. You can rely on model-based access to already be optimized for performance and utilize caching if it&amp;rsquo;s available.&lt;/p&gt;
-
-&lt;h3 id=&#34;building-queries&#34;&gt;Building queries&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;SQL&lt;/code&gt; object supports chaining. You can call it with &lt;code&gt;Gdn::sql()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a simple example that gets a single discussion by its ID. We write its pieces in the order of a SQL statement, but they can be called in any order up to the &lt;code&gt;get()&lt;/code&gt;. The &lt;code&gt;get()&lt;/code&gt; is the call that fires the built query.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;
-   -&amp;gt;select(&#39;*&#39;)
-   -&amp;gt;from(&#39;Discussion&#39;)
-   -&amp;gt;where(&#39;DiscussionID&#39;, $DiscussionID)
-   -&amp;gt;get();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that this is an impractical query to use in your addon, because this functionality already exists in a model:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$DiscussionModel = new DiscussionModel();
-$DiscussionModel-&amp;gt;getID($DiscussionID);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Always use pre-existing calls in models when they are available for better performance and forward-compatibility.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an example of a complex select that pulls out all the stops:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()
-   -&amp;gt;select(&#39;cm.*&#39;)
-   -&amp;gt;select(&#39;iu.Name&#39;, &#39;&#39;, &#39;InsertName&#39;)
-   -&amp;gt;from(&#39;ConversationMessage cm&#39;)
-   -&amp;gt;join(&#39;Conversation c&#39;, &#39;cm.ConversationID = c.ConversationID&#39;)
-   -&amp;gt;join(&#39;UserConversation uc&#39;, &#39;c.ConversationID = uc.ConversationID and uc.UserID = &#39;.$ViewingUserID, &#39;left&#39;)
-   -&amp;gt;join(&#39;User iu&#39;, &#39;cm.InsertUserID = iu.UserID&#39;, &#39;left&#39;)
-   -&amp;gt;beginWhereGroup()
-   -&amp;gt;where(&#39;uc.DateCleared is null&#39;)
-   -&amp;gt;orWhere(&#39;uc.DateCleared &amp;lt;&#39;, &#39;cm.DateInserted&#39;, TRUE, FALSE)
-   -&amp;gt;endWhereGroup()
-   -&amp;gt;where(&#39;cm.ConversationID&#39;, $ConversationID)
-   -&amp;gt;orderBy(&#39;cm.DateInserted&#39;, &#39;asc&#39;)
-   -&amp;gt;limit($Limit, $Offset)
-   -&amp;gt;get();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Notice the use of limit, offset, where groups, where conditions including less than &amp;amp; null, aliasing, and multiple joins.&lt;/p&gt;
-
-&lt;h3 id=&#34;updates-and-inserts&#34;&gt;Updates and inserts&lt;/h3&gt;
-
-&lt;p&gt;An insert is a single step that takes the table name and an array of values to insert as parameters:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;insert(&#39;UserConversation&#39;, array(
-   &#39;ConversationID&#39; =&amp;gt; $ConversationID,
-   &#39;UserID&#39; =&amp;gt; $TargetUserID
-));
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;An update requires setting the table in &lt;code&gt;Update&lt;/code&gt;, ends with a &lt;code&gt;Put&lt;/code&gt; (much like the select&amp;rsquo;s ending &lt;code&gt;Get&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;update(&#39;Conversation&#39;)
-   -&amp;gt;set(&#39;LastMessageID&#39;, $MessageID)
-   -&amp;gt;where(&#39;ConversationID&#39;, $ConversationID)
-   -&amp;gt;put();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;direct-queries&#34;&gt;Direct queries&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;query()&lt;/code&gt; method allows for sending unfiltered SQL queries to the database. This is strongly discouraged because it can easily cause security flaws, performance problems, and compatibility problems.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;query(&amp;quot;select * from GDN_Comments&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
-
-&lt;p&gt;Vanilla allows you to define database structures in code. Use the &lt;code&gt;Gdn::structure()&lt;/code&gt; method to use this object. Here we&amp;rsquo;ll look at part of the definition of the User table as an example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::structure()
-   -&amp;gt;primaryKey(&#39;UserID&#39;)
-   -&amp;gt;column(&#39;Name&#39;, &#39;varchar(50)&#39;, FALSE, &#39;key&#39;)
-   -&amp;gt;column(&#39;Password&#39;, &#39;varbinary(100)&#39;) 
-   -&amp;gt;column(&#39;ShowEmail&#39;, &#39;tinyint(1)&#39;, &#39;0&#39;)
-   -&amp;gt;column(&#39;Gender&#39;, array(&#39;u&#39;, &#39;m&#39;, &#39;f&#39;), &#39;u&#39;)
-   -&amp;gt;column(&#39;Preferences&#39;, &#39;text&#39;, TRUE)
-   -&amp;gt;column(&#39;DateOfBirth&#39;, &#39;datetime&#39;, TRUE)
-   -&amp;gt;column(&#39;Score&#39;, &#39;float&#39;, NULL)
-   -&amp;gt;set();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;column()&lt;/code&gt; takes 4 parameters: name, type, nulldefault (&lt;code&gt;true&lt;/code&gt; to allow nulls, &lt;code&gt;false&lt;/code&gt; to not - any other value becomes the default with disallowed nulls), and keytype (&amp;lsquo;primary&amp;rsquo;, &amp;lsquo;key&amp;rsquo;, &amp;lsquo;index&amp;rsquo;, &amp;lsquo;unique&amp;rsquo;, or &amp;lsquo;fulltext&amp;rsquo; - defaults to false).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;primaryKey()&lt;/code&gt; creates an auto-incrementing column. The Gender column uses an array to create an &lt;code&gt;enum&lt;/code&gt; type; the rest are self-explanatory.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;set()&lt;/code&gt; method takes 2 parameters which should nearly &lt;em&gt;always&lt;/em&gt; be false, which is their default. The first is &lt;code&gt;$Explicit&lt;/code&gt; which is whether to force the structure of the table to match &lt;em&gt;exactly&lt;/em&gt; the definition above. The second is &lt;code&gt;$Drop&lt;/code&gt; which is whether to drop and recreate the table.&lt;/p&gt;
 </description>
     </item>
     

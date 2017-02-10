@@ -8,28 +8,6 @@
     <atom:link href="//docs.vanillaforums.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Cloud Services</title>
-      <link>//docs.vanillaforums.com/help/cloud/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/cloud/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;cloud-services-overview&#34;&gt;Cloud Services Overview&lt;/h2&gt;
-
-&lt;p&gt;This section details services and processes offered exclusively to clients of our &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;cloud service&lt;/a&gt;. It includes workflows between Vanilla Forums and our clients, suggestions for getting the most out of your services, and expectations for how services will be delivered and communicated.&lt;/p&gt;
-
-&lt;p&gt;If you are a cloud client and have any questions, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt;, your account representative, or your customer success manager if one has been assigned to you.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Code Repository</title>
       <link>//docs.vanillaforums.com/help/cloud/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -678,6 +656,12 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 &lt;h3 id=&#34;ssl-certificates&#34;&gt;SSL certificates&lt;/h3&gt;
 
 &lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/features/multi-forum-deployment-of-vanilla/&#34;&gt;Blog: Multi-site Deployment of Vanilla&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -696,7 +680,29 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     </item>
     
     <item>
-      <title>Releases</title>
+      <title>Premium Services</title>
+      <link>//docs.vanillaforums.com/help/cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/cloud/</guid>
+      <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
+&lt;h2 id=&#34;cloud-services-overview&#34;&gt;Cloud Services Overview&lt;/h2&gt;
+
+&lt;p&gt;This section details services and processes that are only offered on certain &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;plan levels&lt;/a&gt;. It includes workflows between Vanilla Forums and our clients, suggestions for getting the most out of your services, and expectations for how services will be delivered and communicated.&lt;/p&gt;
+
+&lt;p&gt;If you are a cloud client and have any questions, please &lt;a href=&#34;mailto:support@vanillaforums.com&#34;&gt;contact support&lt;/a&gt;, your account representative, or your customer success manager if one has been assigned to you.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Release Notes</title>
       <link>//docs.vanillaforums.com/help/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

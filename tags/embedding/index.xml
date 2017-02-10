@@ -9,10 +9,10 @@
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/help/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -132,10 +132,61 @@
     
     <item>
       <title>Embedding</title>
-      <link>//docs.vanillaforums.com/help/embedding/</link>
+      <link>//docs.vanillaforums.com/developer/embedding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/embedding/</guid>
+      <guid>//docs.vanillaforums.com/developer/embedding/</guid>
+      <description>
+
+&lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
+
+&lt;p&gt;Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Embedding Checklist&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width. (Make modifications in Customize theme as you like).&lt;/li&gt;
+&lt;li&gt;Ensure you have &lt;strong&gt;&lt;em&gt;&amp;ldquo;Enabled Embedding&amp;rdquo;&lt;/em&gt;&lt;/strong&gt; in your dashboard.&lt;/li&gt;
+&lt;li&gt;Make sure that the page in which you embed is free of javascript errors.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some considerations when it comes to  Embedding:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The possibility of slower loading times, as your site needs to load the forum via JavaScript along with any other content you may have loading via JavaScript.&lt;/li&gt;
+&lt;li&gt;Issues with SEO, as Google (and other search engines) don&amp;rsquo;t always do a great job of indexing framed content.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;embedding-comments&#34;&gt;Embedding comments&lt;/h2&gt;
+
+&lt;p&gt;This feature will allow those of you who have a blog or news site to use Vanilla as a commenting system and really engage readers who might otherwise just enter a comment and leave.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A single profile, reputation and user experience across the community and the comments&lt;/li&gt;
+&lt;li&gt;Engage commenters with Vanilla’s existing gamification and curation features&lt;/li&gt;
+&lt;li&gt;Use blog traffic to quickly seed community participation and vice versa&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;how-do-i-implement-comments&#34;&gt;How do I implement comments?&lt;/h3&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;WordPress plugin&lt;/a&gt; available that allows you to enable comments on your WordPress blog from your WordPress dashboard. Alternately, we have a universal javascript code snippet that can be placed into any page to get comments enabled.&lt;/p&gt;
+
+&lt;p&gt;If you are using different blog software, you will need to edit the blog template and replace the existing blog comments with the code that can be found in the Dashboard under Forum&amp;gt;Blog Comments. Use our Universal Code, the code snippet can be modified to create discussion threads in the appropriate forum category based on the blog post category.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-does-vanilla-use-as-an-excerpt-from-my-blog-article-when-creating-a-blog-comment-discussion&#34;&gt;What does Vanilla use as an excerpt from my blog article when creating a blog comment discussion?&lt;/h3&gt;
+
+&lt;p&gt;When Vanilla creates a discussion thread based on a blog article, it will grab the blog title, the first few lines of the blog text and an image. You can use Open Graph meta tags to specify what image should be used. Otherwise, it grabs the first 4 images on the page and finds the &amp;ldquo;best&amp;rdquo; one it can - i.e. the biggest image that is at least 100x100, but smaller than 800px wide and not banner-shaped.&lt;/p&gt;
+
+&lt;p&gt;Readers can log in using a Disqus ID, Twitter, Google, FaceBook or via single sign on.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/embedding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/forum-settings/embedding/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
@@ -183,10 +234,10 @@
     
     <item>
       <title>Using Comments</title>
-      <link>//docs.vanillaforums.com/help/wordpress/using-comments/</link>
+      <link>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/wordpress/using-comments/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</guid>
       <description>
 
 &lt;h2 id=&#34;transition-to-vanilla-comments&#34;&gt;Transition to Vanilla Comments&lt;/h2&gt;

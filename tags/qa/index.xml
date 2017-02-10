@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/qa/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="//docs.vanillaforums.com/tags/qa/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Q&amp;A</title>
+      <link>//docs.vanillaforums.com/help/qna/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/qna/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Vanilla supports question and answer type discussions. Q&amp;amp;A discussions differ in the following ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When a question is answered, the member who asked the question will receive a notification and will be prompted to indicate if the answer answered the question or not.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Valid answers are highlighted and displayed at the top of the discussion list.&lt;/li&gt;
+&lt;li&gt;Members who answer questions will receive badges (if badges are turned on).&lt;/li&gt;
+&lt;li&gt;A shortcut can be displayed in the side menu to show all unanswered questions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;turning-on-q-a&#34;&gt;Turning on Q&amp;amp;A&lt;/h2&gt;
+
+&lt;p&gt;The Q&amp;amp;A addon must be turned on to enable Q&amp;amp;A. It can be found in the Dashboard under Addons &amp;gt; Addons&lt;/p&gt;
+
+&lt;h2 id=&#34;addon-settings&#34;&gt;Addon Settings&lt;/h2&gt;
+
+&lt;p&gt;There is only one setting for the Q&amp;amp;A plugin:  you can decided if reputation points should be awarded to members for answering questions.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zBwG0Fm4Xoc&#34;&gt;Video: Creating a Q&amp;amp;A Community&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -9,10 +9,10 @@
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -53,10 +53,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -118,10 +118,10 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -169,33 +169,101 @@
     </item>
     
     <item>
-      <title>Adding and Editing User Notes</title>
-      <link>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <title>Advanced Search</title>
+      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>
 
-&lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
+&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
 
-&lt;p&gt;To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.&lt;/p&gt;
+&lt;p&gt;Advanced search will enhance search functionality:&lt;/p&gt;
 
-&lt;h2 id=&#34;viewing-notes&#34;&gt;Viewing Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Better indexing of content&lt;/li&gt;
+&lt;li&gt;The ability to apply filters to searches&lt;/li&gt;
+&lt;li&gt;Auto-complete of results as the user types the search terms&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;To view a user’s notes go to their profile. There will be a notes link on the side panel. Note that both notes and warnings are displayed in the same list. Notes are identified by a note tag. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.View (if present) to view notes.&lt;/p&gt;
+&lt;p&gt;To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:&lt;/p&gt;
 
-&lt;h2 id=&#34;editing-and-deleting-a-note&#34;&gt;Editing and Deleting a Note&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;On the addons page of the Dashboard, enable Advanced Search&lt;/li&gt;
+&lt;li&gt;Under the Appearance section of the Dashboard, go to the Customer Theme page&lt;/li&gt;
+&lt;li&gt;In the HTML tab, look for the following code  {searchbox}&lt;/li&gt;
+&lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;You can edit and delete user notes by hovering over them and clicking the corresponding button. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to edit or delete notes.&lt;/p&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Advanced search is not available on all plan levels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/&#34;&gt;Blog: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gLLtlTsC4h8&#34;&gt;Video: Advanced Search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analytics</title>
+      <link>//docs.vanillaforums.com/help/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/analytics/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
+
+&lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use-vanilla-statistics&#34;&gt;How to use Vanilla Statistics&lt;/h2&gt;
+
+&lt;p&gt;The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server.  We generate and present you with the statistics in a graphical format for the following:&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
+
+&lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
+
+&lt;p&gt;The site overview will present you with the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Number of page views generated for the time period&lt;/li&gt;
+&lt;li&gt;Number of new users that have joined the community for the time period&lt;/li&gt;
+&lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
+&lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using the tabs at the top, you can view daily or monthly stats. The arrows will let you move the time period you are viewing.&lt;/p&gt;
+
+&lt;p&gt;Vanilla Statistics will also create a rolling table of data on the following:&lt;/p&gt;
+
+&lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
+
+&lt;p&gt;Vanilla will also create a rolling table of data on the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Most Active Users&lt;/li&gt;
+&lt;li&gt;Most popular discussions discussions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This too can be modified by changing the time period, you select to view.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -210,10 +278,10 @@
     
     <item>
       <title>Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -246,10 +314,10 @@
     
     <item>
       <title>Curating with Reactions</title>
-      <link>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/reactions/curating-with-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -415,10 +483,10 @@
     
     <item>
       <title>Github</title>
-      <link>//docs.vanillaforums.com/help/addons/social/github/</link>
+      <link>//docs.vanillaforums.com/help/integrations/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/social/github/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/github/</guid>
       <description>
 
 &lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
@@ -439,10 +507,10 @@
     
     <item>
       <title>Giving and Requesting Badges</title>
-      <link>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/badges/giving-and-requesting-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
@@ -533,57 +601,6 @@
 &lt;h2 id=&#34;getting-started-with-groups&#34;&gt;Getting started with Groups&lt;/h2&gt;
 
 &lt;p&gt;Try creating three to eight groups as a pilot program to introduce groups to your community. Carefully managing the list of groups available can encourage the creation of fewer groups with higher quality and participation. Ten groups with 30 members each will create a far better experience than 100 groups with three members each.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ideation</title>
-      <link>//docs.vanillaforums.com/help/addons/ideation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/addons/ideation/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;ideation&#34;&gt;Ideation&lt;/h2&gt;
-
-&lt;p&gt;Ideation gives forum users the ability to upvote and optionally downvote discussions.&lt;/p&gt;
-
-&lt;h3 id=&#34;ideas-overview&#34;&gt;Ideas Overview&lt;/h3&gt;
-
-&lt;p&gt;An idea is a discussion that can be voted on by forum users. It has a status that lets moderators easily communicate decisions made on the idea, and determines whether it&amp;rsquo;s open or closed for voting. You can modify, add or delete available statuses from the dashboard. Ideas can only be created in idea-specific categories an idea-specific categories can only contain ideas.&lt;/p&gt;
-
-&lt;h3 id=&#34;enabling-ideation&#34;&gt;Enabling Ideation&lt;/h3&gt;
-
-&lt;p&gt;To enable Ideation you&amp;rsquo;ll need to:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Enable the Ideation addon from the Addons page in the dashboard.&lt;/li&gt;
-&lt;li&gt;Make a new category and check the &amp;lsquo;Idea Category&amp;rsquo; box on the category settings page. You can choose to enable downvotes here as well.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Users can add ideas to be voted on in this new category.&lt;/p&gt;
-
-&lt;p&gt;Note that once an idea category is created, it can never be converted to a regular category and regular categories can never be converted to idea categories.&lt;/p&gt;
-
-&lt;h3 id=&#34;idea-statuses&#34;&gt;Idea Statuses&lt;/h3&gt;
-
-&lt;p&gt;Idea statuses communicate to users what state the idea is in, and whether the idea is open to voting or not. The Ideation plugin ships with these default statuses: Active, Already Offered, Declined, Completed, In Progress, and In Review. The available statuses are completely configurable and can be changed to suit your community&amp;rsquo;s needs.&lt;/p&gt;
-
-&lt;h4 id=&#34;adding-and-editing-available-idea-statuses&#34;&gt;Adding and Editing Available Idea Statuses&lt;/h4&gt;
-
-&lt;p&gt;To edit the available idea statuses, navigate to the &amp;lsquo;Idea Statuses&amp;rsquo; page from the link in the dashboard panel. From there, you can add, remove and edit statuses. You can also configure the default status for new ideas that are created and specify whether a status is open or closed for voting. Users need to have the Garden.Settings.Manage permission in order to configure the available statuses.&lt;/p&gt;
-
-&lt;h3 id=&#34;changing-an-idea-s-status&#34;&gt;Changing An Idea&amp;rsquo;s Status&lt;/h3&gt;
-
-&lt;p&gt;You can change the status of an idea by navigating to the idea in the forum and clicking on its options dropdown menu. You&amp;rsquo;ll find an &amp;lsquo;Idea Status&amp;rsquo; option there. From there, you can select a new status for the idea. You can also add notes to explain the status change. For example, if an idea is marked as a duplicate of another, you may want to link to the idea it is a duplicate of. Users need to have the Vanilla.Moderation.Manage permission in order to change the status on an idea.&lt;/p&gt;
-
-&lt;p&gt;Changing an idea&amp;rsquo;s status will send out notifications to the idea author and the idea&amp;rsquo;s voters if they have enabled these notifications for their accounts.&lt;/p&gt;
 </description>
     </item>
     

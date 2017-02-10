@@ -8,17 +8,42 @@
     <atom:link href="//docs.vanillaforums.com/tags/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Categories</title>
-      <link>//docs.vanillaforums.com/help/categories/</link>
+      <title>Advanced Settings</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/categories/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
+      <description>
+
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+
+&lt;p&gt;The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discussions per page  (the number of discussions displayed on a page)&lt;/li&gt;
+&lt;li&gt;Comments per page (the number of comments displayed on a page)&lt;/li&gt;
+&lt;li&gt;Editing time limit (this can be used to prevent edits after a certain time period.  Some user  Roles and permissions will may override this limit)&lt;/li&gt;
+&lt;li&gt;Enable checkboxes (this&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Categories</title>
+      <link>//docs.vanillaforums.com/help/forum-settings/categories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/forum-settings/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-categories&#34;&gt;What Are Categories&lt;/h2&gt;
 
 &lt;p&gt;Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
 You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to &lt;code&gt;/vanilla/settings/categories&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-nav.png&#34; alt=&#34;Categories Navigation&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
 
 &lt;h2 id=&#34;choosing-your-category-layout&#34;&gt;Choosing Your Category Layout&lt;/h2&gt;
 
@@ -29,6 +54,8 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;&lt;strong&gt;The Table Layout&lt;/strong&gt; shows discussion and comment totals as columns, along with user avatar and the thread title of the most recent post in the section.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The Mixed Layout&lt;/strong&gt; option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-add.png&#34; alt=&#34;Add Categories&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;choosing-how-categories-display&#34;&gt;Choosing How Categories Display&lt;/h2&gt;
 
@@ -97,6 +124,12 @@ You can find Categories under the Settings tab Dashboard, listed under “Forum 
 &lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/delete_warning.png&#34; alt=&#34;The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;It is not possible to recover a deleted category.&lt;/strong&gt;  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/&#34;&gt;Blog: How to Structure Categories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
