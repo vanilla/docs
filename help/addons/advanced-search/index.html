@@ -376,15 +376,17 @@ n.id = i;
 
                 
 
-<h3 id="enabling-advanced-search">Enabling Advanced Search</h3>
+<h2 id="what-is-advanced-search">What Is Advanced Search?</h2>
 
-<p>Advanced search will enhance search functionality:</p>
+<p>Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.</p>
 
 <ul>
 <li>Better indexing of content</li>
 <li>The ability to apply filters to searches</li>
 <li>Auto-complete of results as the user types the search terms</li>
 </ul>
+
+<h3 id="enabling-advanced-search">Enabling Advanced Search</h3>
 
 <p>To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:</p>
 
@@ -395,13 +397,33 @@ n.id = i;
 <li>Change that code to  {searchbox_advanced}</li>
 </ul>
 
-<p>Notes:</p>
+<h3 id="using-advanced-search">Using Advanced Search</h3>
+
+<p>Navigating to <code>/search</code> will bring you to a page with an expandable search bar. Clicking the arrow on the right side of the bar will show you all the extra parameters you have available for search:
+<img src="https://images.v-cdn.net/docs/search_expanded.jpg" alt="You can search threads by title, author, and tags. You can narrow results down to a specific category, and choose what discussion types to search." /></p>
+
+<p>You can also link to <code>/search?adv=1</code> to have these options already expanded.</p>
+
+<p>By default, users will only see these options on the <code>/search</code> page. To switch out the search bar on your homepage, simply change out <code>{searchbox}</code> for <code>{searchbox_advanced}</code> in your custom theme.</p>
+
+<p>Advanced search also enables an autocomplete function that pulls results as you type.
+<img src="https://images.v-cdn.net/docs/search_autocomplete.jpg" alt="Autocompleted results based on a keyword" /></p>
+
+<p>If you are looking for something very specific, there are some additional parameters you can use to help narrow down results.</p>
 
 <ul>
-<li>Advanced search is not available on all plan levels.</li>
+<li><code>“keyword phrase”</code>: A phrase wrapped in quotes must occur in that order.</li>
+<li><code>+keyword</code>: The keyword must occur in the search result.</li>
+<li><code>-keyword</code>: The keyword must not occur in the result.</li>
 </ul>
 
-<p>Additional Resources:</p>
+<h3 id="excluding-content-from-search">Excluding Content From Search</h3>
+
+<p>Normal viewing permissions apply to search results. Searching as a guest or member will not return results with content from moderation or administration sections.</p>
+
+<p>Archiving a category will prevent its content from coming up in the site-based search. Threads in archived categories are still indexed by search engines. You can use this setting to exclude old announcements or other irrelevant threads from search results without causing broken links.</p>
+
+<h2 id="additional-resources">Additional Resources:</h2>
 
 <ul>
 <li><a href="https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/">Blog: Advanced Search</a></li>

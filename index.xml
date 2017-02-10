@@ -688,15 +688,17 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
       <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>
 
-&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
+&lt;h2 id=&#34;what-is-advanced-search&#34;&gt;What Is Advanced Search?&lt;/h2&gt;
 
-&lt;p&gt;Advanced search will enhance search functionality:&lt;/p&gt;
+&lt;p&gt;Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Better indexing of content&lt;/li&gt;
 &lt;li&gt;The ability to apply filters to searches&lt;/li&gt;
 &lt;li&gt;Auto-complete of results as the user types the search terms&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
 
 &lt;p&gt;To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:&lt;/p&gt;
 
@@ -707,13 +709,33 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Notes:&lt;/p&gt;
+&lt;h3 id=&#34;using-advanced-search&#34;&gt;Using Advanced Search&lt;/h3&gt;
+
+&lt;p&gt;Navigating to &lt;code&gt;/search&lt;/code&gt; will bring you to a page with an expandable search bar. Clicking the arrow on the right side of the bar will show you all the extra parameters you have available for search:
+&lt;img src=&#34;https://images.v-cdn.net/docs/search_expanded.jpg&#34; alt=&#34;You can search threads by title, author, and tags. You can narrow results down to a specific category, and choose what discussion types to search.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also link to &lt;code&gt;/search?adv=1&lt;/code&gt; to have these options already expanded.&lt;/p&gt;
+
+&lt;p&gt;By default, users will only see these options on the &lt;code&gt;/search&lt;/code&gt; page. To switch out the search bar on your homepage, simply change out &lt;code&gt;{searchbox}&lt;/code&gt; for &lt;code&gt;{searchbox_advanced}&lt;/code&gt; in your custom theme.&lt;/p&gt;
+
+&lt;p&gt;Advanced search also enables an autocomplete function that pulls results as you type.
+&lt;img src=&#34;https://images.v-cdn.net/docs/search_autocomplete.jpg&#34; alt=&#34;Autocompleted results based on a keyword&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are looking for something very specific, there are some additional parameters you can use to help narrow down results.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Advanced search is not available on all plan levels.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;“keyword phrase”&lt;/code&gt;: A phrase wrapped in quotes must occur in that order.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+keyword&lt;/code&gt;: The keyword must occur in the search result.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-keyword&lt;/code&gt;: The keyword must not occur in the result.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Additional Resources:&lt;/p&gt;
+&lt;h3 id=&#34;excluding-content-from-search&#34;&gt;Excluding Content From Search&lt;/h3&gt;
+
+&lt;p&gt;Normal viewing permissions apply to search results. Searching as a guest or member will not return results with content from moderation or administration sections.&lt;/p&gt;
+
+&lt;p&gt;Archiving a category will prevent its content from coming up in the site-based search. Threads in archived categories are still indexed by search engines. You can use this setting to exclude old announcements or other irrelevant threads from search results without causing broken links.&lt;/p&gt;
+
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional Resources:&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/&#34;&gt;Blog: Advanced Search&lt;/a&gt;&lt;/li&gt;
