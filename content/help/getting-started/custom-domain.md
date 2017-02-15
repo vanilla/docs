@@ -32,4 +32,4 @@ Look further down the page, it will list your IP address
 
 ### SSL
 
-If you'd like to use the HTTPS protocol and insert an SSL certificate, follow the [instructions here](/cloud-services/ssl/).
+If you'd like to use the HTTPS protocol and insert an SSL certificate, follow the [instructions here](/cloud/ssl/).
