@@ -820,7 +820,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;ol&gt;
 &lt;li&gt;Create a new file called default.master.tpl (or default.master.php)&lt;/li&gt;
-&lt;li&gt;Place it in the view folder in your theme folder (i.e., /themes/your_theme_name/design/custom.css)&lt;/li&gt;
+&lt;li&gt;Place it in the views folder in your theme folder (i.e., /themes/your_theme_name/views/)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;If you&amp;rsquo;re new to this, it&amp;rsquo;s probably a good idea to copy the content of /applications/dashboard/views/default.master.tpl into your theme&amp;rsquo;s master view and manipulate it from there.&lt;/p&gt;
