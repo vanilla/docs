@@ -1,5 +1,5 @@
 ---
-title: Changelog
+title: Release Notes for Self-Hosted
 tags:
 - Developers
 category: developer
