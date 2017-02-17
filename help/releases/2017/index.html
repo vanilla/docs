@@ -302,6 +302,32 @@ n.id = i;
 
 <h3 id="q1-release-3-thursday-feb-16">Q1 release 3 (Thursday, Feb 16)</h3>
 
+<ul>
+<li>Roles: Fix linked user count on roles page. It was not correctly leading to a list of users filtered by that role.</li>
+<li>Discussions: Fix permission check in discussion count getting.</li>
+<li>Settings: Allow empty value for color picker in forms.</li>
+<li>Logging: Update category discussion and comment counts when restoring a record from logs.</li>
+<li>Logging: Display IP address on blocked registrations.</li>
+<li>Profiles: Fix issue where JSON is not rendered at API endpoint when <code>ShowActivities</code> is false.</li>
+<li>Dashboard: Hide images in the feed on dashboard homepage.</li>
+<li>Dashboard: Add datepicker dashboard homepage stats (VanillaStats addon).</li>
+<li>Comments: Add a recent comments module. It can be used with custom theming.</li>
+<li>Users: Improve password requirement message.</li>
+<li>Users: Validate password constraints on the reset password form. Previously, password requirements were only checked at registration.</li>
+<li>Categories: Modify how permissions are evaluated to allow more granular changes in the future.</li>
+<li>Subcommunities: Use canonical discussion and comment URLs on search and profiles.</li>
+<li>Discussion Excerpt: Add excerpts to discussion lists everywhere.</li>
+<li>Badges: Add badge request count to MeModule settings dropdown.</li>
+<li>Badges: Ignore users who already have badge when giving to a list of users.</li>
+<li>Q&amp;A: Add translation for accepted answer activity.</li>
+<li>Polls: Tighten voting permissions to only those who can comment.</li>
+<li>Groups: Remove group association from discussions when moving them to another category so a permission issue is not triggered.</li>
+<li>Groups: Delete group&rsquo;s discussions and comments when a group is deleted.</li>
+<li>Framework: Improve how our third-party Markdown library is used (unfork, use Composer).</li>
+<li>Framework: Add EventManager, ArrayContainer, and other preliminary work for API v2.</li>
+<li>Framework: Improve addon error reporting.</li>
+</ul>
+
 <h3 id="q1-release-2-tuesday-jan-31">Q1 release 2 (Tuesday, Jan 31)</h3>
 
 <ul>

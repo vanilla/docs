@@ -350,6 +350,32 @@
 
 &lt;h3 id=&#34;q1-release-3-thursday-feb-16&#34;&gt;Q1 release 3 (Thursday, Feb 16)&lt;/h3&gt;
 
+&lt;ul&gt;
+&lt;li&gt;Roles: Fix linked user count on roles page. It was not correctly leading to a list of users filtered by that role.&lt;/li&gt;
+&lt;li&gt;Discussions: Fix permission check in discussion count getting.&lt;/li&gt;
+&lt;li&gt;Settings: Allow empty value for color picker in forms.&lt;/li&gt;
+&lt;li&gt;Logging: Update category discussion and comment counts when restoring a record from logs.&lt;/li&gt;
+&lt;li&gt;Logging: Display IP address on blocked registrations.&lt;/li&gt;
+&lt;li&gt;Profiles: Fix issue where JSON is not rendered at API endpoint when &lt;code&gt;ShowActivities&lt;/code&gt; is false.&lt;/li&gt;
+&lt;li&gt;Dashboard: Hide images in the feed on dashboard homepage.&lt;/li&gt;
+&lt;li&gt;Dashboard: Add datepicker dashboard homepage stats (VanillaStats addon).&lt;/li&gt;
+&lt;li&gt;Comments: Add a recent comments module. It can be used with custom theming.&lt;/li&gt;
+&lt;li&gt;Users: Improve password requirement message.&lt;/li&gt;
+&lt;li&gt;Users: Validate password constraints on the reset password form. Previously, password requirements were only checked at registration.&lt;/li&gt;
+&lt;li&gt;Categories: Modify how permissions are evaluated to allow more granular changes in the future.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Use canonical discussion and comment URLs on search and profiles.&lt;/li&gt;
+&lt;li&gt;Discussion Excerpt: Add excerpts to discussion lists everywhere.&lt;/li&gt;
+&lt;li&gt;Badges: Add badge request count to MeModule settings dropdown.&lt;/li&gt;
+&lt;li&gt;Badges: Ignore users who already have badge when giving to a list of users.&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A: Add translation for accepted answer activity.&lt;/li&gt;
+&lt;li&gt;Polls: Tighten voting permissions to only those who can comment.&lt;/li&gt;
+&lt;li&gt;Groups: Remove group association from discussions when moving them to another category so a permission issue is not triggered.&lt;/li&gt;
+&lt;li&gt;Groups: Delete group&amp;rsquo;s discussions and comments when a group is deleted.&lt;/li&gt;
+&lt;li&gt;Framework: Improve how our third-party Markdown library is used (unfork, use Composer).&lt;/li&gt;
+&lt;li&gt;Framework: Add EventManager, ArrayContainer, and other preliminary work for API v2.&lt;/li&gt;
+&lt;li&gt;Framework: Improve addon error reporting.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;q1-release-2-tuesday-jan-31&#34;&gt;Q1 release 2 (Tuesday, Jan 31)&lt;/h3&gt;
 
 &lt;ul&gt;
