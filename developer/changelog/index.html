@@ -289,11 +289,15 @@ n.id = i;
 
                 
 
-<h2 id="open-source-change-log">Open Source Change Log</h2>
+<h2 id="release-notes">Release Notes</h2>
 
-<p>Release notes</p>
+<p>This change log is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the <a href="https://open.vanillaforums.com/categories/blog">forum</a>. We provide separate <a href="http://docs.vanillaforums.com/help/releases/">cloud release notes</a> since they are scheduled differently.</p>
 
-<h2 id="2-1">2.1</h2>
+<p>Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.</p>
+
+<h3 id="2-3">2.3</h3>
+
+<h3 id="2-2">2.2</h3>
 
 <h3 id="2-1-6">2.1.6</h3>
 
@@ -348,7 +352,7 @@ n.id = i;
 <li>Fixes a theme screenshot bug (thanks @hgtonight‌ for the patch).</li>
 </ul>
 
-<h3 id="2-1-1-1">2.1</h3>
+<h3 id="2-1">2.1</h3>
 
 <p><em><a href="https://open.vanillaforums.com/discussion/26685/vanilla-2-1-stable-released">Released 28 April 2014</a></em></p>
 
@@ -371,9 +375,9 @@ n.id = i;
 <li><a href="https://open.vanillaforums.com/discussion/26626/vanilla-2-1-release-candidate">Release Candidate 1</a></li>
 </ul>
 
-<h2 id="2-0-18">2.0.18</h2>
-
 <h3 id="2-0-18-14">2.0.18.14</h3>
+
+<p><strong><em>Prior to 2.1, Vanilla used the third decimal in the version to indicate new features, and a fourth decimal for minor patches.</em></strong></p>
 
 <p><em><a href="https://open.vanillaforums.com/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14">Released 30 Oct 2014</a></em></p>
 
@@ -444,7 +448,7 @@ n.id = i;
 <h3 id="2-0-18-6">2.0.18.6</h3>
 
 <ul>
-<li>Switch update checks to json to prevent object injection hacks.</li>
+<li>Switch update checks to JSON to prevent object injection hacks.</li>
 </ul>
 
 <h3 id="2-0-18-5">2.0.18.5</h3>
@@ -507,7 +511,7 @@ n.id = i;
 <li>Fixed jQuery syntax errors.</li>
 </ul>
 
-<h3 id="2-0-18-1-1">2.0.18</h3>
+<h3 id="2-0-18">2.0.18</h3>
 
 <p><em><a href="https://open.vanillaforums.com/discussion/17643/vanilla-2-0-18-final-release">Released 3 Nov 2011</a></em></p>
 
@@ -544,49 +548,22 @@ n.id = i;
 <li>Fixed hundreds of other bugs too numerous to list, including dozens of SQL-related bugs.</li>
 </ul>
 
-<h2 id="2-0-17">2.0.17</h2>
+<h3 id="2-0-17-1-2-0-17-10">2.0.17.1 - 2.0.17.10</h3>
 
-<h3 id="2-0-17-10">2.0.17.10</h3>
+<ul>
+<li>Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install.</li>
+<li>Fixed bug where analytics registration would occur repeatedly if config file was read-only.</li>
+<li>Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug.</li>
+<li>Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install.</li>
+<li>Fixed problem with category permissions where some configurations would result in too restrictive defaults.</li>
+<li>SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core.</li>
+<li>Updated analytics client and server software to fix a bug in stats transmission and rendering.</li>
+<li>Fixed a packaging problem that caused the contents of index.php to be duplicated.</li>
+<li>SECURITY: Fixed cookie theft vulnerability.</li>
+<li>SECURITY: Fixed Facebook, Twitter, and Embed plugins&rsquo; access control.</li>
+</ul>
 
-<p>SECURITY: Fixed Facebook, Twitter, and Embed plugins&rsquo; access control.</p>
-
-<h3 id="2-0-17-9">2.0.17.9</h3>
-
-<p>SECURITY: Fixed cookie theft vulnerability.</p>
-
-<h3 id="2-0-17-8">2.0.17.8</h3>
-
-<p>Fixed a packaging problem that caused the contents of index.php to be duplicated</p>
-
-<h3 id="2-0-17-7">2.0.17.7</h3>
-
-<p>Updated analytics client and server software to fix a bug in stats transmission and rendering</p>
-
-<h3 id="2-0-17-6">2.0.17.6</h3>
-
-<p>SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core</p>
-
-<h3 id="2-0-17-5">2.0.17.5</h3>
-
-<p>Fixed problem with category permissions where some configurations would result in too restrictive defaults</p>
-
-<h3 id="2-0-17-4">2.0.17.4</h3>
-
-<p>Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install</p>
-
-<h3 id="2-0-17-3">2.0.17.3</h3>
-
-<p>Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug</p>
-
-<h3 id="2-0-17-2">2.0.17.2</h3>
-
-<p>Fixed bug where analytics registration would occur repeatedly if config file was read-only</p>
-
-<h3 id="2-0-17-1">2.0.17.1</h3>
-
-<p>Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install</p>
-
-<h3 id="2-0-17-1-1">2.0.17</h3>
+<h3 id="2-0-17">2.0.17</h3>
 
 <p><em>Released 2011-01-18</em></p>
 
@@ -606,7 +583,7 @@ n.id = i;
 <li>Optimized Announced Discussions query to improve performance.</li>
 </ul>
 
-<h2 id="older-releases">Older Releases</h2>
+<h3 id="older-releases">Older Releases</h3>
 
 <p><em>Unlisted versions were skipped or replaced the same day.</em></p>
 

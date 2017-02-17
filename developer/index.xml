@@ -379,11 +379,15 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <guid>//docs.vanillaforums.com/developer/changelog/</guid>
       <description>
 
-&lt;h2 id=&#34;open-source-change-log&#34;&gt;Open Source Change Log&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
-&lt;p&gt;Release notes&lt;/p&gt;
+&lt;p&gt;This change log is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the &lt;a href=&#34;https://open.vanillaforums.com/categories/blog&#34;&gt;forum&lt;/a&gt;. We provide separate &lt;a href=&#34;http://docs.vanillaforums.com/help/releases/&#34;&gt;cloud release notes&lt;/a&gt; since they are scheduled differently.&lt;/p&gt;
 
-&lt;h2 id=&#34;2-1&#34;&gt;2.1&lt;/h2&gt;
+&lt;p&gt;Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-3&#34;&gt;2.3&lt;/h3&gt;
+
+&lt;h3 id=&#34;2-2&#34;&gt;2.2&lt;/h3&gt;
 
 &lt;h3 id=&#34;2-1-6&#34;&gt;2.1.6&lt;/h3&gt;
 
@@ -438,7 +442,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;Fixes a theme screenshot bug (thanks @hgtonight‌ for the patch).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;2-1-1-1&#34;&gt;2.1&lt;/h3&gt;
+&lt;h3 id=&#34;2-1&#34;&gt;2.1&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/26685/vanilla-2-1-stable-released&#34;&gt;Released 28 April 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
@@ -461,9 +465,9 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/26626/vanilla-2-1-release-candidate&#34;&gt;Release Candidate 1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;2-0-18&#34;&gt;2.0.18&lt;/h2&gt;
-
 &lt;h3 id=&#34;2-0-18-14&#34;&gt;2.0.18.14&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Prior to 2.1, Vanilla used the third decimal in the version to indicate new features, and a fourth decimal for minor patches.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 30 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
@@ -534,7 +538,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;h3 id=&#34;2-0-18-6&#34;&gt;2.0.18.6&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Switch update checks to json to prevent object injection hacks.&lt;/li&gt;
+&lt;li&gt;Switch update checks to JSON to prevent object injection hacks.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;2-0-18-5&#34;&gt;2.0.18.5&lt;/h3&gt;
@@ -597,7 +601,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;Fixed jQuery syntax errors.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;2-0-18-1-1&#34;&gt;2.0.18&lt;/h3&gt;
+&lt;h3 id=&#34;2-0-18&#34;&gt;2.0.18&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 3 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
@@ -634,49 +638,22 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;Fixed hundreds of other bugs too numerous to list, including dozens of SQL-related bugs.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;2-0-17&#34;&gt;2.0.17&lt;/h2&gt;
+&lt;h3 id=&#34;2-0-17-1-2-0-17-10&#34;&gt;2.0.17.1 - 2.0.17.10&lt;/h3&gt;
 
-&lt;h3 id=&#34;2-0-17-10&#34;&gt;2.0.17.10&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install.&lt;/li&gt;
+&lt;li&gt;Fixed bug where analytics registration would occur repeatedly if config file was read-only.&lt;/li&gt;
+&lt;li&gt;Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug.&lt;/li&gt;
+&lt;li&gt;Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install.&lt;/li&gt;
+&lt;li&gt;Fixed problem with category permissions where some configurations would result in too restrictive defaults.&lt;/li&gt;
+&lt;li&gt;SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core.&lt;/li&gt;
+&lt;li&gt;Updated analytics client and server software to fix a bug in stats transmission and rendering.&lt;/li&gt;
+&lt;li&gt;Fixed a packaging problem that caused the contents of index.php to be duplicated.&lt;/li&gt;
+&lt;li&gt;SECURITY: Fixed cookie theft vulnerability.&lt;/li&gt;
+&lt;li&gt;SECURITY: Fixed Facebook, Twitter, and Embed plugins&amp;rsquo; access control.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;SECURITY: Fixed Facebook, Twitter, and Embed plugins&amp;rsquo; access control.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-9&#34;&gt;2.0.17.9&lt;/h3&gt;
-
-&lt;p&gt;SECURITY: Fixed cookie theft vulnerability.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-8&#34;&gt;2.0.17.8&lt;/h3&gt;
-
-&lt;p&gt;Fixed a packaging problem that caused the contents of index.php to be duplicated&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-7&#34;&gt;2.0.17.7&lt;/h3&gt;
-
-&lt;p&gt;Updated analytics client and server software to fix a bug in stats transmission and rendering&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-6&#34;&gt;2.0.17.6&lt;/h3&gt;
-
-&lt;p&gt;SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-5&#34;&gt;2.0.17.5&lt;/h3&gt;
-
-&lt;p&gt;Fixed problem with category permissions where some configurations would result in too restrictive defaults&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-4&#34;&gt;2.0.17.4&lt;/h3&gt;
-
-&lt;p&gt;Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-3&#34;&gt;2.0.17.3&lt;/h3&gt;
-
-&lt;p&gt;Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-2&#34;&gt;2.0.17.2&lt;/h3&gt;
-
-&lt;p&gt;Fixed bug where analytics registration would occur repeatedly if config file was read-only&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-1&#34;&gt;2.0.17.1&lt;/h3&gt;
-
-&lt;p&gt;Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install&lt;/p&gt;
-
-&lt;h3 id=&#34;2-0-17-1-1&#34;&gt;2.0.17&lt;/h3&gt;
+&lt;h3 id=&#34;2-0-17&#34;&gt;2.0.17&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Released 2011-01-18&lt;/em&gt;&lt;/p&gt;
 
@@ -696,7 +673,7 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 &lt;li&gt;Optimized Announced Discussions query to improve performance.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;older-releases&#34;&gt;Older Releases&lt;/h2&gt;
+&lt;h3 id=&#34;older-releases&#34;&gt;Older Releases&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Unlisted versions were skipped or replaced the same day.&lt;/em&gt;&lt;/p&gt;
 
