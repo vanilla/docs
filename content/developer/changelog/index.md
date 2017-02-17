@@ -17,7 +17,15 @@ Vanilla numbers major releases with the first decimal place. A second decimal in
 
 ### 2.3
 
+*[Released 18 Nov 2016](https://open.vanillaforums.com/discussion/32822/vanilla-2-3-is-now-available)*
+
+### 2.1.1
+
+*[Released 7 May 2016](https://open.vanillaforums.com/discussion/32109/vanilla-2-2-1-now-available)*
+
 ### 2.2
+
+*[Released 12 Nov 2015](https://open.vanillaforums.com/discussion/31121/vanilla-is-proud-to-present-version-2-2)*
 
 ### 2.1.6
 
