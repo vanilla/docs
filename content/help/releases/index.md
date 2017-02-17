@@ -22,3 +22,11 @@ Full release notes:
 
 * [2017 releases](/cloud/releases/2017)
 * [2016 VIP releases](/cloud/releases/2016)
+
+### 2017 VIP releases
+
+* **Spring**: 11-12 April
+* **Summer**: 11-12 July
+* **Fall**: 17-18 October
+
+The winter release will be some time in January 2018, date TBD as part of our 2018 schedule.
