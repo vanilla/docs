@@ -27,6 +27,35 @@ Vanilla numbers major releases with the first decimal place. A second decimal in
 
 *[Released 12 Nov 2015](https://open.vanillaforums.com/discussion/31121/vanilla-is-proud-to-present-version-2-2)*
 
+### 2.1.13
+
+*[Released 29 Oct 2015](https://open.vanillaforums.com/discussion/31046/vanilla-2-1-13-security-updates)*
+
+### 2.1.12
+
+*[Released 15 Oct 2015](https://open.vanillaforums.com/discussion/30966/vanilla-2-1-12-released-security-update)*
+
+### 2.1.11
+
+*[Released 12 June](https://open.vanillaforums.com/discussion/30123/vanilla-2-1-11-released-security-patch)*
+
+### 2.1.10
+
+*[Released 4 May 2015](https://open.vanillaforums.com/discussion/29835/vanilla-2-1-10-released-critical-security-update)*
+
+### 2.1.9
+
+*[Released 18 Mar 2015](https://open.vanillaforums.com/discussion/29555/vanilla-2-1-9-released)*
+
+### 2.1.8
+
+*[Released 15 Jan 2015](https://open.vanillaforums.com/discussion/29016/critical-vanilla-2-1-8-released)*
+
+### 2.1.7
+
+*[Released 9 Jan 2015](https://open.vanillaforums.com/discussion/28961/vanilla-2-1-7-released)*
+
+
 ### 2.1.6
 
 *[Released 21 Nov 2014](https://open.vanillaforums.com/discussion/28555/vanilla-2-1-6-released)*
