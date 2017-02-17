@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Release Notes for Cloud
 tags:
 - Cloud
 - Releases
@@ -12,8 +12,13 @@ aliases:
 - /cloud/releases
 ---
 
-## Release Notes
+## Release Notes for Cloud
 
-Our clients on [VIP plans](https://vanillaforums.com/plans) receive a timed code release every two months with new features, fixes, and enhancements. All other plan levels receive these changes continuously as they become available.
+Our customers on [VIP plans](https://vanillaforums.com/plans) receive a product update once per quarter with new features, fixes, and enhancements. We coordinate these releases with our customers and provide custom QA or custom scheduling as required.
 
-We publish changes after each VIP release below, well after other plan levels may have received it.
+Customers with a success manager receive updates approximately every other week at a fixed time which is not pre-announced. Other plan levels and all staging sites may receive these updates on an ad-hoc basis.
+
+Full notes:
+
+* [2017 releases](/cloud/releases/2017)
+* [2016 VIP releases](/cloud/releases/2016)
