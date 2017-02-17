@@ -94,6 +94,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/developer/changelog/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/cloud/repository/</loc>
   </url>
   
@@ -403,10 +407,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/releases/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/developer/changelog/</loc>
   </url>
   
   <url>

@@ -15,7 +15,7 @@
       <guid>//docs.vanillaforums.com/help/releases/2016/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes-for-cloud-2016&#34;&gt;Release Notes for Cloud, 2016&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
 &lt;p&gt;In 2016, VIP releases were every other month. Other customers received updates on an ad-hoc basis.&lt;/p&gt;
 
@@ -344,7 +344,7 @@
       <guid>//docs.vanillaforums.com/help/releases/2017/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes-for-cloud-2017&#34;&gt;Release Notes for Cloud, 2017&lt;/h2&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
 
 &lt;p&gt;Quarterly VIP releases contain all numbered releases within said quarter.&lt;/p&gt;
 
@@ -752,20 +752,20 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     </item>
     
     <item>
-      <title>Release Notes for Cloud</title>
+      <title>Release Notes (Cloud)</title>
       <link>//docs.vanillaforums.com/help/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/releases/</guid>
       <description>
 
-&lt;h2 id=&#34;release-notes-for-cloud&#34;&gt;Release Notes for Cloud&lt;/h2&gt;
+&lt;h2 id=&#34;cloud-release-schedule&#34;&gt;Cloud release schedule&lt;/h2&gt;
 
 &lt;p&gt;Our customers on &lt;a href=&#34;https://vanillaforums.com/plans&#34;&gt;VIP plans&lt;/a&gt; receive a product update once per quarter with new features, fixes, and enhancements. We coordinate these releases with our customers and provide custom QA or custom scheduling as required.&lt;/p&gt;
 
 &lt;p&gt;Customers with a success manager receive updates approximately every other week at a fixed time which is not pre-announced. Other plan levels and all staging sites may receive these updates on an ad-hoc basis.&lt;/p&gt;
 
-&lt;p&gt;Full notes:&lt;/p&gt;
+&lt;p&gt;Full release notes:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/cloud/releases/2017&#34;&gt;2017 releases&lt;/a&gt;&lt;/li&gt;
