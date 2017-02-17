@@ -1,5 +1,5 @@
 ---
-title: Release Notes for Self-Hosted
+title: Change Log
 tags:
 - Developers
 category: developer
@@ -9,9 +9,9 @@ menu:
 aliases:
 - /developers/changelog
 ---
-## Release Notes
+## Version Change Log
 
-This change log is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the [forum](https://open.vanillaforums.com/categories/blog). We provide separate [cloud release notes](http://docs.vanillaforums.com/help/releases/) since they are scheduled differently.
+This is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the [forum](https://open.vanillaforums.com/categories/blog). We provide separate [cloud release notes](http://docs.vanillaforums.com/help/releases/) since they are scheduled differently.
 
 Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.
 
