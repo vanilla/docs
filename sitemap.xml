@@ -6,6 +6,14 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/releases/2016/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/releases/2017/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/appearance/accessibility/</loc>
   </url>
   
@@ -86,10 +94,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/changelog/</loc>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/cloud/repository/</loc>
   </url>
   
@@ -143,10 +147,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/framework/datasets/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/releases/december-2016/</loc>
   </url>
   
   <url>
@@ -290,14 +290,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/releases/january-2016/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/releases/july-2016/</loc>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/addons/social/linkedin/</loc>
   </url>
   
@@ -311,14 +303,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/addons/groups/managing-groups/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/releases/march-2016/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/releases/may-2016/</loc>
   </url>
   
   <url>
@@ -422,6 +406,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/developer/changelog/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/framework/requests/</loc>
   </url>
   
@@ -447,10 +435,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/releases/september-2016/</loc>
   </url>
   
   <url>

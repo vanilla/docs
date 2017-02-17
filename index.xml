@@ -8,6 +8,402 @@
     <atom:link href="//docs.vanillaforums.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>2016 Cloud Releases</title>
+      <link>//docs.vanillaforums.com/help/releases/2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/releases/2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes-for-cloud-2016&#34;&gt;Release Notes for Cloud, 2016&lt;/h2&gt;
+
+&lt;p&gt;In 2016, VIP releases were every other month. Other customers received updates on an ad-hoc basis.&lt;/p&gt;
+
+&lt;h3 id=&#34;december&#34;&gt;December&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add full IPv6 support.&lt;/li&gt;
+&lt;li&gt;Add and improve addon icons.&lt;/li&gt;
+&lt;li&gt;Add meta tags for discussion links to generate Twitter cards (when added to tweets).&lt;/li&gt;
+&lt;li&gt;Add settings to Dashboard for category max display depth.&lt;/li&gt;
+&lt;li&gt;Add some padding to HTML tables in posts (improve legibility).&lt;/li&gt;
+&lt;li&gt;Add support for our new CDN.&lt;/li&gt;
+&lt;li&gt;Add accessibility attributes to Customize Theme.&lt;/li&gt;
+&lt;li&gt;Add pager to log views.&lt;/li&gt;
+&lt;li&gt;Improve category headings detection and table view support.&lt;/li&gt;
+&lt;li&gt;Improve markup of category settings page.&lt;/li&gt;
+&lt;li&gt;Ensure password editing fields toggle appropriately.&lt;/li&gt;
+&lt;li&gt;Allow removal of button from HTML email.&lt;/li&gt;
+&lt;li&gt;Restore Theme Preview functionality (except for Mobile 2014).&lt;/li&gt;
+&lt;li&gt;Default to secure cookies if &amp;ldquo;ForceSSL&amp;rdquo; is set and using HTTPS.&lt;/li&gt;
+&lt;li&gt;Skip validating discussion title when a draft is saved.&lt;/li&gt;
+&lt;li&gt;Improve markup and make further enhancements to Dashboard v3.&lt;/li&gt;
+&lt;li&gt;Restrict upload filename to be per post instead of by entire discussion.&lt;/li&gt;
+&lt;li&gt;Allow uploading a Photo when creating a new category.&lt;/li&gt;
+&lt;li&gt;Avoid auto-scrolling to top when in comment embed.&lt;/li&gt;
+&lt;li&gt;Confirm that user wants to delete images before deleting (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Update documentation links for Social Connect addons.&lt;/li&gt;
+&lt;li&gt;Replace &amp;ldquo;Hide Category&amp;rdquo; with &amp;ldquo;Mute Category&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Allow new messages to accept a subject parameter (if enabled) via URL.&lt;/li&gt;
+&lt;li&gt;Fix delete message button (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Fix delete ban button (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Fix category depth calculation in subcommunities.&lt;/li&gt;
+&lt;li&gt;Fix IP filtering on user management page&lt;/li&gt;
+&lt;li&gt;Fix heading categories sometimes being wrapped in an anchor.&lt;/li&gt;
+&lt;li&gt;Fix dashboard pager next button when there are 0 results.&lt;/li&gt;
+&lt;li&gt;Fix the user photo in search.&lt;/li&gt;
+&lt;li&gt;Fix extra &amp;lt;br&amp;gt; tags in plain text emails.&lt;/li&gt;
+&lt;li&gt;Fix issue where nav is cut off on category add/edit.&lt;/li&gt;
+&lt;li&gt;Fix wrong heading for &amp;ldquo;activity&amp;rdquo; on profile page&lt;/li&gt;
+&lt;li&gt;Fix activity notifications falsely flagging as sent when it was skipped.&lt;/li&gt;
+&lt;li&gt;Fix ICO transparency issue after upload (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Fix permission check for Change Log page to allow moderators (Moderation.Manage).&lt;/li&gt;
+&lt;li&gt;Fix avatar cropping in profile.&lt;/li&gt;
+&lt;li&gt;jsConnect: Add warning to jsConnect dashboard when provider is in test mode.&lt;/li&gt;
+&lt;li&gt;jsConnect: [Security] Add content-type to callback endpoint to prevent potential XSS.&lt;/li&gt;
+&lt;li&gt;Badges: Add badge name as alt text to badge images.&lt;/li&gt;
+&lt;li&gt;Badges: Add the ability to edit thresholds for some badges.&lt;/li&gt;
+&lt;li&gt;Polls: Fix results percentage.&lt;/li&gt;
+&lt;li&gt;Polls: Fix cancel button.&lt;/li&gt;
+&lt;li&gt;Polls: Hide category dropdown when already inside a category.&lt;/li&gt;
+&lt;li&gt;Polls: Fix auto-selecting first child category in category dropdown.&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A: Fix auto-selecting first child category in category dropdown.&lt;/li&gt;
+&lt;li&gt;Reactions: Add inform message to Reactions enable toggle (in Dashboard).&lt;/li&gt;
+&lt;li&gt;Reactions: Fix RSS view when BestOf is configured as tiles.&lt;/li&gt;
+&lt;li&gt;Reactions: Fix customizations reverting after database updates.&lt;/li&gt;
+&lt;li&gt;Reactions: [Security] Add missing CSRF protection on &amp;ldquo;react&amp;rdquo; endpoint.&lt;/li&gt;
+&lt;li&gt;Reactions: Fix reactions popup possible overlap.&lt;/li&gt;
+&lt;li&gt;Reactions: Translate reaction names in navigation breadcrumbs.&lt;/li&gt;
+&lt;li&gt;MailChimp: Fix issue with synchronizing lists.&lt;/li&gt;
+&lt;li&gt;Profile Extender: Fix checkbox display on registration.&lt;/li&gt;
+&lt;li&gt;Ignore: Fix failure to unignore user if their ignore privileges have been revoked.&lt;/li&gt;
+&lt;li&gt;Groups: Fix search in groups when the category is not viewable.&lt;/li&gt;
+&lt;li&gt;Warnings &amp;amp; Notes: Fix extra line after quote.&lt;/li&gt;
+&lt;li&gt;Civil Tongue: Add support for groups and group events.&lt;/li&gt;
+&lt;li&gt;Salesforce: Remove from options on profile social connect.&lt;/li&gt;
+&lt;li&gt;Split/Merge: Make the System user the new discussion&amp;rsquo;s author when splitting comments.&lt;/li&gt;
+&lt;li&gt;SAML: Allow SAML to accommodate differently-configured XML responses.&lt;/li&gt;
+&lt;li&gt;SimpleAPI: Fix situations where other addons could conflict with API endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;september&#34;&gt;September&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New Dashboard! This changed every page in the moderator/admin backend, including all addon settings pages.&lt;/li&gt;
+&lt;li&gt;Add navigation memory to the Dashboard. It will now preserve menu collapsing states &amp;amp; your page within each section between visits.&lt;/li&gt;
+&lt;li&gt;Add &amp;ldquo;Flat Categories&amp;rdquo; feature and optional navigation module. This allows browsing hundreds of categories as an alphabetical directory.&lt;/li&gt;
+&lt;li&gt;Improve how categories are managed in the Dashboard.&lt;/li&gt;
+&lt;li&gt;Categories now default to type &amp;ldquo;Nested&amp;rdquo; and must have a type assigned.&lt;/li&gt;
+&lt;li&gt;Add full recipients list to Badges. Click the &amp;ldquo;Given&amp;rdquo; number from &amp;ldquo;Badges&amp;rdquo; in the Dashboard.&lt;/li&gt;
+&lt;li&gt;Add new &amp;ldquo;Post Numbering&amp;rdquo; addon (by request only, currently).&lt;/li&gt;
+&lt;li&gt;Add new &amp;ldquo;Role Tracker&amp;rdquo; addon (by request only, currently).&lt;/li&gt;
+&lt;li&gt;Add ability to convert discussions to &amp;ldquo;ideas&amp;rdquo; (if Ideation is enabled).&lt;/li&gt;
+&lt;li&gt;Add ability to configure warnings in Warnings &amp;amp; Notes addon.&lt;/li&gt;
+&lt;li&gt;Add redirects for Lithium and Ning community imports (Redirector addon).&lt;/li&gt;
+&lt;li&gt;Add support for vBulletin 3 &amp;amp; 4 showthread.php?p={POSTID} URL redirects.&lt;/li&gt;
+&lt;li&gt;Allow &amp;ldquo;Location&amp;rdquo; and &amp;ldquo;Title&amp;rdquo; to be edited from User Edit.&lt;/li&gt;
+&lt;li&gt;Fix Profile Extender&amp;rsquo;s handling of non-ASCII characters in field names.&lt;/li&gt;
+&lt;li&gt;Refactored how we handle all requests (dispatcher).&lt;/li&gt;
+&lt;li&gt;Update MailChimp addon to use v3 of their API and support MailChimp &amp;ldquo;groups&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Update Facebook addon to use versioned endpoint.&lt;/li&gt;
+&lt;li&gt;Fix &amp;ldquo;Mark All Viewed&amp;rdquo; endpoint to prevent accidental or malicious triggering and fix its redirect.&lt;/li&gt;
+&lt;li&gt;Fix Bootstrap3 theme color schemes &amp;ldquo;paper&amp;rdquo; and &amp;ldquo;sandstone&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Remove &amp;ldquo;SafeStyles&amp;rdquo; option (previously deprecated).&lt;/li&gt;
+&lt;li&gt;General addon code maintenance done on: Groups, Reactions, Ranks, Polls, SAMLSSO, and Badges.&lt;/li&gt;
+&lt;li&gt;Fix issue with embedding where you could stay scrolled down when changing page.&lt;/li&gt;
+&lt;li&gt;Add username validation to /message/add endpoint (when pre-filling &amp;ldquo;To:&amp;rdquo; field via URL).&lt;/li&gt;
+&lt;li&gt;Fix conflict between Discussion Photos addon and Ideation addon.&lt;/li&gt;
+&lt;li&gt;Add ability for Smarty templates to access &lt;code&gt;isMobile&lt;/code&gt; function, &lt;code&gt;userAgentType&lt;/code&gt; function, &lt;code&gt;homepage_title&lt;/code&gt; function, and &lt;code&gt;Homepage&lt;/code&gt; (boolean variable).&lt;/li&gt;
+&lt;li&gt;Fix issue where default role settings weren&amp;rsquo;t transferred from old system correctly.&lt;/li&gt;
+&lt;li&gt;Add additional line break to welcome email.&lt;/li&gt;
+&lt;li&gt;Do not wrap images in a div if they are already in an anchor to fix potential clicking issue.&lt;/li&gt;
+&lt;li&gt;Fix autocomplete dropdown display in modals with Bootstrap3 theme.&lt;/li&gt;
+&lt;li&gt;Add the post that a user was warned for in the email notification.&lt;/li&gt;
+&lt;li&gt;Do not serve empty (or comment-only) CSS files from Custom Theme feature.&lt;/li&gt;
+&lt;li&gt;Fix photos&amp;rsquo; URL for /user/summary API endpoint.&lt;/li&gt;
+&lt;li&gt;Fix quotes that are done on a user with spaces in its name.&lt;/li&gt;
+&lt;li&gt;Fix &lt;code&gt;tabindex&lt;/code&gt; for comments, conversations, discussions (for keyboard navigation around page).&lt;/li&gt;
+&lt;li&gt;Add announcements to discussions RSS (in posting order).&lt;/li&gt;
+&lt;li&gt;Block adding banning rules that would HAL-9000 the entire crew, like &lt;code&gt;*.*&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Fix the basic (not advanced, which had no issue) search pager.&lt;/li&gt;
+&lt;li&gt;Do not revalidate username on edit if no change on user edit.&lt;/li&gt;
+&lt;li&gt;Do not send &lt;code&gt;noindex&lt;/code&gt; meta on error pages to prevent legit pages from being un-indexed.&lt;/li&gt;
+&lt;li&gt;Increase the priority of custom.css to be higher.&lt;/li&gt;
+&lt;li&gt;Fix log link showing when no log exists.&lt;/li&gt;
+&lt;li&gt;Allow &amp;ldquo;Unanswered Questions&amp;rdquo; page title to be translated (Q&amp;amp;A addon).&lt;/li&gt;
+&lt;li&gt;Add support for alternate SAML document structures (SSO).&lt;/li&gt;
+&lt;li&gt;Enforce max tags limit on the front end and cleanup tag validation.&lt;/li&gt;
+&lt;li&gt;Encode slashes in usernames when creating profile links.&lt;/li&gt;
+&lt;li&gt;Allow comment drafts to be orphaned (instead of removed) when their discussion is deleted and rework drafts view.&lt;/li&gt;
+&lt;li&gt;Unregister plugins immediately after it has been disabled instead of waiting until the next page request.&lt;/li&gt;
+&lt;li&gt;Hide email preferences when email is disabled globally.&lt;/li&gt;
+&lt;li&gt;Hide the RSS icon from categories that are type &amp;lsquo;Categories&amp;rsquo; since they contain no discussions.&lt;/li&gt;
+&lt;li&gt;Trim all control characters from discussion title (helps prevent broken or blank titles).&lt;/li&gt;
+&lt;li&gt;Fix scenario where discussion title could be blank.&lt;/li&gt;
+&lt;li&gt;Fix user search to allow numeric usernames as long as it&amp;rsquo;s an exact match.&lt;/li&gt;
+&lt;li&gt;Akismet will now validate your key before accepting it (Cloud customers do not require their own key; it is optional).&lt;/li&gt;
+&lt;li&gt;Improve Akismet addon description and deprecate TypePad option (no longer offered by TypePad).&lt;/li&gt;
+&lt;li&gt;Hide Participated menu for guests (Participated addon).&lt;/li&gt;
+&lt;li&gt;Let welcome email fallback to HomepageTitle when the site&amp;rsquo;s name is not set properly.&lt;/li&gt;
+&lt;li&gt;Turn off autocomplete on text fields when editing users in dashboard (to prevent accidental data insertion).&lt;/li&gt;
+&lt;li&gt;Improve how table layouts choose their column widths according to the content in them.&lt;/li&gt;
+&lt;li&gt;Improve Q&amp;amp;A and how it interacts with Subcommunities, especially displaying an Unanswered count per community.&lt;/li&gt;
+&lt;li&gt;Change H2s for H1s for a few edit profile pages.&lt;/li&gt;
+&lt;li&gt;Improve consistency in module (widget) titles (usually H4) so they are properly configurable.&lt;/li&gt;
+&lt;li&gt;Add invited user data to user exports.&lt;/li&gt;
+&lt;li&gt;Fix button height in Share This widget.&lt;/li&gt;
+&lt;li&gt;Add OAuth2 library to core product for building custom implementations more easily.&lt;/li&gt;
+&lt;li&gt;Fix potential duplicate rank promotion notifications.&lt;/li&gt;
+&lt;li&gt;Change the priority order of the SimpleAPI plugin so Subcommunities does not interfere with API calls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;july&#34;&gt;July&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New plugin: Role Tracker (aggregates discussions with posts by users in particular roles).&lt;/li&gt;
+&lt;li&gt;New plugin: Welcome Post (invites newly registered to start an intro discussion immediately).&lt;/li&gt;
+&lt;li&gt;Upgrade to Smarty 3 templating engine for custom themes. It&amp;rsquo;s a little bit stricter, faster, and more secure than Smarty 2 was.&lt;/li&gt;
+&lt;li&gt;Further improve scaling for large numbers of categories. Faster page loads!&lt;/li&gt;
+&lt;li&gt;Add option to exclude moderators and/or admins from leaderboards.&lt;/li&gt;
+&lt;li&gt;Move profile thumbnail editing to same page as photo uploading.&lt;/li&gt;
+&lt;li&gt;OpenID: Prevent bad rendering when URL is invalid.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t show Google+ login when enabled but not configured.&lt;/li&gt;
+&lt;li&gt;Add support for inline (async) forms for future Vanilla use.&lt;/li&gt;
+&lt;li&gt;Keep attachments when a discussion becomes a comment via Split/Merge.&lt;/li&gt;
+&lt;li&gt;Automatically update CSRF token with async requests. This is so we can invalidate them more frequently in the future, improving our security.&lt;/li&gt;
+&lt;li&gt;Add the ideation page as a target for messages.&lt;/li&gt;
+&lt;li&gt;Add the categories page as a target for messages.&lt;/li&gt;
+&lt;li&gt;Set a limit on the page number in Best Of (it helps performance to not let pages go infinitely high).&lt;/li&gt;
+&lt;li&gt;Fix edge cases where notifications preferences would not display completely.&lt;/li&gt;
+&lt;li&gt;Tighten security of Target parameter during sign in to disallow bad redirects.&lt;/li&gt;
+&lt;li&gt;Refresh the page after announcing a discussion.&lt;/li&gt;
+&lt;li&gt;Markdown: Allow starting lists without a newline.&lt;/li&gt;
+&lt;li&gt;Change how IP addresses are logged and allow IPv6 (no more 0.0.0.2 placeholder addresses appearing).&lt;/li&gt;
+&lt;li&gt;Remove the invite feature from the Getting Started page.&lt;/li&gt;
+&lt;li&gt;Remove site logo from Deflector theme footer.&lt;/li&gt;
+&lt;li&gt;Fix Cyrillic character recognition in CivilTongueEx, allowing&lt;/li&gt;
+&lt;li&gt;Fix Ideation crashing /discussions/promoted.&lt;/li&gt;
+&lt;li&gt;Fix default translation of &amp;ldquo;Post Discussion&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;QnA: Fix &amp;ldquo;unanswered&amp;rdquo; status for discussions converted to questions by an admin.&lt;/li&gt;
+&lt;li&gt;Hub: Add synchronize for subcommunities and default locale.&lt;/li&gt;
+&lt;li&gt;Fix emoji menu not being properly dismissed.&lt;/li&gt;
+&lt;li&gt;Hide &amp;ldquo;Dismiss&amp;rdquo; option on announcements from guests because it didn’t actually do anything.&lt;/li&gt;
+&lt;li&gt;Add CSRF prevention and remove redirect from Mark All Viewed option.&lt;/li&gt;
+&lt;li&gt;Encode mail subject properly (UTF-8).&lt;/li&gt;
+&lt;li&gt;Fix broken reaction pagination on profile pages.&lt;/li&gt;
+&lt;li&gt;Fix emoji and mention from rendering inside WYSIWYG code blocks.&lt;/li&gt;
+&lt;li&gt;Add $Homepage Smarty variable that is true/false depending on if you are on the homepage.&lt;/li&gt;
+&lt;li&gt;Fix double encoding Open Graph title tag. This would have shown up as extra ampersands in Facebook shares and the like.&lt;/li&gt;
+&lt;li&gt;Hub: Do not sync category permissions for an overridden role.&lt;/li&gt;
+&lt;li&gt;Hub: Add optional landing page.&lt;/li&gt;
+&lt;li&gt;Switch to separate library for password hashing. We&amp;rsquo;re compartmentalizing some features like this to make maintenance easier.&lt;/li&gt;
+&lt;li&gt;We completed some very large projects to carefully rework several parts of our framework to get ready for API v2, but there&amp;rsquo;s no outward effect of this for you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;may&#34;&gt;May&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upgrade to reCaptcha 2 (&amp;ldquo;NoCaptcha&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Make &amp;ldquo;NBBC&amp;rdquo; our new BBCode parsing library by default (no more plugin).&lt;/li&gt;
+&lt;li&gt;Add ability for SAML SSO to not be the default login method.&lt;/li&gt;
+&lt;li&gt;Allow moving a discussion between subcommunities.&lt;/li&gt;
+&lt;li&gt;Add support for switching subcommunities.&lt;/li&gt;
+&lt;li&gt;Improve category scaling.&lt;/li&gt;
+&lt;li&gt;Make activities self-prune after 2 months to improve performance.&lt;/li&gt;
+&lt;li&gt;Always redirect to the first page after saving a discussion.&lt;/li&gt;
+&lt;li&gt;Add analytics tracking for Q&amp;amp;A&amp;rsquo;s accepted answers (coming soon to analytics).&lt;/li&gt;
+&lt;li&gt;Allow censoring content in conversation message notifications.&lt;/li&gt;
+&lt;li&gt;Allow censoring poll votes in comments.&lt;/li&gt;
+&lt;li&gt;Fix a number of edge cases where certain actions could block other actions without a page refresh.&lt;/li&gt;
+&lt;li&gt;Fix condition where category announcements disappeared from recent discussions page.&lt;/li&gt;
+&lt;li&gt;Add caching for the default authentication provider.&lt;/li&gt;
+&lt;li&gt;Improve security in signin redirects.&lt;/li&gt;
+&lt;li&gt;Improve use of &amp;lsquo;Alt&amp;rsquo; CSS class, which will be removed eventually (now redundant with current CSS specs).&lt;/li&gt;
+&lt;li&gt;Add option to configure a redirect after logout on Auth0 plugin.&lt;/li&gt;
+&lt;li&gt;Update Triple-A and Bootstrap 3 themes.&lt;/li&gt;
+&lt;li&gt;Fix issue where Vimeo and Instagram embeds overflow out of the Best Of Tiles.&lt;/li&gt;
+&lt;li&gt;Fix where SplitMerge addon may be unable to save split discussion with &amp;ldquo;Html&amp;rdquo; format.&lt;/li&gt;
+&lt;li&gt;Fix the love bug (various problems with &amp;lt; 3 in user-generated content).&lt;/li&gt;
+&lt;li&gt;Prevent unneeded recurring updates in dashboard&amp;rsquo;s database updater.&lt;/li&gt;
+&lt;li&gt;Fix Gravatar&amp;rsquo;s use of system default avatar.&lt;/li&gt;
+&lt;li&gt;Add optional rating parameter to Gravatar.&lt;/li&gt;
+&lt;li&gt;Fix GitHub signin and API permission issues.&lt;/li&gt;
+&lt;li&gt;Fix new discussion button showing in subcommunity when user has no permission.&lt;/li&gt;
+&lt;li&gt;Allow the Photo field to be set in /profile/edit.&lt;/li&gt;
+&lt;li&gt;Only use CommentID for spam check if available.&lt;/li&gt;
+&lt;li&gt;Fix incorrect permission being checked in some category management actions.&lt;/li&gt;
+&lt;li&gt;Groups: Simplify &amp;amp; fix event timezone handling.&lt;/li&gt;
+&lt;li&gt;Make initial spoiler text the same colour as its background.&lt;/li&gt;
+&lt;li&gt;Fix RSS title encoding.&lt;/li&gt;
+&lt;li&gt;Add the ability to capture a user&amp;rsquo;s time zone.&lt;/li&gt;
+&lt;li&gt;Fix LinkedIn &amp;ldquo;profile connect&amp;rdquo; feature.&lt;/li&gt;
+&lt;li&gt;Move Recaptcha into a plugin&lt;/li&gt;
+&lt;li&gt;Add support for Instagram embeds in Mobile 2014.&lt;/li&gt;
+&lt;li&gt;Do more image optimizations.&lt;/li&gt;
+&lt;li&gt;Fix Safari issue where back button wouldn&amp;rsquo;t refresh the page.&lt;/li&gt;
+&lt;li&gt;Fixes issue where people can quote a post and see uncensored content.&lt;/li&gt;
+&lt;li&gt;Remove gender from user-facing elements like registration.&lt;/li&gt;
+&lt;li&gt;Prevent &amp;ldquo;Messages&amp;rdquo; from being displayed when you do not have view permission.&lt;/li&gt;
+&lt;li&gt;QnA: Return the correct number of questions for a subcommunity.&lt;/li&gt;
+&lt;li&gt;Switch YouTube links to https.&lt;/li&gt;
+&lt;li&gt;Fix mention issues including using an &amp;lsquo;@&amp;rsquo; in the middle of two words.&lt;/li&gt;
+&lt;li&gt;Fix PNG compression issues in file uploads.&lt;/li&gt;
+&lt;li&gt;Fix some minor issues that could make spoilers malfunction.&lt;/li&gt;
+&lt;li&gt;Add a safety feature to avoid too-big database changes all at once.&lt;/li&gt;
+&lt;li&gt;Allow any user with moderate permission to add discussions and events in a group.&lt;/li&gt;
+&lt;li&gt;Fix aggressive span stripping in the HTML purifier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;march&#34;&gt;March&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New addon: Ideation (vote on ideas) - Contact your CSM for more details&lt;/li&gt;
+&lt;li&gt;New addon: Microsoft Account SSO&lt;/li&gt;
+&lt;li&gt;New addon: CAS SSO&lt;/li&gt;
+&lt;li&gt;New addon: Keyword Blocker (send posts with certain keywords to mod queue)&lt;/li&gt;
+&lt;li&gt;New addon: Necro Posts (labels recently-revived discussions)&lt;/li&gt;
+&lt;li&gt;New addon: User Points Booster (allow awarding points for discussions or comments)&lt;/li&gt;
+&lt;li&gt;New addon: Whitelist (provide an IP whitelist for site access)&lt;/li&gt;
+&lt;li&gt;HTML emails now available.&lt;/li&gt;
+&lt;li&gt;Applicants list is now asynchronous with improved UI.&lt;/li&gt;
+&lt;li&gt;Spoilers added as core feature with updated formatting.&lt;/li&gt;
+&lt;li&gt;Automatic bans (from Banning rules) can now be reversed.&lt;/li&gt;
+&lt;li&gt;Reactions will now always show on all devices, instead of on-hover for larger screens (&amp;ldquo;desktop&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Sign In form now auto-focuses on Username field.&lt;/li&gt;
+&lt;li&gt;Fix newest comment data for zero-comment discussions in table view.&lt;/li&gt;
+&lt;li&gt;Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.&lt;/li&gt;
+&lt;li&gt;Remove line breaks in meta description.&lt;/li&gt;
+&lt;li&gt;Added events to support new analytics system.&lt;/li&gt;
+&lt;li&gt;Fix styling of &amp;lsquo;/me&amp;rsquo; posts.&lt;/li&gt;
+&lt;li&gt;QnA: Allow users to accept their own answer.&lt;/li&gt;
+&lt;li&gt;Reactions: Add an option to allow users to react to their own posts.&lt;/li&gt;
+&lt;li&gt;Add advanced editor options to New Poll screen.&lt;/li&gt;
+&lt;li&gt;Fix plus signs in URLs, especially usernames / profiles.&lt;/li&gt;
+&lt;li&gt;Improve SSO workflow for existing usernames.&lt;/li&gt;
+&lt;li&gt;Rework discussion sorting and filtering architecture.&lt;/li&gt;
+&lt;li&gt;Add no-store header to profiles so read/unread status updates on Back button.&lt;/li&gt;
+&lt;li&gt;Pockets: fix repeating pockets between discussions, and enable on table view.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fix category dropdown filtering when in a subcommunity.&lt;/li&gt;
+&lt;li&gt;Hide editor toolbar when previewing.&lt;/li&gt;
+&lt;li&gt;Fix double-deletion of comment drafts when posting, which could cause a Javascript error.&lt;/li&gt;
+&lt;li&gt;Fix scenario where Quotes could interfere with Spoilers.&lt;/li&gt;
+&lt;li&gt;Vanillicons: Now defaults to v2.&lt;/li&gt;
+&lt;li&gt;NBBC: Fix scenario that could break search results formatting.&lt;/li&gt;
+&lt;li&gt;Fix opaque photo cropping box.&lt;/li&gt;
+&lt;li&gt;Fix and unify logic for determining permission to edit a user&amp;rsquo;s photo.&lt;/li&gt;
+&lt;li&gt;Allow quotes to be collapsed in reported posts.&lt;/li&gt;
+&lt;li&gt;Allow collapsing of quotes with alternate formatting.&lt;/li&gt;
+&lt;li&gt;Make even deeply-nested quotes minimally legible.&lt;/li&gt;
+&lt;li&gt;Update dropdown menu rendering in several places.&lt;/li&gt;
+&lt;li&gt;Update number formatting for discussion &amp;amp; comment counts on All Categories page.&lt;/li&gt;
+&lt;li&gt;Update stock themes for Ideation.&lt;/li&gt;
+&lt;li&gt;Groups: Allow anyone who can edit an event to also delete it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;january&#34;&gt;January&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Restore no-store header to discussion &amp;amp; category lists (fixes &amp;ldquo;read&amp;rdquo; markers not updating on &amp;ldquo;Back&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Improved formatting of Vanilla Comments in certain input formats.&lt;/li&gt;
+&lt;li&gt;Updated Smarty template parsing library.&lt;/li&gt;
+&lt;li&gt;Fix an issue in draft saving.&lt;/li&gt;
+&lt;li&gt;Fix spam deletion error.&lt;/li&gt;
+&lt;li&gt;Update Editor to use files&amp;rsquo; real names when downloading.&lt;/li&gt;
+&lt;li&gt;Fix RSS feed when table view is in use.&lt;/li&gt;
+&lt;li&gt;Remove deprecated form field name prefixing.&lt;/li&gt;
+&lt;li&gt;Add more category data to VanillaPop emails.&lt;/li&gt;
+&lt;li&gt;Update gifv embed to prefer WebM.&lt;/li&gt;
+&lt;li&gt;Various low-level fixes for PHP 7 compatibility.&lt;/li&gt;
+&lt;li&gt;Fix CSRF check when deleting a ban.&lt;/li&gt;
+&lt;li&gt;Close open redirect &amp;amp; fix flood control in database updating endpoint.&lt;/li&gt;
+&lt;li&gt;Improve security in how Vimeo is embedded.&lt;/li&gt;
+&lt;li&gt;Add Wistia embed.&lt;/li&gt;
+&lt;li&gt;Enforce POST data for several endpoints.&lt;/li&gt;
+&lt;li&gt;Improve theme compatibility with Groups.&lt;/li&gt;
+&lt;li&gt;Automatically remove spaces around Banning rules to prevent bad data being entered.&lt;/li&gt;
+&lt;li&gt;Improve image resizing to always use highest quality images possible.&lt;/li&gt;
+&lt;li&gt;Fix Facebook SSO: retrieval of email address, avatar distortion, &amp;amp; name overwriting.&lt;/li&gt;
+&lt;li&gt;Remove &amp;ldquo;dashboard&amp;rdquo; namespace from several dashboard URLs.&lt;/li&gt;
+&lt;li&gt;Fix several MySQL strict mode errors.&lt;/li&gt;
+&lt;li&gt;Remove livequery jQuery extension and all remaining uses of it.&lt;/li&gt;
+&lt;li&gt;Remove base64 encoding from all asynchronous requests.&lt;/li&gt;
+&lt;li&gt;Allow setting of avatar via API.&lt;/li&gt;
+&lt;li&gt;Allow category permissions to be set via API.&lt;/li&gt;
+&lt;li&gt;Allow certain configurations to be set depending on permission level.&lt;/li&gt;
+&lt;li&gt;Re-add user count to the user list whenever possible based on size of table.&lt;/li&gt;
+&lt;li&gt;Give full formatting bar to Activity form.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2017 Cloud Releases</title>
+      <link>//docs.vanillaforums.com/help/releases/2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/releases/2017/</guid>
+      <description>
+
+&lt;h2 id=&#34;release-notes-for-cloud-2017&#34;&gt;Release Notes for Cloud, 2017&lt;/h2&gt;
+
+&lt;p&gt;Quarterly VIP releases contain all numbered releases within said quarter.&lt;/p&gt;
+
+&lt;h3 id=&#34;q1-release-3-thursday-feb-16&#34;&gt;Q1 release 3 (Thursday, Feb 16)&lt;/h3&gt;
+
+&lt;h3 id=&#34;q1-release-2-tuesday-jan-31&#34;&gt;Q1 release 2 (Tuesday, Jan 31)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Civil Tongue: Censor discussion titles in Recent Discussions list.&lt;/li&gt;
+&lt;li&gt;Conversations: Tighten maximum recipients allowed: 5 for new users, 50 for verified users, and unlimited for moderators.&lt;/li&gt;
+&lt;li&gt;Dashboard: Add settings and improve help text on the &amp;ldquo;Avatars&amp;rdquo; dashboard settings page.&lt;/li&gt;
+&lt;li&gt;Avatar Pool: Settings are now on the &amp;ldquo;Avatars&amp;rdquo; page.&lt;/li&gt;
+&lt;li&gt;Online: Fix issue where Online module could cache and display in the wrong language.&lt;/li&gt;
+&lt;li&gt;Editor: Close editor dropdowns when the user clicks outside of a dropdown.&lt;/li&gt;
+&lt;li&gt;Editor: Add spoiler and code styles to WYSIWYG preview.&lt;/li&gt;
+&lt;li&gt;Editor: Mentions auto-complete now quotes all usernames that need it automatically.&lt;/li&gt;
+&lt;li&gt;Editor: Fix Markdown list parsing that caused a minor styling glitch.&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A: Fix point-awarding interactions with Reactions. Accepting and declining answers could previously have unexpected results.&lt;/li&gt;
+&lt;li&gt;API: Allow JSON access to profile when Profile.ShowActivity is disabled.&lt;/li&gt;
+&lt;li&gt;Categories: Add a &lt;code&gt;CanDelete&lt;/code&gt; flag to categories (prevents Social Group category deletion which breaks Groups).&lt;/li&gt;
+&lt;li&gt;Categories: Fix issue where subcategories could be orphaned when their parent was deleted.&lt;/li&gt;
+&lt;li&gt;Categories: Make the category deletion process clearer about what content will be removed and how.&lt;/li&gt;
+&lt;li&gt;Login: Improve password requirements message.&lt;/li&gt;
+&lt;li&gt;Logs: Add week day, time, and timezone to the moderation logs.&lt;/li&gt;
+&lt;li&gt;Logs: Do not spam-check owner account.&lt;/li&gt;
+&lt;li&gt;Addons: Add &amp;ldquo;Configured&amp;rdquo; messages to addons media view to denote whether an addon was been fully configured on their settings page.&lt;/li&gt;
+&lt;li&gt;Addons: Added icons for 3 addons.&lt;/li&gt;
+&lt;li&gt;Addons: Fix issue where an addon incorrectly registering permissions could break other permissions.&lt;/li&gt;
+&lt;li&gt;Mobile: Fix too-large images in mobile theme settings page.&lt;/li&gt;
+&lt;li&gt;Analytics: Hide the category dropdown where not relevant.&lt;/li&gt;
+&lt;li&gt;SAML: Allow admins to create a data map for SAML responses.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fix canonical URLs on discussion and category pages.&lt;/li&gt;
+&lt;li&gt;Maintenance: Improve maintenance mode so it can be automatically used during future database updates.&lt;/li&gt;
+&lt;li&gt;Maintenance: Moved media handling and tagging from addons into core.&lt;/li&gt;
+&lt;li&gt;Maintenance: Moved several library dependencies out of core (deleted 35,000 lines of code).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;q1-release-1-tuesday-jan-17&#34;&gt;Q1 release 1 (Tuesday, Jan 17)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Categories: Better sync modern category view to be the same as the table view. This insures &amp;ldquo;Display As&amp;rdquo; settings are used consistently between different layout options.&lt;/li&gt;
+&lt;li&gt;Banning: Prevent user&amp;rsquo;s visit information from being updated if banned. This is an enhancement to banned behavior.&lt;/li&gt;
+&lt;li&gt;Logging: Add logged events for failed logins, password requests, and password reset failures. This is for advanced logging only.&lt;/li&gt;
+&lt;li&gt;Quotes: Fix the Quote button not appearing in some cases. This was a user-facing bug.&lt;/li&gt;
+&lt;li&gt;Themes: Give themes ability to set their layout options in their &amp;ldquo;about&amp;rdquo; info. This is for theme developers.&lt;/li&gt;
+&lt;li&gt;Drafts: Fix &amp;ldquo;Incorrect integer value&amp;rdquo; error on draft save when no category selected. This was a regression bug in drafts.&lt;/li&gt;
+&lt;li&gt;Search: Fix search not returning results from categories with &amp;ldquo;Hide from recent discussions&amp;rdquo; selected.&lt;/li&gt;
+&lt;li&gt;JWT SSO: Improve support and fix minor issues in some connections.&lt;/li&gt;
+&lt;li&gt;Reactions: Fix inaccuracies in voting UI when user exceeds 1000 votes.&lt;/li&gt;
+&lt;li&gt;Facebook: Add support for Facebook&amp;rsquo;s &amp;ldquo;state&amp;rdquo; token during SSO. This is a security enhancement.&lt;/li&gt;
+&lt;li&gt;Groups: Add groups and events support to Keyword Blocker. The plugin can now send these items to the Moderation Queue for approval.&lt;/li&gt;
+&lt;li&gt;Badges: Fix issue where recently manually created badges could not be requested.&lt;/li&gt;
+&lt;li&gt;Ideation: Make notifications clearer.&lt;/li&gt;
+&lt;li&gt;Dozens of low-level bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Accessibility</title>
       <link>//docs.vanillaforums.com/help/appearance/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -868,120 +1264,6 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;A common scenario is using &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
 
 &lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Backend</title>
-      <link>//docs.vanillaforums.com/developer/backend/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/backend/</guid>
-      <description>
-
-&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
-
-&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.&lt;/p&gt;
-
-&lt;h3 id=&#34;apache&#34;&gt;Apache&lt;/h3&gt;
-
-&lt;p&gt;Vanilla includes an &lt;code&gt;.htaccess&lt;/code&gt; file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.&lt;/p&gt;
-
-&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
-
-&lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in &lt;code&gt;nginx.conf&lt;/code&gt; correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.&lt;/p&gt;
-
-&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; running in the root web folder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    location @site {
-       rewrite ^ /index.php?p=$uri&amp;amp;$args last;
-    }
-
-    location / {
-       try_files $uri @site;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; in a subfolder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    location /subfolder {
-       try_files $uri @subfolder;
-    }
-
-    location @subfolder {
-       rewrite ^/subfolder(/.*) /subfolder/index.php?p=$1&amp;amp;$args last;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In &lt;strong&gt;Vanilla 2.3&lt;/strong&gt;, these rules change because the &lt;code&gt;p&lt;/code&gt; parameter has been removed in favor of strict usage of &lt;code&gt;PATH_INFO&lt;/code&gt;, and therefore no rewrite is needed. However, it&amp;rsquo;s important that your fastcgi params are setup to pass this information to PHP.&lt;/p&gt;
-
-&lt;h3 id=&#34;iis&#34;&gt;IIS&lt;/h3&gt;
-
-&lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
-
-&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
-
-&lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
-
-&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
-
-&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
-
-&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
-$Configuration[&#39;Cache&#39;][&#39;Method&#39;] = &#39;memcached&#39;;
-$Configuration[&#39;memcached&#39;][&#39;Store&#39;] = &#39;localhost&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also specify a port for memcached. Store, e.g.: &lt;code&gt;localhost:11211&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config. Here are some example settings you may wish to use. Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_DISTRIBUTION] = Memcached::DISTRIBUTION_CONSISTENT;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_LIBKETAMA_COMPATIBLE] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_NO_BLOCK] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_TCP_NODELAY] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_CONNECT_TIMEOUT] = 1000;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_LIMIT] = 2;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Badges</title>
-      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
-
-&lt;p&gt;Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.&lt;/p&gt;
-
-&lt;h2 id=&#34;default-badges&#34;&gt;Default badges&lt;/h2&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions). Default badges are typically assigned to users automatically when certain conditions are met.&lt;/p&gt;
-
-&lt;h2 id=&#34;badges-list&#34;&gt;Badges list&lt;/h2&gt;
-
-&lt;p&gt;All badges are listed in the Dashboard under &amp;ldquo;Badges&amp;rdquo;. This includes any badge ever created in your forum, regardless of whether it is currently active or achievable.&lt;/p&gt;
-
-&lt;h2 id=&#34;users-badges&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
-
-&lt;p&gt;A list of a users&amp;rsquo; badges will display, by default, in the panel of their profile as a grid of badge images. Badges awarded incrementally (such as membership anniversaries) will &amp;ldquo;stack&amp;rdquo;, meaning only the highest-increment badge will show.&lt;/p&gt;
-
-&lt;h2 id=&#34;viewing-a-badge&#34;&gt;Viewing a badge&lt;/h2&gt;
-
-&lt;p&gt;Clicking a badge&amp;rsquo;s name in the badges list will take you to a public page describing the badge. Users can get to this page by clicking the badge in their profile. This page shows the most recent recipients of the badge.&lt;/p&gt;
 </description>
     </item>
     
