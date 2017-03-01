@@ -90,8 +90,12 @@ $(function($){
             $.each(matches, function (i, match) {
                 var url = match.url,
                     title = match.title,
-                    categories = match.tags.join(' / '),
+                    categories,
                     $item = $template.clone();
+
+                if (match.tags && match.tags.length > 0) {
+                    categories = match.tags.join(' / ');
+                }
 
                 $item.attr('href', url);
                 $item.find('.title').text(title);
