@@ -19,6 +19,24 @@
 
 &lt;p&gt;Quarterly VIP releases contain all numbered releases within said quarter.&lt;/p&gt;
 
+&lt;h3 id=&#34;q1-release-4-wednesday-mar-1&#34;&gt;Q1 release 4 (Wednesday, Mar 1)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Categories: Add category filtering to settings page.&lt;/li&gt;
+&lt;li&gt;Categories: Remove &amp;ldquo;Track points separately&amp;rdquo; from category options unless Reactions has been configured to support it.&lt;/li&gt;
+&lt;li&gt;Reactions: Adds settings page to configure per-category point tracking.&lt;/li&gt;
+&lt;li&gt;Reporting: Use permission Reactions.Flag.Add to allow restriction of reporting to certain users. If you are not already using Reactions, it will default to all users, which was how it previously worked.&lt;/li&gt;
+&lt;li&gt;Dashboard: Hide version number because it is not relevant (and misleading) to cloud customers.&lt;/li&gt;
+&lt;li&gt;Pockets: Add easier enable/disable toggles.&lt;/li&gt;
+&lt;li&gt;Addons: Improve error reporting for easier troubleshooting.&lt;/li&gt;
+&lt;li&gt;Categories: Fix issue where child categories could be redundantly displayed in certain theme views. (#5195)&lt;/li&gt;
+&lt;li&gt;Comments module: Add discussion titles. (This module is not used on most forums).&lt;/li&gt;
+&lt;li&gt;Pockets/Customize Theme: Fix errors in code editor.&lt;/li&gt;
+&lt;li&gt;Framework: Remove OAuth 1.0 library from core.&lt;/li&gt;
+&lt;li&gt;Minor security fixes. (Minor means they were technically flaws, but to our knowledge no useful exploit could be derived from them.)&lt;/li&gt;
+&lt;li&gt;API: architectural updates to facilitate upcoming v2.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;q1-release-3-thursday-feb-16&#34;&gt;Q1 release 3 (Thursday, Feb 16)&lt;/h3&gt;
 
 &lt;ul&gt;
