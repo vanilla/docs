@@ -52,6 +52,10 @@ Link to the discussions page.
 
 Link to the drafts page.
 
+### Function: {activity_link}
+
+Link to the recent activity page.
+
 ### Function: {forum_root_link}
 
 Link to the forum root page.

@@ -45,7 +45,7 @@ In **Vanilla 2.3**, these rules change because the `p` parameter has been remove
 
 ### IIS
 
-We do not officially support this server, but information and help may be provided on our [community forum](https://vanillaforums.org/discussions). We welcome additions to this documentation.
+We do not officially support this server, but information and help may be provided on our [community forum](https://open.vanillaforums.com). We welcome additions to this documentation.
 
 ## Caching
 

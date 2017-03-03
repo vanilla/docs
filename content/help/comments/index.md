@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: comments
-    weight: 100
+    weight: 15
 aliases:
 - /features/comments
 ---

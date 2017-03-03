@@ -12,7 +12,7 @@ aliases:
 ---
 ## Supported platforms
 
-Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the [Vanilla Porter](http://vanillaforums.org/addon/porter-core).
+Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the [Vanilla Porter](https://open.vanillaforums.com/addon/porter-core).
 
 ### PHP forums
 
@@ -25,8 +25,8 @@ Migration tools are available for the following platforms. All migration tools m
 * PunBB 1
 * IP.Board 3
 * XenForo
-* Joomla Kuena
-* Drupal Forum
+* Joomla Kunena
+* Drupal Advanced Forum
 * MyBB
 * esoTalk
 * Expression Engine

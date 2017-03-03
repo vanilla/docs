@@ -11,19 +11,19 @@ aliases:
 ---
 ## Developers Community
 
-We have a vibrant [developers' community at vanillaforums.org](http://vanillaforums.org/discussions/). Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins & themes to the [official directory](http://vanillaforums.org/addons), and sign the [contributors' agreement](http://vanillaforums.org/contributors).
+We have a vibrant [developers' community](https://open.vanillaforums.com). Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins & themes to the [official directory](https://open.vanillaforums.com/addons), and sign the [contributors' agreement](https://open.vanillaforums.com/contributors).
 
 ### Get Notified
 
 Want to get notified about the newest releases?
 
-* Sign up for the VanillaForums.org newsletter in [your community profile](http://vanillaforums.org/profile/edit).
-* Watch the [RSS feed for the 'blog' category](http://vanillaforums.org/categories/blog/feed.rss).
+* Sign up for the VanillaForums.org newsletter in [your community profile](https://open.vanillaforums.com/profile/edit).
+* Watch the [RSS feed for the 'blog' category](https://open.vanillaforums.com/categories/blog/feed.rss).
 * Follow our [Twitter account](http://twitter.com/vanilla).
 
 ### Plugins
 
-These addons are currently used on vanillaforums.org. The addons with an asterisk are currently only available on our cloud hosting but may have near-equivalents available from the community.
+These addons are currently used on our [community forum](https://open.vanillaforums.com). The addons with an asterisk are currently only available on our cloud hosting but may have near-equivalents available from the community.
 
 * Tagging
 * Reactions*
@@ -42,4 +42,4 @@ These addons are currently used on vanillaforums.org. The addons with an asteris
 
 ### Theme
 
-The theme used on vanillaforums.org is custom and is not open source. We want it to continue looking unique!
+The theme used on the community forum is custom and is not open source. We want it to continue looking unique!
