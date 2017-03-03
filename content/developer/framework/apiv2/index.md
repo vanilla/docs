@@ -1,16 +1,15 @@
 ---
-title: Vanilla APIv2
+title: Writing APIs
 tags:
 - Developers
 - Framework
+- API
 category: developer
 menu:
   developer:
-    parent: apiv2
-    weight: 30
+    parent: framework
+    weight: 1000
     identifier: framework-apiv2
-aliases:
-- /developers/framework/apiv2
 ---
 ## The Vanilla APIv2
 

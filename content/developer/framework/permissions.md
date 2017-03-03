@@ -7,6 +7,7 @@ category: developer
 menu:
   developer:
     parent: framework
+    weight: 10
 aliases:
 - /developers/framework/permissions
 ---

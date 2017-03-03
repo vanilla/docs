@@ -3,13 +3,12 @@ title: Resource Routing
 tags:
 - Developers
 - Framework
+- API
 category: developer
 menu:
   developer:
     parent: framework-apiv2
-    weight: 1001
-aliases:
-- /developers/framework/apiv2/resource-routing
+    weight: 10
 ---
 ## RESTful Resource Routing to Controller Methods
 
