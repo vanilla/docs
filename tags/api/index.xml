@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/api/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Api on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/tags/api/index.xml</link>
+    <description>Recent content in Api on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://127.0.0.1:8080/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>API</title>
-      <link>//docs.vanillaforums.com/help/api/</link>
+      <link>http://127.0.0.1:8080/help/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/api/</guid>
+      <guid>http://127.0.0.1:8080/help/api/</guid>
       <description>
 
 &lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
-&lt;p&gt;Vanilla&amp;rsquo;s API is documented &lt;a href=&#34;//docs.vanillaforums.com/api/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vanilla&amp;rsquo;s API is documented &lt;a href=&#34;http://127.0.0.1:8080/api/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Endpoint: categories</title>
-      <link>//docs.vanillaforums.com/api/categories/</link>
+      <link>http://127.0.0.1:8080/api/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/categories/</guid>
+      <guid>http://127.0.0.1:8080/api/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;categories-add&#34;&gt;/categories/add&lt;/h2&gt;
@@ -280,10 +280,10 @@ If not provided, perspective will be that of a guest.&lt;/p&gt;
     
     <item>
       <title>Endpoint: comments</title>
-      <link>//docs.vanillaforums.com/api/comments/</link>
+      <link>http://127.0.0.1:8080/api/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/comments/</guid>
+      <guid>http://127.0.0.1:8080/api/comments/</guid>
       <description>
 
 &lt;h2 id=&#34;comments-add&#34;&gt;/comments/add&lt;/h2&gt;
@@ -344,10 +344,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Endpoint: discussions</title>
-      <link>//docs.vanillaforums.com/api/discussions/</link>
+      <link>http://127.0.0.1:8080/api/discussions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/discussions/</guid>
+      <guid>http://127.0.0.1:8080/api/discussions/</guid>
       <description>
 
 &lt;h2 id=&#34;discussions-add&#34;&gt;/discussions/add&lt;/h2&gt;
@@ -708,15 +708,568 @@ If not provided, perspective will be that of a guest.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Endpoint: multisites</title>
-      <link>//docs.vanillaforums.com/api/multisites/</link>
+      <title>Endpoint: moderation</title>
+      <link>http://127.0.0.1:8080/api/moderation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/multisites/</guid>
+      <guid>http://127.0.0.1:8080/api/moderation/</guid>
+      <description>
+
+&lt;h2 id=&#34;moderation-api&#34;&gt;Moderation API&lt;/h2&gt;
+
+&lt;p&gt;Details about API endpoints for moderation.&lt;/p&gt;
+
+&lt;p&gt;Simple API will be needed to make requests from an un authenticated request.
+To use Simple API you need to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Enable to SimpleAPI Plugin&lt;/li&gt;
+&lt;li&gt;Prepend &lt;code&gt;/api/v1/&lt;/code&gt; to the URL&lt;/li&gt;
+&lt;li&gt;Append &lt;code&gt;?access_token=XXXXXX&lt;/code&gt; to the url&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GET /api/v1/mod/preapproval.json?access_token=XXXXXX HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+  &amp;quot;QueueName&amp;quot;: &amp;quot;premoderation&amp;quot;,
+  &amp;quot;Queue&amp;quot;: [
+    ....
+  ],
+  &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;,
+  &amp;quot;Totals&amp;quot;: {
+    &amp;quot;Status&amp;quot;: {
+      &amp;quot;approved&amp;quot;: 2,
+      &amp;quot;denied&amp;quot;: 1,
+      &amp;quot;unread&amp;quot;: 10
+    },
+    &amp;quot;Records&amp;quot;: 13,
+    &amp;quot;PageSize&amp;quot;: 30,
+    &amp;quot;Pages&amp;quot;: 1
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;permissions&#34;&gt;Permissions&lt;/h3&gt;
+
+&lt;p&gt;All of the moderation endpoints require the &lt;code&gt;Garden.Moderation.Manage&lt;/code&gt; permission.&lt;/p&gt;
+
+&lt;p&gt;If you do not have required access you will get the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;Code&amp;quot;: 403,
+  &amp;quot;Exception&amp;quot;: &amp;quot;You don&#39;t have permission to do that.&amp;quot;,
+  &amp;quot;Class&amp;quot;: &amp;quot;Gdn_UserException&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;pagination&#34;&gt;Pagination&lt;/h3&gt;
+
+&lt;p&gt;When making a request with paginatined results the following element will be included in the result.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;,
+  &amp;quot;Totals&amp;quot;: {
+    &amp;quot;Status&amp;quot;: {
+      &amp;quot;approved&amp;quot;: 2,
+      &amp;quot;denied&amp;quot;: 1,
+      &amp;quot;unread&amp;quot;: 10
+    },
+    &amp;quot;Records&amp;quot;: 13,
+    &amp;quot;PageSize&amp;quot;: 30,
+    &amp;quot;Pages&amp;quot;: 1
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will need to use these numbers to create pagination.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note&lt;/em&gt;&lt;/strong&gt; that the Page is prefixed with a p for page.&lt;/p&gt;
+
+&lt;h3 id=&#34;errors&#34;&gt;Errors&lt;/h3&gt;
+
+&lt;p&gt;Any errors will be returning in the following format.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;Code&amp;quot;: 404,
+  &amp;quot;Exception&amp;quot;: &amp;quot;Not Found&amp;quot;,
+  &amp;quot;Class&amp;quot;: &amp;quot;Gdn_UserException&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Partial Errors&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;ModeratorUserID&amp;quot;: &amp;quot;1&amp;quot;,
+    &amp;quot;Approved&amp;quot;: &amp;quot;ForeignID = ab6e33fe-e509-37c3-0431-21884cf199e7 &amp;quot;,
+    &amp;quot;Errors&amp;quot;: {
+        &amp;quot;Not Found&amp;quot;: [
+            &amp;quot;ForeignID = 86d9e3e1-5752-41dc-aa55-2a832728ec33 &amp;quot;,
+            &amp;quot;ForeignID = a1fca416-5573-4662-a31a-a4ff808c34dd &amp;quot;,
+            &amp;quot;ForeignID = af777ea8-1874-463c-a97c-a1f9e494bee1 &amp;quot;,
+            &amp;quot;ForeignID = 73031050-2016-44fc-b8f6-b97184793587 &amp;quot;
+        ]
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;get-mod-premoderation&#34;&gt;GET /mod/premoderation/&lt;/h2&gt;
+
+&lt;h2 id=&#34;get-mod-reported&#34;&gt;GET /mod/reported/&lt;/h2&gt;
+
+&lt;h2 id=&#34;get-mod-spam&#34;&gt;GET /mod/spam/&lt;/h2&gt;
+
+&lt;p&gt;List the items in each of the queues.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Page&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Page Number. Default is first page.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category ID. Default all categories.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;approved, denied, unread&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;SortOrder&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;asc, or desc. Default desc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;GET /mod/preapproval.json?Page=p1 HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+  &amp;quot;QueueName&amp;quot;: &amp;quot;preapproval&amp;quot;,
+  &amp;quot;Queue&amp;quot;: [],
+  &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;,
+  &amp;quot;Totals&amp;quot;: {
+    &amp;quot;Status&amp;quot;: {
+      &amp;quot;unread&amp;quot;: 0,
+      &amp;quot;approved&amp;quot;: 0,
+      &amp;quot;denied&amp;quot;: 0
+    },
+    &amp;quot;Records&amp;quot;: 0,
+    &amp;quot;PageSize&amp;quot;: 30,
+    &amp;quot;Pages&amp;quot;: 0
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;get-mod-relation&#34;&gt;GET /mod/relation&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@TODO&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Get all items in the queue by relation.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Page&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Page Number. Default is first page.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;relation&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;foreign-id, foreign-userid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;post-mod-premoderation&#34;&gt;POST /mod/premoderation/&lt;/h2&gt;
+
+&lt;h2 id=&#34;post-mod-reported&#34;&gt;POST /mod/reported/&lt;/h2&gt;
+
+&lt;h2 id=&#34;post-mod-spam&#34;&gt;POST /mod/spam/&lt;/h2&gt;
+
+&lt;p&gt;Add content to an existing queue.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Content Title.    RE: Discussion Title for comments&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Content Body&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Format&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;html, bbcode, markdown, text, textex, wysiwyg&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignType&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;comment, discussion, activity, activity-comment, conversation - message&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The if of the content. Ie. DiscussionID&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignUserID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The user who generated the content&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignIPAddress&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The user who generated the content&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category ID&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CustomerVariables&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Up to 10 custom variables&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;response&#34;&gt;Response&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;QueueName&amp;quot;: &amp;quot;testing&amp;quot;,
+  &amp;quot;QueueID&amp;quot;: &amp;quot;6931&amp;quot;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;errors-1&#34;&gt;Errors&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;Code&amp;quot;: 400,
+  &amp;quot;Exception&amp;quot;: &amp;quot;Name is a required field.&amp;quot;,
+  &amp;quot;Class&amp;quot;: &amp;quot;Gdn_UserException&amp;quot;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;delete-mod-id&#34;&gt;DELETE /mod/{id}&lt;/h2&gt;
+
+&lt;p&gt;Remove content from a queue.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;DELETE /mod/1.json HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+  &amp;quot;QueueID&amp;quot;: 1
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;patch-mod-id&#34;&gt;PATCH /mod/{id}&lt;/h2&gt;
+
+&lt;p&gt;Update an item in the queue.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;approved, denied, unread&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Queue&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;spam, reported, premoderation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;DELETE /mod/1.json HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+  &amp;quot;QueueID&amp;quot;: 1
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;method-mod-batch&#34;&gt;{METHOD} /mod/batch&lt;/h2&gt;
+
+&lt;p&gt;Lets just call the methods we use for single for now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proposed&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Batch process items in the queue.&lt;/p&gt;
+
+&lt;h3 id=&#34;patch-parameters&#34;&gt;PATCH Parameters&lt;/h3&gt;
+
+&lt;p&gt;Batch update items in queue.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;IDs&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;CSV of queue ids&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;approved, denied, unread&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Queue&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;spam, reported, premoderation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;delete-parameters&#34;&gt;DELETE Parameters&lt;/h3&gt;
+
+&lt;p&gt;Batch delete items in queue.&lt;/p&gt;
+
+&lt;p&gt;Parameter  | Type      |
+&amp;mdash;        | &amp;mdash;       | &amp;mdash;
+&lt;code&gt;IDs&lt;/code&gt;      | &lt;code&gt;string&lt;/code&gt;  | CSV of queue ids&lt;/p&gt;
+
+&lt;h2 id=&#34;post-mod-approve-id&#34;&gt;POST /mod/approve/{id}&lt;/h2&gt;
+
+&lt;p&gt;Approve content in the queue.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;POST /mod/approve.json/1 HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+  &amp;quot;Approved&amp;quot;: true
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;post-mod-deny-id&#34;&gt;POST /mod/deny/{id}&lt;/h2&gt;
+
+&lt;p&gt;Deny content in the queue.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;POST /mod/deny.json/1 HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+  &amp;quot;Denied&amp;quot;: true
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;post-mod-report&#34;&gt;POST /mod/report/&lt;/h2&gt;
+
+&lt;p&gt;Report Content to the queue.  This endpoint will remove content if the number of reports has been exceeded.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;Parameter  | Type      |
+&amp;mdash;        | &amp;mdash;       | &amp;mdash;
+&lt;code&gt;ForeignID&lt;/code&gt;      | &lt;code&gt;int&lt;/code&gt;  | ID of the content. ie. DiscussionID
+&lt;code&gt;ForeignType&lt;/code&gt;      | &lt;code&gt;string&lt;/code&gt;  | Type of content. ie. Discussion
+&lt;code&gt;Reason&lt;/code&gt;      | &lt;code&gt;string&lt;/code&gt;  | Reason the content is being reported
+&lt;code&gt;ReportUserID&lt;/code&gt;      | &lt;code&gt;int&lt;/code&gt;  | UserID of the user reporting.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;POST /mod/report.json/1 HTTP/1.1
+Host: http://example.vanillaforums.com
+
+{
+    &amp;quot;Reported&amp;quot;: true,
+    &amp;quot;QueueID&amp;quot;: &amp;quot;4559&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;database-table&#34;&gt;Database Table&lt;/h3&gt;
+
+&lt;p&gt;All of these rows will be returned in output of the above calls.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Queue&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;preapproval, reported, spam&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;DateInserted&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Timestamp&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;InsertUserID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The user who inserted the item to the queue&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Category ID&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Content Title.    RE: Discussion Title for comments&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Content Body&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignType&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;comment, discussion, activity, activity-comment, conversation - message&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ex d-12&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignUserID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The user who generated the content&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ForeignIPAddress&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The user who generated the content&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;approved, denied, unread&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;DateStatus&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Timestamp&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;StatusUserID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The user who last change the status&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Attributes&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;see Attributes Document&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Endpoint: multisites</title>
+      <link>http://127.0.0.1:8080/api/multisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/api/multisites/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8080/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -837,10 +1390,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Endpoint: roles</title>
-      <link>//docs.vanillaforums.com/api/roles/</link>
+      <link>http://127.0.0.1:8080/api/roles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/roles/</guid>
+      <guid>http://127.0.0.1:8080/api/roles/</guid>
       <description>
 
 &lt;h2 id=&#34;roles-add&#34;&gt;/roles/add&lt;/h2&gt;
@@ -995,10 +1548,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Forum Administration</title>
-      <link>//docs.vanillaforums.com/api/forum-administration/</link>
+      <link>http://127.0.0.1:8080/api/forum-administration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/forum-administration/</guid>
+      <guid>http://127.0.0.1:8080/api/forum-administration/</guid>
       <description>
 
 &lt;h2 id=&#34;configuration&#34;&gt;/configuration&lt;/h2&gt;
@@ -1018,11 +1571,128 @@ Host: https://yoursite.vanillaforums.com
     </item>
     
     <item>
-      <title>Smart ID</title>
-      <link>//docs.vanillaforums.com/api/smart-id/</link>
+      <title>Resource Routing</title>
+      <link>http://127.0.0.1:8080/developer/framework/apiv2/resource-routing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/smart-id/</guid>
+      <guid>http://127.0.0.1:8080/developer/framework/apiv2/resource-routing/</guid>
+      <description>
+
+&lt;h2 id=&#34;restful-resource-routing-to-controller-methods&#34;&gt;RESTful Resource Routing to Controller Methods&lt;/h2&gt;
+
+&lt;p&gt;This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from tha &lt;strong&gt;/api/v2/&lt;/strong&gt; base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.&lt;/p&gt;
+
+&lt;h2 id=&#34;controller-names&#34;&gt;Controller Names&lt;/h2&gt;
+
+&lt;p&gt;In order for a controller to be accessable from the API its name must end in &amp;ldquo;ApiController&amp;rdquo;. For example if you want to write a controller for the &amp;ldquo;/discussions&amp;rdquo; endpoints you would name it &amp;ldquo;DiscussionsApiController&amp;rdquo;. URLs support dashes. When a dash is encountered it will map to a capital letter in the controller name. For example the &amp;ldquo;/sites-proxy&amp;rdquo; endpoints map to the &amp;ldquo;SitesProxyApiController&amp;rdquo;. Vanilla&amp;rsquo;s addon manager is case-insensitive, but we recommend that you name your classes with proper casing because not all autoloaders are case-insensitive.&lt;/p&gt;
+
+&lt;p&gt;In RESTful APIs controllers should be plural. Think of controllers as folders in your file system. Folders contain many files and are usually named with the plural words such as &amp;ldquo;documents&amp;rdquo; or &amp;ldquo;pictures&amp;rdquo;. Always try and name your controllers in a similar way. When working on a project with many people it&amp;rsquo;s important to stick to a common naming convention.&lt;/p&gt;
+
+&lt;p&gt;Currently, controllers do not support namespaces, but that is coming soon. When it does the namespace won&amp;rsquo;t matter when routing to the controller so choose your controller names wisely in order to avoid clashes with other controllers.&lt;/p&gt;
+
+&lt;h2 id=&#34;methods-names-actions&#34;&gt;Methods Names (Actions)&lt;/h2&gt;
+
+&lt;p&gt;When adding methods (actions) to your controllers their names determine what what type of request they&amp;rsquo;ll map to. Here are the rules that determine which action is called.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;method&gt;() maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &amp;ldquo;POST /discussions&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;method&gt;_name() maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &amp;ldquo;GET /profile/activity&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;index() maps with GET /controller.&lt;/li&gt;
+&lt;li&gt;name() maps with any HTTP method. Try to avoid such global actions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;URLs can also contain dashes for method names. They map in much the same way as controller names. Because methods are case-insensitive a URL of /controller/my-comments is equivalent to /controller/mycomments. We may remove these ambiguities in the future so make sure to use proper casing and dashes in your method names and URLs respectively.&lt;/p&gt;
+
+&lt;h3 id=&#34;http-method-vs-controller-method&#34;&gt;HTTP Method vs. Controller Method&lt;/h3&gt;
+
+&lt;p&gt;The HTTP method referes to the method of the &lt;em&gt;HTTP request&lt;/em&gt;. This is usually one of the following verbs: GET, POST, PATCH, PUT, DELETE, HEAD, and OPTIONS. With object oriented programming, functions declared on a class are also referrred to as methods. It&amp;rsquo;s sometimes confusing trying to differentiate between the two. For this reason we will usually refer to the HTTP methods as methods and the other methods as &lt;strong&gt;actions&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;protected-methods&#34;&gt;Protected Methods&lt;/h3&gt;
+
+&lt;p&gt;Usually, all public methods can be accessed via. URL. This could present a security concern where you might want a class method to be public, but not accessable via API. There are a couple of ways to protect public controller methods.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Getters and setters that begin with &amp;ldquo;get&amp;rdquo;, &amp;ldquo;set&amp;rdquo;, or &amp;ldquo;is&amp;rdquo; and are followed by a non-underscore character cannot be accessed by the API. If you want to make such a name accessable (such as &amp;ldquo;settings&amp;rdquo;) you can put an HTTP verb before the name (ex. get_settings).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If your controller implements an &amp;ldquo;isProtected($name)&amp;rdquo; method then it will be called by the router to check all method names to see if they are public actions.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
+
+&lt;p&gt;When you add parameters to your methods they get mapped from the URLs path. This is usually how you add a record&amp;rsquo;s ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: In previous versions of Vanilla&amp;rsquo;s API, method parameters were also mapped from the query string. This is no longer the case so make sure to keep this in mind if you are upgrading older endpoints.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;parametr-ambiguities&#34;&gt;Parametr Ambiguities&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s say you&amp;rsquo;ve defined the following methods on your controller:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;class DiscussionsApiController {
+    public function index($page = &#39;&#39;) { }
+
+    public function get($id) { }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Looking at the definition you would expect we want something like the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GET /discussions/p2 maps to DiscussionsApiController::index(&amp;lsquo;p2&amp;rsquo;)&lt;/li&gt;
+&lt;li&gt;GET /discussions/123 maps to DiscussionsApiController::get(&amp;lsquo;123&amp;rsquo;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The problem is that the router doesn&amp;rsquo;t know which method you want to map to. By default, because the &lt;strong&gt;get()&lt;/strong&gt; method takes precedence over &lt;strong&gt;index()&lt;/strong&gt; it would get dispatched both times. To avoid these ambiguities there are a few strategies.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use the query string more. In the above example the page should really be a querystring parameter because that&amp;rsquo;s how it&amp;rsquo;s behaving. This is a break from Vanilla&amp;rsquo;s older APIs.&lt;/li&gt;
+&lt;li&gt;Parameter names can act as constraint. By default Vanilla has a constraint on the &lt;strong&gt;id&lt;/strong&gt; parameter where it must contain all digits: perfect for database primary keys. Constraints are regular expressions or callbacks and are added to the routing object. Try to avoid adding constraints yourself though because they are currently global.&lt;/li&gt;
+&lt;li&gt;Parameter count matters when mappng paths to actions. A path with more or less parts than action parameters will not map to that method. If your action has optional parameters then they aren&amp;rsquo;t required though. A path with less parts will call your action with the remaining default values.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you understand these rules you will be able to overcome most edge cases. However, you should aim to keep your controllers simple. We don&amp;rsquo;t want to see complex action names just because you are worried about name clashes.&lt;/p&gt;
+
+&lt;h3 id=&#34;parameter-mapping&#34;&gt;Parameter Mapping&lt;/h3&gt;
+
+&lt;p&gt;Some parameters will be automatically mapped from request data. In order to map request data you can use the following naming convention. Note that the type hints matter (TODO, but this is a good idea).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;array $query&lt;/strong&gt; will receive the query string as an array ($_GET).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;array $body&lt;/strong&gt; will receive the request body ($_POST).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;array $data&lt;/strong&gt; will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Garden\RequestInterface $&lt;/strong&gt;* will receive the request object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;hellip;$&lt;/strong&gt;* variadics will receive the rest of the path.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$path&lt;/strong&gt; is like the variadic, but will get a string (TODO).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using parameter mapping begins to make controller methods look more like model methods or plain PHP functions. This is intentional and you should keep that theory in mind when writing controller methods. Controller methods should be able to be called without the entire request bootstrapping process.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-default-restful-resource-conroller&#34;&gt;A Default RESTful Resource Conroller&lt;/h2&gt;
+
+&lt;p&gt;In general, you want to write your controller to contain mainly the basic HTTP methods. Often this will be all that you need and will provide basic CRUD functionality for a database table. Below is a skeletal /widgets resource illustrating this example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;class WidgetsApiController {
+    // List and search for widgets.
+    public function index(array $query = []) { }
+
+    // Add a widget.
+    public function post(array $data) { }
+
+    // Update an existing widget.
+    public function patch($id, array $data) { }
+
+    // Delete a widget.
+    public function delete($id) { }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Smart ID</title>
+      <link>http://127.0.0.1:8080/api/smart-id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/api/smart-id/</guid>
       <description>
 
 &lt;p&gt;Many API methods take a &lt;code&gt;UserID&lt;/code&gt; as one of their required parameters, for example the &lt;code&gt;/badge/give&lt;/code&gt; method. Often, especially in a SSO context, the calling system will not know the native Vanilla &lt;code&gt;UserID&lt;/code&gt;, but will instead know some other identifying characteristic of the user, such as their &lt;code&gt;Email&lt;/code&gt;, &lt;code&gt;Username&lt;/code&gt;, or SSO &lt;code&gt;ForeignID&lt;/code&gt;.&lt;/p&gt;
@@ -1123,10 +1793,10 @@ User&amp;rsquo;s Facebook email address.&lt;/p&gt;
     
     <item>
       <title>Use API on External Sites</title>
-      <link>//docs.vanillaforums.com/api/use-api-on-external-site/</link>
+      <link>http://127.0.0.1:8080/api/use-api-on-external-site/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/use-api-on-external-site/</guid>
+      <guid>http://127.0.0.1:8080/api/use-api-on-external-site/</guid>
       <description>
 
 &lt;p&gt;The Vanilla Forums API can be used to display information from your community outside of the community such as your blog. This guide shows a basic example using javascript and jQuery.&lt;/p&gt;
@@ -1183,10 +1853,10 @@ $.ajax({
     
     <item>
       <title>Vanilla API</title>
-      <link>//docs.vanillaforums.com/api/</link>
+      <link>http://127.0.0.1:8080/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/api/</guid>
+      <guid>http://127.0.0.1:8080/api/</guid>
       <description>
 
 &lt;p&gt;Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.&lt;/p&gt;
@@ -1284,6 +1954,203 @@ Connection: close
 &lt;h2 id=&#34;response-codes&#34;&gt;Response Codes&lt;/h2&gt;
 
 &lt;p&gt;Generally, if an API request is successful it will return the standard response code of  &lt;code&gt;200&lt;/code&gt;. You can check for this response code. If you get an error code (&lt;code&gt;4xx&lt;/code&gt;-&lt;code&gt;5xx&lt;/code&gt;) then you can check the &lt;code&gt;Exception&lt;/code&gt; property of the response some error text that will help you to determine what went wrong.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing API Endpoints</title>
+      <link>http://127.0.0.1:8080/developer/framework/apiv2/api-endpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/apiv2/api-endpoints/</guid>
+      <description>
+
+&lt;h2 id=&#34;controller-endpoints&#34;&gt;Controller Endpoints&lt;/h2&gt;
+
+&lt;p&gt;When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the &lt;a href=&#34;./resource-routing&#34;&gt;resource routing&lt;/a&gt; guide. This guide concerns writing the contents of a method.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-controller-base-class&#34;&gt;The Controller Base Class&lt;/h2&gt;
+
+&lt;p&gt;Although controllers don&amp;rsquo;t need to inherit from any class, the &lt;strong&gt;Vanilla\Controller&lt;/strong&gt; class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.&lt;/p&gt;
+
+&lt;h2 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h2&gt;
+
+&lt;p&gt;Most controllers are thin wrappers that add permission checks around calls to models that do most of the real work. The dispatcher creates all controllers using a dependency injection container, so you can have your controller&amp;rsquo;s models and other support objects properly initialized by declaring type-hinted parameters in your controller&amp;rsquo;s constructor.&lt;/p&gt;
+
+&lt;p&gt;The controller base class also has some default dependencies that you can also use:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;getSession()&lt;/strong&gt;. This is the session object correspoding to the user that invoked the controller.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;getEventManager()&lt;/strong&gt;. This is the event manager and can be used to fire events from within the controller.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;the-anatomy-of-a-controller-action&#34;&gt;The Anatomy of a Controller Action&lt;/h2&gt;
+
+&lt;p&gt;When writing a controller action, your methods are going to have a similar layout. Take this post action as an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function post(array $data) {
+    // Check permissions.
+    $this-&amp;gt;premission(&#39;...&#39;);
+
+    // Define the input schema.
+    $sch = $this-&amp;gt;schema([
+        ...
+    ], __FUNCTION__);
+
+    // Define the ouput schema.
+    $out = $this-&amp;gt;schema([
+        ...
+    ], __FUNCTION__, &#39;out&#39;);
+
+    // Validate the input data against the input schema.
+    $row = $sch-&amp;gt;validate($data);
+
+    // Do the controller&#39;s job.
+    $result = $this-&amp;gt;model-&amp;gt;insert($row);
+
+    // Trim the full result to the output schema.
+    $result = $out-&amp;gt;validate($result);
+
+    // Return the result.
+    return $result;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;check-permissions&#34;&gt;Check Permissions&lt;/h3&gt;
+
+&lt;p&gt;The first line of most actions is a call to &lt;code&gt;$this-&amp;gt;permission()&lt;/code&gt;. This applies even if your endpoint doesn&amp;rsquo;t require any specific permissions and has few exceptions. If you don&amp;rsquo;t think your endpoint requires a permission then just make the call with an empty string:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$this-&amp;gt;permission(&#39;&#39;); // no specific permission required
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We want to strictly enforce a permission call because there can be other reasons why a user may not have permissions such as a site being in update mode or being a private community. Such permission restrictions are known as bans. There are several default bans listed as constants on the &lt;strong&gt;Vanilla\Permissions&lt;/strong&gt; class. You can bypass a ban by specifying it as a permission name in your call to the &lt;strong&gt;permission()&lt;/strong&gt; method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// This endpoint is still available when the site is in update mode.
+$this-&amp;gt;permission([&#39;Vanilla.Discussions.View&#39;, Permissions::BAN_UPDATING]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;checking-multiple-permissions&#34;&gt;Checking Multiple Permissions&lt;/h4&gt;
+
+&lt;p&gt;If an endpoint requires multiple permissions you can make several calls to &lt;strong&gt;permission()&lt;/strong&gt;. Try and put the most &amp;ldquo;important&amp;rdquo; permission first, but the only impact the order of the calls has is on the order of error messages if the user doesn&amp;rsquo;t have either permission.&lt;/p&gt;
+
+&lt;p&gt;If an endpoint is available to a user with &lt;strong&gt;any&lt;/strong&gt; of a set of permissions then specify all of them as an array in one call to &lt;strong&gt;permission()&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;later-permission-checks&#34;&gt;Later Permission Checks&lt;/h4&gt;
+
+&lt;p&gt;You can make calls to &lt;strong&gt;permission()&lt;/strong&gt; later in the action. The most common reason to do this would be to lookup a record before deciding what permission the user needs. Even if you make a permission call later like this you should still include an initial call to &lt;strong&gt;permission()&lt;/strong&gt;. &lt;em&gt;Always be thinking about protecting your endpoints!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;define-the-input-schema&#34;&gt;Define The Input Schema&lt;/h3&gt;
+
+&lt;p&gt;The input schema is important for the following reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It cleans your input data beyond what JSON can do. For example, dates are converted into &lt;strong&gt;DateTimeImmutable&lt;/strong&gt; objects.&lt;/li&gt;
+&lt;li&gt;It helps define your API&amp;rsquo;s specification. Proper APIs should be backwards-compatible whenever new features are added. The schema helps ensure you support your old consumers.&lt;/li&gt;
+&lt;li&gt;It helps secure your endpoint using a whitelist of what&amp;rsquo;s allowed. This means you don&amp;rsquo;t have to worry about extra database fields sneaking in and overwriting sensitive data (such as admin flags). Ask any security expert and they&amp;rsquo;ll tell you that whitelist security is preferred to blacklist security.&lt;/li&gt;
+&lt;li&gt;It documents your endpoint. The schema is used to generate automatic documentation, but beyond that its also useful to other developers that are modifying your endpoint.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Schemas returned from the &lt;strong&gt;schema()&lt;/strong&gt; method are instances of the &lt;strong&gt;Vanilla\Schema&lt;/strong&gt; class which is a thin subclass of the &lt;strong&gt;Garden\Schema&lt;/strong&gt; class that adds some meta information useful for endopint documentation and events for extension.&lt;/p&gt;
+
+&lt;h3 id=&#34;define-the-output-schema&#34;&gt;Define The Output Schema&lt;/h3&gt;
+
+&lt;p&gt;The output schema isn&amp;rsquo;t as important a the input schema, but a properly specified API should have both. The output schema&amp;rsquo;s most important role is for documentation. It also helps trim unnecessary data from the result.&lt;/p&gt;
+
+&lt;p&gt;It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation gneration.&lt;/p&gt;
+
+&lt;h3 id=&#34;validate-the-input-data&#34;&gt;Validate The Input Data&lt;/h3&gt;
+
+&lt;p&gt;Validating the input is as easy as calling the the schema&amp;rsquo;s &lt;strong&gt;validate()&lt;/strong&gt; method. This does the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The data is validated. If the validation fails then an exception is thrown that the dispatcher understands how to render.&lt;/li&gt;
+&lt;li&gt;The data is cleaned. Values or coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;do-the-controller-s-job&#34;&gt;Do the Controller&amp;rsquo;s Job&lt;/h3&gt;
+
+&lt;p&gt;The controller&amp;rsquo;s main job is done after permission checking and input validation. What the controller does is up to you, but try keeping it simple. If you controller is overly complex think of whether that means you need to instead add functionality to your model. If you aren&amp;rsquo;t sure maybe refactor to a private method on the controller so that the actual endpoint keeps its thin wrapper status.&lt;/p&gt;
+
+&lt;h3 id=&#34;trim-the-result&#34;&gt;Trim The Result&lt;/h3&gt;
+
+&lt;p&gt;You trim the result by validating the output schema. This may also have the effect of throwing an error. In this case you&amp;rsquo;ve done something wrong. Hopefully, such errors come out in unit testing and not in production.&lt;/p&gt;
+
+&lt;h3 id=&#34;return-the-result&#34;&gt;Return The Result&lt;/h3&gt;
+
+&lt;p&gt;In API controllers the result is returned rather than being rendered directly. In fact, the base controller has no &lt;strong&gt;render()&lt;/strong&gt; method at all. The result is rendered by the dispatcher.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-data-class&#34;&gt;The Data Class&lt;/h4&gt;
+
+&lt;p&gt;Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a &lt;strong&gt;Garden\Web\Data&lt;/strong&gt; object that takes an HTTP status code as an argument in its contructor. The Data class also implements array access so it&amp;rsquo;s fairly easy to move from an array to an instance of this class.&lt;/p&gt;
+
+&lt;p&gt;You can also return an object that implements &lt;strong&gt;JsonSerializable&lt;/strong&gt;. An object like this that doesn&amp;rsquo;t have any other specific information will only renderable as JSON which isn&amp;rsquo;t as forwards-compatible as the other classes so be careful here. The Data class isn&amp;rsquo;t in its final form and it will get more and more support for advanced scenarios in the future.&lt;/p&gt;
+
+&lt;h2 id=&#34;tips-and-tricks&#34;&gt;Tips And Tricks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Try and not reference any global objects or static methods in your controllers. Use dependency injection. We are trying to wrestle globals out of our application. This won&amp;rsquo;t be 100% possible at first, but keep the theory in the back of your mind.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clever, yet lazy developers may notice that action methods have just gotten a lot longer than previous API versions. This is all for good reason and I hope this guide lays that out quite clearly. We want a good, testable, secure API. The only way to achieve that is to have the endpoints properly specified. This will pay dividends in the long term. Okay this isn&amp;rsquo;t exactly a tip or a trick, but the clever yet lazy developer is likely to scroll and read only this section.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Still, defining schemas is probably going to be the most arduous task. If you define a method that returns the output schema for your &lt;strong&gt;get()&lt;/strong&gt; endpoint then you&amp;rsquo;ll be able to use that same schema as the row format of your &lt;strong&gt;index()&lt;/strong&gt; endpoint:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function getRowSchema($method) {
+    return $this-&amp;gt;schema([
+            ...
+        ], $method, &#39;out&#39;);
+}
+
+// In your index() endpoint:
+$out = $this-schema([
+        *:a =&amp;gt; $this-&amp;gt;getRowSchema(&#39;&#39;)
+    ], __FUNCTION__, &#39;out&#39;);
+
+// In your get() endpoint:
+$out = $this-&amp;gt;getRowSchema(__FUNCTION__);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remember to always make the initial call to &lt;strong&gt;permission()&lt;/strong&gt;. &lt;em&gt;Protect that endpoint!&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You may have noticed that the examples above have odd names for the schema variables. That&amp;rsquo;s because variables with three characters indent nicely with method chaining, and schemas are very likely to method chain. Don&amp;rsquo;t hate on the 3LVs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing APIs</title>
+      <link>http://127.0.0.1:8080/developer/framework/apiv2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/apiv2/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-vanilla-apiv2&#34;&gt;The Vanilla APIv2&lt;/h2&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an &amp;ldquo;API first&amp;rdquo; framweork where you write your API first and then think about the resulting HTML. This offers several benefits:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;An API is easier to test, lending well to automated testing.&lt;/li&gt;
+&lt;li&gt;You can connect to an API from different clients and not just browser. This lends to the possibility of mobile clients or command-line automation.&lt;/li&gt;
+&lt;li&gt;An API often offers more application coverage beyond what just the user-interface sees. For example, your user interface may not allow certain records to be deleted, but an API will have that endpoint if you eventually want it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;The API offers the following features for developers.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Resource URL routing to API controllers. If you are familiar with RESTful APIs you&amp;rsquo;ll be right at home with Vanilla&amp;rsquo;s routing.&lt;/li&gt;
+&lt;li&gt;You can specify seperate methods for the different HTTP methods (GET, POST, DELETE, etc.) allowing you to concentrate on the task at hand.&lt;/li&gt;
+&lt;li&gt;Controllers are dependency injected by the dispatcher. This allows controllers to be relatively simple where each specific controller declares only the depenedencies it requires. In fact, the dispatcher doesn&amp;rsquo;t depend on a specific controller base class, but we provide one with common utility functionality.&lt;/li&gt;
+&lt;li&gt;Controller endpoints concern themselves with retreiving data and returning it like a PHP function. The dispatcher handles rendering. In this way an endpoint can be rendered to different formats without you having to worry about the details for every endpoint.&lt;/li&gt;
+&lt;li&gt;Exceptions thrown from your methods are rendered correctly from the dispatcher. Some exceptions (such as not found or method not allowed) are intelligently determined by the dispatcher.&lt;/li&gt;
+&lt;li&gt;Whitelist request data coming in using the &lt;strong&gt;Schema&lt;/strong&gt; class. In this way you can be sure that a malicious user can&amp;rsquo;t post extra information to attack your endpoint.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;Schema&lt;/strong&gt; object also supports automatic documentation of your endpoits (TODO).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;about-this-guide&#34;&gt;About This Guide&lt;/h2&gt;
+
+&lt;p&gt;This section walks you through creating API controlles and writing endpoints. It doesn&amp;rsquo;t go into great detail on individual method parameters though. There are a lot of options so we suggest looking at the classes mentioned in this guide to learn more information.&lt;/p&gt;
 </description>
     </item>
     

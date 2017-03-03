@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+        
+        <link href="http://127.0.0.1:8080/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8080/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        
+        <script src="http://127.0.0.1:8080/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8080/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8080/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8080/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8080/js/search.js"></script>
+        
+        <link rel="shortcut icon" href="http://127.0.0.1:8080/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8080/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+        
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+        
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+        
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8080/">
+                <img class="logo" src="http://127.0.0.1:8080/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+        
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Writing API Endpoints</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/framework/apiv2/api-endpoints.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+        
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/api/">Vanilla API</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8080/developer/framework/">Framework</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/assets/">Assets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/controllers/">Controllers &amp; URLs </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/database/">Database access </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/datasets/">Datasets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/email/">Email </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/helpers/">Helpers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/inform/">Inform Messages </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/i18n/">Internationalization &amp; Localization </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/models/">Models, Forms, &amp; Validation </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/modules/">Modules </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/permissions/">Permissions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/requests/">Requests </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8080/developer/framework/views/">Views </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active nest">
+                    <a href="http://127.0.0.1:8080/developer/framework/apiv2/">Writing APIs </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                        <ul class="nav-tier3">
+
+                            <li class="">
+                                <a href="http://127.0.0.1:8080/developer/framework/apiv2/resource-routing/">Resource Routing</a>
+                            </li>
+
+                            
+		    
+                        
+
+                            <li class="active">
+                                <a href="http://127.0.0.1:8080/developer/framework/apiv2/api-endpoints/">Writing API Endpoints</a>
+                            </li>
+
+                            
+                                
+                                
+                                
+                                
+			    
+		    
+                        </ul>
+                    
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/embedding/">Embedding</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/changelog/">Change Log</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8080/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8080/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="controller-endpoints">Controller Endpoints</h2>
+
+<p>When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the <a href="./resource-routing">resource routing</a> guide. This guide concerns writing the contents of a method.</p>
+
+<h2 id="the-controller-base-class">The Controller Base Class</h2>
+
+<p>Although controllers don&rsquo;t need to inherit from any class, the <strong>Vanilla\Controller</strong> class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.</p>
+
+<h2 id="dependency-injection">Dependency Injection</h2>
+
+<p>Most controllers are thin wrappers that add permission checks around calls to models that do most of the real work. The dispatcher creates all controllers using a dependency injection container, so you can have your controller&rsquo;s models and other support objects properly initialized by declaring type-hinted parameters in your controller&rsquo;s constructor.</p>
+
+<p>The controller base class also has some default dependencies that you can also use:</p>
+
+<ul>
+<li><strong>getSession()</strong>. This is the session object correspoding to the user that invoked the controller.</li>
+<li><strong>getEventManager()</strong>. This is the event manager and can be used to fire events from within the controller.</li>
+</ul>
+
+<h2 id="the-anatomy-of-a-controller-action">The Anatomy of a Controller Action</h2>
+
+<p>When writing a controller action, your methods are going to have a similar layout. Take this post action as an example:</p>
+
+<pre><code class="language-php">public function post(array $data) {
+    // Check permissions.
+    $this-&gt;premission('...');
+
+    // Define the input schema.
+    $sch = $this-&gt;schema([
+        ...
+    ], __FUNCTION__);
+
+    // Define the ouput schema.
+    $out = $this-&gt;schema([
+        ...
+    ], __FUNCTION__, 'out');
+
+    // Validate the input data against the input schema.
+    $row = $sch-&gt;validate($data);
+
+    // Do the controller's job.
+    $result = $this-&gt;model-&gt;insert($row);
+
+    // Trim the full result to the output schema.
+    $result = $out-&gt;validate($result);
+
+    // Return the result.
+    return $result;
+}
+</code></pre>
+
+<h3 id="check-permissions">Check Permissions</h3>
+
+<p>The first line of most actions is a call to <code>$this-&gt;permission()</code>. This applies even if your endpoint doesn&rsquo;t require any specific permissions and has few exceptions. If you don&rsquo;t think your endpoint requires a permission then just make the call with an empty string:</p>
+
+<pre><code class="language-php">$this-&gt;permission(''); // no specific permission required
+</code></pre>
+
+<p>We want to strictly enforce a permission call because there can be other reasons why a user may not have permissions such as a site being in update mode or being a private community. Such permission restrictions are known as bans. There are several default bans listed as constants on the <strong>Vanilla\Permissions</strong> class. You can bypass a ban by specifying it as a permission name in your call to the <strong>permission()</strong> method.</p>
+
+<pre><code class="language-php">// This endpoint is still available when the site is in update mode.
+$this-&gt;permission(['Vanilla.Discussions.View', Permissions::BAN_UPDATING]);
+</code></pre>
+
+<h4 id="checking-multiple-permissions">Checking Multiple Permissions</h4>
+
+<p>If an endpoint requires multiple permissions you can make several calls to <strong>permission()</strong>. Try and put the most &ldquo;important&rdquo; permission first, but the only impact the order of the calls has is on the order of error messages if the user doesn&rsquo;t have either permission.</p>
+
+<p>If an endpoint is available to a user with <strong>any</strong> of a set of permissions then specify all of them as an array in one call to <strong>permission()</strong>.</p>
+
+<h4 id="later-permission-checks">Later Permission Checks</h4>
+
+<p>You can make calls to <strong>permission()</strong> later in the action. The most common reason to do this would be to lookup a record before deciding what permission the user needs. Even if you make a permission call later like this you should still include an initial call to <strong>permission()</strong>. <em>Always be thinking about protecting your endpoints!</em></p>
+
+<h3 id="define-the-input-schema">Define The Input Schema</h3>
+
+<p>The input schema is important for the following reasons:</p>
+
+<ol>
+<li>It cleans your input data beyond what JSON can do. For example, dates are converted into <strong>DateTimeImmutable</strong> objects.</li>
+<li>It helps define your API&rsquo;s specification. Proper APIs should be backwards-compatible whenever new features are added. The schema helps ensure you support your old consumers.</li>
+<li>It helps secure your endpoint using a whitelist of what&rsquo;s allowed. This means you don&rsquo;t have to worry about extra database fields sneaking in and overwriting sensitive data (such as admin flags). Ask any security expert and they&rsquo;ll tell you that whitelist security is preferred to blacklist security.</li>
+<li>It documents your endpoint. The schema is used to generate automatic documentation, but beyond that its also useful to other developers that are modifying your endpoint.</li>
+</ol>
+
+<p>Schemas returned from the <strong>schema()</strong> method are instances of the <strong>Vanilla\Schema</strong> class which is a thin subclass of the <strong>Garden\Schema</strong> class that adds some meta information useful for endopint documentation and events for extension.</p>
+
+<h3 id="define-the-output-schema">Define The Output Schema</h3>
+
+<p>The output schema isn&rsquo;t as important a the input schema, but a properly specified API should have both. The output schema&rsquo;s most important role is for documentation. It also helps trim unnecessary data from the result.</p>
+
+<p>It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation gneration.</p>
+
+<h3 id="validate-the-input-data">Validate The Input Data</h3>
+
+<p>Validating the input is as easy as calling the the schema&rsquo;s <strong>validate()</strong> method. This does the following:</p>
+
+<ol>
+<li>The data is validated. If the validation fails then an exception is thrown that the dispatcher understands how to render.</li>
+<li>The data is cleaned. Values or coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.</li>
+</ol>
+
+<h3 id="do-the-controller-s-job">Do the Controller&rsquo;s Job</h3>
+
+<p>The controller&rsquo;s main job is done after permission checking and input validation. What the controller does is up to you, but try keeping it simple. If you controller is overly complex think of whether that means you need to instead add functionality to your model. If you aren&rsquo;t sure maybe refactor to a private method on the controller so that the actual endpoint keeps its thin wrapper status.</p>
+
+<h3 id="trim-the-result">Trim The Result</h3>
+
+<p>You trim the result by validating the output schema. This may also have the effect of throwing an error. In this case you&rsquo;ve done something wrong. Hopefully, such errors come out in unit testing and not in production.</p>
+
+<h3 id="return-the-result">Return The Result</h3>
+
+<p>In API controllers the result is returned rather than being rendered directly. In fact, the base controller has no <strong>render()</strong> method at all. The result is rendered by the dispatcher.</p>
+
+<h4 id="the-data-class">The Data Class</h4>
+
+<p>Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a <strong>Garden\Web\Data</strong> object that takes an HTTP status code as an argument in its contructor. The Data class also implements array access so it&rsquo;s fairly easy to move from an array to an instance of this class.</p>
+
+<p>You can also return an object that implements <strong>JsonSerializable</strong>. An object like this that doesn&rsquo;t have any other specific information will only renderable as JSON which isn&rsquo;t as forwards-compatible as the other classes so be careful here. The Data class isn&rsquo;t in its final form and it will get more and more support for advanced scenarios in the future.</p>
+
+<h2 id="tips-and-tricks">Tips And Tricks</h2>
+
+<ul>
+<li><p>Try and not reference any global objects or static methods in your controllers. Use dependency injection. We are trying to wrestle globals out of our application. This won&rsquo;t be 100% possible at first, but keep the theory in the back of your mind.</p></li>
+
+<li><p>Clever, yet lazy developers may notice that action methods have just gotten a lot longer than previous API versions. This is all for good reason and I hope this guide lays that out quite clearly. We want a good, testable, secure API. The only way to achieve that is to have the endpoints properly specified. This will pay dividends in the long term. Okay this isn&rsquo;t exactly a tip or a trick, but the clever yet lazy developer is likely to scroll and read only this section.</p></li>
+
+<li><p>Still, defining schemas is probably going to be the most arduous task. If you define a method that returns the output schema for your <strong>get()</strong> endpoint then you&rsquo;ll be able to use that same schema as the row format of your <strong>index()</strong> endpoint:</p>
+
+<pre><code class="language-php">public function getRowSchema($method) {
+    return $this-&gt;schema([
+            ...
+        ], $method, 'out');
+}
+
+// In your index() endpoint:
+$out = $this-schema([
+        *:a =&gt; $this-&gt;getRowSchema('')
+    ], __FUNCTION__, 'out');
+
+// In your get() endpoint:
+$out = $this-&gt;getRowSchema(__FUNCTION__);
+</code></pre></li>
+
+<li><p>Remember to always make the initial call to <strong>permission()</strong>. <em>Protect that endpoint!</em></p></li>
+
+<li><p>You may have noticed that the examples above have odd names for the schema variables. That&rsquo;s because variables with three characters indent nicely with method chaining, and schemas are very likely to method chain. Don&rsquo;t hate on the 3LVs.</p></li>
+</ul>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8080/img/cloud-hosting.png" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

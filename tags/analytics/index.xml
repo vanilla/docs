@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/analytics/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Analytics on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/tags/analytics/index.xml</link>
+    <description>Recent content in Analytics on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://127.0.0.1:8080/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Advanced Analytics</title>
-      <link>//docs.vanillaforums.com/help/analytics/advanced-analytics/</link>
+      <link>http://127.0.0.1:8080/help/analytics/advanced-analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
+      <guid>http://127.0.0.1:8080/help/analytics/advanced-analytics/</guid>
       <description>
 
 &lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
 
 &lt;p&gt;Available as on certain plans or as an add-on, Advanced Aanalytics give you further insights into your community.&lt;/p&gt;
 
-&lt;p&gt;! &lt;a href=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;! &lt;a href=&#34;http://127.0.0.1:8080/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
 
@@ -74,7 +74,7 @@
 
 &lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8080/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;visualization-of-analytics&#34;&gt;Visualization of Analytics&lt;/h2&gt;
 
