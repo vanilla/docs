@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Releases on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/releases/index.xml</link>
-    <description>Recent content in Releases on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/releases/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/releases/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/releases/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>2016 Cloud Releases</title>
-      <link>http://127.0.0.1:8080/help/releases/2016/</link>
+      <link>//docs.vanillaforums.com/help/releases/2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/releases/2016/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/2016/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -338,10 +338,10 @@
     
     <item>
       <title>2017 Cloud Releases</title>
-      <link>http://127.0.0.1:8080/help/releases/2017/</link>
+      <link>//docs.vanillaforums.com/help/releases/2017/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/releases/2017/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/2017/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -449,10 +449,10 @@
     
     <item>
       <title>Release Notes (Cloud)</title>
-      <link>http://127.0.0.1:8080/help/releases/</link>
+      <link>//docs.vanillaforums.com/help/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/releases/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/</guid>
       <description>
 
 &lt;h2 id=&#34;cloud-release-schedule&#34;&gt;Cloud release schedule&lt;/h2&gt;
@@ -464,8 +464,8 @@
 &lt;p&gt;Full release notes:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://127.0.0.1:8080/cloud/releases/2017&#34;&gt;2017 releases&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://127.0.0.1:8080/cloud/releases/2016&#34;&gt;2016 VIP releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/cloud/releases/2017&#34;&gt;2017 releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/cloud/releases/2016&#34;&gt;2016 VIP releases&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;2017-vip-releases&#34;&gt;2017 VIP releases&lt;/h3&gt;

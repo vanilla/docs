@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Moderation on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/moderation/index.xml</link>
-    <description>Recent content in Moderation on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/moderation/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/moderation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/moderation/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Warnings and Notes</title>
-      <link>http://127.0.0.1:8080/help/moderation/warnings-and-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/moderation/warnings-and-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-warnings&#34;&gt;What are Warnings?&lt;/h2&gt;
