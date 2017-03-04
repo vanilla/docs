@@ -2,29 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/reporting/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/analytics/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/help/api/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/2016/</loc>
-    <priority>0</priority>
+    <loc>//docs.vanillaforums.com/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/help/releases/2016/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/2017/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -52,11 +34,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/addons/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/addons/</loc>
   </url>
   
@@ -74,21 +51,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/analytics/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/api/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/api/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -112,11 +74,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/badges/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/reputation/badges/</loc>
   </url>
   
@@ -137,31 +94,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/forum-settings/categories/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/changelog/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/categories/cloud/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/cloud/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -177,26 +114,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/comments/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/community/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/configuration/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/configuration/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/contributing/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -236,26 +158,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/developer/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/cloud/developer-support/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/tools/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/developers/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/developer/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -267,26 +174,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/emails/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/appearance/emails/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/embed/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/sso/jsconnect/embed/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/embedding/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -295,11 +187,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/forum-settings/embedding/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/emoji/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -335,11 +222,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/features/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/api/forum-administration/</loc>
   </url>
   
@@ -352,17 +234,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/framework/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/framework/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/functions/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -386,11 +258,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/groups/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/addons/groups/</loc>
   </url>
   
@@ -403,31 +270,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/configuration/homepage/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/hub/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/i18n/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/ideation/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/importing/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -439,22 +286,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/installation/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/installation/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/integration/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/integrations/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -466,22 +298,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/jsconnect/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/categories/leaving/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/addons/social/linkedin/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/locales/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -501,21 +318,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/migration/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/cloud/migration/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/framework/models/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/moderation/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -527,21 +334,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/multisite/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/multisite/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/help/multisite/sync/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/notifications/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -557,17 +354,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/oauth/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/permissions/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -579,21 +366,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/plugins/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/plugins/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/help/addons/pockets/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/posting/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -621,17 +398,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/ranks/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/reputation/ranks/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/reactions/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -647,26 +414,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/releases/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/repository/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/framework/requests/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/roles/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -686,11 +438,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/saml/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/schemas/</loc>
   </url>
   
@@ -700,11 +447,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/cloud/ssl/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/single-sign-on/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -720,21 +462,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/smarty/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/theming/smarty/</loc>
   </url>
   
   <url>
     <loc>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/smarty-functions/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -754,16 +486,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/ssl/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/staging/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/cloud/staging/</loc>
   </url>
   
@@ -776,11 +498,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/sso/jsconnect/overview/</loc>
   </url>
   
@@ -789,31 +506,11 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/theming/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/theming/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/training/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/troubleshooting/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/developer/troubleshooting/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/twitter/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -857,16 +554,6 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/vanilla-pop/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/addons/vanilla-pop/</loc>
   </url>
   
@@ -887,17 +574,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/vimeo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/warning-a-user/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/warnings-and-notes/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -909,17 +586,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/wistia/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//docs.vanillaforums.com/help/integrations/wordpress/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/wordpress/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -928,11 +595,6 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/framework/apiv2/</loc>
-  </url>
-  
-  <url>
-    <loc>//docs.vanillaforums.com/tags/youtube/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1001,6 +663,18 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/moderation/reporting/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/analytics/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/api/</loc>
   </url>
   
 </urlset>

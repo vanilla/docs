@@ -8,99 +8,6 @@
     <atom:link href="//docs.vanillaforums.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Reporting</title>
-      <link>//docs.vanillaforums.com/help/moderation/reporting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/moderation/reporting/</guid>
-      <description>
-
-&lt;h2 id=&#34;what-is-reporting&#34;&gt;What is Reporting?&lt;/h2&gt;
-
-&lt;p&gt;Reporting is a way for members to bring moderators’ attention to content that they believe is inappropriate. “Report” is an option under “Flag” in the Reactions available under each post.&lt;/p&gt;
-
-&lt;h2 id=&#34;reporting-a-post&#34;&gt;Reporting a post&lt;/h2&gt;
-
-&lt;p&gt;Go to Flag -&amp;gt; Report in the Reactions menu at the end of the post. A popup box will prompt you to add a “Reason” both to explain the report and discourage useless reports. Any member may use this function.&lt;/p&gt;
-
-&lt;p&gt;Reporting content creates a new discussion in a special moderator-only forum.
-Additional reports of the same content (the exact same post) add new comments to the special discussion.&lt;/p&gt;
-
-&lt;p&gt;If different posts in the same discussion are reported, each will get its own special discussion. Moderators can comment in the special discussion normally to coordinate a response.&lt;/p&gt;
-
-&lt;h2 id=&#34;viewing-reports&#34;&gt;Viewing reports&lt;/h2&gt;
-
-&lt;p&gt;Go to the “Reported Posts” category or click “Reported Posts” in the sidebar menu. Each discussion represents a piece of reported content. The discussion starter is whoever reported the content first. Only moderators may see reports and receive notifications about them.&lt;/p&gt;
-
-&lt;h2 id=&#34;notification-of-reports&#34;&gt;Notification of reports&lt;/h2&gt;
-
-&lt;p&gt;If they have the Advanced Notifications permission, moderators may subscribe to receive popups and/or emails of all new discussions and/or comments in the Reported Posts category.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Analytics</title>
-      <link>//docs.vanillaforums.com/help/analytics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/analytics/</guid>
-      <description>
-
-&lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
-
-&lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-vanilla-statistics&#34;&gt;How to use Vanilla Statistics&lt;/h2&gt;
-
-&lt;p&gt;The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server.  We generate and present you with the statistics in a graphical format for the following:&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
-
-&lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
-
-&lt;p&gt;The site overview will present you with the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Number of page views generated for the time period&lt;/li&gt;
-&lt;li&gt;Number of new users that have joined the community for the time period&lt;/li&gt;
-&lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
-&lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Using the tabs at the top, you can view daily or monthly stats. The arrows will let you move the time period you are viewing.&lt;/p&gt;
-
-&lt;p&gt;Vanilla Statistics will also create a rolling table of data on the following:&lt;/p&gt;
-
-&lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
-
-&lt;p&gt;Vanilla will also create a rolling table of data on the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Most Active Users&lt;/li&gt;
-&lt;li&gt;Most popular discussions discussions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This too can be modified by changing the time period, you select to view.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>API</title>
-      <link>//docs.vanillaforums.com/help/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/api/</guid>
-      <description>
-
-&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s API is documented &lt;a href=&#34;//docs.vanillaforums.com/api/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>2016 Cloud Releases</title>
       <link>//docs.vanillaforums.com/help/releases/2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1295,6 +1202,112 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Editing time limit (this can be used to prevent edits after a certain time period.  Some user  Roles and permissions will may override this limit)&lt;/li&gt;
 &lt;li&gt;Enable checkboxes (this&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Appearance</title>
+      <link>//docs.vanillaforums.com/help/appearance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/appearance/</guid>
+      <description>
+
+&lt;h2 id=&#34;customizing-your-forum-s-appearance&#34;&gt;Customizing Your Forum&amp;rsquo;s Appearance&lt;/h2&gt;
+
+&lt;p&gt;Your community should have a unique look and feel to match your website, app or product.  The appearance section of your Dashboard lets you control how your community forum will look.&lt;/p&gt;
+
+&lt;h3 id=&#34;site-title-and-logo&#34;&gt;Site Title and Logo&lt;/h3&gt;
+
+&lt;p&gt;In your Dashboard under Appearance &amp;gt; Banner you can set the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Home page title&lt;/li&gt;
+&lt;li&gt;Site description&lt;/li&gt;
+&lt;li&gt;Banner title (what is displayed in the browser title bar)&lt;/li&gt;
+&lt;li&gt;Banner logo&lt;/li&gt;
+&lt;li&gt;Mobile banner logo&lt;/li&gt;
+&lt;li&gt;Favicon  (the small logo that appears on the browser tab)&lt;/li&gt;
+&lt;li&gt;Share image (an image that is sometimes displayed when someone posts a link to your community to a social media site)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;homepage&#34;&gt;Homepage&lt;/h3&gt;
+
+&lt;p&gt;In your Dashboard under Appearance &amp;gt; Homepage you can set the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The default homepage view. Typically, the Discussions view is the best choice. If your community is very large, the Categories view might make more sense.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Modern vs table layout. A table layout looks more like traditional forums.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;base-theme&#34;&gt;Base Theme&lt;/h3&gt;
+
+&lt;p&gt;Under Appearance &amp;gt; Themes you can select a base theme for both desktop and mobile devices. All base themes can be further customized by modifying the HTML and overriding the CSS.&lt;/p&gt;
+
+&lt;h3 id=&#34;avatars&#34;&gt;Avatars&lt;/h3&gt;
+
+&lt;p&gt;The Appearance &amp;gt; Avatars page lets you set a default avatar (profile picture).   You can also enable the Vanillicon plugin to create a unique avatar for each member or the Gravatar plugin to use members&amp;rsquo; Gravatars.&lt;/p&gt;
+
+&lt;h3 id=&#34;pockets&#34;&gt;Pockets&lt;/h3&gt;
+
+&lt;p&gt;Pockets are placeholders where you can add snippets of HTML or Javascript. They are useful for placing ads or widgets throughout your community.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/pockets-banner-ads/&#34;&gt;Using Pockets for Banner Ads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/power-pockets-adding-custom-html-js-vanilla-forum/&#34;&gt;Video: Pockets: Adding Custom HTML and Javascript to Your Vanilla Forum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;customizing-theme-html-and-css&#34;&gt;Customizing Theme HTML and CSS&lt;/h3&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s base themes can be customized to match your website. More information can be found &lt;a href=&#34;custom-theme/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;professional-services&#34;&gt;Professional Services&lt;/h3&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t have the time or resorces, Vanilla&amp;rsquo;s PS team can customize a theme to your specifications. Pls contact your Customer Success Manager for more information.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Applying Ranks over SSO</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
+      <description>
+
+&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
+
+&lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.&lt;/p&gt;
+
+&lt;p&gt;This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assets</title>
+      <link>//docs.vanillaforums.com/developer/framework/assets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
+      <description>
+
+&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
+
+&lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
+
+&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
+
+&lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
+
+&lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;A common scenario is using &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
+
+&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
