@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Developer-rsses on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/developer/index.xml</link>
-    <description>Recent content in Developer-rsses on Vanilla Forums Documentation</description>
+    <title>Developers on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8080/developer/index.xml</link>
+    <description>Recent content in Developers on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/developer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://127.0.0.1:8080/developer/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Advanced Embedding</title>
-      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
+      <link>http://127.0.0.1:8080/developer/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
+      <guid>http://127.0.0.1:8080/developer/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -132,10 +132,10 @@
     
     <item>
       <title>Assets</title>
-      <link>//docs.vanillaforums.com/developer/framework/assets/</link>
+      <link>http://127.0.0.1:8080/developer/framework/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
+      <guid>http://127.0.0.1:8080/developer/framework/assets/</guid>
       <description>
 
 &lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
@@ -150,18 +150,70 @@
 
 &lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;p&gt;A common scenario is using &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
+&lt;p&gt;A common scenario is using &lt;a href=&#34;http://127.0.0.1:8080/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
 
-&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;http://127.0.0.1:8080/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>http://127.0.0.1:8080/developer/framework/apiv2/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8080/developer/framework/apiv2/authentication/</guid>
+      <description>
+
+&lt;h2 id=&#34;authenticating-api-calls&#34;&gt;Authenticating API Calls&lt;/h2&gt;
+
+&lt;p&gt;When making calls to the API you&amp;rsquo;ll need to pass an access token in order to authenticate as a user. Vanilla has core support for access tokens, with the following features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Access tokens can be issued, verified, and revoked with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;An access token submitted in the &lt;strong&gt;Authorization&lt;/strong&gt; header will authenticate the appropriate user.&lt;/li&gt;
+&lt;li&gt;Expired access tokens are automatically pruned from the access token table, but stick around for a bit to give appropriate expired errors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;issuing-access-tokens&#34;&gt;Issuing Access Tokens&lt;/h2&gt;
+
+&lt;p&gt;There isn&amp;rsquo;t a built in user interface for issuing access tokens. Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;. The &lt;strong&gt;AccessTokenModel&lt;/strong&gt; is a regular model, but you will usually be interacting with it through specific methods.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// Issue a token
+$model = new AccessTokenModel();
+$accessToken = $model-&amp;gt;issue(Gdn::session()-&amp;gt;UserID(), &#39;1 month&#39;, $scope);
+
+// Verify a token.
+$tokenRow = $model-&amp;gt;verify($accessToken);
+
+// Revoke a token.
+$model-&amp;gt;revoke($accessToken);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When a token is issued it is also signed with its expiry date and a secure hash. These are verified before a token is looked up to help prevent certain brute force attacks. Even if an access token passes its check it must also be verified from the database. In this way access tokens can be revoked before they expire.&lt;/p&gt;
+
+&lt;h3 id=&#34;access-token-scope-wip&#34;&gt;Access Token Scope (WIP)&lt;/h3&gt;
+
+&lt;p&gt;The &lt;strong&gt;issue()&lt;/strong&gt; method has a scope parameter. This can be left empty or you can specify an array of permission names. If you sepecify a scrope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permisions than a user has. It&amp;rsquo;s considered a best practice to use a scope with only the permissions you need.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can never have a scope that gives a user more permissions than they already have. If more permissions are specified then they&amp;rsquo;ll be ignored.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;passing-access-tokens&#34;&gt;Passing Access Tokens&lt;/h2&gt;
+
+&lt;p&gt;Access tokens are past to REST requests in the &lt;strong&gt;Authorization&lt;/strong&gt; header. You pass an access token with the bearer scheme:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Authorization: Bearer &amp;lt;access token&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If the access token verifies then the request will be made with the appropriate user. If it doesn&amp;rsquo;t then there will be a 401 error. In this case check the &lt;strong&gt;X-WWW-Authenticate&lt;/strong&gt; header for specific information.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Backend</title>
-      <link>//docs.vanillaforums.com/developer/backend/</link>
+      <link>http://127.0.0.1:8080/developer/backend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/backend/</guid>
+      <guid>http://127.0.0.1:8080/developer/backend/</guid>
       <description>
 
 &lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
@@ -236,10 +288,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Banner Settings</title>
-      <link>//docs.vanillaforums.com/developer/configuration/banner/</link>
+      <link>http://127.0.0.1:8080/developer/configuration/banner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/configuration/banner/</guid>
+      <guid>http://127.0.0.1:8080/developer/configuration/banner/</guid>
       <description>
 
 &lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
@@ -260,10 +312,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Building new porters</title>
-      <link>//docs.vanillaforums.com/developer/importing/build/</link>
+      <link>http://127.0.0.1:8080/developer/importing/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
+      <guid>http://127.0.0.1:8080/developer/importing/build/</guid>
       <description>
 
 &lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
@@ -279,10 +331,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>CSS</title>
-      <link>//docs.vanillaforums.com/developer/theming/css/</link>
+      <link>http://127.0.0.1:8080/developer/theming/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
+      <guid>http://127.0.0.1:8080/developer/theming/css/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
@@ -373,10 +425,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Change Log</title>
-      <link>//docs.vanillaforums.com/developer/changelog/</link>
+      <link>http://127.0.0.1:8080/developer/changelog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/changelog/</guid>
+      <guid>http://127.0.0.1:8080/developer/changelog/</guid>
       <description>
 
 &lt;h2 id=&#34;version-change-log&#34;&gt;Version Change Log&lt;/h2&gt;
@@ -734,10 +786,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Code of Conduct</title>
-      <link>//docs.vanillaforums.com/developer/contributing/conduct/</link>
+      <link>http://127.0.0.1:8080/developer/contributing/conduct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/contributing/conduct/</guid>
+      <guid>http://127.0.0.1:8080/developer/contributing/conduct/</guid>
       <description>
 
 &lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h2&gt;
@@ -769,10 +821,10 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
     
     <item>
       <title>Coding Standard</title>
-      <link>//docs.vanillaforums.com/developer/contributing/coding-standard/</link>
+      <link>http://127.0.0.1:8080/developer/contributing/coding-standard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/contributing/coding-standard/</guid>
+      <guid>http://127.0.0.1:8080/developer/contributing/coding-standard/</guid>
       <description>
 
 &lt;h2 id=&#34;standards&#34;&gt;Standards&lt;/h2&gt;
@@ -1464,10 +1516,10 @@ other elements of style and practice.&lt;/p&gt;
     
     <item>
       <title>Community</title>
-      <link>//docs.vanillaforums.com/developer/community/</link>
+      <link>http://127.0.0.1:8080/developer/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/community/</guid>
+      <guid>http://127.0.0.1:8080/developer/community/</guid>
       <description>
 
 &lt;h2 id=&#34;developers-community&#34;&gt;Developers Community&lt;/h2&gt;
@@ -1513,10 +1565,10 @@ other elements of style and practice.&lt;/p&gt;
     
     <item>
       <title>Configuration</title>
-      <link>//docs.vanillaforums.com/developer/configuration/</link>
+      <link>http://127.0.0.1:8080/developer/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/configuration/</guid>
+      <guid>http://127.0.0.1:8080/developer/configuration/</guid>
       <description>
 
 &lt;h2 id=&#34;vanilla-configuration-files&#34;&gt;Vanilla configuration files&lt;/h2&gt;
@@ -1569,10 +1621,10 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
     
     <item>
       <title>Contributing</title>
-      <link>//docs.vanillaforums.com/developer/contributing/</link>
+      <link>http://127.0.0.1:8080/developer/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/contributing/</guid>
+      <guid>http://127.0.0.1:8080/developer/contributing/</guid>
       <description>
 
 &lt;h2 id=&#34;how-to-contribute&#34;&gt;How to Contribute&lt;/h2&gt;
@@ -1586,7 +1638,7 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
 &lt;li&gt;&lt;a href=&#34;#triaging-issues&#34;&gt;Triage&lt;/a&gt; issues already reported!&lt;/li&gt;
 &lt;li&gt;Test &lt;a href=&#34;https://open.vanillaforums.com/categories/blog&#34;&gt;pre-releases&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Contribute &lt;a href=&#34;https://github.com/vanilla/docs&#34;&gt;docs&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Help &lt;a href=&#34;//docs.vanillaforums.com/developer/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Help &lt;a href=&#34;http://127.0.0.1:8080/developer/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Evaluate community addons &amp;amp; offer feedback.&lt;/li&gt;
 &lt;li&gt;Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.&lt;/li&gt;
 &lt;/ol&gt;
@@ -1594,9 +1646,9 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
 &lt;h3 id=&#34;developers&#34;&gt;Developers&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Contribute code via &lt;a href=&#34;//docs.vanillaforums.com/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;https://open.vanillaforums.com/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Contribute code via &lt;a href=&#34;http://127.0.0.1:8080/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;https://open.vanillaforums.com/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Contribute addons &amp;amp; themes to the &lt;a href=&#34;https://open.vanillaforums.com/addons&#34;&gt;Official Directory&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;//docs.vanillaforums.com/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;http://127.0.0.1:8080/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Sections of our contribution guidelines are adapted or copied from &lt;a href=&#34;https://swift.org/contributing/&#34;&gt;Swift&lt;/a&gt; because they are awesome.&lt;/p&gt;
@@ -1629,10 +1681,10 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
     
     <item>
       <title>Controllers &amp; URLs</title>
-      <link>//docs.vanillaforums.com/developer/framework/controllers/</link>
+      <link>http://127.0.0.1:8080/developer/framework/controllers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/framework/controllers/</guid>
+      <guid>http://127.0.0.1:8080/developer/framework/controllers/</guid>
       <description>
 
 &lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
@@ -1641,7 +1693,7 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
 
 &lt;h3 id=&#34;dispatcher&#34;&gt;Dispatcher&lt;/h3&gt;
 
-&lt;p&gt;Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (&lt;code&gt;Gdn_Dispatcher&lt;/code&gt;) receives incoming &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/requests&#34;&gt;requests&lt;/a&gt; and invokes the appropriate controller(s).&lt;/p&gt;
+&lt;p&gt;Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (&lt;code&gt;Gdn_Dispatcher&lt;/code&gt;) receives incoming &lt;a href=&#34;http://127.0.0.1:8080/developer/framework/requests&#34;&gt;requests&lt;/a&gt; and invokes the appropriate controller(s).&lt;/p&gt;
 
 &lt;h3 id=&#34;mapping-urls&#34;&gt;Mapping URLs&lt;/h3&gt;
 
@@ -1666,9 +1718,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Consult the &lt;a href=&#34;//docs.vanillaforums.com/developer/community&#34;&gt;community&lt;/a&gt; if you need assistance configuring another server platform such as nginx or IIS.&lt;/p&gt;
+&lt;p&gt;Consult the &lt;a href=&#34;http://127.0.0.1:8080/developer/community&#34;&gt;community&lt;/a&gt; if you need assistance configuring another server platform such as nginx or IIS.&lt;/p&gt;
 
-&lt;p&gt;Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt; setting to enable pretty URLs is:&lt;/p&gt;
+&lt;p&gt;Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the &lt;a href=&#34;http://127.0.0.1:8080/developer/configuration&#34;&gt;config&lt;/a&gt; setting to enable pretty URLs is:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$Configuration[&#39;Garden&#39;][&#39;RewriteUrls&#39;] = TRUE;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1679,10 +1731,10 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
     
     <item>
       <title>Dashboard</title>
-      <link>//docs.vanillaforums.com/developer/configuration/dashboard/</link>
+      <link>http://127.0.0.1:8080/developer/configuration/dashboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/configuration/dashboard/</guid>
+      <guid>http://127.0.0.1:8080/developer/configuration/dashboard/</guid>
       <description>
 
 &lt;h2 id=&#34;dashboard&#34;&gt;Dashboard&lt;/h2&gt;
@@ -1694,28 +1746,6 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
 &lt;p&gt;The large area to the right of the screen is the work area. It is here the specific information relating to a particular navigation choice, such as adding a new post, is presented and collected.&lt;/p&gt;
 
 &lt;p&gt;Finally, in the footer, at the bottom of each Administration Panel also in a dark blue gradient, are links to Vanilla Forums, and Documentation. In addition, the version of Vanilla Forums you have installed can be found.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Data privacy</title>
-      <link>//docs.vanillaforums.com/developer/data-privacy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/data-privacy/</guid>
-      <description>
-
-&lt;h2 id=&#34;types-of-information&#34;&gt;Types of Information&lt;/h2&gt;
-
-&lt;p&gt;Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.&lt;/p&gt;
-
-&lt;h2 id=&#34;public-user-info&#34;&gt;Public user info&lt;/h2&gt;
-
-&lt;p&gt;We consider usernames and user IDs (&lt;code&gt;User.Name&lt;/code&gt; and &lt;code&gt;User.UserID&lt;/code&gt;) to be public information. This data is used in URLs, embedded in page data, and generally available to any user with basic permission to view or access your forum. For this reason, we do not recommend using real names or other personally identifiable data for usernames.&lt;/p&gt;
-
-&lt;h2 id=&#34;personal-user-info&#34;&gt;Personal user info&lt;/h2&gt;
-
-&lt;p&gt;We consider emails (&lt;code&gt;User.Email&lt;/code&gt;) and IP addresses (recorded in multiple contexts) to be personal info. Access to this data is governed by a special permission that, by default, is only granted to moderators, community managers, and administrators. You can customize this for your community.&lt;/p&gt;
 </description>
     </item>
     

@@ -2,675 +2,1009 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//docs.vanillaforums.com/</loc>
+    <loc>http://127.0.0.1:8080/help/moderation/reporting/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/releases/2016/</loc>
+    <loc>http://127.0.0.1:8080/help/analytics/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/releases/2017/</loc>
+    <loc>http://127.0.0.1:8080/help/api/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/appearance/accessibility/</loc>
+    <loc>http://127.0.0.1:8080/tags/2016/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</loc>
+    <loc>http://127.0.0.1:8080/help/releases/2016/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</loc>
+    <loc>http://127.0.0.1:8080/tags/2017/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</loc>
+    <loc>http://127.0.0.1:8080/help/releases/2017/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</loc>
+    <loc>http://127.0.0.1:8080/help/appearance/accessibility/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/badges/adding-and-editing-badges/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/analytics/advanced-analytics/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/ranks/adding-and-editing-ranks/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/embedding/advanced/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/reactions/adding-and-editing-reactions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/advanced-search/</loc>
+    <loc>http://127.0.0.1:8080/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</loc>
+    <loc>http://127.0.0.1:8080/tags/addons/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/appearance/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</loc>
+    <loc>http://127.0.0.1:8080/help/analytics/advanced-analytics/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/assets/</loc>
+    <loc>http://127.0.0.1:8080/developer/embedding/advanced/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/backend/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/advanced-search/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/badges/</loc>
+    <loc>http://127.0.0.1:8080/help/forum-settings/advanced-settings/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/configuration/banner/</loc>
+    <loc>http://127.0.0.1:8080/tags/analytics/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/importing/build/</loc>
+    <loc>http://127.0.0.1:8080/tags/api/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/css/</loc>
+    <loc>http://127.0.0.1:8080/api/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/leaving/</loc>
+    <loc>http://127.0.0.1:8080/help/appearance/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/forum-settings/categories/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/ranks/applying-ranks-over-sso/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/changelog/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/assets/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/repository/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/apiv2/authentication/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/contributing/conduct/</loc>
+    <loc>http://127.0.0.1:8080/developer/backend/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/contributing/coding-standard/</loc>
+    <loc>http://127.0.0.1:8080/tags/badges/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/community/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/badges/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/configuration/</loc>
+    <loc>http://127.0.0.1:8080/developer/configuration/banner/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/contributing/</loc>
+    <loc>http://127.0.0.1:8080/developer/importing/build/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/controllers/</loc>
+    <loc>http://127.0.0.1:8080/developer/theming/css/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/leaving/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/getting-started/custom-domain/</loc>
+    <loc>http://127.0.0.1:8080/tags/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/appearance/custom-theme/</loc>
+    <loc>http://127.0.0.1:8080/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/configuration/dashboard/</loc>
+    <loc>http://127.0.0.1:8080/help/forum-settings/categories/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/data-privacy/</loc>
+    <loc>http://127.0.0.1:8080/developer/changelog/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/database/</loc>
+    <loc>http://127.0.0.1:8080/tags/cloud/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/datasets/</loc>
+    <loc>http://127.0.0.1:8080/categories/cloud/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/developer-support/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/repository/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/tools/</loc>
+    <loc>http://127.0.0.1:8080/developer/contributing/conduct/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/</loc>
+    <loc>http://127.0.0.1:8080/developer/contributing/coding-standard/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/email/</loc>
+    <loc>http://127.0.0.1:8080/tags/comments/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/appearance/emails/</loc>
+    <loc>http://127.0.0.1:8080/developer/community/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/jsconnect/embed/</loc>
+    <loc>http://127.0.0.1:8080/tags/configuration/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/embedding/</loc>
+    <loc>http://127.0.0.1:8080/developer/configuration/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/forum-settings/embedding/</loc>
+    <loc>http://127.0.0.1:8080/tags/contributing/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/posting/emoji/</loc>
+    <loc>http://127.0.0.1:8080/developer/contributing/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/categories/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/controllers/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/comments/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/reactions/curating-with-reactions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/discussions/</loc>
+    <loc>http://127.0.0.1:8080/help/getting-started/custom-domain/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/multisites/</loc>
+    <loc>http://127.0.0.1:8080/help/appearance/custom-theme/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/roles/</loc>
+    <loc>http://127.0.0.1:8080/developer/configuration/dashboard/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/hooks/</loc>
+    <loc>http://127.0.0.1:8080/developer/data-privacy/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/facebook/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/database/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/forum-administration/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/datasets/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/forum-merge/</loc>
+    <loc>http://127.0.0.1:8080/tags/developer/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/forum-settings/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/developer-support/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/</loc>
+    <loc>http://127.0.0.1:8080/developer/tools/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/getting-started/</loc>
+    <loc>http://127.0.0.1:8080/tags/developers/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/gigya/</loc>
+    <loc>http://127.0.0.1:8080/developer/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/github/</loc>
+    <loc>http://127.0.0.1:8080/developer/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/email/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/googleplus/</loc>
+    <loc>http://127.0.0.1:8080/tags/emails/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/groups/</loc>
+    <loc>http://127.0.0.1:8080/help/appearance/emails/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/</loc>
+    <loc>http://127.0.0.1:8080/tags/embed/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/helpers/</loc>
+    <loc>http://127.0.0.1:8080/help/sso/jsconnect/embed/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/configuration/homepage/</loc>
+    <loc>http://127.0.0.1:8080/tags/embedding/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/ideation/</loc>
+    <loc>http://127.0.0.1:8080/developer/embedding/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/importing/</loc>
+    <loc>http://127.0.0.1:8080/help/forum-settings/embedding/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/inform/</loc>
+    <loc>http://127.0.0.1:8080/tags/emoji/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/installation/</loc>
+    <loc>http://127.0.0.1:8080/help/posting/emoji/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/</loc>
+    <loc>http://127.0.0.1:8080/api/categories/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/i18n/</loc>
+    <loc>http://127.0.0.1:8080/api/comments/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/linkedin/</loc>
+    <loc>http://127.0.0.1:8080/api/discussions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/locales/</loc>
+    <loc>http://127.0.0.1:8080/api/moderation/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/logging/</loc>
+    <loc>http://127.0.0.1:8080/api/multisites/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/groups/managing-groups/</loc>
+    <loc>http://127.0.0.1:8080/api/roles/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/configuration/message/</loc>
+    <loc>http://127.0.0.1:8080/developer/theming/hooks/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/migration/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/social/facebook/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/models/</loc>
+    <loc>http://127.0.0.1:8080/tags/features/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/</loc>
+    <loc>http://127.0.0.1:8080/api/forum-administration/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/modules/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/forum-merge/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/multisite/</loc>
+    <loc>http://127.0.0.1:8080/help/forum-settings/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/multisite/sync/</loc>
+    <loc>http://127.0.0.1:8080/tags/framework/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/notifications/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/oauth/</loc>
+    <loc>http://127.0.0.1:8080/tags/functions/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/oauth/</loc>
+    <loc>http://127.0.0.1:8080/help/getting-started/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/gigya/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/permissions/</loc>
+    <loc>http://127.0.0.1:8080/help/integrations/github/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/plugins/quickstart/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/badges/giving-and-requesting-badges/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/plugins/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/social/googleplus/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/pockets/</loc>
+    <loc>http://127.0.0.1:8080/tags/groups/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/posting/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/groups/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/</loc>
+    <loc>http://127.0.0.1:8080/help/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/roles-permissions/private-community/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/helpers/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/contributing/pull-requests/</loc>
+    <loc>http://127.0.0.1:8080/help/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/qna/</loc>
+    <loc>http://127.0.0.1:8080/developer/configuration/homepage/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/quickstart/</loc>
+    <loc>http://127.0.0.1:8080/tags/hub/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/ranks/</loc>
+    <loc>http://127.0.0.1:8080/tags/i18n/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/reactions/</loc>
+    <loc>http://127.0.0.1:8080/help/ideation/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/redirector/</loc>
+    <loc>http://127.0.0.1:8080/tags/importing/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/releases/</loc>
+    <loc>http://127.0.0.1:8080/developer/importing/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/requests/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/inform/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</loc>
+    <loc>http://127.0.0.1:8080/tags/installation/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/roles-permissions/</loc>
+    <loc>http://127.0.0.1:8080/developer/installation/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/routes/</loc>
+    <loc>http://127.0.0.1:8080/tags/integration/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/saml/</loc>
+    <loc>http://127.0.0.1:8080/tags/integrations/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/saml/connection-explained/</loc>
+    <loc>http://127.0.0.1:8080/help/integrations/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/schemas/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/i18n/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</loc>
+    <loc>http://127.0.0.1:8080/tags/jsconnect/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/ssl/</loc>
+    <loc>http://127.0.0.1:8080/categories/leaving/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/social/linkedin/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/posting/smart-embed/</loc>
+    <loc>http://127.0.0.1:8080/tags/locales/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/smart-id/</loc>
+    <loc>http://127.0.0.1:8080/developer/locales/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/logging/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/groups/managing-groups/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/</loc>
+    <loc>http://127.0.0.1:8080/developer/configuration/message/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</loc>
+    <loc>http://127.0.0.1:8080/tags/migration/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/migration/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/spam/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/models/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/staging/</loc>
+    <loc>http://127.0.0.1:8080/tags/moderation/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/cloud/support/</loc>
+    <loc>http://127.0.0.1:8080/help/moderation/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/importing/support/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/modules/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/jsconnect/overview/</loc>
+    <loc>http://127.0.0.1:8080/tags/multisite/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/themeoptions/</loc>
+    <loc>http://127.0.0.1:8080/help/multisite/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/</loc>
+    <loc>http://127.0.0.1:8080/help/multisite/sync/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/troubleshooting/</loc>
+    <loc>http://127.0.0.1:8080/tags/notifications/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/social/twitter/</loc>
+    <loc>http://127.0.0.1:8080/help/notifications/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/comments/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/oauth/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/upgrading-from-warnings/</loc>
+    <loc>http://127.0.0.1:8080/help/sso/oauth/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/use-api-on-external-site/</loc>
+    <loc>http://127.0.0.1:8080/tags/oauth/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</loc>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/page-links/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</loc>
+    <loc>http://127.0.0.1:8080/tags/permissions/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/permissions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/configuration/using/</loc>
+    <loc>http://127.0.0.1:8080/developer/plugins/quickstart/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/appearance/custom-theme/webfont/</loc>
+    <loc>http://127.0.0.1:8080/tags/plugins/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/api/</loc>
+    <loc>http://127.0.0.1:8080/developer/plugins/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/vanilla-pop/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/pockets/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</loc>
+    <loc>http://127.0.0.1:8080/tags/posting/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/importing/porter/</loc>
+    <loc>http://127.0.0.1:8080/help/posting/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/views/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/views/</loc>
+    <loc>http://127.0.0.1:8080/help/roles-permissions/private-community/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/warning-a-user/</loc>
+    <loc>http://127.0.0.1:8080/developer/contributing/pull-requests/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/qna/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/wordpress/wishlist/</loc>
+    <loc>http://127.0.0.1:8080/developer/theming/quickstart/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/wordpress/</loc>
+    <loc>http://127.0.0.1:8080/tags/ranks/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/ranks/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/framework/apiv2/</loc>
+    <loc>http://127.0.0.1:8080/tags/reactions/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/zendesk/</loc>
+    <loc>http://127.0.0.1:8080/help/reputation/reactions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/sso/jsconnect/</loc>
+    <loc>http://127.0.0.1:8080/help/addons/redirector/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</loc>
+    <loc>http://127.0.0.1:8080/help/releases/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</loc>
+    <loc>http://127.0.0.1:8080/tags/releases/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</loc>
+    <loc>http://127.0.0.1:8080/tags/repository/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/requests/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/</loc>
+    <loc>http://127.0.0.1:8080/developer/framework/apiv2/resource-routing/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</loc>
+    <loc>http://127.0.0.1:8080/tags/roles/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</loc>
+    <loc>http://127.0.0.1:8080/help/roles-permissions/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</loc>
+    <loc>http://127.0.0.1:8080/developer/routes/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</loc>
+    <loc>http://127.0.0.1:8080/help/sso/saml/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</loc>
+    <loc>http://127.0.0.1:8080/help/sso/saml/connection-explained/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</loc>
+    <loc>http://127.0.0.1:8080/tags/saml/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</loc>
+    <loc>http://127.0.0.1:8080/developer/schemas/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</loc>
+    <loc>http://127.0.0.1:8080/help/sso/jsconnect/seamless/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</loc>
+    <loc>http://127.0.0.1:8080/help/cloud/ssl/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</loc>
+    <loc>http://127.0.0.1:8080/tags/single-sign-on/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/moderation/reporting/</loc>
+    <loc>http://127.0.0.1:8080/help/sso/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/analytics/</loc>
+    <loc>http://127.0.0.1:8080/help/posting/smart-embed/</loc>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/api/</loc>
+    <loc>http://127.0.0.1:8080/api/smart-id/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/smarty/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/conditionals/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/smarty-functions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/modifiers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/addons/social/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/moderation/spam/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/ssl/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/staging/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/cloud/staging/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/cloud/support/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/importing/support/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/sso/jsconnect/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/themeoptions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/theming/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/training/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/troubleshooting/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/twitter/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/addons/social/twitter/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/comments/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/moderation/warnings-and-notes/upgrading-from-warnings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/api/use-api-on-external-site/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/integrations/wordpress/using-comments/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/reputation/ranks/using-ranks-as-incentives/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/configuration/using/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/appearance/custom-theme/webfont/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/vanilla-pop/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/addons/vanilla-pop/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/addons/vanilla-pop/site-hub/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/importing/porter/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/framework/views/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/views/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/vimeo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/moderation/warnings-and-notes/warning-a-user/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/warnings-and-notes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/moderation/warnings-and-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/integrations/wordpress/wishlist/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/wistia/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/integrations/wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/wordpress/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/framework/apiv2/api-endpoints/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/framework/apiv2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/tags/youtube/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/integrations/zendesk/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/help/sso/jsconnect/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/asset/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/breadcrumbs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/custom-menu/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/event/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/homepage-title/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/include-file/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/link/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/logo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/mobile-logo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/module/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/permission/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/pocket/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/searchbox/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/text/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8080/developer/theming/smarty/functions/i18n/</loc>
   </url>
   
 </urlset>
