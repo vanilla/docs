@@ -176,7 +176,7 @@
 
 &lt;h2 id=&#34;issuing-access-tokens&#34;&gt;Issuing Access Tokens&lt;/h2&gt;
 
-&lt;p&gt;There isn&amp;rsquo;t a built in user interface for issuing access tokens. Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;. The &lt;strong&gt;AccessTokenModel&lt;/strong&gt; is a regular model, but you will usually be interacting with it through specific methods.&lt;/p&gt;
+&lt;p&gt;There isn&amp;rsquo;t a built in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;. The &lt;strong&gt;AccessTokenModel&lt;/strong&gt; is a regular model, but you will usually be interacting with it through specific methods.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// Issue a token
 $model = new AccessTokenModel();
