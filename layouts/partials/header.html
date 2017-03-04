@@ -7,16 +7,19 @@
         <meta name="author" content="Vanilla Community">
 
         <title>Vanilla Forums Documentation</title>
-        
+
         <link href="/css/docs.css" rel="stylesheet">
         <link href="/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <script src="/js/vendor/jquery-3.0.0.min.js"></script>
         <script src="/js/vendor/jquery.store.js"></script>
         <script src="/js/lunr-index.json" id="search-manifest" type="application/json"></script>
         <script src="/js/vendor/lunr.js"></script>
         <script src="/js/search.js"></script>
-        
+
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <style type="text/css">
@@ -24,15 +27,15 @@
                 table-layout: fixed;
             }
         </style>
-        
+
         {{ partial "trackers.html" . }}
-        
+
     </head>
 
     <body class="docs grid docs-layout-single docs-layout-section-{{ .Section }}">
-        
+
         {{ partial "header/slimheader.html" . }}
-        
+
         <div class="docs-title-wrapper">
             <div class="row">
                 <div class="column column-3"></div>
@@ -41,4 +44,3 @@
                 </div>
             </div>
         </div>
-        

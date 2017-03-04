@@ -20,7 +20,7 @@ When making calls to the API you'll need to pass an access token in order to aut
 
 ## Issuing Access Tokens
 
-There isn't a built in user interface for issuing access tokens. Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the **AccessTokenModel**. The **AccessTokenModel** is a regular model, but you will usually be interacting with it through specific methods.
+There isn't a built in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the **AccessTokenModel**. The **AccessTokenModel** is a regular model, but you will usually be interacting with it through specific methods.
 
 ```php
 // Issue a token
