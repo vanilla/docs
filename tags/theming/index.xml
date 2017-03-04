@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theming on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/theming/index.xml</link>
+    <link>//docs.vanillaforums.com/tags/theming/index.xml</link>
     <description>Recent content in Theming on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/theming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/theming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CSS</title>
-      <link>http://127.0.0.1:8080/developer/theming/css/</link>
+      <link>//docs.vanillaforums.com/developer/theming/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/css/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
@@ -103,10 +103,10 @@
     
     <item>
       <title>Event Hooks</title>
-      <link>http://127.0.0.1:8080/developer/theming/hooks/</link>
+      <link>//docs.vanillaforums.com/developer/theming/hooks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/hooks/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/hooks/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-hooks&#34;&gt;Theming Hooks&lt;/h2&gt;
@@ -184,10 +184,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Page Links</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/functions/page-links/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/functions/page-links/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</guid>
       <description>
 
 &lt;h2 id=&#34;page-links&#34;&gt;Page Links&lt;/h2&gt;
@@ -355,10 +355,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Quickstart</title>
-      <link>http://127.0.0.1:8080/developer/theming/quickstart/</link>
+      <link>//docs.vanillaforums.com/developer/theming/quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/quickstart/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/quickstart/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Vanilla Forums Cloud Customers, check out our &lt;a href=&#34;http://blog.vanillaforums.com/help/vanilla-forums-themes/&#34;&gt;Ultimate Vanilla Forums Theme Guide&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
@@ -375,7 +375,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 &lt;li&gt;Edit the custom.css file to your heart&amp;rsquo;s content. The custom.css file is added &lt;em&gt;after&lt;/em&gt; the base theme&amp;rsquo;s css. Alternately, you can completely replace the base theme file (style.css) by copying it from the &lt;code&gt;/applications/dashboard/design&lt;/code&gt; folder into your theme&amp;rsquo;s design folder.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Learn more by reading our docs on &lt;a href=&#34;http://127.0.0.1:8080/theming/css&#34;&gt;Theming with CSS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Learn more by reading our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/css&#34;&gt;Theming with CSS&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;other-things-you-should-know&#34;&gt;Other things you should know:&lt;/h3&gt;
 
@@ -387,16 +387,16 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;Themes have the ability to tap into Vanilla&amp;rsquo;s event firing system and override functions using a special themehooks file. To use hooks, create a file named class.themehooks.php in your theme&amp;rsquo;s root directory (&lt;code&gt;/themes/your_theme_name/class.themehooks.php&lt;/code&gt;) and edit it there.&lt;/p&gt;
 
-&lt;p&gt;This is a very powerful feature. Learn more about it by reading the &lt;a href=&#34;http://127.0.0.1:8080/theming/hooks&#34;&gt;Theming Hooks&lt;/a&gt; docs.&lt;/p&gt;
+&lt;p&gt;This is a very powerful feature. Learn more about it by reading the &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;Theming Hooks&lt;/a&gt; docs.&lt;/p&gt;
 
 &lt;h2 id=&#34;part-3-html-amp-views-optional&#34;&gt;Part 3: HTML &amp;amp; Views (optional)&lt;/h2&gt;
 
 &lt;p&gt;If you don&amp;rsquo;t like the way we&amp;rsquo;ve structured our HTML, you can edit that too. Our pages are made up of two parts:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Master Views&lt;/strong&gt;: These represent everything that wraps the main content of every page. If all you want to do is add a menu or banner above Vanilla, this is the only file you will need to alter. To do so, copy the default master view from &lt;code&gt;/applications/dashboard/views/default.master.tpl&lt;/code&gt; to &lt;code&gt;/themes/your_theme_name/views/default.master.tpl&lt;/code&gt; and edit it there. This master view is built on the Smarty template engine. Familiarize yourself with this special master view by reading on docs on &lt;a href=&#34;http://127.0.0.1:8080/theming/views&#34;&gt;Theming Views&lt;/a&gt;. Also check out our docs on &lt;a href=&#34;http://127.0.0.1:8080/theming/smarty&#34;&gt;Theming with Smarty&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Master Views&lt;/strong&gt;: These represent everything that wraps the main content of every page. If all you want to do is add a menu or banner above Vanilla, this is the only file you will need to alter. To do so, copy the default master view from &lt;code&gt;/applications/dashboard/views/default.master.tpl&lt;/code&gt; to &lt;code&gt;/themes/your_theme_name/views/default.master.tpl&lt;/code&gt; and edit it there. This master view is built on the Smarty template engine. Familiarize yourself with this special master view by reading on docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;Theming Views&lt;/a&gt;. Also check out our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty&#34;&gt;Theming with Smarty&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Views&lt;/strong&gt;: These represent all of the content in each page. Every application has a &amp;ldquo;views&amp;rdquo; folder that contains all of the html for every page. So, for example, if you wanted to edit the html for the discussion list, you could copy the views from &lt;code&gt;/applications/vanilla/views/discussions&lt;/code&gt; to &lt;code&gt;/themes/your_theme_name/views/discussions&lt;/code&gt; and edit them there. There are some overriding and editing views. Be sure to check out our docs on &lt;a href=&#34;http://127.0.0.1:8080/theming/views&#34;&gt;Theming Views&lt;/a&gt; to learn more.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Views&lt;/strong&gt;: These represent all of the content in each page. Every application has a &amp;ldquo;views&amp;rdquo; folder that contains all of the html for every page. So, for example, if you wanted to edit the html for the discussion list, you could copy the views from &lt;code&gt;/applications/vanilla/views/discussions&lt;/code&gt; to &lt;code&gt;/themes/your_theme_name/views/discussions&lt;/code&gt; and edit them there. There are some overriding and editing views. Be sure to check out our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;Theming Views&lt;/a&gt; to learn more.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&#34;other-things-you-should-know-1&#34;&gt;Other things you should know:&lt;/h3&gt;
@@ -409,17 +409,17 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Smarty</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-overview&#34;&gt;Smarty Overview&lt;/h2&gt;
 
 &lt;p&gt;Vanilla currently supports both PHP and Smarty views. &lt;a href=&#34;http://www.smarty.net&#34;&gt;Smarty&lt;/a&gt; is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to &lt;code&gt;/applications/dashboard/views/default.master.tpl&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;You can &lt;a href=&#34;http://127.0.0.1:8080/theming/views&#34;&gt;override this view&lt;/a&gt; in a theme or plugin, or by using the Custom Theme plugin which allows you to modify your current theme&amp;rsquo;s master view from the dashboard. This section will give you some ideas how you can customize your master view to suit your community&amp;rsquo;s needs.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;override this view&lt;/a&gt; in a theme or plugin, or by using the Custom Theme plugin which allows you to modify your current theme&amp;rsquo;s master view from the dashboard. This section will give you some ideas how you can customize your master view to suit your community&amp;rsquo;s needs.&lt;/p&gt;
 
 &lt;h3 id=&#34;accessing-controller-data-with-smarty&#34;&gt;Accessing Controller Data with Smarty&lt;/h3&gt;
 
@@ -429,24 +429,24 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;In the default master view in Vanilla, you&amp;rsquo;ll find tags like &lt;code&gt;{searchbox}&lt;/code&gt; which calls a function to render a search box in the page and &lt;code&gt;{breadcrumbs}&lt;/code&gt; which calls a function to render the breadcrumbs. These are tags are mapped to php functions.&lt;/p&gt;
 
-&lt;p&gt;Some smarty functions in Vanilla can include parameters. For example, here &lt;code&gt;{breadcrumbs homelink=&amp;quot;My Forum&#39;s Home&amp;quot;}&lt;/code&gt;, the &amp;ldquo;homelink&amp;rdquo; parameter modifies the rendering of the breadcrumbs so that the &amp;ldquo;Home&amp;rdquo; breadcrumb renders as &amp;ldquo;My Forum&amp;rsquo;s Home&amp;rdquo;. Vanilla&amp;rsquo;s set of smarty functions that can be used in your template can be found by navigating to &lt;code&gt;library/SmartyPlugins&lt;/code&gt;. The &lt;a href=&#34;http://127.0.0.1:8080/theming/smarty/functions&#34;&gt;Smarty Functions section&lt;/a&gt; documents these functions and their available parameters.&lt;/p&gt;
+&lt;p&gt;Some smarty functions in Vanilla can include parameters. For example, here &lt;code&gt;{breadcrumbs homelink=&amp;quot;My Forum&#39;s Home&amp;quot;}&lt;/code&gt;, the &amp;ldquo;homelink&amp;rdquo; parameter modifies the rendering of the breadcrumbs so that the &amp;ldquo;Home&amp;rdquo; breadcrumb renders as &amp;ldquo;My Forum&amp;rsquo;s Home&amp;rdquo;. Vanilla&amp;rsquo;s set of smarty functions that can be used in your template can be found by navigating to &lt;code&gt;library/SmartyPlugins&lt;/code&gt;. The &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty/functions&#34;&gt;Smarty Functions section&lt;/a&gt; documents these functions and their available parameters.&lt;/p&gt;
 
 &lt;h3 id=&#34;smarty-conditional-functions&#34;&gt;Smarty Conditional Functions&lt;/h3&gt;
 
-&lt;p&gt;Vanilla&amp;rsquo;s Smarty implementation has whitelisted a number of functions that can be used in Smarty conditional statements. For example, you can insert a Smarty tag or a snippet of HTML into your template only if the user is in a specific section or has a specific permission. These functions and how they can be used in your template, as well as a basic overview on using Smarty conditionals are outlined in &lt;a href=&#34;http://127.0.0.1:8080/theming/smarty/conditionals&#34;&gt;Smarty Conditionals&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vanilla&amp;rsquo;s Smarty implementation has whitelisted a number of functions that can be used in Smarty conditional statements. For example, you can insert a Smarty tag or a snippet of HTML into your template only if the user is in a specific section or has a specific permission. These functions and how they can be used in your template, as well as a basic overview on using Smarty conditionals are outlined in &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty/conditionals&#34;&gt;Smarty Conditionals&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h3&gt;
 
-&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. Vanilla-implemented modifiers and a general overview of modifiers can be found on the &lt;a href=&#34;http://127.0.0.1:8080/theming/smarty/modifiers&#34;&gt;Smarty Modifiers&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. Vanilla-implemented modifiers and a general overview of modifiers can be found on the &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty/modifiers&#34;&gt;Smarty Modifiers&lt;/a&gt; page.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Smarty Conditionals</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/conditionals/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/conditionals/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-conditionals&#34;&gt;Smarty Conditionals&lt;/h2&gt;
@@ -462,7 +462,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 {/if}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This example checks to see if the locale matches &amp;lsquo;fr&amp;rsquo; and if so, inserts the contents a pocket named &amp;lsquo;French Pocket&amp;rsquo;. &lt;a href=&#34;http://127.0.0.1:8080/functions/pocket.html.md&#34;&gt;Learn more about the Smarty pocket function.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This example checks to see if the locale matches &amp;lsquo;fr&amp;rsquo; and if so, inserts the contents a pocket named &amp;lsquo;French Pocket&amp;rsquo;. &lt;a href=&#34;//docs.vanillaforums.com/functions/pocket.html.md&#34;&gt;Learn more about the Smarty pocket function.&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{if $CurrentLocale.Lang === &#39;fr&#39;}
     {pocket name=&#39;French Pocket&#39;}
@@ -558,10 +558,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Smarty Functions</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/functions/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/functions/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-functions&#34;&gt;Smarty Functions&lt;/h2&gt;
@@ -574,10 +574,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Smarty Modifiers</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/modifiers/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/modifiers/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</guid>
       <description>
 
 &lt;h2 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h2&gt;
@@ -681,7 +681,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
 
-&lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;http://127.0.0.1:8080/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;//docs.vanillaforums.com/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;Forum&amp;quot;|translate}
 &lt;/code&gt;&lt;/pre&gt;
@@ -690,10 +690,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Theme Options</title>
-      <link>http://127.0.0.1:8080/developer/theming/themeoptions/</link>
+      <link>//docs.vanillaforums.com/developer/theming/themeoptions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/themeoptions/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/themeoptions/</guid>
       <description>
 
 &lt;h2 id=&#34;theme-options&#34;&gt;Theme Options&lt;/h2&gt;
@@ -727,7 +727,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;To add custom text to a theme, add a &amp;lsquo;Text&amp;rsquo; key to the &amp;lsquo;Options&amp;rsquo; array. The value of of the &amp;lsquo;Text&amp;rsquo; key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of &amp;lsquo;textbox&amp;rsquo;, which is a regular text input, or &amp;lsquo;textarea&amp;rsquo;, the default, which is a multiline textarea element.&lt;/p&gt;
 
-&lt;p&gt;The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the &lt;a href=&#34;http://127.0.0.1:8080/functions/text.html.md&#34;&gt;text function&lt;/a&gt; to insert the text in the theme, using the Text array&amp;rsquo;s key as the &amp;lsquo;code&amp;rsquo; parameter. For example, if you had this options array:&lt;/p&gt;
+&lt;p&gt;The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the &lt;a href=&#34;//docs.vanillaforums.com/functions/text.html.md&#34;&gt;text function&lt;/a&gt; to insert the text in the theme, using the Text array&amp;rsquo;s key as the &amp;lsquo;code&amp;rsquo; parameter. For example, if you had this options array:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; [
     &#39;Text&#39; =&amp;gt; [
@@ -778,10 +778,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Theming</title>
-      <link>http://127.0.0.1:8080/developer/theming/</link>
+      <link>//docs.vanillaforums.com/developer/theming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-overview&#34;&gt;Theming Overview&lt;/h2&gt;
@@ -792,9 +792,9 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;h3 id=&#34;quickstart&#34;&gt;Quickstart&lt;/h3&gt;
 
-&lt;p&gt;To override &lt;a href=&#34;http://127.0.0.1:8080/theming/css&#34;&gt;CSS&lt;/a&gt;, create a custom.css file in your theme; it will be included in the page after our CSS, so you can override without higher specificity or !importants in your rules. To use &lt;a href=&#34;http://127.0.0.1:8080/theming/hooks&#34;&gt;hooks&lt;/a&gt;, create a file named class.themehooks.php and format it like a new plugin. To customize a &lt;a href=&#34;http://127.0.0.1:8080/theming/views&#34;&gt;view&lt;/a&gt;, copy it to your theme in the appropriate location.&lt;/p&gt;
+&lt;p&gt;To override &lt;a href=&#34;//docs.vanillaforums.com/theming/css&#34;&gt;CSS&lt;/a&gt;, create a custom.css file in your theme; it will be included in the page after our CSS, so you can override without higher specificity or !importants in your rules. To use &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;hooks&lt;/a&gt;, create a file named class.themehooks.php and format it like a new plugin. To customize a &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;view&lt;/a&gt;, copy it to your theme in the appropriate location.&lt;/p&gt;
 
-&lt;p&gt;The best way to get started with theming is to run through our &lt;a href=&#34;http://127.0.0.1:8080/theming/quickstart&#34;&gt;Quickstart&lt;/a&gt; to build your own simple theme. Once you see how it&amp;rsquo;s done, you&amp;rsquo;ll be off to the races.&lt;/p&gt;
+&lt;p&gt;The best way to get started with theming is to run through our &lt;a href=&#34;//docs.vanillaforums.com/theming/quickstart&#34;&gt;Quickstart&lt;/a&gt; to build your own simple theme. Once you see how it&amp;rsquo;s done, you&amp;rsquo;ll be off to the races.&lt;/p&gt;
 
 &lt;h3 id=&#34;cloud-upgrade-considerations&#34;&gt;Cloud upgrade considerations&lt;/h3&gt;
 
@@ -804,10 +804,10 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     
     <item>
       <title>Views / HTML</title>
-      <link>http://127.0.0.1:8080/developer/theming/views/</link>
+      <link>//docs.vanillaforums.com/developer/theming/views/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/views/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/views/</guid>
       <description>
 
 &lt;h2 id=&#34;theming-views&#34;&gt;Theming Views&lt;/h2&gt;
@@ -827,11 +827,11 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;h4 id=&#34;smarty-tags-in-the-master-view&#34;&gt;Smarty tags in the master view&lt;/h4&gt;
 
-&lt;p&gt;You can accomplish a great deal of things using Smarty in your default master view. We highly recommend checking out our &lt;a href=&#34;http://127.0.0.1:8080/theming/smarty&#34;&gt;complete Smarty docs&lt;/a&gt; to get a bearing on this, but here&amp;rsquo;s what you need to know to get started.&lt;/p&gt;
+&lt;p&gt;You can accomplish a great deal of things using Smarty in your default master view. We highly recommend checking out our &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty&#34;&gt;complete Smarty docs&lt;/a&gt; to get a bearing on this, but here&amp;rsquo;s what you need to know to get started.&lt;/p&gt;
 
 &lt;h5 id=&#34;required-tags&#34;&gt;Required tags&lt;/h5&gt;
 
-&lt;p&gt;There are a few assets that need to appear and an event that needs to be fired from your master view in order for everything to run smoothly. (To learn more about assets and events, check out &lt;a href=&#34;http://127.0.0.1:8080/developer/framework&#34;&gt;our framework docs&lt;/a&gt;.) The contents of these tags are programmatically generated, depending on your forum&amp;rsquo;s data and configuration. Omitting any one of these tags may result in some strange behaviour on your forum.&lt;/p&gt;
+&lt;p&gt;There are a few assets that need to appear and an event that needs to be fired from your master view in order for everything to run smoothly. (To learn more about assets and events, check out &lt;a href=&#34;//docs.vanillaforums.com/developer/framework&#34;&gt;our framework docs&lt;/a&gt;.) The contents of these tags are programmatically generated, depending on your forum&amp;rsquo;s data and configuration. Omitting any one of these tags may result in some strange behaviour on your forum.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;The head asset&lt;/strong&gt; &lt;code&gt;{asset name=&amp;quot;Head&amp;quot;}&lt;/code&gt; This should appear within the head &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; block of your html. It contains the css and javascript needed for your applications and plugins.&lt;/li&gt;
@@ -865,7 +865,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;&lt;strong&gt;For use in testing environments only&lt;/strong&gt;, to view all the variables you have access to, you can include a special tag anywhere in your default master view: &lt;code&gt;{debug}&lt;/code&gt; After adding this tag, refresh your forum page in a browser. A popup will show all the data variables available for use on the given page (you gotta make sure your browser&amp;rsquo;s allowing popups here).&lt;/p&gt;
 
-&lt;p&gt;To go even further, you can use &lt;a href=&#34;http://127.0.0.1:8080/theming/hooks&#34;&gt;themehooks&lt;/a&gt; to assign data to variables that you can then use in your view.&lt;/p&gt;
+&lt;p&gt;To go even further, you can use &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;themehooks&lt;/a&gt; to assign data to variables that you can then use in your view.&lt;/p&gt;
 
 &lt;h4 id=&#34;smarty-default-master-view-example&#34;&gt;Smarty default master view example&lt;/h4&gt;
 
@@ -921,7 +921,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;h3 id=&#34;overriding-other-views&#34;&gt;Overriding other views&lt;/h3&gt;
 
-&lt;p&gt;Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it&amp;rsquo;s possible to accomplish what you&amp;rsquo;re trying to do using good ol&amp;rsquo; CSS, or &lt;a href=&#34;http://127.0.0.1:8080/theming/themehooks&#34;&gt;themehooks&lt;/a&gt;, or by being clever with the configuration of your master view, those are probably better ways to go.&lt;/p&gt;
+&lt;p&gt;Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it&amp;rsquo;s possible to accomplish what you&amp;rsquo;re trying to do using good ol&amp;rsquo; CSS, or &lt;a href=&#34;//docs.vanillaforums.com/theming/themehooks&#34;&gt;themehooks&lt;/a&gt;, or by being clever with the configuration of your master view, those are probably better ways to go.&lt;/p&gt;
 
 &lt;p&gt;With that warning out of the way, here&amp;rsquo;s how you can override a view in Vanilla. Some plugins and every application contains a views folder. To override any file in this folder:&lt;/p&gt;
 
@@ -963,10 +963,10 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
     
     <item>
       <title>{asset}</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/functions/asset/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/functions/asset/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</guid>
       <description>
 
 &lt;h2 id=&#34;function-asset&#34;&gt;Function: &lt;code&gt;{asset}&lt;/code&gt;&lt;/h2&gt;
@@ -1085,10 +1085,10 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
     
     <item>
       <title>{breadcrumbs}</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/functions/breadcrumbs/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/functions/breadcrumbs/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</guid>
       <description>
 
 &lt;h2 id=&#34;function-breadcrumbs&#34;&gt;Function: &lt;code&gt;{breadcrumbs}&lt;/code&gt;&lt;/h2&gt;
@@ -1186,10 +1186,10 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
     
     <item>
       <title>{custom_menu}</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/functions/custom-menu/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/functions/custom-menu/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</guid>
       <description>
 
 &lt;h2 id=&#34;function-custom-menu&#34;&gt;Function: &lt;code&gt;{custom_menu}&lt;/code&gt;&lt;/h2&gt;
@@ -1270,10 +1270,10 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
     
     <item>
       <title>{event}</title>
-      <link>http://127.0.0.1:8080/developer/theming/smarty/functions/event/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/theming/smarty/functions/event/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</guid>
       <description>
 
 &lt;h2 id=&#34;function-event&#34;&gt;Function: &lt;code&gt;{event}&lt;/code&gt;&lt;/h2&gt;

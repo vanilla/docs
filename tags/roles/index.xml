@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Roles on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/roles/index.xml</link>
+    <link>//docs.vanillaforums.com/tags/roles/index.xml</link>
     <description>Recent content in Roles on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/roles/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/roles/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Roles &amp; Permissions</title>
-      <link>http://127.0.0.1:8080/help/roles-permissions/</link>
+      <link>//docs.vanillaforums.com/help/roles-permissions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/roles-permissions/</guid>
+      <guid>//docs.vanillaforums.com/help/roles-permissions/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;

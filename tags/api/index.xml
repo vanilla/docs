@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/api/index.xml</link>
+    <link>//docs.vanillaforums.com/tags/api/index.xml</link>
     <description>Recent content in Api on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>API</title>
-      <link>http://127.0.0.1:8080/help/api/</link>
+      <link>//docs.vanillaforums.com/help/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/api/</guid>
+      <guid>//docs.vanillaforums.com/help/api/</guid>
       <description>
 
 &lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
 
-&lt;p&gt;Vanilla&amp;rsquo;s API is documented &lt;a href=&#34;http://127.0.0.1:8080/api/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vanilla&amp;rsquo;s API is documented &lt;a href=&#34;//docs.vanillaforums.com/api/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Authentication</title>
-      <link>http://127.0.0.1:8080/developer/framework/apiv2/authentication/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/framework/apiv2/authentication/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</guid>
       <description>
 
 &lt;h2 id=&#34;authenticating-api-calls&#34;&gt;Authenticating API Calls&lt;/h2&gt;
@@ -75,10 +75,10 @@ $model-&amp;gt;revoke($accessToken);
     
     <item>
       <title>Endpoint: categories</title>
-      <link>http://127.0.0.1:8080/api/categories/</link>
+      <link>//docs.vanillaforums.com/api/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/categories/</guid>
+      <guid>//docs.vanillaforums.com/api/categories/</guid>
       <description>
 
 &lt;h2 id=&#34;categories-add&#34;&gt;/categories/add&lt;/h2&gt;
@@ -332,10 +332,10 @@ If not provided, perspective will be that of a guest.&lt;/p&gt;
     
     <item>
       <title>Endpoint: comments</title>
-      <link>http://127.0.0.1:8080/api/comments/</link>
+      <link>//docs.vanillaforums.com/api/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/comments/</guid>
+      <guid>//docs.vanillaforums.com/api/comments/</guid>
       <description>
 
 &lt;h2 id=&#34;comments-add&#34;&gt;/comments/add&lt;/h2&gt;
@@ -396,10 +396,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Endpoint: discussions</title>
-      <link>http://127.0.0.1:8080/api/discussions/</link>
+      <link>//docs.vanillaforums.com/api/discussions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/discussions/</guid>
+      <guid>//docs.vanillaforums.com/api/discussions/</guid>
       <description>
 
 &lt;h2 id=&#34;discussions-add&#34;&gt;/discussions/add&lt;/h2&gt;
@@ -760,568 +760,15 @@ If not provided, perspective will be that of a guest.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Endpoint: moderation</title>
-      <link>http://127.0.0.1:8080/api/moderation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://127.0.0.1:8080/api/moderation/</guid>
-      <description>
-
-&lt;h2 id=&#34;moderation-api&#34;&gt;Moderation API&lt;/h2&gt;
-
-&lt;p&gt;Details about API endpoints for moderation.&lt;/p&gt;
-
-&lt;p&gt;Simple API will be needed to make requests from an un authenticated request.
-To use Simple API you need to:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Enable to SimpleAPI Plugin&lt;/li&gt;
-&lt;li&gt;Prepend &lt;code&gt;/api/v1/&lt;/code&gt; to the URL&lt;/li&gt;
-&lt;li&gt;Append &lt;code&gt;?access_token=XXXXXX&lt;/code&gt; to the url&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;GET /api/v1/mod/preapproval.json?access_token=XXXXXX HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-  &amp;quot;QueueName&amp;quot;: &amp;quot;premoderation&amp;quot;,
-  &amp;quot;Queue&amp;quot;: [
-    ....
-  ],
-  &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;,
-  &amp;quot;Totals&amp;quot;: {
-    &amp;quot;Status&amp;quot;: {
-      &amp;quot;approved&amp;quot;: 2,
-      &amp;quot;denied&amp;quot;: 1,
-      &amp;quot;unread&amp;quot;: 10
-    },
-    &amp;quot;Records&amp;quot;: 13,
-    &amp;quot;PageSize&amp;quot;: 30,
-    &amp;quot;Pages&amp;quot;: 1
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;permissions&#34;&gt;Permissions&lt;/h3&gt;
-
-&lt;p&gt;All of the moderation endpoints require the &lt;code&gt;Garden.Moderation.Manage&lt;/code&gt; permission.&lt;/p&gt;
-
-&lt;p&gt;If you do not have required access you will get the following error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;Code&amp;quot;: 403,
-  &amp;quot;Exception&amp;quot;: &amp;quot;You don&#39;t have permission to do that.&amp;quot;,
-  &amp;quot;Class&amp;quot;: &amp;quot;Gdn_UserException&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;pagination&#34;&gt;Pagination&lt;/h3&gt;
-
-&lt;p&gt;When making a request with paginatined results the following element will be included in the result.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;,
-  &amp;quot;Totals&amp;quot;: {
-    &amp;quot;Status&amp;quot;: {
-      &amp;quot;approved&amp;quot;: 2,
-      &amp;quot;denied&amp;quot;: 1,
-      &amp;quot;unread&amp;quot;: 10
-    },
-    &amp;quot;Records&amp;quot;: 13,
-    &amp;quot;PageSize&amp;quot;: 30,
-    &amp;quot;Pages&amp;quot;: 1
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You will need to use these numbers to create pagination.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note&lt;/em&gt;&lt;/strong&gt; that the Page is prefixed with a p for page.&lt;/p&gt;
-
-&lt;h3 id=&#34;errors&#34;&gt;Errors&lt;/h3&gt;
-
-&lt;p&gt;Any errors will be returning in the following format.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;Code&amp;quot;: 404,
-  &amp;quot;Exception&amp;quot;: &amp;quot;Not Found&amp;quot;,
-  &amp;quot;Class&amp;quot;: &amp;quot;Gdn_UserException&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Partial Errors&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;ModeratorUserID&amp;quot;: &amp;quot;1&amp;quot;,
-    &amp;quot;Approved&amp;quot;: &amp;quot;ForeignID = ab6e33fe-e509-37c3-0431-21884cf199e7 &amp;quot;,
-    &amp;quot;Errors&amp;quot;: {
-        &amp;quot;Not Found&amp;quot;: [
-            &amp;quot;ForeignID = 86d9e3e1-5752-41dc-aa55-2a832728ec33 &amp;quot;,
-            &amp;quot;ForeignID = a1fca416-5573-4662-a31a-a4ff808c34dd &amp;quot;,
-            &amp;quot;ForeignID = af777ea8-1874-463c-a97c-a1f9e494bee1 &amp;quot;,
-            &amp;quot;ForeignID = 73031050-2016-44fc-b8f6-b97184793587 &amp;quot;
-        ]
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;get-mod-premoderation&#34;&gt;GET /mod/premoderation/&lt;/h2&gt;
-
-&lt;h2 id=&#34;get-mod-reported&#34;&gt;GET /mod/reported/&lt;/h2&gt;
-
-&lt;h2 id=&#34;get-mod-spam&#34;&gt;GET /mod/spam/&lt;/h2&gt;
-
-&lt;p&gt;List the items in each of the queues.&lt;/p&gt;
-
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Page&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Page Number. Default is first page.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Category ID. Default all categories.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;approved, denied, unread&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;SortOrder&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;asc, or desc. Default desc.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;GET /mod/preapproval.json?Page=p1 HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-  &amp;quot;QueueName&amp;quot;: &amp;quot;preapproval&amp;quot;,
-  &amp;quot;Queue&amp;quot;: [],
-  &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;,
-  &amp;quot;Totals&amp;quot;: {
-    &amp;quot;Status&amp;quot;: {
-      &amp;quot;unread&amp;quot;: 0,
-      &amp;quot;approved&amp;quot;: 0,
-      &amp;quot;denied&amp;quot;: 0
-    },
-    &amp;quot;Records&amp;quot;: 0,
-    &amp;quot;PageSize&amp;quot;: 30,
-    &amp;quot;Pages&amp;quot;: 0
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;get-mod-relation&#34;&gt;GET /mod/relation&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;@TODO&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Get all items in the queue by relation.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Page&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Page Number. Default is first page.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;relation&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;foreign-id, foreign-userid&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;post-mod-premoderation&#34;&gt;POST /mod/premoderation/&lt;/h2&gt;
-
-&lt;h2 id=&#34;post-mod-reported&#34;&gt;POST /mod/reported/&lt;/h2&gt;
-
-&lt;h2 id=&#34;post-mod-spam&#34;&gt;POST /mod/spam/&lt;/h2&gt;
-
-&lt;p&gt;Add content to an existing queue.&lt;/p&gt;
-
-&lt;h3 id=&#34;parameters-1&#34;&gt;Parameters&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Content Title.    RE: Discussion Title for comments&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Content Body&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;Format&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;html, bbcode, markdown, text, textex, wysiwyg&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignType&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;comment, discussion, activity, activity-comment, conversation - message&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The if of the content. Ie. DiscussionID&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignUserID&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The user who generated the content&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;ForeignIPAddress&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The user who generated the content&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Category ID&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;CustomerVariables&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Up to 10 custom variables&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;response&#34;&gt;Response&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;QueueName&amp;quot;: &amp;quot;testing&amp;quot;,
-  &amp;quot;QueueID&amp;quot;: &amp;quot;6931&amp;quot;,
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;errors-1&#34;&gt;Errors&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;Code&amp;quot;: 400,
-  &amp;quot;Exception&amp;quot;: &amp;quot;Name is a required field.&amp;quot;,
-  &amp;quot;Class&amp;quot;: &amp;quot;Gdn_UserException&amp;quot;,
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;delete-mod-id&#34;&gt;DELETE /mod/{id}&lt;/h2&gt;
-
-&lt;p&gt;Remove content from a queue.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;DELETE /mod/1.json HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-  &amp;quot;QueueID&amp;quot;: 1
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;patch-mod-id&#34;&gt;PATCH /mod/{id}&lt;/h2&gt;
-
-&lt;p&gt;Update an item in the queue.&lt;/p&gt;
-
-&lt;h3 id=&#34;parameters-2&#34;&gt;Parameters&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;approved, denied, unread&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Queue&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;spam, reported, premoderation&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;DELETE /mod/1.json HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-  &amp;quot;QueueID&amp;quot;: 1
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;method-mod-batch&#34;&gt;{METHOD} /mod/batch&lt;/h2&gt;
-
-&lt;p&gt;Lets just call the methods we use for single for now.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Proposed&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Batch process items in the queue.&lt;/p&gt;
-
-&lt;h3 id=&#34;patch-parameters&#34;&gt;PATCH Parameters&lt;/h3&gt;
-
-&lt;p&gt;Batch update items in queue.&lt;/p&gt;
-
-&lt;h3 id=&#34;parameters-3&#34;&gt;Parameters&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;IDs&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;CSV of queue ids&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;approved, denied, unread&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Queue&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;spam, reported, premoderation&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;delete-parameters&#34;&gt;DELETE Parameters&lt;/h3&gt;
-
-&lt;p&gt;Batch delete items in queue.&lt;/p&gt;
-
-&lt;p&gt;Parameter  | Type      |
-&amp;mdash;        | &amp;mdash;       | &amp;mdash;
-&lt;code&gt;IDs&lt;/code&gt;      | &lt;code&gt;string&lt;/code&gt;  | CSV of queue ids&lt;/p&gt;
-
-&lt;h2 id=&#34;post-mod-approve-id&#34;&gt;POST /mod/approve/{id}&lt;/h2&gt;
-
-&lt;p&gt;Approve content in the queue.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;POST /mod/approve.json/1 HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-  &amp;quot;Approved&amp;quot;: true
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;post-mod-deny-id&#34;&gt;POST /mod/deny/{id}&lt;/h2&gt;
-
-&lt;p&gt;Deny content in the queue.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;POST /mod/deny.json/1 HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-  &amp;quot;Denied&amp;quot;: true
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;post-mod-report&#34;&gt;POST /mod/report/&lt;/h2&gt;
-
-&lt;p&gt;Report Content to the queue.  This endpoint will remove content if the number of reports has been exceeded.&lt;/p&gt;
-
-&lt;h3 id=&#34;parameters-4&#34;&gt;Parameters&lt;/h3&gt;
-
-&lt;p&gt;Parameter  | Type      |
-&amp;mdash;        | &amp;mdash;       | &amp;mdash;
-&lt;code&gt;ForeignID&lt;/code&gt;      | &lt;code&gt;int&lt;/code&gt;  | ID of the content. ie. DiscussionID
-&lt;code&gt;ForeignType&lt;/code&gt;      | &lt;code&gt;string&lt;/code&gt;  | Type of content. ie. Discussion
-&lt;code&gt;Reason&lt;/code&gt;      | &lt;code&gt;string&lt;/code&gt;  | Reason the content is being reported
-&lt;code&gt;ReportUserID&lt;/code&gt;      | &lt;code&gt;int&lt;/code&gt;  | UserID of the user reporting.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;POST /mod/report.json/1 HTTP/1.1
-Host: http://example.vanillaforums.com
-
-{
-    &amp;quot;Reported&amp;quot;: true,
-    &amp;quot;QueueID&amp;quot;: &amp;quot;4559&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;database-table&#34;&gt;Database Table&lt;/h3&gt;
-
-&lt;p&gt;All of these rows will be returned in output of the above calls.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Queue&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;preapproval, reported, spam&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;DateInserted&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Timestamp&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;InsertUserID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The user who inserted the item to the queue&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;CategoryID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Category ID&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Name&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Content Title.    RE: Discussion Title for comments&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Body&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Content Body&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;ForeignType&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;comment, discussion, activity, activity-comment, conversation - message&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;ForeignID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;ex d-12&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;ForeignUserID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The user who generated the content&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;ForeignIPAddress&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The user who generated the content&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;approved, denied, unread&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;DateStatus&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Timestamp&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;StatusUserID&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The user who last change the status&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Attributes&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;see Attributes Document&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Endpoint: multisites</title>
-      <link>http://127.0.0.1:8080/api/multisites/</link>
+      <link>//docs.vanillaforums.com/api/multisites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/multisites/</guid>
+      <guid>//docs.vanillaforums.com/api/multisites/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8080/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -1442,10 +889,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Endpoint: roles</title>
-      <link>http://127.0.0.1:8080/api/roles/</link>
+      <link>//docs.vanillaforums.com/api/roles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/roles/</guid>
+      <guid>//docs.vanillaforums.com/api/roles/</guid>
       <description>
 
 &lt;h2 id=&#34;roles-add&#34;&gt;/roles/add&lt;/h2&gt;
@@ -1600,10 +1047,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Forum Administration</title>
-      <link>http://127.0.0.1:8080/api/forum-administration/</link>
+      <link>//docs.vanillaforums.com/api/forum-administration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/forum-administration/</guid>
+      <guid>//docs.vanillaforums.com/api/forum-administration/</guid>
       <description>
 
 &lt;h2 id=&#34;configuration&#34;&gt;/configuration&lt;/h2&gt;
@@ -1624,10 +1071,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Resource Routing</title>
-      <link>http://127.0.0.1:8080/developer/framework/apiv2/resource-routing/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/framework/apiv2/resource-routing/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</guid>
       <description>
 
 &lt;h2 id=&#34;restful-resource-routing-to-controller-methods&#34;&gt;RESTful Resource Routing to Controller Methods&lt;/h2&gt;
@@ -1741,10 +1188,10 @@ Host: https://yoursite.vanillaforums.com
     
     <item>
       <title>Smart ID</title>
-      <link>http://127.0.0.1:8080/api/smart-id/</link>
+      <link>//docs.vanillaforums.com/api/smart-id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/smart-id/</guid>
+      <guid>//docs.vanillaforums.com/api/smart-id/</guid>
       <description>
 
 &lt;p&gt;Many API methods take a &lt;code&gt;UserID&lt;/code&gt; as one of their required parameters, for example the &lt;code&gt;/badge/give&lt;/code&gt; method. Often, especially in a SSO context, the calling system will not know the native Vanilla &lt;code&gt;UserID&lt;/code&gt;, but will instead know some other identifying characteristic of the user, such as their &lt;code&gt;Email&lt;/code&gt;, &lt;code&gt;Username&lt;/code&gt;, or SSO &lt;code&gt;ForeignID&lt;/code&gt;.&lt;/p&gt;
@@ -1845,10 +1292,10 @@ User&amp;rsquo;s Facebook email address.&lt;/p&gt;
     
     <item>
       <title>Use API on External Sites</title>
-      <link>http://127.0.0.1:8080/api/use-api-on-external-site/</link>
+      <link>//docs.vanillaforums.com/api/use-api-on-external-site/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/use-api-on-external-site/</guid>
+      <guid>//docs.vanillaforums.com/api/use-api-on-external-site/</guid>
       <description>
 
 &lt;p&gt;The Vanilla Forums API can be used to display information from your community outside of the community such as your blog. This guide shows a basic example using javascript and jQuery.&lt;/p&gt;
@@ -1905,10 +1352,10 @@ $.ajax({
     
     <item>
       <title>Vanilla API</title>
-      <link>http://127.0.0.1:8080/api/</link>
+      <link>//docs.vanillaforums.com/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/api/</guid>
+      <guid>//docs.vanillaforums.com/api/</guid>
       <description>
 
 &lt;p&gt;Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.&lt;/p&gt;
@@ -2011,10 +1458,10 @@ Connection: close
     
     <item>
       <title>Writing API Endpoints</title>
-      <link>http://127.0.0.1:8080/developer/framework/apiv2/api-endpoints/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/framework/apiv2/api-endpoints/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</guid>
       <description>
 
 &lt;h2 id=&#34;controller-endpoints&#34;&gt;Controller Endpoints&lt;/h2&gt;
@@ -2170,10 +1617,10 @@ $out = $this-&amp;gt;getRowSchema(__FUNCTION__);
     
     <item>
       <title>Writing APIs</title>
-      <link>http://127.0.0.1:8080/developer/framework/apiv2/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/framework/apiv2/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/</guid>
       <description>
 
 &lt;h2 id=&#34;the-vanilla-apiv2&#34;&gt;The Vanilla APIv2&lt;/h2&gt;

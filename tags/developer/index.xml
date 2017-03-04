@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Developer on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/developer/index.xml</link>
+    <link>//docs.vanillaforums.com/tags/developer/index.xml</link>
     <description>Recent content in Developer on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/developer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/developer/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Developer Support</title>
-      <link>http://127.0.0.1:8080/help/cloud/developer-support/</link>
+      <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/cloud/developer-support/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8080/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posting on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/posting/index.xml</link>
+    <link>//docs.vanillaforums.com/tags/posting/index.xml</link>
     <description>Recent content in Posting on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/posting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/posting/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posting</title>
-      <link>http://127.0.0.1:8080/help/posting/</link>
+      <link>//docs.vanillaforums.com/help/posting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/posting/</guid>
+      <guid>//docs.vanillaforums.com/help/posting/</guid>
       <description>
 
 &lt;h2 id=&#34;coming-soon&#34;&gt;Coming soon!&lt;/h2&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Embedding on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8080/tags/embedding/index.xml</link>
+    <link>//docs.vanillaforums.com/tags/embedding/index.xml</link>
     <description>Recent content in Embedding on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8080/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Advanced Embedding</title>
-      <link>http://127.0.0.1:8080/developer/embedding/advanced/</link>
+      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/embedding/advanced/</guid>
+      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -132,10 +132,10 @@
     
     <item>
       <title>Embedding</title>
-      <link>http://127.0.0.1:8080/developer/embedding/</link>
+      <link>//docs.vanillaforums.com/developer/embedding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/developer/embedding/</guid>
+      <guid>//docs.vanillaforums.com/developer/embedding/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
@@ -183,10 +183,10 @@
     
     <item>
       <title>Embedding</title>
-      <link>http://127.0.0.1:8080/help/forum-settings/embedding/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/embedding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/forum-settings/embedding/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/embedding/</guid>
       <description>
 
 &lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
@@ -234,10 +234,10 @@
     
     <item>
       <title>Using Comments</title>
-      <link>http://127.0.0.1:8080/help/integrations/wordpress/using-comments/</link>
+      <link>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8080/help/integrations/wordpress/using-comments/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</guid>
       <description>
 
 &lt;h2 id=&#34;transition-to-vanilla-comments&#34;&gt;Transition to Vanilla Comments&lt;/h2&gt;
