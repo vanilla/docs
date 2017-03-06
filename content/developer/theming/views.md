@@ -114,7 +114,7 @@ To see how it all fits together, here's a default master view using Smarty:
 
 ### Overriding other views
 
-Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it's possible to accomplish what you're trying to do using good ol' CSS, or [themehooks](/theming/themehooks), or by being clever with the configuration of your master view, those are probably better ways to go.
+Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it's possible to accomplish what you're trying to do using good ol' CSS, or [themehooks](/theming/hooks), or by being clever with the configuration of your master view, those are probably better ways to go.
 
 With that warning out of the way, here's how you can override a view in Vanilla. Some plugins and every application contains a views folder. To override any file in this folder:
 
