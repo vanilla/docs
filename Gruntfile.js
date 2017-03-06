@@ -5,7 +5,7 @@ var S = require("string");
 var path = require('path');
 
 module.exports = function (grunt) {
-    
+
     // Load all Grunt tasks matching the `grunt-*` pattern
     require('load-grunt-tasks')(grunt);
 
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
+
         watch: {
             options: {
                 livereload: true
@@ -31,19 +31,19 @@ module.exports = function (grunt) {
                 tasks: ['hugo:dev', 'index']
             }
         },
-        
+
         connect: {
             docs: {
                 options: {
                     hostname: '127.0.0.1',
-                    port: 8080,
+                    port: 8081,
                     protocol: 'http',
                     base: 'public',
                     livereload: true
                 }
             }
         },
-        
+
         clean: {
             dist: {
                 src: [
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        
+
         sass: {
             options: {
                 sourceMap: true,
@@ -71,7 +71,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        
+
         sass_globbing: {
             docs: {
                 files: {
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         postcss: {
             options: {
                 map: true, // inline sourcemaps
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
                 src: 'static/css/**/*.css'
             }
         },
-        
+
         imagemin: {
             dist: {
                 files: [{
@@ -106,7 +106,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        
+
 //        filerev: {
 //            options: {
 //                algorithm: 'md5',
@@ -125,21 +125,21 @@ module.exports = function (grunt) {
 //                ]
 //            }
 //        },
-        
+
         lunr_index: {
             options: {
                 source: 'content',
                 dest: 'static/js/lunr-index.json'
             }
         },
-        
+
         hugo: {
             options: {
                 source: 'content',
                 dest: 'public'
             }
         },
-        
+
         'gh-pages': {
             push: {
                 options: {
@@ -150,14 +150,14 @@ module.exports = function (grunt) {
         }
 
     });
-    
+
     grunt.registerTask('default', [
         'build'
     ]);
 
     /*
      * Builds the whole site from scratch
-     * 
+     *
      * hugo: prepares public/ HTML from content
      * css: builds css from scss
      * js: prepares javascript
@@ -172,10 +172,10 @@ module.exports = function (grunt) {
         'index',
         'varnish'
     ]);
-    
+
     /*
      * This task builds and prepares css
-     * 
+     *
      * sass_globbing: supports wildcard @import statements
      * sass: builds scss files into css
      * postcss: prefixes css statements with browser-specific versions
@@ -185,14 +185,14 @@ module.exports = function (grunt) {
         'sass',
         'postcss'
     ]);
-    
+
     /*
      * This task would perform javascript related tasks
      */
     grunt.registerTask('js', [
-        
+
     ]);
-    
+
     /*
      * This task cleans up the generated HTML
      */
@@ -204,14 +204,14 @@ module.exports = function (grunt) {
 //        'filerev',
 //        'usemin'
     ]);
-    
+
     grunt.registerTask('index', [
         'lunr_index'
     ]);
-    
+
     /*
      * Allows live editing
-     * 
+     *
      * connect: creates a server
      * watch: waits for changes to source files and re-runs grunt tasks
      */
@@ -219,21 +219,21 @@ module.exports = function (grunt) {
         'connect',
         'watch'
     ]);
-    
+
     /*
      * Deploys dist (public/) files to gh-pages branch
      */
     grunt.registerTask('push', [
         'gh-pages:push'
     ]);
-    
+
     /*
      * Creates lunr.js index of content
      */
     grunt.registerTask("lunr_index", function() {
 
         grunt.log.writeln("Build lunr index");
-        
+
         var options = this.options();
 
         var indexPages = function() {
@@ -280,7 +280,7 @@ module.exports = function (grunt) {
             }
 
             var href = S(abspath).chompLeft(options.source).chompRight(".md").s;
-            
+
             // href for index.md files stops at the folder name
             if (filename === "index.md") {
                 href = S(abspath).chompLeft(options.source).chompRight(filename).s;
@@ -299,26 +299,28 @@ module.exports = function (grunt) {
 
         grunt.file.write(options.dest, JSON.stringify(indexPages()));
     });
-    
+
     /*
      * Compiles hugo content into HTML
      */
     grunt.registerTask('hugo', function (target) {
         var options = this.options();
         var target = target || 'final';
-        
+
         var args, done;
         done = this.async();
         args = [
-            '--config=' + path.resolve('./config.yaml'),
             '--destination=./' + options.dest
         ];
         if (target === 'dev') {
-            args.push('--baseUrl=http://127.0.0.1:8080');
+            args.push('--config=' + path.resolve('./config-dev.yaml'));
+            args.push('--baseUrl=http://127.0.0.1:8081');
             args.push('--buildDrafts=true');
             args.push('--buildFuture=true');
+        } else {
+            args.push('--config=' + path.resolve('./config.yaml'));
         }
-        
+
         // Run hugo
         grunt.util.spawn({
             cmd: 'hugo',
@@ -330,7 +332,7 @@ module.exports = function (grunt) {
             if (error) {
                 done(error);
             }
-            
+
             done();
         });
     });
