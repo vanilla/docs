@@ -92,7 +92,7 @@ The input schema is important for the following reasons:
 1. It cleans your input data beyond what JSON can do. For example, dates are converted into **DateTimeImmutable** objects.
 2. It helps define your API's specification. Proper APIs should be backwards-compatible whenever new features are added. The schema helps ensure you support your old consumers.
 3. It helps secure your endpoint using a whitelist of what's allowed. This means you don't have to worry about extra database fields sneaking in and overwriting sensitive data (such as admin flags). Ask any security expert and they'll tell you that whitelist security is preferred to blacklist security.
-4. It documents your endpoint. The schema is used to generate automatic documentation, but beyond that its also useful to other developers that are modifying your endpoint.
+4. It documents your endpoint. The schema is used to generate automatic documentation, but beyond that it's also useful to other developers that are modifying your endpoint.
 
 Schemas returned from the **schema()** method are instances of the **Vanilla\Schema** class which is a thin subclass of the **Garden\Schema** class that adds some meta information useful for endpoint documentation and events for extension.
 
@@ -107,7 +107,7 @@ It may seem strange to define the output schema right below the input schema ins
 Validating the input is as easy as calling the the schema's **validate()** method. This does the following:
 
 1. The data is validated. If the validation fails then an exception is thrown that the dispatcher understands how to render.
-2. The data is cleaned. Values or coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.
+2. The data is cleaned. Values are coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.
 
 ### Do the Controller's Job
 
