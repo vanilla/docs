@@ -39,7 +39,7 @@ The HTTP method refers to the method of the *HTTP request*. This is usually one 
 
 ### Protected Methods
 
-Usually, all public methods can be accessed via. URL. This could present a security concern where you might want a class method to be public, but not accessible via API. There are a couple of ways to protect public controller methods.
+Usually, all public methods can be accessed via URL. This could present a security concern where you might want a class method to be public, but not accessible via API. There are a couple of ways to protect public controller methods.
 
 1. Getters and setters that begin with "get", "set", or "is" and are followed by a non-underscore character cannot be accessed by the API. If you want to make such a name accessible (such as "settings") you can put an HTTP verb before the name (ex. get_settings).
 
@@ -47,7 +47,7 @@ Usually, all public methods can be accessed via. URL. This could present a secur
 
 ## Parameters
 
-When you add parameters to your methods they get mapped from the URLs path. This is usually how you add a record's ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).
+When you add parameters to your methods they get mapped from the URL's path. This is usually how you add a record's ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).
 
 *Note: In previous versions of Vanilla's API, method parameters were also mapped from the query string. This is no longer the case so make sure to keep this in mind if you are upgrading older endpoints.*
 
