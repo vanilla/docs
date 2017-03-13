@@ -64,6 +64,8 @@ To get very tight SSO integration, you will also want to follow these steps. Alw
 4. When linking or redirecting signed-in users to your forum, use the `/sso` endpoint on the forum. This triggers jsConnect's user lookup **on the connection with "default sign in method" selected** without the user needing to click. Optionally, you can provide a `Target` parameter with a relative path to specify where they should ultimately land on the forum. Example: `http://forum.yoursite.com/sso?Target=/categories`. This is the final critical step in a fully seamless experience.
 5. For seamless SSO on an embedded forum, see our [embedded SSO solution](http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/).
 
+If no jsConnect connection is designated as the "Default", you cannot use the `/sso` endpoint. Instead, use expanded endpoint that specifies the client ID of the connection you wish to trigger: `/entry/jsconnect?client_id={value_in_settings}`. This setup is useful in situations where you are using jsConnect in addition to normal logins or alternate SSO solutions, rather than as the sole connector.
+
 ## Testing the integration
 
 Use the "Test URL" link under your jsConnect settings to see if your endpoint is returning a good response.
