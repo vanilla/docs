@@ -452,11 +452,11 @@ n.id = i;
 
 <h2 id="restful-resource-routing-to-controller-methods">RESTful Resource Routing to Controller Methods</h2>
 
-<p>This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from tha <strong>/api/v2/</strong> base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.</p>
+<p>This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from the <strong>/api/v2/</strong> base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.</p>
 
 <h2 id="controller-names">Controller Names</h2>
 
-<p>In order for a controller to be accessable from the API its name must end in &ldquo;ApiController&rdquo;. For example if you want to write a controller for the &ldquo;/discussions&rdquo; endpoints you would name it &ldquo;DiscussionsApiController&rdquo;. URLs support dashes. When a dash is encountered it will map to a capital letter in the controller name. For example the &ldquo;/sites-proxy&rdquo; endpoints map to the &ldquo;SitesProxyApiController&rdquo;. Vanilla&rsquo;s addon manager is case-insensitive, but we recommend that you name your classes with proper casing because not all autoloaders are case-insensitive.</p>
+<p>In order for a controller to be accessible from the API its name must end in &ldquo;ApiController&rdquo;. For example if you want to write a controller for the &ldquo;/discussions&rdquo; endpoints you would name it &ldquo;DiscussionsApiController&rdquo;. URLs support dashes. When a dash is encountered it will map to a capital letter in the controller name. For example the &ldquo;/sites-proxy&rdquo; endpoints map to the &ldquo;SitesProxyApiController&rdquo;. Vanilla&rsquo;s addon manager is case-insensitive, but we recommend that you name your classes with proper casing because not all autoloaders are case-insensitive.</p>
 
 <p>In RESTful APIs controllers should be plural. Think of controllers as folders in your file system. Folders contain many files and are usually named with the plural words such as &ldquo;documents&rdquo; or &ldquo;pictures&rdquo;. Always try and name your controllers in a similar way. When working on a project with many people it&rsquo;s important to stick to a common naming convention.</p>
 
@@ -467,35 +467,35 @@ n.id = i;
 <p>When adding methods (actions) to your controllers their names determine what what type of request they&rsquo;ll map to. Here are the rules that determine which action is called.</p>
 
 <ul>
-<li><method>() maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &ldquo;POST /discussions&rdquo;).</li>
-<li><method>_name() maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &ldquo;GET /profile/activity&rdquo;).</li>
-<li>index() maps with GET /controller.</li>
-<li>name() maps with any HTTP method. Try to avoid such global actions.</li>
+<li><method><code>()</code> maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &ldquo;POST /discussions&rdquo;).</li>
+<li><method><code>_name()</code> maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &ldquo;GET /profile/activity&rdquo;).</li>
+<li><code>index()</code> maps with GET /controller.</li>
+<li><code>name()</code> maps with any HTTP method. Try to avoid such global actions.</li>
 </ul>
 
 <p>URLs can also contain dashes for method names. They map in much the same way as controller names. Because methods are case-insensitive a URL of /controller/my-comments is equivalent to /controller/mycomments. We may remove these ambiguities in the future so make sure to use proper casing and dashes in your method names and URLs respectively.</p>
 
 <h3 id="http-method-vs-controller-method">HTTP Method vs. Controller Method</h3>
 
-<p>The HTTP method referes to the method of the <em>HTTP request</em>. This is usually one of the following verbs: GET, POST, PATCH, PUT, DELETE, HEAD, and OPTIONS. With object oriented programming, functions declared on a class are also referrred to as methods. It&rsquo;s sometimes confusing trying to differentiate between the two. For this reason we will usually refer to the HTTP methods as methods and the other methods as <strong>actions</strong>.</p>
+<p>The HTTP method refers to the method of the <em>HTTP request</em>. This is usually one of the following verbs: GET, POST, PATCH, PUT, DELETE, HEAD, and OPTIONS. With object oriented programming, functions declared on a class are also referred to as methods. It&rsquo;s sometimes confusing trying to differentiate between the two. For this reason we will usually refer to the HTTP methods as methods and the other methods as <strong>actions</strong>.</p>
 
 <h3 id="protected-methods">Protected Methods</h3>
 
-<p>Usually, all public methods can be accessed via. URL. This could present a security concern where you might want a class method to be public, but not accessable via API. There are a couple of ways to protect public controller methods.</p>
+<p>Usually, all public methods can be accessed via URL. This could present a security concern where you might want a class method to be public, but not accessible via API. There are a couple of ways to protect public controller methods.</p>
 
 <ol>
-<li><p>Getters and setters that begin with &ldquo;get&rdquo;, &ldquo;set&rdquo;, or &ldquo;is&rdquo; and are followed by a non-underscore character cannot be accessed by the API. If you want to make such a name accessable (such as &ldquo;settings&rdquo;) you can put an HTTP verb before the name (ex. get_settings).</p></li>
+<li><p>Getters and setters that begin with &ldquo;get&rdquo;, &ldquo;set&rdquo;, or &ldquo;is&rdquo; and are followed by a non-underscore character cannot be accessed by the API. If you want to make such a name accessible (such as &ldquo;settings&rdquo;) you can put an HTTP verb before the name (ex. get_settings).</p></li>
 
 <li><p>If your controller implements an &ldquo;isProtected($name)&rdquo; method then it will be called by the router to check all method names to see if they are public actions.</p></li>
 </ol>
 
 <h2 id="parameters">Parameters</h2>
 
-<p>When you add parameters to your methods they get mapped from the URLs path. This is usually how you add a record&rsquo;s ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).</p>
+<p>When you add parameters to your methods they get mapped from the URL&rsquo;s path. This is usually how you add a record&rsquo;s ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).</p>
 
 <p><em>Note: In previous versions of Vanilla&rsquo;s API, method parameters were also mapped from the query string. This is no longer the case so make sure to keep this in mind if you are upgrading older endpoints.</em></p>
 
-<h3 id="parametr-ambiguities">Parametr Ambiguities</h3>
+<h3 id="parameter-ambiguities">Parameter Ambiguities</h3>
 
 <p>Let&rsquo;s say you&rsquo;ve defined the following methods on your controller:</p>
 
@@ -516,9 +516,9 @@ n.id = i;
 <p>The problem is that the router doesn&rsquo;t know which method you want to map to. By default, because the <strong>get()</strong> method takes precedence over <strong>index()</strong> it would get dispatched both times. To avoid these ambiguities there are a few strategies.</p>
 
 <ol>
-<li>Use the query string more. In the above example the page should really be a querystring parameter because that&rsquo;s how it&rsquo;s behaving. This is a break from Vanilla&rsquo;s older APIs.</li>
+<li>Use the query string more. In the above example the page should really be a query string parameter because that&rsquo;s how it&rsquo;s behaving. This is a break from Vanilla&rsquo;s older APIs.</li>
 <li>Parameter names can act as constraint. By default Vanilla has a constraint on the <strong>id</strong> parameter where it must contain all digits: perfect for database primary keys. Constraints are regular expressions or callbacks and are added to the routing object. Try to avoid adding constraints yourself though because they are currently global.</li>
-<li>Parameter count matters when mappng paths to actions. A path with more or less parts than action parameters will not map to that method. If your action has optional parameters then they aren&rsquo;t required though. A path with less parts will call your action with the remaining default values.</li>
+<li>Parameter count matters when mapping paths to actions. A path with more or less parts than action parameters will not map to that method. If your action has optional parameters then they aren&rsquo;t required though. A path with less parts will call your action with the remaining default values.</li>
 </ol>
 
 <p>If you understand these rules you will be able to overcome most edge cases. However, you should aim to keep your controllers simple. We don&rsquo;t want to see complex action names just because you are worried about name clashes.</p>
@@ -528,8 +528,8 @@ n.id = i;
 <p>Some parameters will be automatically mapped from request data. In order to map request data you can use the following naming convention. Note that the type hints matter (TODO, but this is a good idea).</p>
 
 <ul>
-<li><strong>array $query</strong> will receive the query string as an array ($_GET).</li>
-<li><strong>array $body</strong> will receive the request body ($_POST).</li>
+<li><strong>array $query</strong> will receive the query string as an array (<code>$_GET</code>).</li>
+<li><strong>array $body</strong> will receive the request body (<code>$_POST</code>).</li>
 <li><strong>array $data</strong> will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.</li>
 <li><strong>Garden\RequestInterface $</strong>* will receive the request object.</li>
 <li><strong>&hellip;$</strong>* variadics will receive the rest of the path.</li>
@@ -538,7 +538,7 @@ n.id = i;
 
 <p>Using parameter mapping begins to make controller methods look more like model methods or plain PHP functions. This is intentional and you should keep that theory in mind when writing controller methods. Controller methods should be able to be called without the entire request bootstrapping process.</p>
 
-<h2 id="a-default-restful-resource-conroller">A Default RESTful Resource Conroller</h2>
+<h2 id="a-default-restful-resource-controller">A Default RESTful Resource Controller</h2>
 
 <p>In general, you want to write your controller to contain mainly the basic HTTP methods. Often this will be all that you need and will provide basic CRUD functionality for a database table. Below is a skeletal /widgets resource illustrating this example.</p>
 

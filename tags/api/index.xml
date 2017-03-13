@@ -41,7 +41,7 @@
 
 &lt;h2 id=&#34;issuing-access-tokens&#34;&gt;Issuing Access Tokens&lt;/h2&gt;
 
-&lt;p&gt;There isn&amp;rsquo;t a built in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;. The &lt;strong&gt;AccessTokenModel&lt;/strong&gt; is a regular model, but you will usually be interacting with it through specific methods.&lt;/p&gt;
+&lt;p&gt;There isn&amp;rsquo;t a built-in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechanism. You can create and issue access tokens with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;. The &lt;strong&gt;AccessTokenModel&lt;/strong&gt; is a regular model, but you will usually be interacting with it through specific methods.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// Issue a token
 $model = new AccessTokenModel();
@@ -58,7 +58,7 @@ $model-&amp;gt;revoke($accessToken);
 
 &lt;h3 id=&#34;access-token-scope-wip&#34;&gt;Access Token Scope (WIP)&lt;/h3&gt;
 
-&lt;p&gt;The &lt;strong&gt;issue()&lt;/strong&gt; method has a scope parameter. This can be left empty or you can specify an array of permission names. If you sepecify a scrope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permisions than a user has. It&amp;rsquo;s considered a best practice to use a scope with only the permissions you need.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;issue()&lt;/strong&gt; method has a scope parameter. This can be left empty or you can specify an array of permission names. If you specify a scope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permissions than a user has. It&amp;rsquo;s considered a best practice to use a scope with only the permissions you need.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;You can never have a scope that gives a user more permissions than they already have. If more permissions are specified then they&amp;rsquo;ll be ignored.&lt;/em&gt;&lt;/p&gt;
 
@@ -1079,11 +1079,11 @@ Host: https://yoursite.vanillaforums.com
 
 &lt;h2 id=&#34;restful-resource-routing-to-controller-methods&#34;&gt;RESTful Resource Routing to Controller Methods&lt;/h2&gt;
 
-&lt;p&gt;This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from tha &lt;strong&gt;/api/v2/&lt;/strong&gt; base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.&lt;/p&gt;
+&lt;p&gt;This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from the &lt;strong&gt;/api/v2/&lt;/strong&gt; base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.&lt;/p&gt;
 
 &lt;h2 id=&#34;controller-names&#34;&gt;Controller Names&lt;/h2&gt;
 
-&lt;p&gt;In order for a controller to be accessable from the API its name must end in &amp;ldquo;ApiController&amp;rdquo;. For example if you want to write a controller for the &amp;ldquo;/discussions&amp;rdquo; endpoints you would name it &amp;ldquo;DiscussionsApiController&amp;rdquo;. URLs support dashes. When a dash is encountered it will map to a capital letter in the controller name. For example the &amp;ldquo;/sites-proxy&amp;rdquo; endpoints map to the &amp;ldquo;SitesProxyApiController&amp;rdquo;. Vanilla&amp;rsquo;s addon manager is case-insensitive, but we recommend that you name your classes with proper casing because not all autoloaders are case-insensitive.&lt;/p&gt;
+&lt;p&gt;In order for a controller to be accessible from the API its name must end in &amp;ldquo;ApiController&amp;rdquo;. For example if you want to write a controller for the &amp;ldquo;/discussions&amp;rdquo; endpoints you would name it &amp;ldquo;DiscussionsApiController&amp;rdquo;. URLs support dashes. When a dash is encountered it will map to a capital letter in the controller name. For example the &amp;ldquo;/sites-proxy&amp;rdquo; endpoints map to the &amp;ldquo;SitesProxyApiController&amp;rdquo;. Vanilla&amp;rsquo;s addon manager is case-insensitive, but we recommend that you name your classes with proper casing because not all autoloaders are case-insensitive.&lt;/p&gt;
 
 &lt;p&gt;In RESTful APIs controllers should be plural. Think of controllers as folders in your file system. Folders contain many files and are usually named with the plural words such as &amp;ldquo;documents&amp;rdquo; or &amp;ldquo;pictures&amp;rdquo;. Always try and name your controllers in a similar way. When working on a project with many people it&amp;rsquo;s important to stick to a common naming convention.&lt;/p&gt;
 
@@ -1094,35 +1094,35 @@ Host: https://yoursite.vanillaforums.com
 &lt;p&gt;When adding methods (actions) to your controllers their names determine what what type of request they&amp;rsquo;ll map to. Here are the rules that determine which action is called.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;method&gt;() maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &amp;ldquo;POST /discussions&amp;rdquo;).&lt;/li&gt;
-&lt;li&gt;&lt;method&gt;_name() maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &amp;ldquo;GET /profile/activity&amp;rdquo;).&lt;/li&gt;
-&lt;li&gt;index() maps with GET /controller.&lt;/li&gt;
-&lt;li&gt;name() maps with any HTTP method. Try to avoid such global actions.&lt;/li&gt;
+&lt;li&gt;&lt;method&gt;&lt;code&gt;()&lt;/code&gt; maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &amp;ldquo;POST /discussions&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;method&gt;&lt;code&gt;_name()&lt;/code&gt; maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &amp;ldquo;GET /profile/activity&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index()&lt;/code&gt; maps with GET /controller.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;name()&lt;/code&gt; maps with any HTTP method. Try to avoid such global actions.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;URLs can also contain dashes for method names. They map in much the same way as controller names. Because methods are case-insensitive a URL of /controller/my-comments is equivalent to /controller/mycomments. We may remove these ambiguities in the future so make sure to use proper casing and dashes in your method names and URLs respectively.&lt;/p&gt;
 
 &lt;h3 id=&#34;http-method-vs-controller-method&#34;&gt;HTTP Method vs. Controller Method&lt;/h3&gt;
 
-&lt;p&gt;The HTTP method referes to the method of the &lt;em&gt;HTTP request&lt;/em&gt;. This is usually one of the following verbs: GET, POST, PATCH, PUT, DELETE, HEAD, and OPTIONS. With object oriented programming, functions declared on a class are also referrred to as methods. It&amp;rsquo;s sometimes confusing trying to differentiate between the two. For this reason we will usually refer to the HTTP methods as methods and the other methods as &lt;strong&gt;actions&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The HTTP method refers to the method of the &lt;em&gt;HTTP request&lt;/em&gt;. This is usually one of the following verbs: GET, POST, PATCH, PUT, DELETE, HEAD, and OPTIONS. With object oriented programming, functions declared on a class are also referred to as methods. It&amp;rsquo;s sometimes confusing trying to differentiate between the two. For this reason we will usually refer to the HTTP methods as methods and the other methods as &lt;strong&gt;actions&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;protected-methods&#34;&gt;Protected Methods&lt;/h3&gt;
 
-&lt;p&gt;Usually, all public methods can be accessed via. URL. This could present a security concern where you might want a class method to be public, but not accessable via API. There are a couple of ways to protect public controller methods.&lt;/p&gt;
+&lt;p&gt;Usually, all public methods can be accessed via URL. This could present a security concern where you might want a class method to be public, but not accessible via API. There are a couple of ways to protect public controller methods.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Getters and setters that begin with &amp;ldquo;get&amp;rdquo;, &amp;ldquo;set&amp;rdquo;, or &amp;ldquo;is&amp;rdquo; and are followed by a non-underscore character cannot be accessed by the API. If you want to make such a name accessable (such as &amp;ldquo;settings&amp;rdquo;) you can put an HTTP verb before the name (ex. get_settings).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Getters and setters that begin with &amp;ldquo;get&amp;rdquo;, &amp;ldquo;set&amp;rdquo;, or &amp;ldquo;is&amp;rdquo; and are followed by a non-underscore character cannot be accessed by the API. If you want to make such a name accessible (such as &amp;ldquo;settings&amp;rdquo;) you can put an HTTP verb before the name (ex. get_settings).&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;If your controller implements an &amp;ldquo;isProtected($name)&amp;rdquo; method then it will be called by the router to check all method names to see if they are public actions.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
-&lt;p&gt;When you add parameters to your methods they get mapped from the URLs path. This is usually how you add a record&amp;rsquo;s ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).&lt;/p&gt;
+&lt;p&gt;When you add parameters to your methods they get mapped from the URL&amp;rsquo;s path. This is usually how you add a record&amp;rsquo;s ID to your RESTful API. For example, you can map GET /comments/123 to CommentsApiController::get($id).&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note: In previous versions of Vanilla&amp;rsquo;s API, method parameters were also mapped from the query string. This is no longer the case so make sure to keep this in mind if you are upgrading older endpoints.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;parametr-ambiguities&#34;&gt;Parametr Ambiguities&lt;/h3&gt;
+&lt;h3 id=&#34;parameter-ambiguities&#34;&gt;Parameter Ambiguities&lt;/h3&gt;
 
 &lt;p&gt;Let&amp;rsquo;s say you&amp;rsquo;ve defined the following methods on your controller:&lt;/p&gt;
 
@@ -1143,9 +1143,9 @@ Host: https://yoursite.vanillaforums.com
 &lt;p&gt;The problem is that the router doesn&amp;rsquo;t know which method you want to map to. By default, because the &lt;strong&gt;get()&lt;/strong&gt; method takes precedence over &lt;strong&gt;index()&lt;/strong&gt; it would get dispatched both times. To avoid these ambiguities there are a few strategies.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Use the query string more. In the above example the page should really be a querystring parameter because that&amp;rsquo;s how it&amp;rsquo;s behaving. This is a break from Vanilla&amp;rsquo;s older APIs.&lt;/li&gt;
+&lt;li&gt;Use the query string more. In the above example the page should really be a query string parameter because that&amp;rsquo;s how it&amp;rsquo;s behaving. This is a break from Vanilla&amp;rsquo;s older APIs.&lt;/li&gt;
 &lt;li&gt;Parameter names can act as constraint. By default Vanilla has a constraint on the &lt;strong&gt;id&lt;/strong&gt; parameter where it must contain all digits: perfect for database primary keys. Constraints are regular expressions or callbacks and are added to the routing object. Try to avoid adding constraints yourself though because they are currently global.&lt;/li&gt;
-&lt;li&gt;Parameter count matters when mappng paths to actions. A path with more or less parts than action parameters will not map to that method. If your action has optional parameters then they aren&amp;rsquo;t required though. A path with less parts will call your action with the remaining default values.&lt;/li&gt;
+&lt;li&gt;Parameter count matters when mapping paths to actions. A path with more or less parts than action parameters will not map to that method. If your action has optional parameters then they aren&amp;rsquo;t required though. A path with less parts will call your action with the remaining default values.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;If you understand these rules you will be able to overcome most edge cases. However, you should aim to keep your controllers simple. We don&amp;rsquo;t want to see complex action names just because you are worried about name clashes.&lt;/p&gt;
@@ -1155,8 +1155,8 @@ Host: https://yoursite.vanillaforums.com
 &lt;p&gt;Some parameters will be automatically mapped from request data. In order to map request data you can use the following naming convention. Note that the type hints matter (TODO, but this is a good idea).&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;array $query&lt;/strong&gt; will receive the query string as an array ($_GET).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;array $body&lt;/strong&gt; will receive the request body ($_POST).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;array $query&lt;/strong&gt; will receive the query string as an array (&lt;code&gt;$_GET&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;array $body&lt;/strong&gt; will receive the request body (&lt;code&gt;$_POST&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;array $data&lt;/strong&gt; will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Garden\RequestInterface $&lt;/strong&gt;* will receive the request object.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&amp;hellip;$&lt;/strong&gt;* variadics will receive the rest of the path.&lt;/li&gt;
@@ -1165,7 +1165,7 @@ Host: https://yoursite.vanillaforums.com
 
 &lt;p&gt;Using parameter mapping begins to make controller methods look more like model methods or plain PHP functions. This is intentional and you should keep that theory in mind when writing controller methods. Controller methods should be able to be called without the entire request bootstrapping process.&lt;/p&gt;
 
-&lt;h2 id=&#34;a-default-restful-resource-conroller&#34;&gt;A Default RESTful Resource Conroller&lt;/h2&gt;
+&lt;h2 id=&#34;a-default-restful-resource-controller&#34;&gt;A Default RESTful Resource Controller&lt;/h2&gt;
 
 &lt;p&gt;In general, you want to write your controller to contain mainly the basic HTTP methods. Often this will be all that you need and will provide basic CRUD functionality for a database table. Below is a skeletal /widgets resource illustrating this example.&lt;/p&gt;
 
@@ -1479,7 +1479,7 @@ Connection: close
 &lt;p&gt;The controller base class also has some default dependencies that you can also use:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;getSession()&lt;/strong&gt;. This is the session object correspoding to the user that invoked the controller.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;getSession()&lt;/strong&gt;. This is the session object corresponding to the user that invoked the controller.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;getEventManager()&lt;/strong&gt;. This is the event manager and can be used to fire events from within the controller.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1489,14 +1489,14 @@ Connection: close
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function post(array $data) {
     // Check permissions.
-    $this-&amp;gt;premission(&#39;...&#39;);
+    $this-&amp;gt;permission(&#39;...&#39;);
 
     // Define the input schema.
     $sch = $this-&amp;gt;schema([
         ...
     ], __FUNCTION__);
 
-    // Define the ouput schema.
+    // Define the output schema.
     $out = $this-&amp;gt;schema([
         ...
     ], __FUNCTION__, &#39;out&#39;);
@@ -1546,16 +1546,16 @@ $this-&amp;gt;permission([&#39;Vanilla.Discussions.View&#39;, Permissions::BAN_U
 &lt;li&gt;It cleans your input data beyond what JSON can do. For example, dates are converted into &lt;strong&gt;DateTimeImmutable&lt;/strong&gt; objects.&lt;/li&gt;
 &lt;li&gt;It helps define your API&amp;rsquo;s specification. Proper APIs should be backwards-compatible whenever new features are added. The schema helps ensure you support your old consumers.&lt;/li&gt;
 &lt;li&gt;It helps secure your endpoint using a whitelist of what&amp;rsquo;s allowed. This means you don&amp;rsquo;t have to worry about extra database fields sneaking in and overwriting sensitive data (such as admin flags). Ask any security expert and they&amp;rsquo;ll tell you that whitelist security is preferred to blacklist security.&lt;/li&gt;
-&lt;li&gt;It documents your endpoint. The schema is used to generate automatic documentation, but beyond that its also useful to other developers that are modifying your endpoint.&lt;/li&gt;
+&lt;li&gt;It documents your endpoint. The schema is used to generate automatic documentation, but beyond that it&amp;rsquo;s also useful to other developers that are modifying your endpoint.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Schemas returned from the &lt;strong&gt;schema()&lt;/strong&gt; method are instances of the &lt;strong&gt;Vanilla\Schema&lt;/strong&gt; class which is a thin subclass of the &lt;strong&gt;Garden\Schema&lt;/strong&gt; class that adds some meta information useful for endopint documentation and events for extension.&lt;/p&gt;
+&lt;p&gt;Schemas returned from the &lt;strong&gt;schema()&lt;/strong&gt; method are instances of the &lt;strong&gt;Vanilla\Schema&lt;/strong&gt; class which is a thin subclass of the &lt;strong&gt;Garden\Schema&lt;/strong&gt; class that adds some meta information useful for endpoint documentation and events for extension.&lt;/p&gt;
 
 &lt;h3 id=&#34;define-the-output-schema&#34;&gt;Define The Output Schema&lt;/h3&gt;
 
 &lt;p&gt;The output schema isn&amp;rsquo;t as important a the input schema, but a properly specified API should have both. The output schema&amp;rsquo;s most important role is for documentation. It also helps trim unnecessary data from the result.&lt;/p&gt;
 
-&lt;p&gt;It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation gneration.&lt;/p&gt;
+&lt;p&gt;It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation generation.&lt;/p&gt;
 
 &lt;h3 id=&#34;validate-the-input-data&#34;&gt;Validate The Input Data&lt;/h3&gt;
 
@@ -1563,7 +1563,7 @@ $this-&amp;gt;permission([&#39;Vanilla.Discussions.View&#39;, Permissions::BAN_U
 
 &lt;ol&gt;
 &lt;li&gt;The data is validated. If the validation fails then an exception is thrown that the dispatcher understands how to render.&lt;/li&gt;
-&lt;li&gt;The data is cleaned. Values or coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.&lt;/li&gt;
+&lt;li&gt;The data is cleaned. Values are coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&#34;do-the-controller-s-job&#34;&gt;Do the Controller&amp;rsquo;s Job&lt;/h3&gt;
@@ -1580,7 +1580,7 @@ $this-&amp;gt;permission([&#39;Vanilla.Discussions.View&#39;, Permissions::BAN_U
 
 &lt;h4 id=&#34;the-data-class&#34;&gt;The Data Class&lt;/h4&gt;
 
-&lt;p&gt;Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a &lt;strong&gt;Garden\Web\Data&lt;/strong&gt; object that takes an HTTP status code as an argument in its contructor. The Data class also implements array access so it&amp;rsquo;s fairly easy to move from an array to an instance of this class.&lt;/p&gt;
+&lt;p&gt;Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a &lt;strong&gt;Garden\Web\Data&lt;/strong&gt; object that takes an HTTP status code as an argument in its constructor. The Data class also implements array access so it&amp;rsquo;s fairly easy to move from an array to an instance of this class.&lt;/p&gt;
 
 &lt;p&gt;You can also return an object that implements &lt;strong&gt;JsonSerializable&lt;/strong&gt;. An object like this that doesn&amp;rsquo;t have any other specific information will only renderable as JSON which isn&amp;rsquo;t as forwards-compatible as the other classes so be careful here. The Data class isn&amp;rsquo;t in its final form and it will get more and more support for advanced scenarios in the future.&lt;/p&gt;
 
@@ -1625,12 +1625,12 @@ $out = $this-&amp;gt;getRowSchema(__FUNCTION__);
 
 &lt;h2 id=&#34;the-vanilla-apiv2&#34;&gt;The Vanilla APIv2&lt;/h2&gt;
 
-&lt;p&gt;Vanilla&amp;rsquo;s APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an &amp;ldquo;API first&amp;rdquo; framweork where you write your API first and then think about the resulting HTML. This offers several benefits:&lt;/p&gt;
+&lt;p&gt;Vanilla&amp;rsquo;s APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an &amp;ldquo;API first&amp;rdquo; framework where you write your API first and then think about the resulting HTML. This offers several benefits:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;An API is easier to test, lending well to automated testing.&lt;/li&gt;
 &lt;li&gt;You can connect to an API from different clients and not just browser. This lends to the possibility of mobile clients or command-line automation.&lt;/li&gt;
-&lt;li&gt;An API often offers more application coverage beyond what just the user-interface sees. For example, your user interface may not allow certain records to be deleted, but an API will have that endpoint if you eventually want it.&lt;/li&gt;
+&lt;li&gt;An API often offers more application coverage beyond what just the user interface sees. For example, your user interface may not allow certain records to be deleted, but an API will have that endpoint if you eventually want it.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
@@ -1639,17 +1639,17 @@ $out = $this-&amp;gt;getRowSchema(__FUNCTION__);
 
 &lt;ul&gt;
 &lt;li&gt;Resource URL routing to API controllers. If you are familiar with RESTful APIs you&amp;rsquo;ll be right at home with Vanilla&amp;rsquo;s routing.&lt;/li&gt;
-&lt;li&gt;You can specify seperate methods for the different HTTP methods (GET, POST, DELETE, etc.) allowing you to concentrate on the task at hand.&lt;/li&gt;
-&lt;li&gt;Controllers are dependency injected by the dispatcher. This allows controllers to be relatively simple where each specific controller declares only the depenedencies it requires. In fact, the dispatcher doesn&amp;rsquo;t depend on a specific controller base class, but we provide one with common utility functionality.&lt;/li&gt;
-&lt;li&gt;Controller endpoints concern themselves with retreiving data and returning it like a PHP function. The dispatcher handles rendering. In this way an endpoint can be rendered to different formats without you having to worry about the details for every endpoint.&lt;/li&gt;
+&lt;li&gt;You can specify separate methods for the different HTTP methods (GET, POST, DELETE, etc.) allowing you to concentrate on the task at hand.&lt;/li&gt;
+&lt;li&gt;Controllers are dependency injected by the dispatcher. This allows controllers to be relatively simple where each specific controller declares only the dependencies it requires. In fact, the dispatcher doesn&amp;rsquo;t depend on a specific controller base class, but we provide one with common utility functionality.&lt;/li&gt;
+&lt;li&gt;Controller endpoints concern themselves with retrieving data and returning it like a PHP function. The dispatcher handles rendering. In this way an endpoint can be rendered to different formats without you having to worry about the details for every endpoint.&lt;/li&gt;
 &lt;li&gt;Exceptions thrown from your methods are rendered correctly from the dispatcher. Some exceptions (such as not found or method not allowed) are intelligently determined by the dispatcher.&lt;/li&gt;
-&lt;li&gt;Whitelist request data coming in using the &lt;strong&gt;Schema&lt;/strong&gt; class. In this way you can be sure that a malicious user can&amp;rsquo;t post extra information to attack your endpoint.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;Schema&lt;/strong&gt; object also supports automatic documentation of your endpoits (TODO).&lt;/li&gt;
+&lt;li&gt;Whitelists request data coming in using the &lt;strong&gt;Schema&lt;/strong&gt; class. In this way you can be sure that a malicious user can&amp;rsquo;t post extra information to attack your endpoint.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;Schema&lt;/strong&gt; object also supports automatic documentation of your endpoints (TODO).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;about-this-guide&#34;&gt;About This Guide&lt;/h2&gt;
 
-&lt;p&gt;This section walks you through creating API controlles and writing endpoints. It doesn&amp;rsquo;t go into great detail on individual method parameters though. There are a lot of options so we suggest looking at the classes mentioned in this guide to learn more information.&lt;/p&gt;
+&lt;p&gt;This section walks you through creating API controllers and writing endpoints. It doesn&amp;rsquo;t go into great detail on individual method parameters though. There are a lot of options so we suggest looking at the classes mentioned in this guide to learn more information.&lt;/p&gt;
 </description>
     </item>
     

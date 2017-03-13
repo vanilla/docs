@@ -462,7 +462,7 @@ n.id = i;
 
 <h2 id="issuing-access-tokens">Issuing Access Tokens</h2>
 
-<p>There isn&rsquo;t a built in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the <strong>AccessTokenModel</strong>. The <strong>AccessTokenModel</strong> is a regular model, but you will usually be interacting with it through specific methods.</p>
+<p>There isn&rsquo;t a built-in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechanism. You can create and issue access tokens with the <strong>AccessTokenModel</strong>. The <strong>AccessTokenModel</strong> is a regular model, but you will usually be interacting with it through specific methods.</p>
 
 <pre><code class="language-php">// Issue a token
 $model = new AccessTokenModel();
@@ -479,7 +479,7 @@ $model-&gt;revoke($accessToken);
 
 <h3 id="access-token-scope-wip">Access Token Scope (WIP)</h3>
 
-<p>The <strong>issue()</strong> method has a scope parameter. This can be left empty or you can specify an array of permission names. If you sepecify a scrope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permisions than a user has. It&rsquo;s considered a best practice to use a scope with only the permissions you need.</p>
+<p>The <strong>issue()</strong> method has a scope parameter. This can be left empty or you can specify an array of permission names. If you specify a scope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permissions than a user has. It&rsquo;s considered a best practice to use a scope with only the permissions you need.</p>
 
 <p><em>You can never have a scope that gives a user more permissions than they already have. If more permissions are specified then they&rsquo;ll be ignored.</em></p>
 

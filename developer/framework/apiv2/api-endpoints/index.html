@@ -465,7 +465,7 @@ n.id = i;
 <p>The controller base class also has some default dependencies that you can also use:</p>
 
 <ul>
-<li><strong>getSession()</strong>. This is the session object correspoding to the user that invoked the controller.</li>
+<li><strong>getSession()</strong>. This is the session object corresponding to the user that invoked the controller.</li>
 <li><strong>getEventManager()</strong>. This is the event manager and can be used to fire events from within the controller.</li>
 </ul>
 
@@ -475,14 +475,14 @@ n.id = i;
 
 <pre><code class="language-php">public function post(array $data) {
     // Check permissions.
-    $this-&gt;premission('...');
+    $this-&gt;permission('...');
 
     // Define the input schema.
     $sch = $this-&gt;schema([
         ...
     ], __FUNCTION__);
 
-    // Define the ouput schema.
+    // Define the output schema.
     $out = $this-&gt;schema([
         ...
     ], __FUNCTION__, 'out');
@@ -532,16 +532,16 @@ $this-&gt;permission(['Vanilla.Discussions.View', Permissions::BAN_UPDATING]);
 <li>It cleans your input data beyond what JSON can do. For example, dates are converted into <strong>DateTimeImmutable</strong> objects.</li>
 <li>It helps define your API&rsquo;s specification. Proper APIs should be backwards-compatible whenever new features are added. The schema helps ensure you support your old consumers.</li>
 <li>It helps secure your endpoint using a whitelist of what&rsquo;s allowed. This means you don&rsquo;t have to worry about extra database fields sneaking in and overwriting sensitive data (such as admin flags). Ask any security expert and they&rsquo;ll tell you that whitelist security is preferred to blacklist security.</li>
-<li>It documents your endpoint. The schema is used to generate automatic documentation, but beyond that its also useful to other developers that are modifying your endpoint.</li>
+<li>It documents your endpoint. The schema is used to generate automatic documentation, but beyond that it&rsquo;s also useful to other developers that are modifying your endpoint.</li>
 </ol>
 
-<p>Schemas returned from the <strong>schema()</strong> method are instances of the <strong>Vanilla\Schema</strong> class which is a thin subclass of the <strong>Garden\Schema</strong> class that adds some meta information useful for endopint documentation and events for extension.</p>
+<p>Schemas returned from the <strong>schema()</strong> method are instances of the <strong>Vanilla\Schema</strong> class which is a thin subclass of the <strong>Garden\Schema</strong> class that adds some meta information useful for endpoint documentation and events for extension.</p>
 
 <h3 id="define-the-output-schema">Define The Output Schema</h3>
 
 <p>The output schema isn&rsquo;t as important a the input schema, but a properly specified API should have both. The output schema&rsquo;s most important role is for documentation. It also helps trim unnecessary data from the result.</p>
 
-<p>It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation gneration.</p>
+<p>It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation generation.</p>
 
 <h3 id="validate-the-input-data">Validate The Input Data</h3>
 
@@ -549,7 +549,7 @@ $this-&gt;permission(['Vanilla.Discussions.View', Permissions::BAN_UPDATING]);
 
 <ol>
 <li>The data is validated. If the validation fails then an exception is thrown that the dispatcher understands how to render.</li>
-<li>The data is cleaned. Values or coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.</li>
+<li>The data is cleaned. Values are coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.</li>
 </ol>
 
 <h3 id="do-the-controller-s-job">Do the Controller&rsquo;s Job</h3>
@@ -566,7 +566,7 @@ $this-&gt;permission(['Vanilla.Discussions.View', Permissions::BAN_UPDATING]);
 
 <h4 id="the-data-class">The Data Class</h4>
 
-<p>Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a <strong>Garden\Web\Data</strong> object that takes an HTTP status code as an argument in its contructor. The Data class also implements array access so it&rsquo;s fairly easy to move from an array to an instance of this class.</p>
+<p>Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a <strong>Garden\Web\Data</strong> object that takes an HTTP status code as an argument in its constructor. The Data class also implements array access so it&rsquo;s fairly easy to move from an array to an instance of this class.</p>
 
 <p>You can also return an object that implements <strong>JsonSerializable</strong>. An object like this that doesn&rsquo;t have any other specific information will only renderable as JSON which isn&rsquo;t as forwards-compatible as the other classes so be careful here. The Data class isn&rsquo;t in its final form and it will get more and more support for advanced scenarios in the future.</p>
 
