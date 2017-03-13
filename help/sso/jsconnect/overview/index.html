@@ -400,6 +400,8 @@ n.id = i;
 <li>For seamless SSO on an embedded forum, see our <a href="http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/">embedded SSO solution</a>.</li>
 </ol>
 
+<p>If no jsConnect connection is designated as the &ldquo;Default&rdquo;, you cannot use the <code>/sso</code> endpoint. Instead, use expanded endpoint that specifies the client ID of the connection you wish to trigger: <code>/entry/jsconnect?client_id={value_in_settings}</code>. This setup is useful in situations where you are using jsConnect in addition to normal logins or alternate SSO solutions, rather than as the sole connector.</p>
+
 <h2 id="testing-the-integration">Testing the integration</h2>
 
 <p>Use the &ldquo;Test URL&rdquo; link under your jsConnect settings to see if your endpoint is returning a good response.</p>

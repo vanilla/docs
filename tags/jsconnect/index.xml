@@ -336,6 +336,8 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
 &lt;li&gt;For seamless SSO on an embedded forum, see our &lt;a href=&#34;http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/&#34;&gt;embedded SSO solution&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;If no jsConnect connection is designated as the &amp;ldquo;Default&amp;rdquo;, you cannot use the &lt;code&gt;/sso&lt;/code&gt; endpoint. Instead, use expanded endpoint that specifies the client ID of the connection you wish to trigger: &lt;code&gt;/entry/jsconnect?client_id={value_in_settings}&lt;/code&gt;. This setup is useful in situations where you are using jsConnect in addition to normal logins or alternate SSO solutions, rather than as the sole connector.&lt;/p&gt;
+
 &lt;h2 id=&#34;testing-the-integration&#34;&gt;Testing the integration&lt;/h2&gt;
 
 &lt;p&gt;Use the &amp;ldquo;Test URL&amp;rdquo; link under your jsConnect settings to see if your endpoint is returning a good response.&lt;/p&gt;
