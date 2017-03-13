@@ -24,7 +24,7 @@ Most controllers are thin wrappers that add permission checks around calls to mo
 
 The controller base class also has some default dependencies that you can also use:
 
-- **getSession()**. This is the session object correspoding to the user that invoked the controller.
+- **getSession()**. This is the session object corresponding to the user that invoked the controller.
 - **getEventManager()**. This is the event manager and can be used to fire events from within the controller.
 
 ## The Anatomy of a Controller Action
@@ -34,14 +34,14 @@ When writing a controller action, your methods are going to have a similar layou
 ```php
 public function post(array $data) {
     // Check permissions.
-    $this->premission('...');
+    $this->permission('...');
 
     // Define the input schema.
     $sch = $this->schema([
         ...
     ], __FUNCTION__);
 
-    // Define the ouput schema.
+    // Define the output schema.
     $out = $this->schema([
         ...
     ], __FUNCTION__, 'out');
@@ -92,22 +92,22 @@ The input schema is important for the following reasons:
 1. It cleans your input data beyond what JSON can do. For example, dates are converted into **DateTimeImmutable** objects.
 2. It helps define your API's specification. Proper APIs should be backwards-compatible whenever new features are added. The schema helps ensure you support your old consumers.
 3. It helps secure your endpoint using a whitelist of what's allowed. This means you don't have to worry about extra database fields sneaking in and overwriting sensitive data (such as admin flags). Ask any security expert and they'll tell you that whitelist security is preferred to blacklist security.
-4. It documents your endpoint. The schema is used to generate automatic documentation, but beyond that its also useful to other developers that are modifying your endpoint.
+4. It documents your endpoint. The schema is used to generate automatic documentation, but beyond that it's also useful to other developers that are modifying your endpoint.
 
-Schemas returned from the **schema()** method are instances of the **Vanilla\Schema** class which is a thin subclass of the **Garden\Schema** class that adds some meta information useful for endopint documentation and events for extension.
+Schemas returned from the **schema()** method are instances of the **Vanilla\Schema** class which is a thin subclass of the **Garden\Schema** class that adds some meta information useful for endpoint documentation and events for extension.
 
 ### Define The Output Schema
 
 The output schema isn't as important a the input schema, but a properly specified API should have both. The output schema's most important role is for documentation. It also helps trim unnecessary data from the result.
 
-It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation gneration.
+It may seem strange to define the output schema right below the input schema instead of where it is used. However, this is done to aid in automated documentation generation.
 
 ### Validate The Input Data
 
 Validating the input is as easy as calling the the schema's **validate()** method. This does the following:
 
 1. The data is validated. If the validation fails then an exception is thrown that the dispatcher understands how to render.
-2. The data is cleaned. Values or coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.
+2. The data is cleaned. Values are coerced to proper types and extraneous fields are stripped. This leaves the resulting data suitable for use without worrying about bad data.
 
 ### Do the Controller's Job
 
@@ -123,7 +123,7 @@ In API controllers the result is returned rather than being rendered directly. I
 
 #### The Data Class
 
-Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a **Garden\Web\Data** object that takes an HTTP status code as an argument in its contructor. The Data class also implements array access so it's fairly easy to move from an array to an instance of this class.
+Usually, you will return an array which is easily passed to other functions or rendered to JSON. Returning an array in this way represents a 200 response. If you want to return some other response code you can return a **Garden\Web\Data** object that takes an HTTP status code as an argument in its constructor. The Data class also implements array access so it's fairly easy to move from an array to an instance of this class.
 
 You can also return an object that implements **JsonSerializable**. An object like this that doesn't have any other specific information will only renderable as JSON which isn't as forwards-compatible as the other classes so be careful here. The Data class isn't in its final form and it will get more and more support for advanced scenarios in the future.
 

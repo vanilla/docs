@@ -20,7 +20,7 @@ When making calls to the API you'll need to pass an access token in order to aut
 
 ## Issuing Access Tokens
 
-There isn't a built in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechenism. You can create and issue access tokens with the **AccessTokenModel**. The **AccessTokenModel** is a regular model, but you will usually be interacting with it through specific methods.
+There isn't a built-in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechanism. You can create and issue access tokens with the **AccessTokenModel**. The **AccessTokenModel** is a regular model, but you will usually be interacting with it through specific methods.
 
 ```php
 // Issue a token
@@ -38,7 +38,7 @@ When a token is issued it is also signed with its expiry date and a secure hash.
 
 ### Access Token Scope (WIP)
 
-The **issue()** method has a scope parameter. This can be left empty or you can specify an array of permission names. If you sepecify a scrope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permisions than a user has. It's considered a best practice to use a scope with only the permissions you need.
+The **issue()** method has a scope parameter. This can be left empty or you can specify an array of permission names. If you specify a scope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permissions than a user has. It's considered a best practice to use a scope with only the permissions you need.
 
 *You can never have a scope that gives a user more permissions than they already have. If more permissions are specified then they'll be ignored.*
 
