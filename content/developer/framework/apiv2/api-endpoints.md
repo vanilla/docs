@@ -16,7 +16,7 @@ When writing an API controller class, each method represents an endpoint. How to
 
 ## The Controller Base Class
 
-Although controllers don't need to inherit from any class, the **Vanilla\Controller** class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.
+Although controllers don't need to inherit from any class, the **Vanilla\Web\Controller** class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.
 
 ## Dependency Injection
 

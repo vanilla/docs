@@ -83,7 +83,7 @@ Some parameters will be automatically mapped from request data. In order to map 
 - **array $query** will receive the query string as an array (`$_GET`).
 - **array $body** will receive the request body (`$_POST`).
 - **array $data** will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.
-- **Garden\RequestInterface $*** will receive the request object.
+- **Garden\Web\RequestInterface $*** will receive the request object.
 - **...$*** variadics will receive the rest of the path.
 - **$path** is like the variadic, but will get a string (TODO).
 
