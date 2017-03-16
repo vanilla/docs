@@ -143,8 +143,8 @@ You can also return an object that implements **JsonSerializable**. An object li
     }
 
     // In your index() endpoint:
-    $out = $this-schema([
-            *:a => $this->getRowSchema('')
+    $out = $this->schema([
+            '*:a' => $this->getRowSchema('')
         ], __FUNCTION__, 'out');
 
     // In your get() endpoint:

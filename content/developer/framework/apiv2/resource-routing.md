@@ -26,8 +26,8 @@ Currently, controllers do not support namespaces, but that is coming soon. When 
 
 When adding methods (actions) to your controllers their names determine what what type of request they'll map to. Here are the rules that determine which action is called.
 
-- <method>`()` maps with METHOD /controller (ex. DiscussionsApiController::post() maps with "POST /discussions").
-- <method>`_name()` maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with "GET /profile/activity").
+- &lt;method&gt;`()` maps with METHOD /controller (ex. DiscussionsApiController::post() maps with "POST /discussions").
+- &lt;method&gt;`_name()` maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with "GET /profile/activity").
 - `index()` maps with GET /controller.
 - `name()` maps with any HTTP method. Try to avoid such global actions.
 
