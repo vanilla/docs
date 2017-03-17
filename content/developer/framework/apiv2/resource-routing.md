@@ -26,8 +26,8 @@ Currently, controllers do not support namespaces, but that is coming soon. When 
 
 When adding methods (actions) to your controllers their names determine what what type of request they'll map to. Here are the rules that determine which action is called.
 
-- <method>`()` maps with METHOD /controller (ex. DiscussionsApiController::post() maps with "POST /discussions").
-- <method>`_name()` maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with "GET /profile/activity").
+- &lt;method&gt;`()` maps with METHOD /controller (ex. DiscussionsApiController::post() maps with "POST /discussions").
+- &lt;method&gt;`_name()` maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with "GET /profile/activity").
 - `index()` maps with GET /controller.
 - `name()` maps with any HTTP method. Try to avoid such global actions.
 
@@ -83,7 +83,7 @@ Some parameters will be automatically mapped from request data. In order to map 
 - **array $query** will receive the query string as an array (`$_GET`).
 - **array $body** will receive the request body (`$_POST`).
 - **array $data** will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.
-- **Garden\RequestInterface $*** will receive the request object.
+- **Garden\Web\RequestInterface $*** will receive the request object.
 - **...$*** variadics will receive the rest of the path.
 - **$path** is like the variadic, but will get a string (TODO).
 
