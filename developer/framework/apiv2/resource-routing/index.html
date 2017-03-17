@@ -467,8 +467,8 @@ n.id = i;
 <p>When adding methods (actions) to your controllers their names determine what what type of request they&rsquo;ll map to. Here are the rules that determine which action is called.</p>
 
 <ul>
-<li><method><code>()</code> maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &ldquo;POST /discussions&rdquo;).</li>
-<li><method><code>_name()</code> maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &ldquo;GET /profile/activity&rdquo;).</li>
+<li>&lt;method&gt;<code>()</code> maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &ldquo;POST /discussions&rdquo;).</li>
+<li>&lt;method&gt;<code>_name()</code> maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &ldquo;GET /profile/activity&rdquo;).</li>
 <li><code>index()</code> maps with GET /controller.</li>
 <li><code>name()</code> maps with any HTTP method. Try to avoid such global actions.</li>
 </ul>
@@ -531,7 +531,7 @@ n.id = i;
 <li><strong>array $query</strong> will receive the query string as an array (<code>$_GET</code>).</li>
 <li><strong>array $body</strong> will receive the request body (<code>$_POST</code>).</li>
 <li><strong>array $data</strong> will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.</li>
-<li><strong>Garden\RequestInterface $</strong>* will receive the request object.</li>
+<li><strong>Garden\Web\RequestInterface $</strong>* will receive the request object.</li>
 <li><strong>&hellip;$</strong>* variadics will receive the rest of the path.</li>
 <li><strong>$path</strong> is like the variadic, but will get a string (TODO).</li>
 </ul>

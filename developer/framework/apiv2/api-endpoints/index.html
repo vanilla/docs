@@ -456,7 +456,7 @@ n.id = i;
 
 <h2 id="the-controller-base-class">The Controller Base Class</h2>
 
-<p>Although controllers don&rsquo;t need to inherit from any class, the <strong>Vanilla\Controller</strong> class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.</p>
+<p>Although controllers don&rsquo;t need to inherit from any class, the <strong>Vanilla\Web\Controller</strong> class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.</p>
 
 <h2 id="dependency-injection">Dependency Injection</h2>
 
@@ -586,8 +586,8 @@ $this-&gt;permission(['Vanilla.Discussions.View', Permissions::BAN_UPDATING]);
 }
 
 // In your index() endpoint:
-$out = $this-schema([
-        *:a =&gt; $this-&gt;getRowSchema('')
+$out = $this-&gt;schema([
+        '*:a' =&gt; $this-&gt;getRowSchema('')
     ], __FUNCTION__, 'out');
 
 // In your get() endpoint:

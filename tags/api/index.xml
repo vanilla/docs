@@ -1094,8 +1094,8 @@ Host: https://yoursite.vanillaforums.com
 &lt;p&gt;When adding methods (actions) to your controllers their names determine what what type of request they&amp;rsquo;ll map to. Here are the rules that determine which action is called.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;method&gt;&lt;code&gt;()&lt;/code&gt; maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &amp;ldquo;POST /discussions&amp;rdquo;).&lt;/li&gt;
-&lt;li&gt;&lt;method&gt;&lt;code&gt;_name()&lt;/code&gt; maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &amp;ldquo;GET /profile/activity&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&amp;lt;method&amp;gt;&lt;code&gt;()&lt;/code&gt; maps with METHOD /controller (ex. DiscussionsApiController::post() maps with &amp;ldquo;POST /discussions&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&amp;lt;method&amp;gt;&lt;code&gt;_name()&lt;/code&gt; maps with METHOD /controller/name (ex. ProfileApiController::get_activity() maps with &amp;ldquo;GET /profile/activity&amp;rdquo;).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;index()&lt;/code&gt; maps with GET /controller.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;name()&lt;/code&gt; maps with any HTTP method. Try to avoid such global actions.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1158,7 +1158,7 @@ Host: https://yoursite.vanillaforums.com
 &lt;li&gt;&lt;strong&gt;array $query&lt;/strong&gt; will receive the query string as an array (&lt;code&gt;$_GET&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;array $body&lt;/strong&gt; will receive the request body (&lt;code&gt;$_POST&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;array $data&lt;/strong&gt; will receive a combination of the reflected method parameters, query string, and body. Use this to include the method parameters in a schema check.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Garden\RequestInterface $&lt;/strong&gt;* will receive the request object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Garden\Web\RequestInterface $&lt;/strong&gt;* will receive the request object.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&amp;hellip;$&lt;/strong&gt;* variadics will receive the rest of the path.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;$path&lt;/strong&gt; is like the variadic, but will get a string (TODO).&lt;/li&gt;
 &lt;/ul&gt;
@@ -1470,7 +1470,7 @@ Connection: close
 
 &lt;h2 id=&#34;the-controller-base-class&#34;&gt;The Controller Base Class&lt;/h2&gt;
 
-&lt;p&gt;Although controllers don&amp;rsquo;t need to inherit from any class, the &lt;strong&gt;Vanilla\Controller&lt;/strong&gt; class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.&lt;/p&gt;
+&lt;p&gt;Although controllers don&amp;rsquo;t need to inherit from any class, the &lt;strong&gt;Vanilla\Web\Controller&lt;/strong&gt; class offers useful functionality and is going to be the class you inherit from almost 100% of the time. This guide assumes you are inheriting from that class and using its utility methods.&lt;/p&gt;
 
 &lt;h2 id=&#34;dependency-injection&#34;&gt;Dependency Injection&lt;/h2&gt;
 
@@ -1600,8 +1600,8 @@ $this-&amp;gt;permission([&#39;Vanilla.Discussions.View&#39;, Permissions::BAN_U
 }
 
 // In your index() endpoint:
-$out = $this-schema([
-        *:a =&amp;gt; $this-&amp;gt;getRowSchema(&#39;&#39;)
+$out = $this-&amp;gt;schema([
+        &#39;*:a&#39; =&amp;gt; $this-&amp;gt;getRowSchema(&#39;&#39;)
     ], __FUNCTION__, &#39;out&#39;);
 
 // In your get() endpoint:
