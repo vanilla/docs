@@ -232,25 +232,27 @@ Roles =&amp;gt; role1,role2 // Optional
 
 &lt;p&gt;jsConnect uses javascript to allow cross-domain single-signon with another site. We provide several &lt;a title=&#34;Implementing Vanilla jsConnect Single-Signon on your Site&#34; href=&#34;http://blog.vanillaforums.com/help/implementing-jsconnect-single-signon-on/#libraries&#34;&gt;client libraries&lt;/a&gt; to help you implement jsConnect on your site. If your site has been programmed in a language that doesn&amp;rsquo;t have a client library than this is documentation is for you.&lt;/p&gt;
 
-&lt;p&gt;Please note that this is technical documentation and requires knowledge programming to understand.
-&lt;h2&gt;Functions You&amp;rsquo;ll Need&lt;/h2&gt;
-jsConnect makes use of some functions that are available in most modern programming languages. You might want to do a bit of research to see if your language supports these functions because they are quite difficult to implement yourself.&lt;/p&gt;
+&lt;p&gt;Please note that this is technical documentation and requires knowledge programming to understand.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve tried to make the functions a generic as possible, but they&amp;rsquo;ll most likely be called something different in our language. A little googling should help you find what you need.
+&lt;h2&gt;Functions You&#39;ll Need&lt;/h2&gt;
+
+&lt;p&gt;jsConnect makes use of some functions that are available in most modern programming languages. You might want to do a bit of research to see if your language supports these functions because they are quite difficult to implement yourself.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve tried to make the functions a generic as possible, but they&amp;rsquo;ll most likely be called something different in our language. A little googling should help you find what you need.
 &lt;ul&gt;
     &lt;li&gt;&lt;strong&gt;timestamp&lt;/strong&gt;: Return the current unix timestamp. Note that your server has to have it&amp;rsquo;s time reasonably in synch with Vanilla&amp;rsquo;s server.&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;json encode&lt;/strong&gt;: Encode an object/associative array in the json (ex. {&amp;ldquo;name&amp;rdquo;: &amp;ldquo;Joe&amp;rdquo;, &amp;ldquo;email&amp;rdquo;: &amp;ldquo;joe@noreply.com&amp;rdquo;})&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;JSON encode&lt;/strong&gt;: Encode an object/associative array in the JSON (ex. {&amp;ldquo;name&amp;rdquo;: &amp;ldquo;Joe&amp;rdquo;, &amp;ldquo;email&amp;rdquo;: &amp;ldquo;joe@noreply.com&amp;rdquo;})&lt;/li&gt;
     &lt;li&gt;&lt;strong&gt;query string encode&lt;/strong&gt;: Encode an object/associative array like a query string in RFC1738 (ex. name=Joe&amp;amp;email=joe%40noreply.com)&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;md5 or sha1&lt;/strong&gt;: Call an md5 or sha1 hash on a string. We strongly recommend sha1.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;MD5, SHA1, SHA256&lt;/strong&gt;: Create a hash of a string. We strongly recommend SHA256.&lt;/li&gt;
 &lt;/ul&gt;
 We also have an SSO module for automatically signing in to an embedded forum. If you are for sure going to just embed Vanilla then you might want to try this first.
 &lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;base 64 encode&lt;/strong&gt;: Encode a string in base64 notation.&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;hmac sha1&lt;/strong&gt;. Call the hmac(sha1) hashing algorithm on a string and a secret key.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;base64 encode&lt;/strong&gt;: Encode a string in base64 notation.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;hmac&lt;/strong&gt;. Call the HMAC-SHA256 hashing algorithm on a string and a secret key.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Concepts&lt;/h2&gt;
 &lt;h3&gt;&lt;strong&gt;JSONP&lt;/strong&gt;&lt;/h3&gt;
-JSONP is a technology that browsers can use to get around the same-origin limitation of browsers and make cross-domain requests. Vanilla uses jsonp to transmit some of its SSO information. When you program a jsonp page it must follow a specific format. To best illustrate this lets use an example.&lt;/p&gt;
+JSONP is a technology that browsers can use to get around the same-origin limitation of browsers and make cross-domain requests. Vanilla uses JSONP to transmit some of its SSO information. When you program a jsonp page it must follow a specific format. To best illustrate this lets use an example.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s say I want to request a jsonp response from the &lt;strong&gt;/getname.json&lt;/strong&gt; page. What I&amp;rsquo;d do is make a request to that page with a querystring parameter called &lt;strong&gt;callback&lt;/strong&gt; like this: &lt;strong&gt;/getname.json?callback=displayname.&lt;/strong&gt;&lt;/p&gt;
 
@@ -273,12 +275,14 @@ In order to secure your single-sign-on connection you must share a &lt;strong&gt
 
 &lt;p&gt;If you&amp;rsquo;ve done any single sign-on or authentication work you&amp;rsquo;ve probably run into the concept of &lt;strong&gt;signing a request&lt;/strong&gt;. Basically, you sign a request with your shared secret so that both sites know that the request came from a legitimate source. When you transmit user information you want to also sign that information so that I know it came from your site and not someone else trying to hack into Vanilla.&lt;/p&gt;
 
-&lt;p&gt;jsConnect uses signatures to secure its requests. To sign a request you use a &lt;strong&gt;hash function&lt;/strong&gt; such as md5 or sha1. You can select a variety of hash functions, but we recommend using &lt;strong&gt;sha1&lt;/strong&gt; because it is more secure and widely available.&lt;/p&gt;
+&lt;p&gt;jsConnect uses signatures to secure its requests. To sign a request you use a &lt;strong&gt;hash function&lt;/strong&gt; such as MD5, SHA1 or SHA256. You can select a variety of hash functions, but we recommend using &lt;strong&gt;SHA256&lt;/strong&gt; because it is more secure and widely available.&lt;/p&gt;
 
-&lt;p&gt;We recommend getting jsConnect working without signatures first and then securing them. In Vanilla you can put your jsConnect connection in &lt;strong&gt;test mode&lt;/strong&gt; and it won&amp;rsquo;t check for a signature. &lt;strong&gt;Just make sure you don&amp;rsquo;t go live without signing your requests&lt;/strong&gt;.
-&lt;h2&gt;Site-Wide SSO&lt;/h2&gt;
-For site-wide SSO you&amp;rsquo;ll need to make a page on &lt;strong&gt;your site&lt;/strong&gt; that provides authentication information. We call this your &lt;strong&gt;authentication page&lt;/strong&gt;. You can call it whatever you want, but for the purposes of this documentation we&amp;rsquo;ll call it &lt;strong&gt;/authenticate.json&lt;/strong&gt;
-&lt;h3&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;We recommend getting jsConnect working without signatures first and then securing them. In Vanilla you can put your jsConnect connection in &lt;strong&gt;test mode&lt;/strong&gt; and it won&amp;rsquo;t check for a signature. &lt;strong&gt;Just make sure you don&amp;rsquo;t go live without signing your requests&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Site-Wide SSO&lt;/h2&gt;
+For site-wide SSO you&amp;rsquo;ll need to make a page on &lt;strong&gt;your site&lt;/strong&gt; that provides authentication information. We call this your &lt;strong&gt;authentication page&lt;/strong&gt;. You can call it whatever you want, but for the purposes of this documentation we&amp;rsquo;ll call it &lt;strong&gt;/authenticate.json&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h3&gt;
 &lt;strong&gt;&lt;/strong&gt;GET /authenticate.json?parameters
 &lt;h3&gt;Parameters&lt;/h3&gt;
 &lt;ul&gt;
@@ -377,7 +381,7 @@ Here is how you sign the user with the secret.
 &amp;ldquo;email=johndoe%40noreply.com&amp;amp;name=John+Doe&amp;amp;photourl=http%3A%2F%2Fnosite.com%2Fjohndoe.png&amp;amp;uniqueid=1234&amp;rdquo;;&lt;/pre&gt;
 &lt;/li&gt;
     &lt;li&gt;Concatenate the signature with your secret and call your hash function around everything:
-&lt;pre&gt;signature = sha1(concat(signature_string, secret));&lt;/pre&gt;
+&lt;pre&gt;signature = sha256(concat(signature_string, secret));&lt;/pre&gt;
 &lt;/li&gt;
     &lt;li&gt;Now you want to add both your client_id and your signature back into the user.
 &lt;pre&gt;user = {
