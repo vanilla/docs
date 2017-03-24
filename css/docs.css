@@ -183,6 +183,10 @@ body {
   font-size: 14px;
 }
 
+.docs-content #content .cloudfeature img {
+  border: 0;
+}
+
 .docs-content {
   background: white;
   padding: 20px 0px 50px 0px;
