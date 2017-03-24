@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Helps on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/help/index.xml</link>
-    <description>Recent content in Helps on Vanilla Forums Documentation</description>
+    <title>Help-rsses on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/help/index.xml</link>
+    <description>Recent content in Help-rsses on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8081/help/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/help/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>2016 Cloud Releases</title>
-      <link>http://127.0.0.1:8081/help/releases/2016/</link>
+      <link>//docs.vanillaforums.com/help/releases/2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/releases/2016/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/2016/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -338,10 +338,10 @@
     
     <item>
       <title>2017 Cloud Releases</title>
-      <link>http://127.0.0.1:8081/help/releases/2017/</link>
+      <link>//docs.vanillaforums.com/help/releases/2017/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/releases/2017/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/2017/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -449,10 +449,10 @@
     
     <item>
       <title>Accessibility</title>
-      <link>http://127.0.0.1:8081/help/appearance/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/appearance/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/accessibility/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -495,14 +495,14 @@
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -539,10 +539,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -604,14 +604,14 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -622,7 +622,7 @@
 
 &lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
@@ -644,7 +644,7 @@
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
 
@@ -656,10 +656,10 @@
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-note&#34;&gt;Adding a Note&lt;/h2&gt;
@@ -678,10 +678,10 @@
     
     <item>
       <title>Addons</title>
-      <link>http://127.0.0.1:8081/help/addons/</link>
+      <link>//docs.vanillaforums.com/help/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-addons&#34;&gt;What Are Addons?&lt;/h2&gt;
@@ -714,17 +714,17 @@
     
     <item>
       <title>Advanced Analytics</title>
-      <link>http://127.0.0.1:8081/help/analytics/advanced-analytics/</link>
+      <link>//docs.vanillaforums.com/help/analytics/advanced-analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/analytics/advanced-analytics/</guid>
+      <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
       <description>
 
 &lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
 
 &lt;p&gt;Available as on certain plans or as an add-on, Advanced Aanalytics give you further insights into your community.&lt;/p&gt;
 
-&lt;p&gt;! &lt;a href=&#34;http://127.0.0.1:8081/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;! &lt;a href=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
 
@@ -779,7 +779,7 @@
 
 &lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;visualization-of-analytics&#34;&gt;Visualization of Analytics&lt;/h2&gt;
 
@@ -999,10 +999,10 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Advanced Search</title>
-      <link>http://127.0.0.1:8081/help/addons/advanced-search/</link>
+      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/advanced-search/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -1063,10 +1063,10 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Advanced Settings</title>
-      <link>http://127.0.0.1:8081/help/forum-settings/advanced-settings/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/forum-settings/advanced-settings/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
       <description>
 
 &lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
@@ -1084,10 +1084,10 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Appearance</title>
-      <link>http://127.0.0.1:8081/help/appearance/</link>
+      <link>//docs.vanillaforums.com/help/appearance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/</guid>
       <description>
 
 &lt;h2 id=&#34;customizing-your-forum-s-appearance&#34;&gt;Customizing Your Forum&amp;rsquo;s Appearance&lt;/h2&gt;
@@ -1146,10 +1146,10 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -1164,14 +1164,14 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Badges</title>
-      <link>http://127.0.0.1:8081/help/reputation/badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -1200,14 +1200,14 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Cancellation</title>
-      <link>http://127.0.0.1:8081/help/cloud/leaving/</link>
+      <link>//docs.vanillaforums.com/help/cloud/leaving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/leaving/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/leaving/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -1265,7 +1265,7 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;Thirdly, you may need to do some manual work to make existing file uploads appear correctly. You&amp;rsquo;ll want to unzip what we send you into your &lt;code&gt;/uploads&lt;/code&gt; folder if you&amp;rsquo;re moving to open source. You may need to find and delete any instance of &lt;code&gt;cf:&lt;/code&gt; or &lt;code&gt;~cf/&lt;/code&gt; in file paths stored in the database (try &lt;code&gt;GDN_User.Photo&lt;/code&gt; and &lt;code&gt;GDN_Media.Path&lt;/code&gt;). These prefixes trigger a CDN lookup in our cloud environment. The open source default is the &lt;code&gt;/uploads&lt;/code&gt; folder (which you should not need to prepend).&lt;/p&gt;
 
-&lt;p&gt;You may find additional help from the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;volunteer community&lt;/a&gt; and the &lt;a href=&#34;http://127.0.0.1:8081/developer/&#34;&gt;developer docs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You may find additional help from the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;volunteer community&lt;/a&gt; and the &lt;a href=&#34;//docs.vanillaforums.com/developer/&#34;&gt;developer docs&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
 

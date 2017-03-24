@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Smarty Functions on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/smarty-functions/index.xml</link>
-    <description>Recent content in Smarty Functions on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/smarty-functions/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8081/tags/smarty-functions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/smarty-functions/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Page Links</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</guid>
       <description>
 
 &lt;h2 id=&#34;page-links&#34;&gt;Page Links&lt;/h2&gt;
@@ -180,10 +180,10 @@
     
     <item>
       <title>{asset}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</guid>
       <description>
 
 &lt;h2 id=&#34;function-asset&#34;&gt;Function: &lt;code&gt;{asset}&lt;/code&gt;&lt;/h2&gt;
@@ -302,10 +302,10 @@
     
     <item>
       <title>{breadcrumbs}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</guid>
       <description>
 
 &lt;h2 id=&#34;function-breadcrumbs&#34;&gt;Function: &lt;code&gt;{breadcrumbs}&lt;/code&gt;&lt;/h2&gt;
@@ -403,10 +403,10 @@
     
     <item>
       <title>{custom_menu}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</guid>
       <description>
 
 &lt;h2 id=&#34;function-custom-menu&#34;&gt;Function: &lt;code&gt;{custom_menu}&lt;/code&gt;&lt;/h2&gt;
@@ -487,10 +487,10 @@
     
     <item>
       <title>{event}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</guid>
       <description>
 
 &lt;h2 id=&#34;function-event&#34;&gt;Function: &lt;code&gt;{event}&lt;/code&gt;&lt;/h2&gt;
@@ -554,10 +554,10 @@
     
     <item>
       <title>{homepage_title}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/</guid>
       <description>
 
 &lt;h2 id=&#34;function-homepage-title&#34;&gt;Function: &lt;code&gt;{homepage_title}&lt;/code&gt;&lt;/h2&gt;
@@ -577,10 +577,10 @@
     
     <item>
       <title>{include_file}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</guid>
       <description>
 
 &lt;h2 id=&#34;function-include-file&#34;&gt;Function: &lt;code&gt;{include_file}&lt;/code&gt;&lt;/h2&gt;
@@ -644,10 +644,10 @@
     
     <item>
       <title>{link}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</guid>
       <description>
 
 &lt;h2 id=&#34;function-link&#34;&gt;Function: &lt;code&gt;{link}&lt;/code&gt;&lt;/h2&gt;
@@ -779,10 +779,10 @@
     
     <item>
       <title>{logo}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</guid>
       <description>
 
 &lt;h2 id=&#34;function-logo&#34;&gt;Function: &lt;code&gt;{logo}&lt;/code&gt;&lt;/h2&gt;
@@ -802,10 +802,10 @@
     
     <item>
       <title>{mobile_logo}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</guid>
       <description>
 
 &lt;h2 id=&#34;function-mobile-logo&#34;&gt;Function: &lt;code&gt;{mobile_logo}&lt;/code&gt;&lt;/h2&gt;
@@ -825,10 +825,10 @@
     
     <item>
       <title>{module}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</guid>
       <description>
 
 &lt;h2 id=&#34;function-module&#34;&gt;Function: &lt;code&gt;{module}&lt;/code&gt;&lt;/h2&gt;
@@ -956,10 +956,10 @@
     
     <item>
       <title>{permission}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</guid>
       <description>
 
 &lt;h2 id=&#34;block-permission&#34;&gt;Block: &lt;code&gt;{permission}&lt;/code&gt;&lt;/h2&gt;
@@ -1025,10 +1025,10 @@
     
     <item>
       <title>{pocket}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</guid>
       <description>
 
 &lt;h2 id=&#34;function-pocket&#34;&gt;Function: &lt;code&gt;{pocket}&lt;/code&gt;&lt;/h2&gt;
@@ -1092,10 +1092,10 @@
     
     <item>
       <title>{searchbox}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</guid>
       <description>
 
 &lt;h2 id=&#34;function-searchbox&#34;&gt;Function: &lt;code&gt;{searchbox}&lt;/code&gt;&lt;/h2&gt;
@@ -1159,10 +1159,10 @@
     
     <item>
       <title>{text}</title>
-      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</link>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</guid>
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</guid>
       <description>
 
 &lt;h2 id=&#34;function-text&#34;&gt;Function: &lt;code&gt;{text}&lt;/code&gt;&lt;/h2&gt;

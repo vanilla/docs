@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Importing on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/importing/index.xml</link>
-    <description>Recent content in Importing on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/importing/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8081/tags/importing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/importing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building new porters</title>
-      <link>http://127.0.0.1:8081/developer/importing/build/</link>
+      <link>//docs.vanillaforums.com/developer/importing/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/build/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
       <description>
 
 &lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
@@ -28,10 +28,10 @@
     
     <item>
       <title>Importing</title>
-      <link>http://127.0.0.1:8081/developer/importing/</link>
+      <link>//docs.vanillaforums.com/developer/importing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/</guid>
       <description>
 
 &lt;h2 id=&#34;importing-to-vanilla&#34;&gt;Importing to Vanilla&lt;/h2&gt;
@@ -44,18 +44,18 @@
 
 &lt;p&gt;All imports will completely overwrite all data in your forum (including your users), so only import to a fresh forum installation that doesn&amp;rsquo;t have any data you want to save. We recommend backing up your Vanilla database first as an extra precaution.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8081/developer/importing/support&#34;&gt;Supported platforms &amp;amp; compatibility notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;//docs.vanillaforums.com/developer/importing/support&#34;&gt;Supported platforms &amp;amp; compatibility notes&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8081/developer/importing/porter&#34;&gt;Using Vanilla Porter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;//docs.vanillaforums.com/developer/importing/porter&#34;&gt;Using Vanilla Porter&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Supported platforms</title>
-      <link>http://127.0.0.1:8081/developer/importing/support/</link>
+      <link>//docs.vanillaforums.com/developer/importing/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/support/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/support/</guid>
       <description>
 
 &lt;h2 id=&#34;supported-platforms&#34;&gt;Supported platforms&lt;/h2&gt;
@@ -101,10 +101,10 @@
     
     <item>
       <title>Vanilla Porter</title>
-      <link>http://127.0.0.1:8081/developer/importing/porter/</link>
+      <link>//docs.vanillaforums.com/developer/importing/porter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/porter/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/porter/</guid>
       <description>
 
 &lt;h2 id=&#34;migrating-a-forum-to-vanilla&#34;&gt;Migrating a forum to Vanilla&lt;/h2&gt;
@@ -140,7 +140,7 @@
 
 &lt;h3 id=&#34;1-export-old-forum-data&#34;&gt;1. Export old forum data&lt;/h3&gt;
 
-&lt;p&gt;Vanlla Porter exports from a database to a special &amp;ldquo;Porter file&amp;rdquo; format that Vanilla can import. We currently support &lt;a href=&#34;http://127.0.0.1:8081/developer/importing/support&#34;&gt;these platforms&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vanlla Porter exports from a database to a special &amp;ldquo;Porter file&amp;rdquo; format that Vanilla can import. We currently support &lt;a href=&#34;//docs.vanillaforums.com/developer/importing/support&#34;&gt;these platforms&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you have a very large forum (millions of posts), see the &lt;strong&gt;Special Steps &amp;amp; Notes&lt;/strong&gt; below before beginning.&lt;/p&gt;
 
@@ -250,7 +250,7 @@ In &lt;code&gt;http://domain.com/forum/thread.php?id=10&amp;amp;pageNumber=2&lt;
 &lt;p&gt;Many legacy platform path redirects can be handled by the &lt;strong&gt;Redirector&lt;/strong&gt; plugin in the &lt;a href=&#34;https://github.com/vanilla/addons&#34;&gt;Addons repository&lt;/a&gt;.
 Simply enable the plugin. Check the description for what it supports currently.&lt;/p&gt;
 
-&lt;p&gt;You may also create custom redirects, as needed, using the &lt;a href=&#34;http://127.0.0.1:8081/developer/routes&#34;&gt;Routes&lt;/a&gt; feature in the Dashboard.
+&lt;p&gt;You may also create custom redirects, as needed, using the &lt;a href=&#34;//docs.vanillaforums.com/developer/routes&#34;&gt;Routes&lt;/a&gt; feature in the Dashboard.
 Regular expressions can be used to perform pattern matching against incoming paths which will allow you to 301 redirects to the new paths.&lt;/p&gt;
 
 &lt;p&gt;An example of a path redirect would be:

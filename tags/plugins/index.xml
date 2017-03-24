@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plugins on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/plugins/index.xml</link>
-    <description>Recent content in Plugins on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/plugins/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8081/tags/plugins/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/plugins/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Plugins</title>
-      <link>http://127.0.0.1:8081/developer/plugins/</link>
+      <link>//docs.vanillaforums.com/developer/plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/plugins/</guid>
+      <guid>//docs.vanillaforums.com/developer/plugins/</guid>
       <description>
 
 &lt;h2 id=&#34;extending-vanilla-with-plugins&#34;&gt;Extending Vanilla with plugins&lt;/h2&gt;
@@ -98,7 +98,7 @@ $this-&amp;gt;fireEvent(&#39;Kaboom&#39;);
 
 &lt;p&gt;Is your addon a bit more complex? Add a &lt;code&gt;controllers&lt;/code&gt; folder and add your own controller classes. They will automatically be detected and be dispatched to like normal controllers. This functionality is new in Vanilla 2.2.&lt;/p&gt;
 
-&lt;p&gt;As a reminder, controllers should extend Gdn_Controller. &lt;a href=&#34;http://127.0.0.1:8081/developer/framework/controllers&#34;&gt;Read more about controllers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As a reminder, controllers should extend Gdn_Controller. &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/controllers&#34;&gt;Read more about controllers&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;virtual-controller-deprecated&#34;&gt;Virtual Controller (deprecated)&lt;/h2&gt;
 

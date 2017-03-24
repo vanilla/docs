@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Staging on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/staging/index.xml</link>
-    <description>Recent content in Staging on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/staging/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://127.0.0.1:8081/tags/staging/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//docs.vanillaforums.com/tags/staging/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Staging Site</title>
-      <link>http://127.0.0.1:8081/help/cloud/staging/</link>
+      <link>//docs.vanillaforums.com/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/staging/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/staging/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -27,7 +27,7 @@
 
 &lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
 
-&lt;p&gt;We do not typically use your staging forum as the destination for your &lt;a href=&#34;http://127.0.0.1:8081/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. However, we can import a truncated dataset to your staging site for testing purposes. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support large staging datasets.&lt;/p&gt;
+&lt;p&gt;We do not typically use your staging forum as the destination for your &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. However, we can import a truncated dataset to your staging site for testing purposes. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support large staging datasets.&lt;/p&gt;
 
 &lt;h3 id=&#34;access-precautions&#34;&gt;Access precautions&lt;/h3&gt;
 
