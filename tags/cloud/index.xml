@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/cloud/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Cloud on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/cloud/index.xml</link>
+    <description>Recent content in Cloud on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://127.0.0.1:8081/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>2016 Cloud Releases</title>
-      <link>//docs.vanillaforums.com/help/releases/2016/</link>
+      <link>http://127.0.0.1:8081/help/releases/2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/releases/2016/</guid>
+      <guid>http://127.0.0.1:8081/help/releases/2016/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -338,10 +338,10 @@
     
     <item>
       <title>2017 Cloud Releases</title>
-      <link>//docs.vanillaforums.com/help/releases/2017/</link>
+      <link>http://127.0.0.1:8081/help/releases/2017/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/releases/2017/</guid>
+      <guid>http://127.0.0.1:8081/help/releases/2017/</guid>
       <description>
 
 &lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
@@ -449,14 +449,14 @@
     
     <item>
       <title>Code Repository</title>
-      <link>//docs.vanillaforums.com/help/cloud/repository/</link>
+      <link>http://127.0.0.1:8081/help/cloud/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/repository/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/repository/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -485,14 +485,14 @@
     
     <item>
       <title>Developer Support</title>
-      <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
+      <link>http://127.0.0.1:8081/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/developer-support/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -507,14 +507,14 @@
     
     <item>
       <title>Logging</title>
-      <link>//docs.vanillaforums.com/help/cloud/logging/</link>
+      <link>http://127.0.0.1:8081/help/cloud/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/logging/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/logging/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -567,14 +567,14 @@
     
     <item>
       <title>Migration</title>
-      <link>//docs.vanillaforums.com/help/cloud/migration/</link>
+      <link>http://127.0.0.1:8081/help/cloud/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/migration/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/migration/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -683,20 +683,20 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;p&gt;Most &lt;a href=&#34;http://docs.vanillaforums.com/features/sso/&#34;&gt;single sign-on services&lt;/a&gt; work by matching accounts based on email address. To work in this scenario, the authentication endpoint must construct (or have on record) an identical dummy email address. This allows the seamless authentication of the user against the correct account without using real personal info.&lt;/p&gt;
 
-&lt;p&gt;More information is available from our &lt;a href=&#34;https://vanillaforums.com/info/privacy&#34;&gt;Privacy Policy&lt;/a&gt; and our &lt;a href=&#34;//docs.vanillaforums.com/developer/data-privacy&#34;&gt;developer docs on data privacy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More information is available from our &lt;a href=&#34;https://vanillaforums.com/info/privacy&#34;&gt;Privacy Policy&lt;/a&gt; and our &lt;a href=&#34;http://127.0.0.1:8081/developer/data-privacy&#34;&gt;developer docs on data privacy&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Multisite</title>
-      <link>//docs.vanillaforums.com/help/multisite/</link>
+      <link>http://127.0.0.1:8081/help/multisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/multisite/</guid>
+      <guid>http://127.0.0.1:8081/help/multisite/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -713,7 +713,7 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;h3 id=&#34;the-hub&#34;&gt;The Hub&lt;/h3&gt;
 
-&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/multisite/sync&#34;&gt;synched&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
+&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;http://127.0.0.1:8081/help/cloud/multisite/sync&#34;&gt;synched&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
 
 &lt;p&gt;Each Node is accessible via either a subdomain &lt;em&gt;or&lt;/em&gt; a subfolder off a domain shared by the whole Hub. This is called the &lt;strong&gt;Hub URL Format&lt;/strong&gt;. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.&lt;/p&gt;
 
@@ -749,7 +749,7 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;h3 id=&#34;ssl-certificates&#34;&gt;SSL certificates&lt;/h3&gt;
 
-&lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;http://127.0.0.1:8081/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Additional Resources:&lt;/p&gt;
 
@@ -761,10 +761,10 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Multisite Sync</title>
-      <link>//docs.vanillaforums.com/help/multisite/sync/</link>
+      <link>http://127.0.0.1:8081/help/multisite/sync/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
+      <guid>http://127.0.0.1:8081/help/multisite/sync/</guid>
       <description>
 
 &lt;h2 id=&#34;hub-sync&#34;&gt;Hub Sync&lt;/h2&gt;
@@ -775,14 +775,14 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Premium Services</title>
-      <link>//docs.vanillaforums.com/help/cloud/</link>
+      <link>http://127.0.0.1:8081/help/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -797,10 +797,10 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Release Notes (Cloud)</title>
-      <link>//docs.vanillaforums.com/help/releases/</link>
+      <link>http://127.0.0.1:8081/help/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/releases/</guid>
+      <guid>http://127.0.0.1:8081/help/releases/</guid>
       <description>
 
 &lt;h2 id=&#34;cloud-release-schedule&#34;&gt;Cloud release schedule&lt;/h2&gt;
@@ -812,8 +812,8 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 &lt;p&gt;Full release notes:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/cloud/releases/2017&#34;&gt;2017 releases&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/cloud/releases/2016&#34;&gt;2016 VIP releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://127.0.0.1:8081/cloud/releases/2017&#34;&gt;2017 releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://127.0.0.1:8081/cloud/releases/2016&#34;&gt;2016 VIP releases&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;2017-vip-releases&#34;&gt;2017 VIP releases&lt;/h3&gt;
@@ -830,14 +830,14 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Staging Site</title>
-      <link>//docs.vanillaforums.com/help/cloud/staging/</link>
+      <link>http://127.0.0.1:8081/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/staging/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/staging/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -848,7 +848,7 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;h3 id=&#34;test-data&#34;&gt;Test data&lt;/h3&gt;
 
-&lt;p&gt;We do not typically use your staging forum as the destination for your &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. However, we can import a truncated dataset to your staging site for testing purposes. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support large staging datasets.&lt;/p&gt;
+&lt;p&gt;We do not typically use your staging forum as the destination for your &lt;a href=&#34;http://127.0.0.1:8081/help/cloud/migration&#34;&gt;test migration&lt;/a&gt;. However, we can import a truncated dataset to your staging site for testing purposes. The infrastructure resources dedicated to staging are understandably limited, so we don&amp;rsquo;t support large staging datasets.&lt;/p&gt;
 
 &lt;h3 id=&#34;access-precautions&#34;&gt;Access precautions&lt;/h3&gt;
 
@@ -868,14 +868,14 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
     
     <item>
       <title>Support</title>
-      <link>//docs.vanillaforums.com/help/cloud/support/</link>
+      <link>http://127.0.0.1:8081/help/cloud/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/cloud/support/</guid>
+      <guid>http://127.0.0.1:8081/help/cloud/support/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;

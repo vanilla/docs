@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/addons/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Addons on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/addons/index.xml</link>
+    <description>Recent content in Addons on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/addons/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://127.0.0.1:8081/tags/addons/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
+      <link>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -53,10 +53,10 @@
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>
 
 &lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
@@ -118,14 +118,14 @@
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
+      <link>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -136,7 +136,7 @@
 
 &lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
 
@@ -158,7 +158,7 @@
 
 &lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
 
@@ -170,10 +170,10 @@
     
     <item>
       <title>Advanced Search</title>
-      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
+      <link>http://127.0.0.1:8081/help/addons/advanced-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
+      <guid>http://127.0.0.1:8081/help/addons/advanced-search/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -234,17 +234,17 @@
     
     <item>
       <title>Analytics</title>
-      <link>//docs.vanillaforums.com/help/analytics/</link>
+      <link>http://127.0.0.1:8081/help/analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/analytics/</guid>
+      <guid>http://127.0.0.1:8081/help/analytics/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
 
 &lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;how-to-use-vanilla-statistics&#34;&gt;How to use Vanilla Statistics&lt;/h2&gt;
 
@@ -282,10 +282,10 @@
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>
 
 &lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
@@ -300,14 +300,14 @@
     
     <item>
       <title>Badges</title>
-      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
+      <link>http://127.0.0.1:8081/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -336,14 +336,14 @@
     
     <item>
       <title>Curating with Reactions</title>
-      <link>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</link>
+      <link>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -382,10 +382,10 @@
     
     <item>
       <title>Facebook</title>
-      <link>//docs.vanillaforums.com/help/addons/social/facebook/</link>
+      <link>http://127.0.0.1:8081/help/addons/social/facebook/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/social/facebook/</guid>
+      <guid>http://127.0.0.1:8081/help/addons/social/facebook/</guid>
       <description>
 
 &lt;h2 id=&#34;facebook&#34;&gt;Facebook&lt;/h2&gt;
@@ -406,10 +406,10 @@
     
     <item>
       <title>Forum Merge</title>
-      <link>//docs.vanillaforums.com/help/addons/forum-merge/</link>
+      <link>http://127.0.0.1:8081/help/addons/forum-merge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/forum-merge/</guid>
+      <guid>http://127.0.0.1:8081/help/addons/forum-merge/</guid>
       <description>
 
 &lt;h2 id=&#34;when-to-use-forum-merge&#34;&gt;When to Use Forum Merge&lt;/h2&gt;
@@ -461,10 +461,10 @@
     
     <item>
       <title>Gigya Sign In</title>
-      <link>//docs.vanillaforums.com/help/addons/gigya/</link>
+      <link>http://127.0.0.1:8081/help/addons/gigya/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/gigya/</guid>
+      <guid>http://127.0.0.1:8081/help/addons/gigya/</guid>
       <description>
 
 &lt;h2 id=&#34;gigya-sign-in&#34;&gt;Gigya Sign In&lt;/h2&gt;
@@ -505,10 +505,10 @@
     
     <item>
       <title>Github</title>
-      <link>//docs.vanillaforums.com/help/integrations/github/</link>
+      <link>http://127.0.0.1:8081/help/integrations/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/integrations/github/</guid>
+      <guid>http://127.0.0.1:8081/help/integrations/github/</guid>
       <description>
 
 &lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
@@ -529,14 +529,14 @@
     
     <item>
       <title>Giving and Requesting Badges</title>
-      <link>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</link>
+      <link>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</guid>
+      <guid>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</guid>
       <description>
 
 &lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;img src=&#34;http://127.0.0.1:8081/img/help/cloud.png&#34; /&gt;
     &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
@@ -574,10 +574,10 @@
     
     <item>
       <title>Google Plus</title>
-      <link>//docs.vanillaforums.com/help/addons/social/googleplus/</link>
+      <link>http://127.0.0.1:8081/help/addons/social/googleplus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/social/googleplus/</guid>
+      <guid>http://127.0.0.1:8081/help/addons/social/googleplus/</guid>
       <description>
 
 &lt;h2 id=&#34;google-plus&#34;&gt;Google Plus&lt;/h2&gt;
@@ -598,16 +598,16 @@
 &lt;li&gt;If you have never used Google APIs before you will also need to fill in Consent Screen.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/social/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:8081/img/help/addons/social/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Groups</title>
-      <link>//docs.vanillaforums.com/help/addons/groups/</link>
+      <link>http://127.0.0.1:8081/help/addons/groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/addons/groups/</guid>
+      <guid>http://127.0.0.1:8081/help/addons/groups/</guid>
       <description>
 
 &lt;h2 id=&#34;what-are-groups&#34;&gt;What are Groups?&lt;/h2&gt;
