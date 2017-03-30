@@ -19,6 +19,51 @@
 
 &lt;p&gt;Quarterly VIP releases contain all numbered releases within said quarter.&lt;/p&gt;
 
+&lt;h3 id=&#34;q1-release-6-thursday-mar-30&#34;&gt;Q1 release 6 (Thursday, Mar 30)&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;This is the cutoff for the spring release for VIPs. All Q1 changes below are included in it.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Customize Theme: Create a CSS-only saving mode to avoid template overwrites whenever possible.&lt;/li&gt;
+&lt;li&gt;Reporting: Use the Reactions.Flag.Add permission to know if we can report a post.&lt;/li&gt;
+&lt;li&gt;Categories: Fix setting default category on a new discussion when categories are disabled.&lt;/li&gt;
+&lt;li&gt;Categories: Fix issues with last post calculations that arose from recent optimizations.&lt;/li&gt;
+&lt;li&gt;Comments: Prevent use of embedded comments if embedding is not enabled globally.&lt;/li&gt;
+&lt;li&gt;Profiles: Fix user comment and discussion counts not being updated when posts restored.&lt;/li&gt;
+&lt;li&gt;Profiles: Remove inline styles on upload picture button.&lt;/li&gt;
+&lt;li&gt;SSO: Fix connections that trigger spam filters to be handled correctly on our side.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Ensure that cannonical URLs respect the default subcommunity.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fixed interaction with Sitemap addon so that sitemap indexes are built correctly (1 per each subcommunity).&lt;/li&gt;
+&lt;li&gt;Mentions: Fix possible HTML conflicts.&lt;/li&gt;
+&lt;li&gt;MeModule: Fix arrow and alerts in settings dropdown.&lt;/li&gt;
+&lt;li&gt;Messages: Fix Message toggle not removing/adding message immediately.&lt;/li&gt;
+&lt;li&gt;Ideation: Make ideas restore from queues correctly.&lt;/li&gt;
+&lt;li&gt;Formatting: Stop adding target=&amp;rdquo;_blank&amp;rdquo; to links by default. Previously it was done inconsistently depending on formatter and other conditions. We have an addon available if this is something you want to enforce (Link Types).&lt;/li&gt;
+&lt;li&gt;Formatting: Update htmLawed (the HTML purifier library) to 1.2.&lt;/li&gt;
+&lt;li&gt;Formatting: Add option to send users to &amp;ldquo;Leaving&amp;rdquo; page when clicking external links.&lt;/li&gt;
+&lt;li&gt;Avatar Pool: Add option to name avatars.&lt;/li&gt;
+&lt;li&gt;Zendesk: Update API endpoint usage. This fixes several potential issues with the integration as the old API was deprecated.&lt;/li&gt;
+&lt;li&gt;VanillaPop: Collapse newlines in comment emails.&lt;/li&gt;
+&lt;li&gt;Profile Extender: Fix potential user duplication in CSV exports.&lt;/li&gt;
+&lt;li&gt;Warnings: Add tooltip to the Warning link.&lt;/li&gt;
+&lt;li&gt;Disqus:  Remove redirect_uri to comply with their new security rules. This may mean some users do not return to exactly the page they started on after signing in.&lt;/li&gt;
+&lt;li&gt;Trusted Domains: Add optionally explicit wildcard matching for subdomains.&lt;/li&gt;
+&lt;li&gt;Private Communities: Make login error messages purposefully obscure to prevent sniffing of usernames. There is a reasonable expectation of privacy when an entire community is set to &amp;ldquo;Private&amp;rdquo; mode that does not otherwise exist.&lt;/li&gt;
+&lt;li&gt;Advanced Stats: Add deprecated warning in dashboard. Our Analytics system replaced this old addon a while ago. It will go away completely after June 1.&lt;/li&gt;
+&lt;li&gt;Tagging: Reworked as a core feature because other addons rely on it. The addon now only toggles &amp;ldquo;discussion tagging&amp;rdquo; for users.&lt;/li&gt;
+&lt;li&gt;Themes: Improve filtering of themes in the Dashboard to avoid showing unwanted themes.&lt;/li&gt;
+&lt;li&gt;Install: Generate updated default discussions on a fresh forum. We rewrote all our stub content and added more to help new forum owners.&lt;/li&gt;
+&lt;li&gt;Install: Use utf8mb4 encoding by default (native emoji-ready!) on a fresh forum. Existing forums will not get this update at this time.&lt;/li&gt;
+&lt;li&gt;Framework: Rework the event manager, schema &amp;amp; routing objects, and added dependency injection for API v2.&lt;/li&gt;
+&lt;li&gt;Framework: Clear the addon cache automatically.&lt;/li&gt;
+&lt;li&gt;Framework: Finish migration of all dependencies to Composer.&lt;/li&gt;
+&lt;li&gt;Framework: Add missed translation on notFoundException.&lt;/li&gt;
+&lt;li&gt;Security: Fix scenario where a seamless, embedded SSO connection with jsConnect could be compromised.&lt;/li&gt;
+&lt;li&gt;Security: Make multiple, low-priority enhancements identified via secure audits.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Q1 release 5 was skipped.&lt;/em&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;q1-release-4-wednesday-mar-1&#34;&gt;Q1 release 4 (Wednesday, Mar 1)&lt;/h3&gt;
 
 &lt;ul&gt;

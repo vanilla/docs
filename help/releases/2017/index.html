@@ -303,6 +303,51 @@ n.id = i;
 
 <p>Quarterly VIP releases contain all numbered releases within said quarter.</p>
 
+<h3 id="q1-release-6-thursday-mar-30">Q1 release 6 (Thursday, Mar 30)</h3>
+
+<p><em>This is the cutoff for the spring release for VIPs. All Q1 changes below are included in it.</em></p>
+
+<ul>
+<li>Customize Theme: Create a CSS-only saving mode to avoid template overwrites whenever possible.</li>
+<li>Reporting: Use the Reactions.Flag.Add permission to know if we can report a post.</li>
+<li>Categories: Fix setting default category on a new discussion when categories are disabled.</li>
+<li>Categories: Fix issues with last post calculations that arose from recent optimizations.</li>
+<li>Comments: Prevent use of embedded comments if embedding is not enabled globally.</li>
+<li>Profiles: Fix user comment and discussion counts not being updated when posts restored.</li>
+<li>Profiles: Remove inline styles on upload picture button.</li>
+<li>SSO: Fix connections that trigger spam filters to be handled correctly on our side.</li>
+<li>Subcommunities: Ensure that cannonical URLs respect the default subcommunity.</li>
+<li>Subcommunities: Fixed interaction with Sitemap addon so that sitemap indexes are built correctly (1 per each subcommunity).</li>
+<li>Mentions: Fix possible HTML conflicts.</li>
+<li>MeModule: Fix arrow and alerts in settings dropdown.</li>
+<li>Messages: Fix Message toggle not removing/adding message immediately.</li>
+<li>Ideation: Make ideas restore from queues correctly.</li>
+<li>Formatting: Stop adding target=&rdquo;_blank&rdquo; to links by default. Previously it was done inconsistently depending on formatter and other conditions. We have an addon available if this is something you want to enforce (Link Types).</li>
+<li>Formatting: Update htmLawed (the HTML purifier library) to 1.2.</li>
+<li>Formatting: Add option to send users to &ldquo;Leaving&rdquo; page when clicking external links.</li>
+<li>Avatar Pool: Add option to name avatars.</li>
+<li>Zendesk: Update API endpoint usage. This fixes several potential issues with the integration as the old API was deprecated.</li>
+<li>VanillaPop: Collapse newlines in comment emails.</li>
+<li>Profile Extender: Fix potential user duplication in CSV exports.</li>
+<li>Warnings: Add tooltip to the Warning link.</li>
+<li>Disqus:  Remove redirect_uri to comply with their new security rules. This may mean some users do not return to exactly the page they started on after signing in.</li>
+<li>Trusted Domains: Add optionally explicit wildcard matching for subdomains.</li>
+<li>Private Communities: Make login error messages purposefully obscure to prevent sniffing of usernames. There is a reasonable expectation of privacy when an entire community is set to &ldquo;Private&rdquo; mode that does not otherwise exist.</li>
+<li>Advanced Stats: Add deprecated warning in dashboard. Our Analytics system replaced this old addon a while ago. It will go away completely after June 1.</li>
+<li>Tagging: Reworked as a core feature because other addons rely on it. The addon now only toggles &ldquo;discussion tagging&rdquo; for users.</li>
+<li>Themes: Improve filtering of themes in the Dashboard to avoid showing unwanted themes.</li>
+<li>Install: Generate updated default discussions on a fresh forum. We rewrote all our stub content and added more to help new forum owners.</li>
+<li>Install: Use utf8mb4 encoding by default (native emoji-ready!) on a fresh forum. Existing forums will not get this update at this time.</li>
+<li>Framework: Rework the event manager, schema &amp; routing objects, and added dependency injection for API v2.</li>
+<li>Framework: Clear the addon cache automatically.</li>
+<li>Framework: Finish migration of all dependencies to Composer.</li>
+<li>Framework: Add missed translation on notFoundException.</li>
+<li>Security: Fix scenario where a seamless, embedded SSO connection with jsConnect could be compromised.</li>
+<li>Security: Make multiple, low-priority enhancements identified via secure audits.</li>
+</ul>
+
+<p><em>Q1 release 5 was skipped.</em></p>
+
 <h3 id="q1-release-4-wednesday-mar-1">Q1 release 4 (Wednesday, Mar 1)</h3>
 
 <ul>
