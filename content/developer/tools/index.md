@@ -11,13 +11,13 @@ aliases:
 ---
 ## Developer Tools
 
-Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem.
+Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All our developers use MacOS.
 
 ### Stacks Supported
 
 * PHP 5.6 - 7.1 (as of Vanilla 2.5)
 * Unix, Windows, or OSX
-* nginx, Apache, or IIS
+* [nginx, Apache, or IIS](http://docs.vanillaforums.com/developer/backend/)
 * MySQL, Percona, or MariaDB
 
 ### Cloud Stack
@@ -26,7 +26,7 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * nginx
 * Percona
 * Varnish
-* memcached
+* [memcached](http://docs.vanillaforums.com/developer/backend/)
 * Zend OPcache
 * Sphinx
 * OpenStack
@@ -37,14 +37,14 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * git
 * xdebug
 * PHPUnit
-* Composer
+* [Composer](https://github.com/vanilla/vanilla/blob/master/composer.json)
 * Hub
-* CodeSniffer
-* Phing
+* [CodeSniffer](https://github.com/vanilla/standards)
+* [Phing](https://github.com/vanilla/vanilla#building-with-phing)
 * Travis CI
 * Scrutinizer
 
-### Frontend Build
+### [Frontend Build](https://github.com/vanilla/vanilla/tree/master/applications/dashboard)
 
 * Sass
 * SCSS-Lint
@@ -53,7 +53,7 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 
 ### Libraries
 
-* Garden (our custom libraries on GitHub)
+* [Garden](https://github.com/vanilla?q=garden) (our custom libraries on GitHub)
 * PHPMailer
 * HtmLawed
 * jQuery
@@ -64,7 +64,7 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 
 ### Management
 
-* GitHub
+* [GitHub](https://github.com/vanilla)
 * Transifex (translations)
 * ZenHub (sprints)
 * HipChat
