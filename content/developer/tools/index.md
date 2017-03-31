@@ -13,69 +13,73 @@ aliases:
 
 Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem.
 
-### Languages, Standards & Formats
+### Stacks Supported
 
-* PHP & MySQL
-* Javascript
-* HTML & CSS
-* Smarty
-* Markdown & BBCode
-* JSON & XML
-* RSS & Atom
-
-### Open Tools
-
-* git & GitHub
-* xdebug
-* PHPUnit
-* Composer
-* Hub
-* jQuery
-* Sass & Less
-* HtmLawed
-* CodeSniffer
-* PHPMailer
-
-### Internal Tools
-
-* HipChat
-* TeamworkPM
-* Transifex
-* Google Docs
-* Garden HTTP
-* Garden Console
-* Vanilla Porter
-* Lithe mobile theme
-* Minion forumbot
-* Jarvis chatbot
+* PHP 5.6 - 7.1 (as of Vanilla 2.5)
+* Unix, Windows, or OSX
+* nginx, Apache, or IIS
+* MySQL, Percona, or MariaDB
 
 ### Cloud Stack
 
-* OpenStack
-* PHP 5.5
+* PHP 7.1
 * nginx
 * Percona
 * Varnish
 * memcached
 * Zend OPcache
 * Sphinx
+* OpenStack
 
-### Stacks Supported
+### Developer Tools
 
-* Unix, Windows, or OSX
-* nginx, Apache, or IIS
-* MySQL, Percona, or MariaDB
-* PHP 5.3 - 5.6 (as of Vanilla 2.2)
+* homebrew
+* git
+* xdebug
+* PHPUnit
+* Composer
+* Hub
+* CodeSniffer
+* Phing
+* Travis CI
+* Scrutinizer
 
-### Common Dev Apps
+### Frontend Build
 
-* PhpStorm or NetBeans
-* Sequel Pro
+* Sass
+* SCSS-Lint
+* Yarn
+* Node.js
+
+### Libraries
+
+* Garden (our custom libraries on GitHub)
+* PHPMailer
+* HtmLawed
+* jQuery
+* NBBC
+* YAML
+* Smarty
+* PHP Markdown
+
+### Management
+
+* GitHub
+* Transifex (translations)
+* ZenHub (sprints)
+* HipChat
+* Jarvis (chatbot)
+* CLA Assistant
+
+### Applications
+
+* PhpStorm or NetBeans (IDEs)
+* Sequel Pro (SQL manager)
 * Keka or YemuZip
-* MacDown or Mou
-* Kaleidoscope
+* MacDown or Mou (Markdown editor)
+* Kaleidoscope (diff tool)
 * Postman (Chrome App)
-* Balsamiq
+* Balsamiq (mockups)
 * 1Password
-* DeckSet
+* DeckSet (presentations using Markdown)
 
