@@ -377,7 +377,58 @@ n.id = i;
 
             
 
-                <p>Pockets is currently documented in this blog post: <a href="http://blog.vanillaforums.com/help/pockets-banner-ads/">http://blog.vanillaforums.com/help/pockets-banner-ads/</a></p>
+                
+
+<h2 id="overview">Overview</h2>
+
+<p>Pockets add areas to your forum where you can inject custom HTML or Javascript into your theme. It is a powerful tool that makes Vanilla flexible for ad placement, google analytics, and other small customizations.</p>
+
+<p>Pockets are designed to be used by advanced users and developers who can write and review their own code.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>Pockets is available on all plan levels. To activate it, simply locate it in your addon list (<code>/dashboard/settings/addons</code>) and toggle it on. It will then be available in the &ldquo;settings&rdquo; tab of your dashboard, listed under &ldquo;Appearance&rdquo; in the left side menu. You can navigate to the page directly by going to <code>/settings/pockets</code></p>
+
+<h2 id="working-with-pockets">Working With Pockets</h2>
+
+<p>Once you navigate to the new Pockets menu in your Dashboard, you’ll have two options immediately available - “Add Pocket” and “Enable Pocket Locations.”</p>
+
+<h3 id="enable-pocket-locations">Enable Pocket Locations</h3>
+
+<p>Before you work with pockets, you need to know where the specific locations will appear on the front end of your community. Toggling this option on will allow you to see all the places where a pocket is available. Only users with the permission to add/edit pockets will be able to see the Pocket Locations while this setting is on.</p>
+
+<p><img src="https://images.v-cdn.net/docs/Pockets_ViewPockets.png" alt="A Community with Pocket locations enabled" /></p>
+
+<h3 id="add-pocket">Add Pocket</h3>
+
+<p>Once you know where the locations are, you can add a pocket and choose where to set it.</p>
+
+<p><img src="https://images.v-cdn.net/docs/Pockets_AddPocket.png" alt="The ‘Add Pocket’ button, as displayed in the Dashboard" /></p>
+
+<p>Creating a pocket will present you with its settings page. First, there is a toggle for enabling the pocket. An individual pocket can be left disabled, which is useful for temporary ads, and testing. Below that you can name the pocket and place your code into the body field.</p>
+
+<h3 id="additional-settings">Additional Settings</h3>
+
+<p><strong>Page:</strong> By default, a new pocket will be set to occupy the selected placeholder on every page of your community.  If you’d rather it only work in certain areas, you can narrow the location down by using the drop-down menu and selecting a specific area of your forum - such as user profile pages or the inbox.</p>
+
+<p><strong>Location:</strong>  Each placeholder has a specific location in your community, as shown when &ldquo;Enable Pocket Locations&rdquo; is active. In this drop-down menu, you are able to select exactly where you want the pocket to appear.</p>
+
+<p><strong>Repeat:</strong> If you’d like your Pocket to only work when certain conditions are met, you’re able to set those here.  You can set it so it reacts before or after a condition occurs, or to repeat at a given frequency. It’s also possible to have a Pocket occur within a group of given indexes.</p>
+
+<p><strong>Test Mode:</strong> Before you save your Pocket and have it go live to everyone in your community, you can toggle this switch so the Pocket will only be seen by administrators with permission to edit Pockets. Once you’re satisfied that the Pocket is working as expected, you can toggle Test Mode off and save again, pushing the Pocket out to the public.</p>
+
+<h2 id="debugging">Debugging</h2>
+
+<p>It’s important to note that Pockets should be reserved for advanced users. JavaScript errors and incorrect HTML can cause conflicts with Vanilla&rsquo;s functionality. Debugging code in Pockets is out side the scope of support, so you must be able to resolve your own errors. Use test mode when trying out new things, and disable pockets if you suspect they are causing issues. Rotating ads are a common issue, so be diligent.</p>
+
+<h2 id="additional-resources">Additional Resources:</h2>
+
+<ul>
+<li><a href="https://blog.vanillaforums.com/help/power-pockets-adding-custom-html-js-vanilla-forum/#more-6244">Pockets: Adding Custom HTML and Javascript to Your Vanilla Forum</a></li>
+<li><a href="https://blog.vanillaforums.com/help/adding-analytics-to-your-community/">Adding Analytics To Your Community</a></li>
+<li><a href="https://blog.vanillaforums.com/help/pockets-banner-ads/">Using Pockets For Banner Ads</a></li>
+<li><a href="https://blog.vanillaforums.com/help/going-ad-free-pockets/#more-7727">Going Ad-Free with Pockets</a></li>
+</ul>
 
 
             
