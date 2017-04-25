@@ -34,17 +34,6 @@ To add additional CSS to the existing base Vanilla CSS file:
 
 This CSS file is added after the base CSS file and all other plugin and application-specific CSS files.
 
-#### Overriding the base CSS
-
-This option should be used only if you know what you're doing. To completely override the existing base Vanilla CSS file:
-
-1. Create a new file called style.css
-2. Place it in the design folder in your theme folder (i.e., /themes/your_theme_name/design/style.css)
-
-Starting from scratch can be a daunting task so you may want to copy the existing base CSS from /applications/dashboard/design/style.css into your new style.css file and then edit the existing CSS.
-
-This CSS file is added before the plugin and application-specific CSS files. You may still want a custom.css file to override CSS rules in the plugin and application-specific CSS files.
-
 ### Tips and troubleshooting
 
 Here are a few gotchas that can occur when styling Vanilla.
