@@ -366,19 +366,6 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 
 &lt;p&gt;This CSS file is added after the base CSS file and all other plugin and application-specific CSS files.&lt;/p&gt;
 
-&lt;h4 id=&#34;overriding-the-base-css&#34;&gt;Overriding the base CSS&lt;/h4&gt;
-
-&lt;p&gt;This option should be used only if you know what you&amp;rsquo;re doing. To completely override the existing base Vanilla CSS file:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a new file called style.css&lt;/li&gt;
-&lt;li&gt;Place it in the design folder in your theme folder (i.e., /themes/your_theme_name/design/style.css)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Starting from scratch can be a daunting task so you may want to copy the existing base CSS from /applications/dashboard/design/style.css into your new style.css file and then edit the existing CSS.&lt;/p&gt;
-
-&lt;p&gt;This CSS file is added before the plugin and application-specific CSS files. You may still want a custom.css file to override CSS rules in the plugin and application-specific CSS files.&lt;/p&gt;
-
 &lt;h3 id=&#34;tips-and-troubleshooting&#34;&gt;Tips and troubleshooting&lt;/h3&gt;
 
 &lt;p&gt;Here are a few gotchas that can occur when styling Vanilla.&lt;/p&gt;
