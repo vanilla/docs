@@ -6,7 +6,7 @@ category: developer
 menu:
   developer:
     parent: theming
-    weight: 60
+    weight: 70
 aliases:
 - /theming/themeoptions
 ---
@@ -16,7 +16,7 @@ This is a rather advanced theme configuration and is often unnecessary but can b
 
 You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme's design folder. You can also allow an admin to add custom text to your theme.
 
-This functionality can be added simply by editing your theme's about.php file by adding an 'Options' key to your theme info array with an array as its value. The content of the 'Options' array is discussed below.
+This functionality can be added simply by editing your theme's [about.php]({{< relref "developer/theming/about-php.md" >}}) file by adding an 'Options' key to your theme info array with an array as its value. The content of the 'Options' array is discussed below.
 
 ### Choosing Between Stylesheets
 

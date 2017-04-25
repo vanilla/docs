@@ -6,15 +6,17 @@ category: developer
 menu:
   developer:
     parent: theming
-    weight: 60
+    weight: 80
 aliases:
 - /theming/visibility
 ---
 
 {{% cloudfeature %}}
 
+If you've got [Vanilla Cloud](http://vanillaforums.com), custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners. 
 
-In order of importance, here are the rules for a theme to be visible:
+
+**In order of importance**, here are the rules for a theme to be visible:
 
 
 ## Method 1:
@@ -28,7 +30,7 @@ You can add multiple sites by separating sites with a comma. **This method is di
 
 ## Method 2:
 
-In the **about.php** file, you can set the theme's visibility with **Hidden**. 
+In the [about.php]({{< relref "developer/theming/about-php.md" >}}) file, you can set the theme's visibility with **Hidden**. 
 
 Example:
 
