@@ -291,6 +291,14 @@ n.id = i;
 	    
 	    
                 <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
                     <a href="//docs.vanillaforums.com/developer/theming/themeoptions/">Theme Options </a>
                 </li>
                 
@@ -361,18 +369,6 @@ n.id = i;
 
 <p>You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our <a href="https://blog.vanillaforums.com/tag/fridaytips/">blog</a>.</p>
 
-<h3 id="adding-css-to-your-theme">Adding CSS to your theme</h3>
-
-<p>There are two options for adding CSS to your theme in our open source version. You can completely override the existing base CSS file (style.css) or you can add an additional CSS file (custom.css) that gets added after the base CSS file.</p>
-
-<p>Especially for beginners or new Vanilla users, adding an additional CSS file (custom.css) is is often preferable to completely overriding the base CSS for a number of reasons:</p>
-
-<ol>
-<li>Support: Any upgrades to the base CSS file will still be applied to your theme.</li>
-<li>Completeness: There will still be styling applied to anything missed by your new CSS file.</li>
-<li>Clarity: It&rsquo;s easier for you to see what your specific customizations to Vanilla are, as they are self-contained in custom.css.</li>
-</ol>
-
 <h4 id="adding-additional-css">Adding additional CSS</h4>
 
 <p>To add additional CSS to the existing base Vanilla CSS file:</p>
@@ -390,7 +386,7 @@ n.id = i;
 
 <h4 id="layouts">Layouts</h4>
 
-<p>Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&rsquo;s best to decide which layout you&rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&rsquo;s Homepage section. You can also specify your theme&rsquo;s layout in the $ThemeInfo array in your theme&rsquo;s about.php file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a <code>Layout</code> key with content looking like this:</p>
+<p>Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&rsquo;s best to decide which layout you&rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&rsquo;s Homepage section. You can also specify your theme&rsquo;s layout in the $ThemeInfo array in your theme&rsquo;s <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php</a> file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a <code>Layout</code> key with content looking like this:</p>
 
 <pre><code class="language-php">'Layout' =&gt; [
     'Discussions' =&gt; 'table',

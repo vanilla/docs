@@ -21,18 +21,6 @@
 
 &lt;p&gt;You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our &lt;a href=&#34;https://blog.vanillaforums.com/tag/fridaytips/&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;adding-css-to-your-theme&#34;&gt;Adding CSS to your theme&lt;/h3&gt;
-
-&lt;p&gt;There are two options for adding CSS to your theme in our open source version. You can completely override the existing base CSS file (style.css) or you can add an additional CSS file (custom.css) that gets added after the base CSS file.&lt;/p&gt;
-
-&lt;p&gt;Especially for beginners or new Vanilla users, adding an additional CSS file (custom.css) is is often preferable to completely overriding the base CSS for a number of reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Support: Any upgrades to the base CSS file will still be applied to your theme.&lt;/li&gt;
-&lt;li&gt;Completeness: There will still be styling applied to anything missed by your new CSS file.&lt;/li&gt;
-&lt;li&gt;Clarity: It&amp;rsquo;s easier for you to see what your specific customizations to Vanilla are, as they are self-contained in custom.css.&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;h4 id=&#34;adding-additional-css&#34;&gt;Adding additional CSS&lt;/h4&gt;
 
 &lt;p&gt;To add additional CSS to the existing base Vanilla CSS file:&lt;/p&gt;
@@ -50,7 +38,7 @@
 
 &lt;h4 id=&#34;layouts&#34;&gt;Layouts&lt;/h4&gt;
 
-&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&amp;rsquo;s Homepage section. You can also specify your theme&amp;rsquo;s layout in the $ThemeInfo array in your theme&amp;rsquo;s about.php file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a &lt;code&gt;Layout&lt;/code&gt; key with content looking like this:&lt;/p&gt;
+&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&amp;rsquo;s Homepage section. You can also specify your theme&amp;rsquo;s layout in the $ThemeInfo array in your theme&amp;rsquo;s &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a &lt;code&gt;Layout&lt;/code&gt; key with content looking like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Layout&#39; =&amp;gt; [
     &#39;Discussions&#39; =&amp;gt; &#39;table&#39;,
@@ -356,10 +344,11 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;ol&gt;
 &lt;li&gt;Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: &lt;code&gt;/themes/your_theme_name&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Open the about.php file and edit the information to reflect your theme&amp;rsquo;s information.&lt;/li&gt;
+&lt;li&gt;Create an &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file and edit the information to reflect your theme&amp;rsquo;s information.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;ve got &lt;a href=&#34;http://vanillaforums.com&#34;&gt;Vanilla Cloud&lt;/a&gt;, make sure to also &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/themevisibility/&#34;&gt;set your theme&amp;rsquo;s visibility&lt;/a&gt;. If not, skip this step.&lt;/li&gt;
 &lt;li&gt;Create a custom.css file in the &amp;ldquo;design&amp;rdquo; folder of your custom theme.&lt;/li&gt;
-&lt;li&gt;Go to your Dashboard &amp;gt; Themes, and apply your new theme.&lt;/li&gt;
-&lt;li&gt;Edit the custom.css file to your heart&amp;rsquo;s content. The custom.css file is added &lt;em&gt;after&lt;/em&gt; the base theme&amp;rsquo;s css. Alternately, you can completely replace the base theme file (style.css) by copying it from the &lt;code&gt;/applications/dashboard/design&lt;/code&gt; folder into your theme&amp;rsquo;s design folder.&lt;/li&gt;
+&lt;li&gt;Go to your Dashboard &amp;gt; Themes, and apply your new theme. If you don&amp;rsquo;t see it, delete the &lt;strong&gt;theme-index.php&lt;/strong&gt; in the &lt;strong&gt;cache&lt;/strong&gt; folder.&lt;/li&gt;
+&lt;li&gt;Edit the custom.css file to your heart&amp;rsquo;s content!&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Learn more by reading our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/css&#34;&gt;Theming with CSS&lt;/a&gt;&lt;/p&gt;
@@ -390,6 +379,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;ul&gt;
 &lt;li&gt;The administrative screens have their own master view. If you want to change their master view, copy the &lt;code&gt;/applications/dashboard/views/admin.master.php&lt;/code&gt; file to &lt;code&gt;/themes/your_theme_name/views/admin.master.php&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You can add a custom thumbnail by adding a png called &amp;ldquo;screenshot.png&amp;rdquo; in your theme root. 220px wide and 165px high is a good size.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -689,7 +679,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&amp;rsquo;s design folder. You can also allow an admin to add custom text to your theme.&lt;/p&gt;
 
-&lt;p&gt;This functionality can be added simply by editing your theme&amp;rsquo;s about.php file by adding an &amp;lsquo;Options&amp;rsquo; key to your theme info array with an array as its value. The content of the &amp;lsquo;Options&amp;rsquo; array is discussed below.&lt;/p&gt;
+&lt;p&gt;This functionality can be added simply by editing your theme&amp;rsquo;s &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file by adding an &amp;lsquo;Options&amp;rsquo; key to your theme info array with an array as its value. The content of the &amp;lsquo;Options&amp;rsquo; array is discussed below.&lt;/p&gt;
 
 &lt;h3 id=&#34;choosing-between-stylesheets&#34;&gt;Choosing Between Stylesheets&lt;/h3&gt;
 
@@ -777,7 +767,9 @@ if (!function_exists(&#39;filterCountString&#39;)) {
     &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
 &lt;/p&gt;&lt;/aside&gt;
 
-&lt;p&gt;In order of importance, here are the rules for a theme to be visible:&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve got &lt;a href=&#34;http://vanillaforums.com&#34;&gt;Vanilla Cloud&lt;/a&gt;, custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In order of importance&lt;/strong&gt;, here are the rules for a theme to be visible:&lt;/p&gt;
 
 &lt;h2 id=&#34;method-1&#34;&gt;Method 1:&lt;/h2&gt;
 
@@ -790,7 +782,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;h2 id=&#34;method-2&#34;&gt;Method 2:&lt;/h2&gt;
 
-&lt;p&gt;In the &lt;strong&gt;about.php&lt;/strong&gt; file, you can set the theme&amp;rsquo;s visibility with &lt;strong&gt;Hidden&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In the &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file, you can set the theme&amp;rsquo;s visibility with &lt;strong&gt;Hidden&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Example:&lt;/p&gt;
 
@@ -1016,6 +1008,97 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
     </item>
     
     <item>
+      <title>about.php</title>
+      <link>//docs.vanillaforums.com/developer/theming/about-php/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/about-php/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-about-php-file&#34;&gt;The &amp;ldquo;about.php&amp;rdquo; file&lt;/h2&gt;
+
+&lt;p&gt;Each theme has an about.php file that contains some important information for Vanilla. Put this file in your theme root.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a sample file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+$ThemeInfo[&#39;ExampleTheme&#39;] = [
+    &#39;Name&#39;        =&amp;gt; &amp;quot;Example Theme&amp;quot;,
+    &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;,
+    &#39;Version&#39;     =&amp;gt; &#39;1.0.0&#39;,
+    &#39;Author&#39;      =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;,
+    &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;,
+    &#39;AuthorUrl&#39;   =&amp;gt; &#39;www.vanillaforums.com&#39;,
+    &#39;License&#39;     =&amp;gt; &#39;Proprietary&#39;,
+    &#39;Layout&#39;      =&amp;gt; [
+        &#39;Discussions&#39; =&amp;gt; &#39;table&#39;,
+        &#39;Categories&#39;  =&amp;gt; &#39;modern&#39;,
+    ]
+];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;theme-key&#34;&gt;Theme &amp;ldquo;key&amp;rdquo;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ThemeInfo[&#39;ExampleTheme&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to put a unique key here for your theme. A common mistake is to copy another theme and then forget to edit the about.php file. This key is how Vanilla identifies your theme internally.&lt;/p&gt;
+
+&lt;h3 id=&#34;name&#34;&gt;Name&lt;/h3&gt;
+
+&lt;p&gt;The name will appear in the theme selection page.&lt;/p&gt;
+
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+
+&lt;p&gt;Short description of your theme. Will also appear in theme selection page.&lt;/p&gt;
+
+&lt;h3 id=&#34;version&#34;&gt;Version&lt;/h3&gt;
+
+&lt;p&gt;Version of the theme. The cache is tied to this version. If you ever run into an issue with the cache, you can try to bump up this version number.&lt;/p&gt;
+
+&lt;h3 id=&#34;author&#34;&gt;Author&lt;/h3&gt;
+
+&lt;p&gt;Author of the theme&lt;/p&gt;
+
+&lt;h3 id=&#34;authoremail&#34;&gt;AuthorEmail&lt;/h3&gt;
+
+&lt;p&gt;Email of the author&lt;/p&gt;
+
+&lt;h3 id=&#34;license&#34;&gt;License&lt;/h3&gt;
+
+&lt;p&gt;License of the theme.&lt;/p&gt;
+
+&lt;h3 id=&#34;layout&#34;&gt;Layout&lt;/h3&gt;
+
+&lt;p&gt;This is an optional property that tells Vanilla which views the theme was meant to use. Sometimes custom themes only work with a specific view. Keep in mind that this will not block an admin from changing the views, but it will give them a warning in the dashboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Layouts for Discussions:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modern&lt;/li&gt;
+&lt;li&gt;table&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Layouts for categories:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modern&lt;/li&gt;
+&lt;li&gt;table&lt;/li&gt;
+&lt;li&gt;mixed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;visibility&#34;&gt;Visibility&lt;/h3&gt;
+
+&lt;p&gt;If you&amp;rsquo;ve got &lt;a href=&#34;http://vanillaforums.com&#34;&gt;Vanilla Cloud&lt;/a&gt;, make sure to also &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/themevisibility/&#34;&gt;set your theme&amp;rsquo;s visibility&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;theme-options&#34;&gt;Theme Options:&lt;/h3&gt;
+
+&lt;p&gt;The about.php file also supports &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/themeoptions/&#34;&gt;Theme Options&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>{asset}</title>
       <link>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1227,90 +1310,6 @@ include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.
                     &lt;/td&gt;
                     
                     &lt;td class=&#34;parameter-description&#34;&gt;Whether or not to hide the currently active (last) crumb&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
-    </item>
-    
-    <item>
-      <title>{custom_menu}</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-custom-menu&#34;&gt;Function: &lt;code&gt;{custom_menu}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A bucket for addon menu items. Adds links depending on which addons are enabled.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;li&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Element to wrap around each link in the menu&lt;/td&gt;
                 &lt;/tr&gt;
                 
             &lt;/tbody&gt;

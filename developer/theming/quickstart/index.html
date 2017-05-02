@@ -291,6 +291,14 @@ n.id = i;
 	    
 	    
                 <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
                     <a href="//docs.vanillaforums.com/developer/theming/themeoptions/">Theme Options </a>
                 </li>
                 
@@ -363,10 +371,11 @@ n.id = i;
 
 <ol>
 <li>Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: <code>/themes/your_theme_name</code>.</li>
-<li>Open the about.php file and edit the information to reflect your theme&rsquo;s information.</li>
+<li>Create an <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php</a> file and edit the information to reflect your theme&rsquo;s information.</li>
+<li>If you&rsquo;ve got <a href="http://vanillaforums.com">Vanilla Cloud</a>, make sure to also <a href="//docs.vanillaforums.com/developer/theming/themevisibility/">set your theme&rsquo;s visibility</a>. If not, skip this step.</li>
 <li>Create a custom.css file in the &ldquo;design&rdquo; folder of your custom theme.</li>
-<li>Go to your Dashboard &gt; Themes, and apply your new theme.</li>
-<li>Edit the custom.css file to your heart&rsquo;s content. The custom.css file is added <em>after</em> the base theme&rsquo;s css. Alternately, you can completely replace the base theme file (style.css) by copying it from the <code>/applications/dashboard/design</code> folder into your theme&rsquo;s design folder.</li>
+<li>Go to your Dashboard &gt; Themes, and apply your new theme. If you don&rsquo;t see it, delete the <strong>theme-index.php</strong> in the <strong>cache</strong> folder.</li>
+<li>Edit the custom.css file to your heart&rsquo;s content!</li>
 </ol>
 
 <p>Learn more by reading our docs on <a href="//docs.vanillaforums.com/theming/css">Theming with CSS</a></p>
@@ -397,6 +406,7 @@ n.id = i;
 
 <ul>
 <li>The administrative screens have their own master view. If you want to change their master view, copy the <code>/applications/dashboard/views/admin.master.php</code> file to <code>/themes/your_theme_name/views/admin.master.php</code>.</li>
+<li>You can add a custom thumbnail by adding a png called &ldquo;screenshot.png&rdquo; in your theme root. 220px wide and 165px high is a good size.</li>
 </ul>
 
 
