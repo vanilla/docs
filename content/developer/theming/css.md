@@ -15,15 +15,6 @@ aliases:
 ### Theming Hosted Vanilla
 You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our [blog](https://blog.vanillaforums.com/tag/fridaytips/).
 
-### Adding CSS to your theme
-
-There are two options for adding CSS to your theme in our open source version. You can completely override the existing base CSS file (style.css) or you can add an additional CSS file (custom.css) that gets added after the base CSS file.
-
-Especially for beginners or new Vanilla users, adding an additional CSS file (custom.css) is is often preferable to completely overriding the base CSS for a number of reasons:
-
-1. Support: Any upgrades to the base CSS file will still be applied to your theme.
-2. Completeness: There will still be styling applied to anything missed by your new CSS file.
-3. Clarity: It's easier for you to see what your specific customizations to Vanilla are, as they are self-contained in custom.css.
 
 #### Adding additional CSS
 
@@ -40,7 +31,7 @@ Here are a few gotchas that can occur when styling Vanilla.
 
 #### Layouts
 
-Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it's best to decide which layout you'd like to use before you start styling your theme. This layout can be selected from the dashboard's Homepage section. You can also specify your theme's layout in the $ThemeInfo array in your theme's about.php file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a `Layout` key with content looking like this:
+Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it's best to decide which layout you'd like to use before you start styling your theme. This layout can be selected from the dashboard's Homepage section. You can also specify your theme's layout in the $ThemeInfo array in your theme's [about.php]({{< relref "developer/theming/about-php.md" >}}) file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a `Layout` key with content looking like this:
 ```php
 'Layout' => [
     'Discussions' => 'table',
