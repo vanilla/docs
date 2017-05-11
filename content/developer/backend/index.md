@@ -47,6 +47,18 @@ In **Vanilla 2.3**, these rules change because the `p` parameter has been remove
 
 We do not officially support this server, but information and help may be provided on our [community forum](https://open.vanillaforums.com). We welcome additions to this documentation.
 
+## Advanced Handling of Headers
+
+To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a `bootstrap.before.php` file. You may need to create this file in your config folder, if it does not already exist. The contents of this file are executed at the very beginning of Vanilla's bootstrapping process. 
+
+If, for example, you wanted to use the `Host` header from an incoming request to set the host Vanilla sees, you would add the following into `bootstrap.before.php`:
+
+        if (isset($_SERVER['HTTP_HOST'])) {
+            $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+        }
+
+This will overwrite the host set by the server with the value of the `Host` header. It is crucial to verify the validity of any such data. **If you cannot verify the hosts provided in these headers, do not attempt to use them.**
+
 ## Caching
 
 ### OPcache
