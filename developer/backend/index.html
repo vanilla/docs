@@ -332,6 +332,19 @@ n.id = i;
 
 <p>We do not officially support this server, but information and help may be provided on our <a href="https://open.vanillaforums.com">community forum</a>. We welcome additions to this documentation.</p>
 
+<h2 id="advanced-handling-of-headers">Advanced Handling of Headers</h2>
+
+<p>To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a <code>bootstrap.before.php</code> file. You may need to create this file in your config folder, if it does not already exist. The contents of this file are executed at the very beginning of Vanilla&rsquo;s bootstrapping process.</p>
+
+<p>If, for example, you wanted to use the <code>Host</code> header from an incoming request to set the host Vanilla sees, you would add the following into <code>bootstrap.before.php</code>:</p>
+
+<pre><code>    if (isset($_SERVER['HTTP_HOST'])) {
+        $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+    }
+</code></pre>
+
+<p>This will overwrite the host set by the server with the value of the <code>Host</code> header. It is crucial to verify the validity of any such data. <strong>If you cannot verify the hosts provided in these headers, do not attempt to use them.</strong></p>
+
 <h2 id="caching">Caching</h2>
 
 <h3 id="opcache">OPcache</h3>

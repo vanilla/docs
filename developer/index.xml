@@ -256,6 +256,19 @@ $model-&amp;gt;revoke($accessToken);
 
 &lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
 
+&lt;h2 id=&#34;advanced-handling-of-headers&#34;&gt;Advanced Handling of Headers&lt;/h2&gt;
+
+&lt;p&gt;To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a &lt;code&gt;bootstrap.before.php&lt;/code&gt; file. You may need to create this file in your config folder, if it does not already exist. The contents of this file are executed at the very beginning of Vanilla&amp;rsquo;s bootstrapping process.&lt;/p&gt;
+
+&lt;p&gt;If, for example, you wanted to use the &lt;code&gt;Host&lt;/code&gt; header from an incoming request to set the host Vanilla sees, you would add the following into &lt;code&gt;bootstrap.before.php&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    if (isset($_SERVER[&#39;HTTP_HOST&#39;])) {
+        $_SERVER[&#39;SERVER_NAME&#39;] = $_SERVER[&#39;HTTP_HOST&#39;];
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will overwrite the host set by the server with the value of the &lt;code&gt;Host&lt;/code&gt; header. It is crucial to verify the validity of any such data. &lt;strong&gt;If you cannot verify the hosts provided in these headers, do not attempt to use them.&lt;/strong&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
 
 &lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
