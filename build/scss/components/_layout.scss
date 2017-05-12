@@ -62,21 +62,24 @@
         ul {
             list-style-type: none;
             margin: 0px;
-            padding-left: 20px;
-            
+            padding-left: 0;
+
             li {
-                padding: 8px 10px 8px 0px;
+                margin-left: 20px;
                 
                 &:first-child {
-                    padding-top: 16px;
+                    padding-top: 8px;
                 }
                 
                 &:last-child {
-                    padding-bottom: 16px;
+                    padding-bottom: 8px;
                 }
-                
+
                 a {
+                    display: block;
                     color: $lighterText;
+                    padding: 8px 10px 8px 20px;
+                    margin-left: -20px;
                 }
                 
                 &.active {
@@ -85,16 +88,16 @@
                         font-weight: bolder;
                     }
                 }
-                
+
                 &:before {
                     position: relative;
                     left: -14px;
-                    top: 2px;
-                    
+                    top: 10px;
+
                     display: block;
                     width: 0px;
                     height: 0px;
-                    
+
                     font: normal normal normal 14px/1 FontAwesome;
                     font-size: inherit;
                     text-rendering: auto;

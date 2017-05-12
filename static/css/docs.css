@@ -780,23 +780,26 @@ a:hover {
 .docs-content #sidebar ul {
   list-style-type: none;
   margin: 0px;
-  padding-left: 20px;
+  padding-left: 0;
 }
 
 .docs-content #sidebar ul li {
-  padding: 8px 10px 8px 0px;
+  margin-left: 20px;
 }
 
 .docs-content #sidebar ul li:first-child {
-  padding-top: 16px;
+  padding-top: 8px;
 }
 
 .docs-content #sidebar ul li:last-child {
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 .docs-content #sidebar ul li a {
+  display: block;
   color: #808A8F;
+  padding: 8px 10px 8px 20px;
+  margin-left: -20px;
 }
 
 .docs-content #sidebar ul li.active a {
@@ -807,7 +810,7 @@ a:hover {
 .docs-content #sidebar ul li:before {
   position: relative;
   left: -14px;
-  top: 2px;
+  top: 10px;
   display: block;
   width: 0px;
   height: 0px;
