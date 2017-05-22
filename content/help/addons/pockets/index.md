@@ -21,7 +21,7 @@ Pockets are designed to be used by advanced users and developers who can write a
 
 ### Setup
 
-Pockets is available on all plan levels. To activate it, simply locate it in your addon list (`/dashboard/settings/addons`) and toggle it on. It will then be available in the "settings" tab of your dashboard, listed under "Appearance" in the left side menu. You can navigate to the page directly by going to `/settings/pockets`
+Pockets are available on all plan levels. To activate it, simply locate it in your addon list (`/dashboard/settings/addons`) and toggle it on. It will then be available in the "settings" tab of your dashboard, listed under "Appearance" in the left side menu. You can navigate to the page directly by going to `/settings/pockets`
 
 
 ## Working With Pockets
@@ -50,7 +50,7 @@ Creating a pocket will present you with its settings page. First, there is a tog
 
 **Location:**  Each placeholder has a specific location in your community, as shown when "Enable Pocket Locations" is active. In this drop-down menu, you are able to select exactly where you want the pocket to appear.
 
-**Repeat:** If you’d like your Pocket to only work when certain conditions are met, you’re able to set those here.  You can set it so it reacts before or after a condition occurs, or to repeat at a given frequency. It’s also possible to have a Pocket occur within a group of given indexes.  
+**Repeat:** Some Pocket locations, such as "Panel" and "Between Discussions" have multiple placeholders to choose from. You can specify if you want the pocket to appear before or after, as indicated by their location label. Numbered placholders can be selected using "Given Indexes". Selecting "Repeat Every" will open two new settings, allowing you to select the starting point and frequencey of the pockets appearance. This is geared towards placing content, such as advertisements, between comments or discussions. 
 
 **Test Mode:** Before you save your Pocket and have it go live to everyone in your community, you can toggle this switch so the Pocket will only be seen by administrators with permission to edit Pockets. Once you’re satisfied that the Pocket is working as expected, you can toggle Test Mode off and save again, pushing the Pocket out to the public.   
 
