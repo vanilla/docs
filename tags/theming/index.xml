@@ -818,7 +818,12 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;This is a list of sites that can view the theme. &lt;strong&gt;This is the best method for custom client themes&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;The variable &lt;strong&gt;Site&lt;/strong&gt; works like &lt;strong&gt;Sites&lt;/strong&gt;, but only takes one site, as a string. This variable is not deprecated, use &lt;strong&gt;Sites&lt;/strong&gt; instead.&lt;/p&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can use an asterisk in the site name for wildcard matches (ex. &amp;lsquo;site-*.example.com&amp;rsquo;). Wildcards are great for clusters that are on the Vanilla Hub.&lt;/li&gt;
+&lt;li&gt;The variable &lt;strong&gt;Site&lt;/strong&gt; works like &lt;strong&gt;Sites&lt;/strong&gt;, but only takes one site, as a string. This variable is deprecated, use &lt;strong&gt;Sites&lt;/strong&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
