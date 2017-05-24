@@ -59,6 +59,7 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
 3. From the root of the folder, use `npm` to install the project: `$ npm install`
+4. Verifiy that you have `hugo-cli` install globally: `$ npm install -g hugo-cli`
 
 That should be it, you now have a working copy of the docs.
 
