@@ -49,8 +49,36 @@ $Definition['TranslationString3'] = "Override String 3";
 $Definition['TranslationString4'] = "Override String 4";
 ```
 
-You can override your default locale by adding a `conf/locale.php` file to your installation with additional definitions. Any definitions in this file will override your locale.
+### Overriding All Locales
 
-If you duplicate an entry's translation string, the latter one will take precedence. You can, however, assign the same override string to multiple translation strings.
+You can override your default locale by adding a `conf/locale.php` file to your installation with additional definitions. Any definitions in this file will override all locales.
 
-If you are using Multilingual to enable multiple locales, please note his override will effect **all** locales. There is currently no way to override multiple locales selectively.
+To find out what the translation strings for core components are please check our open source [Locales Repo](https://github.com/vanilla/locales). The core strings can be found in the [`tx-source/site_core.php`](https://github.com/vanilla/locales/blob/master/tx-source/site_core.php) file. 
+
+If you are using Multilingual to enable multiple locales, please note his override will effect **all** locales.
+
+### Overriding Locales with the Multilingual plugin
+
+If you have the [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) enabled you may not want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the `locale/` folder and name them `{locale-id}.php`. For example, the French language file would located at `locale/fr.php`.
+
+**`locale/fr.php`**
+```php
+<?php if (!defined('APPLICATION')) exit();
+
+// Note about what you're translating
+$Definition['TranslationString1'] = "Quelque chose en français";
+$Definition['TranslationString2'] = "Une autre chose en français";
+```
+
+**`locale/es.php`**
+```php
+<?php if (!defined('APPLICATION')) exit();
+
+// Note about what you're translating
+$Definition['TranslationString1'] = "Algo en español";
+$Definition['TranslationString2'] = "Otra cosa en español";
+```
+
+## Defining new translations strings
+
+If you are creating a custom theme or plugin for a multilingual community you may want to offer translations strings for text defined in your theme/plugin. Vanilla offers ways to define these strings in [Smarty Templates](http://docs.vanillaforums.com/developer/theming/smarty/functions/i18n/) and in [PHP](http://docs.vanillaforums.com/developer/framework/i18n/).
