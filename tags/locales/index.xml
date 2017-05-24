@@ -57,11 +57,39 @@ $Definition[&#39;TranslationString3&#39;] = &amp;quot;Override String 3&amp;quot
 $Definition[&#39;TranslationString4&#39;] = &amp;quot;Override String 4&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You can override your default locale by adding a &lt;code&gt;conf/locale.php&lt;/code&gt; file to your installation with additional definitions. Any definitions in this file will override your locale.&lt;/p&gt;
+&lt;h3 id=&#34;overriding-all-locales&#34;&gt;Overriding All Locales&lt;/h3&gt;
 
-&lt;p&gt;If you duplicate an entry&amp;rsquo;s translation string, the latter one will take precedence. You can, however, assign the same override string to multiple translation strings.&lt;/p&gt;
+&lt;p&gt;You can override your default locale by adding a &lt;code&gt;conf/locale.php&lt;/code&gt; file to your installation with additional definitions. Any definitions in this file will override all locales.&lt;/p&gt;
 
-&lt;p&gt;If you are using Multilingual to enable multiple locales, please note his override will effect &lt;strong&gt;all&lt;/strong&gt; locales. There is currently no way to override multiple locales selectively.&lt;/p&gt;
+&lt;p&gt;To find out what the translation strings for core components are please check our open source &lt;a href=&#34;https://github.com/vanilla/locales&#34;&gt;Locales Repo&lt;/a&gt;. The core strings can be found in the &lt;a href=&#34;https://github.com/vanilla/locales/blob/master/tx-source/site_core.php&#34;&gt;&lt;code&gt;tx-source/site_core.php&lt;/code&gt;&lt;/a&gt; file.&lt;/p&gt;
+
+&lt;p&gt;If you are using the Multilingual Plugin to enable multiple locales, please note his override will effect &lt;strong&gt;all&lt;/strong&gt; locales.&lt;/p&gt;
+
+&lt;h3 id=&#34;overriding-locales-with-the-multilingual-plugin&#34;&gt;Overriding Locales with the Multilingual plugin&lt;/h3&gt;
+
+&lt;p&gt;If you have the &lt;a href=&#34;https://open.vanillaforums.com/addon/multilingual-plugin&#34;&gt;Multilingual plugin&lt;/a&gt; enabled you may not want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the &lt;code&gt;locale/&lt;/code&gt; folder and name them &lt;code&gt;{locale-id}.php&lt;/code&gt;. For example, the French language file would located at &lt;code&gt;locale/fr.php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale/fr.php&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if (!defined(&#39;APPLICATION&#39;)) exit();
+
+// Note about what you&#39;re translating
+$Definition[&#39;TranslationString1&#39;] = &amp;quot;Quelque chose en français&amp;quot;;
+$Definition[&#39;TranslationString2&#39;] = &amp;quot;Une autre chose en français&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale/es.php&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if (!defined(&#39;APPLICATION&#39;)) exit();
+
+// Note about what you&#39;re translating
+$Definition[&#39;TranslationString1&#39;] = &amp;quot;Algo en español&amp;quot;;
+$Definition[&#39;TranslationString2&#39;] = &amp;quot;Otra cosa en español&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;defining-new-translations-strings&#34;&gt;Defining new translations strings&lt;/h2&gt;
+
+&lt;p&gt;If you are creating a custom theme or plugin for a multilingual community you may want to offer translations strings for text defined in your theme/plugin. Vanilla offers ways to define these strings in &lt;a href=&#34;http://docs.vanillaforums.com/developer/theming/smarty/functions/i18n/&#34;&gt;Smarty Templates&lt;/a&gt; and in &lt;a href=&#34;http://docs.vanillaforums.com/developer/framework/i18n/&#34;&gt;PHP&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
