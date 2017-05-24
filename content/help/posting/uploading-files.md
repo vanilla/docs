@@ -8,7 +8,7 @@ category: help
 menu:
   help:
     parent: posting
-    identifier: uploading
+    identifier: posting-uploading
 ---
 
 
