@@ -55,7 +55,7 @@ You can override your default locale by adding a `conf/locale.php` file to your 
 
 To find out what the translation strings for core components are please check our open source [Locales Repo](https://github.com/vanilla/locales). The core strings can be found in the [`tx-source/site_core.php`](https://github.com/vanilla/locales/blob/master/tx-source/site_core.php) file. 
 
-If you are using Multilingual to enable multiple locales, please note his override will effect **all** locales.
+If you are using the Multilingual Plugin to enable multiple locales, please note his override will effect **all** locales.
 
 ### Overriding Locales with the Multilingual plugin
 
