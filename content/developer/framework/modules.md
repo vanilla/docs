@@ -21,7 +21,7 @@ aliases:
 <p>Modules are application-specific, and are located in the application's "modules" folder. To see all of the modules packaged with Garden, browse to <code>/applications/garden/modules</code>. If a module has an associated view, it can be found in the application's views/modules folder with the same name as the module file minus "class" and "module". For example, the view associated with the <code>/applications/garden/modules/class.guestmodule.php</code> is <code>/applications/garden/views/modules/guest.php</code>. Modules are extended from the Module class, which is like a very simple version of the controller class. They are typically used to display information in the Panel asset, but they can actually be used anywhere in the page. A module's default asset is defined with the AssetTarget method, which simply returns the name of the asset to add the module to by default.</p>
 <h2>Examples</h2>
 <p>The simplest modules will have just two methods: AssetTarget and ToString. Let's make a "Hello World" module. Create a file called class.helloworldmodule.php and place it in your test application's modules folder (if you don't have a test application, put it in Vanilla's modules folder). Open the file and enter the following:</p>
-<pre lang="php">class HelloWorldModule extends Module {
+<pre lang="php">class HelloWorldModule extends Gdn_Module {
 
    public function AssetTarget() {
       return 'Panel';
