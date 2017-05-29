@@ -29,5 +29,5 @@ If you are able to, you can also take the content of the `.htaccess` and use it 
 
 The provided `.htaccess` already comes with some decent hardening:
 
-- The only php script that can be requested directly is /index.php
+- The only php script that can be requested directly is `/index.php`.
 - Folders that should not be accessed from the web return a 403.
