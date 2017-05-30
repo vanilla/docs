@@ -131,6 +131,40 @@
     </item>
     
     <item>
+      <title>Apache</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-apache/</guid>
+      <description>
+
+&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
+
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+
+&lt;p&gt;You need to have the &lt;a href=&#34;http://httpd.apache.org/docs/current/mod/mod_rewrite.html&#34;&gt;mod_rewrite&lt;/a&gt; module enabled.&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;Vanilla includes an &lt;a href=&#34;https://github.com/vanilla/vanilla/blob/master/.htaccess.dist&#34;&gt;.htaccess&lt;/a&gt;
+file for out-of-box Apache support.
+You may need to edit it, as indicated inside itself, for subfolder usage.
+Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd.apache.org/docs/current/howto/htaccess.html&#34;&gt;must be enabled for your web root&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are able to, you can also take the content of the &lt;code&gt;.htaccess&lt;/code&gt; and use it directly in your main server config file.&lt;/p&gt;
+
+&lt;h3 id=&#34;hardening&#34;&gt;Hardening&lt;/h3&gt;
+
+&lt;p&gt;The provided &lt;code&gt;.htaccess&lt;/code&gt; already comes with some decent hardening:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The only php script that can be requested directly is &lt;code&gt;/index.php&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Folders that should not be accessed from the web return a 403.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Assets</title>
       <link>//docs.vanillaforums.com/developer/framework/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -218,77 +252,56 @@ $model-&amp;gt;revoke($accessToken);
 
 &lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
 
-&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.&lt;/p&gt;
+&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration.
+The core team does not officially support IIS but accept bug reports and patches related to it.
+Information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;.
+We welcome additions to this documentation.&lt;/p&gt;
 
-&lt;h3 id=&#34;apache&#34;&gt;Apache&lt;/h3&gt;
-
-&lt;p&gt;Vanilla includes an &lt;code&gt;.htaccess&lt;/code&gt; file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.&lt;/p&gt;
-
-&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
-
-&lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in &lt;code&gt;nginx.conf&lt;/code&gt; correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.&lt;/p&gt;
-
-&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; running in the root web folder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    location @site {
-       rewrite ^ /index.php?p=$uri&amp;amp;$args last;
-    }
-
-    location / {
-       try_files $uri @site;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; in a subfolder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    location /subfolder {
-       try_files $uri @subfolder;
-    }
-
-    location @subfolder {
-       rewrite ^/subfolder(/.*) /subfolder/index.php?p=$1&amp;amp;$args last;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In &lt;strong&gt;Vanilla 2.3&lt;/strong&gt;, these rules change because the &lt;code&gt;p&lt;/code&gt; parameter has been removed in favor of strict usage of &lt;code&gt;PATH_INFO&lt;/code&gt;, and therefore no rewrite is needed. However, it&amp;rsquo;s important that your fastcgi params are setup to pass this information to PHP.&lt;/p&gt;
-
-&lt;h3 id=&#34;iis&#34;&gt;IIS&lt;/h3&gt;
-
-&lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
+&lt;p&gt;See the dedicated sections for more information about Apache and nginx.&lt;/p&gt;
 
 &lt;h2 id=&#34;advanced-handling-of-headers&#34;&gt;Advanced Handling of Headers&lt;/h2&gt;
 
-&lt;p&gt;To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a &lt;code&gt;bootstrap.before.php&lt;/code&gt; file. You may need to create this file in your config folder, if it does not already exist. The contents of this file are executed at the very beginning of Vanilla&amp;rsquo;s bootstrapping process.&lt;/p&gt;
+&lt;p&gt;To utilize advanced handling of request and networking headers,
+it is recommended you make the necessary modifications in a &lt;code&gt;bootstrap.before.php&lt;/code&gt; file.
+You may need to create this file in your config folder, if it does not already exist.
+The contents of this file are executed at the very beginning of Vanilla&amp;rsquo;s bootstrapping process.&lt;/p&gt;
 
-&lt;p&gt;If, for example, you wanted to use the &lt;code&gt;Host&lt;/code&gt; header from an incoming request to set the host Vanilla sees, you would add the following into &lt;code&gt;bootstrap.before.php&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;If, for example, you wanted to use the &lt;code&gt;Host&lt;/code&gt; header from an incoming request to set the host Vanilla sees,
+you would add the following into &lt;code&gt;bootstrap.before.php&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    if (isset($_SERVER[&#39;HTTP_HOST&#39;])) {
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;    if (isset($_SERVER[&#39;HTTP_HOST&#39;])) {
         $_SERVER[&#39;SERVER_NAME&#39;] = $_SERVER[&#39;HTTP_HOST&#39;];
     }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This will overwrite the host set by the server with the value of the &lt;code&gt;Host&lt;/code&gt; header. It is crucial to verify the validity of any such data. &lt;strong&gt;If you cannot verify the hosts provided in these headers, do not attempt to use them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This will overwrite the host set by the server with the value of the &lt;code&gt;Host&lt;/code&gt; header.
+It is crucial to verify the validity of any such data. &lt;strong&gt;If you cannot verify the hosts provided in these headers,
+do not attempt to use them.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
 
 &lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
 
-&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
+&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5.
+Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
 
 &lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
 
-&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
+&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option.
+It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
 $Configuration[&#39;Cache&#39;][&#39;Method&#39;] = &#39;memcached&#39;;
 $Configuration[&#39;memcached&#39;][&#39;Store&#39;] = &#39;localhost&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You can also specify a port for memcached. Store, e.g.: &lt;code&gt;localhost:11211&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config. Here are some example settings you may wish to use. Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
+&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config.
+Here are some example settings you may wish to use.
+Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
 $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_DISTRIBUTION] = Memcached::DISTRIBUTION_CONSISTENT;
 $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_LIBKETAMA_COMPATIBLE] = true;
 $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_NO_BLOCK] = true;
@@ -1714,26 +1727,6 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The ability to use non-pretty URLs may be deprecated in the future.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Dashboard</title>
-      <link>//docs.vanillaforums.com/developer/configuration/dashboard/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/configuration/dashboard/</guid>
-      <description>
-
-&lt;h2 id=&#34;dashboard&#34;&gt;Dashboard&lt;/h2&gt;
-
-&lt;p&gt;The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum&amp;rsquo;s main page, a profile link (shown as your user name), and Sign Out.&lt;/p&gt;
-
-&lt;p&gt;On the left side of the screen is the main navigation menu detailing each of the administrative functions you can perform. Within each major function, such as Appearance, a list of sub-menu items appear, certain sub-menu items may vary depending on what addons you have installed.&lt;/p&gt;
-
-&lt;p&gt;The large area to the right of the screen is the work area. It is here the specific information relating to a particular navigation choice, such as adding a new post, is presented and collected.&lt;/p&gt;
-
-&lt;p&gt;Finally, in the footer, at the bottom of each Administration Panel also in a dark blue gradient, are links to Vanilla Forums, and Documentation. In addition, the version of Vanilla Forums you have installed can be found.&lt;/p&gt;
 </description>
     </item>
     

@@ -8,6 +8,40 @@
     <atom:link href="//docs.vanillaforums.com/tags/developers/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Apache</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-apache/</guid>
+      <description>
+
+&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
+
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+
+&lt;p&gt;You need to have the &lt;a href=&#34;http://httpd.apache.org/docs/current/mod/mod_rewrite.html&#34;&gt;mod_rewrite&lt;/a&gt; module enabled.&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;Vanilla includes an &lt;a href=&#34;https://github.com/vanilla/vanilla/blob/master/.htaccess.dist&#34;&gt;.htaccess&lt;/a&gt;
+file for out-of-box Apache support.
+You may need to edit it, as indicated inside itself, for subfolder usage.
+Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd.apache.org/docs/current/howto/htaccess.html&#34;&gt;must be enabled for your web root&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are able to, you can also take the content of the &lt;code&gt;.htaccess&lt;/code&gt; and use it directly in your main server config file.&lt;/p&gt;
+
+&lt;h3 id=&#34;hardening&#34;&gt;Hardening&lt;/h3&gt;
+
+&lt;p&gt;The provided &lt;code&gt;.htaccess&lt;/code&gt; already comes with some decent hardening:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The only php script that can be requested directly is &lt;code&gt;/index.php&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Folders that should not be accessed from the web return a 403.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Assets</title>
       <link>//docs.vanillaforums.com/developer/framework/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -95,77 +129,56 @@ $model-&amp;gt;revoke($accessToken);
 
 &lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
 
-&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it.&lt;/p&gt;
+&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration.
+The core team does not officially support IIS but accept bug reports and patches related to it.
+Information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;.
+We welcome additions to this documentation.&lt;/p&gt;
 
-&lt;h3 id=&#34;apache&#34;&gt;Apache&lt;/h3&gt;
-
-&lt;p&gt;Vanilla includes an &lt;code&gt;.htaccess&lt;/code&gt; file for out-of-box Apache support. You may need to edit the htaccess file as indicated for subfolder usage. Obviously, htaccess files must be enabled for your web root.&lt;/p&gt;
-
-&lt;h3 id=&#34;nginx&#34;&gt;nginx&lt;/h3&gt;
-
-&lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in &lt;code&gt;nginx.conf&lt;/code&gt; correct. These are by no means complete conf files nor an nginx tutorial, these are simply excerpts of the Vanilla-specific rules needed.&lt;/p&gt;
-
-&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; running in the root web folder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    location @site {
-       rewrite ^ /index.php?p=$uri&amp;amp;$args last;
-    }
-
-    location / {
-       try_files $uri @site;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;An example of &lt;strong&gt;Vanilla 2.2 and earlier&lt;/strong&gt; in a subfolder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    location /subfolder {
-       try_files $uri @subfolder;
-    }
-
-    location @subfolder {
-       rewrite ^/subfolder(/.*) /subfolder/index.php?p=$1&amp;amp;$args last;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In &lt;strong&gt;Vanilla 2.3&lt;/strong&gt;, these rules change because the &lt;code&gt;p&lt;/code&gt; parameter has been removed in favor of strict usage of &lt;code&gt;PATH_INFO&lt;/code&gt;, and therefore no rewrite is needed. However, it&amp;rsquo;s important that your fastcgi params are setup to pass this information to PHP.&lt;/p&gt;
-
-&lt;h3 id=&#34;iis&#34;&gt;IIS&lt;/h3&gt;
-
-&lt;p&gt;We do not officially support this server, but information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;. We welcome additions to this documentation.&lt;/p&gt;
+&lt;p&gt;See the dedicated sections for more information about Apache and nginx.&lt;/p&gt;
 
 &lt;h2 id=&#34;advanced-handling-of-headers&#34;&gt;Advanced Handling of Headers&lt;/h2&gt;
 
-&lt;p&gt;To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a &lt;code&gt;bootstrap.before.php&lt;/code&gt; file. You may need to create this file in your config folder, if it does not already exist. The contents of this file are executed at the very beginning of Vanilla&amp;rsquo;s bootstrapping process.&lt;/p&gt;
+&lt;p&gt;To utilize advanced handling of request and networking headers,
+it is recommended you make the necessary modifications in a &lt;code&gt;bootstrap.before.php&lt;/code&gt; file.
+You may need to create this file in your config folder, if it does not already exist.
+The contents of this file are executed at the very beginning of Vanilla&amp;rsquo;s bootstrapping process.&lt;/p&gt;
 
-&lt;p&gt;If, for example, you wanted to use the &lt;code&gt;Host&lt;/code&gt; header from an incoming request to set the host Vanilla sees, you would add the following into &lt;code&gt;bootstrap.before.php&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;If, for example, you wanted to use the &lt;code&gt;Host&lt;/code&gt; header from an incoming request to set the host Vanilla sees,
+you would add the following into &lt;code&gt;bootstrap.before.php&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    if (isset($_SERVER[&#39;HTTP_HOST&#39;])) {
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;    if (isset($_SERVER[&#39;HTTP_HOST&#39;])) {
         $_SERVER[&#39;SERVER_NAME&#39;] = $_SERVER[&#39;HTTP_HOST&#39;];
     }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This will overwrite the host set by the server with the value of the &lt;code&gt;Host&lt;/code&gt; header. It is crucial to verify the validity of any such data. &lt;strong&gt;If you cannot verify the hosts provided in these headers, do not attempt to use them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This will overwrite the host set by the server with the value of the &lt;code&gt;Host&lt;/code&gt; header.
+It is crucial to verify the validity of any such data. &lt;strong&gt;If you cannot verify the hosts provided in these headers,
+do not attempt to use them.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
 
 &lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
 
-&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5. Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
+&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5.
+Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
 
 &lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
 
-&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option. It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
+&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option.
+It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
 $Configuration[&#39;Cache&#39;][&#39;Method&#39;] = &#39;memcached&#39;;
 $Configuration[&#39;memcached&#39;][&#39;Store&#39;] = &#39;localhost&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You can also specify a port for memcached. Store, e.g.: &lt;code&gt;localhost:11211&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config. Here are some example settings you may wish to use. Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
+&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config.
+Here are some example settings you may wish to use.
+Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
 $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_DISTRIBUTION] = Memcached::DISTRIBUTION_CONSISTENT;
 $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_LIBKETAMA_COMPATIBLE] = true;
 $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_NO_BLOCK] = true;
@@ -1564,111 +1577,6 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
 &lt;h2 id=&#34;personal-user-info&#34;&gt;Personal user info&lt;/h2&gt;
 
 &lt;p&gt;We consider emails (&lt;code&gt;User.Email&lt;/code&gt;) and IP addresses (recorded in multiple contexts) to be personal info. Access to this data is governed by a special permission that, by default, is only granted to moderators, community managers, and administrators. You can customize this for your community.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Database access</title>
-      <link>//docs.vanillaforums.com/developer/framework/database/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/framework/database/</guid>
-      <description>
-
-&lt;h2 id=&#34;database-layer&#34;&gt;Database layer&lt;/h2&gt;
-
-&lt;p&gt;Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in &lt;code&gt;/library/databases&lt;/code&gt;). However, at this time, the Vanilla team has no plans to support additional databases.&lt;/p&gt;
-
-&lt;p&gt;The best way to access the database is via existing &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/models&#34;&gt;models&lt;/a&gt;. For instance, to get a list of discussions, use the &lt;code&gt;Get&lt;/code&gt; method in the &lt;code&gt;DiscussionModel&lt;/code&gt;. You can rely on model-based access to already be optimized for performance and utilize caching if it&amp;rsquo;s available.&lt;/p&gt;
-
-&lt;h3 id=&#34;building-queries&#34;&gt;Building queries&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;SQL&lt;/code&gt; object supports chaining. You can call it with &lt;code&gt;Gdn::sql()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a simple example that gets a single discussion by its ID. We write its pieces in the order of a SQL statement, but they can be called in any order up to the &lt;code&gt;get()&lt;/code&gt;. The &lt;code&gt;get()&lt;/code&gt; is the call that fires the built query.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;
-   -&amp;gt;select(&#39;*&#39;)
-   -&amp;gt;from(&#39;Discussion&#39;)
-   -&amp;gt;where(&#39;DiscussionID&#39;, $DiscussionID)
-   -&amp;gt;get();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that this is an impractical query to use in your addon, because this functionality already exists in a model:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$DiscussionModel = new DiscussionModel();
-$DiscussionModel-&amp;gt;getID($DiscussionID);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Always use pre-existing calls in models when they are available for better performance and forward-compatibility.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an example of a complex select that pulls out all the stops:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()
-   -&amp;gt;select(&#39;cm.*&#39;)
-   -&amp;gt;select(&#39;iu.Name&#39;, &#39;&#39;, &#39;InsertName&#39;)
-   -&amp;gt;from(&#39;ConversationMessage cm&#39;)
-   -&amp;gt;join(&#39;Conversation c&#39;, &#39;cm.ConversationID = c.ConversationID&#39;)
-   -&amp;gt;join(&#39;UserConversation uc&#39;, &#39;c.ConversationID = uc.ConversationID and uc.UserID = &#39;.$ViewingUserID, &#39;left&#39;)
-   -&amp;gt;join(&#39;User iu&#39;, &#39;cm.InsertUserID = iu.UserID&#39;, &#39;left&#39;)
-   -&amp;gt;beginWhereGroup()
-   -&amp;gt;where(&#39;uc.DateCleared is null&#39;)
-   -&amp;gt;orWhere(&#39;uc.DateCleared &amp;lt;&#39;, &#39;cm.DateInserted&#39;, TRUE, FALSE)
-   -&amp;gt;endWhereGroup()
-   -&amp;gt;where(&#39;cm.ConversationID&#39;, $ConversationID)
-   -&amp;gt;orderBy(&#39;cm.DateInserted&#39;, &#39;asc&#39;)
-   -&amp;gt;limit($Limit, $Offset)
-   -&amp;gt;get();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Notice the use of limit, offset, where groups, where conditions including less than &amp;amp; null, aliasing, and multiple joins.&lt;/p&gt;
-
-&lt;h3 id=&#34;updates-and-inserts&#34;&gt;Updates and inserts&lt;/h3&gt;
-
-&lt;p&gt;An insert is a single step that takes the table name and an array of values to insert as parameters:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;insert(&#39;UserConversation&#39;, array(
-   &#39;ConversationID&#39; =&amp;gt; $ConversationID,
-   &#39;UserID&#39; =&amp;gt; $TargetUserID
-));
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;An update requires setting the table in &lt;code&gt;Update&lt;/code&gt;, ends with a &lt;code&gt;Put&lt;/code&gt; (much like the select&amp;rsquo;s ending &lt;code&gt;Get&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;update(&#39;Conversation&#39;)
-   -&amp;gt;set(&#39;LastMessageID&#39;, $MessageID)
-   -&amp;gt;where(&#39;ConversationID&#39;, $ConversationID)
-   -&amp;gt;put();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;direct-queries&#34;&gt;Direct queries&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;query()&lt;/code&gt; method allows for sending unfiltered SQL queries to the database. This is strongly discouraged because it can easily cause security flaws, performance problems, and compatibility problems.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::sql()-&amp;gt;query(&amp;quot;select * from GDN_Comments&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
-
-&lt;p&gt;Vanilla allows you to define database structures in code. Use the &lt;code&gt;Gdn::structure()&lt;/code&gt; method to use this object. Here we&amp;rsquo;ll look at part of the definition of the User table as an example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Gdn::structure()
-   -&amp;gt;primaryKey(&#39;UserID&#39;)
-   -&amp;gt;column(&#39;Name&#39;, &#39;varchar(50)&#39;, FALSE, &#39;key&#39;)
-   -&amp;gt;column(&#39;Password&#39;, &#39;varbinary(100)&#39;) 
-   -&amp;gt;column(&#39;ShowEmail&#39;, &#39;tinyint(1)&#39;, &#39;0&#39;)
-   -&amp;gt;column(&#39;Gender&#39;, array(&#39;u&#39;, &#39;m&#39;, &#39;f&#39;), &#39;u&#39;)
-   -&amp;gt;column(&#39;Preferences&#39;, &#39;text&#39;, TRUE)
-   -&amp;gt;column(&#39;DateOfBirth&#39;, &#39;datetime&#39;, TRUE)
-   -&amp;gt;column(&#39;Score&#39;, &#39;float&#39;, NULL)
-   -&amp;gt;set();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;column()&lt;/code&gt; takes 4 parameters: name, type, nulldefault (&lt;code&gt;true&lt;/code&gt; to allow nulls, &lt;code&gt;false&lt;/code&gt; to not - any other value becomes the default with disallowed nulls), and keytype (&amp;lsquo;primary&amp;rsquo;, &amp;lsquo;key&amp;rsquo;, &amp;lsquo;index&amp;rsquo;, &amp;lsquo;unique&amp;rsquo;, or &amp;lsquo;fulltext&amp;rsquo; - defaults to false).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;primaryKey()&lt;/code&gt; creates an auto-incrementing column. The Gender column uses an array to create an &lt;code&gt;enum&lt;/code&gt; type; the rest are self-explanatory.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;set()&lt;/code&gt; method takes 2 parameters which should nearly &lt;em&gt;always&lt;/em&gt; be false, which is their default. The first is &lt;code&gt;$Explicit&lt;/code&gt; which is whether to force the structure of the table to match &lt;em&gt;exactly&lt;/em&gt; the definition above. The second is &lt;code&gt;$Drop&lt;/code&gt; which is whether to drop and recreate the table.&lt;/p&gt;
 </description>
     </item>
     

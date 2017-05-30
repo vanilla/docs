@@ -1306,6 +1306,40 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
     </item>
     
     <item>
+      <title>Apache</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-apache/</guid>
+      <description>
+
+&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
+
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+
+&lt;p&gt;You need to have the &lt;a href=&#34;http://httpd.apache.org/docs/current/mod/mod_rewrite.html&#34;&gt;mod_rewrite&lt;/a&gt; module enabled.&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;Vanilla includes an &lt;a href=&#34;https://github.com/vanilla/vanilla/blob/master/.htaccess.dist&#34;&gt;.htaccess&lt;/a&gt;
+file for out-of-box Apache support.
+You may need to edit it, as indicated inside itself, for subfolder usage.
+Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd.apache.org/docs/current/howto/htaccess.html&#34;&gt;must be enabled for your web root&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are able to, you can also take the content of the &lt;code&gt;.htaccess&lt;/code&gt; and use it directly in your main server config file.&lt;/p&gt;
+
+&lt;h3 id=&#34;hardening&#34;&gt;Hardening&lt;/h3&gt;
+
+&lt;p&gt;The provided &lt;code&gt;.htaccess&lt;/code&gt; already comes with some decent hardening:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The only php script that can be requested directly is &lt;code&gt;/index.php&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Folders that should not be accessed from the web return a 403.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Appearance</title>
       <link>//docs.vanillaforums.com/help/appearance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1382,32 +1416,6 @@ Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.&lt;/p&gt;
 
 &lt;p&gt;This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Assets</title>
-      <link>//docs.vanillaforums.com/developer/framework/assets/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
-      <description>
-
-&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
-
-&lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
-
-&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
-
-&lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
-
-&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
-
-&lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;A common scenario is using &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
-
-&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     

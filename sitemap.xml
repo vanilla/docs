@@ -54,6 +54,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/developer/backend/server-apache/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/appearance/</loc>
   </url>
   
@@ -615,6 +619,10 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/sso/jsconnect/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/developer/backend/server-nginx/</loc>
   </url>
   
   <url>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/server/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="//docs.vanillaforums.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Apache</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-apache/</guid>
+      <description>
+
+&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
+
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+
+&lt;p&gt;You need to have the &lt;a href=&#34;http://httpd.apache.org/docs/current/mod/mod_rewrite.html&#34;&gt;mod_rewrite&lt;/a&gt; module enabled.&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;Vanilla includes an &lt;a href=&#34;https://github.com/vanilla/vanilla/blob/master/.htaccess.dist&#34;&gt;.htaccess&lt;/a&gt;
+file for out-of-box Apache support.
+You may need to edit it, as indicated inside itself, for subfolder usage.
+Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd.apache.org/docs/current/howto/htaccess.html&#34;&gt;must be enabled for your web root&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are able to, you can also take the content of the &lt;code&gt;.htaccess&lt;/code&gt; and use it directly in your main server config file.&lt;/p&gt;
+
+&lt;h3 id=&#34;hardening&#34;&gt;Hardening&lt;/h3&gt;
+
+&lt;p&gt;The provided &lt;code&gt;.htaccess&lt;/code&gt; already comes with some decent hardening:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The only php script that can be requested directly is &lt;code&gt;/index.php&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Folders that should not be accessed from the web return a 403.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-nginx/</guid>
+      <description>
+
+&lt;h2 id=&#34;nginx&#34;&gt;nginx&lt;/h2&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;The key to specifically running Vanilla under nginx is getting the basic rewrite rule in nginx.conf correct.
+You can see a working example in the Hardening section.&lt;/p&gt;
+
+&lt;p&gt;Some tips:
+- When configuring fastcgi make sure that you use &lt;code&gt;$realpath_root&lt;/code&gt; instead of &lt;code&gt;$document_root&lt;/code&gt;.
+- Make sure that you set the &lt;code&gt;fastcgi_param&lt;/code&gt; &lt;code&gt;X_REWRITE&lt;/code&gt; parameter to &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;hardening&#34;&gt;Hardening&lt;/h3&gt;
+
+&lt;p&gt;Here are some directories that should be forbidden:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;    location ~* &amp;quot;/\.git&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/build/&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/cache/&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/cgi-bin/&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/uploads/import/&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/conf/&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/tests/&amp;quot; { deny all; return 403; }
+    location ~* &amp;quot;^/vendor/&amp;quot; { deny all; return 403; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We alo recommend to disallow any script but &lt;code&gt;/index.php&lt;/code&gt; from being called directly.
+This can be achieved like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;    # /index.php handler
+    location ~* &amp;quot;^/index\.php(/|$)&amp;quot; {
+        # send to fastcgi
+        include fastcgi.conf;
+        fastcgi_param X_REWRITE 1; # Needed for pretty URLs
+        fastcgi_pass php-fpm; # Upstream defined in nginx.conf 
+    }
+
+    # If it is a php script disallow its execution by redirecting the call it to /index.php
+    location ~* &amp;quot;\.php(/|$)&amp;quot; {
+        rewrite ^ /index.php$uri last;
+    }
+
+    # Default location handling
+    location / {
+        try_files $uri @vanilla;
+    }
+
+    location @vanilla {
+        rewrite ^ /index.php$uri last;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

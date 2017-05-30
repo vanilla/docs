@@ -107,10 +107,10 @@ n.id = i;
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>Controllers &amp; URLs</h1>
+    <h1>Apache</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/developer/framework/controllers.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/backend/server-apache.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -130,10 +130,38 @@ n.id = i;
 
 
 
-    <li  class=" nest">
+    <li  class="active nest">
         <a href="//docs.vanillaforums.com/developer/backend/">Backend</a>
     </li>
     
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="active">
+                    <a href="//docs.vanillaforums.com/developer/backend/server-apache/">Apache </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/backend/server-nginx/">nginx </a>
+                </li>
+                
+                
+
+	    </ul>
+        
     
 	    
 
@@ -258,142 +286,10 @@ n.id = i;
 	    
 
 
-    <li  class="active nest">
+    <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/framework/">Framework</a>
     </li>
     
-    
-        
-        
-        
-        
-            <ul class="nav-tier2">
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/assets/">Assets </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="active">
-                    <a href="//docs.vanillaforums.com/developer/framework/controllers/">Controllers &amp; URLs </a>
-                </li>
-                
-                
-                    
-                    
-               
-                    
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/database/">Database access </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/datasets/">Datasets </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/email/">Email </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/helpers/">Helpers </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/inform/">Inform Messages </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/i18n/">Internationalization &amp; Localization </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/models/">Models, Forms, &amp; Validation </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/modules/">Modules </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/oauth/">OAuth </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/permissions/">Permissions </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/requests/">Requests </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/framework/views/">Views </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class=" nest">
-                    <a href="//docs.vanillaforums.com/developer/framework/apiv2/">Writing APIs </a>
-                </li>
-                
-                
-
-	    </ul>
-        
     
 	    
 
@@ -419,45 +315,29 @@ n.id = i;
 
                 
 
-<h2 id="controllers">Controllers</h2>
+<h2 id="apache">Apache</h2>
 
-<p>In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.</p>
+<h3 id="pre-requisite">Pre-requisite</h3>
 
-<h3 id="dispatcher">Dispatcher</h3>
+<p>You need to have the <a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> module enabled.</p>
 
-<p>Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (<code>Gdn_Dispatcher</code>) receives incoming <a href="//docs.vanillaforums.com/developer/framework/requests">requests</a> and invokes the appropriate controller(s).</p>
+<h3 id="configuration">Configuration</h3>
 
-<h3 id="mapping-urls">Mapping URLs</h3>
+<p>Vanilla includes an <a href="https://github.com/vanilla/vanilla/blob/master/.htaccess.dist">.htaccess</a>
+file for out-of-box Apache support.
+You may need to edit it, as indicated inside itself, for subfolder usage.
+Obviously, <code>.htaccess</code> files <a href="http://httpd.apache.org/docs/current/howto/htaccess.html">must be enabled for your web root</a>.</p>
 
-<p>First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.</p>
+<p>If you are able to, you can also take the content of the <code>.htaccess</code> and use it directly in your main server config file.</p>
 
-<p>An example that includes all of these is: <code>/dashboard/profile/notifications/1/Lincoln</code>. This calls the Dashboard&rsquo;s <code>ProfileController</code> invoking the <code>Notifications</code> method, which it passes the arguments <code>1</code> and <code>Lincoln</code>, in that order. It roughly translates to:</p>
+<h3 id="hardening">Hardening</h3>
 
-<pre><code>$ProfileController = new ProfileController();
-$ProfileController-&gt;notifications('1', 'Lincoln');
-</code></pre>
+<p>The provided <code>.htaccess</code> already comes with some decent hardening:</p>
 
-<p>If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the <code>Index()</code> method will be invoked. Therefore, the basic profile URL <code>/profile/1/Lincoln</code> could be more verbosely written as <code>/dashboard/profile/index/1/Lincoln</code> to more clearly understand what code it is invoking.</p>
-
-<h3 id="pretty-urls">Pretty URLs</h3>
-
-<p>All requests are dispatched thru the index.php file. While it&rsquo;s possible to use the framework by passing a &lsquo;p&rsquo; parameter with the rest of the path (e.g. <code>/index.php?p=/profile</code>), it&rsquo;s best to configure your server to handle &ldquo;pretty&rdquo; URLs.</p>
-
-<p>On Apache, this is accomplished with the <code>.htaccess</code> file provided with Vanilla that contains these rewrite rules:</p>
-
-<pre><code>RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
-</code></pre>
-
-<p>Consult the <a href="//docs.vanillaforums.com/developer/community">community</a> if you need assistance configuring another server platform such as nginx or IIS.</p>
-
-<p>Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the <a href="//docs.vanillaforums.com/developer/configuration">config</a> setting to enable pretty URLs is:</p>
-
-<pre><code>$Configuration['Garden']['RewriteUrls'] = TRUE;
-</code></pre>
-
-<p>The ability to use non-pretty URLs may be deprecated in the future.</p>
+<ul>
+<li>The only php script that can be requested directly is <code>/index.php</code>.</li>
+<li>Folders that should not be accessed from the web return a 403.</li>
+</ul>
 
 
             
