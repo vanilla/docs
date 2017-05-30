@@ -19,6 +19,61 @@
 
 &lt;p&gt;Quarterly VIP releases contain all numbered releases within said quarter.&lt;/p&gt;
 
+&lt;p&gt;Sometimes bug fixes are backported to the current release, meaning they show up in production earlier than the date noted.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Q2 release 5 was skipped.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;q2-release-4-wednesday-may-24&#34;&gt;Q2 release 4 (Wednesday, May 24)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add Apple touch icon support as a core feature.&lt;/li&gt;
+&lt;li&gt;Add link to docs from Customize Theme page in Dashboard.&lt;/li&gt;
+&lt;li&gt;Fix minor translation issues in Advanced Search and Signatures addons.&lt;/li&gt;
+&lt;li&gt;Fix categories with custom permissions created with the API not having file uploads by default.&lt;/li&gt;
+&lt;li&gt;Fix toolbar staying hidden after previewing comment.&lt;/li&gt;
+&lt;li&gt;Fix multiple minor text parsing issues introduced by fixing the formatters in 2017-Q2-2.&lt;/li&gt;
+&lt;li&gt;Fix double spacing in Wysiwyg posts when embedding is allowed.&lt;/li&gt;
+&lt;li&gt;Add translations for &amp;ldquo;leaving the forum&amp;rdquo; warning.&lt;/li&gt;
+&lt;li&gt;Fix new post count not being displayed on Participated Discussions page.&lt;/li&gt;
+&lt;li&gt;Skip flood control checks for editing.&lt;/li&gt;
+&lt;li&gt;Fix Advanced Search autocomplete on sites in a subdirectory.&lt;/li&gt;
+&lt;li&gt;Fix non-ascii items not being added to menus.&lt;/li&gt;
+&lt;li&gt;Fix a category&amp;rsquo;s latest post not being updated when moving or deleting a discussion.&lt;/li&gt;
+&lt;li&gt;Fix Spoof permission check on manual spoof page.&lt;/li&gt;
+&lt;li&gt;Fix redirect problem when toggling from mobile to full site and back.&lt;/li&gt;
+&lt;li&gt;Stop page from scrolling when selecting an avatar with Avatar Stock.&lt;/li&gt;
+&lt;li&gt;Allow admins to not set &amp;ldquo;Remember Me&amp;rdquo; by default over SSO.&lt;/li&gt;
+&lt;li&gt;Allow addons to declare a docs page and show a link to it on the Addons list.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Q2 release 3 was skipped.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;q2-release-2-wednesday-apr-26&#34;&gt;Q2 release 2 (Wednesday, Apr 26)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Multiple menus in the Dashboard&amp;rsquo;s Settings tab were renamed or reorganized.
+
+&lt;ul&gt;
+&lt;li&gt;Banner -&amp;gt; Branding&lt;/li&gt;
+&lt;li&gt;Homepage -&amp;gt; Layout&lt;/li&gt;
+&lt;li&gt;Advanced -&amp;gt; Posting&lt;/li&gt;
+&lt;li&gt;Created &amp;ldquo;Security&amp;rdquo; menu group.&lt;/li&gt;
+&lt;li&gt;Re-grouped several pages under different headings.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Tagging addon was removed. Its features are now a part of our core offering. No user-facing functionality was changed.&lt;/li&gt;
+&lt;li&gt;Removed our use of Google&amp;rsquo;s CDN for jQuery and a Dashboard font.&lt;/li&gt;
+&lt;li&gt;Improved our ability to translate the word &amp;ldquo;Vote&amp;rdquo; in its various contexts (noun vs. verb).&lt;/li&gt;
+&lt;li&gt;Exempt moderators and admins from the new flood control checking on private messages.&lt;/li&gt;
+&lt;li&gt;Improve handling for mentions on usernames with underscores.&lt;/li&gt;
+&lt;li&gt;Improve our text parsing pipeline to be more consistent in the order we process elements (mentions, filtering, etc) for different formatters (Markdown, BBCode, etc).&lt;/li&gt;
+&lt;li&gt;Fix page title translations for &amp;ldquo;Quotes&amp;rdquo; and &amp;ldquo;Online&amp;rdquo; profile settings pages.&lt;/li&gt;
+&lt;li&gt;Fix category syncing issue in Hub/Node setups.&lt;/li&gt;
+&lt;li&gt;Fix an issue preventing the deletion of groups.&lt;/li&gt;
+&lt;li&gt;Fix the counter of items awaiting moderation to also include &amp;ldquo;pending&amp;rdquo; (premorderation) items.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Q2 release 1 was skipped.&lt;/em&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;q1-release-6-thursday-mar-30&#34;&gt;Q1 release 6 (Thursday, Mar 30)&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;This is the cutoff for the spring release for VIPs. All Q1 changes below are included in it.&lt;/em&gt;&lt;/p&gt;
