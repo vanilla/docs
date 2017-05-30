@@ -6,15 +6,17 @@ category: developer
 menu:
   developer:
     parent: theming
-    weight: 60
+    weight: 80
 aliases:
 - /theming/visibility
 ---
 
 {{% cloudfeature %}}
 
+If you've got [Vanilla Cloud](http://vanillaforums.com), custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
 
-In order of importance, here are the rules for a theme to be visible:
+
+**In order of importance**, here are the rules for a theme to be visible:
 
 
 ## Method 1:
@@ -22,13 +24,13 @@ If the theme is set to be visible with this site option:
 ```
 Garden.Themes.Visible
 ```
-You can add multiple sites by separating sites with a comma. **This method is discouraged**. Themes are generally visible to all clients, or only to one client. 
+You can add multiple sites by separating sites with a comma. **This method is discouraged**. Themes are generally visible to all clients, or only to one client.
 
 
 
 ## Method 2:
 
-In the **about.php** file, you can set the theme's visibility with **Hidden**. 
+In the [about.php]({{< relref "developer/theming/about-php.md" >}}) file, you can set the theme's visibility with **Hidden**.
 
 Example:
 
@@ -66,7 +68,9 @@ $ThemeInfo['ExampleTheme'] = [
 ];
 ```
 
-This is a list of sites that can view the theme. **This is the best method for custom client themes**. 
+This is a list of sites that can view the theme. **This is the best method for custom client themes**.
 
-The variable **Site** works like **Sites**, but only takes one site, as a string. This variable is not deprecated, use **Sites** instead.
+### Notes
 
+- You can use an asterisk in the site name for wildcard matches (ex. 'site-*.example.com'). Wildcards are great for clusters that are on the Vanilla Hub.
+- The variable **Site** works like **Sites**, but only takes one site, as a string. This variable is deprecated, use **Sites** instead.

@@ -17,10 +17,11 @@ With Vanilla, you have full control over both the CSS and the actual HTML of eve
 ## Part 1: CSS &amp; Design
 
 1. Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: `/themes/your_theme_name`.
-2. Open the about.php file and edit the information to reflect your theme's information.
-3. Create a custom.css file in the "design" folder of your custom theme.
-4. Go to your Dashboard &gt; Themes, and apply your new theme.
-5. Edit the custom.css file to your heart's content. The custom.css file is added *after* the base theme's css. Alternately, you can completely replace the base theme file (style.css) by copying it from the `/applications/dashboard/design` folder into your theme's design folder.
+2. Create an [about.php]({{< relref "developer/theming/about-php.md" >}}) file and edit the information to reflect your theme's information.
+3. If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your theme's visibility]({{< relref "developer/theming/themevisibility.md" >}}). If not, skip this step.
+4. Create a custom.css file in the "design" folder of your custom theme.
+5. Go to your Dashboard &gt; Themes, and apply your new theme. If you don't see it, delete the **theme-index.php** in the **cache** folder.
+6. Edit the custom.css file to your heart's content!
 
 Learn more by reading our docs on [Theming with CSS](/theming/css)
 
@@ -45,3 +46,4 @@ If you don't like the way we've structured our HTML, you can edit that too. Our 
 ### Other things you should know:
 
 * The administrative screens have their own master view. If you want to change their master view, copy the `/applications/dashboard/views/admin.master.php` file to `/themes/your_theme_name/views/admin.master.php`.
+* You can add a custom thumbnail by adding a png called "screenshot.png" in your theme root. 220px wide and 165px high is a good size.
