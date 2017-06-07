@@ -42,7 +42,7 @@ The theme options settings page will also look for screenshots in the design fol
 
 To add custom text to a theme, add a 'Text' key to the 'Options' array. The value of of the 'Text' key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of 'textbox', which is a regular text input, or 'textarea', the default, which is a multiline textarea element.
 
-The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the [text function](/functions/text.html.md) to insert the text in the theme, using the Text array's key as the 'code' parameter. For example, if you had this options array:
+The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the [text function](developer/theming/smarty/functions/text/) to insert the text in the theme, using the Text array's key as the 'code' parameter. For example, if you had this options array:
 
 ```php
 'Options' => [
