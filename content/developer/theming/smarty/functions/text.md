@@ -19,7 +19,7 @@ aliases:
 {text code="string" default="string"}
 ```
 
-Returns the custom text from a theme's options page. [Learn more about how to configure your theme options.](../../themeoptions.html.md)
+Returns the custom text from a theme's options page. [Learn more about how to configure your theme options.](developer/theming/themeoptions/)
 
 ## Parameters
 
