@@ -704,7 +704,7 @@ if (!function_exists(&#39;filterCountString&#39;)) {
 
 &lt;p&gt;To add custom text to a theme, add a &amp;lsquo;Text&amp;rsquo; key to the &amp;lsquo;Options&amp;rsquo; array. The value of of the &amp;lsquo;Text&amp;rsquo; key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of &amp;lsquo;textbox&amp;rsquo;, which is a regular text input, or &amp;lsquo;textarea&amp;rsquo;, the default, which is a multiline textarea element.&lt;/p&gt;
 
-&lt;p&gt;The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the &lt;a href=&#34;//docs.vanillaforums.com/functions/text.html.md&#34;&gt;text function&lt;/a&gt; to insert the text in the theme, using the Text array&amp;rsquo;s key as the &amp;lsquo;code&amp;rsquo; parameter. For example, if you had this options array:&lt;/p&gt;
+&lt;p&gt;The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the &lt;a href=&#34;developer/theming/smarty/functions/text/&#34;&gt;text function&lt;/a&gt; to insert the text in the theme, using the Text array&amp;rsquo;s key as the &amp;lsquo;code&amp;rsquo; parameter. For example, if you had this options array:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; [
     &#39;Text&#39; =&amp;gt; [

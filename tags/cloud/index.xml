@@ -813,7 +813,7 @@ s4HJBD41ZP7DOeVwKwkfwlDHCYY=
 
 &lt;h3 id=&#34;the-hub&#34;&gt;The Hub&lt;/h3&gt;
 
-&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/multisite/sync&#34;&gt;synched&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
+&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;//docs.vanillaforums.com/help/multisite/sync&#34;&gt;synced&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
 
 &lt;p&gt;Each Node is accessible via either a subdomain &lt;em&gt;or&lt;/em&gt; a subfolder off a domain shared by the whole Hub. This is called the &lt;strong&gt;Hub URL Format&lt;/strong&gt;. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.&lt;/p&gt;
 

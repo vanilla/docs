@@ -1172,7 +1172,7 @@
 &lt;pre&gt;&lt;code&gt;{text code=&amp;quot;string&amp;quot; default=&amp;quot;string&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Returns the custom text from a theme&amp;rsquo;s options page. &lt;a href=&#34;../../themeoptions.html.md&#34;&gt;Learn more about how to configure your theme options.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Returns the custom text from a theme&amp;rsquo;s options page. &lt;a href=&#34;developer/theming/themeoptions/&#34;&gt;Learn more about how to configure your theme options.&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
 
