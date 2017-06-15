@@ -6,6 +6,7 @@ category: developer
 menu:
   developer:
     identifier: environment
+    parent: tools
 aliases:
 - /developers/tools/environment
 ---
