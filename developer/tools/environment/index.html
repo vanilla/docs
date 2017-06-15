@@ -107,10 +107,10 @@ n.id = i;
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>about.php</h1>
+    <h1>Environment Setup</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/developer/theming/about-php.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/tools/environment.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -186,10 +186,15 @@ n.id = i;
 	    
 
 
-    <li  class="">
+    <li  class="active">
         <a href="//docs.vanillaforums.com/developer/tools/environment/">Environment Setup</a>
     </li>
     
+    
+        
+        
+        
+        
     
 	    
 
@@ -242,86 +247,10 @@ n.id = i;
 	    
 
 
-    <li  class="active nest">
+    <li  class=" nest">
         <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
     </li>
     
-    
-        
-        
-        
-        
-            <ul class="nav-tier2">
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/quickstart/">Quickstart </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/css/">CSS </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class=" nest">
-                    <a href="//docs.vanillaforums.com/developer/theming/smarty/">Smarty </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/views/">Views / HTML </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/hooks/">Event Hooks </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="active">
-                    <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php </a>
-                </li>
-                
-                
-                    
-                    
-               
-                    
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/themeoptions/">Theme Options </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/themevisibility/">Theme Visibility </a>
-                </li>
-                
-                
-
-	    </ul>
-        
     
 	    
 
@@ -371,86 +300,154 @@ n.id = i;
 
                 
 
-<h2 id="the-about-php-file">The &ldquo;about.php&rdquo; file</h2>
+<h2 id="environment-setup">Environment Setup</h2>
 
-<p>Each theme has an about.php file that contains some important information for Vanilla. Put this file in your theme root.</p>
+<p>After you&rsquo;ve got your <a href="//docs.vanillaforums.com/developers/tools">tools</a> ready, here&rsquo;s how to set some of them up to work together nicely. We assume you&rsquo;re using MacOS. This is all pretty useless if you&rsquo;re not.</p>
 
-<p>Here&rsquo;s a sample file:</p>
+<h3 id="automate-dependency-building">Automate dependency building</h3>
 
-<pre><code class="language-php">&lt;?php
+<p>To automatically recompile Composer dependencies when you make commits, pull, or checkout a different release branch, add this:</p>
 
-$ThemeInfo['ExampleTheme'] = [
-    'Name'        =&gt; &quot;Example Theme&quot;,
-    'Description' =&gt; &quot;Custom theme example&quot;,
-    'Version'     =&gt; '1.0.0',
-    'Author'      =&gt; &quot;Stéphane LaFlèche&quot;,
-    'AuthorEmail' =&gt; 'stephane.l@vanillaforums.com',
-    'AuthorUrl'   =&gt; 'www.vanillaforums.com',
-    'License'     =&gt; 'Proprietary',
-    'Layout'      =&gt; [
-        'Discussions' =&gt; 'table',
-        'Categories'  =&gt; 'modern',
-    ]
-];
+<pre><code>#!/bin/sh
+composer install
 </code></pre>
 
-<h3 id="theme-key">Theme &ldquo;key&rdquo;</h3>
+<p>To these files in your git repository (creating them if they do not exist):</p>
 
-<pre><code>$ThemeInfo['ExampleTheme']
+<ul>
+<li><code>.git/tools/post-commit</code></li>
+<li><code>.git/tools/post-merge</code></li>
+<li><code>.git/tools/post-checkout</code></li>
+</ul>
+
+<p>Then make the files executable. On MacOS, you can use <code>chmod +x [filename]</code> to do this.</p>
+
+<p>Note the <code>#!/bin/sh</code> line should only appear once per file, as the very first line.</p>
+
+<h3 id="using-bootstrap-early-on-localhost">Using bootstrap.early on localhost</h3>
+
+<p>You can create a file named <code>conf/bootstrap.early.php</code> to apply special settings to your localhost environment. The settings are annotated inline so you can use the parts that are relevant to you.</p>
+
+<pre><code class="language-php">&lt;?php if (!defined('APPLICATION')) exit();
+
+// Make sure your localhost has updated to the correct db type.
+saveToConfig('Database.ForceStorageEngine', 'innodb', false);
+
+if (c('Garden.Installed')) {
+   // Always keep debug mode on &amp; enable logging.
+   saveToConfig('DebugAssets', true);
+   saveToConfig('Debug', true);
+   saveToConfig('Garden.Errors.LogEnabled', true);
+   saveToConfig('Garden.Errors.LogFile', '/Users/{YOUR USER}/vanilla.log');
+
+	// Allow email to work via your own SMTP account.
+   saveToConfig('Garden.Email.SupportAddress', 'YOUR EMAIL ADDRESS');
+   saveToConfig('Garden.Email.UseSmtp', '1');
+   saveToConfig('Garden.Email.SmtpHost', 'smtp.gmail.com');
+   saveToConfig('Garden.Email.SmtpUser', 'YOUR EMAIL ADDRESS');
+   saveToConfig('Garden.Email.SmtpPassword', 'PASSWORD TOKEN'); # Get this in Gmail etc.
+   saveToConfig('Garden.Email.SmtpPort', '465');
+   saveToConfig('Garden.Email.SmtpSecurity', 'ssl');
+   
+   // Auto-set your Captcha keys.
+   saveToConfig('Garden.Registration.CaptchaPrivateKey', 'YOUR KEY');
+   saveToConfig('Garden.Registration.CaptchaPublicKey', 'YOUR KEY');
+
+   // Caching is important for thorough feature testing.
+   saveToConfig('Cache.Enabled', false); # Just toggle this to true for testing with cache; usually it's a pain to leave on
+   saveToConfig('Cache.Method', 'memcached');
+   saveToConfig('Cache.Memcached.Store', array('localhost:11211'));
+   if (class_exists('Memcached')) {
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_COMPRESSION, true, false);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT, FALSE);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_LIBKETAMA_COMPATIBLE, true, false);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_NO_BLOCK, true, false);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_TCP_NODELAY, true, false);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_CONNECT_TIMEOUT, 1000, false);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_SERVER_FAILURE_LIMIT, 2, false);
+   } else {
+   	  // You'll be happy this is here when you upgrade PHP and forget.
+      die('You compiled PHP without Memcached, idiot.');
+   }
+}
 </code></pre>
 
-<p>It&rsquo;s important to put a unique key here for your theme. A common mistake is to copy another theme and then forget to edit the about.php file. This key is how Vanilla identifies your theme internally.</p>
+<h3 id="accessing-error-logs">Accessing error logs</h3>
 
-<h3 id="name">Name</h3>
+<p>In the above <code>bootstrap.early</code> example, we enable logging and set a location for those logs. Here&rsquo;s a cheeky shortcut to quickly access them from the command line. Create a file named <code>~/bin/wtf</code> with this content:</p>
 
-<p>The name will appear in the theme selection page.</p>
+<pre><code>#!/bin/sh
+tail -$1 /Users/{YOUR USER}/vanilla.log
+</code></pre>
 
-<h3 id="description">Description</h3>
+<p>Make sure to make it executable (<code>chmod +x ~/bin/wtf</code>). If you set a different log location, substitute it above.</p>
 
-<p>Short description of your theme. Will also appear in theme selection page.</p>
+<p>At the command line you can now type <code>wtf</code> to see the most recent log entries. Or, <code>wtf 50</code> to specify seeing the 50 most recent lines on the log. It&rsquo;s a little cathartic and less irritating than trying to remember your log location.</p>
 
-<h3 id="version">Version</h3>
+<p>Don&rsquo;t forget to also consult your server (Apache/nginx) and PHP logs. You can create similar shortcuts for them, if you like.</p>
 
-<p>Version of the theme. The cache is tied to this version. If you ever run into an issue with the cache, you can try to bump up this version number.</p>
+<h3 id="reloading-localhost-services">Reloading localhost services</h3>
 
-<h3 id="author">Author</h3>
+<p>Reload a locahost service installed with brew. <em>Usage</em>: <code>reload php</code></p>
 
-<p>Author of the theme</p>
+<p>This is mainly useful so you don&rsquo;t need to remember all these file locations and command variations. Again, this would be in a file named <code>~/bin/reload</code>.</p>
 
-<h3 id="authoremail">AuthorEmail</h3>
+<pre><code># Reload php, sql, or nginx
 
-<p>Email of the author</p>
+if [ $1 == 'php' ] 
+  then
+  launchctl unload -w /Users/linc/Library/LaunchAgents/org.php.php-fpm.plist
+  launchctl load -w /Users/linc/Library/LaunchAgents/org.php.php-fpm.plist
+  echo &quot;PHP restarted&quot;;
+fi
 
-<h3 id="license">License</h3>
+if [ $1 == 'sql' ] 
+  then
+  launchctl unload -w /Users/linc/Library/LaunchAgents/homebrew.mxcl.percona-server.plist
+  launchctl load -w /Users/linc/Library/LaunchAgents/homebrew.mxcl.percona-server.plist
+  echo &quot;Percona restarted&quot;;
+fi
 
-<p>License of the theme.</p>
+if [ $1 = 'nginx' ] 
+  then
+  sudo nginx -s stop
+  sudo nginx
+  echo &quot;Nginx restarted&quot;;
+fi 
+</code></pre>
 
-<h3 id="layout">Layout</h3>
+<h3 id="proper-debugging-setup">Proper debugging setup</h3>
 
-<p>This is an optional property that tells Vanilla which views the theme was meant to use. Sometimes custom themes only work with a specific view. Keep in mind that this will not block an admin from changing the views, but it will give them a warning in the dashboard.</p>
+<p>First, grab xdebug.</p>
 
-<p><strong>Layouts for Discussions:</strong></p>
+<p><code>brew install xdebug</code></p>
 
-<ul>
-<li>modern</li>
-<li>table</li>
-</ul>
+<p>If you&rsquo;re using the normal nginx setup we pass around the office, your upstream backend is probably listening on port 9000, which is the default for xdebug, so there&rsquo;s a conflict. So, let&rsquo;s set xdebug to 9009.</p>
 
-<p><strong>Layouts for categories:</strong></p>
+<p>In <code>/usr/local/etc/php/{version}/conf.d/ext-xdebug.ini</code> add this:</p>
 
-<ul>
-<li>modern</li>
-<li>table</li>
-<li>mixed</li>
-</ul>
+<pre><code>xdebug.remote_enable = 1
+xdebug.remote_port = 9009
+html_errors = off
+</code></pre>
 
-<h3 id="visibility">Visibility</h3>
+<p>Reload PHP.</p>
 
-<p>If you&rsquo;ve got <a href="http://vanillaforums.com">Vanilla Cloud</a>, make sure to also <a href="//docs.vanillaforums.com/developer/theming/themevisibility/">set your theme&rsquo;s visibility</a>.</p>
+<p>Now in PHPStorm go to Preferences and search XDebug and set the debug port to 9009.</p>
 
-<h3 id="theme-options">Theme Options:</h3>
+<p><img src="https://us.v-cdn.net/5022541/uploads/editor/bo/dqpgwnvkn6tx.png" alt="" /></p>
 
-<p>The about.php file also supports <a href="//docs.vanillaforums.com/developer/theming/themeoptions/">Theme Options</a>.</p>
+<p>In your PHPStorm debug bar, choose &ldquo;Edit Configurations&rdquo; from the dropdown.</p>
+
+<p><img src="https://us.v-cdn.net/5022541/uploads/editor/o4/e8r3pktz5vp9.png" alt="" /></p>
+
+<p>Add a new PHP Web Application and give it the name &amp; host of your localhost setup.</p>
+
+<p><img src="https://us.v-cdn.net/5022541/uploads/editor/cv/1nur7d6q57eb.png" alt="" /></p>
+
+<p>Clicking &ldquo;Play&rdquo; should now open Vanilla in your browser. To prove XDebug is working, add a breakpoint to index.php at <code>$Dispatcher = Gdn::Dispatcher();</code> and click the &ldquo;Bug&rdquo; button. A page should open in your browser with an XDebug session attached to the URL. Back in PHPStorm, your debug console should be open with variable information.</p>
+
+<p>Happy hunting.</p>
 
 
             
