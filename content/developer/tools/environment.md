@@ -127,7 +127,7 @@ if [ $1 = 'nginx' ]
 fi 
 ```
 
-### Proper debugging setup
+### Proper debugging setup 
 
 First, grab xdebug.
 
@@ -145,7 +145,9 @@ html_errors = off
 
 Reload PHP.
 
-Now in PHPStorm go to Preferences and search XDebug and set the debug port to 9009.
+#### PHPStorm integration
+
+In PHPStorm, go to Preferences and search XDebug and set the debug port to 9009.
 
 ![](https://us.v-cdn.net/5022541/uploads/editor/bo/dqpgwnvkn6tx.png "")
 
@@ -159,4 +161,4 @@ Add a new PHP Web Application and give it the name & host of your localhost setu
 
 Clicking "Play" should now open Vanilla in your browser. To prove XDebug is working, add a breakpoint to index.php at `$Dispatcher = Gdn::Dispatcher();` and click the "Bug" button. A page should open in your browser with an XDebug session attached to the URL. Back in PHPStorm, your debug console should be open with variable information.
 
-Happy hunting.
+*Not using PHPStorm? Add your IDE's steps here.*
