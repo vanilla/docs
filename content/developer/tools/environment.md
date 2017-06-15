@@ -10,11 +10,10 @@ menu:
 aliases:
 - /developers/tools/environment
 ---
-## Environment Setup
 
 After you've got your [tools](/developers/tools) ready, here's how to set some of them up to work together nicely. We assume you're using MacOS. This is all pretty useless if you're not.
 
-### Automate dependency building
+## Automate dependency building
 
 To automatically recompile Composer dependencies when you make commits, pull, or checkout a different release branch, add this:
 
@@ -33,7 +32,7 @@ Then make the files executable. On MacOS, you can use `chmod +x [filename]` to d
 
 Note the `#!/bin/sh` line should only appear once per file, as the very first line.
 
-### Using bootstrap.early on localhost
+## Using bootstrap.early on localhost
 
 You can create a file named `conf/bootstrap.early.php` to apply special settings to your localhost environment. The settings are annotated inline so you can use the parts that are relevant to you.
 
@@ -82,7 +81,7 @@ if (c('Garden.Installed')) {
 }
 ```
 
-### Accessing error logs
+## Accessing error logs
 
 In the above `bootstrap.early` example, we enable logging and set a location for those logs. Here's a cheeky shortcut to quickly access them from the command line. Create a file named `~/bin/wtf` with this content:
 
@@ -97,7 +96,7 @@ At the command line you can now type `wtf` to see the most recent log entries. O
 
 Don't forget to also consult your server (Apache/nginx) and PHP logs. You can create similar shortcuts for them, if you like.
 
-### Reloading localhost services
+## Reloading localhost services
 
 Reload a locahost service installed with brew. _Usage_: `reload php`
 
@@ -128,7 +127,7 @@ if [ $1 = 'nginx' ]
 fi 
 ```
 
-### Proper debugging setup 
+## Proper debugging setup 
 
 First, grab xdebug.
 
@@ -146,7 +145,7 @@ html_errors = off
 
 Reload PHP.
 
-#### PHPStorm integration
+### PHPStorm integration
 
 In PHPStorm, go to Preferences and search XDebug and set the debug port to 9009.
 

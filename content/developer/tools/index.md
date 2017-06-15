@@ -9,18 +9,17 @@ menu:
 aliases:
 - /developers/tools
 ---
-## Developer Tools
 
 Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All our developers use MacOS.
 
-### Stacks Supported
+## Stacks Supported
 
 * PHP 5.6 - 7.1 (as of Vanilla 2.5)
 * Unix, Windows, or OSX
 * [nginx, Apache, or IIS](http://docs.vanillaforums.com/developer/backend/)
 * MySQL, Percona, or MariaDB
 
-### Cloud Stack
+## Cloud Stack
 
 * PHP 7.1
 * nginx
@@ -31,7 +30,7 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * Sphinx
 * OpenStack
 
-### Developer Tools
+## Developer Tools
 
 * homebrew
 * git
@@ -44,14 +43,14 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * Travis CI
 * Scrutinizer
 
-### [Frontend Build](https://github.com/vanilla/vanilla/tree/master/applications/dashboard)
+## [Frontend Build](https://github.com/vanilla/vanilla/tree/master/applications/dashboard)
 
 * Sass
 * SCSS-Lint
 * Yarn
 * Node.js
 
-### Libraries
+## Libraries
 
 * [Garden](https://github.com/vanilla?q=garden) (our custom libraries on GitHub)
 * PHPMailer
@@ -62,7 +61,7 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * Smarty
 * PHP Markdown
 
-### Management
+## Management
 
 * [GitHub](https://github.com/vanilla)
 * Transifex (translations)
@@ -71,7 +70,7 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * Jarvis (chatbot)
 * CLA Assistant
 
-### Applications
+## Applications
 
 * PhpStorm or NetBeans (IDEs)
 * Sequel Pro (SQL manager)
