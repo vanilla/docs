@@ -307,11 +307,9 @@ n.id = i;
 
                 
 
-<h2 id="environment-setup">Environment Setup</h2>
-
 <p>After you&rsquo;ve got your <a href="//docs.vanillaforums.com/developers/tools">tools</a> ready, here&rsquo;s how to set some of them up to work together nicely. We assume you&rsquo;re using MacOS. This is all pretty useless if you&rsquo;re not.</p>
 
-<h3 id="automate-dependency-building">Automate dependency building</h3>
+<h2 id="automate-dependency-building">Automate dependency building</h2>
 
 <p>To automatically recompile Composer dependencies when you make commits, pull, or checkout a different release branch, add this:</p>
 
@@ -331,7 +329,7 @@ composer install
 
 <p>Note the <code>#!/bin/sh</code> line should only appear once per file, as the very first line.</p>
 
-<h3 id="using-bootstrap-early-on-localhost">Using bootstrap.early on localhost</h3>
+<h2 id="using-bootstrap-early-on-localhost">Using bootstrap.early on localhost</h2>
 
 <p>You can create a file named <code>conf/bootstrap.early.php</code> to apply special settings to your localhost environment. The settings are annotated inline so you can use the parts that are relevant to you.</p>
 
@@ -379,7 +377,7 @@ if (c('Garden.Installed')) {
 }
 </code></pre>
 
-<h3 id="accessing-error-logs">Accessing error logs</h3>
+<h2 id="accessing-error-logs">Accessing error logs</h2>
 
 <p>In the above <code>bootstrap.early</code> example, we enable logging and set a location for those logs. Here&rsquo;s a cheeky shortcut to quickly access them from the command line. Create a file named <code>~/bin/wtf</code> with this content:</p>
 
@@ -393,7 +391,7 @@ tail -$1 /Users/{YOUR USER}/vanilla.log
 
 <p>Don&rsquo;t forget to also consult your server (Apache/nginx) and PHP logs. You can create similar shortcuts for them, if you like.</p>
 
-<h3 id="reloading-localhost-services">Reloading localhost services</h3>
+<h2 id="reloading-localhost-services">Reloading localhost services</h2>
 
 <p>Reload a locahost service installed with brew. <em>Usage</em>: <code>reload php</code></p>
 
@@ -423,7 +421,7 @@ if [ $1 = 'nginx' ]
 fi 
 </code></pre>
 
-<h3 id="proper-debugging-setup">Proper debugging setup</h3>
+<h2 id="proper-debugging-setup">Proper debugging setup</h2>
 
 <p>First, grab xdebug.</p>
 
@@ -440,7 +438,7 @@ html_errors = off
 
 <p>Reload PHP.</p>
 
-<h4 id="phpstorm-integration">PHPStorm integration</h4>
+<h3 id="phpstorm-integration">PHPStorm integration</h3>
 
 <p>In PHPStorm, go to Preferences and search XDebug and set the debug port to 9009.</p>
 
