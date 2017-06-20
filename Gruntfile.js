@@ -312,9 +312,8 @@ module.exports = function (grunt) {
         args = [
             '--destination=./' + options.dest
         ];
-        if (target === 'dev') {
+        if (target === 'dev') {rr
             args.push('--config=' + path.resolve('./config-dev.yaml'));
-            args.push('--buildDrafts=true');
             args.push('--buildFuture=true');
         } else {
             args.push('--config=' + path.resolve('./config.yaml'));
