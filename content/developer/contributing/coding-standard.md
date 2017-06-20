@@ -20,22 +20,22 @@ We adopted this standard for all the usual reasons: our team is growing, and we 
 
 ### PHP Version
 
-All code in `master` must work under PHP 5.4.
+All code in `master` must work under PHP 5.6 but we strongly recommend using 7.0.
 
-All code in `release/2.2` must work under PHP 5.3.
+All code in `release/2.3` must work under PHP 5.4.
 
-We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.
+For up to date information you can look at our [self-hosting-requirements](https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements) section.
 
-### Check out CodeSniffer
+### Validating your PHP code with PHP_CodeSniffer
 
 CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.
 
-Our standard is in [Vanilla's Addons repo](http://github.com/vanillaforums/addons), where you can submit issues and pull requests. Its contents will help you on your way.
+Our standard is in [Vanilla's Standars repo](https://github.com/vanilla/standards), where you can submit issues and pull requests. Its contents will help you on your way.
 
 1. Get CodeSniffer: `pear install PHP_CodeSniffer`.
 2. Add to bash profile: `export PATH="$(brew --prefix php55)/bin:$PATH"`.
 3. Find CodeSniffer's Standards folder. Use `pear config-get php_dir` and go from there.
-3. Symlink `addons/standards/Vanilla/` to CodeSniffer's Standards folder.
+3. Symlink `standards/code-sniffer/Vanilla` to CodeSniffer's Standards folder.
 4. Set Vanilla as your standard: `phpcs --config-set default_standard Vanilla`.
 5. Use it: `phpcs /path/to/code`.
 
