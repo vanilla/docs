@@ -838,23 +838,23 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
 
 &lt;h3 id=&#34;php-version&#34;&gt;PHP Version&lt;/h3&gt;
 
-&lt;p&gt;All code in &lt;code&gt;master&lt;/code&gt; must work under PHP 5.4.&lt;/p&gt;
+&lt;p&gt;All code in &lt;code&gt;master&lt;/code&gt; must work under PHP 5.6, but we strongly recommend using 7.0.&lt;/p&gt;
 
-&lt;p&gt;All code in &lt;code&gt;release/2.2&lt;/code&gt; must work under PHP 5.3.&lt;/p&gt;
+&lt;p&gt;All code in &lt;code&gt;release/2.3&lt;/code&gt; must work under PHP 5.4.&lt;/p&gt;
 
-&lt;p&gt;We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.&lt;/p&gt;
+&lt;p&gt;For up-to-date information you can look at our &lt;a href=&#34;https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements&#34;&gt;self-hosting-requirements&lt;/a&gt; section.&lt;/p&gt;
 
-&lt;h3 id=&#34;check-out-codesniffer&#34;&gt;Check out CodeSniffer&lt;/h3&gt;
+&lt;h3 id=&#34;validating-your-php-code-with-php-codesniffer&#34;&gt;Validating your PHP code with PHP_CodeSniffer&lt;/h3&gt;
 
 &lt;p&gt;CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.&lt;/p&gt;
 
-&lt;p&gt;Our standard is in &lt;a href=&#34;http://github.com/vanillaforums/addons&#34;&gt;Vanilla&amp;rsquo;s Addons repo&lt;/a&gt;, where you can submit issues and pull requests. Its contents will help you on your way.&lt;/p&gt;
+&lt;p&gt;Our standard is in &lt;a href=&#34;https://github.com/vanilla/standards&#34;&gt;Vanilla&amp;rsquo;s Standards repo&lt;/a&gt;, where you can submit issues and pull requests. Its contents will help you on your way.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Get CodeSniffer: &lt;code&gt;pear install PHP_CodeSniffer&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Add to bash profile: &lt;code&gt;export PATH=&amp;quot;$(brew --prefix php55)/bin:$PATH&amp;quot;&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Find CodeSniffer&amp;rsquo;s Standards folder. Use &lt;code&gt;pear config-get php_dir&lt;/code&gt; and go from there.&lt;/li&gt;
-&lt;li&gt;Symlink &lt;code&gt;addons/standards/Vanilla/&lt;/code&gt; to CodeSniffer&amp;rsquo;s Standards folder.&lt;/li&gt;
+&lt;li&gt;Symlink &lt;code&gt;standards/code-sniffer/Vanilla&lt;/code&gt; to CodeSniffer&amp;rsquo;s Standards folder.&lt;/li&gt;
 &lt;li&gt;Set Vanilla as your standard: &lt;code&gt;phpcs --config-set default_standard Vanilla&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Use it: &lt;code&gt;phpcs /path/to/code&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;

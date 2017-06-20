@@ -333,23 +333,23 @@ n.id = i;
 
 <h3 id="php-version">PHP Version</h3>
 
-<p>All code in <code>master</code> must work under PHP 5.4.</p>
+<p>All code in <code>master</code> must work under PHP 5.6, but we strongly recommend using 7.0.</p>
 
-<p>All code in <code>release/2.2</code> must work under PHP 5.3.</p>
+<p>All code in <code>release/2.3</code> must work under PHP 5.4.</p>
 
-<p>We currently plan to move to PHP 5.5 after the fork for 2.3. These plans may change with little notice.</p>
+<p>For up-to-date information you can look at our <a href="https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements">self-hosting-requirements</a> section.</p>
 
-<h3 id="check-out-codesniffer">Check out CodeSniffer</h3>
+<h3 id="validating-your-php-code-with-php-codesniffer">Validating your PHP code with PHP_CodeSniffer</h3>
 
 <p>CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.</p>
 
-<p>Our standard is in <a href="http://github.com/vanillaforums/addons">Vanilla&rsquo;s Addons repo</a>, where you can submit issues and pull requests. Its contents will help you on your way.</p>
+<p>Our standard is in <a href="https://github.com/vanilla/standards">Vanilla&rsquo;s Standards repo</a>, where you can submit issues and pull requests. Its contents will help you on your way.</p>
 
 <ol>
 <li>Get CodeSniffer: <code>pear install PHP_CodeSniffer</code>.</li>
 <li>Add to bash profile: <code>export PATH=&quot;$(brew --prefix php55)/bin:$PATH&quot;</code>.</li>
 <li>Find CodeSniffer&rsquo;s Standards folder. Use <code>pear config-get php_dir</code> and go from there.</li>
-<li>Symlink <code>addons/standards/Vanilla/</code> to CodeSniffer&rsquo;s Standards folder.</li>
+<li>Symlink <code>standards/code-sniffer/Vanilla</code> to CodeSniffer&rsquo;s Standards folder.</li>
 <li>Set Vanilla as your standard: <code>phpcs --config-set default_standard Vanilla</code>.</li>
 <li>Use it: <code>phpcs /path/to/code</code>.</li>
 </ol>
