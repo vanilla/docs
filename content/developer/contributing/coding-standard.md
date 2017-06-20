@@ -20,17 +20,17 @@ We adopted this standard for all the usual reasons: our team is growing, and we 
 
 ### PHP Version
 
-All code in `master` must work under PHP 5.6 but we strongly recommend using 7.0.
+All code in `master` must work under PHP 5.6, but we strongly recommend using 7.0.
 
 All code in `release/2.3` must work under PHP 5.4.
 
-For up to date information you can look at our [self-hosting-requirements](https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements) section.
+For up-to-date information you can look at our [self-hosting-requirements](https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements) section.
 
 ### Validating your PHP code with PHP_CodeSniffer
 
 CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.
 
-Our standard is in [Vanilla's Standars repo](https://github.com/vanilla/standards), where you can submit issues and pull requests. Its contents will help you on your way.
+Our standard is in [Vanilla's Standards repo](https://github.com/vanilla/standards), where you can submit issues and pull requests. Its contents will help you on your way.
 
 1. Get CodeSniffer: `pear install PHP_CodeSniffer`.
 2. Add to bash profile: `export PATH="$(brew --prefix php55)/bin:$PATH"`.
