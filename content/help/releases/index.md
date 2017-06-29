@@ -29,4 +29,4 @@ Full release notes:
 * **Summer**: 11-12 July
 * **Fall**: 17-18 October
 
-The winter release will be some time in January 2018, date TBD as part of our 2018 schedule.
+The first release of 2018 does not have a date set at this time.
