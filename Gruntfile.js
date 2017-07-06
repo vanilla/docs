@@ -314,7 +314,6 @@ module.exports = function (grunt) {
         ];
         if (target === 'dev') {
             args.push('--config=' + path.resolve('./config-dev.yaml'));
-            args.push('--baseUrl=http://127.0.0.1:8081');
             args.push('--buildDrafts=true');
             args.push('--buildFuture=true');
         } else {
