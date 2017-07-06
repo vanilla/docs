@@ -350,6 +350,41 @@
 
 &lt;p&gt;Sometimes bug fixes are backported to the current release, meaning they show up in production earlier than the date noted.&lt;/p&gt;
 
+&lt;h3 id=&#34;q2-release-6-thursday-june-29&#34;&gt;Q2 release 6 (Thursday, June 29)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improve load time of Vanilla Statistics dashboard summaries.&lt;/li&gt;
+&lt;li&gt;Triple-A theme: Added missing icons for Reactions.&lt;/li&gt;
+&lt;li&gt;Dashboard: Font tweaks for right panel.&lt;/li&gt;
+&lt;li&gt;Dashboard: Fix inaccurate toggle position for embedding URLs in Posting Settings.&lt;/li&gt;
+&lt;li&gt;Dashboard: Fix &amp;lsquo;Badge Requests&amp;rsquo; menu showing users in wrong section.&lt;/li&gt;
+&lt;li&gt;Dashboard: Fix username disappearing from the dashboard user edit form on failed save.&lt;/li&gt;
+&lt;li&gt;Wysiwyg: Fix doubly encoding code blocks.&lt;/li&gt;
+&lt;li&gt;Posting: Fix alignment issues in BBCode.&lt;/li&gt;
+&lt;li&gt;Posting: Fix magic Vanilla formatting in BBCode code tags.&lt;/li&gt;
+&lt;li&gt;Posting: Fix embedding Twitch video.&lt;/li&gt;
+&lt;li&gt;Posting: Fix plural vs singular translation for minimum post length error message.&lt;/li&gt;
+&lt;li&gt;Embed: Fix forum scrolling position issues &amp;amp; disable auto-scroll.&lt;/li&gt;
+&lt;li&gt;Signatures: Fix settings validation in Dashboard.&lt;/li&gt;
+&lt;li&gt;Signatures: Fix translation of error message for images.&lt;/li&gt;
+&lt;li&gt;Role Titles: Fix addon not loading when enabled.&lt;/li&gt;
+&lt;li&gt;Drafts: Fix drafts being assigned to the Root category by default.&lt;/li&gt;
+&lt;li&gt;Civil Tongue: Add filtering to activity &amp;amp; notifications.&lt;/li&gt;
+&lt;li&gt;OAuth2 SSO: Add support for refresh tokens.&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A: Adding question link to accepted answer notification&lt;/li&gt;
+&lt;li&gt;Zendesk: Fix miscellaneous connection issues.&lt;/li&gt;
+&lt;li&gt;Editor: Fix image URL prompt on posts being clipped on mobile&lt;/li&gt;
+&lt;li&gt;Private messages: Fix recipient being added a second time to the same conversation.&lt;/li&gt;
+&lt;li&gt;Users: Replace deleted users mail placeholder to use &amp;lsquo;invalid&amp;rsquo; TLD.&lt;/li&gt;
+&lt;li&gt;Analytics: Remove contributors from active users count to show an accurate participation rate.&lt;/li&gt;
+&lt;li&gt;Addons: Show a notification if turning on one addon forcibly enables another addon as a dependency.&lt;/li&gt;
+&lt;li&gt;Addons: Added icons for a number of addons that lacked one.&lt;/li&gt;
+&lt;li&gt;Polls: Fix redirect when the spam filter is triggered.&lt;/li&gt;
+&lt;li&gt;Subcommunities: Fix URL generation for discussions and comments for external use, as in emails and breadcrumbs. They were sometimes non-canonical.&lt;/li&gt;
+&lt;li&gt;Banning: Fix ban rule counters, which were incorrectly including admins and moderators in their count, even though they were blocked from being banned.&lt;/li&gt;
+&lt;li&gt;Improve how redirects are handled in Vanilla to be safer and more consistent.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;&lt;em&gt;Q2 release 5 was skipped.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;q2-release-4-wednesday-may-24&#34;&gt;Q2 release 4 (Wednesday, May 24)&lt;/h3&gt;
@@ -366,7 +401,7 @@
 &lt;li&gt;Fix new post count not being displayed on Participated Discussions page.&lt;/li&gt;
 &lt;li&gt;Skip flood control checks for editing.&lt;/li&gt;
 &lt;li&gt;Fix Advanced Search autocomplete on sites in a subdirectory.&lt;/li&gt;
-&lt;li&gt;Fix non-ascii items not being added to menus.&lt;/li&gt;
+&lt;li&gt;Fix non-ASCII items not being added to menus (we only allowed English word characters in some menus).&lt;/li&gt;
 &lt;li&gt;Fix a category&amp;rsquo;s latest post not being updated when moving or deleting a discussion.&lt;/li&gt;
 &lt;li&gt;Fix Spoof permission check on manual spoof page.&lt;/li&gt;
 &lt;li&gt;Fix redirect problem when toggling from mobile to full site and back.&lt;/li&gt;
