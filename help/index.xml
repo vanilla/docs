@@ -855,7 +855,7 @@
       <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
       <description>
 
-&lt;h1 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h1&gt;
+&lt;h2 id=&#34;advanced-analytics-overview&#34;&gt;Advanced Analytics Overview&lt;/h2&gt;
 
 &lt;p&gt;Available on certain plans as an add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
@@ -873,18 +873,18 @@ Line, Area, Pie chart and Bar graphs use the selected time range to group the fe
 Pie charts represent multiple values for the whole selected time range.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;analytics-sections&#34;&gt;Analytics Sections&lt;/h1&gt;
+&lt;h2 id=&#34;analytics-sections&#34;&gt;Analytics Sections&lt;/h2&gt;
 
-&lt;h2 id=&#34;engagement&#34;&gt;Engagement&lt;/h2&gt;
+&lt;h3 id=&#34;engagement&#34;&gt;Engagement&lt;/h3&gt;
 
-&lt;h3 id=&#34;metrics&#34;&gt;Metrics&lt;/h3&gt;
+&lt;h4 id=&#34;metrics&#34;&gt;Metrics&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Posts Positivity Rate:&lt;/strong&gt; Number of posts having a positive reaction divided by the number of posts having a negative reaction.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Average Time to First Comment:&lt;/strong&gt; Average amount of time it took for discussions to have their first comment.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;leaderboards&#34;&gt;Leaderboards&lt;/h3&gt;
+&lt;h4 id=&#34;leaderboards&#34;&gt;Leaderboards&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Members by Accumulated Reputation:&lt;/strong&gt; Members ordered by the highest sum of reputation point accumulated.&lt;/li&gt;
@@ -895,7 +895,7 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;graphs&#34;&gt;Graphs&lt;/h3&gt;
+&lt;h4 id=&#34;graphs&#34;&gt;Graphs&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Participation Rate:&lt;/strong&gt; Number of distinct members that viewed a page on the forum vs the number of visits by distinct users.&lt;/li&gt;
@@ -906,9 +906,9 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Average Posts per Active Users:&lt;/strong&gt; Number of posts divided by the number of &lt;a href=&#34;#active-user&#34;&gt;active users&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;traffic&#34;&gt;Traffic&lt;/h2&gt;
+&lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
 
-&lt;h3 id=&#34;metrics-1&#34;&gt;Metrics&lt;/h3&gt;
+&lt;h4 id=&#34;metrics-1&#34;&gt;Metrics&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Page views:&lt;/strong&gt; Number of pages viewed.&lt;/li&gt;
@@ -916,13 +916,13 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Visits:&lt;/strong&gt; Number of visits. &lt;em&gt;Including guests.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;leaderboards-1&#34;&gt;Leaderboards&lt;/h3&gt;
+&lt;h4 id=&#34;leaderboards-1&#34;&gt;Leaderboards&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Discussions with Most Views:&lt;/strong&gt; Discussions ordered by the highest number of accumulated views.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;graphs-1&#34;&gt;Graphs&lt;/h3&gt;
+&lt;h4 id=&#34;graphs-1&#34;&gt;Graphs&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; Number of users that logged in to the community.&lt;/li&gt;
@@ -932,9 +932,9 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;New Users:&lt;/strong&gt; Number of all new registrants to the community.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;posting&#34;&gt;Posting&lt;/h2&gt;
+&lt;h3 id=&#34;posting&#34;&gt;Posting&lt;/h3&gt;
 
-&lt;h3 id=&#34;metrics-2&#34;&gt;Metrics&lt;/h3&gt;
+&lt;h4 id=&#34;metrics-2&#34;&gt;Metrics&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Discussions:&lt;/strong&gt; Number of discussions created.&lt;/li&gt;
@@ -942,14 +942,14 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Contributors:&lt;/strong&gt; Number of distinct members who created a post.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;leaderboards-2&#34;&gt;Leaderboards&lt;/h3&gt;
+&lt;h4 id=&#34;leaderboards-2&#34;&gt;Leaderboards&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Users with Most Posts:&lt;/strong&gt; Members ordered by the highest number of post created.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Users with Most Discussions:&lt;/strong&gt; Members ordered by the highest number of discussions created.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;graphs-2&#34;&gt;Graphs&lt;/h3&gt;
+&lt;h4 id=&#34;graphs-2&#34;&gt;Graphs&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Discussions&lt;/strong&gt;: Number of discussions created.&lt;/li&gt;
@@ -963,11 +963,11 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Contributors by Role Type&lt;/strong&gt;: Number of distinct members, having created a post, grouped by &lt;a href=&#34;#role-type&#34;&gt;role types&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
+&lt;h3 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;metrics-3&#34;&gt;Metrics&lt;/h3&gt;
+&lt;h4 id=&#34;metrics-3&#34;&gt;Metrics&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Questions Asked:&lt;/strong&gt; Number of questions asked.&lt;/li&gt;
@@ -977,7 +977,7 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Average Time to Accept:&lt;/strong&gt; Average amount of time it took for questions to have an accepted answer. &lt;em&gt;Questions without an accepted answer are not counted.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;leaderboards-3&#34;&gt;Leaderboards&lt;/h3&gt;
+&lt;h4 id=&#34;leaderboards-3&#34;&gt;Leaderboards&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Questions with Most Views:&lt;/strong&gt; Questions ordered by the highest number of accumulated views.&lt;/li&gt;
@@ -985,7 +985,7 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Users with Most Accepted Answers:&lt;/strong&gt; Members ordered by the highest number of answers created and then accepted as the best answer.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;graphs-3&#34;&gt;Graphs&lt;/h3&gt;
+&lt;h4 id=&#34;graphs-3&#34;&gt;Graphs&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Questions Asked:&lt;/strong&gt; Number of questions created.&lt;/li&gt;
@@ -993,7 +993,7 @@ Pie charts represent multiple values for the whole selected time range.&lt;/li&g
 &lt;li&gt;&lt;strong&gt;Accepted Answers&lt;/strong&gt;: Number of answers accepted.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;analytics-lexicon&#34;&gt;Analytics Lexicon&lt;/h1&gt;
+&lt;h2 id=&#34;analytics-lexicon&#34;&gt;Analytics Lexicon&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;a id=&#34;active-user&#34;&gt;Active User&lt;/a&gt;:&lt;/strong&gt; User that are logged in.&lt;/li&gt;
