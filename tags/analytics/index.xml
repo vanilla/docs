@@ -15,279 +15,157 @@
       <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
       <description>
 
-&lt;h2 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h2&gt;
+&lt;h1 id=&#34;advanced-analytics&#34;&gt;Advanced Analytics&lt;/h1&gt;
 
-&lt;p&gt;Available as on certain plans or as an add-on, Advanced Aanalytics give you further insights into your community.&lt;/p&gt;
+&lt;p&gt;Available on certain plans as an add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
 
-&lt;p&gt;! &lt;a href=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34;&gt;Customize Theme&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;traffic&#34;&gt;Traffic&lt;/h3&gt;
-
-&lt;p&gt;Traffic statistics can be filtered by date and by category and include:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Advanced Analytics&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; A count on unique users that logged in to the community.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unique Visits by Role Type:&lt;/strong&gt; A count of total visits for each user role.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Page Views:&lt;/strong&gt; A count of total page views.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;New Users:&lt;/strong&gt; A count of all new registrants to the community.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Metrics:&lt;/strong&gt;
+Metrics a single number that quantify something for the selected time range.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Leaderboards:&lt;/strong&gt;
+Leaderboards are tables showing the ranking of specific items for the selected time range.
+The &amp;ldquo;previous&amp;rdquo; rankings are calculated using the rankings of the previous time range.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Graphs:&lt;/strong&gt;
+Graphs can come in multiple forms!
+Line, Area, Pie chart and Bar graphs use the selected time range to group the fetched information.
+Pie charts represent multiple values for the whole selected time range.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;posting&#34;&gt;Posting&lt;/h3&gt;
+&lt;h1 id=&#34;analytics-sections&#34;&gt;Analytics Sections&lt;/h1&gt;
 
-&lt;p&gt;Posting statistics can be filtered by date and by category and include:&lt;/p&gt;
-
-&lt;p&gt;*&lt;strong&gt;Discussions:&lt;/strong&gt; A count of all new discussions created.
- *&lt;strong&gt;Comments:&lt;/strong&gt; A count of all new comments created.
- *&lt;strong&gt;Posts:&lt;/strong&gt; A count of all posts (discussion post + comments) created.
- *&lt;strong&gt;Posts by type:&lt;/strong&gt; A count of discussions and of posts created.
- *&lt;strong&gt;Posts by Category:&lt;/strong&gt; A count of posts (discussions + comments) for each category.
- *&lt;strong&gt;Contributors:&lt;/strong&gt; A count of unique contributors (created a discussion or made a comment).
- *&lt;strong&gt;Contributors by Category:&lt;/strong&gt; A count of unique contributors in each category.
- *&lt;strong&gt;Contributors by Role Type:&lt;/strong&gt; A count of unique contributors by role type.&lt;/p&gt;
-
-&lt;h3 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h3&gt;
-
-&lt;p&gt;Q &amp;amp; A statistics can be filtered by time period and category. When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
-
-&lt;p&gt;*&lt;strong&gt;Questions Asked:&lt;/strong&gt; The number of questions created within the time period.
- *&lt;strong&gt;Questions Answered:&lt;/strong&gt; The number of questions answered within the time period, including answers to questions that were created outside the time period selected.
- *&lt;strong&gt;Answers Accepted:&lt;/strong&gt; The number of answers accepted by either the user who created the question or by a moderator/admin. This includes acceptance of questions created outside of the time period selected.
- *&lt;strong&gt;Average Time to Ansnwer:&lt;/strong&gt; The average time taken for a question that was answered within the time period to have been answered.  Questions that were not answered are not included.
- *&lt;strong&gt;Average Time to Accept:&lt;/strong&gt; The average time taken for a question that was accepted to have been accepted. Questions that were not answered or not accepted are not included.&lt;/p&gt;
-
-&lt;h3 id=&#34;engagement&#34;&gt;Engagement&lt;/h3&gt;
-
-&lt;p&gt;Engagement statistics can be filtered by date and by category and include:&lt;/p&gt;
-
-&lt;p&gt;*&lt;strong&gt;Visits per Active Users:&lt;/strong&gt; The total number of visits divided by the number of active users.&lt;/p&gt;
-
-&lt;h1 id=&#34;average-posts-per-active-users-the-total-number-of-posts-divided-by-the-number-of-active-users&#34;&gt;*&lt;strong&gt;Average Posts per Active Users:&lt;/strong&gt; The total number of posts divided by the number of active users.&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;weight: 101
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;aliases:&lt;/p&gt;
-
-&lt;h2 id=&#34;features-analytics-advanced-analytics&#34;&gt;- /features/analytics/advanced-analytics&lt;/h2&gt;
-
-&lt;h2 id=&#34;advanced-analytics-1&#34;&gt;Advanced Analytics&lt;/h2&gt;
-
-&lt;p&gt;Available on certain plans or as a paid add-on, Advanced Analytics give you further insights into your community.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-advanced.png&#34; alt=&#34;Customize Theme&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;visualization-of-analytics&#34;&gt;Visualization of Analytics&lt;/h2&gt;
-
-&lt;p&gt;The analytics data are presented using three different formats:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Metrics&lt;/strong&gt;&lt;br /&gt;
-Metrics a single number that quantify something for the selected time range.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Leaderboards&lt;/strong&gt;&lt;br /&gt;
-Leaderboards are tables showing the ranking of specific items for the selected time range. The &amp;ldquo;previous&amp;rdquo; rankings are calculated using the rankings of the previous time range.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Graphs&lt;/strong&gt;&lt;br /&gt;
-Graphs can come in multiple forms! They always use information fetched using the selected time range. Line, Area, and Bar graphs use the selected interval to group the fetched information. Pie charts represent multiple values for the whole selected time range.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;traffic-1&#34;&gt;Traffic&lt;/h2&gt;
-
-&lt;p&gt;Traffic analytics can be filtered by date and by category and in some cases by Role.  The analytics presented include:&lt;/p&gt;
+&lt;h2 id=&#34;engagement&#34;&gt;Engagement&lt;/h2&gt;
 
 &lt;h3 id=&#34;metrics&#34;&gt;Metrics&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Page views&lt;/strong&gt;&lt;br /&gt;
-Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Active Users&lt;/strong&gt;&lt;br /&gt;
-Active users include all registered members and Do Not include unregistered vistors (guests)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visits&lt;/strong&gt;&lt;br /&gt;
-Visits include all user types and DO include non registered visitors (guests). Unique visits within the time period are counted.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posts Positivity Rate:&lt;/strong&gt; Number of posts having a positive reaction divided by the number of posts having a negative reaction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Time to First Comment:&lt;/strong&gt; Average amount of time it took for discussions to have their first comment.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;leaderboards&#34;&gt;Leaderboards&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Discussions with Most Views&lt;/strong&gt;&lt;br /&gt;
-Discussions ordered by the highest number of accumulated views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Members by Accumulated Reputation:&lt;/strong&gt; Members ordered by the highest sum of reputation point accumulated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions with Most Comments:&lt;/strong&gt;  Discussions ordered by highest number of comments made in it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions with Most Positive Reactions:&lt;/strong&gt;  Discussions ordered by highest sum of positive reactions given to them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions with Most Negative Reactions:&lt;/strong&gt;  Discussions ordered by highest sum of negative reactions given to them.
+&lt;em&gt;This leaderboard will only be displayed if negative reactions are in use.&lt;/em&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;graphs&#34;&gt;Graphs&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Active Users&lt;/strong&gt;&lt;br /&gt;
-Active users include all registered members and Do Not include unregistered vistors&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visits&lt;/strong&gt;&lt;br /&gt;
-Visits include all user types and DO include non registered visitors (guests). Unique visits within the time period are counted.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Unique Visits by Role Type&lt;/strong&gt;&lt;br /&gt;
-Number of vianalyticssits, from users, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Page Views&lt;/strong&gt;&lt;br /&gt;
-Number of pages viewed.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;New Users&lt;/strong&gt;&lt;br /&gt;
-Number of new users.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Participation Rate:&lt;/strong&gt; Number of distinct members that viewed a page on the forum vs the number of visits by distinct users.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sentiment Ratio:&lt;/strong&gt; Number of posts having a positive reaction vs the number of posts having a bad reaction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visits per Active User:&lt;/strong&gt; Number of visits divided by the number of &lt;a href=&#34;#active-user&#34;&gt;active users&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Posts per Active User:&lt;/strong&gt; Average number of created posts grouped by &lt;a href=&#34;#active-user&#34;&gt;active users&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Comments per Discussion:&lt;/strong&gt; Average number of created comments grouped by discussions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Posts per Active Users:&lt;/strong&gt; Number of posts divided by the number of &lt;a href=&#34;#active-user&#34;&gt;active users&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;posting-1&#34;&gt;Posting&lt;/h2&gt;
-
-&lt;p&gt;Posting analytics can be filtered by date and by category and include:&lt;/p&gt;
+&lt;h2 id=&#34;traffic&#34;&gt;Traffic&lt;/h2&gt;
 
 &lt;h3 id=&#34;metrics-1&#34;&gt;Metrics&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions&lt;/strong&gt;&lt;br /&gt;
-Number of discussions created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Comments&lt;/strong&gt;&lt;br /&gt;
-Number of comments created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors&lt;/strong&gt;&lt;br /&gt;
-Number of distinct members who created a post.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page views:&lt;/strong&gt; Number of pages viewed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; Number of &lt;a href=&#34;#active-user&#34;&gt;active users&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visits:&lt;/strong&gt; Number of visits. &lt;em&gt;Including guests.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;leaderboards-1&#34;&gt;Leaderboards&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Posts&lt;/strong&gt;&lt;br /&gt;
-Members ordered by the highest number of post created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Discussions&lt;/strong&gt;&lt;br /&gt;
-Members ordered by the highest number of discussions created.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions with Most Views:&lt;/strong&gt; Discussions ordered by the highest number of accumulated views.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;graphs-1&#34;&gt;Graphs&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions&lt;/strong&gt;&lt;br /&gt;
-Number of discussions created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Comments&lt;/strong&gt;&lt;br /&gt;
-Number of comments created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts&lt;/strong&gt;&lt;br /&gt;
-Number of posts created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts by Type&lt;/strong&gt;&lt;br /&gt;
-Number of created posts grouped by posts type (Dicsussions and Comment are the 2 post types).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts by Category&lt;/strong&gt;&lt;br /&gt;
-Number of created posts grouped by categories.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts by Role Type&lt;/strong&gt;&lt;br /&gt;
-Number of created posts grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors&lt;/strong&gt;&lt;br /&gt;
-Number of distinct members having created a post.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors by Category&lt;/strong&gt;&lt;br /&gt;
-Number of distinct members, having created a post, grouped by categories.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributors by Role Type&lt;/strong&gt;&lt;br /&gt;
-Number of distinct members, having created a post, grouped by vanilla&amp;rsquo;s predefined role types.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; Number of users that logged in to the community.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visits:&lt;/strong&gt; Number of visits. &lt;em&gt;Including guests.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unique Visits by Role Type:&lt;/strong&gt; Number of visits, from registered users, grouped by &lt;a href=&#34;#role-type&#34;&gt;role types&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page Views:&lt;/strong&gt; Number of total page views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New Users:&lt;/strong&gt; Number of all new registrants to the community.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;q-a-1&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
-
-&lt;p&gt;Q &amp;amp; A analytics can be filtered by time period and category. &lt;strong&gt;NB:&lt;/strong&gt; When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/p&gt;
+&lt;h2 id=&#34;posting&#34;&gt;Posting&lt;/h2&gt;
 
 &lt;h3 id=&#34;metrics-2&#34;&gt;Metrics&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Asked&lt;/strong&gt;&lt;br /&gt;
-Number of questions asked.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Answered&lt;/strong&gt;&lt;br /&gt;
-Number of questions having at least one answer.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Answers Accepted&lt;/strong&gt;&lt;br /&gt;
-Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Time to Answer&lt;/strong&gt;&lt;br /&gt;
-Average amount of time it took for questions to have their first answer.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Time to Accept&lt;/strong&gt;&lt;br /&gt;
-Average amount of time it took for questions to have an accepted answer.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions:&lt;/strong&gt; Number of discussions created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comments:&lt;/strong&gt; Number of comments created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Contributors:&lt;/strong&gt; Number of distinct members who created a post.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;leaderboards-2&#34;&gt;Leaderboards&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions with Most Views&lt;/strong&gt;&lt;br /&gt;
-Questions ordered by the highest number of accumulated views.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Answers&lt;/strong&gt;&lt;br /&gt;
-Members ordered by the highest number of answers created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Users with Most Accepted Answers&lt;/strong&gt;&lt;br /&gt;
-Members ordered by the highest number of answers created and then accepted as the best answer.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Users with Most Posts:&lt;/strong&gt; Members ordered by the highest number of post created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Users with Most Discussions:&lt;/strong&gt; Members ordered by the highest number of discussions created.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;graphs-2&#34;&gt;Graphs&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Asked&lt;/strong&gt;&lt;br /&gt;
-Number of questions created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Questions Answered&lt;/strong&gt;&lt;br /&gt;
-Number of questions having at least one answer&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Accepted Answers&lt;/strong&gt;&lt;br /&gt;
-Number of answers accepted.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions&lt;/strong&gt;: Number of discussions created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: Number of comments created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posts&lt;/strong&gt;: Number of posts created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posts by Type&lt;/strong&gt;: Number of created posts grouped by &lt;a href=&#34;#post-type&#34;&gt;posts type&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posts by Category&lt;/strong&gt;: Number of created posts grouped by categories.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Posts by Role Type&lt;/strong&gt;: Number of created posts grouped by &lt;a href=&#34;#role-type&#34;&gt;role types&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Contributors&lt;/strong&gt;: Number of distinct members having created a post.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Contributors by Category&lt;/strong&gt;: Number of distinct members, having created a post, grouped by categories.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Contributors by Role Type&lt;/strong&gt;: Number of distinct members, having created a post, grouped by &lt;a href=&#34;#role-type&#34;&gt;role types&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;engagement-1&#34;&gt;Engagement&lt;/h2&gt;
+&lt;h2 id=&#34;q-a&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
 
-&lt;p&gt;Engagement analytics can be filtered by date and by category and include:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;metrics-3&#34;&gt;Metrics&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Posts Positivity Rate&lt;/strong&gt;&lt;br /&gt;
-Number of posts having a positive reaction divided by the number of posts having a negative reaction.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Time to First Comment&lt;/strong&gt;&lt;br /&gt;
-Average amount of time it took for discussions to have their first comment.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Questions Asked:&lt;/strong&gt; Number of questions asked.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Questions Answered:&lt;/strong&gt; Number of questions answered. &lt;em&gt;Questions created outside of the time range are counted.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Answers Accepted:&lt;/strong&gt; Number of answers accepted. &lt;em&gt;An answer can be accepted by either the creator of the question or a moderator/administrator.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Time to Answer:&lt;/strong&gt; Average amount of time it took for questions to have their first answer. &lt;em&gt;Questions that have no answers are not counted.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Time to Accept:&lt;/strong&gt; Average amount of time it took for questions to have an accepted answer. &lt;em&gt;Questions without an accepted answer are not counted.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;leaderboards-3&#34;&gt;Leaderboards&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Members by Accumulated Reputation&lt;/strong&gt;&lt;br /&gt;
-Members ordered by the highest sum of reputation point accumulated.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions with Most Comments&lt;/strong&gt;&lt;br /&gt;
-Discussions ordered by highest number of comments made in it.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions with Most Positive Reactions&lt;/strong&gt;&lt;br /&gt;
-Discussions ordered by highest sum of positive reactions given to them.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussions with Most Negative Reactions&lt;/strong&gt;&lt;br /&gt;
-Discussions ordered by highest sum of negative reactions given to them. This leaderboard will not be displayed if negative reactions are not in use.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Questions with Most Views:&lt;/strong&gt; Questions ordered by the highest number of accumulated views.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Users with Most Answers:&lt;/strong&gt; Members ordered by the highest number of answers created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Users with Most Accepted Answers:&lt;/strong&gt; Members ordered by the highest number of answers created and then accepted as the best answer.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;graphs-3&#34;&gt;Graphs&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Participation Rate&lt;/strong&gt;&lt;br /&gt;
-Number of distinct members that viewed a page on the forum vs the number of visits by distinct users.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Questions Asked:&lt;/strong&gt; Number of questions created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Questions Answered:&lt;/strong&gt; Number of questions having at least one answer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Accepted Answers&lt;/strong&gt;: Number of answers accepted.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Sentiment Ratio&lt;/strong&gt;&lt;br /&gt;
-Number of posts having a positive reaction vs the number of posts having a bad reaction.&lt;/p&gt;&lt;/li&gt;
+&lt;h1 id=&#34;analytics-lexicon&#34;&gt;Analytics Lexicon&lt;/h1&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visits per Active User&lt;/strong&gt;&lt;br /&gt;
-See Visits and Active users under the Traffic section for definitions.&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a id=&#34;active-user&#34;&gt;Active User&lt;/a&gt;:&lt;/strong&gt; User that are logged in.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a id=&#34;post-type&#34;&gt;Post Type&lt;/a&gt;:&lt;/strong&gt; The post types are discussion and comments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a id=&#34;post-type&#34;&gt;Role Type&lt;/a&gt;:&lt;/strong&gt; There are 4 existing &lt;a href=&#34;#role-type&#34;&gt;role types&lt;/a&gt; and they match the highest permission level that a user has.
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Posts per Active User&lt;/strong&gt;&lt;br /&gt;
-Average number of created posts grouped by active-users.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Average Comments per Discussion&lt;/strong&gt;&lt;br /&gt;
-Average number of created comments grouped by discussions.&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;admin:&lt;/strong&gt; Administrator -&amp;gt; Garden.Settings.Manage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;cm:&lt;/strong&gt; Community Manager -&amp;gt; Garden.Community.Manage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mod:&lt;/strong&gt; Moderator -&amp;gt; Garden.Moderation.Manage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;member:&lt;/strong&gt; Everything else&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
