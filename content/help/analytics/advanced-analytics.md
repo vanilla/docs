@@ -11,7 +11,7 @@ aliases:
 - /analytics/advanced-analytics
 ---
 
-# Advanced Analytics
+## Advanced Analytics Overview
 
 Available on certain plans as an add-on, Advanced Analytics give you further insights into your community. 
 
@@ -27,22 +27,22 @@ Available on certain plans as an add-on, Advanced Analytics give you further ins
     Line, Area, Pie chart and Bar graphs use the selected time range to group the fetched information.
     Pie charts represent multiple values for the whole selected time range.
 
-# Analytics Sections
+## Analytics Sections
 
-## Engagement
+### Engagement
 
-### Metrics
+#### Metrics
   * __Posts Positivity Rate:__ Number of posts having a positive reaction divided by the number of posts having a negative reaction.
   * __Average Time to First Comment:__ Average amount of time it took for discussions to have their first comment.
 
-### Leaderboards
+#### Leaderboards
   * __Members by Accumulated Reputation:__ Members ordered by the highest sum of reputation point accumulated.
   * __Discussions with Most Comments:__  Discussions ordered by highest number of comments made in it.
   * __Discussions with Most Positive Reactions:__  Discussions ordered by highest sum of positive reactions given to them.
   * __Discussions with Most Negative Reactions:__  Discussions ordered by highest sum of negative reactions given to them. 
   *This leaderboard will only be displayed if negative reactions are in use.*
   
-### Graphs
+#### Graphs
   * __Participation Rate:__ Number of distinct members that viewed a page on the forum vs the number of visits by distinct users.
   * __Sentiment Ratio:__ Number of posts having a positive reaction vs the number of posts having a bad reaction.
   * __Visits per Active User:__ Number of visits divided by the number of [active users](#active-user). 
@@ -50,35 +50,35 @@ Available on certain plans as an add-on, Advanced Analytics give you further ins
   * __Average Comments per Discussion:__ Average number of created comments grouped by discussions.
   * __Average Posts per Active Users:__ Number of posts divided by the number of [active users](#active-user). 
 
-## Traffic 
+### Traffic 
 
-### Metrics
+#### Metrics
   * __Page views:__ Number of pages viewed.
   * __Active Users:__ Number of [active users](#active-user). 
   * __Visits:__ Number of visits. *Including guests.*
 
-### Leaderboards
+#### Leaderboards
   * __Discussions with Most Views:__ Discussions ordered by the highest number of accumulated views.
 
-### Graphs
+#### Graphs
   * __Active Users:__ Number of users that logged in to the community.
   * __Visits:__ Number of visits. *Including guests.*
   * __Unique Visits by Role Type:__ Number of visits, from registered users, grouped by [role types](#role-type).
   * __Page Views:__ Number of total page views.
   * __New Users:__ Number of all new registrants to the community.
 
-## Posting 
+### Posting 
 
-### Metrics
+#### Metrics
   * __Discussions:__ Number of discussions created.
   * __Comments:__ Number of comments created.
   * __Contributors:__ Number of distinct members who created a post.
 
-### Leaderboards
+#### Leaderboards
   * __Users with Most Posts:__ Members ordered by the highest number of post created.
   * __Users with Most Discussions:__ Members ordered by the highest number of discussions created.
 
-### Graphs
+#### Graphs
   * __Discussions__: Number of discussions created.
   * __Comments__: Number of comments created.
   * __Posts__: Number of posts created.
@@ -89,28 +89,28 @@ Available on certain plans as an add-on, Advanced Analytics give you further ins
   * __Contributors by Category__: Number of distinct members, having created a post, grouped by categories.
   * __Contributors by Role Type__: Number of distinct members, having created a post, grouped by [role types](#role-type). 
 
-## Q&A 
+### Q&A
 
 *When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.*
 
-### Metrics
+#### Metrics
   * __Questions Asked:__ Number of questions asked.
   * __Questions Answered:__ Number of questions answered. *Questions created outside of the time range are counted.*
   * __Answers Accepted:__ Number of answers accepted. *An answer can be accepted by either the creator of the question or a moderator/administrator.*
   * __Average Time to Answer:__ Average amount of time it took for questions to have their first answer. *Questions that have no answers are not counted.*
   * __Average Time to Accept:__ Average amount of time it took for questions to have an accepted answer. *Questions without an accepted answer are not counted.*
 
-### Leaderboards
+#### Leaderboards
   * __Questions with Most Views:__ Questions ordered by the highest number of accumulated views.
   * __Users with Most Answers:__ Members ordered by the highest number of answers created.
   * __Users with Most Accepted Answers:__ Members ordered by the highest number of answers created and then accepted as the best answer.
 
-### Graphs
+#### Graphs
   * __Questions Asked:__ Number of questions created.
   * __Questions Answered:__ Number of questions having at least one answer.
   * __Accepted Answers__: Number of answers accepted. 
 
-# Analytics Lexicon
+## Analytics Lexicon
 
 * __<a id="active-user">Active User</a>:__ User that are logged in.
 * __<a id="post-type">Post Type</a>:__ The post types are discussion and comments.
