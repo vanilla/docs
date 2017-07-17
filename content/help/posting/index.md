@@ -14,11 +14,11 @@ menu:
 
 "Posting" or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.
 
-At the bottom of each thread, the user will encounter a text field:
+At the bottom of each discussion, the user will encounter a text field:
 
 ![Editor](https://images.v-cdn.net/docs/Posting_Editor.png)
 
-Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the thread, adding it to the conversation.
+Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.
 
 ### Advanced Editor
 
@@ -34,7 +34,7 @@ This button will lead you to `/post/discussion`. Here's what you will encounter 
 
 ![New Post Breakdown](https://images.v-cdn.net/docs/Posting_NewPostBreakdown.png)
 
-**1** - The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the thread on the category index.
+**1** - The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the discussion on the category index.
 **2** - This is the [Advanced Editor](http://docs.vanillaforums.com/help/addons/advanced-editor/), which assists the user in formatting the text of their post, inserting images, and attaching files.
 **3** - This is the field where the user will type out the main body of their post.  
 **4** - Tags mark a discussion with certain keywords so it is easier to search for within the community. By default, up to five tags can be used on a post.
@@ -54,9 +54,9 @@ With this form, the user can input the different answers for their poll. They ca
 
 The **Ask A Question** option is for users looking to get a specific information. The screen for posting a question looks identical to the New Discussion screen. When a question is asked, the bottom of each subsequent comment will have an option to mark it as an answer.
 
-Selecting “Yes” marks the post as an answer within that thread and pins it to the top, right under the initial question. You can read more about our Questions and Answers plugin, [here](http://docs.vanillaforums.com/help/addons/qna/).
+Selecting “Yes” marks the post as an answer within that discussion and pins it to the top, right under the initial question. You can read more about our Questions and Answers plugin, [here](http://docs.vanillaforums.com/help/addons/qna/).
 
-The **New Idea** option is for communities with Ideation enabled. Ideas are threads that can have various statuses and be voted on. They are limited to specific categories within a community. You can read more about Ideation, [here](http://docs.vanillaforums.com/help/ideation/).
+The **New Idea** option is for communities with Ideation enabled. Ideas are discussions that can have various statuses and be voted on. They are limited to specific categories within a community. You can read more about Ideation, [here](http://docs.vanillaforums.com/help/ideation/).
 
 
 ## Additional Resources
