@@ -430,7 +430,7 @@
 &lt;li&gt;Exempt moderators and admins from the new flood control checking on private messages.&lt;/li&gt;
 &lt;li&gt;Improve handling for mentions on usernames with underscores.&lt;/li&gt;
 &lt;li&gt;Improve our text parsing pipeline to be more consistent in the order we process elements (mentions, filtering, etc) for different formatters (Markdown, BBCode, etc).&lt;/li&gt;
-&lt;li&gt;SAML: Improve handling of &lt;code&gt;Target&lt;/code&gt; parameter for redirects to more close match the SAML spec.&lt;/li&gt;
+&lt;li&gt;SAML: Improve handling of &lt;code&gt;Target&lt;/code&gt; parameter for redirects to follow the SAML spec.&lt;/li&gt;
 &lt;li&gt;Fix page title translations for &amp;ldquo;Quotes&amp;rdquo; and &amp;ldquo;Online&amp;rdquo; profile settings pages.&lt;/li&gt;
 &lt;li&gt;Fix category syncing issue in Hub/Node setups.&lt;/li&gt;
 &lt;li&gt;Fix an issue preventing the deletion of groups.&lt;/li&gt;
