@@ -15,7 +15,62 @@
       <guid>//docs.vanillaforums.com/help/posting/</guid>
       <description>
 
-&lt;h2 id=&#34;coming-soon&#34;&gt;Coming soon!&lt;/h2&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;&amp;ldquo;Posting&amp;rdquo; or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.&lt;/p&gt;
+
+&lt;p&gt;At the bottom of each discussion, the user will encounter a text field:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_Editor.png&#34; alt=&#34;Editor&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.&lt;/p&gt;
+
+&lt;h3 id=&#34;advanced-editor&#34;&gt;Advanced Editor&lt;/h3&gt;
+
+&lt;p&gt;Advanced Editor is activated by default on new communities. It provides an array of tools for your members to use when making a post. If you are looking for more information on how to compose and format posts in vanilla, you can read more Advanced Editor in our documentation, &lt;a href=&#34;http://docs.vanillaforums.com/help/addons/advanced-editor/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;discussions&#34;&gt;Discussions&lt;/h2&gt;
+
+&lt;p&gt;To create a new discussion, click on the New Discussion button at the top or bottom of any category.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_NewDiscussion.png&#34; alt=&#34;New Discussion Button&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This button will lead you to &lt;code&gt;/post/discussion&lt;/code&gt;. Here&amp;rsquo;s what you will encounter on the new discussions page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_NewPostBreakdown.png&#34; alt=&#34;New Post Breakdown&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; - The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the discussion on the category index.
+&lt;strong&gt;2&lt;/strong&gt; - This is the &lt;a href=&#34;http://docs.vanillaforums.com/help/addons/advanced-editor/&#34;&gt;Advanced Editor&lt;/a&gt;, which assists the user in formatting the text of their post, inserting images, and attaching files.
+&lt;strong&gt;3&lt;/strong&gt; - This is the field where the user will type out the main body of their post.&lt;br /&gt;
+&lt;strong&gt;4&lt;/strong&gt; - Tags mark a discussion with certain keywords so it is easier to search for within the community. By default, up to five tags can be used on a post.
+&lt;strong&gt;5&lt;/strong&gt; - Once the user has finished typing their post, clicking the Post Discussion button will immediately publish it. Clicking Save Draft will store the post under &amp;ldquo;My Drafts&amp;rdquo; in a user&amp;rsquo;s profile menu. Preview will show the user what the finished post will look like when published. Cancel will bring the user back to the category they were viewing previously.&lt;/p&gt;
+
+&lt;h2 id=&#34;types-of-discussions&#34;&gt;Types of Discussions&lt;/h2&gt;
+
+&lt;p&gt;Certain addons in vanilla expand the types of discussions users can make in a community. When one of those addons is enabled, clicking the down-arrow on the “New Discussion” button will reveal several options:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_PollOptions.png&#34; alt=&#34;Posting Options&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Polls&lt;/strong&gt; can be enabled from your dashboard on any plan level. When creating a poll, the user is presented with a few new options:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_PollSetup.png&#34; alt=&#34;New Poll Setup&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With this form, the user can input the different answers for their poll. They can also choose to make a poll anonymous, which prevents others from knowing how specific users voted. Once the poll has been submitted, other members are allowed to vote once.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;Ask A Question&lt;/strong&gt; option is for users looking to get a specific information. The screen for posting a question looks identical to the New Discussion screen. When a question is asked, the bottom of each subsequent comment will have an option to mark it as an answer.&lt;/p&gt;
+
+&lt;p&gt;Selecting “Yes” marks the post as an answer within that discussion and pins it to the top, right under the initial question. You can read more about our Questions and Answers plugin, &lt;a href=&#34;http://docs.vanillaforums.com/help/addons/qna/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;New Idea&lt;/strong&gt; option is for communities with Ideation enabled. Ideas are discussions that can have various statuses and be voted on. They are limited to specific categories within a community. You can read more about Ideation, &lt;a href=&#34;http://docs.vanillaforums.com/help/ideation/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLEdMTbLR4h8xC7XwUrfZ4s5IoQ9Of6Ihn&#34;&gt;User Onbording Videos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.vanillaforums.com/help/addons/advanced-editor/&#34;&gt;Advanced Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.vanillaforums.com/help/posting/emoji/&#34;&gt;Emoji&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.vanillaforums.com/help/posting/smart-embed/&#34;&gt;Smart Embed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
