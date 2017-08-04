@@ -107,10 +107,10 @@ n.id = i;
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>MailChimp Push</h1>
+    <h1>Tagging</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/mailchimp-push/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/tagging/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -205,15 +205,10 @@ n.id = i;
 
 	    
 	    
-                <li class="active">
+                <li class="">
                     <a href="//docs.vanillaforums.com/help/addons/mailchimp-push/">MailChimp Push </a>
                 </li>
                 
-                
-                    
-                    
-               
-                    
                 
 
 	    
@@ -266,10 +261,15 @@ n.id = i;
 
 	    
 	    
-                <li class="">
+                <li class="active">
                     <a href="//docs.vanillaforums.com/help/addons/tagging/">Tagging </a>
                 </li>
                 
+                
+                    
+                    
+               
+                    
                 
 
 	    
@@ -397,46 +397,49 @@ n.id = i;
 
 <h2 id="overview">Overview</h2>
 
-<p>MailChimp is one of the world’s leading email marketing platforms, allowing it’s users to send newsletters, automated messages, and set up targeted campaigns to help their business.</p>
+<p>Tagging is a feature that allows users to add keywords to discussions. For public communities, tags help label specific content for improved findability. When used with <a href="http://docs.vanillaforums.com/help/addons/advanced-search/">advanced search</a>, they help isolate content by a relevant topic and improve results. Tagging also has a theme module, which can serve as site navigation.</p>
 
-<p>Our plugin synchronizes the email addresses of your community’s users with a designated mailing list. As your community grows, or users change their email address, Vanilla will send notifications to MailChimp to update the specified list.</p>
+<h2 id="enabling-tagging">Enabling Tagging</h2>
 
-<h3 id="enabling-mailchimp-push">Enabling MailChimp Push</h3>
-
-<p>MailChimp Push is a feature provided at every plan level, it can be activated for your forum through a support request.</p>
-
-<p>Once activated, MailChimp can be found in the Settings tab in your dashboard. It will be listed in the side menu under “Site Settings”. You can also navigate to it directly by going to <code>/plugin/mailchimp</code>.</p>
+<p>Tagging is not enabled by default for new communities, it will need to be toggled on by and administrator. Tagging can be found in the Dashboard under the &ldquo;Settings&rdquo; tab, in the left-hand menu under the discussions heading. You can navigate to it directly by going to <code>/settings/tagging</code></p>
 
 <h2 id="configuration">Configuration</h2>
 
-<p>You will need to provide an API key to allow Vanilla to communicate with MailChimp. You can read how to generate your MailChimp API key <a href="http://kb.mailchimp.com/integrations/api-integrations/about-api-keys">here.</a>.</p>
+<p>Once Tagging is enabled you will be presented with this page in your dashboard:</p>
 
-<p><img src="https://images.v-cdn.net/docs/mailchimp_api_key.jpg" alt="This shows the plugin before a valid API key is added. Your other options will not appear until a valid key has been inserted" /></p>
+<p><img src="https://images.v-cdn.net/docs/Tagging_Main.PNG" alt="Tagging Menu" /></p>
 
-<p>Once you’ve provided a valid API key, the plugin will display a menu with all the mailing lists tied to your MailChimp account. Select the mailing list that you wish to sync with your Vanilla community. A dropdown for &ldquo;Groups&rdquo; will appear if you have created any in MailChimp for particular list you&rsquo;ve selected. You can read about groups in their knowledge base, <a href="http://kb.mailchimp.com/lists/groups/create-a-new-list-group">here.</a></p>
-
-<p><img src="https://images.v-cdn.net/docs/mailchimp_api_key_group.jpg" alt="The options after you've inserted your API key" /></p>
-
-<p>After your settings have been saved, every time a new user registers with your community or an existing user changes their email address, Vanilla will notify MailChimp and update that mailing list.</p>
-
-<h2 id="mass-synchronization">Mass Synchronization</h2>
-
-<p>By default, MailChimp Push will only update the mailing list when it detects changes. If you decide to start a mailing list after your community has been around for a while, it is still possible to sync up your users’ emails with MailChimp using ‘Mass Synchronization’.</p>
-
-<p><img src="https://images.v-cdn.net/docs/mailchimp_masssync.jpg" alt="The Mass Synchronization tab." /></p>
-
-<p>Mass Synchronization is a one-time action that sends an entire community’s worth of email addresses to a selected mailing list. You can also choose to sync banned and deleted users. Syncing banned users will add them to your mailing list despite their banned status in Vanilla. If you have deleted some users on the Vanilla side, syncing deleted users will change their emails in MailChimp to a nonfunctional email.</p>
-
-<p>When you hit Synchronize, a progress bar will appear to indicate that the process has started. Note that having a large userbase will cause synchronization to take a while. Choosing to send a confirmation email will also add time to the sync, and those users will not appear in your list on MailChimp until they have confirmed on their end.</p>
-
-<p>Vanilla’s integration with MailChimp is one-way only.  Only email addresses edited within your community will be changed in your MailChimp mailing list. It will not work the other way around. Its also important to note that MailChimp Push can only grab and send email addresses, no other profile data can be passed between vanilla through this addon.</p>
-
-<h2 id="additional-resources">Additional resources:</h2>
+<p>Here you can a view of all the tags that have been created and the number of times in which each tag has been used. By clicking the downward arrow on the right side of each tag, you can:</p>
 
 <ul>
-<li><p><a href="https://blog.vanillaforums.com/help/creating-forum-newsletter-mailchimp/">Creating a forum newsletter with MailChimp</a></p></li>
+<li>Remove individual tags from your community</li>
+<li>Edit the text of a tag</li>
+<li>Edit a tag&rsquo;s URL slug</li>
+</ul>
 
-<li><p><a href="https://blog.vanillaforums.com/community/help-your-community-members-come-out-of-the-shadows/">Helping Your Community Members come out of the shadows</a></p></li>
+<p>Keeping tags and their URLs simple can be a great way to organize content and label it for search engines.</p>
+
+<h2 id="permissions">Permissions</h2>
+
+<p>You may not want your entire user-base to have the ability to create unique tags. Administrators can adjust this permission for individual roles:</p>
+
+<p><img src="https://images.v-cdn.net/docs/Tagging_Permission.PNG" alt="Permissions for Tagging" /></p>
+
+<p>Unchecking the &ldquo;Add&rdquo; permission will prevent those users from creating new tags but they will still be able to tag their posts with existing ones. This allows administrators to restrict users to a curated pool of tags.</p>
+
+<h2 id="using-tags">Using Tags</h2>
+
+<p>Once tagging has been enabled, it adds a new field when a user is making a post:</p>
+
+<p><img src="https://images.v-cdn.net/docs/Tagging_NewPost.PNG" alt="Tagging Section In New Posts" /></p>
+
+<p>When you begin to type a keyword into the field, a drop down display relevant tags to autocomplete with. Tags can be multiple words and are separated from one another by hitting the enter. Clicking on the “Show Popular Tags” link allows users to see tags that people have used recently and choose from that list.</p>
+
+<h2 id="additional-resources">Additional Resources:</h2>
+
+<ul>
+<li>If you need to place the Tag module in you theme, check out our <a href="https://blog.vanillaforums.com/help/list-of-modules-for-your-themes/">Module List</a></li>
+<li>Read more about Advanced Search, <a href="http://docs.vanillaforums.com/help/addons/advanced-search/">here.</a></li>
 </ul>
 
 
