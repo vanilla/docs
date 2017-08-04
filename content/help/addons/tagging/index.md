@@ -14,7 +14,7 @@ aliases:
 
 ## Overview
 
-Tagging is a feature that allows users to add keywords to discussions. For public communities, tags help label specific content for improved SEO. When used with [advanced search](http://docs.vanillaforums.com/help/addons/advanced-search/), they help isolate content by a relevant topic and improve results. Tagging also has a theme module, which can serve as site navigation.  
+Tagging is a feature that allows users to add keywords to discussions. For public communities, tags help label specific content for improved findability. When used with [advanced search](http://docs.vanillaforums.com/help/addons/advanced-search/), they help isolate content by a relevant topic and improve results. Tagging also has a theme module, which can serve as site navigation.  
 
 
 ## Enabling Tagging
