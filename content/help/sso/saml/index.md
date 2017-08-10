@@ -27,7 +27,7 @@ UniqueID => id
 Name => uid
 Email => mail
 Photo => photo // Optional
-Roles => role1,role2 // Optional
+Roles => roles // Optional
 ```
 
 `UniqueID` is whatever you're using to absolutely uniquely identify the user on your side that will never change.
