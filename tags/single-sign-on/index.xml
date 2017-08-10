@@ -159,7 +159,7 @@ and configuring it via its Settings page (Dashboard -&amp;gt; Addons -&amp;gt; S
 Name =&amp;gt; uid
 Email =&amp;gt; mail
 Photo =&amp;gt; photo // Optional
-Roles =&amp;gt; role1,role2 // Optional
+Roles =&amp;gt; roles // Optional
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code&gt;UniqueID&lt;/code&gt; is whatever you&amp;rsquo;re using to absolutely uniquely identify the user on your side that will never change.&lt;/p&gt;
