@@ -417,25 +417,59 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
       <guid>//docs.vanillaforums.com/help/sso/</guid>
       <description>
 
-&lt;h2 id=&#34;single-sign-on-overview&#34;&gt;Single Sign-On Overview&lt;/h2&gt;
+&lt;h2 id=&#34;single-sign-on-overview&#34;&gt;Single Sign-On overview&lt;/h2&gt;
 
 &lt;p&gt;Single sign-on (SSO) is how to let your users sign on to a third-party system (like a Vanilla Forum) without needing a separate username and password.&lt;/p&gt;
 
 &lt;p&gt;In broad terms, an SSO solution defines how two systems securely communicate the identity of a user that is switching between them. In the context of Vanilla, that means the forum securely talking to your site or identity provider to see if a user is signed in, and then automatically using that identity.&lt;/p&gt;
 
-&lt;h2 id=&#34;solutions-we-offer&#34;&gt;Solutions We Offer&lt;/h2&gt;
+&lt;h2 id=&#34;solutions-we-offer&#34;&gt;Solutions we offer&lt;/h2&gt;
 
-&lt;p&gt;Vanilla offers three flavors of single sign-on:  &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect&#34;&gt;jsConnect&lt;/a&gt; (our in-house solution), &lt;a href=&#34;//docs.vanillaforums.com/help/sso/saml&#34;&gt;SAML&lt;/a&gt;, and &lt;a href=&#34;//docs.vanillaforums.com/help/sso/oauth&#34;&gt;OAuth&lt;/a&gt;. SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.&lt;/p&gt;
+&lt;p&gt;Vanilla offers three flavors of single sign-on:&lt;/p&gt;
 
-&lt;h2 id=&#34;why-jsconnect&#34;&gt;Why jsConnect?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/help/sso/saml&#34;&gt;SAML&lt;/a&gt; (cloud-only)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/help/sso/oauth&#34;&gt;OAuth 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect&#34;&gt;jsConnect&lt;/a&gt; (our in-house solution)&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of time, and generally is not feasible for small-to-medium business owners.&lt;/p&gt;
+&lt;p&gt;We also offer:&lt;/p&gt;
 
-&lt;p&gt;If you have a website that stores your user&amp;rsquo;s identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we&amp;rsquo;ve abstracted most of the work to our side of the connection, and provide sample code for making your side.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Social SSO (Twitter, Facebook, and more).&lt;/li&gt;
+&lt;li&gt;Third-party service integration (e.g. Auth0; cloud-only).&lt;/li&gt;
+&lt;li&gt;Custom SSO integrations (cloud-only).&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect/overview&#34;&gt;technical documentation&lt;/a&gt;. The only exception is &lt;strong&gt;WordPress&lt;/strong&gt; users, for which we&amp;rsquo;ve developed a ready-to-go &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;SSO plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All flavors and types of SSO follow general rules in Vanilla, many of which are outlined below.&lt;/p&gt;
 
-&lt;p&gt;Ready to learn more about jsConnect? Our &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect&#34;&gt;concepts overview&lt;/a&gt; is where to head next.&lt;/p&gt;
+&lt;h2 id=&#34;general-principles&#34;&gt;General principles&lt;/h2&gt;
+
+&lt;p&gt;Regardless of your type of SSO, these principles apply to how Vanilla handles it:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We recommend against creating new users over the API. The fault-tolerant way to map users to your forum is to always let them be asynchronously created as they login.&lt;/li&gt;
+&lt;li&gt;We &lt;strong&gt;only&lt;/strong&gt; connect to existing accounts by matching email address. No exceptions. Automatic account connection must be opted into for security reasons.&lt;/li&gt;
+&lt;li&gt;Once a connection is made to an account, the connection is remembered forever. Future email address changes are irrelevant.&lt;/li&gt;
+&lt;li&gt;Omitting the parameter for username (often &amp;lsquo;name&amp;rsquo;) will send the user to an interstitial page that prompts them to create one.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;logging-users-out&#34;&gt;Logging users out&lt;/h2&gt;
+
+&lt;p&gt;We recommend using the default logout approach, which is generally accomplished by 1) Setting a default connection and 2) including in its config your site&amp;rsquo;s signout URL. After a user clicks &amp;ldquo;Sign Out&amp;rdquo; on Vanilla, we will redirect them to your page. If someone signs out on your side, we recommend doing the opposite: send them thru our signout page. You can redirect them afterward by including a &lt;code&gt;Target&lt;/code&gt; paramenter indicating the URL you wish them to land on afterward.&lt;/p&gt;
+
+&lt;p&gt;This is an imperfect strategy, but it does general accomplish its goal and is the most simple and effective approach.&lt;/p&gt;
+
+&lt;p&gt;The only other way to log a user out of Vanilla is this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your forum must be on a subdomain of the domain your main site resides on.&lt;/li&gt;
+&lt;li&gt;Modify your cookie domain to be: &lt;code&gt;*.domain.com&lt;/code&gt;. Cloud customers must contact support to do this.&lt;/li&gt;
+&lt;li&gt;You can now manually delete a user&amp;rsquo;s forum cookies from your site.&lt;/li&gt;
+&lt;li&gt;Create a redirect from &lt;code&gt;/entry/signout&lt;/code&gt; in Vanilla to your signout page instead. Cloud customers must contact support to do this.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Directly manipulating cookies requires technical expertise and may result in additional troubleshooting being required from your team in some situations. We strongly recommend using the redirect method unless you have developers dedicated to your project.&lt;/p&gt;
 </description>
     </item>
     
@@ -574,6 +608,16 @@ At this point you should have a valid jsConnect authentication page and Vanilla 
       
       <guid>//docs.vanillaforums.com/help/sso/jsconnect/</guid>
       <description>
+
+&lt;h2 id=&#34;why-jsconnect&#34;&gt;Why jsConnect?&lt;/h2&gt;
+
+&lt;p&gt;SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of time, and generally is not feasible for small-to-medium business owners.&lt;/p&gt;
+
+&lt;p&gt;If you have a website that stores your user&amp;rsquo;s identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we&amp;rsquo;ve abstracted most of the work to our side of the connection, and provide sample code for making your side.&lt;/p&gt;
+
+&lt;p&gt;However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our &lt;a href=&#34;//docs.vanillaforums.com/help/sso/jsconnect/overview&#34;&gt;technical documentation&lt;/a&gt;. The only exception is &lt;strong&gt;WordPress&lt;/strong&gt; users, for which we&amp;rsquo;ve developed a ready-to-go &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;SSO plugin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ready to learn more about jsConnect? Read on.&lt;/p&gt;
 
 &lt;h2 id=&#34;jsconnect-concepts-overview&#34;&gt;jsConnect Concepts Overview&lt;/h2&gt;
 

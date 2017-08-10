@@ -302,25 +302,59 @@ n.id = i;
 
                 
 
-<h2 id="single-sign-on-overview">Single Sign-On Overview</h2>
+<h2 id="single-sign-on-overview">Single Sign-On overview</h2>
 
 <p>Single sign-on (SSO) is how to let your users sign on to a third-party system (like a Vanilla Forum) without needing a separate username and password.</p>
 
 <p>In broad terms, an SSO solution defines how two systems securely communicate the identity of a user that is switching between them. In the context of Vanilla, that means the forum securely talking to your site or identity provider to see if a user is signed in, and then automatically using that identity.</p>
 
-<h2 id="solutions-we-offer">Solutions We Offer</h2>
+<h2 id="solutions-we-offer">Solutions we offer</h2>
 
-<p>Vanilla offers three flavors of single sign-on:  <a href="//docs.vanillaforums.com/help/sso/jsconnect">jsConnect</a> (our in-house solution), <a href="//docs.vanillaforums.com/help/sso/saml">SAML</a>, and <a href="//docs.vanillaforums.com/help/sso/oauth">OAuth</a>. SAML and OAuth are currently only available on cloud, and the latter requires services work to integrate specifically with your platform. We also offer custom SSO integrations at our highest plan tiers.</p>
+<p>Vanilla offers three flavors of single sign-on:</p>
 
-<h2 id="why-jsconnect">Why jsConnect?</h2>
+<ul>
+<li><a href="//docs.vanillaforums.com/help/sso/saml">SAML</a> (cloud-only)</li>
+<li><a href="//docs.vanillaforums.com/help/sso/oauth">OAuth 2</a></li>
+<li><a href="//docs.vanillaforums.com/help/sso/jsconnect">jsConnect</a> (our in-house solution)</li>
+</ul>
 
-<p>SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of time, and generally is not feasible for small-to-medium business owners.</p>
+<p>We also offer:</p>
 
-<p>If you have a website that stores your user&rsquo;s identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we&rsquo;ve abstracted most of the work to our side of the connection, and provide sample code for making your side.</p>
+<ul>
+<li>Social SSO (Twitter, Facebook, and more).</li>
+<li>Third-party service integration (e.g. Auth0; cloud-only).</li>
+<li>Custom SSO integrations (cloud-only).</li>
+</ul>
 
-<p>However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our <a href="//docs.vanillaforums.com/help/sso/jsconnect/overview">technical documentation</a>. The only exception is <strong>WordPress</strong> users, for which we&rsquo;ve developed a ready-to-go <a href="https://wordpress.org/plugins/vanilla-forums/">SSO plugin</a>.</p>
+<p>All flavors and types of SSO follow general rules in Vanilla, many of which are outlined below.</p>
 
-<p>Ready to learn more about jsConnect? Our <a href="//docs.vanillaforums.com/help/sso/jsconnect">concepts overview</a> is where to head next.</p>
+<h2 id="general-principles">General principles</h2>
+
+<p>Regardless of your type of SSO, these principles apply to how Vanilla handles it:</p>
+
+<ul>
+<li>We recommend against creating new users over the API. The fault-tolerant way to map users to your forum is to always let them be asynchronously created as they login.</li>
+<li>We <strong>only</strong> connect to existing accounts by matching email address. No exceptions. Automatic account connection must be opted into for security reasons.</li>
+<li>Once a connection is made to an account, the connection is remembered forever. Future email address changes are irrelevant.</li>
+<li>Omitting the parameter for username (often &lsquo;name&rsquo;) will send the user to an interstitial page that prompts them to create one.</li>
+</ul>
+
+<h2 id="logging-users-out">Logging users out</h2>
+
+<p>We recommend using the default logout approach, which is generally accomplished by 1) Setting a default connection and 2) including in its config your site&rsquo;s signout URL. After a user clicks &ldquo;Sign Out&rdquo; on Vanilla, we will redirect them to your page. If someone signs out on your side, we recommend doing the opposite: send them thru our signout page. You can redirect them afterward by including a <code>Target</code> paramenter indicating the URL you wish them to land on afterward.</p>
+
+<p>This is an imperfect strategy, but it does general accomplish its goal and is the most simple and effective approach.</p>
+
+<p>The only other way to log a user out of Vanilla is this:</p>
+
+<ul>
+<li>Your forum must be on a subdomain of the domain your main site resides on.</li>
+<li>Modify your cookie domain to be: <code>*.domain.com</code>. Cloud customers must contact support to do this.</li>
+<li>You can now manually delete a user&rsquo;s forum cookies from your site.</li>
+<li>Create a redirect from <code>/entry/signout</code> in Vanilla to your signout page instead. Cloud customers must contact support to do this.</li>
+</ul>
+
+<p>Directly manipulating cookies requires technical expertise and may result in additional troubleshooting being required from your team in some situations. We strongly recommend using the redirect method unless you have developers dedicated to your project.</p>
 
 
             
