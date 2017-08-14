@@ -980,30 +980,6 @@ Host: https://yoursite.vanillaforums.com
     </item>
     
     <item>
-      <title>Forum Administration</title>
-      <link>//docs.vanillaforums.com/api/forum-administration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/api/forum-administration/</guid>
-      <description>
-
-&lt;h2 id=&#34;configuration&#34;&gt;/configuration&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-http&#34;&gt;GET /api/v1/configuration.ext HTTP/1.1
-Host: https://yoursite.vanillaforums.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Retrieve forum configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;../#making-api-calls&#34;&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/a&gt;: required&lt;/p&gt;
-
-&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;This method does not take any parameters.&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Smart ID</title>
       <link>//docs.vanillaforums.com/api/smart-id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
