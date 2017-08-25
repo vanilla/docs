@@ -17,6 +17,7 @@ This plugin allows you to:
 
 - Link your Salesforce account to your Vanilla user profile.
 - Create cases and leads from discussions.
+- View leads on Vanilla users profile.
 
 ## Requirements
 
