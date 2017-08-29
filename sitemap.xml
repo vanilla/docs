@@ -450,6 +450,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/addons/salesforce/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/developer/schemas/</loc>
   </url>
   
@@ -618,7 +622,7 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/help/integrations/zendesk/</loc>
+    <loc>//docs.vanillaforums.com/help/addons/zendesk/</loc>
   </url>
   
   <url>

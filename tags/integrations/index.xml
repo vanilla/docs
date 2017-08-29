@@ -194,36 +194,5 @@
 </description>
     </item>
     
-    <item>
-      <title>Zendesk</title>
-      <link>//docs.vanillaforums.com/help/integrations/zendesk/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//docs.vanillaforums.com/help/integrations/zendesk/</guid>
-      <description>
-
-&lt;h2 id=&#34;zendesk&#34;&gt;Zendesk&lt;/h2&gt;
-
-&lt;p&gt;This plugin allows you to submit user discussion and comments to your hosted Zendesk.&lt;/p&gt;
-
-&lt;h3 id=&#34;setup-instructions&#34;&gt;Setup Instructions&lt;/h3&gt;
-
-&lt;p&gt;If you already have an account you need to enable API Access for this plugin to work.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Login to your Zendesk Site&lt;/li&gt;
-&lt;li&gt;Go to the Admin Setting&lt;/li&gt;
-&lt;li&gt;Under Channels Select API&lt;/li&gt;
-&lt;li&gt;Select the OAuth Clients&lt;/li&gt;
-&lt;li&gt;Add a client&lt;/li&gt;
-&lt;li&gt;Complete the form&lt;/li&gt;
-&lt;li&gt;Copy the Unique Identifier and Secret and enter it below&lt;/li&gt;
-&lt;li&gt;Set the Redirect URLs by appending &lt;code&gt;/profile/zendeskconnect&lt;/code&gt; and then &lt;code&gt;/plugin/zendesk/connect&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your Redirect URLs would be &lt;code&gt;http://example.com/profile/zendeskconnect&lt;/code&gt; and &lt;code&gt;http://example.com/plugin/zendesk/connect&lt;/code&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you don&amp;rsquo;t have an account you can create one for free at &lt;a href=&#34;http://www.zendesk.com/&#34;&gt;Zendesk&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>

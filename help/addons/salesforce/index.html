@@ -107,10 +107,10 @@ n.id = i;
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>Vanilla Pop</h1>
+    <h1>Salesforce</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/vanilla-pop/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/salesforce/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -253,10 +253,15 @@ n.id = i;
 
 	    
 	    
-                <li class="">
+                <li class="active">
                     <a href="//docs.vanillaforums.com/help/addons/salesforce/">Salesforce </a>
                 </li>
                 
+                
+                    
+                    
+               
+                    
                 
 
 	    
@@ -277,25 +282,10 @@ n.id = i;
 
 	    
 	    
-                <li class="active nest">
+                <li class=" nest">
                     <a href="//docs.vanillaforums.com/help/addons/vanilla-pop/">Vanilla Pop </a>
                 </li>
                 
-                
-                    
-                    
-               
-                    
-                        <ul class="nav-tier3">
-
-                            <li class="">
-                                <a href="//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/">Vanilla Pop with Site Hub</a>
-                            </li>
-
-                            
-		    
-                        </ul>
-                    
                 
 
 	    
@@ -429,63 +419,83 @@ n.id = i;
 
                 
 
-<aside class="cloudfeature"><p>
-    <img src="//docs.vanillaforums.com/img/help/cloud.png" />
-    <span>This feature is only available on Vanilla Cloud</span>
-    <a href="https://vanillaforums.com">Learn More...</a>
-</p></aside>
+<h2 id="overview">Overview</h2>
 
-<h2 id="email-interaction">Email Interaction</h2>
-
-<p>Vanilla Pop is a feature of Vanilla&rsquo;s Enterprise forums that allows you to interact with your forum through email.</p>
+<p>This plugin allows you to:</p>
 
 <ul>
-<li>With Vanilla Pop you can:</li>
-<li>Reply to an emailed discussion on the forum or through email.</li>
-<li>Have conversations through email, but keep a record on Vanilla.</li>
+<li>Link your Salesforce account to your Vanilla user profile.</li>
+<li>Create cases and leads from discussions.</li>
+<li>View leads on Vanilla users profile.</li>
 </ul>
 
-<h2 id="your-forum-s-email-address">Your Forum&rsquo;s Email Address</h2>
+<h2 id="requirements">Requirements</h2>
 
-<p>The top of the page tells you your forum&rsquo;s email address. This is the address that the application will send emails to, in order to interact with your forum. This email may not be the email address you want to show your users, so you should forward all emails from the address that you want to share. <strong>Important: Make sure your outgoing email address is the same as the one that forwards to your forum&rsquo;s email address or else email replies will not work.</strong></p>
+<p>You must have SSL enabled on your domain. (Your forum must be served over HTTPS)</p>
 
-<h3 id="email-directly-into-a-category">Email Directly into a category</h3>
+<h2 id="setup">Setup</h2>
 
-<p>You can also set up additional email addresses to forward to individual categories. To do this forward email to the appropriate categorycode, using the following syntax: categorycode.forumname@vanillacommunity.email.  The “categorycode”,  is the numerical value assigned for the category (hover over the catgeory url in your dashboard to get the number).</p>
+<h3 id="configure-application-in-salesforce">Configure Application in Salesforce</h3>
 
-<h2 id="vanilla-pop-settings">Vanilla Pop Settings</h2>
+<ol>
+<li>Log into your Salesforce Account</li>
+<li>Create new Connected App in Salesforce
 
-<p>When you have Vanilla Pop enabled you will see an <strong>Incoming Email</strong> item in your dashboard under Site Settings. The page looks like this:</p>
-
-<p><img src="https://images.v-cdn.net/docs/vanillapop-settings.png" alt="Vanilla Pop Settings" /></p>
-
-<p>Let&rsquo;s run down the settings one by one:</p>
-
-<h3 id="default-category">Default Category</h3>
-
-<p>Emails that are sent to your forum will start a new discussion. These discussions will be put into the category you specify here. We recommend using roles &amp; permissions to limit the visibility of this category to just moderators and administrators. (Usually people that email you don&rsquo;t expect their email to be publicly viewable to the world.) The choice is up to you,  though.</p>
-
-<h2 id="allow-users-to-be-registered-through-email">Allow Users to be Registered through Email</h2>
-
-<p>When a user emails your forum, we check their email address to see what user to post as. If there is no user associated with that email address then a new user is created. This is fine in cases where you are handling support requests through email, but it may not be fine in more tightly-knit communities. Use this setting to control whether or not new users can be registered by sending their first email.</p>
-
-<h3 id="add-information-to-the-from-field-in-email-addresses-to-help-with-replies">Add Information to the From Field in Email Addresses to Help with Replies</h3>
-
-<p>If you enable this setting, information is added to the from field of email sent from the forum. This is done by adding a plus (+) sign and code before the @ symbol in the email address. We recommend this option because some devices, such as Blackberry, don&rsquo;t send correct header information with their emails. Disable this option if your email server doesn&rsquo;t allow the plus signs.</p>
-
-<h3 id="outgoing-email-address">Outgoing Email Address</h3>
-
-<p>This is the email address that shows up in the from field of email sent from the forum. This is also the email address that people will reply to.</p>
-
-<h3 id="email-content">Email Content</h3>
-
-<p>You can modify the content included in your Vanilla Pop emails, some of the items:</p>
+<ol>
+<li>Build -&gt; Create -&gt; Apps -&gt; Connected Apps -&gt; New</li>
+<li>Fill the required fields <strong>Connected App Name</strong>, <strong>API Name</strong>, <strong>Contact Email</strong></li>
+<li>Enable OAuth Settings</li>
+<li>Set a Callback URL by appending <code>/profile/salesforceconnect</code> to the end of your forum&rsquo;s URL.
 
 <ul>
-<li>{Category.Name} = Includes the Category Name</li>
-<li>[{Title}] = Includes Discussion Title</li>
-<li>{Body} = Includes Content of the item</li>
+<li>If your forum is at <code>https://forum.example.com/</code>, your Callback URL would be <code>https://forum.example.com/profile/salesforceconnect</code>.</li>
+<li>If your forum is at <code>https://forum.example.com/en/</code>, your Callback URL would be <code>https://forum.example.com/en/profile/salesforceconnect</code>.</li>
+<li>Callback URL must be HTTPS</li>
+</ul></li>
+<li>Add <strong>Full access (full)</strong> and <strong>Perform requests on your behalf at any time (refresh_token, offline_access)</strong> to Selected OAuth Scopes.</li>
+<li>Save <img src="//docs.vanillaforums.com/img/help/addons/salesforce/app_create.png" alt="" /></li>
+</ol></li>
+</ol>
+
+<h3 id="configure-plugin-in-vanilla">Configure Plugin in Vanilla</h3>
+
+<ol>
+<li>Log into your Vanilla forum</li>
+<li>Go into the plugin&rsquo;s settings</li>
+
+<li><p>Fill out the requested information</p>
+
+<ul>
+<li>Where to find your ApplicationID and Secret in Salesforce?</li>
 </ul>
+
+<p>In the app creation section mentioned in <a href="#configure-application-in-salesforce">Configure Application in Salesforce</a> under API you will see
+Consumer Key (which is the ApplicationID) and Consumer Secret (which is the Secret)</p>
+
+<p><img src="//docs.vanillaforums.com/img/help/addons/salesforce/key_secret.png" alt="" /></p></li>
+</ol>
+
+<h3 id="link-your-account">Link your account</h3>
+
+<ol>
+<li>Login to Vanilla.</li>
+<li>Go to your profile page.</li>
+<li>Edit your profile.</li>
+<li>Click on the Social section. <em>(/profile/connections)</em></li>
+<li>Click &ldquo;Connect&rdquo; on Salesforce.</li>
+<li>Follow the instructions from there.</li>
+</ol>
+
+<h2 id="f-a-q">F.A.Q</h2>
+
+<h3 id="i-can-t-link-my-account">I can&rsquo;t link my account.</h3>
+
+<p>If you get stuck on a page that says &ldquo;error=redirect_uri_mismatch&amp;error_description=redirect_uri%20must%20match%20configuration&rdquo;,</p>
+
+<p>make sure that the URL you are on when you are in the social section of your profile matches the Callback URL that you set in the configuration.</p>
+
+<p>Example: If the URL when you are on in your profile&rsquo;s social section is <code>https://forum.example.com/somedirectory/profile/connections</code>,
+you should have <code>https://forum.example.com/somedirectory/profile/salesforceconnect</code> in your configuration.</p>
 
 
             
