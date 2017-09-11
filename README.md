@@ -46,7 +46,7 @@ The `content/api` folder is for API documentation and api-related information (s
 
 These documents are built using the [Hugo](https://gohugo.io) static site generator. The content is formatted in Markdown and the templates use the [Go html/template](http://gohugo.io/templates/go-templates/) library. The generator supports both partials and shortcodes (partials that can be used in the content too).
 
-__This repository uses Grunt to automate the build and editing processes__. Grunt and its various plugins and dependencies (including Hugo itself) are installed using [Node Package Manager](https://www.npmjs.com/).
+__This repository uses Grunt to automate the build and editing processes__. Grunt and its various plugins and dependencies (including Hugo itself) are installed using [Yarn](https://yarnpkg.com/).
 
 The docs themselves are published to GitHub Pages and live at [http://docs.vanillaforums.com](http://docs.vanillaforums.com).
 
@@ -54,12 +54,12 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 
 #### Installing the project locally
 
-1. Make sure you have `npm` installed:
-	* OS X: `$ brew install npm`
+1. Make sure you have `yarn` installed:
+	* OS X: `$ brew install yarn`
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
-3. From the root of the folder, use `npm` to install the project: `$ npm install`
-4. Verifiy that you have `hugo-cli` install globally: `$ npm install -g hugo-cli`
+3. From the root of the folder, use `yarn` to install the project: `$ yarn install`
+4. Verifiy that you have `hugo-cli` install globally: `$ yarn install -g hugo-cli`
 
 That should be it, you now have a working copy of the docs.
 
@@ -67,7 +67,7 @@ That should be it, you now have a working copy of the docs.
 
 The docs can be viewed live while you edit them, which makes writing new content really easy. 
 
-Simply enable editing mode: `$ npm run edit`
+Simply enable editing mode: `$ yarn run edit`
 You should now have a locally accessible webserver providing the docs site at `http://127.0.0.1:8081`. This site should be livereload-enabled, so changes you make locally should trigger a page reload on the site. Now create some docs!
 
 #### Submitting your changes
