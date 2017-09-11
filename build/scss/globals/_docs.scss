@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
 body {
     background: $panelDark;
@@ -14,9 +14,9 @@ body {
 }
 
 .docs {
-    font-family: "Helvetica Neue", Helvetica, "Lato", Arial, "Lucida Grande", sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
-    font-weight: 300;
+    // font-weight: 300;
 }

@@ -1,13 +1,13 @@
 .docs {
-    
+
     .docs-header {
         background-color: $vanillaBlue;
         font-size: 16px;
-        
+
         .row {
             height: 60px;
         }
-        
+
         .docs-header-logo {
             color: white;
 
@@ -17,29 +17,30 @@
 
             .docs-docs-tag {
                 font-size: 18px;
-                font-weight: 100;
+                font-weight: normal;
 
                 &:before {
                     content: "|";
                     margin-right: 10px;
+                    vertical-align: 2px;
                 }
             }
         }
-        
+
         .docs-header-tray {
             justify-content: flex-end;
             text-align: right;
-            
+
             > div {
                 margin-left: 20px;
             }
-            
+
             .docs-cta {
                 .docs-button {
                     background: rgba(white, 0.2);
                     color: white;
                     border-color: white;
-                    
+
                     &:hover {
                         background: white;
                         border-color: transparent;
@@ -47,40 +48,40 @@
                     }
                 }
             }
-            
+
             .docs-header-search {
-                
+
                 .docs-search-wrap {
                     background: rgba($borderDark, 0.2);
                     border: 1px solid transparent;
                     border-radius: 20px;
                     padding: 0px 20px;
-                    
+
                     color: $ghostText;
                 }
-                
+
                 input {
                     border: none;
                     background: transparent;
                     color: $ghostText;
                     height: 33px;
                     width: 100px;
-                    
+
                     transition: width 0.2s;
-                    
+
                     &:focus {
                         outline: none;
                         width: 200px;
                     }
                 }
-                
+
                 i {
                     margin-left: -10px;
                     font-size: 14px;
                 }
             }
         }
-        
+
     }
-    
+
 }

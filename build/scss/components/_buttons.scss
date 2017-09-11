@@ -1,38 +1,38 @@
 .docs-button {
     display: inline-block;
     transition: 0.2s;
-    
+
     &.button-primary {
         background: $vanillaPink;
         border: 1px solid $vanillaPink;
         border-radius: 3px;
-        
+
         padding: 10px 20px;
         color: white;
         font-size: 20px;
-        
+
         &:hover {
             background: $vanillaLightPink;
             border: 1px solid $vanillaLightPink;
         }
     }
-    
+
     &.button-outline {
         background: white;
         border: 1px solid $vanillaPink;
         border-radius: 3px;
-        
+
         padding: 10px 20px;
         color: $regularText;
         font-size: 20px;
-        
+
         &:hover {
             border: 1px solid $vanillaBlue;
         }
     }
-    
+
     &.button-small {
-        padding: 8px 20px;
+        padding: 7px 20px;
         border-radius: 2px;
         font-size: 14px;
     }
