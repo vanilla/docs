@@ -29,7 +29,7 @@ You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
 
 1. Log into your Salesforce Account
 1. Create new Connected App in Salesforce
-  1. Build -> Create -> Apps -> Connected Apps -> New
+  1. Build → Create → Apps → Connected Apps → New
   1. Fill the required fields **Connected App Name**, **API Name**, **Contact Email**
   1. Enable OAuth Settings
   1. Set a Callback URL by appending `/profile/salesforceconnect` to the end of your forum's URL.
