@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Multisite on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/multisite/</link>
-    <description>Recent content in Multisite on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/multisite/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="//docs.vanillaforums.com/tags/multisite/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="//docs.vanillaforums.com/tags/multisite/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Multisite</title>
@@ -15,8 +13,70 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/multisite/</guid>
-      <description>This feature is only available on Vanilla Cloud Learn More...  Multisite management Vanilla&amp;rsquo;s cloud solution offers a number of configuration settings for enterprise-grade deployments.
-Deployment Types Single Community This is a classic forum setup. It is the equivalent of 1 installation of forum software. It can have any number of categories (what other products call “topic areas” or “forums/subforums”) arranged in a hierarchy. Each Single Community needs a domain or subdomain assigned.</description>
+      <description>
+
+&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
+    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
+    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
+    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
+&lt;/p&gt;&lt;/aside&gt;
+
+&lt;h2 id=&#34;multisite-management&#34;&gt;Multisite management&lt;/h2&gt;
+
+&lt;p&gt;Vanilla&amp;rsquo;s cloud solution offers a number of configuration settings for enterprise-grade deployments.&lt;/p&gt;
+
+&lt;h2 id=&#34;deployment-types&#34;&gt;Deployment Types&lt;/h2&gt;
+
+&lt;h3 id=&#34;single-community&#34;&gt;Single Community&lt;/h3&gt;
+
+&lt;p&gt;This is a classic forum setup. It is the equivalent of 1 installation of forum software. It can have any number of &lt;strong&gt;categories&lt;/strong&gt; (what other products call “topic areas” or “forums/subforums”) arranged in a hierarchy. Each &lt;strong&gt;Single Community&lt;/strong&gt; needs a domain or subdomain assigned.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-hub&#34;&gt;The Hub&lt;/h3&gt;
+
+&lt;p&gt;A Hub is a community mothership. Setup one community as a template, then create Nodes that are copies of this setup. Each &lt;strong&gt;Node&lt;/strong&gt; is a &lt;strong&gt;Single Community&lt;/strong&gt; with the added ability of being &lt;a href=&#34;//docs.vanillaforums.com/help/multisite/sync&#34;&gt;synced&lt;/a&gt; with changes made on the Hub. Each Node is otherwise independent from each other - &lt;strong&gt;separate&lt;/strong&gt; user lists, private message exchanges, and activity streams.&lt;/p&gt;
+
+&lt;p&gt;Each Node is accessible via either a subdomain &lt;em&gt;or&lt;/em&gt; a subfolder off a domain shared by the whole Hub. This is called the &lt;strong&gt;Hub URL Format&lt;/strong&gt;. For example, the “muffins” Node in the “bakery” Hub might be accessible at the URLs “muffins.bakery.company.com”, or “bakery.company.com/muffins”, depending on the configuration. Only one type of Hub URL Format is supported per Hub.&lt;/p&gt;
+
+&lt;h3 id=&#34;subcommunities&#34;&gt;Subcommunities&lt;/h3&gt;
+
+&lt;p&gt;This artificially divides a &lt;strong&gt;Single Community&lt;/strong&gt; &lt;em&gt;or&lt;/em&gt; a &lt;strong&gt;Node&lt;/strong&gt; into different areas by making each of the &lt;strong&gt;top tier of categories&lt;/strong&gt; into subcommunities. While in any particular subcommunity, all other content outside the subcommunity is completely hidden. A common use case for subcommunities is localization.&lt;/p&gt;
+
+&lt;p&gt;All subcommunities are still part of a single “instance” - the user list (and therefore moderators / admins), private messages, and activity stream are &lt;strong&gt;shared&lt;/strong&gt; across all subcommunities.&lt;/p&gt;
+
+&lt;p&gt;Each subcommunity has its own URL path prefix. For instance, visiting the “Recent Discussions” page of the English subcommunity for “forum.company.com” would take the user to “forum.company.com/en/discussions”. The user would see only discussions that are in the subcategories under the “English” top tier category.&lt;/p&gt;
+
+&lt;p&gt;A common way of combining this feature with the &lt;strong&gt;Hub&lt;/strong&gt; is to create a &lt;strong&gt;Node&lt;/strong&gt; per product, and use subcommunities for each locale within that product.&lt;/p&gt;
+
+&lt;h2 id=&#34;architectural-considerations&#34;&gt;Architectural considerations&lt;/h2&gt;
+
+&lt;h3 id=&#34;cluster-management&#34;&gt;Cluster management&lt;/h3&gt;
+
+&lt;p&gt;Our physical server assets are arranged into clusters. Each cluster can hold many Single Communities, or a single Hub + its Nodes. They cannot be mixed.&lt;/p&gt;
+
+&lt;h3 id=&#34;scaling-capabilities&#34;&gt;Scaling capabilities&lt;/h3&gt;
+
+&lt;p&gt;Because each Node is a separate entity, there are significant scaling advantages to choosing a hub setup over a single community + subcommunities setup.&lt;/p&gt;
+
+&lt;h3 id=&#34;suggested-setups&#34;&gt;Suggested setups&lt;/h3&gt;
+
+&lt;p&gt;For small-to-medium sites, use a single community. Add subcommunities for multi-locale support or to combine several micro-forums into a single instance.&lt;/p&gt;
+
+&lt;p&gt;For very large or franchise sites, use a dedicated Hub with a Node per locale. This provides maximum scaling potential.&lt;/p&gt;
+
+&lt;h3 id=&#34;embedding-iframes&#34;&gt;Embedding (iframes)&lt;/h3&gt;
+
+&lt;p&gt;While we do support robust embedding (iframe) solutions, we strongly recommend avoiding it whenever possible. It drastically increases project complexity and negatively impacts user experience with longer page load time.&lt;/p&gt;
+
+&lt;h3 id=&#34;ssl-certificates&#34;&gt;SSL certificates&lt;/h3&gt;
+
+&lt;p&gt;We will need SSL certificates that cover all potential custom domain names. For Hub setups, this generally means a wildcard certificate. See our documentation on &lt;a href=&#34;//docs.vanillaforums.com/help/cloud/ssl&#34;&gt;providing SSL certificates&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/features/multi-forum-deployment-of-vanilla/&#34;&gt;Blog: Multi-site Deployment of Vanilla&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -25,7 +85,12 @@ Deployment Types Single Community This is a classic forum setup. It is the equiv
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
-      <description>Hub Sync A number of settings can be synced between the hub and its nodes.</description>
+      <description>
+
+&lt;h2 id=&#34;hub-sync&#34;&gt;Hub Sync&lt;/h2&gt;
+
+&lt;p&gt;A number of settings can be synced between the hub and its nodes.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

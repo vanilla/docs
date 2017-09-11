@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/categories/</link>
-    <description>Recent content in Categories on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/categories/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="//docs.vanillaforums.com/tags/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="//docs.vanillaforums.com/tags/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Advanced Settings</title>
@@ -15,8 +13,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
-      <description> Advanced Settings The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:
- Discussions per page (the number of discussions displayed on a page) Comments per page (the number of comments displayed on a page) Editing time limit (this can be used to prevent edits after a certain time period. Some user Roles and permissions will may override this limit) Enable checkboxes (this  </description>
+      <description>
+
+&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
+
+&lt;p&gt;The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discussions per page  (the number of discussions displayed on a page)&lt;/li&gt;
+&lt;li&gt;Comments per page (the number of comments displayed on a page)&lt;/li&gt;
+&lt;li&gt;Editing time limit (this can be used to prevent edits after a certain time period.  Some user  Roles and permissions will may override this limit)&lt;/li&gt;
+&lt;li&gt;Enable checkboxes (this&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -25,8 +34,103 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/forum-settings/categories/</guid>
-      <description>What Are Categories Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category. You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to /vanilla/settings/categories.
-At the top of the page, you will presented with the option to either add a new category, or disable them completely.</description>
+      <description>
+
+&lt;h2 id=&#34;what-are-categories&#34;&gt;What Are Categories&lt;/h2&gt;
+
+&lt;p&gt;Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
+You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to &lt;code&gt;/vanilla/settings/categories&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-nav.png&#34; alt=&#34;Categories Navigation&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the &amp;ldquo;Recent Discussion&amp;rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.&lt;/p&gt;
+
+&lt;h2 id=&#34;choosing-your-category-layout&#34;&gt;Choosing Your Category Layout&lt;/h2&gt;
+
+&lt;p&gt;Before modifying your individual categories, you can choose how they will appear on your homepage. In the Dashboard, under the “Homepage&amp;rdquo; panel there is a &amp;ldquo;Category Layout&amp;rdquo; section.  In this area, there are options for how to display the Categories page for your users.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Modern Layout&lt;/strong&gt; removes the extra columns for discussion and comment totals, making for a clean look.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Table Layout&lt;/strong&gt; shows discussion and comment totals as columns, along with user avatar and the thread title of the most recent post in the section.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Mixed Layout&lt;/strong&gt; option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/categories/categories-add.png&#34; alt=&#34;Add Categories&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;choosing-how-categories-display&#34;&gt;Choosing How Categories Display&lt;/h2&gt;
+
+&lt;p&gt;Categories are easily arranged. Just click on the left side of a specific category to drag and drop it into your desired position. Changes to organization will be reflected immediately on the main forum index.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/drag_and_drop.png&#34; alt=&#34;Click and drag the small &amp;quot;hamburger menu&amp;quot; icon on the left side of each created category to rearrange them.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are some other options that affect how categories are viewed on the forum. Opening the right drop down will reveal the “Display As” menu. These settings critically change the way a category behaves.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/display_as_menu.png&#34; alt=&#34;The &amp;quot;Display As&amp;quot; options.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Discussions&lt;/strong&gt; - The default category, where users can post discussions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Heading&lt;/strong&gt; - Unclickable Headings that help with forum organization. On the homepage, they will display differently according to your theme. Generally they are bold, and will split your categories into sections:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/categories_index.png&#34; alt=&#34;The main page of your forum may be set to recent discussions, best of, or categories. This is an example of a categories page in the &amp;quot;Bootstrap 3&amp;quot; theme, with headings differentiating the sections. &#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Flat&lt;/strong&gt; - This is a paginated directory structure that can handle thousands of categories. They are sorted alphabetically by default, and cannot be manually arranged.&lt;/p&gt;
+
+&lt;p&gt;Flat categories have a module that can be inserted into your theme. This will blend right in with your index and list a small number of the categories that the section contains. It has a quick search module, allowing for users to shift through hundreds of categories with ease. This is great for sites that have a large number of products.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/display_as_flat.png&#34; alt=&#34;The flat categories module, shown here blending in with the theme.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To add this to your theme, use this module:
+&lt;code&gt;{module name=&amp;quot;FlatCategoryModule&amp;quot; categoryID=00}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the numerical categoryID in the URL when you are editing a category.
+&lt;img src=&#34;https://images.v-cdn.net/docs/category_ID.png&#34; alt=&#34;You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community. This shows an example URL.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nested&lt;/strong&gt; - Creates a clickable heading that only contains more categories. Unlike Flat categories, this is generally for creating small sections within your forum, and can be manually organized.&lt;/p&gt;
+
+&lt;h2 id=&#34;other-settings&#34;&gt;Other Settings&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Category URL&lt;/strong&gt;- You can change the slug for a category to simplify the URL. It will automatically populate with the title of the category. Proper syntax for URLs is required here, so spaces are not allowed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Descriptions&lt;/strong&gt;- You can add a description to you category. This will appear on the homepage or under the title on the categories page, depending on your theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Photo&lt;/strong&gt;- You can add a picture or icon to your category, which will appear on the main index in some themes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS class&lt;/strong&gt; - The specified text will be added as a class for the category&amp;rsquo;s HTML wrapper. This makes it so that you can target it specifically when building a theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hide from the recent discussions&lt;/strong&gt;- This prevents threads in the category from appearing on &lt;code&gt;/discussions&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Archived&lt;/strong&gt;- This removes the category from the main index and prevents threads in the category from coming up in the site-based search. Archived Categories are still indexed by search engines and can prevent broken links.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Permissions&lt;/strong&gt;- Enabling “This category has custom permissions” will reveal some new options.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/other_options.png&#34; alt=&#34;Custom permission options add another layer of control over a category. This image shows the list of options that appear.  &#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have a plugin like Q&amp;amp;A enabled, you can use these options to choose where your users can create those threads. You can also disable polls and file uploads, if they don&amp;rsquo;t suit the category.&lt;/p&gt;
+
+&lt;p&gt;Under that will be a list of all of your roles. You can restrict who can view, post in, or perform moderation actions in particular categories.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Maximum Category Display Depth&lt;/strong&gt; - This setting is located in the Advanced section of the dashboard, &lt;code&gt;vanilla/settings/advanced&lt;/code&gt;. The default setting is &amp;ldquo;No Limit&amp;rdquo;, but you can choose to set a level at which nested categories will be placed in a comma-delimited list. The subcategories will appear as hyperlinks under their root category when viewing the forum index.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/category_depth.png&#34; alt=&#34;The comma-delimited list, displayed as &amp;quot;child categories&amp;quot; under the root. &#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;deleting-a-category&#34;&gt;Deleting a Category&lt;/h2&gt;
+
+&lt;p&gt;You can delete a category from the dashboard, the option is in the right-hand menu of each category:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/delete_menu.png&#34; alt=&#34;The delete option is the very the bottom of the menu.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/delete_warning.png&#34; alt=&#34;The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It is not possible to recover a deleted category.&lt;/strong&gt;  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.&lt;/p&gt;
+
+&lt;p&gt;Additional Resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/&#34;&gt;Blog: How to Structure Categories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
