@@ -18,7 +18,7 @@ Reporting is a way for members to bring moderators’ attention to content that 
 
 ## Reporting a post
 
-Go to Flag -> Report in the Reactions menu at the end of the post. A popup box will prompt you to add a “Reason” both to explain the report and discourage useless reports. Any member may use this function.
+Go to Flag → Report in the Reactions menu at the end of the post. A popup box will prompt you to add a “Reason” both to explain the report and discourage useless reports. Any member may use this function.
 
 Reporting content creates a new discussion in a special moderator-only forum.
 Additional reports of the same content (the exact same post) add new comments to the special discussion.

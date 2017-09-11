@@ -16,7 +16,7 @@ aliases:
 ## SSO with SAML: Overview
 
 Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAML SSO addon,
-and configuring it via its Settings page (Dashboard -> Addons -> SAML SSO -> Settings button).
+and configuring it via its Settings page (Dashboard → Addons → SAML SSO → Settings button).
 
 SAML accounts are mapped to existing forum accounts by **email address**, or a new account is created if no match is found.
 

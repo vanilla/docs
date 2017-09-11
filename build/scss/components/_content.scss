@@ -1,17 +1,18 @@
 .docs-content {
     background: white;
     padding: 20px 0px 50px 0px;
-    
+
     #content {
-    
+        line-height: 1.6;
+
         h2 {
             margin: 0px;
             color: $vanillaPink;
             font-size: 24px;
-            font-weight: lighter;
+            font-weight: normal;
             border-bottom: 1px dotted $borderDarken;
-            padding-bottom: 15px;
-            
+            padding-bottom: 6px;
+
             em, i {
                 font-style: normal;
                 font-weight: normal;
@@ -22,6 +23,7 @@
             color: $darkText;
             font-size: 16px;
             font-weight: normal;
+            margin-top: 1.6em;
         }
 
         h4 {
@@ -32,7 +34,8 @@
 
         p {
             font-size: 14px;
-            line-height: 24px;
+            // line-height: 1.6;
+            margin-bottom: 1.6em;
 
             + h2 {
                 margin-top: 30px;
@@ -40,46 +43,49 @@
         }
 
         ul, ol {
-            font-size: 13px;
+            font-size: 14px;
 
             li {
-                line-height: 22px;
+                // line-height: 1.4;
+                margin-top: .8em;
             }
 
             + h2 {
                 margin-top: 30px;
             }
         }
-        
+
         a {
             color: $vanillaBlue;
         }
-        
+
         pre {
             background: $panelLight;
             color: $vanillaPink;
             font-size: 12px;
             padding: 8px;
             border-radius: 2px;
-            
+
             code {
                 background: transparent;
                 padding: 0px;
+                font-size: 14px;
             }
 
             + h2 {
                 margin-top: 30px;
             }
         }
-        
+
         code {
             background: $faintPink;
             color: $vanillaPink;
-            font-family: "Courier New", Terminal;
+            font-family: "Fira Mono", monospace;
+            font-size: 13px;
             padding: 2px 4px;
             border-radius: 2px;
         }
-        
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -118,7 +124,7 @@
                 }
             }
         }
-        
+
         aside {
             position: relative;
             font-size: 12px;
@@ -126,12 +132,12 @@
             margin: 10px 0px;
             border-radius: 2px;
             overflow: hidden;
-            
+
             p {
                 &:after {
                     position: absolute;
                     display: block;
-                    
+
                     font: normal normal normal 14px/1 FontAwesome;
                     font-size: inherit;
                     text-rendering: auto;
@@ -139,55 +145,55 @@
                     -moz-osx-font-smoothing: grayscale;
                 }
             }
-            
+
             &.warning {
                 color: $panelRedText;
                 background-color: $panelRed;
             }
-            
+
             &.note {
                 color: $panelYellowText;
                 background-color: $panelYellow;
             }
-            
+
             &.cloudfeature {
                 margin-top: 0px;
                 margin-bottom: 20px;
-                font-weight: bolder;
-                
+                font-weight: bold;
+
                 color: $panelBlueText;
                 background-color: $panelBlue;
-                
+
                 p {
                     margin: 5px 0px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    
+
                     * {
                         margin-right: 10px;
                     }
-                    
+
                     a {
                         border-bottom: 1px dotted $vanillaBlue;
                         margin-left: auto;
                     }
                 }
             }
-            
+
             &.nav-edge {
                 position: relative;
                 margin-left: -32px;
                 padding: 0px;
-                
+
                 img {
                     border: 0px;
                 }
             }
         }
-        
+
         img {
-            max-width: 100%; 
+            max-width: 100%;
             height: auto;
             border: 1px solid $borderDarken;
         }
