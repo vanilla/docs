@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/locales/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Locales on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/locales/</link>
+    <description>Recent content in Locales on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/locales/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="//docs.vanillaforums.com/tags/locales/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Locales</title>
@@ -13,84 +15,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/locales/</guid>
-      <description>
-
-&lt;h2 id=&#34;translating-vanilla&#34;&gt;Translating Vanilla&lt;/h2&gt;
-
-&lt;p&gt;Want to help us improve our translations? We have a &lt;a href=&#34;https://www.transifex.com/projects/p/vanilla/&#34;&gt;Transifex project&lt;/a&gt; for contributing to this. Create an account there and submit your improvements.&lt;/p&gt;
-
-&lt;p&gt;Need to customize the phrasing just on your site in particular? See &amp;ldquo;Overriding locales&amp;rdquo; below.&lt;/p&gt;
-
-&lt;h2 id=&#34;translation-tips&#34;&gt;Translation tips&lt;/h2&gt;
-
-&lt;p&gt;Want to help translate? Awesome! Here are some tips for creating great translations.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Please make sure that your changes use generic terminology and good grammar that can apply to all forums and avoids interest- or region-specific terms.&lt;/li&gt;
-&lt;li&gt;Avoid HTML encoding of UTF-8 characters. For example, just use &lt;code&gt;ö&lt;/code&gt;, not &lt;code&gt;&amp;amp;ouml;&lt;/code&gt;. Vanilla&amp;rsquo;s entire stack is UTF-8 so the former &lt;em&gt;always&lt;/em&gt; works, but our default emails are not HTML, so the latter will fail.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;installing-locales&#34;&gt;Installing locales&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Download the locale you want from the &lt;a href=&#34;https://open.vanillaforums.com/addon/browse/all/popular/recent/&#34;&gt;Addon Directory&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Upload the folder to your &lt;code&gt;locales&lt;/code&gt; folder.&lt;/li&gt;
-&lt;li&gt;In the Dashboard, go to &lt;code&gt;Addons &amp;gt; Locales&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Enable the locale.&lt;/li&gt;
-&lt;li&gt;Change the Default Locale at the top of the page, and Save.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;using-multiple-locales&#34;&gt;Using multiple locales&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://open.vanillaforums.com/addon/multilingual-plugin&#34;&gt;Multilingual plugin&lt;/a&gt; allows each user select their preference from all enabled locales.&lt;/p&gt;
-
-&lt;h2 id=&#34;overriding-locales&#34;&gt;Overriding locales&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if (!defined(&#39;APPLICATION&#39;)) exit();
-
-// Note about what you&#39;re translating
-$Definition[&#39;TranslationString1&#39;] = &amp;quot;Override String 1&amp;quot;;
-$Definition[&#39;TranslationString2&#39;] = &amp;quot;Override String 2&amp;quot;;
-
-// More stuff
-$Definition[&#39;TranslationString3&#39;] = &amp;quot;Override String 3&amp;quot;;
-$Definition[&#39;TranslationString4&#39;] = &amp;quot;Override String 4&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;overriding-all-locales&#34;&gt;Overriding All Locales&lt;/h3&gt;
-
-&lt;p&gt;You can override your default locale by adding a &lt;code&gt;conf/locale.php&lt;/code&gt; file to your installation with additional definitions. Any definitions in this file will override all locales.&lt;/p&gt;
-
-&lt;p&gt;To find out what the translation strings for core components are please check our open source &lt;a href=&#34;https://github.com/vanilla/locales&#34;&gt;Locales Repo&lt;/a&gt;. The core strings can be found in the &lt;a href=&#34;https://github.com/vanilla/locales/blob/master/tx-source/site_core.php&#34;&gt;&lt;code&gt;tx-source/site_core.php&lt;/code&gt;&lt;/a&gt; file.&lt;/p&gt;
-
-&lt;p&gt;If you are using the Multilingual Plugin to enable multiple locales, please note his override will effect &lt;strong&gt;all&lt;/strong&gt; locales.&lt;/p&gt;
-
-&lt;h3 id=&#34;overriding-locales-with-the-multilingual-plugin&#34;&gt;Overriding Locales with the Multilingual plugin&lt;/h3&gt;
-
-&lt;p&gt;If you have the &lt;a href=&#34;https://open.vanillaforums.com/addon/multilingual-plugin&#34;&gt;Multilingual plugin&lt;/a&gt; enabled you may not want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the &lt;code&gt;locale/&lt;/code&gt; folder and name them &lt;code&gt;{locale-id}.php&lt;/code&gt;. For example, the French language file would located at &lt;code&gt;locale/fr.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale/fr.php&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if (!defined(&#39;APPLICATION&#39;)) exit();
-
-// Note about what you&#39;re translating
-$Definition[&#39;TranslationString1&#39;] = &amp;quot;Quelque chose en français&amp;quot;;
-$Definition[&#39;TranslationString2&#39;] = &amp;quot;Une autre chose en français&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale/es.php&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if (!defined(&#39;APPLICATION&#39;)) exit();
-
-// Note about what you&#39;re translating
-$Definition[&#39;TranslationString1&#39;] = &amp;quot;Algo en español&amp;quot;;
-$Definition[&#39;TranslationString2&#39;] = &amp;quot;Otra cosa en español&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;defining-new-translations-strings&#34;&gt;Defining new translations strings&lt;/h2&gt;
-
-&lt;p&gt;If you are creating a custom theme or plugin for a multilingual community you may want to offer translations strings for text defined in your theme/plugin. Vanilla offers ways to define these strings in &lt;a href=&#34;http://docs.vanillaforums.com/developer/theming/smarty/functions/i18n/&#34;&gt;Smarty Templates&lt;/a&gt; and in &lt;a href=&#34;http://docs.vanillaforums.com/developer/framework/i18n/&#34;&gt;PHP&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Translating Vanilla Want to help us improve our translations? We have a Transifex project for contributing to this. Create an account there and submit your improvements.
+Need to customize the phrasing just on your site in particular? See &amp;ldquo;Overriding locales&amp;rdquo; below.
+Translation tips Want to help translate? Awesome! Here are some tips for creating great translations.
+ Please make sure that your changes use generic terminology and good grammar that can apply to all forums and avoids interest- or region-specific terms.</description>
     </item>
     
   </channel>

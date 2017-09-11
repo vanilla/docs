@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/developers/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Developers on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/developers/</link>
+    <description>Recent content in Developers on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/developers/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="//docs.vanillaforums.com/tags/developers/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Apache</title>
@@ -13,32 +15,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/backend/server-apache/</guid>
-      <description>
-
-&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
-
-&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
-
-&lt;p&gt;You need to have the &lt;a href=&#34;http://httpd.apache.org/docs/current/mod/mod_rewrite.html&#34;&gt;mod_rewrite&lt;/a&gt; module enabled.&lt;/p&gt;
-
-&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
-
-&lt;p&gt;Vanilla includes an &lt;a href=&#34;https://github.com/vanilla/vanilla/blob/master/.htaccess.dist&#34;&gt;.htaccess&lt;/a&gt;
-file for out-of-box Apache support.
-You may need to edit it, as indicated inside itself, for subfolder usage.
-Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd.apache.org/docs/current/howto/htaccess.html&#34;&gt;must be enabled for your web root&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you are able to, you can also take the content of the &lt;code&gt;.htaccess&lt;/code&gt; and use it directly in your main server config file.&lt;/p&gt;
-
-&lt;h3 id=&#34;hardening&#34;&gt;Hardening&lt;/h3&gt;
-
-&lt;p&gt;The provided &lt;code&gt;.htaccess&lt;/code&gt; already comes with some decent hardening:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The only php script that can be requested directly is &lt;code&gt;/index.php&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Folders that should not be accessed from the web return a 403.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Apache Pre-requisite You need to have the mod_rewrite module enabled.
+Configuration Vanilla includes an .htaccess file for out-of-box Apache support. You may need to edit it, as indicated inside itself, for subfolder usage. Obviously, .htaccess files must be enabled for your web root.
+If you are able to, you can also take the content of the .htaccess and use it directly in your main server config file.
+Hardening The provided .</description>
     </item>
     
     <item>
@@ -47,24 +27,8 @@ Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
-      <description>
-
-&lt;h2 id=&#34;assets&#34;&gt;Assets&lt;/h2&gt;
-
-&lt;p&gt;Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.&lt;/p&gt;
-
-&lt;h3 id=&#34;default-assets&#34;&gt;Default assets&lt;/h3&gt;
-
-&lt;p&gt;Vanilla uses these assets by default: &lt;code&gt;Head&lt;/code&gt;, &lt;code&gt;Content&lt;/code&gt;, &lt;code&gt;Panel&lt;/code&gt;, and &lt;code&gt;Foot&lt;/code&gt;. You cannot rely on every theme having a &lt;code&gt;Panel&lt;/code&gt;, which is typically used as a sidebar. The &lt;code&gt;Content&lt;/code&gt; asset is required, because it is where the view is rendered. You can, however, assign it additional content.&lt;/p&gt;
-
-&lt;h3 id=&#34;using-assets&#34;&gt;Using assets&lt;/h3&gt;
-
-&lt;p&gt;You can create your own arbitrary assets in your templates and simply add content to them using &lt;code&gt;Gdn::controller()-&amp;gt;addAsset(&#39;AssetName&#39;, $Content, &#39;ContentName&#39;)&lt;/code&gt;. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the &lt;code&gt;default.master.tpl&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;A common scenario is using &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/modules&#34;&gt;modules&lt;/a&gt; to add content to an asset. (Note: In plugin hooks, you will typically be using &lt;code&gt;$Sender&lt;/code&gt; in place of &lt;code&gt;Gdn::controller()&lt;/code&gt; since the Sender &lt;em&gt;is&lt;/em&gt; the controller).&lt;/p&gt;
-
-&lt;p&gt;You can set the sort order in which content in an asset is displayed via the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt;. Use a key like &lt;code&gt;Modules.{Application}.{Asset}&lt;/code&gt; (e.g. &lt;code&gt;Modules.Vanilla.Content&lt;/code&gt;) to define an array of &lt;code&gt;ContentName&lt;/code&gt; values that you used when calling &lt;code&gt;addAsset()&lt;/code&gt;. See &lt;code&gt;$ModuleSortContainer&lt;/code&gt; in &lt;code&gt;Gdn_Controller&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Assets Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.
+Default assets Vanilla uses these assets by default: Head, Content, Panel, and Foot. You cannot rely on every theme having a Panel, which is typically used as a sidebar. The Content asset is required, because it is where the view is rendered.</description>
     </item>
     
     <item>
@@ -73,50 +37,8 @@ Obviously, &lt;code&gt;.htaccess&lt;/code&gt; files &lt;a href=&#34;http://httpd
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</guid>
-      <description>
-
-&lt;h2 id=&#34;authenticating-api-calls&#34;&gt;Authenticating API Calls&lt;/h2&gt;
-
-&lt;p&gt;When making calls to the API you&amp;rsquo;ll need to pass an access token in order to authenticate as a user. Vanilla has core support for access tokens, with the following features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Access tokens can be issued, verified, and revoked with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;An access token submitted in the &lt;strong&gt;Authorization&lt;/strong&gt; header will authenticate the appropriate user.&lt;/li&gt;
-&lt;li&gt;Expired access tokens are automatically pruned from the access token table, but stick around for a bit to give appropriate expired errors.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;issuing-access-tokens&#34;&gt;Issuing Access Tokens&lt;/h2&gt;
-
-&lt;p&gt;There isn&amp;rsquo;t a built-in user interface for issuing access tokens (yet). Right now, addons are expected to issue access tokens as part of their specific single-sign-on mechanism. You can create and issue access tokens with the &lt;strong&gt;AccessTokenModel&lt;/strong&gt;. The &lt;strong&gt;AccessTokenModel&lt;/strong&gt; is a regular model, but you will usually be interacting with it through specific methods.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// Issue a token
-$model = new AccessTokenModel();
-$accessToken = $model-&amp;gt;issue(Gdn::session()-&amp;gt;UserID(), &#39;1 month&#39;, $scope);
-
-// Verify a token.
-$tokenRow = $model-&amp;gt;verify($accessToken);
-
-// Revoke a token.
-$model-&amp;gt;revoke($accessToken);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When a token is issued it is also signed with its expiry date and a secure hash. These are verified before a token is looked up to help prevent certain brute force attacks. Even if an access token passes its check it must also be verified from the database. In this way access tokens can be revoked before they expire.&lt;/p&gt;
-
-&lt;h3 id=&#34;access-token-scope-wip&#34;&gt;Access Token Scope (WIP)&lt;/h3&gt;
-
-&lt;p&gt;The &lt;strong&gt;issue()&lt;/strong&gt; method has a scope parameter. This can be left empty or you can specify an array of permission names. If you specify a scope like this then the access token will reduce the permissions of the user for the request to those listed in the scope. In this way access tokens can be issued with less permissions than a user has. It&amp;rsquo;s considered a best practice to use a scope with only the permissions you need.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;You can never have a scope that gives a user more permissions than they already have. If more permissions are specified then they&amp;rsquo;ll be ignored.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;passing-access-tokens&#34;&gt;Passing Access Tokens&lt;/h2&gt;
-
-&lt;p&gt;Access tokens are past to REST requests in the &lt;strong&gt;Authorization&lt;/strong&gt; header. You pass an access token with the bearer scheme:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Authorization: Bearer &amp;lt;access token&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If the access token verifies then the request will be made with the appropriate user. If it doesn&amp;rsquo;t then there will be a 401 error. In this case check the &lt;strong&gt;X-WWW-Authenticate&lt;/strong&gt; header for specific information.&lt;/p&gt;
-</description>
+      <description>Authenticating API Calls When making calls to the API you&amp;rsquo;ll need to pass an access token in order to authenticate as a user. Vanilla has core support for access tokens, with the following features:
+ Access tokens can be issued, verified, and revoked with the AccessTokenModel An access token submitted in the Authorization header will authenticate the appropriate user. Expired access tokens are automatically pruned from the access token table, but stick around for a bit to give appropriate expired errors.</description>
     </item>
     
     <item>
@@ -125,68 +47,9 @@ $model-&amp;gt;revoke($accessToken);
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/backend/</guid>
-      <description>
-
-&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
-
-&lt;p&gt;Vanilla works with Apache, nginx (our preference) or IIS with proper configuration.
-The core team does not officially support IIS but accept bug reports and patches related to it.
-Information and help may be provided on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;.
-We welcome additions to this documentation.&lt;/p&gt;
-
-&lt;p&gt;See the dedicated sections for more information about Apache and nginx.&lt;/p&gt;
-
-&lt;h2 id=&#34;advanced-handling-of-headers&#34;&gt;Advanced Handling of Headers&lt;/h2&gt;
-
-&lt;p&gt;To utilize advanced handling of request and networking headers,
-it is recommended you make the necessary modifications in a &lt;code&gt;bootstrap.before.php&lt;/code&gt; file.
-You may need to create this file in your config folder, if it does not already exist.
-The contents of this file are executed at the very beginning of Vanilla&amp;rsquo;s bootstrapping process.&lt;/p&gt;
-
-&lt;p&gt;If, for example, you wanted to use the &lt;code&gt;Host&lt;/code&gt; header from an incoming request to set the host Vanilla sees,
-you would add the following into &lt;code&gt;bootstrap.before.php&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;    if (isset($_SERVER[&#39;HTTP_HOST&#39;])) {
-        $_SERVER[&#39;SERVER_NAME&#39;] = $_SERVER[&#39;HTTP_HOST&#39;];
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will overwrite the host set by the server with the value of the &lt;code&gt;Host&lt;/code&gt; header.
-It is crucial to verify the validity of any such data. &lt;strong&gt;If you cannot verify the hosts provided in these headers,
-do not attempt to use them.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
-
-&lt;h3 id=&#34;opcache&#34;&gt;OPcache&lt;/h3&gt;
-
-&lt;p&gt;OPcache replaced APC as the preferred opcode caching solution for PHP as of 5.5.
-Vanilla is compatible with OPcache and no additional configuration is necessary beyond simply enabling it.&lt;/p&gt;
-
-&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
-
-&lt;p&gt;Vanilla has support for both Memcache and Memcached, but we strongly recommend Memcached if you have an option.
-It does require additional configuration beyond installing and enabling it in PHP.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$Configuration[&#39;Cache&#39;][&#39;Enabled&#39;] = true;
-$Configuration[&#39;Cache&#39;][&#39;Method&#39;] = &#39;memcached&#39;;
-$Configuration[&#39;memcached&#39;][&#39;Store&#39;] = &#39;localhost&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also specify a port for memcached. Store, e.g.: &lt;code&gt;localhost:11211&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lastly, you can optionally set Memcached options directly in your Vanilla config.
-Here are some example settings you may wish to use.
-Note that these require Memcached to be enabled on your server or else adding these to your config will cause errors.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_COMPRESSION] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_DISTRIBUTION] = Memcached::DISTRIBUTION_CONSISTENT;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_LIBKETAMA_COMPATIBLE] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_NO_BLOCK] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_TCP_NODELAY] = true;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_CONNECT_TIMEOUT] = 1000;
-$Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_LIMIT] = 2;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Server Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it. Information and help may be provided on our community forum. We welcome additions to this documentation.
+See the dedicated sections for more information about Apache and nginx.
+Advanced Handling of Headers To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a bootstrap.</description>
     </item>
     
     <item>
@@ -195,22 +58,8 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/configuration/banner/</guid>
-      <description>
-
-&lt;h2 id=&#34;banner-settings&#34;&gt;Banner Settings&lt;/h2&gt;
-
-&lt;p&gt;On the Banner Settings page you can control the following aspects of your forum:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Homepage title: This is the title displayed on your home page. This title will also appear in search engines.&lt;/li&gt;
-&lt;li&gt;Site Description: This is the site description for your homepage. Other pages will have description generated by the content.&lt;/li&gt;
-&lt;li&gt;Banner Title: This is the title will in your community&amp;rsquo;s banner, if you have not uploaded a banner image.&lt;/li&gt;
-&lt;li&gt;Banner Logo: This will replace the Banner Title. You have the freedom to use whatever size you want, but 250px x 50px is a great size that works nice.&lt;/li&gt;
-&lt;li&gt;Mobile Banner Logo: This allows you to add a small banner for the mobile theme.&lt;/li&gt;
-&lt;li&gt;Favicon: This is the icon usually seen in the URL bar and when someone bookmarks a link from your site.&lt;/li&gt;
-&lt;li&gt;Share Image: This is the image that will be included when content is shared on social networks (like Reddit or Google+) if no image is present in the content.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Banner Settings On the Banner Settings page you can control the following aspects of your forum:
+ Homepage title: This is the title displayed on your home page. This title will also appear in search engines. Site Description: This is the site description for your homepage. Other pages will have description generated by the content. Banner Title: This is the title will in your community&amp;rsquo;s banner, if you have not uploaded a banner image.</description>
     </item>
     
     <item>
@@ -219,17 +68,8 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
-      <description>
-
-&lt;h2 id=&#34;building-a-new-porter-file&#34;&gt;Building a new porter file&lt;/h2&gt;
-
-&lt;p&gt;We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Copy an existing class, like &lt;code&gt;class.smf.php&lt;/code&gt; and rename it.&lt;/li&gt;
-&lt;li&gt;Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Building a new porter file We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.
+ Copy an existing class, like class.smf.php and rename it. Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.  </description>
     </item>
     
     <item>
@@ -238,359 +78,12 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/changelog/</guid>
-      <description>
-
-&lt;h2 id=&#34;version-change-log&#34;&gt;Version Change Log&lt;/h2&gt;
-
-&lt;p&gt;This is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the &lt;a href=&#34;https://open.vanillaforums.com/categories/blog&#34;&gt;forum&lt;/a&gt;. We provide separate &lt;a href=&#34;http://docs.vanillaforums.com/help/releases/&#34;&gt;cloud release notes&lt;/a&gt; since they are scheduled differently.&lt;/p&gt;
-
-&lt;p&gt;Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-3&#34;&gt;2.3&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/32822/vanilla-2-3-is-now-available&#34;&gt;Released 18 Nov 2016&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-2-1&#34;&gt;2.2.1&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/32109/vanilla-2-2-1-now-available&#34;&gt;Released 7 May 2016&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-2&#34;&gt;2.2&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/31121/vanilla-is-proud-to-present-version-2-2&#34;&gt;Released 12 Nov 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-13&#34;&gt;2.1.13&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/31046/vanilla-2-1-13-security-updates&#34;&gt;Released 29 Oct 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-12&#34;&gt;2.1.12&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/30966/vanilla-2-1-12-released-security-update&#34;&gt;Released 15 Oct 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-11&#34;&gt;2.1.11&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/30123/vanilla-2-1-11-released-security-patch&#34;&gt;Released 12 June&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-10&#34;&gt;2.1.10&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/29835/vanilla-2-1-10-released-critical-security-update&#34;&gt;Released 4 May 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-9&#34;&gt;2.1.9&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/29555/vanilla-2-1-9-released&#34;&gt;Released 18 Mar 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-8&#34;&gt;2.1.8&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/29016/critical-vanilla-2-1-8-released&#34;&gt;Released 15 Jan 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-7&#34;&gt;2.1.7&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/28961/vanilla-2-1-7-released&#34;&gt;Released 9 Jan 2015&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-1-6&#34;&gt;2.1.6&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/28555/vanilla-2-1-6-released&#34;&gt;Released 21 Nov 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Security: Fixes an SQL injection vector.&lt;/li&gt;
-&lt;li&gt;Security: Adds a PDO option to harden against SQL injection.&lt;/li&gt;
-&lt;li&gt;Security: Improves the security of password resets by increasing token length and limiting them to 1 hour expiration.&lt;/li&gt;
-&lt;li&gt;Adds vBulletin 5.1 password hashing to allow seamless password migrations. All previous versions continue to be supported.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-1-5&#34;&gt;2.1.5&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 31 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.&lt;/li&gt;
-&lt;li&gt;Security: Potential CSRF vectors were closed, including one that could allow account hijacking.&lt;/li&gt;
-&lt;li&gt;Fixes issue where enabling cleditor would permanently allow style parameter in comments.&lt;/li&gt;
-&lt;li&gt;Fixes issue notifying users of new comments in certain cases where they did not have permission to then view them.&lt;/li&gt;
-&lt;li&gt;Fixes OpenID bug effecting Google Sign In.&lt;/li&gt;
-&lt;li&gt;Multiple community-contributed bug fixes.&lt;/li&gt;
-&lt;li&gt;2.1.4 had a merge conflict which this release replaced.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-1-3&#34;&gt;2.1.3&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/27822/vanilla-2-1-3-security-release&#34;&gt;Released 9 Sept 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;3 newly discovered XSS vectors were fixed.&lt;/li&gt;
-&lt;li&gt;The timezone bug introduced in 2.1.1 is fixed.&lt;/li&gt;
-&lt;li&gt;Fixes invalid DeliveryType in plugins management.&lt;/li&gt;
-&lt;li&gt;2.1.2 had a Javascript error which this release replaced.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-1-1&#34;&gt;2.1.1&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/27540/vanilla-2-1-1-important-security-bug-release&#34;&gt;Released 2 Aug 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HtmLawed was upgraded to close an XSS vector (thanks to Psych0tr1a for responsibly disclosing this to us &amp;amp; to HtmLawed for a fast patch in response).&lt;/li&gt;
-&lt;li&gt;Multiple XSS exploits were fixed (thanks to @x00 for responsibly disclosing and both he and @businessdad for assistance in making our patches as bulletproof as possible).&lt;/li&gt;
-&lt;li&gt;Fixed a Twitter SSL bug (thanks @Adrian for the patch).&lt;/li&gt;
-&lt;li&gt;Fixed a missing permission check in the sorting utility (thanks @R_J for the patch).&lt;/li&gt;
-&lt;li&gt;cleditor was patched to fix a crippling IE11 bug.&lt;/li&gt;
-&lt;li&gt;Profile Extender was upgraded and a security flaw in it was fixed.&lt;/li&gt;
-&lt;li&gt;Fixed a bug in Announcing while starting a discussion.&lt;/li&gt;
-&lt;li&gt;Corrected the default theme README.&lt;/li&gt;
-&lt;li&gt;Backported GDN_UserAuthenticationProvider.IsDefault so the latest version of jsConnect will work with 2.1.1.&lt;/li&gt;
-&lt;li&gt;Fixes a theme screenshot bug (thanks @hgtonight‌ for the patch).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-1&#34;&gt;2.1&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/26685/vanilla-2-1-stable-released&#34;&gt;Released 28 April 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Vanilla internals were completely revamped for 2.1. Many views and several plugin hooks were changed, so &lt;strong&gt;themes and plugins must be tested&lt;/strong&gt; and may need to be refactored before upgrading.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Better localization support.&lt;/li&gt;
-&lt;li&gt;Improved embedding.&lt;/li&gt;
-&lt;li&gt;Performance and caching enhancements.&lt;/li&gt;
-&lt;li&gt;Revamped Activity structure.&lt;/li&gt;
-&lt;li&gt;Framework improvements.&lt;/li&gt;
-&lt;li&gt;Hundreds of bug fixes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Incremental changelogs from the &lt;a href=&#34;https://open.vanillaforums.com/discussion/23322/vanilla-2-1b1-released&#34;&gt;first 2.1 beta&lt;/a&gt; thru RC1 can be found in their individual release announcements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/24845/vanilla-2-1b2-released&#34;&gt;Beta 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/26518/vanillla-2-1-beta-3&#34;&gt;Beta 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/26626/vanilla-2-1-release-candidate&#34;&gt;Release Candidate 1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-14&#34;&gt;2.0.18.14&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Prior to 2.1, Vanilla used the third decimal in the version to indicate new features, and a fourth decimal for minor patches.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/28337/vanilla-2-1-5-released-and-2-0-18-14&#34;&gt;Released 30 Oct 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Security: An Insecure Direct Object Reference was fixed that allowed unauthorized comment editing.&lt;/li&gt;
-&lt;li&gt;Security: Potential CSRF vectors were closed, including one that could allow account hijacking.&lt;/li&gt;
-&lt;li&gt;Fixes DeliveryType issue in plugins managements.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-13&#34;&gt;2.0.18.13&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/27541/vanilla-2-0-18-13-security-release-for-old-2-0-18-installs&#34;&gt;Released 5 Aug 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HtmLawed is upgraded and its filtering tightened (thanks @x00 &amp;amp; Psych0tr1a)&lt;/li&gt;
-&lt;li&gt;parseJSON() is substituted for eval() in 2 places&lt;/li&gt;
-&lt;li&gt;Refactored the definitions list into Javascript instead of using the DOM&lt;/li&gt;
-&lt;li&gt;Fixes HTMLawed error in 2.0.18.12 which this immediately replaced.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-11&#34;&gt;2.0.18.11&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/26627/vanilla-2-0-18-11-security-release&#34;&gt;Released 21 Apr 2014&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;3 security patches.&lt;/li&gt;
-&lt;li&gt;Ditches troublesome &amp;ldquo;Remove&amp;rdquo; option on the plugins page.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-10&#34;&gt;2.0.18.10&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/25668/dec-2013-security-update-2-0-18-10-and-2-1b2&#34;&gt;Released 21 Dec 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Removes flawed update checker.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-9&#34;&gt;2.0.18.9&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/25458/security-update-vanilla-2-0-18-9&#34;&gt;Released 26 Nov 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use SafeRedirect() instead of Redirect() in the discussion controller.&lt;/li&gt;
-&lt;li&gt;Added TrustedDomains() and SafeRedirect().&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t allow user id override on post.&lt;/li&gt;
-&lt;li&gt;Fix Flagging security flaw&lt;/li&gt;
-&lt;li&gt;Filter discussion title on categories/all&lt;/li&gt;
-&lt;li&gt;Comment notifications should only be sent to people with the &amp;ldquo;NewComment&amp;rdquo; preference set.&lt;/li&gt;
-&lt;li&gt;Twitter: Change api version to 1.1.&lt;/li&gt;
-&lt;li&gt;Tagging: Fix xss bug in tagging.&lt;/li&gt;
-&lt;li&gt;Do not add linebreaks twice on search.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-8&#34;&gt;2.0.18.8&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/23339/security-update-vanilla-2-0-18-8&#34;&gt;Released 4 Apr 2013&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Call &amp;amp; check for FilterForm() properly.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-7&#34;&gt;2.0.18.7&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Disable the ability to call functions in escaped SQL strings.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-6&#34;&gt;2.0.18.6&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Switch update checks to JSON to prevent object injection hacks.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-5&#34;&gt;2.0.18.5&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Prevent object injection hacks.&lt;/li&gt;
-&lt;li&gt;Make sure the admin password is hashed when inserting the admin user on an already installed Vanilla.&lt;/li&gt;
-&lt;li&gt;Fix Facebook plugin for the 5 Dec 2012 Facebook update.&lt;/li&gt;
-&lt;li&gt;Add class attributes for all the menu item elements.&lt;/li&gt;
-&lt;li&gt;Cache-control logic improvements.&lt;/li&gt;
-&lt;li&gt;Add the proper username parameter to profile/edit.&lt;/li&gt;
-&lt;li&gt;Filter activity, discussion, and comment forms.&lt;/li&gt;
-&lt;li&gt;Fixed security hole where on profile/picture and profile/preferences. Allow moderators to change users&amp;rsquo; pictures from the profile page.&lt;/li&gt;
-&lt;li&gt;Added joomla password hashing.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-4&#34;&gt;2.0.18.4&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/19542/vanilla-2-0-18-4-released&#34;&gt;Released 26 Mar 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Patch form tampering possibility.&lt;/li&gt;
-&lt;li&gt;Fix canonical URL issues.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-3&#34;&gt;2.0.18.3&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/19285/security-vulnerability-flagging-plugin-2-0-18-2-and-earlier&#34;&gt;Released 5 Mar 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Flagging plugin security fixes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-2&#34;&gt;2.0.18.2&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/18749/vanilla-2-0-18-2-release&#34;&gt;Released 21 Jan 2012&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed bug where Gravatar was using name instead of email for Vanillicons.&lt;/li&gt;
-&lt;li&gt;vBulletin import improvements.&lt;/li&gt;
-&lt;li&gt;SSO fixed for non-English.&lt;/li&gt;
-&lt;li&gt;Embed improvements.&lt;/li&gt;
-&lt;li&gt;Tagging fix.&lt;/li&gt;
-&lt;li&gt;Fix malformed install screen.&lt;/li&gt;
-&lt;li&gt;Various other bug fixes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18-1&#34;&gt;2.0.18.1&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 7 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed bug in the Twitter plugin.&lt;/li&gt;
-&lt;li&gt;Fixed some bugs with connecting.&lt;/li&gt;
-&lt;li&gt;Prevent too many &amp;ldquo;photo changed&amp;rdquo; activities.&lt;/li&gt;
-&lt;li&gt;Added the ability to include announcements in the /categories/discussions page.&lt;/li&gt;
-&lt;li&gt;Fix so people with custom domains don&amp;rsquo;t see strange text.&lt;/li&gt;
-&lt;li&gt;Fixes mass-approve/deny for Applicants&lt;/li&gt;
-&lt;li&gt;Correct title on /categories pages&lt;/li&gt;
-&lt;li&gt;Fixed jQuery syntax errors.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-18&#34;&gt;2.0.18&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://open.vanillaforums.com/discussion/17643/vanilla-2-0-18-final-release&#34;&gt;Released 3 Nov 2011&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Major Features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Added moderation, bans, and delete/edit logging.&lt;/li&gt;
-&lt;li&gt;Added notifications (Growl-like popups).&lt;/li&gt;
-&lt;li&gt;Added advanced category management.&lt;/li&gt;
-&lt;li&gt;Added IP logging to core.&lt;/li&gt;
-&lt;li&gt;Added Split/Merge plugin to core.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Changes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Added ability to chain Vanillicons into Gravatars with C(Plugins.Gravatar.UseVanillicons) = TRUE&lt;/li&gt;
-&lt;li&gt;Added ability to use IE targetting for CSS and JS files&lt;/li&gt;
-&lt;li&gt;Disabled CLEditor for IE6 users&lt;/li&gt;
-&lt;li&gt;Disabled popups in IE7 or less&lt;/li&gt;
-&lt;li&gt;Added Session support, see: Gdn_Session()-&amp;gt;Stash()&lt;/li&gt;
-&lt;li&gt;Turns off Embed by default&lt;/li&gt;
-&lt;li&gt;Added WebOS to mobile user agents&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fixes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed bug in 2.0.17 that could (on rare occassion) wipe your config.php file&lt;/li&gt;
-&lt;li&gt;Fixed issue that could cause VanillaStats to stop working&lt;/li&gt;
-&lt;li&gt;Many new translatable strings added or fixed&lt;/li&gt;
-&lt;li&gt;Fixed support for PHP 5.2 on Windows (fnmatch)&lt;/li&gt;
-&lt;li&gt;Fixed profile to not ask for old password if one was never set (via SSO)&lt;/li&gt;
-&lt;li&gt;Fixed hundreds of other bugs too numerous to list, including dozens of SQL-related bugs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-17-1-2-0-17-10&#34;&gt;2.0.17.1 - 2.0.17.10&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed bug where analytics hooked before Garden.Installed=true, causing a fatal error on install.&lt;/li&gt;
-&lt;li&gt;Fixed bug where analytics registration would occur repeatedly if config file was read-only.&lt;/li&gt;
-&lt;li&gt;Repackaged distribution without OS-Specific meta data, and fixed ajax information exposure bug.&lt;/li&gt;
-&lt;li&gt;Fixed problem with dashboard structure file where Activity and Profile permissions were not granted automatically on fresh install.&lt;/li&gt;
-&lt;li&gt;Fixed problem with category permissions where some configurations would result in too restrictive defaults.&lt;/li&gt;
-&lt;li&gt;SECURITY: Fixed potential querystring XSS and cookie HMAC Timing vulnerabilities in core.&lt;/li&gt;
-&lt;li&gt;Updated analytics client and server software to fix a bug in stats transmission and rendering.&lt;/li&gt;
-&lt;li&gt;Fixed a packaging problem that caused the contents of index.php to be duplicated.&lt;/li&gt;
-&lt;li&gt;SECURITY: Fixed cookie theft vulnerability.&lt;/li&gt;
-&lt;li&gt;SECURITY: Fixed Facebook, Twitter, and Embed plugins&amp;rsquo; access control.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-0-17&#34;&gt;2.0.17&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Released 2011-01-18&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed bug where plugins and themes could fail to enable due to extra whitespace.&lt;/li&gt;
-&lt;li&gt;Fixed bug where search results were not properly sorted by date after relevance.&lt;/li&gt;
-&lt;li&gt;Fixed bug where links in profile status cause the profile to clear when clicked.&lt;/li&gt;
-&lt;li&gt;Fixed bug where signing in from the comment form button would not refresh the page.&lt;/li&gt;
-&lt;li&gt;Fixed bug where administrators could not change user&amp;rsquo;s picture without 404 errors.&lt;/li&gt;
-&lt;li&gt;Fixed bug where stack trace would display when testing plugins, even if not in DEBUG mode.&lt;/li&gt;
-&lt;li&gt;Fixed bug where signin would not properly redirect if javascript was disabled.&lt;/li&gt;
-&lt;li&gt;Fixed bug where editing a role was erroneously selecting the default permission in the UI when editing.&lt;/li&gt;
-&lt;li&gt;Fixed bug where discussion autorefresh would sometimes disable itself.&lt;/li&gt;
-&lt;li&gt;Fixed bug where when markdown is enabled urls would not get auto-converted to clickable links.&lt;/li&gt;
-&lt;li&gt;Fixed bugs in OpenID and GoogleSignIn where redirect targets were not getting sent to the signin.&lt;/li&gt;
-&lt;li&gt;Fixed bug where mobile theme would sometimes display incorrect &amp;ldquo;last comment date&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;Optimized Announced Discussions query to improve performance.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;older-releases&#34;&gt;Older Releases&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Unlisted versions were skipped or replaced the same day.&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2.0.16 - 2010-12-02&lt;/li&gt;
-&lt;li&gt;2.0.15 - 2010-11-25&lt;/li&gt;
-&lt;li&gt;2.0.14 - 2010-11-09&lt;/li&gt;
-&lt;li&gt;2.0.13 - 2010-10-27&lt;/li&gt;
-&lt;li&gt;2.0.11 - 2010-10-06&lt;/li&gt;
-&lt;li&gt;2.0.10 - 2010-09-30&lt;/li&gt;
-&lt;li&gt;2.0.9 - 2010-09-15&lt;/li&gt;
-&lt;li&gt;2.0.6 - 2010-09-01&lt;/li&gt;
-&lt;li&gt;2.0.3 - 2010-08-11&lt;/li&gt;
-&lt;li&gt;2.0.1 - 2010-08-04&lt;/li&gt;
-&lt;li&gt;2.0.0 - 2010-07-22&lt;/li&gt;
-&lt;li&gt;1.1.10 - 2009-11-23&lt;/li&gt;
-&lt;li&gt;1.1.9 - 2009-09-10&lt;/li&gt;
-&lt;li&gt;1.1.8 - 2009-08-02&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Version Change Log This is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the forum. We provide separate cloud release notes since they are scheduled differently.
+Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.
+2.3 Released 18 Nov 2016
+2.2.1 Released 7 May 2016
+2.2 Released 12 Nov 2015
+2.1.13 Released 29 Oct 2015</description>
     </item>
     
     <item>
@@ -599,33 +92,9 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/contributing/conduct/</guid>
-      <description>
-
-&lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of Conduct&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Adapted from Swift&amp;rsquo;s Code of Conduct v1.3 for now because a copied code is better than no code.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.&lt;/p&gt;
-
-&lt;p&gt;We are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.&lt;/p&gt;
-
-&lt;p&gt;Examples of &lt;strong&gt;unacceptable behavior&lt;/strong&gt; by participants include:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The use of sexualized language or imagery&lt;/li&gt;
-&lt;li&gt;Personal attacks&lt;/li&gt;
-&lt;li&gt;Trolling or insulting/derogatory comments&lt;/li&gt;
-&lt;li&gt;Public or private harassment&lt;/li&gt;
-&lt;li&gt;Publishing other’s private information, such as physical or electronic addresses, without explicit permission&lt;/li&gt;
-&lt;li&gt;Other unethical or unprofessional conduct&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.&lt;/p&gt;
-
-&lt;p&gt;This code of conduct applies both within project spaces and in public spaces when an individual is representing the project or its community.&lt;/p&gt;
-
-&lt;p&gt;Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting a project maintainer at &lt;a href=&#34;mailto:dev@vanillaforums.com&#34;&gt;dev@vanillaforums.com&lt;/a&gt;. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. Maintainers are obligated to maintain confidentiality with regard to the reporter of an incident.&lt;/p&gt;
-</description>
+      <description>Code of Conduct Adapted from Swift&amp;rsquo;s Code of Conduct v1.3 for now because a copied code is better than no code.
+As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.
+We are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.</description>
     </item>
     
     <item>
@@ -634,693 +103,9 @@ $Configuration[&#39;Cache.Memcached.Option.&#39;.Memcached::OPT_SERVER_FAILURE_L
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/contributing/coding-standard/</guid>
-      <description>
-
-&lt;h2 id=&#34;standards&#34;&gt;Standards&lt;/h2&gt;
-
-&lt;p&gt;As of May 2014, Vanilla will adhere to &lt;a href=&#34;and therefore [PSR-1]&#34;&gt;PSR-2&lt;/a&gt; with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ve named our primary exception to PSR-2 the &lt;strong&gt;&lt;a href=&#34;https://twitter.com/linc/status/462308222427480065&#34;&gt;Lord Brackos&lt;/a&gt;&lt;/strong&gt; rule - Same-line open braces on all classes, method, and function definitions.&lt;/p&gt;
-
-&lt;p&gt;We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently. Key words in this document (&amp;ldquo;MUST&amp;rdquo;, &amp;ldquo;SHOULD&amp;rdquo;, etc.) are used as described in &lt;a href=&#34;http://www.ietf.org/rfc/rfc2119.txt&#34;&gt;RFC 2119&lt;/a&gt; which is as boring and obvious as you expect but mercifully brief.&lt;/p&gt;
-
-&lt;h3 id=&#34;php-version&#34;&gt;PHP Version&lt;/h3&gt;
-
-&lt;p&gt;All code in &lt;code&gt;master&lt;/code&gt; must work under PHP 5.6, but we strongly recommend using 7.0.&lt;/p&gt;
-
-&lt;p&gt;All code in &lt;code&gt;release/2.3&lt;/code&gt; must work under PHP 5.4.&lt;/p&gt;
-
-&lt;p&gt;For up-to-date information you can look at our &lt;a href=&#34;https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements&#34;&gt;self-hosting-requirements&lt;/a&gt; section.&lt;/p&gt;
-
-&lt;h3 id=&#34;validating-your-php-code-with-php-codesniffer&#34;&gt;Validating your PHP code with PHP_CodeSniffer&lt;/h3&gt;
-
-&lt;p&gt;CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.&lt;/p&gt;
-
-&lt;p&gt;Our standard is in &lt;a href=&#34;https://github.com/vanilla/standards&#34;&gt;Vanilla&amp;rsquo;s Standards repo&lt;/a&gt;, where you can submit issues and pull requests. Its contents will help you on your way.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Get CodeSniffer: &lt;code&gt;pear install PHP_CodeSniffer&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Add to bash profile: &lt;code&gt;export PATH=&amp;quot;$(brew --prefix php55)/bin:$PATH&amp;quot;&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Find CodeSniffer&amp;rsquo;s Standards folder. Use &lt;code&gt;pear config-get php_dir&lt;/code&gt; and go from there.&lt;/li&gt;
-&lt;li&gt;Symlink &lt;code&gt;standards/code-sniffer/Vanilla&lt;/code&gt; to CodeSniffer&amp;rsquo;s Standards folder.&lt;/li&gt;
-&lt;li&gt;Set Vanilla as your standard: &lt;code&gt;phpcs --config-set default_standard Vanilla&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Use it: &lt;code&gt;phpcs /path/to/code&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Thus ends the readable part of your adventure as you descend into the dry, technical blather of a coding standard. Godspeed, coding warrior.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-overview&#34;&gt;1. Overview&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Code MUST use 4 spaces for indenting, not tabs.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Opening braces for classes and functions SHOULD be on the same line.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Control structure keywords MUST have one space after them; method and
-function calls MUST NOT.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Opening braces for control structures MUST go on the same line, and closing
-braces MUST go on the next line after the body.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Opening parentheses for control structures MUST NOT have a space after them,
-and closing parentheses for control structures MUST NOT have a space before.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;There MUST NOT be a hard limit on line length; the soft limit MUST be 120
-characters; lines SHOULD be 80 characters or less.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Namespace is not required.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Files MUST use only &lt;code&gt;&amp;lt;?php&lt;/code&gt; tag.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Files MUST use only UTF-8 without BOM for PHP code.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Files SHOULD &lt;em&gt;either&lt;/em&gt; declare symbols (classes, functions, constants, etc.)
-&lt;em&gt;or&lt;/em&gt; cause side-effects (e.g. generate output, change .ini settings, etc.)
-but SHOULD NOT do both.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Class names MUST be declared in &lt;code&gt;StudlyCaps&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Class constants MUST be declared in all upper case with underscore separators.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Method names SHOULD be declared in &lt;code&gt;camelCase&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;View files are excluded from this standard.  You SHOULD try to follow as many rules as possible.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;1-1-example&#34;&gt;1.1. Example&lt;/h3&gt;
-
-&lt;p&gt;This example encompasses some of the rules below as a quick overview:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-/**
- * @copyright 2009-2014 Vanilla Forums Inc.
- * @license http://www.opensource.org/licenses/gpl-2.0.php GPLv2
- */
-
-/**
- * The is the foo class that does foo.
- *
- * This is a longer description that spans multiple
- * lines.
- */
-class Foo extends Bar implements FooInterface {
-    /**
-     * The is the foo class that does foo.
-     *
-     * This is a longer description that spans multiple
-     * lines.
-     *
-     * @param string $a Must be a full sentence.
-     * @param string|null $b Must be a full sentence.
-     *
-     * @return bool
-     */
-    public function sampleFunction($a, $b = null) {
-        if ($a === $b) {
-            bar();
-        } elseif ($a &amp;gt; $b) {
-            $foo-&amp;gt;bar($arg1);
-        } else {
-            BazClass::bar($arg2, $arg3);
-        }
-
-        return true;
-    }
-
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-general&#34;&gt;2. General&lt;/h2&gt;
-
-&lt;h3 id=&#34;2-1-files&#34;&gt;2.1. Files&lt;/h3&gt;
-
-&lt;p&gt;All PHP files MUST use the Unix LF (linefeed) line ending.&lt;/p&gt;
-
-&lt;p&gt;All PHP files MUST end with a single blank line.&lt;/p&gt;
-
-&lt;p&gt;The closing &lt;code&gt;?&amp;gt;&lt;/code&gt; tag MUST be omitted from files containing only PHP.&lt;/p&gt;
-
-&lt;p&gt;All view files are excluded from this standard.  You SHOULD try to follow as many rules as possible.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-2-php-tags&#34;&gt;2.2. PHP Tags&lt;/h3&gt;
-
-&lt;p&gt;PHP code MUST use the long &lt;code&gt;&amp;lt;?php ?&amp;gt;&lt;/code&gt; tags; it
-MUST NOT use the other tag variations.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-3-character-encoding&#34;&gt;2.3. Character Encoding&lt;/h3&gt;
-
-&lt;p&gt;PHP code MUST use only UTF-8 without BOM.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-4-side-effects&#34;&gt;2.4. Side Effects&lt;/h3&gt;
-
-&lt;p&gt;A file SHOULD declare new symbols (classes, functions, constants,
-etc.) and cause no other side effects, or it SHOULD execute logic with side
-effects, but SHOULD NOT do both.&lt;/p&gt;
-
-&lt;p&gt;The phrase &amp;ldquo;side effects&amp;rdquo; means execution of logic not directly related to
-declaring classes, functions, constants, etc., &lt;em&gt;merely from including the
-file&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Side effects&amp;rdquo; include but are not limited to: generating output, explicit
-use of &lt;code&gt;require&lt;/code&gt; or &lt;code&gt;include&lt;/code&gt;, connecting to external services, modifying ini
-settings, emitting errors or exceptions, modifying global or static variables,
-reading from or writing to a file, and so on.&lt;/p&gt;
-
-&lt;p&gt;The following is an example of a file with both declarations and side effects;
-i.e, an example of what to avoid:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// side effect: change ini settings
-ini_set(&#39;error_reporting&#39;, E_ALL);
-
-// side effect: loads a file
-include &amp;quot;file.php&amp;quot;;
-
-// side effect: generates output
-echo &amp;quot;&amp;lt;html&amp;gt;\n&amp;quot;;
-
-// declaration
-function foo() {
-    // function body
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The following example is of a file that contains declarations without side
-effects; i.e., an example of what to emulate:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// declaration
-function foo() {
-    // function body
-}
-
-// conditional declaration is *not* a side effect
-if (! function_exists(&#39;bar&#39;)) {
-    function bar() {
-        // function body
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-5-lines&#34;&gt;2.5. Lines&lt;/h3&gt;
-
-&lt;p&gt;There MUST NOT be a hard limit on line length.&lt;/p&gt;
-
-&lt;p&gt;The soft limit on line length MUST be 120 characters; automated style checkers
-MUST warn but MUST NOT error at the soft limit.&lt;/p&gt;
-
-&lt;p&gt;Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD
-be split into multiple subsequent lines of no more than 80 characters each.&lt;/p&gt;
-
-&lt;p&gt;There MUST NOT be trailing whitespace at the end of non-blank lines.&lt;/p&gt;
-
-&lt;p&gt;Blank lines MAY be added to improve readability and to indicate related
-blocks of code.&lt;/p&gt;
-
-&lt;p&gt;There MUST NOT be more than one statement per line.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-6-indenting&#34;&gt;2.6. Indenting&lt;/h3&gt;
-
-&lt;p&gt;Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.&lt;/p&gt;
-
-&lt;aside class=&#34;note&#34;&gt;
-N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
-problems with diffs, patches, history, and annotations. The use of spaces
-also makes it easy to insert fine-grained sub-indentation for inter-line
-alignment.
-&lt;/aside&gt;
-
-&lt;h3 id=&#34;2-7-keywords-and-true-false-null&#34;&gt;2.7. Keywords and True/False/Null&lt;/h3&gt;
-
-&lt;p&gt;PHP &lt;a href=&#34;http://php.net/manual/en/reserved.keywords.php&#34;&gt;keywords&lt;/a&gt; MUST be in lower case.&lt;/p&gt;
-
-&lt;p&gt;The PHP constants &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, and &lt;code&gt;null&lt;/code&gt; MUST be in lower case.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-namespace-and-use-declarations&#34;&gt;3. Namespace and Use Declarations&lt;/h2&gt;
-
-&lt;p&gt;No requirements.&lt;/p&gt;
-
-&lt;h3 id=&#34;4-class-constants-properties-and-methods&#34;&gt;4. Class Constants, Properties, and Methods&lt;/h3&gt;
-
-&lt;p&gt;The term &amp;ldquo;class&amp;rdquo; refers to all classes, interfaces, and traits.&lt;/p&gt;
-
-&lt;h3 id=&#34;4-1-constants&#34;&gt;4.1. Constants&lt;/h3&gt;
-
-&lt;p&gt;Class constants MUST be declared in all upper case with underscore separators.
-For example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-namespace Vendor\Model;
-
-class Foo {
-    const VERSION = &#39;1.0&#39;;
-    const DATE_APPROVED = &#39;2012-06-01&#39;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-2-extends-and-implements&#34;&gt;4.2. Extends and Implements&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;extends&lt;/code&gt; and &lt;code&gt;implements&lt;/code&gt; keywords MUST be declared on the same line as
-the class name.&lt;/p&gt;
-
-&lt;p&gt;The opening brace for the class MUST go on the same line as the class name; the closing brace
-for the class MUST go on the next line after the body.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-class ClassName extends ParentClass implements \ArrayAccess, \Countable {
-    // constants, properties, methods
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lists of &lt;code&gt;implements&lt;/code&gt; MAY be split across multiple lines, where each
-subsequent line is indented once. When doing so, the first item in the list
-MUST be on the next line, and there MUST be only one interface per line.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-class ClassName extends ParentClass implements
-    \ArrayAccess,
-    \Countable,
-    \Serializable
-{
-    // constants, properties, methods
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-3-properties&#34;&gt;4.3. Properties&lt;/h3&gt;
-
-&lt;p&gt;Visibility MUST be declared on all properties.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;var&lt;/code&gt; keyword MUST NOT be used to declare a property.&lt;/p&gt;
-
-&lt;p&gt;There MUST NOT be more than one property declared per statement.&lt;/p&gt;
-
-&lt;p&gt;Property names SHOULD NOT be prefixed with a single underscore to indicate
-protected or private visibility.&lt;/p&gt;
-
-&lt;p&gt;A property declaration looks like the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-class ClassName {
-    public $foo = null;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-4-methods&#34;&gt;4.4. Methods&lt;/h3&gt;
-
-&lt;p&gt;Method names MUST be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Visibility MUST be declared on all methods.&lt;/p&gt;
-
-&lt;p&gt;Method names SHOULD NOT be prefixed with a single underscore to indicate
-protected or private visibility.&lt;/p&gt;
-
-&lt;p&gt;Method names MUST NOT be declared with a space after the method name. The
-opening brace MUST go on the same line as the method name, and the closing brace MUST go on the
-next line following the body. There MUST NOT be a space after the opening
-parenthesis, and there MUST NOT be a space before the closing parenthesis.&lt;/p&gt;
-
-&lt;p&gt;A method declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-class ClassName {
-    public function fooBarBaz($arg1, &amp;amp;$arg2, $arg3 = []) {
-        // method body
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The major exception to this rule is Event Methods.  Any method that has the following patterns:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#39;_handler&#39;,
-&#39;_create&#39;,
-&#39;_before&#39;,
-&#39;_override&#39;,
-&#39;_after&#39;,
-&#39;controller_&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Event methods MUST be &lt;code&gt;camelCase&lt;/code&gt; separated by &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;4-5-method-arguments&#34;&gt;4.5. Method Arguments&lt;/h3&gt;
-
-&lt;p&gt;In the argument list, there MUST NOT be a space before each comma, and there
-MUST be one space after each comma.&lt;/p&gt;
-
-&lt;p&gt;Method arguments with default values MUST go at the end of the argument
-list.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-class ClassName {
-    public function foo($arg1, &amp;amp;$arg2, $arg3 = []) {
-        // method body
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Argument lists MAY be split across multiple lines, where each subsequent line
-is indented once. When doing so, the first item in the list MUST be on the
-next line, and there MUST be only one argument per line.&lt;/p&gt;
-
-&lt;p&gt;When the argument list is split across multiple lines, the closing parenthesis
-and opening brace MUST be placed together on their own line with one space
-between them.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-class ClassName {
-    public function aVeryLongMethodName(
-        ClassTypeHint $arg1,
-        &amp;amp;$arg2,
-        array $arg3 = []
-    ) {
-        // method body
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-6-global-functions&#34;&gt;4.6. Global Functions&lt;/h3&gt;
-
-&lt;p&gt;Global function names SHOULD be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Global function names that match php style; such as array_something() are allowed
-and MUST be declared in lowercase.&lt;/p&gt;
-
-&lt;h3 id=&#34;4-7-abstract-final-and-static&#34;&gt;4.7. &lt;code&gt;abstract&lt;/code&gt;, &lt;code&gt;final&lt;/code&gt;, and &lt;code&gt;static&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;When present, the &lt;code&gt;abstract&lt;/code&gt; and &lt;code&gt;final&lt;/code&gt; declarations MUST precede the
-visibility declaration.&lt;/p&gt;
-
-&lt;p&gt;When present, the &lt;code&gt;static&lt;/code&gt; declaration MUST come after the visibility
-declaration.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-abstract class ClassName {
-    protected static $foo;
-
-    abstract protected function zim();
-
-    final public static function bar() {
-        // method body
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-8-method-and-function-calls&#34;&gt;4.8. Method and Function Calls&lt;/h3&gt;
-
-&lt;p&gt;When making a method or function call, there MUST NOT be a space between the
-method or function name and the opening parenthesis, there MUST NOT be a space
-after the opening parenthesis, and there MUST NOT be a space before the
-closing parenthesis. In the argument list, there MUST NOT be a space before
-each comma, and there MUST be one space after each comma.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-bar();
-$foo-&amp;gt;bar($arg1);
-Foo::bar($arg2, $arg3);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Argument lists MAY be split across multiple lines, where each subsequent line
-is indented once. When doing so, the first item in the list MUST be on the
-next line, and there MUST be only one argument per line.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-$foo-&amp;gt;bar(
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
-);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;5-control-structures&#34;&gt;5. Control Structures&lt;/h2&gt;
-
-&lt;p&gt;The general style rules for control structures are as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;There MUST be one space after the control structure keyword&lt;/li&gt;
-&lt;li&gt;There MUST NOT be a space after the opening parenthesis&lt;/li&gt;
-&lt;li&gt;There MUST NOT be a space before the closing parenthesis&lt;/li&gt;
-&lt;li&gt;There MUST be one space between the closing parenthesis and the opening
-brace&lt;/li&gt;
-&lt;li&gt;The structure body MUST be indented once&lt;/li&gt;
-&lt;li&gt;The closing brace MUST be on the next line after the body&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The body of each structure MUST be enclosed by braces. This standardizes how
-the structures look, and reduces the likelihood of introducing errors as new
-lines get added to the body.&lt;/p&gt;
-
-&lt;h3 id=&#34;5-1-if-elseif-else&#34;&gt;5.1. &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elseif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;An &lt;code&gt;if&lt;/code&gt; structure looks like the following. Note the placement of parentheses,
-spaces, and braces; and that &lt;code&gt;else&lt;/code&gt; and &lt;code&gt;elseif&lt;/code&gt; are on the same line as the
-closing brace from the earlier body.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-if ($expr1) {
-    // if body
-} elseif ($expr2) {
-    // elseif body
-} else {
-    // else body;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The keyword &lt;code&gt;elseif&lt;/code&gt; SHOULD be used instead of &lt;code&gt;else if&lt;/code&gt; so that all control
-keywords look like single words.&lt;/p&gt;
-
-&lt;h3 id=&#34;5-2-switch-case&#34;&gt;5.2. &lt;code&gt;switch&lt;/code&gt;, &lt;code&gt;case&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;A &lt;code&gt;switch&lt;/code&gt; structure looks like the following. Note the placement of
-parentheses, spaces, and braces. The &lt;code&gt;case&lt;/code&gt; statement MUST be indented once
-from &lt;code&gt;switch&lt;/code&gt;, and the &lt;code&gt;break&lt;/code&gt; keyword (or other terminating keyword) MUST be
-indented at the same level as the &lt;code&gt;case&lt;/code&gt; body. There MUST be a comment such as
-&lt;code&gt;// no break&lt;/code&gt; when fall-through is intentional in a non-empty &lt;code&gt;case&lt;/code&gt; body.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-switch ($expr) {
-    case 0:
-        echo &#39;First case, with a break&#39;;
-        break;
-    case 1:
-        echo &#39;Second case, which falls through&#39;;
-        // no break
-    case 2:
-    case 3:
-    case 4:
-        echo &#39;Third case, return instead of break&#39;;
-        return;
-    default:
-        echo &#39;Default case&#39;;
-        break;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;5-3-while-do-while&#34;&gt;5.3. &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;do while&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;A &lt;code&gt;while&lt;/code&gt; statement looks like the following. Note the placement of
-parentheses, spaces, and braces.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-while ($expr) {
-    // structure body
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Similarly, a &lt;code&gt;do while&lt;/code&gt; statement looks like the following. Note the placement
-of parentheses, spaces, and braces.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-do {
-    // structure body;
-} while ($expr);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;5-4-for&#34;&gt;5.4. &lt;code&gt;for&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;A &lt;code&gt;for&lt;/code&gt; statement looks like the following. Note the placement of parentheses,
-spaces, and braces.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-for ($i = 0; $i &amp;lt; 10; $i++) {
-    // for body
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;5-5-foreach&#34;&gt;5.5. &lt;code&gt;foreach&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;A &lt;code&gt;foreach&lt;/code&gt; statement looks like the following. Note the placement of
-parentheses, spaces, and braces.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-foreach ($iterable as $key =&amp;gt; $value) {
-    // foreach body
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;5-6-try-catch&#34;&gt;5.6. &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;A &lt;code&gt;try catch&lt;/code&gt; block looks like the following. Note the placement of
-parentheses, spaces, and braces.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-try {
-    // try body
-} catch (FirstExceptionType $e) {
-    // catch body
-} catch (OtherExceptionType $e) {
-    // catch body
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;6-closures&#34;&gt;6. Closures&lt;/h2&gt;
-
-&lt;p&gt;Closures MUST be declared with a space after the &lt;code&gt;function&lt;/code&gt; keyword, and a
-space before and after the &lt;code&gt;use&lt;/code&gt; keyword.&lt;/p&gt;
-
-&lt;p&gt;The opening brace MUST go on the same line, and the closing brace MUST go on
-the next line following the body.&lt;/p&gt;
-
-&lt;p&gt;There MUST NOT be a space after the opening parenthesis of the argument list
-or variable list, and there MUST NOT be a space before the closing parenthesis
-of the argument list or variable list.&lt;/p&gt;
-
-&lt;p&gt;In the argument list and variable list, there MUST NOT be a space before each
-comma, and there MUST be one space after each comma.&lt;/p&gt;
-
-&lt;p&gt;Closure arguments with default values MUST go at the end of the argument
-list.&lt;/p&gt;
-
-&lt;p&gt;A closure declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-$closureWithArgs = function ($arg1, $arg2) {
-    // body
-};
-
-$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
-    // body
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Argument lists and variable lists MAY be split across multiple lines, where
-each subsequent line is indented once. When doing so, the first item in the
-list MUST be on the next line, and there MUST be only one argument or variable
-per line.&lt;/p&gt;
-
-&lt;p&gt;When the ending list (whether or arguments or variables) is split across
-multiple lines, the closing parenthesis and opening brace MUST be placed
-together on their own line with one space between them.&lt;/p&gt;
-
-&lt;p&gt;The following are examples of closures with and without argument lists and
-variable lists split across multiple lines.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-$longArgs_noVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
-) {
-   // body
-};
-
-$noArgs_longVars = function () use (
-    $longVar1,
-    $longerVar2,
-    $muchLongerVar3
-) {
-   // body
-};
-
-$longArgs_longVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
-) use (
-    $longVar1,
-    $longerVar2,
-    $muchLongerVar3
-) {
-   // body
-};
-
-$longArgs_shortVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
-) use ($var1) {
-   // body
-};
-
-$shortArgs_longVars = function ($arg) use (
-    $longVar1,
-    $longerVar2,
-    $muchLongerVar3
-) {
-   // body
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that the formatting rules also apply when the closure is used directly
-in a function or method call as an argument.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-$foo-&amp;gt;bar(
-    $arg1,
-    function ($arg2) use ($var1) {
-        // body
-    },
-    $arg3
-);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;7-doc-blocks&#34;&gt;7. Doc Blocks&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Descriptions MUST BE a full sentence with a capital to start and period to end&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Short, return and parameter descriptions MUST be included if present&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;There MUST be one space before and after parameters&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;/**
- * Short description.
- *
- * @param string $string Parameter descriptions must be a sentence with full stop.
- *
- * @return bool True if user is added else false.
- */
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;8-conclusion&#34;&gt;8. Conclusion&lt;/h2&gt;
-
-&lt;p&gt;There are many elements of style and practice intentionally omitted by this
-guide. These include but are not limited to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Declaration of global variables and global constants&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Operators and assignment&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Inter-line alignment&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Class name prefixes and suffixes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Best practices&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Future recommendations MAY revise and extend this guide to address those or
-other elements of style and practice.&lt;/p&gt;
-</description>
+      <description>Standards As of May 2014, Vanilla will adhere to PSR-2 with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
+We&amp;rsquo;ve named our primary exception to PSR-2 the Lord Brackos rule - Same-line open braces on all classes, method, and function definitions.
+We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently.</description>
     </item>
     
     <item>
@@ -1329,47 +114,9 @@ other elements of style and practice.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/community/</guid>
-      <description>
-
-&lt;h2 id=&#34;developers-community&#34;&gt;Developers Community&lt;/h2&gt;
-
-&lt;p&gt;We have a vibrant &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;developers&amp;rsquo; community&lt;/a&gt;. Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins &amp;amp; themes to the &lt;a href=&#34;https://open.vanillaforums.com/addons&#34;&gt;official directory&lt;/a&gt;, and sign the &lt;a href=&#34;https://open.vanillaforums.com/contributors&#34;&gt;contributors&amp;rsquo; agreement&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;get-notified&#34;&gt;Get Notified&lt;/h3&gt;
-
-&lt;p&gt;Want to get notified about the newest releases?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sign up for the VanillaForums.org newsletter in &lt;a href=&#34;https://open.vanillaforums.com/profile/edit&#34;&gt;your community profile&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Watch the &lt;a href=&#34;https://open.vanillaforums.com/categories/blog/feed.rss&#34;&gt;RSS feed for the &amp;lsquo;blog&amp;rsquo; category&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Follow our &lt;a href=&#34;http://twitter.com/vanilla&#34;&gt;Twitter account&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;plugins&#34;&gt;Plugins&lt;/h3&gt;
-
-&lt;p&gt;These addons are currently used on our &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community forum&lt;/a&gt;. The addons with an asterisk are currently only available on our cloud hosting but may have near-equivalents available from the community.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tagging&lt;/li&gt;
-&lt;li&gt;Reactions*&lt;/li&gt;
-&lt;li&gt;Q&amp;amp;A&lt;/li&gt;
-&lt;li&gt;Quotes&lt;/li&gt;
-&lt;li&gt;File Upload&lt;/li&gt;
-&lt;li&gt;Ranks*&lt;/li&gt;
-&lt;li&gt;Signatures&lt;/li&gt;
-&lt;li&gt;Badges*&lt;/li&gt;
-&lt;li&gt;Warnings*&lt;/li&gt;
-&lt;li&gt;Discussion Photos&lt;/li&gt;
-&lt;li&gt;Who&amp;rsquo;s Online&lt;/li&gt;
-&lt;li&gt;Google Prettify (for code)&lt;/li&gt;
-&lt;li&gt;Flagging&lt;/li&gt;
-&lt;li&gt;Advanced Search*&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;theme&#34;&gt;Theme&lt;/h3&gt;
-
-&lt;p&gt;The theme used on the community forum is custom and is not open source. We want it to continue looking unique!&lt;/p&gt;
-</description>
+      <description>Developers Community We have a vibrant developers&amp;rsquo; community. Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins &amp;amp; themes to the official directory, and sign the contributors&amp;rsquo; agreement.
+Get Notified Want to get notified about the newest releases?
+ Sign up for the VanillaForums.org newsletter in your community profile. Watch the RSS feed for the &amp;lsquo;blog&amp;rsquo; category. Follow our Twitter account.  Plugins These addons are currently used on our community forum.</description>
     </item>
     
     <item>
@@ -1378,54 +125,9 @@ other elements of style and practice.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/configuration/</guid>
-      <description>
-
-&lt;h2 id=&#34;vanilla-configuration-files&#34;&gt;Vanilla configuration files&lt;/h2&gt;
-
-&lt;p&gt;Vanilla uses a file-based configuration system.&lt;/p&gt;
-
-&lt;p&gt;Vanilla is distributed with a file at &lt;code&gt;/conf/config-defaults.php&lt;/code&gt; which we will call &amp;ldquo;config-defaults&amp;rdquo;. After installation, a file is created at &lt;code&gt;/conf/config.php&lt;/code&gt; which we will call simply &amp;ldquo;config&amp;rdquo; or &amp;ldquo;config.php&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Your config-defaults file should &lt;strong&gt;never&lt;/strong&gt; be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism thru which it will happen.&lt;/p&gt;
-
-&lt;p&gt;All configuration changes are to be exclusively made to your config.php file. We recommend periodically making a backup copy of your &lt;code&gt;config.php&lt;/code&gt; and storing it in a safe location (not on your web server).&lt;/p&gt;
-
-&lt;h2 id=&#34;editing-configuration&#34;&gt;Editing configuration&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// Config file entries look like this:
-$Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;Value&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Config entires must render as valid PHP code, so the placement of quotes, brackets, and semicolons is extremely important. Line order does not matter, unless you accidentally duplicate values (which should be avoided). In that case, the last duplicate would take precedence.&lt;/p&gt;
-
-&lt;p&gt;Some scenarios for editing your config:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;You want to change a config setting, so you simply change &amp;lsquo;Value&amp;rsquo; on 1 line.&lt;/li&gt;
-&lt;li&gt;You want to change a default, so you copy a line from config-defaults into config, then modify its value.&lt;/li&gt;
-&lt;li&gt;You want to add a new config value entirely, so you enter it using the format indicated above on a new line in the config.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;avoiding-accidental-overwrites&#34;&gt;Avoiding accidental overwrites&lt;/h2&gt;
-
-&lt;p&gt;Only open or copy your config for editing &lt;em&gt;after&lt;/em&gt; you have applied or saved your latest settings in the Dashboard, and wait until you are done editing to make further changes to your site. Saving your config will overwrite any changes you may have made elsewhere at the same time.&lt;/p&gt;
-
-&lt;h2 id=&#34;shorthand-references&#34;&gt;Shorthand references&lt;/h2&gt;
-
-&lt;p&gt;When we talk about config lines, we use the following shorthand:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Area.FeatureSet.Setting = &#39;Value&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// The shorthand written using the full formatting
-$Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;Value&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If the above is written in instructions or comments, it is still to be formatted in the config according to the format shown earlier with brackets and quotes.&lt;/p&gt;
-
-&lt;aside class=&#34;note&#34;&gt;Always double-check you have properly transcribed the name and value before saving.&lt;/aside&gt;
-</description>
+      <description>Vanilla configuration files Vanilla uses a file-based configuration system.
+Vanilla is distributed with a file at /conf/config-defaults.php which we will call &amp;ldquo;config-defaults&amp;rdquo;. After installation, a file is created at /conf/config.php which we will call simply &amp;ldquo;config&amp;rdquo; or &amp;ldquo;config.php&amp;rdquo;.
+Your config-defaults file should never be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism thru which it will happen.</description>
     </item>
     
     <item>
@@ -1434,58 +136,7 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/contributing/</guid>
-      <description>
-
-&lt;h2 id=&#34;how-to-contribute&#34;&gt;How to Contribute&lt;/h2&gt;
-
-&lt;h3 id=&#34;general&#34;&gt;General&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Welcome folks to the &lt;a href=&#34;https://open.vanillaforums.com&#34;&gt;community&lt;/a&gt; and be awesome!&lt;/li&gt;
-&lt;li&gt;Answer questions.&lt;/li&gt;
-&lt;li&gt;Report &lt;a href=&#34;https://github.com/vanillaforums/vanilla&#34;&gt;issues&lt;/a&gt; like a pro (see below).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#triaging-issues&#34;&gt;Triage&lt;/a&gt; issues already reported!&lt;/li&gt;
-&lt;li&gt;Test &lt;a href=&#34;https://open.vanillaforums.com/categories/blog&#34;&gt;pre-releases&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Contribute &lt;a href=&#34;https://github.com/vanilla/docs&#34;&gt;docs&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Help &lt;a href=&#34;//docs.vanillaforums.com/developer/locales&#34;&gt;translate Vanilla&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Evaluate community addons &amp;amp; offer feedback.&lt;/li&gt;
-&lt;li&gt;Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;developers&#34;&gt;Developers&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Contribute code via &lt;a href=&#34;//docs.vanillaforums.com/developer/contributing/pull-requests&#34;&gt;pull requests&lt;/a&gt; (requires &lt;a href=&#34;https://open.vanillaforums.com/contributors&#34;&gt;Contributor Agreement&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Contribute addons &amp;amp; themes to the &lt;a href=&#34;https://open.vanillaforums.com/addons&#34;&gt;Official Directory&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Audit code for security &amp;amp; disclose issues &lt;a href=&#34;//docs.vanillaforums.com/developers&#34;&gt;responsibly&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sections of our contribution guidelines are adapted or copied from &lt;a href=&#34;https://swift.org/contributing/&#34;&gt;Swift&lt;/a&gt; because they are awesome.&lt;/p&gt;
-
-&lt;h2 id=&#34;reporting-issues-like-a-pro&#34;&gt;Reporting issues like a pro&lt;/h2&gt;
-
-&lt;p&gt;First, check for duplicates by searching on GitHub. All clear? Then make sure you cover three points:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;A concise description of the problem. If the issue is a fatal error, include a debug trace. Otherwise, describe the behavior you were expecting to see, along with the behavior you actually observed.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;A reproducible test case. If you need to include a lot of code to do this, make a gist on GitHub and link it.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Include the precise Vanilla version number and any relevant system information (ex: OS, PHP version &amp;amp; settings, MySQL settings).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;triaging-issues&#34;&gt;Triaging issues&lt;/h2&gt;
-
-&lt;p&gt;There are a number of things you can do to help triage issues in the issue tracker.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Reproduce it! For a bug to be actionable, it needs to be reproducible. If you can’t reproduce the bug, try to figure out why. Get in touch with the submitter if you need more information.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Reduce bugs. Once a bug can be reproduced, reduce it to the smallest amount of code possible. Reasoning about a sample that reproduces a bug in just a few lines of Swift code is easier than reasoning about a longer sample.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Eliminate duplicates. If two bug reports refer to the same underlying problem, mark the newer one as a duplicate of the older one. Doing so allows others to work more effectively.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>How to Contribute General  Welcome folks to the community and be awesome! Answer questions. Report issues like a pro (see below). Triage issues already reported! Test pre-releases. Contribute docs. Help translate Vanilla. Evaluate community addons &amp;amp; offer feedback. Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.  Developers  Contribute code via pull requests (requires Contributor Agreement) Contribute addons &amp;amp; themes to the Official Directory.</description>
     </item>
     
     <item>
@@ -1494,48 +145,9 @@ $Configuration[&#39;Area&#39;][&#39;FeatureSet&#39;][&#39;Setting&#39;] = &#39;V
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/framework/controllers/</guid>
-      <description>
-
-&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
-
-&lt;p&gt;In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.&lt;/p&gt;
-
-&lt;h3 id=&#34;dispatcher&#34;&gt;Dispatcher&lt;/h3&gt;
-
-&lt;p&gt;Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (&lt;code&gt;Gdn_Dispatcher&lt;/code&gt;) receives incoming &lt;a href=&#34;//docs.vanillaforums.com/developer/framework/requests&#34;&gt;requests&lt;/a&gt; and invokes the appropriate controller(s).&lt;/p&gt;
-
-&lt;h3 id=&#34;mapping-urls&#34;&gt;Mapping URLs&lt;/h3&gt;
-
-&lt;p&gt;First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.&lt;/p&gt;
-
-&lt;p&gt;An example that includes all of these is: &lt;code&gt;/dashboard/profile/notifications/1/Lincoln&lt;/code&gt;. This calls the Dashboard&amp;rsquo;s &lt;code&gt;ProfileController&lt;/code&gt; invoking the &lt;code&gt;Notifications&lt;/code&gt; method, which it passes the arguments &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;Lincoln&lt;/code&gt;, in that order. It roughly translates to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ProfileController = new ProfileController();
-$ProfileController-&amp;gt;notifications(&#39;1&#39;, &#39;Lincoln&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the &lt;code&gt;Index()&lt;/code&gt; method will be invoked. Therefore, the basic profile URL &lt;code&gt;/profile/1/Lincoln&lt;/code&gt; could be more verbosely written as &lt;code&gt;/dashboard/profile/index/1/Lincoln&lt;/code&gt; to more clearly understand what code it is invoking.&lt;/p&gt;
-
-&lt;h3 id=&#34;pretty-urls&#34;&gt;Pretty URLs&lt;/h3&gt;
-
-&lt;p&gt;All requests are dispatched thru the index.php file. While it&amp;rsquo;s possible to use the framework by passing a &amp;lsquo;p&amp;rsquo; parameter with the rest of the path (e.g. &lt;code&gt;/index.php?p=/profile&lt;/code&gt;), it&amp;rsquo;s best to configure your server to handle &amp;ldquo;pretty&amp;rdquo; URLs.&lt;/p&gt;
-
-&lt;p&gt;On Apache, this is accomplished with the &lt;code&gt;.htaccess&lt;/code&gt; file provided with Vanilla that contains these rewrite rules:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Consult the &lt;a href=&#34;//docs.vanillaforums.com/developer/community&#34;&gt;community&lt;/a&gt; if you need assistance configuring another server platform such as nginx or IIS.&lt;/p&gt;
-
-&lt;p&gt;Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the &lt;a href=&#34;//docs.vanillaforums.com/developer/configuration&#34;&gt;config&lt;/a&gt; setting to enable pretty URLs is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$Configuration[&#39;Garden&#39;][&#39;RewriteUrls&#39;] = TRUE;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The ability to use non-pretty URLs may be deprecated in the future.&lt;/p&gt;
-</description>
+      <description>Controllers In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.
+Dispatcher Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (Gdn_Dispatcher) receives incoming requests and invokes the appropriate controller(s).
+Mapping URLs First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.</description>
     </item>
     
     <item>
@@ -1544,18 +156,7 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/configuration/dashboard/</guid>
-      <description>
-
-&lt;h2 id=&#34;dashboard&#34;&gt;Dashboard&lt;/h2&gt;
-
-&lt;p&gt;The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum&amp;rsquo;s main page, a profile link (shown as your user name), and Sign Out.&lt;/p&gt;
-
-&lt;p&gt;On the left side of the screen is the main navigation menu detailing each of the administrative functions you can perform. Within each major function, such as Appearance, a list of sub-menu items appear, certain sub-menu items may vary depending on what addons you have installed.&lt;/p&gt;
-
-&lt;p&gt;The large area to the right of the screen is the work area. It is here the specific information relating to a particular navigation choice, such as adding a new post, is presented and collected.&lt;/p&gt;
-
-&lt;p&gt;Finally, in the footer, at the bottom of each Administration Panel also in a dark blue gradient, are links to Vanilla Forums, and Documentation. In addition, the version of Vanilla Forums you have installed can be found.&lt;/p&gt;
-</description>
+      <description>Dashboard The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum&amp;rsquo;s main page, a profile link (shown as your user name), and Sign Out.</description>
     </item>
     
     <item>
@@ -1564,20 +165,354 @@ RewriteRule ^(.*)$ index.php\?p=$1 [QSA,L]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/data-privacy/</guid>
-      <description>
-
-&lt;h2 id=&#34;types-of-information&#34;&gt;Types of Information&lt;/h2&gt;
-
-&lt;p&gt;Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.&lt;/p&gt;
-
-&lt;h2 id=&#34;public-user-info&#34;&gt;Public user info&lt;/h2&gt;
-
-&lt;p&gt;We consider usernames and user IDs (&lt;code&gt;User.Name&lt;/code&gt; and &lt;code&gt;User.UserID&lt;/code&gt;) to be public information. This data is used in URLs, embedded in page data, and generally available to any user with basic permission to view or access your forum. For this reason, we do not recommend using real names or other personally identifiable data for usernames.&lt;/p&gt;
-
-&lt;h2 id=&#34;personal-user-info&#34;&gt;Personal user info&lt;/h2&gt;
-
-&lt;p&gt;We consider emails (&lt;code&gt;User.Email&lt;/code&gt;) and IP addresses (recorded in multiple contexts) to be personal info. Access to this data is governed by a special permission that, by default, is only granted to moderators, community managers, and administrators. You can customize this for your community.&lt;/p&gt;
-</description>
+      <description>Types of Information Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.
+Public user info We consider usernames and user IDs (User.Name and User.UserID) to be public information. This data is used in URLs, embedded in page data, and generally available to any user with basic permission to view or access your forum.</description>
+    </item>
+    
+    <item>
+      <title>Database access</title>
+      <link>//docs.vanillaforums.com/developer/framework/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/database/</guid>
+      <description>Database layer Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in /library/databases). However, at this time, the Vanilla team has no plans to support additional databases.
+The best way to access the database is via existing models. For instance, to get a list of discussions, use the Get method in the DiscussionModel.</description>
+    </item>
+    
+    <item>
+      <title>Datasets</title>
+      <link>//docs.vanillaforums.com/developer/framework/datasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/datasets/</guid>
+      <description>Datasets The Gdn_Dataset object is a way to store data. Most of the time, this data is the result of a query to the database. When you use our database object (as you always should) to execute a database select query, it will return a dataset.
+Here are a few commonly used methods you&amp;rsquo;ll want to know about:
+ count() returns the number of records in the dataset. firstRow() returns the first record in the dataset.</description>
+    </item>
+    
+    <item>
+      <title>Developer Tools</title>
+      <link>//docs.vanillaforums.com/developer/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/tools/</guid>
+      <description>Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All our developers use MacOS.
+Stacks Supported  PHP 5.6 - 7.1 (as of Vanilla 2.5) Unix, Windows, or OSX nginx, Apache, or IIS MySQL, Percona, or MariaDB  Cloud Stack  PHP 7.1 nginx Percona Varnish memcached Zend OPcache Sphinx OpenStack  Developer Tools  homebrew git xdebug PHPUnit Composer Hub CodeSniffer Phing Travis CI Scrutinizer  Frontend Build  Sass SCSS-Lint Yarn Node.</description>
+    </item>
+    
+    <item>
+      <title>Developers</title>
+      <link>//docs.vanillaforums.com/developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/</guid>
+      <description>Welcome! The Developers section is primarily targeted at folks using the open source product who have at least a basic understanding of PHP, HTML, CSS and Javascript.
+Clients of VanillaForums.com (cloud) should contact support to address technical issues. Our hosted product does not allow direct file access to ensure security and performance, which precludes many instructions in this section.
+Security Issues and Responsible Disclosure Found a security issue? Please contact us at support@vanillaforums.</description>
+    </item>
+    
+    <item>
+      <title>Email</title>
+      <link>//docs.vanillaforums.com/developer/framework/email/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/email/</guid>
+      <description>Sending Emails The Garden framework includes an Email object for sending and configuring emails. The formatting of Vanilla Emails is handled by the EmailTemplate property of the Email object.
+EmailTemplate The EmailTemplate object helps to organize the components of an email and prepare them for output.
+These components are:
+ Title: A string, placed in a &amp;lt;h1&amp;gt; block before the rest of the email text in the default email template.</description>
+    </item>
+    
+    <item>
+      <title>Environment Setup</title>
+      <link>//docs.vanillaforums.com/developer/tools/environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/tools/environment/</guid>
+      <description>After you&amp;rsquo;ve got your tools ready, here&amp;rsquo;s how to set some of them up to work together nicely. We assume you&amp;rsquo;re using MacOS. This is all pretty useless if you&amp;rsquo;re not.
+Automate dependency building To automatically recompile Composer dependencies when you make commits, pull, or checkout a different release branch, add this:
+#!/bin/sh composer install  To these files in your git repository (creating them if they do not exist):</description>
+    </item>
+    
+    <item>
+      <title>Framework</title>
+      <link>//docs.vanillaforums.com/developer/framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/</guid>
+      <description>Garden&amp;rsquo;s place in Vanilla Vanilla is built on an MVC framework named Garden. Its purpose is to provide an extensible, pluggable platform on which to build all the addons that make Vanilla awesome. The design of its database handling was influenced by CodeIgniter, but its plugin architecture is pretty unique.
+Technically, Vanilla is a forum application (addon) built on top of the Garden framework. However, we typically refer to the entire stack as &amp;ldquo;Vanilla&amp;rdquo; for branding consistency and simplicity - including in these docs.</description>
+    </item>
+    
+    <item>
+      <title>Helpers</title>
+      <link>//docs.vanillaforums.com/developer/framework/helpers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/helpers/</guid>
+      <description>Helper Functions This is a quickstart guide to some of Vanilla&amp;rsquo;s globally available functions and methods. Familiarizing yourself with them will save you time and effort in the long term, and give you clues about how best to use the framework.
+This is by no means an exhaustive list, nor full signature documentation. You&amp;rsquo;ll want to find them in the source code (files at /library/core/functions.*.php) for more info.
+Getting &amp;amp; setting See functions.</description>
+    </item>
+    
+    <item>
+      <title>Homepage Settings</title>
+      <link>//docs.vanillaforums.com/developer/configuration/homepage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/homepage/</guid>
+      <description>Homepage The Homepage settings allows you to change the default homepage of your community when they visit your site. By default, Vanilla will use &amp;ldquo;Discussions&amp;rdquo; as your homepage, but you can change it to whatever you like.</description>
+    </item>
+    
+    <item>
+      <title>Importing</title>
+      <link>//docs.vanillaforums.com/developer/importing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/</guid>
+      <description>Importing to Vanilla Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.
+Download Vanilla Porter
+Vanilla Porter is a tool that you can upload to your current web server to run in your web browser. It exports any platform to a generic format that the &amp;ldquo;Import&amp;rdquo; option in your new Vanilla Forum can read.</description>
+    </item>
+    
+    <item>
+      <title>Inform Messages</title>
+      <link>//docs.vanillaforums.com/developer/framework/inform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/inform/</guid>
+      <description>Toaster Notifications Inform Messages allow you to let users know of some action that your plugin or application has taken. Inform messages allow you to quickly and easily relay information to users, and handle actions based on interaction with those messages. Use them freely to notify users of saved forms, punishments, rewards, etc.
+You can send Inform Messages from within a controller or a plugin, or from a custom javascript function.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>//docs.vanillaforums.com/developer/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/installation/</guid>
+      <description>Installing Vanilla Our current installation and upgrade instructions are in the README file that comes with Vanilla. If you run into issues, see the Developers &amp;gt; Troubleshooting section of these docs.
+Cloud Solution For a 1-click installation hosted plan with professional support and services, see Vanilla Forums Cloud Hosting plans.</description>
+    </item>
+    
+    <item>
+      <title>Internationalization &amp; Localization</title>
+      <link>//docs.vanillaforums.com/developer/framework/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/i18n/</guid>
+      <description> Adding translatable phrases to Vanilla Considerations for adding phrases to Vanilla or your addon:
+ Default to English. Use the t() for all user-viewed text. Never use t() for HTML classes or other frontend code. Always use a succinct definition string. Avoid jargon or regional dialect.  </description>
+    </item>
+    
+    <item>
+      <title>Locales</title>
+      <link>//docs.vanillaforums.com/developer/locales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/locales/</guid>
+      <description>Translating Vanilla Want to help us improve our translations? We have a Transifex project for contributing to this. Create an account there and submit your improvements.
+Need to customize the phrasing just on your site in particular? See &amp;ldquo;Overriding locales&amp;rdquo; below.
+Translation tips Want to help translate? Awesome! Here are some tips for creating great translations.
+ Please make sure that your changes use generic terminology and good grammar that can apply to all forums and avoids interest- or region-specific terms.</description>
+    </item>
+    
+    <item>
+      <title>Messages</title>
+      <link>//docs.vanillaforums.com/developer/configuration/message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/message/</guid>
+      <description>Messages Messages can appear anywhere in your community, and can be used to inform your users of news and events.
+Configuring Messages Messages can be added to your forum by clicking on the Add Message button when on the Message page, and choosing the following Message options:
+ You can determine on which page a Message will seen, for example just on the profile page. You can add a Message to a specific category.</description>
+    </item>
+    
+    <item>
+      <title>Models, Forms, &amp; Validation</title>
+      <link>//docs.vanillaforums.com/developer/framework/models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/models/</guid>
+      <description>Models Datasets Controllers Views
+The theory of a Model in MVC is that it is an object representation of the data being manipulated. In Garden, however, the actual object representation of the data comes from the DataSet class in the form of a php stdClass. So, as you may have guessed already, in Garden the model isn’t a representation of the data. In Garden, a model relates directly to a table, and (with the help of the database object) allows you to retrieve information from the table, enforce the schema of that table on the data being manipulated, and put data into the table.</description>
+    </item>
+    
+    <item>
+      <title>Modules</title>
+      <link>//docs.vanillaforums.com/developer/framework/modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/modules/</guid>
+      <description>If controller methods represent the main content/purpose of a page, modules represent secondary information or functions. Modules are small groupings of functionality or information on a page. Some modules that are bundled with Garden include:
+ HeadModule - Allows addition of javascript, css &amp;amp; meta information to be rendered in the page. MenuModule - Handles management and rendering of items in the main menu. PagerModule - Takes information about a dataset and renders a pagelist.</description>
+    </item>
+    
+    <item>
+      <title>OAuth</title>
+      <link>//docs.vanillaforums.com/developer/framework/oauth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/oauth/</guid>
+      <description>SSO with OAuth: Overview Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:
+ Facebook Twitter LinkedIn Google+  Because OAuth 2.0 is an SSO framework and not a narrowly defined protocol (see OAuth 2.0 Spec), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins.</description>
+    </item>
+    
+    <item>
+      <title>Permissions</title>
+      <link>//docs.vanillaforums.com/developer/framework/permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/permissions/</guid>
+      <description>Permissions Overview Vanilla uses permissions to restrict access to particular content, options, or workflows. There are a number of functions built into the framework to do this efficiently. We eschew role-detection as a means of access control.
+For example, we would never check to make sure someone was in a role named Moderator before granting access to an option, we would check a permission like Garden.Moderation.Manage.
+Naming Permissions We use the same dot notation syntax for permissions as we do for config settings.</description>
+    </item>
+    
+    <item>
+      <title>Plugin Quickstart</title>
+      <link>//docs.vanillaforums.com/developer/plugins/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/plugins/quickstart/</guid>
+      <description>Quickstart Links  Read about our hooks system: Extending Vanilla with plugins Download the official Example plugin Download other plugins from the Addon Directory and borrow their code. Get help in the developer community  Quickstart Guide Vanilla is built on an object-oriented, MVC framework. If you&amp;rsquo;re coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That&amp;rsquo;s OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.</description>
+    </item>
+    
+    <item>
+      <title>Plugins</title>
+      <link>//docs.vanillaforums.com/developer/plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/plugins/</guid>
+      <description>Extending Vanilla with plugins Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.
+Events &amp;amp; Handlers Any class that extends the class &amp;ldquo;Pluggable&amp;rdquo; has the ability to call
+$this-&amp;gt;fireEvent(&#39;EventName&#39;);  and then plugins can attach to that event to perform an action.
+There is a PluginManager that detects any enabled plugins. When the FireEvent method is called, it pings the PluginManager class to see if there are any plugins that want to attach to the event name being fired.</description>
+    </item>
+    
+    <item>
+      <title>Pull Requests</title>
+      <link>//docs.vanillaforums.com/developer/contributing/pull-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/contributing/pull-requests/</guid>
+      <description>Using pull requests to contribute code We love pull requests! They&amp;rsquo;re the core of our workflow.
+All code is added to Vanilla via pull requests (PRs). A pull request is simply a request to merge code from a particular branch into another (usually a feature or hotfix branch into master). GitHub&amp;rsquo;s pull request feature tracks discussion, labels, assignments, and changes over time to a pull request.
+Creating a pull request  Branch from master and checkout that branch.</description>
+    </item>
+    
+    <item>
+      <title>Requests</title>
+      <link>//docs.vanillaforums.com/developer/framework/requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/requests/</guid>
+      <description>Requests Vanilla&amp;rsquo;s base Controller class (the class from which all controllers are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.
+DeliveryType There are four delivery types available:
+ DELIVERY_TYPE_ALL: Entire page (default). DELIVERY_TYPE_ASSET: Content for the requested asset.</description>
+    </item>
+    
+    <item>
+      <title>Resource Routing</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</guid>
+      <description>RESTful Resource Routing to Controller Methods This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from the /api/v2/ base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.
+Controller Names In order for a controller to be accessible from the API its name must end in &amp;ldquo;ApiController&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Routes</title>
+      <link>//docs.vanillaforums.com/developer/routes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/routes/</guid>
+      <description>Routes Route management allows you to create custom urls to specific pages within your Vanilla 2 installation. It also comes with some pre-defined default values.
+Pre-defined Routes There are four pre-defined routes that have special meaning. They are: * DefaultController - This is the main page to load when the root url of your Vanilla installation is viewed. * Default404 - The page to view when the requested url could not be found.</description>
+    </item>
+    
+    <item>
+      <title>Schemas</title>
+      <link>//docs.vanillaforums.com/developer/schemas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/schemas/</guid>
+      <description>Schemas Garden\Schema In Vanilla, the Garden\Schema class is used to whitelist parameters for a data structure and validate array of data. It is primarily used for filtering input to API endpoints.
+The constructor of Garden\Schema accepts an associative array, describing the expected parameters. The keys of the array define the name of a parameter and its flags (e.g. data type, is required). The values of the array provide a description for each parameter.</description>
+    </item>
+    
+    <item>
+      <title>Supported platforms</title>
+      <link>//docs.vanillaforums.com/developer/importing/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/support/</guid>
+      <description>Supported platforms Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the Vanilla Porter.
+PHP forums  Vanilla 1 phpBB 2-3 vBulletin 3-5 bbPress 1 SimplePress 1 Simple Machines 1-2 PunBB 1 IP.Board 3 XenForo Joomla Kunena Drupal Advanced Forum MyBB esoTalk Expression Engine  ASP / .NET forums Requires conversion to MySQL first.</description>
+    </item>
+    
+    <item>
+      <title>Using The Config</title>
+      <link>//docs.vanillaforums.com/developer/configuration/using/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/using/</guid>
+      <description>When to use the config Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.
+If you have large quantities of data or data that is written frequently, consider using the database instead.
+Reading from config The c function is the appropriate shortcut for reading from the config.</description>
+    </item>
+    
+    <item>
+      <title>Vanilla Porter</title>
+      <link>//docs.vanillaforums.com/developer/importing/porter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/porter/</guid>
+      <description>Migrating a forum to Vanilla Vanilla Porter is the export tool for converting your legacy forum to Vanilla. The process is four steps:
+ Export your old forum data to a special &amp;ldquo;Porter file&amp;rdquo;. Create a new Vanilla forum. Import the Porter file in Vanilla&amp;rsquo;s Dashboard. Verify &amp;amp; finalize your new forum.  Vanilla Porter requires a MySQL database and PHP 5.3+ with zlib support enabled.
+Before migrating We recommend these best practices:</description>
+    </item>
+    
+    <item>
+      <title>Views</title>
+      <link>//docs.vanillaforums.com/developer/framework/views/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/views/</guid>
+      <description>Views Once a controller method is called to handle the request, how is the xhtml of the page put together? Views. There are two types of views in Garden: &amp;ldquo;Views&amp;rdquo; and &amp;ldquo;Master Views&amp;rdquo;. A view relates directly to the controller method that called it and handles rendering content related to that request. You can typically think of a view as the content for that page. For example, if a Vanilla-&amp;gt;Discussion-&amp;gt;All() method is called, the view for that method would handle rendering all of the discussions.</description>
+    </item>
+    
+    <item>
+      <title>Writing API Endpoints</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</guid>
+      <description>Controller Endpoints When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the resource routing guide. This guide concerns writing the contents of a method.
+The Controller Base Class Although controllers don&amp;rsquo;t need to inherit from any class, the Vanilla\Web\Controller class offers useful functionality and is going to be the class you inherit from almost 100% of the time.</description>
+    </item>
+    
+    <item>
+      <title>Writing APIs</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/</guid>
+      <description>The Vanilla APIv2 Vanilla&amp;rsquo;s APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an &amp;ldquo;API first&amp;rdquo; framework where you write your API first and then think about the resulting HTML. This offers several benefits:
+ An API is easier to test, lending well to automated testing. You can connect to an API from different clients and not just browser.</description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-nginx/</guid>
+      <description>nginx Configuration The key to specifically running Vanilla under nginx is getting the basic rewrite rule in nginx.conf correct. You can see a working example in the Hardening section.
+Some tips: - When configuring fastcgi make sure that you use $realpath_root instead of $document_root. - Make sure that you set the fastcgi_param X_REWRITE parameter to 1.
+Hardening Here are some directories that should be forbidden:
+location ~* &amp;quot;/\.git&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/build/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/cache/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/cgi-bin/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/uploads/import/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/conf/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/tests/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/vendor/&amp;quot; { deny all; return 403; }  We alo recommend to disallow any script but /index.</description>
     </item>
     
   </channel>

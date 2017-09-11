@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/embedding/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Embedding on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/embedding/</link>
+    <description>Recent content in Embedding on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="//docs.vanillaforums.com/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Advanced Embedding</title>
@@ -13,121 +15,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs &lt;a href=&#34;http://easyxdm.net/wp/&#34;&gt;easyXDM&lt;/a&gt; and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.&lt;/p&gt;
-
-&lt;h2 id=&#34;setting-up-advanced-embedding&#34;&gt;Setting Up Advanced Embedding&lt;/h2&gt;
-
-&lt;p&gt;Enable forum embedding via the Dashboard. Then set &lt;code&gt;Garden.Embed.Allow&lt;/code&gt; to &lt;code&gt;2&lt;/code&gt; in your config. &lt;em&gt;Cloud customers will have this done by support staff&lt;/em&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Include easyXDM: &lt;code&gt;/js/easyXDM/easyXDM.min.js&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Include Vanilla&amp;rsquo;s advanced embed script: &lt;code&gt;/js/vanilla.embed.js&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create a div to contain Vanilla and give it an ID.&lt;/li&gt;
-&lt;li&gt;Call &lt;code&gt;Vanilla.embed({options})&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;options&#34;&gt;Options&lt;/h3&gt;
-
-&lt;p&gt;Vanilla.embed() takes an associative array of options:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;root&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The root url of your Vanilla forum. Example: &lt;a href=&#34;http://community.yoursite.com&#34;&gt;http://community.yoursite.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;container&lt;/code&gt; &lt;strong&gt;Required&lt;/strong&gt;. The ID or DOM element of the container for Vanilla.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;initialPath&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. The initial path to browse to when embedding the forum. Our example below demonstrates using the hash part of the URL to automatically set this, e.g. &lt;code&gt;site.com/embedpage#/categories/some-category&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sso&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. An SSO string that will automatically sign the user into Vanilla. See &lt;a href=&#34;https://github.com/vanillaforums/jsConnectPHP/blob/master/functions.jsconnect.php#L130&#34;&gt;our example code&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;autoStart&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. Whether or not to start the embed when &lt;code&gt;embed()&lt;/code&gt; is called. If this is false then you must call embed.start() to start the embed. Default: &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;onReady()&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A callback function to call when the embed is ready.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;notifyLocation(path)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that will be called when the url of the embedded iframe changes. You can use this callback to update your history. By default this function adds the path as the current location&amp;rsquo;s # fragment. Combine this with initialPath to implement your own custom history.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;height(x)&lt;/code&gt; &lt;strong&gt;Optional&lt;/strong&gt;. A function that is called to set the height of the embedded iframe. If you override this method then you can access the embedded iframe using &lt;code&gt;this.iframe&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;start()&lt;/code&gt; Start the embed. Only call this method if you set autoStart to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;setLocation(path)&lt;/code&gt; Manually set the location of the embedded iframe. Just specify the path and not the full domain of the embed.&lt;/p&gt;
-
-&lt;h2 id=&#34;custom-callbacks&#34;&gt;Custom Callbacks&lt;/h2&gt;
-
-&lt;p&gt;The embed API allows custom Javascript to be called between the parent and child iframes.&lt;/p&gt;
-
-&lt;h2 id=&#34;exposing-a-method-to-vanilla&#34;&gt;Exposing a method to Vanilla&lt;/h2&gt;
-
-&lt;p&gt;You can expose a method to the child iframe with the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.fn.functionName = function(args,...) { … }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The embed requires all functions on both sides to be explicitly registered to prevent a third party hijacking the embed and calling functions with unforeseen consequences.&lt;/p&gt;
-
-&lt;p&gt;Vanilla embed supports a callback function on both ends of the embed. If you want to support a callback function then declare it as the last argument of your function. When the other endpoint of the embed calls your function using &lt;code&gt;callRemote()&lt;/code&gt; it can then specify a callback and the framework will handle calling the callback across the domain.&lt;/p&gt;
-
-&lt;h2 id=&#34;calling-a-method-in-vanilla&#34;&gt;Calling a method in Vanilla&lt;/h2&gt;
-
-&lt;p&gt;You can call a method in Vanilla with the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Vanilla.embed.callRemote(&amp;quot;functionName&amp;quot;, args [, callback]);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you supply the callback argument to &lt;code&gt;callRemote()&lt;/code&gt; then it will be supplied as the last argument to the remote function. It is the remote function’s job to call the function. Keep in mind that using &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt;, etc. to set a context for the function will not work as a context cannot be passed across the domain.&lt;/p&gt;
-
-&lt;h3 id=&#34;functions-you-can-call-on-vanilla&#34;&gt;Functions you can call on Vanilla&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;Vanilla.embed.signout()&lt;/code&gt; Calling this function will sign the user out of Vanilla. It won’t refresh the page so you may want to do that afterwards.&lt;/p&gt;
-
-&lt;h2 id=&#34;example-implementation&#34;&gt;Example implementation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-   &amp;lt;head&amp;gt;
-   	  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-   	  &amp;lt;title&amp;gt;Sample Embed&amp;lt;/title&amp;gt;
-   	  &amp;lt;style&amp;gt;
-         body {
-            margin: 0;
-         }
-         #embedVanilla iframe {
-            width: 100%;
-         }
-      &amp;lt;/style&amp;gt;
-      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/easyXDM/easyXDM.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-      &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;js/vanilla.embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-   &amp;lt;/head&amp;gt;
-   &amp;lt;body style=&amp;quot;background: #ff6600;&amp;quot;&amp;gt;
-      &amp;lt;div style=&amp;quot;height: 50px&amp;quot;&amp;gt;foo&amp;lt;/div&amp;gt;
-      &amp;lt;div id=&amp;quot;embedVanilla&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-      &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-        // Help older browsers parse JSON.
-        easyXDM.DomHelper.requiresJSON(&amp;quot;js/easyXDM/json2.js&amp;quot;);
-
-        var vanillaEmbed = new Vanilla.embed({
-          // The element or its ID.
-          container: &amp;quot;embedVanilla&amp;quot;,
-          // This is the location of the forum.
-          root: &amp;quot;http://yoursite.local&amp;quot;,
-          // initial path, please start it with a &amp;quot;/&amp;quot;
-          initialPath: window.location.hash.substring(1),
-          onReady: function() {
-            // A lot of the functions need to be done after the embed is ready.
-
-            // This how you set the location of the embedded frame.
-            // vanillaEmbed.setLocation(&#39;/categories&#39;);
-          }
-        });
-      &amp;lt;/script&amp;gt;
-   &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Overview The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs easyXDM and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.
+Setting Up Advanced Embedding Enable forum embedding via the Dashboard. Then set Garden.Embed.Allow to 2 in your config. Cloud customers will have this done by support staff.</description>
     </item>
     
     <item>
@@ -136,49 +25,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/embedding/</guid>
-      <description>
-
-&lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
-
-&lt;p&gt;Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Embedding Checklist&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width. (Make modifications in Customize theme as you like).&lt;/li&gt;
-&lt;li&gt;Ensure you have &lt;strong&gt;&lt;em&gt;&amp;ldquo;Enabled Embedding&amp;rdquo;&lt;/em&gt;&lt;/strong&gt; in your dashboard.&lt;/li&gt;
-&lt;li&gt;Make sure that the page in which you embed is free of javascript errors.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Some considerations when it comes to  Embedding:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;The possibility of slower loading times, as your site needs to load the forum via JavaScript along with any other content you may have loading via JavaScript.&lt;/li&gt;
-&lt;li&gt;Issues with SEO, as Google (and other search engines) don&amp;rsquo;t always do a great job of indexing framed content.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;embedding-comments&#34;&gt;Embedding comments&lt;/h2&gt;
-
-&lt;p&gt;This feature will allow those of you who have a blog or news site to use Vanilla as a commenting system and really engage readers who might otherwise just enter a comment and leave.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A single profile, reputation and user experience across the community and the comments&lt;/li&gt;
-&lt;li&gt;Engage commenters with Vanilla’s existing gamification and curation features&lt;/li&gt;
-&lt;li&gt;Use blog traffic to quickly seed community participation and vice versa&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;how-do-i-implement-comments&#34;&gt;How do I implement comments?&lt;/h3&gt;
-
-&lt;p&gt;There is a &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;WordPress plugin&lt;/a&gt; available that allows you to enable comments on your WordPress blog from your WordPress dashboard. Alternately, we have a universal javascript code snippet that can be placed into any page to get comments enabled.&lt;/p&gt;
-
-&lt;p&gt;If you are using different blog software, you will need to edit the blog template and replace the existing blog comments with the code that can be found in the Dashboard under Forum&amp;gt;Blog Comments. Use our Universal Code, the code snippet can be modified to create discussion threads in the appropriate forum category based on the blog post category.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-does-vanilla-use-as-an-excerpt-from-my-blog-article-when-creating-a-blog-comment-discussion&#34;&gt;What does Vanilla use as an excerpt from my blog article when creating a blog comment discussion?&lt;/h3&gt;
-
-&lt;p&gt;When Vanilla creates a discussion thread based on a blog article, it will grab the blog title, the first few lines of the blog text and an image. You can use Open Graph meta tags to specify what image should be used. Otherwise, it grabs the first 4 images on the page and finds the &amp;ldquo;best&amp;rdquo; one it can - i.e. the biggest image that is at least 100x100, but smaller than 800px wide and not banner-shaped.&lt;/p&gt;
-
-&lt;p&gt;Readers can log in using a Disqus ID, Twitter, Google, FaceBook or via single sign on.&lt;/p&gt;
-</description>
+      <description>Embedding Forum Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe
+Embedding Checklist
+ Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width.</description>
     </item>
     
     <item>
@@ -187,49 +36,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/forum-settings/embedding/</guid>
-      <description>
-
-&lt;h2 id=&#34;embedding-forum&#34;&gt;Embedding Forum&lt;/h2&gt;
-
-&lt;p&gt;Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Embedding Checklist&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width. (Make modifications in Customize theme as you like).&lt;/li&gt;
-&lt;li&gt;Ensure you have &lt;strong&gt;&lt;em&gt;&amp;ldquo;Enabled Embedding&amp;rdquo;&lt;/em&gt;&lt;/strong&gt; in your dashboard.&lt;/li&gt;
-&lt;li&gt;Make sure that the page in which you embed is free of javascript errors.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Some considerations when it comes to  Embedding:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;The possibility of slower loading times, as your site needs to load the forum via JavaScript along with any other content you may have loading via JavaScript.&lt;/li&gt;
-&lt;li&gt;Issues with SEO, as Google (and other search engines) don&amp;rsquo;t always do a great job of indexing framed content.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;embedding-comments&#34;&gt;Embedding comments&lt;/h2&gt;
-
-&lt;p&gt;This feature will allow those of you who have a blog or news site to use Vanilla as a commenting system and really engage readers who might otherwise just enter a comment and leave.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A single profile, reputation and user experience across the community and the comments&lt;/li&gt;
-&lt;li&gt;Engage commenters with Vanilla’s existing gamification and curation features&lt;/li&gt;
-&lt;li&gt;Use blog traffic to quickly seed community participation and vice versa&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;how-do-i-implement-comments&#34;&gt;How do I implement comments?&lt;/h3&gt;
-
-&lt;p&gt;There is a &lt;a href=&#34;https://wordpress.org/plugins/vanilla-forums/&#34;&gt;WordPress plugin&lt;/a&gt; available that allows you to enable comments on your WordPress blog from your WordPress dashboard. Alternately, we have a universal javascript code snippet that can be placed into any page to get comments enabled.&lt;/p&gt;
-
-&lt;p&gt;If you are using different blog software, you will need to edit the blog template and replace the existing blog comments with the code that can be found in the Dashboard under Forum&amp;gt;Blog Comments. Use our Universal Code, the code snippet can be modified to create discussion threads in the appropriate forum category based on the blog post category.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-does-vanilla-use-as-an-excerpt-from-my-blog-article-when-creating-a-blog-comment-discussion&#34;&gt;What does Vanilla use as an excerpt from my blog article when creating a blog comment discussion?&lt;/h3&gt;
-
-&lt;p&gt;When Vanilla creates a discussion thread based on a blog article, it will grab the blog title, the first few lines of the blog text and an image. You can use Open Graph meta tags to specify what image should be used. Otherwise, it grabs the first 4 images on the page and finds the &amp;ldquo;best&amp;rdquo; one it can - i.e. the biggest image that is at least 100x100, but smaller than 800px wide and not banner-shaped.&lt;/p&gt;
-
-&lt;p&gt;Readers can log in using a Disqus ID, Twitter, Google, FaceBook or via single sign on.&lt;/p&gt;
-</description>
+      <description>Embedding Forum Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe
+Embedding Checklist
+ Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width.</description>
     </item>
     
     <item>
@@ -238,19 +47,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</guid>
-      <description>
-
-&lt;h2 id=&#34;transition-to-vanilla-comments&#34;&gt;Transition to Vanilla Comments&lt;/h2&gt;
-
-&lt;p&gt;Vanilla doesn&amp;rsquo;t have access to your WordPress comments, so simply turning off WP&amp;rsquo;s comments and turning on Vanilla&amp;rsquo;s would hide all your existing comments.
-There&amp;rsquo;s 3 ways to go about remedying this.&lt;/p&gt;
-
-&lt;p&gt;The first is to import all your WordPress comments to Vanilla. You will need need the XML export from your WordPress Dashboard to do this. VanillaForums.com clients may request this as an additional service via support or their sales representative.&lt;/p&gt;
-
-&lt;p&gt;The second is to edit your WordPress template manually to show WordPress comments on posts published before the date of your switchover, and Vanilla comments after the date of your switchover. This would require some elementary PHP.
-&amp;ldquo;
-The third option is to disable all &lt;em&gt;new&lt;/em&gt; WordPress commenting, and manually add Vanilla Comments embed code in the template after WordPress. You&amp;rsquo;d also want to remove WordPress&amp;rsquo;s &amp;ldquo;empty state&amp;rdquo; message for when there are no comments. This would have the effect of showing all old WordPress comments, followed by any new Vanilla comments, and then the Vanilla commenting box. Obviously this option is a little more complex, so I&amp;rsquo;d only do it if your comfort level with WordPress template editing is fairly high.&lt;/p&gt;
-</description>
+      <description>Transition to Vanilla Comments Vanilla doesn&amp;rsquo;t have access to your WordPress comments, so simply turning off WP&amp;rsquo;s comments and turning on Vanilla&amp;rsquo;s would hide all your existing comments. There&amp;rsquo;s 3 ways to go about remedying this.
+The first is to import all your WordPress comments to Vanilla. You will need need the XML export from your WordPress Dashboard to do this. VanillaForums.com clients may request this as an additional service via support or their sales representative.</description>
     </item>
     
   </channel>
