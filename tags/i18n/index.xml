@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/i18n/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>I18n on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/i18n/</link>
+    <description>Recent content in I18n on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/i18n/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="//docs.vanillaforums.com/tags/i18n/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>{t}</title>
@@ -13,82 +15,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-t&#34;&gt;Function: &lt;code&gt;{t}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output a translatable string with an optional default.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;c&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The string to output or a string short-name&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;d&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;$c&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Default translation. Good idea to set when using short-names&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description> Function: {t} Usage {t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}  Output a translatable string with an optional default.
+Parameters   Parameter Type Default Description    c  string  none  The string to output or a string short-name  d  string  $c  Default translation. Good idea to set when using short-names    </description>
     </item>
     
   </channel>
