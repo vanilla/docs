@@ -2,8 +2,11 @@
 title: Help and Training
 tags:
 - Training
-category: help
-aliases: 
+category: "help"
+menu:
+  help:
+    identifier: help
+    weight: 1
 ---
 
 ## Welcome!
