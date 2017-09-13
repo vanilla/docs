@@ -1,136 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/comments/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Comments on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/comments/</link>
+    <description>Recent content in Comments on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/comments/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://127.0.0.1:8081/tags/comments/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Posting</title>
-      <link>//docs.vanillaforums.com/help/posting/</link>
+      <link>http://127.0.0.1:8081/help/posting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/posting/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;&amp;ldquo;Posting&amp;rdquo; or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.&lt;/p&gt;
-
-&lt;p&gt;At the bottom of each discussion, the user will encounter a text field:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_Editor.png&#34; alt=&#34;Editor&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.&lt;/p&gt;
-
-&lt;h3 id=&#34;advanced-editor&#34;&gt;Advanced Editor&lt;/h3&gt;
-
-&lt;p&gt;Advanced Editor is activated by default on new communities. It provides an array of tools for your members to use when making a post. If you are looking for more information on how to compose and format posts in vanilla, you can read more Advanced Editor in our documentation, &lt;a href=&#34;http://docs.vanillaforums.com/help/addons/advanced-editor/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;discussions&#34;&gt;Discussions&lt;/h2&gt;
-
-&lt;p&gt;To create a new discussion, click on the New Discussion button at the top or bottom of any category.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_NewDiscussion.png&#34; alt=&#34;New Discussion Button&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This button will lead you to &lt;code&gt;/post/discussion&lt;/code&gt;. Here&amp;rsquo;s what you will encounter on the new discussions page:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_NewPostBreakdown.png&#34; alt=&#34;New Post Breakdown&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; - The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the discussion on the category index.
-&lt;strong&gt;2&lt;/strong&gt; - This is the &lt;a href=&#34;http://docs.vanillaforums.com/help/addons/advanced-editor/&#34;&gt;Advanced Editor&lt;/a&gt;, which assists the user in formatting the text of their post, inserting images, and attaching files.
-&lt;strong&gt;3&lt;/strong&gt; - This is the field where the user will type out the main body of their post.&lt;br /&gt;
-&lt;strong&gt;4&lt;/strong&gt; - Tags mark a discussion with certain keywords so it is easier to search for within the community. By default, up to five tags can be used on a post.
-&lt;strong&gt;5&lt;/strong&gt; - Once the user has finished typing their post, clicking the Post Discussion button will immediately publish it. Clicking Save Draft will store the post under &amp;ldquo;My Drafts&amp;rdquo; in a user&amp;rsquo;s profile menu. Preview will show the user what the finished post will look like when published. Cancel will bring the user back to the category they were viewing previously.&lt;/p&gt;
-
-&lt;h2 id=&#34;types-of-discussions&#34;&gt;Types of Discussions&lt;/h2&gt;
-
-&lt;p&gt;Certain addons in vanilla expand the types of discussions users can make in a community. When one of those addons is enabled, clicking the down-arrow on the “New Discussion” button will reveal several options:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_PollOptions.png&#34; alt=&#34;Posting Options&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Polls&lt;/strong&gt; can be enabled from your dashboard on any plan level. When creating a poll, the user is presented with a few new options:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://images.v-cdn.net/docs/Posting_PollSetup.png&#34; alt=&#34;New Poll Setup&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;With this form, the user can input the different answers for their poll. They can also choose to make a poll anonymous, which prevents others from knowing how specific users voted. Once the poll has been submitted, other members are allowed to vote once.&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Ask A Question&lt;/strong&gt; option is for users looking to get a specific information. The screen for posting a question looks identical to the New Discussion screen. When a question is asked, the bottom of each subsequent comment will have an option to mark it as an answer.&lt;/p&gt;
-
-&lt;p&gt;Selecting “Yes” marks the post as an answer within that discussion and pins it to the top, right under the initial question. You can read more about our Questions and Answers plugin, &lt;a href=&#34;http://docs.vanillaforums.com/help/addons/qna/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;New Idea&lt;/strong&gt; option is for communities with Ideation enabled. Ideas are discussions that can have various statuses and be voted on. They are limited to specific categories within a community. You can read more about Ideation, &lt;a href=&#34;http://docs.vanillaforums.com/help/ideation/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;additional-resources&#34;&gt;Additional Resources&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLEdMTbLR4h8xC7XwUrfZ4s5IoQ9Of6Ihn&#34;&gt;User Onbording Videos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.vanillaforums.com/help/addons/advanced-editor/&#34;&gt;Advanced Editor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.vanillaforums.com/help/posting/emoji/&#34;&gt;Emoji&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.vanillaforums.com/help/posting/smart-embed/&#34;&gt;Smart Embed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://127.0.0.1:8081/help/posting/</guid>
+      <description>Overview &amp;ldquo;Posting&amp;rdquo; or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.
+At the bottom of each discussion, the user will encounter a text field:
+Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.</description>
     </item>
     
     <item>
       <title>Universal Comments</title>
-      <link>//docs.vanillaforums.com/help/comments/</link>
+      <link>http://127.0.0.1:8081/help/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/comments/</guid>
-      <description>
-
-&lt;h2 id=&#34;vanilla-comments&#34;&gt;Vanilla Comments&lt;/h2&gt;
-
-&lt;p&gt;Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-are-universal-comments&#34;&gt;What are Universal Comments?&lt;/h2&gt;
-
-&lt;p&gt;We made Comment integration easy with WordPress (&lt;a href=&#34;//docs.vanillaforums.com/help/features/wordpress/using-comments/&#34;&gt;learn more about that here&lt;/a&gt;.), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-universal-comments&#34;&gt;How to use Universal Comments.&lt;/h2&gt;
-
-&lt;p&gt;To know if you can use Vanilla Universal Comments, you need to know if your content has a unique id. What does that mean? In your URL or code, is there a way to identify the difference between two pages? For example in Magento you have a productid, in Concrete5 there is the PageId, in MODX it’s the Resource ID, and so on.&lt;/p&gt;
-
-&lt;p&gt;This identifier is how you can assign a comment box from Vanilla to a specific document on any platform. Essentially, if you have a way to identify unique content, you can use Vanilla Comments.&lt;/p&gt;
-
-&lt;p&gt;Once you&amp;rsquo;ve determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Blog Comments” under the “Forum” heading. You will see the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/features/comments/settings.png&#34; alt=&#34;Universal Comments&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You want to make sure you have enabled embedding. The next step is to select the Universal Code setting tab:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/features/comments/universal-code.png&#34; alt=&#34;Universal Comments tab&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On this tab you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/features/comments/universal-code-identifier.png&#34; alt=&#34;Universal Comments tab&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Please note, before you paste the code in your platform’s template or theme, you will need to modify the elements highlighted in yellow.&lt;/p&gt;
-
-&lt;p&gt;The first element you need to review is that the correct full url/path to your Vanilla install is in the code.&lt;/p&gt;
-
-&lt;p&gt;The second element you will need to add, and that is the code that calls the unique id for the current page. Replace &amp;ldquo;your-content-identifier&amp;rdquo; with the appropriate code so Vanilla can connect the discussion created to the proper content.&lt;/p&gt;
-
-&lt;p&gt;Finally within the comments code, you can:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;You can modify Universal Comments code to allow all comments to appear in one discussion thread&lt;/li&gt;
-&lt;li&gt;You can make the comments to appear in a certain category of your community. This can be helpful if you integrate Vanilla Comments into a ecommerce shop where you want all product reviews to be placed in the “Product Review” category.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are some additional settings you may wish to also review :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Configure Comment Counts code to show the number of comments you have.&lt;/li&gt;
-&lt;li&gt;Decide how many comments you wish to appear per page&lt;/li&gt;
-&lt;li&gt;Under advanced settings add your trusted domains.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you are using WordPress, check out our &lt;a href=&#34;//docs.vanillaforums.com/help/features/wordpress/using-comments/&#34;&gt;how to integrate comments with WordPress&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/help/comments/</guid>
+      <description>Vanilla Comments Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.
+What are Universal Comments? We made Comment integration easy with WordPress (learn more about that here.), but we also wanted to make it possible to add comments to any site where you can identify unique content.</description>
     </item>
     
   </channel>

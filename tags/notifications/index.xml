@@ -1,84 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/notifications/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Notifications on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/notifications/</link>
+    <description>Recent content in Notifications on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/notifications/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://127.0.0.1:8081/tags/notifications/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Notifications</title>
-      <link>//docs.vanillaforums.com/help/notifications/</link>
+      <link>http://127.0.0.1:8081/help/notifications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/notifications/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;Notifications for certain forum events can be delivered in-app (via Growl-style popups) and/or via email. New users will be opted in to a list of notifications that can be configured by the administrator. Users may edit these preferences in their profile at any time.&lt;/p&gt;
-
-&lt;p&gt;Any notification level may be selectively disabled globally. It is also possible to globally disable all email sending by setting &lt;code&gt;Garden.Email = false&lt;/code&gt; in your config.&lt;/p&gt;
-
-&lt;h2 id=&#34;basic-notifications&#34;&gt;Basic notifications&lt;/h2&gt;
-
-&lt;p&gt;Notifications available by default to all users.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Notify me when people write on my wall.&lt;/li&gt;
-&lt;li&gt;Notify me when people reply to my wall comments.&lt;/li&gt;
-&lt;li&gt;Notify me when people mention me in comments.&lt;/li&gt;
-&lt;li&gt;Notify me when people comment on my discussions.&lt;/li&gt;
-&lt;li&gt;Notify me when people comment on my bookmarked discussions.&lt;/li&gt;
-&lt;li&gt;Notify me when people mention me.&lt;/li&gt;
-&lt;li&gt;Notify me of private messages.&lt;/li&gt;
-&lt;li&gt;Notify me when I am added to private conversations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;addon-notifications&#34;&gt;Addon notifications&lt;/h2&gt;
-
-&lt;p&gt;Addons may add more notifications.&lt;/p&gt;
-
-&lt;h3 id=&#34;badges-cloud-only&#34;&gt;Badges (cloud-only)&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Notify me when I earn a badge.&lt;/li&gt;
-&lt;li&gt;Notify me when a badge is requested. [Moderator only]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;ideation-cloud-only&#34;&gt;Ideation (cloud-only)&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Notify me when my ideas&amp;rsquo; statuses change.    &lt;/li&gt;
-&lt;li&gt;Notify me when the status changes on an idea I&amp;rsquo;ve voted on.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;advanced-notifications&#34;&gt;Advanced notifications&lt;/h2&gt;
-
-&lt;p&gt;Moderators and administrators have permission to be notified for every new comment or discussion, and they can set this per category. These are available on the same Edit Preferences page under Edit Profile. &lt;em&gt;Do not enable this feature for all users.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;setting-defaults&#34;&gt;Setting defaults&lt;/h2&gt;
-
-&lt;p&gt;You can set default notification levels for new users in your config. Setting a value to &lt;code&gt;1&lt;/code&gt; is on, &lt;code&gt;0&lt;/code&gt; is off, and &lt;code&gt;false&lt;/code&gt; disables it globally. Any user has already chosen their preferences will be unaffected.&lt;/p&gt;
-
-&lt;p&gt;Vanilla starts with these defaults:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Preferences.Email.ConversationMessage   = 1;
-Preferences.Email.BookmarkComment       = 1;
-Preferences.Email.WallComment           = 0;
-Preferences.Email.ActivityComment       = 0;
-Preferences.Email.DiscussionComment     = 0;
-Preferences.Email.ParticipateComment    = 0;
-Preferences.Popup.ConversationMessage   = 1;
-Preferences.Popup.BookmarkComment       = 1;
-Preferences.Popup.WallComment           = 1;
-Preferences.Popup.ActivityComment       = 1;
-Preferences.Popup.DiscussionComment     = 1;
-Preferences.Email.Mention               = 0;
-Preferences.Popup.Mention               = 1;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://127.0.0.1:8081/help/notifications/</guid>
+      <description>Overview Notifications for certain forum events can be delivered in-app (via Growl-style popups) and/or via email. New users will be opted in to a list of notifications that can be configured by the administrator. Users may edit these preferences in their profile at any time.
+Any notification level may be selectively disabled globally. It is also possible to globally disable all email sending by setting Garden.Email = false in your config.</description>
     </item>
     
   </channel>

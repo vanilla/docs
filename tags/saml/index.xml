@@ -1,92 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/saml/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Saml on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/saml/</link>
+    <description>Recent content in Saml on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/saml/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://127.0.0.1:8081/tags/saml/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>SAML</title>
-      <link>//docs.vanillaforums.com/help/sso/saml/</link>
+      <link>http://127.0.0.1:8081/help/sso/saml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/sso/saml/</guid>
-      <description>
-
-&lt;h2 id=&#34;sso-with-saml-overview&#34;&gt;SSO with SAML: Overview&lt;/h2&gt;
-
-&lt;p&gt;Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAML SSO addon,
-and configuring it via its Settings page (Dashboard -&amp;gt; Addons -&amp;gt; SAML SSO -&amp;gt; Settings button).&lt;/p&gt;
-
-&lt;p&gt;SAML accounts are mapped to existing forum accounts by &lt;strong&gt;email address&lt;/strong&gt;, or a new account is created if no match is found.&lt;/p&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s SAML mapping is as follows (the right value is the SAML key):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;UniqueID =&amp;gt; id
-Name =&amp;gt; uid
-Email =&amp;gt; mail
-Photo =&amp;gt; photo // Optional
-Roles =&amp;gt; roles // Optional
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;UniqueID&lt;/code&gt; is whatever you&amp;rsquo;re using to absolutely uniquely identify the user on your side that will never change.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Name&lt;/code&gt; is the username. We recommend keeping it within the normal rules (alphanumerics and underscores only, 50-character limit, must be unique) but we do not validate its formatting on our side over SSO because we don&amp;rsquo;t want to fail a login. It would just make @mentions impossible to use if it had spaces or special characters in it. However, in the case where there&amp;rsquo;s a duplicate name or none provided, it will send the user to a &amp;ldquo;Connect&amp;rdquo; page to provide a valid, unique username which will then also be validated for formatting.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Email&lt;/code&gt; is not validated on our side either. In general, we are assuming you&amp;rsquo;ve done the data validation on your side and adding more would gum up the works.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Photo&lt;/code&gt; is the url/path to the user&amp;rsquo;s photo and is optional.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Roles&lt;/code&gt; consist of a comma-separated list of exact name matches to existing roles on your forum and is optional. e.g. &amp;lsquo;Member,MVP,Support&amp;rsquo;&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/help/sso/saml/</guid>
+      <description>SSO with SAML: Overview Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAML SSO addon, and configuring it via its Settings page (Dashboard → Addons → SAML SSO → Settings button).
+SAML accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.
+Vanilla&amp;rsquo;s SAML mapping is as follows (the right value is the SAML key):</description>
     </item>
     
     <item>
       <title>SAML Connection explained</title>
-      <link>//docs.vanillaforums.com/help/sso/saml/connection-explained/</link>
+      <link>http://127.0.0.1:8081/help/sso/saml/connection-explained/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/help/sso/saml/connection-explained/</guid>
-      <description>
-
-&lt;h2 id=&#34;creating-a-new-saml-connection&#34;&gt;Creating a new SAML connection&lt;/h2&gt;
-
-&lt;p&gt;When creating a new SAML connection you will need to fill the following fields:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Connection ID&lt;/code&gt; This field is the new of your connexion and is used to distinguish it from other potential SSO connexion.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Entity ID&lt;/code&gt; The name of your SAML entity. It can be anything but is often the URL of your site.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Site Name&lt;/code&gt; A short name for the site. This is displayed on the SSO Sign In button.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Sign In URL&lt;/code&gt; Sign In URL that users will be redirected to.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Sign Out URL&lt;/code&gt; Sign Out URL that users will be redirected to.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Registration URL&lt;/code&gt; URL that users will be redirected to create a new account.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;IDP Certificate&lt;/code&gt; Certificate of your provider.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Identifier Format&lt;/code&gt; Found under the name: NameIDFormat. Looks like this &amp;ldquo;urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified&amp;rdquo;&lt;/p&gt;
-
-&lt;h2 id=&#34;getting-your-metadata&#34;&gt;Getting your metadata&lt;/h2&gt;
-
-&lt;p&gt;Once the connection is created you will be able to get the Metadata for that particular connection.&lt;/p&gt;
-
-&lt;p&gt;Example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;md:EntityDescriptor xmlns:md=&amp;quot;urn:oasis:names:tc:SAML:2.0:metadata&amp;quot; validUntil=&amp;quot;2021-10-24T14:39:12Z&amp;quot; entityID=&amp;quot;{Entity ID}&amp;quot;&amp;gt;
-    &amp;lt;md:SPSSODescriptor protocolSupportEnumeration=&amp;quot;urn:oasis:names:tc:SAML:2.0:protocol&amp;quot;&amp;gt;
-        &amp;lt;md:NameIDFormat&amp;gt;
-            {Identifier Format}
-        &amp;lt;/md:NameIDFormat&amp;gt;
-        &amp;lt;md:AssertionConsumerService Binding=&amp;quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&amp;quot; Location=&amp;quot;http://example.com/entry/connect/saml?authKey={Connection ID}&amp;quot; index=&amp;quot;1&amp;quot;/&amp;gt;
-    &amp;lt;/md:SPSSODescriptor&amp;gt;
-&amp;lt;/md:EntityDescriptor&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://127.0.0.1:8081/help/sso/saml/connection-explained/</guid>
+      <description>Creating a new SAML connection When creating a new SAML connection you will need to fill the following fields:
+Connection ID This field is the new of your connexion and is used to distinguish it from other potential SSO connexion.
+Entity ID The name of your SAML entity. It can be anything but is often the URL of your site.
+Site Name A short name for the site. This is displayed on the SSO Sign In button.</description>
     </item>
     
   </channel>

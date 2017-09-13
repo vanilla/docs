@@ -1,1329 +1,298 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/theming/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Theming on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/theming/</link>
+    <description>Recent content in Theming on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/theming/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://127.0.0.1:8081/tags/theming/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>CSS</title>
-      <link>//docs.vanillaforums.com/developer/theming/css/</link>
+      <link>http://127.0.0.1:8081/developer/theming/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
-      <description>
-
-&lt;h2 id=&#34;theming-with-css&#34;&gt;Theming with CSS&lt;/h2&gt;
-
-&lt;h3 id=&#34;theming-hosted-vanilla&#34;&gt;Theming Hosted Vanilla&lt;/h3&gt;
-
-&lt;p&gt;You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our &lt;a href=&#34;https://blog.vanillaforums.com/tag/fridaytips/&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&#34;adding-additional-css&#34;&gt;Adding additional CSS&lt;/h4&gt;
-
-&lt;p&gt;To add additional CSS to the existing base Vanilla CSS file:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a new file called custom.css&lt;/li&gt;
-&lt;li&gt;Place it in the design folder in your theme folder (i.e., /themes/your_theme_name/design/custom.css)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This CSS file is added after the base CSS file and all other plugin and application-specific CSS files.&lt;/p&gt;
-
-&lt;h3 id=&#34;tips-and-troubleshooting&#34;&gt;Tips and troubleshooting&lt;/h3&gt;
-
-&lt;p&gt;Here are a few gotchas that can occur when styling Vanilla.&lt;/p&gt;
-
-&lt;h4 id=&#34;layouts&#34;&gt;Layouts&lt;/h4&gt;
-
-&lt;p&gt;Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it&amp;rsquo;s best to decide which layout you&amp;rsquo;d like to use before you start styling your theme. This layout can be selected from the dashboard&amp;rsquo;s Homepage section. You can also specify your theme&amp;rsquo;s layout in the $ThemeInfo array in your theme&amp;rsquo;s &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file. When your theme is enabled, the settings in the Homepage section will be set to match what is specified in the $ThemeInfo array. To add theme layout info the $ThemeInfo array, just add a &lt;code&gt;Layout&lt;/code&gt; key with content looking like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Layout&#39; =&amp;gt; [
-    &#39;Discussions&#39; =&amp;gt; &#39;table&#39;,
-    &#39;Categories&#39; =&amp;gt; &#39;modern&#39;
-]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The layout options for discussions are currently &amp;lsquo;table&amp;rsquo; or &amp;lsquo;modern&amp;rsquo;. For categories, you can choose &amp;lsquo;table&amp;rsquo;, &amp;lsquo;modern&amp;rsquo;, or &amp;lsquo;mixed&amp;rsquo;. The mixed layout includes discussions on the categories page.&lt;/p&gt;
-
-&lt;h4 id=&#34;plugins&#34;&gt;Plugins&lt;/h4&gt;
-
-&lt;p&gt;Plugins have the ability to add CSS files to your forum or HTML elements to views. As such, enabling a plugin can sometimes mess with your forum&amp;rsquo;s CSS and layout. To mitigate this, it&amp;rsquo;s best to enable all the plugins you anticipate using while you work on your theme.&lt;/p&gt;
-
-&lt;p&gt;If you do enable a plugin and encounter some undesirable CSS side effects, it&amp;rsquo;s good to know that your theme&amp;rsquo;s custom.css file is added after the plugins&amp;rsquo; CSS files, so overriding the CSS rules defined in the plugin&amp;rsquo;s CSS should be a breeze.&lt;/p&gt;
-
-&lt;h4 id=&#34;hiding-content&#34;&gt;Hiding content&lt;/h4&gt;
-
-&lt;p&gt;Using &lt;code&gt;display: none;&lt;/code&gt; to hide elements on a page is often a good choice for removing content that is not valuable to you or your community. However, when doing so, make sure to make the CSS rule as specific as possible.&lt;/p&gt;
-
-&lt;p&gt;For instance, let&amp;rsquo;s say you want to hide the discussions link in the side panel navigation on the Discussions page. A very bad way to accomplish this would be by using the CSS rule:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.Discussions {
-  display: none;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This rule will succeed in hiding the link, but also the body of the Discussions page, as the body element includes the Discussions CSS class. A better, safer rule would be:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.Section-DiscussionList .FilterMenu .Discussions {
-  display: none;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;.Section-DiscussionList&lt;/code&gt; targets the discussion page, &lt;code&gt;.FilterMenu&lt;/code&gt; targets a filtering menu, and &lt;code&gt;.Discussions&lt;/code&gt; targets a specific list item in the menu. This is much less likely to have undesired side effects.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/css/</guid>
+      <description>Theming with CSS Theming Hosted Vanilla You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our blog.
+Adding additional CSS To add additional CSS to the existing base Vanilla CSS file:</description>
     </item>
     
     <item>
       <title>Event Hooks</title>
-      <link>//docs.vanillaforums.com/developer/theming/hooks/</link>
+      <link>http://127.0.0.1:8081/developer/theming/hooks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/hooks/</guid>
-      <description>
-
-&lt;h2 id=&#34;theming-hooks&#34;&gt;Theming Hooks&lt;/h2&gt;
-
-&lt;p&gt;Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.&lt;/p&gt;
-
-&lt;p&gt;To use hooks, create a file named class.themehooks.php in your theme&amp;rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files extends Gdn_Plugin, which allows the specification of a &lt;code&gt;setup()&lt;/code&gt; method, which is run whenever the theme is enabled. The setup method is a good place to set any config variables your theme may rely on, but is not required.&lt;/p&gt;
-
-&lt;p&gt;To get a better understanding of what the theme hooks are capable of, familiarize yourself with &lt;a href=&#34;http://docs.vanillaforums.com/developers/plugins/#custom-events-handlers&#34;&gt;custom events &amp;amp; handlers&lt;/a&gt;, &lt;a href=&#34;http://docs.vanillaforums.com/developers/plugins/#magic-events&#34;&gt;magic events&lt;/a&gt;, &lt;a href=&#34;http://docs.vanillaforums.com/developers/plugins/#function-overrides&#34;&gt;function overrides&lt;/a&gt;, and &lt;a href=&#34;http://docs.vanillaforums.com/developers/plugins/#magic-methods&#34;&gt;magic methods&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an example of a themehooks file that sets some config variables, adds locale data for the view, adds a respond button to the discussion page, and overrides a method to add an extra css class to a menu count span.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-/**
- * @author    My Name &amp;lt;name@email.com&amp;gt;
- * @copyright 2015 (c) My Organizations
- * @license   http://opensource.org/licenses/MIT MIT
- */
-
-/**
- * Adds locale data to the view, and adds a respond button to the discussion page.
- */
-class MyThemeNameThemeHooks extends Gdn_Plugin {
-
-    /**
-     * Fetches the current locale and sets the data for the theme view.
-     * Render the locale in a smarty template using {$locale}
-     *
-     * @param  Controller $sender The sending controller object.
-     */
-    public function base_render_before($sender) {
-        // Bail out if we&#39;re in the dashboard
-        if (inSection(&#39;Dashboard&#39;)) {
-            return;
-        }
-
-        // Fetch the currently enabled locale (en by default)
-        $locale = Gdn::locale()-&amp;gt;current();
-        $sender-&amp;gt;setData(&#39;locale&#39;, $locale);
-    }
-
-    /**
-     * Adds a &#39;respond&#39; button on a discussion page below the discussion title
-     * that links to the comment form.
-     *
-     * @param DiscussionController $sender The sending object.
-     */
-    public function discussionController_afterDiscussionTitle_handler($sender) {
-        // Ensure the user is signed in.
-        if (Gdn::session()) {
-            echo &#39;&amp;lt;div class=&amp;quot;below-discussion-title&amp;quot;&amp;gt;&#39;.
-                 &#39;&amp;lt;a class=&amp;quot;respond-button Button&amp;quot; href=&amp;quot;#Form_Comment&amp;quot;&amp;gt;Respond&amp;lt;/a&amp;gt;&#39;.
-                 &#39;&amp;lt;/div&amp;gt;&#39;;
-        }
-    }
-}
-
-/**
- * Adds a new css class to counts in the side panel filter
- * menu in a discussion list. Overrides the method in the DiscussionFilterModule
- * (applications/vanilla/views/modules/discussionfilter.php)
- *
- * @param int|null $count The number to include in the count.
- * @param string $url The url to the popin rel for the count.
- */
-if (!function_exists(&#39;filterCountString&#39;)) {
-    function filterCountString($count, $url = &#39;&#39;) {
-        $count = countString($count, $url);
-        return $count != &#39;&#39; ? &#39;&amp;lt;span class=&amp;quot;a-new-css-class aside&amp;quot;&amp;gt;&#39;.$count.&#39;&amp;lt;/span&amp;gt;&#39; : &#39;&#39;;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/hooks/</guid>
+      <description>Theming Hooks Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.
+To use hooks, create a file named class.themehooks.php in your theme&amp;rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files extends Gdn_Plugin, which allows the specification of a setup() method, which is run whenever the theme is enabled.</description>
     </item>
     
     <item>
       <title>Page Links</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</guid>
-      <description>
-
-&lt;h2 id=&#34;page-links&#34;&gt;Page Links&lt;/h2&gt;
-
-&lt;p&gt;We&amp;rsquo;ve created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum&amp;rsquo;s navigation.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the basic syntax, where * is the link type.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;li&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The tag to wrap the link in.&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;varies&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;What the text for the link should be.&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;&amp;lt;a href=&amp;#39;%url&amp;#39; class=&amp;#39;%class&amp;#39;&amp;gt;%text&amp;lt;/a&amp;gt;&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-
-&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
-
-&lt;h3 id=&#34;function-bookmarks-link&#34;&gt;Function: {bookmarks_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the My Bookmarks page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-categories-link&#34;&gt;Function: {categories_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the categories page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-category-link&#34;&gt;Function: {category_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the current category page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-dashboard-link&#34;&gt;Function: {dashboard_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the dashboard.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-discussions-link&#34;&gt;Function: {discussions_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the discussions page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-drafts-link&#34;&gt;Function: {drafts_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the drafts page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-activity-link&#34;&gt;Function: {activity_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the recent activity page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-forum-root-link&#34;&gt;Function: {forum_root_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the forum root page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-home-link&#34;&gt;Function: {home_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the home page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-inbox-link&#34;&gt;Function: {inbox_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the inbox.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-mydiscussions-link&#34;&gt;Function: {mydiscussions_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the My Discussions page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-nomobile-link&#34;&gt;Function: {nomobile_link}&lt;/h3&gt;
-
-&lt;p&gt;Link for showing the desktop version of the site.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-photo-link&#34;&gt;Function: {photo_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the session&amp;rsquo;s user profile that displays as the user&amp;rsquo;s avatar.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-profile-link&#34;&gt;Function: {profile_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to session&amp;rsquo;s user profile. The link text is the username. Includes a notification count.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-signin-link&#34;&gt;Function: {signin_link}&lt;/h3&gt;
-
-&lt;p&gt;If there is a valid session, this outputs a signout link, otherwise a signin link.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-signinout-link&#34;&gt;Function: {signinout_link}&lt;/h3&gt;
-
-&lt;p&gt;If there is a valid session, this outputs a signout link, otherwise a signin link.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-user-link&#34;&gt;Function: {user_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to session&amp;rsquo;s user profile. The link text is this username. Does not include a notification count.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</guid>
+      <description>Page Links We&amp;rsquo;ve created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum&amp;rsquo;s navigation.
+Here&amp;rsquo;s the basic syntax, where * is the link type.
+{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}  Parameters   Parameter Type Default Description    wrap  string  li  The tag to wrap the link in.  text  string  varies  What the text for the link should be.</description>
     </item>
     
     <item>
       <title>Quickstart</title>
-      <link>//docs.vanillaforums.com/developer/theming/quickstart/</link>
+      <link>http://127.0.0.1:8081/developer/theming/quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/quickstart/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Vanilla Forums Cloud Customers, check out our &lt;a href=&#34;http://blog.vanillaforums.com/help/vanilla-forums-themes/&#34;&gt;Ultimate Vanilla Forums Theme Guide&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;With Vanilla, you have full control over both the CSS and the actual HTML of every page in every application. The easiest thing for most designers is to just alter the CSS, so we&amp;rsquo;ll start there:&lt;/p&gt;
-
-&lt;h2 id=&#34;part-1-css-amp-design&#34;&gt;Part 1: CSS &amp;amp; Design&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: &lt;code&gt;/themes/your_theme_name&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Create an &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file and edit the information to reflect your theme&amp;rsquo;s information.&lt;/li&gt;
-&lt;li&gt;If you&amp;rsquo;ve got &lt;a href=&#34;http://vanillaforums.com&#34;&gt;Vanilla Cloud&lt;/a&gt;, make sure to also &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/themevisibility/&#34;&gt;set your theme&amp;rsquo;s visibility&lt;/a&gt;. If not, skip this step.&lt;/li&gt;
-&lt;li&gt;Create a custom.css file in the &amp;ldquo;design&amp;rdquo; folder of your custom theme.&lt;/li&gt;
-&lt;li&gt;Go to your Dashboard &amp;gt; Themes, and apply your new theme. If you don&amp;rsquo;t see it, delete the &lt;strong&gt;theme-index.php&lt;/strong&gt; in the &lt;strong&gt;cache&lt;/strong&gt; folder.&lt;/li&gt;
-&lt;li&gt;Edit the custom.css file to your heart&amp;rsquo;s content!&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Learn more by reading our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/css&#34;&gt;Theming with CSS&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;other-things-you-should-know&#34;&gt;Other things you should know:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;If you want to edit the look &amp;amp; feel of the administrative screens, you can accomplish it by creating an admincustom.css file in your design folder.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;part-2-themehooks-optional&#34;&gt;Part 2: Themehooks (optional)&lt;/h2&gt;
-
-&lt;p&gt;Themes have the ability to tap into Vanilla&amp;rsquo;s event firing system and override functions using a special themehooks file. To use hooks, create a file named class.themehooks.php in your theme&amp;rsquo;s root directory (&lt;code&gt;/themes/your_theme_name/class.themehooks.php&lt;/code&gt;) and edit it there.&lt;/p&gt;
-
-&lt;p&gt;This is a very powerful feature. Learn more about it by reading the &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;Theming Hooks&lt;/a&gt; docs.&lt;/p&gt;
-
-&lt;h2 id=&#34;part-3-html-amp-views-optional&#34;&gt;Part 3: HTML &amp;amp; Views (optional)&lt;/h2&gt;
-
-&lt;p&gt;If you don&amp;rsquo;t like the way we&amp;rsquo;ve structured our HTML, you can edit that too. Our pages are made up of two parts:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Master Views&lt;/strong&gt;: These represent everything that wraps the main content of every page. If all you want to do is add a menu or banner above Vanilla, this is the only file you will need to alter. To do so, copy the default master view from &lt;code&gt;/applications/dashboard/views/default.master.tpl&lt;/code&gt; to &lt;code&gt;/themes/your_theme_name/views/default.master.tpl&lt;/code&gt; and edit it there. This master view is built on the Smarty template engine. Familiarize yourself with this special master view by reading on docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;Theming Views&lt;/a&gt;. Also check out our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty&#34;&gt;Theming with Smarty&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Views&lt;/strong&gt;: These represent all of the content in each page. Every application has a &amp;ldquo;views&amp;rdquo; folder that contains all of the html for every page. So, for example, if you wanted to edit the html for the discussion list, you could copy the views from &lt;code&gt;/applications/vanilla/views/discussions&lt;/code&gt; to &lt;code&gt;/themes/your_theme_name/views/discussions&lt;/code&gt; and edit them there. There are some overriding and editing views. Be sure to check out our docs on &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;Theming Views&lt;/a&gt; to learn more.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;other-things-you-should-know-1&#34;&gt;Other things you should know:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The administrative screens have their own master view. If you want to change their master view, copy the &lt;code&gt;/applications/dashboard/views/admin.master.php&lt;/code&gt; file to &lt;code&gt;/themes/your_theme_name/views/admin.master.php&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;You can add a custom thumbnail by adding a png called &amp;ldquo;screenshot.png&amp;rdquo; in your theme root. 220px wide and 165px high is a good size.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/quickstart/</guid>
+      <description>Vanilla Forums Cloud Customers, check out our Ultimate Vanilla Forums Theme Guide.
+With Vanilla, you have full control over both the CSS and the actual HTML of every page in every application. The easiest thing for most designers is to just alter the CSS, so we&amp;rsquo;ll start there:
+Part 1: CSS &amp;amp; Design  Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: /themes/your_theme_name.</description>
     </item>
     
     <item>
       <title>Smarty</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-overview&#34;&gt;Smarty Overview&lt;/h2&gt;
-
-&lt;p&gt;Vanilla currently supports both PHP and Smarty views. &lt;a href=&#34;http://www.smarty.net&#34;&gt;Smarty&lt;/a&gt; is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to &lt;code&gt;/applications/dashboard/views/default.master.tpl&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;You can &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;override this view&lt;/a&gt; in a theme or plugin, or by using the Custom Theme plugin which allows you to modify your current theme&amp;rsquo;s master view from the dashboard. This section will give you some ideas how you can customize your master view to suit your community&amp;rsquo;s needs.&lt;/p&gt;
-
-&lt;h3 id=&#34;accessing-controller-data-with-smarty&#34;&gt;Accessing Controller Data with Smarty&lt;/h3&gt;
-
-&lt;p&gt;You can output the content of the current page&amp;rsquo;s controller&amp;rsquo;s data array using Smarty by using &lt;code&gt;{$ArrayKey.NestedArrayKey}&lt;/code&gt; syntax. For instance, &lt;code&gt;{$BodyClass}&lt;/code&gt; in Vanilla&amp;rsquo;s master view outputs the css class names for the current page. &lt;code&gt;{$User.Name}&lt;/code&gt; would render the session&amp;rsquo;s username. To see what data you have available to you on any given page, you can insert a &lt;code&gt;{debug}&lt;/code&gt; tag into your Smarty template and a popup listing the data in the data array will appear.&lt;/p&gt;
-
-&lt;h3 id=&#34;smarty-functions&#34;&gt;Smarty Functions&lt;/h3&gt;
-
-&lt;p&gt;In the default master view in Vanilla, you&amp;rsquo;ll find tags like &lt;code&gt;{searchbox}&lt;/code&gt; which calls a function to render a search box in the page and &lt;code&gt;{breadcrumbs}&lt;/code&gt; which calls a function to render the breadcrumbs. These are tags are mapped to php functions.&lt;/p&gt;
-
-&lt;p&gt;Some smarty functions in Vanilla can include parameters. For example, here &lt;code&gt;{breadcrumbs homelink=&amp;quot;My Forum&#39;s Home&amp;quot;}&lt;/code&gt;, the &amp;ldquo;homelink&amp;rdquo; parameter modifies the rendering of the breadcrumbs so that the &amp;ldquo;Home&amp;rdquo; breadcrumb renders as &amp;ldquo;My Forum&amp;rsquo;s Home&amp;rdquo;. Vanilla&amp;rsquo;s set of smarty functions that can be used in your template can be found by navigating to &lt;code&gt;library/SmartyPlugins&lt;/code&gt;. The &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty/functions&#34;&gt;Smarty Functions section&lt;/a&gt; documents these functions and their available parameters.&lt;/p&gt;
-
-&lt;h3 id=&#34;smarty-conditional-functions&#34;&gt;Smarty Conditional Functions&lt;/h3&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s Smarty implementation has whitelisted a number of functions that can be used in Smarty conditional statements. For example, you can insert a Smarty tag or a snippet of HTML into your template only if the user is in a specific section or has a specific permission. These functions and how they can be used in your template, as well as a basic overview on using Smarty conditionals are outlined in &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty/conditionals&#34;&gt;Smarty Conditionals&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h3&gt;
-
-&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. Vanilla-implemented modifiers and a general overview of modifiers can be found on the &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty/modifiers&#34;&gt;Smarty Modifiers&lt;/a&gt; page.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/</guid>
+      <description>Smarty Overview Vanilla currently supports both PHP and Smarty views. Smarty is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to /applications/dashboard/views/default.</description>
     </item>
     
     <item>
       <title>Smarty Conditionals</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/conditionals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-conditionals&#34;&gt;Smarty Conditionals&lt;/h2&gt;
-
-&lt;p&gt;Smarty includes a base amount of logic that you can insert into your template. One of these is a conditional statement. A couple of basic examples should give you an idea of the syntax and format of Smarty conditionals.&lt;/p&gt;
-
-&lt;p&gt;This example uses the user data from the controller&amp;rsquo;s data array to print out a welcome message if the user is signed in and a generic message if the user is not signed in. &lt;a href=&#34;../#accessing-controller-data-with-smarty&#34;&gt;Learn more about accessing the controller&amp;rsquo;s data array using Smarty.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if $User.SignedIn}
-    &amp;lt;h3&amp;gt;Welcome Back!&amp;lt;/h3&amp;gt;
-{else}
-    &amp;lt;h3&amp;gt;Hello Stranger!&amp;lt;/h3&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This example checks to see if the locale matches &amp;lsquo;fr&amp;rsquo; and if so, inserts the contents a pocket named &amp;lsquo;French Pocket&amp;rsquo;. &lt;a href=&#34;//docs.vanillaforums.com/functions/pocket.html.md&#34;&gt;Learn more about the Smarty pocket function.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if $CurrentLocale.Lang === &#39;fr&#39;}
-    {pocket name=&#39;French Pocket&#39;}
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The following PHP internal functions are available for use in Smarty if statements: array, list, isset, empty, count, sizeof, in_array, is_array, true, false, and null. We&amp;rsquo;ve also whitelisted some PHP functions in Vanilla that can be used in Smarty if statements. The most useful of these functions are outlined below.&lt;/p&gt;
-
-&lt;h2 id=&#34;conditional-category&#34;&gt;Conditional: &lt;em&gt;Category&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Returns an array representing the current category.&lt;/p&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example prints out a message if the user is browsing a page in the &amp;ldquo;General&amp;rdquo; category. Also uses the GetValue function, outlined below.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if GetValue(&#39;Name&#39;, Category()) === &#39;General&#39;}
-    &amp;lt;p&amp;gt;You&#39;re checking out content in the General category!&amp;lt;/p&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-checkpermission&#34;&gt;Conditional: &lt;em&gt;CheckPermission&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Tests whether the current user has the passed permission or array of permissions and returns true if the current user has one of the given permission(s).&lt;/p&gt;
-
-&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example checks whether the user has either the &amp;ldquo;Garden.Settings.Manage&amp;rdquo; or &amp;ldquo;Garden.Settings.View&amp;rdquo; permission and if so, adds a link to the dashboard.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if CheckPermission([&#39;Garden.Settings.Manage&#39;, &#39;Garden.Settings.View&#39;])}
-    {dashboard_link}
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-homepage&#34;&gt;Conditional: &lt;em&gt;Homepage&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;The variable &lt;code&gt;$Homepage&lt;/code&gt; is set to true if (and only if) the user is on your homepage.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example checks whether the user is on the homepage to display one message or another.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if $Homepage}
-    &amp;lt;p&amp;gt;Welcome home!&amp;lt;/p&amp;gt;
-{/if}
-
-&amp;lt;p&amp;gt;Intermediary text that is always displayed.&amp;lt;/p&amp;gt;
-
-{if !$Homepage}
-    &amp;lt;p&amp;gt;Far away from home.&amp;lt;/p&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-insection&#34;&gt;Conditional: &lt;em&gt;InSection&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Returns true if the user is in a section or one of an array or sections. You can see what section a Vanilla page belongs to by inspecting the body tag using your browser tools and checking its CSS class. There will be an Section-* class, where * is the current section.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-3&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example checks whether the user is in either the Profile, Conversation or ActivityList section and if so, adds the panel asset.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if InSection(array(&#39;Profile&#39;, &#39;Conversation&#39;, &#39;ActivityList&#39;))}
-    {asset name=&amp;quot;Panel&amp;quot;}
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-incategory&#34;&gt;Conditional: &lt;em&gt;InCategory&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Given a category&amp;rsquo;s url code, returns true if the user is on a page in that category. You can manage the url codes of your forum&amp;rsquo;s categories from the Manage Categories page in the dashboard.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-4&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example prints out a message if the user is browsing a page in a category with the url code &amp;lsquo;general-category&amp;rsquo;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if InCategory(&#39;general-category&#39;)}
-    &amp;lt;p&amp;gt;You&#39;re checking out content in the General category!&amp;lt;/p&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-getvalue&#34;&gt;Conditional: &lt;em&gt;GetValue&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Given an array key or property name, returns its value from an associative array or an object.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-5&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;See the [Category example](&amp;lsquo;#category-example&amp;rsquo;) above.&lt;/p&gt;
-
-&lt;h2 id=&#34;other-conditional-functions&#34;&gt;Other conditional functions&lt;/h2&gt;
-
-&lt;p&gt;There are a few other (less useful) functions that can be used in conditional statements in Vanilla&amp;rsquo;s Smarty implementation. These are MultiCheckPermission, SetValue and Url. These function declarations are in &lt;code&gt;/library/core/functions.general.php&lt;/code&gt;. To understand how to use these functions, refer to the source code there.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/conditionals/</guid>
+      <description>Smarty Conditionals Smarty includes a base amount of logic that you can insert into your template. One of these is a conditional statement. A couple of basic examples should give you an idea of the syntax and format of Smarty conditionals.
+This example uses the user data from the controller&amp;rsquo;s data array to print out a welcome message if the user is signed in and a generic message if the user is not signed in.</description>
     </item>
     
     <item>
       <title>Smarty Functions</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-functions&#34;&gt;Smarty Functions&lt;/h2&gt;
-
-&lt;p&gt;This section outlines all the Vanilla-specific Smarty functions made available for use in your Smarty templates.&lt;/p&gt;
-
-&lt;p&gt;You are also able to use the &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.custom.functions.tpl&#34;&gt;built-in Smarty functions&lt;/a&gt; in your template.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/</guid>
+      <description>Smarty Functions This section outlines all the Vanilla-specific Smarty functions made available for use in your Smarty templates.
+You are also able to use the built-in Smarty functions in your template.</description>
     </item>
     
     <item>
       <title>Smarty Modifiers</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/modifiers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h2&gt;
-
-&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). &lt;em&gt;These parameters must follow the order of their appearance in the signature&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates. &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.modifiers.tpl&#34;&gt;Learn more about Smarty modifiers from the Smarty site.&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;modifier-asset-url&#34;&gt;Modifier: &lt;em&gt;asset_url&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Converts a string to an asset url. Solves the problem of trying to using a relative path when Vanilla exists in a subfolder.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;withDomain&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not to prepend the base (&lt;code&gt;http://your-forums.com/&lt;/code&gt;) URL to the outputted link&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;addVersion&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not to append a version to the resulting asset to help bust the cache&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;In the following example, if the asset_url modifier was not specified, the image would not work if Vanilla existed in a subfolder. It also adds the domain name to the url and appends the theme version number.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;img alt=&amp;quot;My logo&amp;quot; src=&amp;quot;{&amp;quot;/themes/MyTheme/design/images/my-logo.png&amp;quot;|asset_url:true:true}&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;modifier-date&#34;&gt;Modifier: &lt;em&gt;date&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Formats a timestamp consistently with Vanilla&amp;rsquo;s date formatting, which by default varies depending on how much time has passed.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;varies&lt;/td&gt;
-&lt;td&gt;The  &lt;a href=&#34;http://php.net/manual/en/function.strftime.php&#34;&gt;strftime&lt;/a&gt; format of the date&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;The following example prints out the current year and uses the &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.variables.smarty.tpl&#34;&gt;{$smarty} reserved variable&lt;/a&gt; to get the current timestamp&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{$smarty.now|date:&amp;quot;%Y&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;modifier-translate&#34;&gt;Modifier: &lt;em&gt;translate&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Translates a string into the selected locale&amp;rsquo;s definition.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;default&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;Default translation. Good idea to set when using short-names&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;//docs.vanillaforums.com/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;Forum&amp;quot;|translate}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/modifiers/</guid>
+      <description>Smarty Modifiers Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). These parameters must follow the order of their appearance in the signature.
+Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates.</description>
     </item>
     
     <item>
       <title>Theme Options</title>
-      <link>//docs.vanillaforums.com/developer/theming/themeoptions/</link>
+      <link>http://127.0.0.1:8081/developer/theming/themeoptions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/themeoptions/</guid>
-      <description>
-
-&lt;h2 id=&#34;theme-options&#34;&gt;Theme Options&lt;/h2&gt;
-
-&lt;p&gt;This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.&lt;/p&gt;
-
-&lt;p&gt;You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&amp;rsquo;s design folder. You can also allow an admin to add custom text to your theme.&lt;/p&gt;
-
-&lt;p&gt;This functionality can be added simply by editing your theme&amp;rsquo;s &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file by adding an &amp;lsquo;Options&amp;rsquo; key to your theme info array with an array as its value. The content of the &amp;lsquo;Options&amp;rsquo; array is discussed below.&lt;/p&gt;
-
-&lt;h3 id=&#34;choosing-between-stylesheets&#34;&gt;Choosing Between Stylesheets&lt;/h3&gt;
-
-&lt;p&gt;In the design folder of your theme, you can add any number of CSS files. The naming convention is &lt;code&gt;custom_*.css&lt;/code&gt;, where * is the theme variant.&lt;/p&gt;
-
-&lt;p&gt;You will still need to have the custom.css file as a default for when the theme is first enabled. In order to allow the admin to switch back to the default, you&amp;rsquo;ll need to add an option where the value is simply %s.&lt;/p&gt;
-
-&lt;p&gt;So, let&amp;rsquo;s say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; [
-    &#39;Styles&#39; =&amp;gt; [
-        &#39;Default&#39; =&amp;gt; &#39;%s&#39;,
-        &#39;Blue&#39; =&amp;gt; &#39;%s_blue&#39;,
-        &#39;Green&#39; =&amp;gt; &#39;%s_green&#39;,
-    ],
-]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of &lt;code&gt;screenshot_*.ext&lt;/code&gt; where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use &lt;code&gt;screenshot.ext&lt;/code&gt; for the default theme.&lt;/p&gt;
-
-&lt;h3 id=&#34;adding-custom-text-to-a-theme&#34;&gt;Adding Custom Text to a Theme&lt;/h3&gt;
-
-&lt;p&gt;To add custom text to a theme, add a &amp;lsquo;Text&amp;rsquo; key to the &amp;lsquo;Options&amp;rsquo; array. The value of of the &amp;lsquo;Text&amp;rsquo; key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of &amp;lsquo;textbox&amp;rsquo;, which is a regular text input, or &amp;lsquo;textarea&amp;rsquo;, the default, which is a multiline textarea element.&lt;/p&gt;
-
-&lt;p&gt;The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the &lt;a href=&#34;developer/theming/smarty/functions/text/&#34;&gt;text function&lt;/a&gt; to insert the text in the theme, using the Text array&amp;rsquo;s key as the &amp;lsquo;code&amp;rsquo; parameter. For example, if you had this options array:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;Options&#39; =&amp;gt; [
-    &#39;Text&#39; =&amp;gt; [
-        &#39;Custom&amp;amp;nbsp;Text&#39; =&amp;gt; [
-                &#39;Description&#39; =&amp;gt; &#39;Custom text to be inserted in the theme.&#39;,
-                &#39;Type&#39; =&amp;gt; &#39;textbox&#39;
-        ]
-    ]
-]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then you could insert the text into your theme using the Smarty tag:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{text code=&amp;quot;Custom&amp;amp;nbsp;Text&amp;quot; default=&amp;quot;Some default custom text&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The text is saved in your config, so you could also access it in PHP using &lt;code&gt;c(&#39;ThemeOption.Custom&amp;amp;nbsp;Text&#39;, &amp;quot;Some default custom text&amp;quot;);&lt;/code&gt; &lt;a href=&#34;../developers/configuration/using.html.md&#34;&gt;Learn more about the config here.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$ThemeInfo[&#39;mytheme&#39;] = [
-    &#39;Name&#39; =&amp;gt; &#39;My Theme&#39;,
-    &#39;Description&#39; =&amp;gt; &#39;My Theme is the greatest.&#39;,
-    &#39;Version&#39; =&amp;gt; &#39;1.0.0&#39;,
-    &#39;Author&#39; =&amp;gt; &#39;Your Name&#39;,
-    &#39;AuthorEmail&#39; =&amp;gt; &#39;your@email.com&#39;,
-    &#39;AuthorUrl&#39; =&amp;gt; &#39;http://yourwebsite.com&#39;,
-    &#39;Options&#39; =&amp;gt; [
-        &#39;Description&#39; =&amp;gt; &#39;This theme has an alternative colour scheme and custom text.&#39;,
-        &#39;Styles&#39; =&amp;gt; [
-            &#39;Default&#39; =&amp;gt; &#39;%s_default&#39;,
-            &#39;Dark&#39; =&amp;gt; &#39;%s_dark&#39;,
-            &#39;Blue&#39; =&amp;gt; &#39;%s_blue&#39;,
-        ],
-        &#39;Text&#39; =&amp;gt; [
-            &#39;Custom&amp;amp;nbsp;Text&#39; =&amp;gt; [
-                    &#39;Description&#39; =&amp;gt; &#39;Custom text to be inserted in the theme.&#39;,
-                    &#39;Type&#39; =&amp;gt; &#39;textbox&#39;
-            ]
-        ]
-    ]
-];
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/themeoptions/</guid>
+      <description>Theme Options This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.
+You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&amp;rsquo;s design folder. You can also allow an admin to add custom text to your theme.
+This functionality can be added simply by editing your theme&amp;rsquo;s about.</description>
     </item>
     
     <item>
       <title>Theme Visibility</title>
-      <link>//docs.vanillaforums.com/developer/theming/themevisibility/</link>
+      <link>http://127.0.0.1:8081/developer/theming/themevisibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/themevisibility/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve got &lt;a href=&#34;http://vanillaforums.com&#34;&gt;Vanilla Cloud&lt;/a&gt;, custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;In order of importance&lt;/strong&gt;, here are the rules for a theme to be visible:&lt;/p&gt;
-
-&lt;h2 id=&#34;method-1&#34;&gt;Method 1:&lt;/h2&gt;
-
-&lt;p&gt;If the theme is set to be visible with this site option:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Garden.Themes.Visible
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can add multiple sites by separating sites with a comma. &lt;strong&gt;This method is discouraged&lt;/strong&gt;. Themes are generally visible to all clients, or only to one client.&lt;/p&gt;
-
-&lt;h2 id=&#34;method-2&#34;&gt;Method 2:&lt;/h2&gt;
-
-&lt;p&gt;In the &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/about-php/&#34;&gt;about.php&lt;/a&gt; file, you can set the theme&amp;rsquo;s visibility with &lt;strong&gt;Hidden&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ThemeInfo[&#39;ExampleTheme&#39;] = [
-    &#39;Name&#39;        =&amp;gt; &amp;quot;Example Theme&amp;quot;,
-    &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;,
-    &#39;Version&#39;     =&amp;gt; &#39;1.0.0&#39;,
-    &#39;Author&#39;      =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;,
-    &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;,
-    &#39;AuthorUrl&#39;   =&amp;gt; &#39;www.vanillaforums.com&#39;,
-    &#39;License&#39;     =&amp;gt; &#39;Proprietary&#39;,
-    &#39;Hidden&#39;      =&amp;gt; true
-];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All core themes have their &lt;strong&gt;Hidden&lt;/strong&gt; variable set to &lt;strong&gt;false&lt;/strong&gt; to be visible to clients.&lt;/p&gt;
-
-&lt;h2 id=&#34;method-3&#34;&gt;Method 3:&lt;/h2&gt;
-
-&lt;p&gt;If there is no config set and a theme doesn&amp;rsquo;t explicitly have &lt;strong&gt;Hidden&lt;/strong&gt; set, the &lt;strong&gt;Sites&lt;/strong&gt; variable is used.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ThemeInfo[&#39;ExampleTheme&#39;] = [
-    &#39;Name&#39;        =&amp;gt; &amp;quot;Example Theme&amp;quot;,
-    &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;,
-    &#39;Version&#39;     =&amp;gt; &#39;1.0.0&#39;,
-    &#39;Author&#39;      =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;,
-    &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;,
-    &#39;AuthorUrl&#39;   =&amp;gt; &#39;www.vanillaforums.com&#39;,
-    &#39;License&#39;     =&amp;gt; &#39;Proprietary&#39;,
-    &#39;Sites&#39;       =&amp;gt; [&#39;example.staging.com&#39;, &#39;example.production.com&#39;]
-];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is a list of sites that can view the theme. &lt;strong&gt;This is the best method for custom client themes&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;You can use an asterisk in the site name for wildcard matches (ex. &amp;lsquo;site-*.example.com&amp;rsquo;). Wildcards are great for clusters that are on the Vanilla Hub.&lt;/li&gt;
-&lt;li&gt;The variable &lt;strong&gt;Site&lt;/strong&gt; works like &lt;strong&gt;Sites&lt;/strong&gt;, but only takes one site, as a string. This variable is deprecated, use &lt;strong&gt;Sites&lt;/strong&gt; instead.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/themevisibility/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  If you&amp;rsquo;ve got Vanilla Cloud, custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
+In order of importance, here are the rules for a theme to be visible:
+Method 1: If the theme is set to be visible with this site option:
+Garden.Themes.Visible  You can add multiple sites by separating sites with a comma.</description>
     </item>
     
     <item>
       <title>Theming</title>
-      <link>//docs.vanillaforums.com/developer/theming/</link>
+      <link>http://127.0.0.1:8081/developer/theming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/</guid>
-      <description>
-
-&lt;h2 id=&#34;theming-overview&#34;&gt;Theming Overview&lt;/h2&gt;
-
-&lt;p&gt;Vanilla themes are built by selectively overriding the views and CSS in the product. They are also imbued with the power of plugins via a special hooks file.&lt;/p&gt;
-
-&lt;p&gt;It is extremely important to never modify Vanilla by directly editing the files distributed in the release. Nearly anything can by accomplished with views, CSS, and hooks in a properly formatted theme.&lt;/p&gt;
-
-&lt;h3 id=&#34;quickstart&#34;&gt;Quickstart&lt;/h3&gt;
-
-&lt;p&gt;To override &lt;a href=&#34;//docs.vanillaforums.com/theming/css&#34;&gt;CSS&lt;/a&gt;, create a custom.css file in your theme; it will be included in the page after our CSS, so you can override without higher specificity or !importants in your rules. To use &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;hooks&lt;/a&gt;, create a file named class.themehooks.php and format it like a new plugin. To customize a &lt;a href=&#34;//docs.vanillaforums.com/theming/views&#34;&gt;view&lt;/a&gt;, copy it to your theme in the appropriate location.&lt;/p&gt;
-
-&lt;p&gt;The best way to get started with theming is to run through our &lt;a href=&#34;//docs.vanillaforums.com/theming/quickstart&#34;&gt;Quickstart&lt;/a&gt; to build your own simple theme. Once you see how it&amp;rsquo;s done, you&amp;rsquo;ll be off to the races.&lt;/p&gt;
-
-&lt;h3 id=&#34;cloud-upgrade-considerations&#34;&gt;Cloud upgrade considerations&lt;/h3&gt;
-
-&lt;p&gt;If you&amp;rsquo;re considering moving to one of our cloud plans in the future, we recommend limiting your modifications to the default.master.tpl view and CSS overrides. That will allow a smooth transition without any customization services being required.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/</guid>
+      <description>Theming Overview Vanilla themes are built by selectively overriding the views and CSS in the product. They are also imbued with the power of plugins via a special hooks file.
+It is extremely important to never modify Vanilla by directly editing the files distributed in the release. Nearly anything can by accomplished with views, CSS, and hooks in a properly formatted theme.
+Quickstart To override CSS, create a custom.css file in your theme; it will be included in the page after our CSS, so you can override without higher specificity or !</description>
     </item>
     
     <item>
       <title>Views / HTML</title>
-      <link>//docs.vanillaforums.com/developer/theming/views/</link>
+      <link>http://127.0.0.1:8081/developer/theming/views/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/views/</guid>
-      <description>
-
-&lt;h2 id=&#34;theming-views&#34;&gt;Theming Views&lt;/h2&gt;
-
-&lt;h3 id=&#34;the-master-view&#34;&gt;The master view&lt;/h3&gt;
-
-&lt;p&gt;The master view for your forum is the wrapper for each page in your forum. Often, this is the only view you&amp;rsquo;ll have to manipulate in your theme. The master view file is called the default.master.tpl (Smarty template) or the default.master.php. We recommend using Smarty templates for your master view, however you can decide to use a regular ol&amp;rsquo; php view if you like.&lt;/p&gt;
-
-&lt;p&gt;To override the default master view:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a new file called default.master.tpl (or default.master.php)&lt;/li&gt;
-&lt;li&gt;Place it in the views folder in your theme folder (i.e., /themes/your_theme_name/views/)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you&amp;rsquo;re new to this, it&amp;rsquo;s probably a good idea to copy the content of /applications/dashboard/views/default.master.tpl into your theme&amp;rsquo;s master view and manipulate it from there.&lt;/p&gt;
-
-&lt;h4 id=&#34;smarty-tags-in-the-master-view&#34;&gt;Smarty tags in the master view&lt;/h4&gt;
-
-&lt;p&gt;You can accomplish a great deal of things using Smarty in your default master view. We highly recommend checking out our &lt;a href=&#34;//docs.vanillaforums.com/theming/smarty&#34;&gt;complete Smarty docs&lt;/a&gt; to get a bearing on this, but here&amp;rsquo;s what you need to know to get started.&lt;/p&gt;
-
-&lt;h5 id=&#34;required-tags&#34;&gt;Required tags&lt;/h5&gt;
-
-&lt;p&gt;There are a few assets that need to appear and an event that needs to be fired from your master view in order for everything to run smoothly. (To learn more about assets and events, check out &lt;a href=&#34;//docs.vanillaforums.com/developer/framework&#34;&gt;our framework docs&lt;/a&gt;.) The contents of these tags are programmatically generated, depending on your forum&amp;rsquo;s data and configuration. Omitting any one of these tags may result in some strange behaviour on your forum.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;The head asset&lt;/strong&gt; &lt;code&gt;{asset name=&amp;quot;Head&amp;quot;}&lt;/code&gt; This should appear within the head &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; block of your html. It contains the css and javascript needed for your applications and plugins.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The content asset&lt;/strong&gt; &lt;code&gt;{asset name=&amp;quot;Content&amp;quot;}&lt;/code&gt; This should appear within the body &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; block of your html. It contains the main content of any page.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The panel asset&lt;/strong&gt; &lt;code&gt;{asset name=&amp;quot;Panel&amp;quot;}&lt;/code&gt; This should appear within the body &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; block of your html. It generally adds tertiary functionality to the forum, however it does include necessary functionality for the &lt;em&gt;Profile&lt;/em&gt; and &lt;em&gt;Conversation&lt;/em&gt; sections of forum. If you decide to go with a panel-less design, we recommend using css to hide the panel on pages where it&amp;rsquo;s unnecessary or to manually adding the panel into the forum sections where it is necessary using the inSection function (see the &lt;em&gt;More Smarty tips and tricks&lt;/em&gt; section below for an example of this).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The foot asset&lt;/strong&gt; &lt;code&gt;{asset name=&amp;quot;Foot&amp;quot;}&lt;/code&gt; This should appear after the Content asset within the body &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; block of your html. Plugins and applications add content or scripts to this asset.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The AfterBody event&lt;/strong&gt; &lt;code&gt;{event name=&amp;quot;AfterBody&amp;quot;}&lt;/code&gt; This should appear just before the closing body tag &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt; of your html. Plugins and applications hook into this event to generate content.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&#34;useful-tags-and-practices&#34;&gt;Useful tags and practices&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Searchbox&lt;/strong&gt; &lt;code&gt;{searchbox}&lt;/code&gt; Adds a handy little searchbox.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Breadcrumbs&lt;/strong&gt; &lt;code&gt;{breadcrumbs}&lt;/code&gt; Adds breadcrumbs, a crucial detail when navigating a forum.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The Me module&lt;/strong&gt; &lt;code&gt;{module name=&amp;quot;MeModule&amp;quot;}&lt;/code&gt; Adds the Me module. This module contains dropdowns for notifications, bookmarks, conversations and settings. It helps a logged-in user access what&amp;rsquo;s important to them.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Opening body tag&lt;/strong&gt; &lt;code&gt;&amp;lt;body id=&amp;quot;{$BodyID}&amp;quot; class=&amp;quot;{$BodyClass}&amp;quot;&amp;gt;&lt;/code&gt; This is how we recommend opening your body element. It adds programmatically generated CSS classes and ids to the body block, which are very useful for targeting sections when styling your forum.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The most up-to-date set of Smarty functions and modifiers can be tracked down in &lt;code&gt;/library/SmartyPlugins&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h5 id=&#34;more-smarty-tips-and-tricks&#34;&gt;More Smarty tips and tricks&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Signed in users&lt;/strong&gt; You can add content to your forum depending on whether a user is signed in or not. For example: &lt;code&gt;{if $User.SignedIn}Welcome back!{/if}&lt;/code&gt; This  snippet adds a welcome message for any signed in user.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Forum sections&lt;/strong&gt; You can add content to your forum depending on what section you&amp;rsquo;re in. For example: &lt;code&gt;{if inSection([&#39;Profile&#39;, &#39;Conversation&#39;])}{asset name=&amp;quot;Panel&amp;quot;}{/if}&lt;/code&gt; This snippet adds the panel asset to the Profile and Conversation sections of the forum. You can find the section name of any page in the forum by using your browser&amp;rsquo;s web tools to inspect the body element. One of the CSS classes on the body element will be Section-*, where * is the section name. (Assuming you have adhered to the opening body tag tip above.)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&#34;smarty-variables-and-setting-page-data-advanced&#34;&gt;Smarty variables and setting page data (Advanced)&lt;/h5&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve read this far, you may have noticed we&amp;rsquo;ve used some variables above to determine the logged-in state of the user (&lt;code&gt;$User&lt;/code&gt;) and to add body classes to and ids to the body tag (&lt;code&gt;$BodyID&lt;/code&gt; and &lt;code&gt;$BodyClass&lt;/code&gt;). You&amp;rsquo;ll probably not be surprised to learn that there are even more variables you can access and use!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For use in testing environments only&lt;/strong&gt;, to view all the variables you have access to, you can include a special tag anywhere in your default master view: &lt;code&gt;{debug}&lt;/code&gt; After adding this tag, refresh your forum page in a browser. A popup will show all the data variables available for use on the given page (you gotta make sure your browser&amp;rsquo;s allowing popups here).&lt;/p&gt;
-
-&lt;p&gt;To go even further, you can use &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;themehooks&lt;/a&gt; to assign data to variables that you can then use in your view.&lt;/p&gt;
-
-&lt;h4 id=&#34;smarty-default-master-view-example&#34;&gt;Smarty default master view example&lt;/h4&gt;
-
-&lt;p&gt;To see how it all fits together, here&amp;rsquo;s a default master view using Smarty:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html lang=&amp;quot;{$CurrentLocale.Lang}&amp;quot;&amp;gt;
-&amp;lt;head&amp;gt;
-    {asset name=&amp;quot;Head&amp;quot;}
-&amp;lt;/head&amp;gt;
-&amp;lt;body id=&amp;quot;{$BodyID}&amp;quot; class=&amp;quot;{$BodyClass}&amp;quot;&amp;gt;
-&amp;lt;div id=&amp;quot;Frame&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;Head&amp;quot; id=&amp;quot;Head&amp;quot;&amp;gt;
-        &amp;lt;div class=&amp;quot;Row&amp;quot;&amp;gt;
-            &amp;lt;div class=&amp;quot;SiteTitle&amp;quot;&amp;gt;
-                &amp;lt;a href=&amp;quot;{link path=&amp;quot;/&amp;quot;}&amp;quot;&amp;gt;{logo}&amp;lt;/a&amp;gt;
-            &amp;lt;/div&amp;gt;
-            &amp;lt;div class=&amp;quot;SiteSearch&amp;quot;&amp;gt;{searchbox}&amp;lt;/div&amp;gt;
-            &amp;lt;ul class=&amp;quot;SiteMenu&amp;quot;&amp;gt;
-                {dashboard_link}
-                {discussions_link}
-                {activity_link}
-                {inbox_link}
-                {custom_menu}
-                {profile_link}
-                {signinout_link}
-            &amp;lt;/ul&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-    &amp;lt;div id=&amp;quot;Body&amp;quot;&amp;gt;
-        &amp;lt;div class=&amp;quot;Row&amp;quot;&amp;gt;
-            &amp;lt;div class=&amp;quot;BreadcrumbsWrapper&amp;quot;&amp;gt;{breadcrumbs}&amp;lt;/div&amp;gt;
-            &amp;lt;div class=&amp;quot;Column PanelColumn&amp;quot; id=&amp;quot;Panel&amp;quot;&amp;gt;
-                {module name=&amp;quot;MeModule&amp;quot;}
-                {asset name=&amp;quot;Panel&amp;quot;}
-            &amp;lt;/div&amp;gt;
-            &amp;lt;div class=&amp;quot;Column ContentColumn&amp;quot; id=&amp;quot;Content&amp;quot;&amp;gt;{asset name=&amp;quot;Content&amp;quot;}&amp;lt;/div&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-    &amp;lt;div id=&amp;quot;Foot&amp;quot;&amp;gt;
-        &amp;lt;div class=&amp;quot;Row&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;{vanillaurl}&amp;quot; class=&amp;quot;PoweredByVanilla&amp;quot; title=&amp;quot;Community Software by Vanilla Forums&amp;quot;&amp;gt;
-                Forum Software Powered by Vanilla
-            &amp;lt;/a&amp;gt;
-            {asset name=&amp;quot;Foot&amp;quot;}
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-{event name=&amp;quot;AfterBody&amp;quot;}
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;overriding-other-views&#34;&gt;Overriding other views&lt;/h3&gt;
-
-&lt;p&gt;Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it&amp;rsquo;s possible to accomplish what you&amp;rsquo;re trying to do using good ol&amp;rsquo; CSS, or &lt;a href=&#34;//docs.vanillaforums.com/theming/hooks&#34;&gt;themehooks&lt;/a&gt;, or by being clever with the configuration of your master view, those are probably better ways to go.&lt;/p&gt;
-
-&lt;p&gt;With that warning out of the way, here&amp;rsquo;s how you can override a view in Vanilla. Some plugins and every application contains a views folder. To override any file in this folder:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Copy the view file from the source view folder&lt;/li&gt;
-&lt;li&gt;Place it in the view folder in your theme folder &lt;em&gt;following the same file path&lt;/em&gt; (i.e., copy the view from /applications/vanilla/views&lt;strong&gt;/discussions/index.php&lt;/strong&gt; to /themes/your_theme_name/views&lt;strong&gt;/discussions/index.php&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&#34;overriding-helper-functions&#34;&gt;Overriding helper functions&lt;/h4&gt;
-
-&lt;p&gt;Many views use helper functions to generate their markup. This helper file can be overridden, as well. However, most of the time you&amp;rsquo;ll only need to override one or two functions from this file. Rather than overriding the entire file, it&amp;rsquo;s better to override just the functions that you need to override. To do this:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a new file in your theme&amp;rsquo;s view folder following the same path as the source helper functions file&lt;/li&gt;
-&lt;li&gt;Copy the functions you want to override into this new file&lt;/li&gt;
-&lt;li&gt;Add a include statement to the source helper functions file, for example:
-&lt;code&gt;php
-include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.php&#39;;
-&lt;/code&gt;
-or
-&lt;code&gt;php
-include_once PATH_PLUGINS.&#39;/Reactions/views/reaction_functions.php&#39;;
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an example of a file that changes the heading of the discussion column in a discussion table from &amp;lsquo;Discussion&amp;rsquo; to the name of the parent category. It overrides the applications/vanilla/views/discussions/helper_functions.php view:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-if (!function_exists(&#39;DiscussionHeading&#39;)):
-    function DiscussionHeading() {
-        return htmlspecialchars(Gdn::Controller()-&amp;gt;data(&#39;Category.Name&#39;, T(&#39;Discussion&#39;)));
-    }
-endif;
-
-include_once PATH_APPLICATIONS.&#39;/vanilla/views/discussions/helper_functions.php&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/views/</guid>
+      <description>Theming Views The master view The master view for your forum is the wrapper for each page in your forum. Often, this is the only view you&amp;rsquo;ll have to manipulate in your theme. The master view file is called the default.master.tpl (Smarty template) or the default.master.php. We recommend using Smarty templates for your master view, however you can decide to use a regular ol&amp;rsquo; php view if you like.</description>
     </item>
     
     <item>
       <title>about.php</title>
-      <link>//docs.vanillaforums.com/developer/theming/about-php/</link>
+      <link>http://127.0.0.1:8081/developer/theming/about-php/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/about-php/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-about-php-file&#34;&gt;The &amp;ldquo;about.php&amp;rdquo; file&lt;/h2&gt;
-
-&lt;p&gt;Each theme has an about.php file that contains some important information for Vanilla. Put this file in your theme root.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a sample file:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-$ThemeInfo[&#39;ExampleTheme&#39;] = [
-    &#39;Name&#39;        =&amp;gt; &amp;quot;Example Theme&amp;quot;,
-    &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;,
-    &#39;Version&#39;     =&amp;gt; &#39;1.0.0&#39;,
-    &#39;Author&#39;      =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;,
-    &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;,
-    &#39;AuthorUrl&#39;   =&amp;gt; &#39;www.vanillaforums.com&#39;,
-    &#39;License&#39;     =&amp;gt; &#39;Proprietary&#39;,
-    &#39;Layout&#39;      =&amp;gt; [
-        &#39;Discussions&#39; =&amp;gt; &#39;table&#39;,
-        &#39;Categories&#39;  =&amp;gt; &#39;modern&#39;,
-    ]
-];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;theme-key&#34;&gt;Theme &amp;ldquo;key&amp;rdquo;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;$ThemeInfo[&#39;ExampleTheme&#39;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It&amp;rsquo;s important to put a unique key here for your theme. A common mistake is to copy another theme and then forget to edit the about.php file. This key is how Vanilla identifies your theme internally.&lt;/p&gt;
-
-&lt;h3 id=&#34;name&#34;&gt;Name&lt;/h3&gt;
-
-&lt;p&gt;The name will appear in the theme selection page.&lt;/p&gt;
-
-&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
-
-&lt;p&gt;Short description of your theme. Will also appear in theme selection page.&lt;/p&gt;
-
-&lt;h3 id=&#34;version&#34;&gt;Version&lt;/h3&gt;
-
-&lt;p&gt;Version of the theme. The cache is tied to this version. If you ever run into an issue with the cache, you can try to bump up this version number.&lt;/p&gt;
-
-&lt;h3 id=&#34;author&#34;&gt;Author&lt;/h3&gt;
-
-&lt;p&gt;Author of the theme&lt;/p&gt;
-
-&lt;h3 id=&#34;authoremail&#34;&gt;AuthorEmail&lt;/h3&gt;
-
-&lt;p&gt;Email of the author&lt;/p&gt;
-
-&lt;h3 id=&#34;license&#34;&gt;License&lt;/h3&gt;
-
-&lt;p&gt;License of the theme.&lt;/p&gt;
-
-&lt;h3 id=&#34;layout&#34;&gt;Layout&lt;/h3&gt;
-
-&lt;p&gt;This is an optional property that tells Vanilla which views the theme was meant to use. Sometimes custom themes only work with a specific view. Keep in mind that this will not block an admin from changing the views, but it will give them a warning in the dashboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Layouts for Discussions:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;modern&lt;/li&gt;
-&lt;li&gt;table&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Layouts for categories:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;modern&lt;/li&gt;
-&lt;li&gt;table&lt;/li&gt;
-&lt;li&gt;mixed&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;visibility&#34;&gt;Visibility&lt;/h3&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve got &lt;a href=&#34;http://vanillaforums.com&#34;&gt;Vanilla Cloud&lt;/a&gt;, make sure to also &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/themevisibility/&#34;&gt;set your theme&amp;rsquo;s visibility&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;theme-options&#34;&gt;Theme Options:&lt;/h3&gt;
-
-&lt;p&gt;The about.php file also supports &lt;a href=&#34;//docs.vanillaforums.com/developer/theming/themeoptions/&#34;&gt;Theme Options&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/about-php/</guid>
+      <description>The &amp;ldquo;about.php&amp;rdquo; file Each theme has an about.php file that contains some important information for Vanilla. Put this file in your theme root.
+Here&amp;rsquo;s a sample file:
+&amp;lt;?php $ThemeInfo[&#39;ExampleTheme&#39;] = [ &#39;Name&#39; =&amp;gt; &amp;quot;Example Theme&amp;quot;, &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;, &#39;Version&#39; =&amp;gt; &#39;1.0.0&#39;, &#39;Author&#39; =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;, &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;, &#39;AuthorUrl&#39; =&amp;gt; &#39;www.vanillaforums.com&#39;, &#39;License&#39; =&amp;gt; &#39;Proprietary&#39;, &#39;Layout&#39; =&amp;gt; [ &#39;Discussions&#39; =&amp;gt; &#39;table&#39;, &#39;Categories&#39; =&amp;gt; &#39;modern&#39;, ] ];  Theme &amp;ldquo;key&amp;rdquo; $ThemeInfo[&#39;ExampleTheme&#39;]  It&amp;rsquo;s important to put a unique key here for your theme.</description>
     </item>
     
     <item>
       <title>{asset}</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-asset&#34;&gt;Function: &lt;code&gt;{asset}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Renders an asset from the controller.&lt;/p&gt;
-
-&lt;p&gt;Assets in Vanilla are containers for different sets of content. The content of each of these asset containers is variable depending on the page. The content of each asset is not currently configurable via the template.&lt;/p&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets. The Panel asset is optional, but you&amp;rsquo;ll likely want to at least include it in the Profile, EditProfile and Conversation sections as it has important functionality in those sections that are not included in the Content asset.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the asset&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;$name&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The id of the tag if different than the name&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The type of tag to wrap the asset in&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The class to add to the asset wrapper&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</guid>
+      <description>Function: {asset} Usage {asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}  Renders an asset from the controller.
+Assets in Vanilla are containers for different sets of content. The content of each of these asset containers is variable depending on the page. The content of each asset is not currently configurable via the template.
+Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets.</description>
     </item>
     
     <item>
       <title>{breadcrumbs}</title>
-      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</link>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-breadcrumbs&#34;&gt;Function: &lt;code&gt;{breadcrumbs}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Render a breadcrumb trail for the user based on the page they are on.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</guid>
+      <description> Function: {breadcrumbs} Usage {breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}  Render a breadcrumb trail for the user based on the page they are on.
+Parameters   Parameter Type Default Description    homelink  string  Home  Title of the first link in the breadcrumbs  homeurl  string  /  URL of the first link in the breadcrumbs  hidelast  boolean  false  Whether or not to hide the currently active (last) crumb    </description>
+    </item>
     
+    <item>
+      <title>{custom_menu}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</guid>
+      <description> Function: {custom_menu} Usage {custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}  A bucket for addon menu items. Adds links depending on which addons are enabled.
+Parameters   Parameter Type Default Description    format  string  none  Custom format to use when wrapping links. Available template variables are %url, %class, and %text  wrap  string  li  Element to wrap around each link in the menu    </description>
+    </item>
     
+    <item>
+      <title>{event}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</guid>
+      <description> Function: {event} Usage {event name=&amp;quot;string&amp;quot;}  Fire an event with the specified name. Learn more about events in Vanilla.
+Parameters   Parameter Type Default Description    name  string  none  Name of the event to fire    </description>
+    </item>
     
+    <item>
+      <title>{homepage_title}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</guid>
+      <description>Function: {homepage_title} Usage {homepage_title}  Writes the site title to the page. You can change the site title from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
     
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;homelink&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;Home&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Title of the first link in the breadcrumbs&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;homeurl&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;/&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;URL of the first link in the breadcrumbs&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;hidelast&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            boolean
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;false&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not to hide the currently active (last) crumb&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
+    <item>
+      <title>{include_file}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</guid>
+      <description> Function: {include_file} Usage {include_file name=&amp;quot;string&amp;quot;}  Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.
+Parameters   Parameter Type Default Description    name  string  none  The name of the file to include    </description>
+    </item>
     
+    <item>
+      <title>{link}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</guid>
+      <description>Function: {link} Usage {link path=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; notag=boolean format=&amp;quot;string&amp;quot; withdomain=boolean}  Takes a route and prepends the web root (expects /controller/action/params as path).
+Parameters   Parameter Type Default Description    path  string  none  The relative path for the url. There are some special paths that can be used to return &amp;lsquo;intelligent&amp;rsquo; links  text  string  none  HTML text to be put inside an anchor.</description>
+    </item>
     
+    <item>
+      <title>{logo}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</guid>
+      <description>Function: {logo} Usage {logo}  Writes the site logo to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
     
-
-</description>
+    <item>
+      <title>{mobile_logo}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</guid>
+      <description>Function: {mobile_logo} Usage {mobile_logo}  Writes the mobile logo to the page. You can change the mobile logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{module}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</guid>
+      <description>Function: {module} Usage {module name=&amp;quot;string&amp;quot; ... }  This is a super handy little function that renders any module in Vanilla. It instantiates the specified module class, sets the properties specified in the function&amp;rsquo;s parameters and calls the toString() function of the module.
+The available parameters differ depending on module itself and the available modules depend on which addons are enabled. If a module is contained in an addon, the addon must be enabled in order for the module to render (a common gotcha).</description>
+    </item>
+    
+    <item>
+      <title>{permission}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</guid>
+      <description> Block: {permission} Usage {permission require=&amp;quot;string&amp;quot;} Foo {/permission}  Only output content if the current user has the specified permission.
+Parameters   Parameter Type Default Description    require  string  none  The permission to check / require    </description>
+    </item>
+    
+    <item>
+      <title>{pocket}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</guid>
+      <description> Function: {pocket} Usage {pocket name=&amp;quot;string&amp;quot;}  Writes a pocket to the page. Pockets placed in the template in this way should have their location set to &amp;lsquo;custom&amp;rsquo;. You can edit this setting from the &amp;lsquo;Pockets&amp;rsquo; settings page in the dashboard.
+Parameters   Parameter Type Default Description    name  string  none  The name of the pocket    </description>
+    </item>
+    
+    <item>
+      <title>{searchbox}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</guid>
+      <description> Function: {searchbox} Usage {searchbox placeholder=&amp;quot;string&amp;quot;}  Writes the search box to the page.
+Parameters   Parameter Type Default Description    placeholder  string  Search  Optional input box placeholder text    </description>
+    </item>
+    
+    <item>
+      <title>{text}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</guid>
+      <description> Function: {text} Usage {text code=&amp;quot;string&amp;quot; default=&amp;quot;string&amp;quot;}  Returns the custom text from a theme&amp;rsquo;s options page. Learn more about how to configure your theme options.
+Parameters   Parameter Type Default Description    code  string  none  The text code set in the theme&amp;rsquo;s information array  default  string  none  The default text if the user hasn&amp;rsquo;t overridden    </description>
+    </item>
+    
+    <item>
+      <title>{t}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/i18n/</guid>
+      <description> Function: {t} Usage {t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}  Output a translatable string with an optional default.
+Parameters   Parameter Type Default Description    c  string  none  The string to output or a string short-name  d  string  $c  Default translation. Good idea to set when using short-names    </description>
     </item>
     
   </channel>
