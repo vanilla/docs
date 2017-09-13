@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Open+Sans:300,300i,400,400i,600,600i,700,700i");
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 * {
   box-sizing: border-box;
 }
@@ -137,10 +137,11 @@ body {
 }
 
 .docs {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Lato", Arial, "Lucida Grande", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-variant: normal;
+  font-weight: 300;
 }
 
 /* generated with grunt-sass-globbing */
@@ -177,7 +178,7 @@ body {
 }
 
 .docs-button.button-small {
-  padding: 7px 20px;
+  padding: 8px 20px;
   border-radius: 2px;
   font-size: 14px;
 }
@@ -191,17 +192,13 @@ body {
   padding: 20px 0px 50px 0px;
 }
 
-.docs-content #content {
-  line-height: 1.6;
-}
-
 .docs-content #content h2 {
   margin: 0px;
   color: #F52C6E;
   font-size: 24px;
-  font-weight: normal;
+  font-weight: lighter;
   border-bottom: 1px dotted #E4E4E4;
-  padding-bottom: 6px;
+  padding-bottom: 15px;
 }
 
 .docs-content #content h2 em, .docs-content #content h2 i {
@@ -213,7 +210,6 @@ body {
   color: #333333;
   font-size: 16px;
   font-weight: normal;
-  margin-top: 1.6em;
 }
 
 .docs-content #content h4 {
@@ -224,7 +220,7 @@ body {
 
 .docs-content #content p {
   font-size: 14px;
-  margin-bottom: 1.6em;
+  line-height: 24px;
 }
 
 .docs-content #content p + h2 {
@@ -232,11 +228,11 @@ body {
 }
 
 .docs-content #content ul, .docs-content #content ol {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .docs-content #content ul li, .docs-content #content ol li {
-  margin-top: .8em;
+  line-height: 22px;
 }
 
 .docs-content #content ul + h2, .docs-content #content ol + h2 {
@@ -258,7 +254,6 @@ body {
 .docs-content #content pre code {
   background: transparent;
   padding: 0px;
-  font-size: 14px;
 }
 
 .docs-content #content pre + h2 {
@@ -268,8 +263,7 @@ body {
 .docs-content #content code {
   background: #fff3f6;
   color: #F52C6E;
-  font-family: "Fira Mono", monospace;
-  font-size: 13px;
+  font-family: "Courier New", Terminal;
   padding: 2px 4px;
   border-radius: 2px;
 }
@@ -337,7 +331,7 @@ body {
 .docs-content #content aside.cloudfeature {
   margin-top: 0px;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: bolder;
   color: #0272AC;
   background-color: #BBE1F5;
 }
@@ -509,13 +503,12 @@ a:hover {
 
 .docs .docs-header .docs-header-logo .docs-docs-tag {
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
 .docs .docs-header .docs-header-logo .docs-docs-tag:before {
   content: "|";
   margin-right: 10px;
-  vertical-align: 2px;
 }
 
 .docs .docs-header .docs-header-tray {
@@ -599,12 +592,12 @@ a:hover {
 
 .docs-layout-landing .docs-cap .docs-welcome h1 {
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .docs-layout-landing .docs-cap .docs-welcome h2 {
   margin-top: 30px;
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 20px;
   color: #EAEAEA;
 }
@@ -617,7 +610,7 @@ a:hover {
   width: 419px;
   min-height: 380px;
   margin: 0px auto;
-  padding: 30px 30px 40px;
+  padding: 30px 40px 40px 40px;
   margin-top: -160px;
   border-radius: 2px;
   position: relative;
@@ -641,7 +634,7 @@ a:hover {
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice h3 {
   margin: 0px;
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 28px;
   color: white;
 }
@@ -651,7 +644,7 @@ a:hover {
   font-size: 14px;
   color: white;
   font-style: normal;
-  font-weight: normal;
+  font-weight: lighter;
 }
 
 .docs-layout-landing .docs-chooser .docs-welcome-choice p {
@@ -682,6 +675,7 @@ a:hover {
 .docs-layout-landing .docs-api-gutter {
   text-align: center;
   font-size: 18px;
+  font-weight: lighter;
   margin: 50px 0px 30px 0px;
 }
 
@@ -710,8 +704,11 @@ a:hover {
 
 .docs-layout-notfound #docs-404 h1 {
   font-size: 140px;
-  font-weight: 300;
   margin-bottom: 0px;
+}
+
+.docs-layout-notfound #docs-404 p {
+  font-weight: lighter;
 }
 
 .docs-title-wrapper {
@@ -807,7 +804,7 @@ a:hover {
 
 .docs-content #sidebar ul li.active a {
   color: #0291DB;
-  font-weight: 600;
+  font-weight: bolder;
 }
 
 .docs-content #sidebar ul li:before {
@@ -883,7 +880,7 @@ a:hover {
 .docs-platform .docs-platform-choice .choice-details h3 {
   margin: 0px 0px 10px 0px;
   font-size: 26px;
-  font-weight: normal;
+  font-weight: lighter;
 }
 
 .docs-platform .docs-platform-choice .choice-details p {

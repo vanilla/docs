@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oauth on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/oauth/</link>
-    <description>Recent content in Oauth on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/oauth/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="//docs.vanillaforums.com/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="//docs.vanillaforums.com/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OAuth</title>
@@ -15,8 +13,55 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/sso/oauth/</guid>
-      <description>SSO with OAuth: Overview Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:
- Facebook Twitter LinkedIn Google+  Because OAuth 2.0 is an SSO framework and not a narrowly defined protocol (see OAuth 2.0 Spec), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins.</description>
+      <description>
+
+&lt;h2 id=&#34;sso-with-oauth-overview&#34;&gt;SSO with OAuth: Overview&lt;/h2&gt;
+
+&lt;p&gt;Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Twitter&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;Google+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because OAuth 2.0 is an SSO &lt;em&gt;framework&lt;/em&gt; and not a narrowly defined protocol (see &lt;a href=&#34;https://tools.ietf.org/html/rfc6749&#34;&gt;OAuth 2.0 Spec&lt;/a&gt;),
+custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom
+services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins. This base
+class might look like many of our plugins (containing event handlers, etc.) it is not intended to be executed directly. To take advantage
+of this class, either create a plug in to extend its features or use the OAuth2 plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;oauth2-plugin&#34;&gt;OAuth2 Plugin&lt;/h2&gt;
+
+&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Vanilla has created an OAuth2 plugin that, for most use-cases, can provide a plug-and-play SSO solution.&lt;/p&gt;
+
+&lt;p&gt;OAuth2 accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.&lt;/p&gt;
+
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+
+&lt;p&gt;The OAuth2 Plugin attempts to &amp;ldquo;parameterize&amp;rdquo; as many aspects of the functionality as possible. A settings form in the dashboard allows you to set:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The client id&lt;/li&gt;
+&lt;li&gt;The client secret&lt;/li&gt;
+&lt;li&gt;The full path to the authorization URI, registration URI, sign out URI, token endpoint and profile endpoint&lt;/li&gt;
+&lt;li&gt;The scope&lt;/li&gt;
+&lt;li&gt;The exepected keys in the JSON response in the profile request&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;possible-pitfalls&#34;&gt;Possible Pitfalls&lt;/h3&gt;
+
+&lt;p&gt;A number of things can go wrong when trying to implement SSO with this plugin:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Double check that all the parameters outlined in the Assumptions section above are met&lt;/li&gt;
+&lt;li&gt;Your forum must be accessed over &lt;code&gt;https&lt;/code&gt; and must contact your Authorization Server in the same way&lt;/li&gt;
+&lt;li&gt;Your Authorization Server will usually need to &amp;ldquo;whitelist&amp;rdquo; the redirect URI (i.e. https://&lt;em&gt;[The url of the forum]&lt;/em&gt;/entry/oauth2)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
