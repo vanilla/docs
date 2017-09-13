@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/api/</link>
+    <link>//docs.vanillaforums.com/tags/api/</link>
     <description>Recent content in Api on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>API</title>
-      <link>http://127.0.0.1:8081/help/api/</link>
+      <link>//docs.vanillaforums.com/help/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/api/</guid>
+      <guid>//docs.vanillaforums.com/help/api/</guid>
       <description>API Vanilla&amp;rsquo;s API is documented here.</description>
     </item>
     
     <item>
       <title>Authentication</title>
-      <link>http://127.0.0.1:8081/apiv2/authentication/</link>
+      <link>//docs.vanillaforums.com/apiv2/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/apiv2/authentication/</guid>
+      <guid>//docs.vanillaforums.com/apiv2/authentication/</guid>
       <description>The API supports two means of authentication. Both require an access token.
 HTTP Header To authenticate with the HTTP header pass you access token in the Authorization field with the bearer scheme.
 Authorization: Bearer &amp;lt;your_access_token&amp;gt;  This is the preferred way of authenticating against the API because headers are not usually logged on servers. If you are making server to server calls its worth looking up how to add custom headers in your API client.</description>
@@ -31,20 +31,20 @@ Authorization: Bearer &amp;lt;your_access_token&amp;gt;  This is the preferred w
     
     <item>
       <title>Authentication</title>
-      <link>http://127.0.0.1:8081/developer/framework/apiv2/authentication/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/framework/apiv2/authentication/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</guid>
       <description>Authenticating API Calls When making calls to the API you&amp;rsquo;ll need to pass an access token in order to authenticate as a user. Vanilla has core support for access tokens, with the following features:
  Access tokens can be issued, verified, and revoked with the AccessTokenModel An access token submitted in the Authorization header will authenticate the appropriate user. Expired access tokens are automatically pruned from the access token table, but stick around for a bit to give appropriate expired errors.</description>
     </item>
     
     <item>
       <title>Endpoint: categories</title>
-      <link>http://127.0.0.1:8081/api/categories/</link>
+      <link>//docs.vanillaforums.com/api/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/categories/</guid>
+      <guid>//docs.vanillaforums.com/api/categories/</guid>
       <description>/categories/add POST /api/v1/categories/add.ext HTTP/1.1 Host: https://yoursite.vanillaforums.com  Adds a new category.
 Authentication: required
 Parameters    Parameter Type Description     Name string The name of the category   UrlCode string URL friendly category stub   Description string Description of this category   Sort integer Category sort order rank   ParentCategoryID integer Parent Category (ID, use if no Name)   ParentCategory string Parent Category (Name, use if no ID)   Archived boolean Whether this category is archived   Permissions array Custom permissions for the category.</description>
@@ -52,10 +52,10 @@ Parameters    Parameter Type Description     Name string The name of the categor
     
     <item>
       <title>Endpoint: comments</title>
-      <link>http://127.0.0.1:8081/api/comments/</link>
+      <link>//docs.vanillaforums.com/api/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/comments/</guid>
+      <guid>//docs.vanillaforums.com/api/comments/</guid>
       <description> /comments/add POST /api/v1/comments/add.ext HTTP/1.1 Host: https://yoursite.vanillaforums.com  Creates a new comment.
 Authentication: required
 Parameters    Parameter Type Description     DiscussionID integer Discussion to post comment to   Body string Comment body   Format string Comment output format   ForeignID string Related foreign content identifier   Type string Comment type    </description>
@@ -63,42 +63,30 @@ Parameters    Parameter Type Description     DiscussionID integer Discussion to 
     
     <item>
       <title>Endpoint: discussions</title>
-      <link>http://127.0.0.1:8081/api/discussions/</link>
+      <link>//docs.vanillaforums.com/api/discussions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/discussions/</guid>
+      <guid>//docs.vanillaforums.com/api/discussions/</guid>
       <description>/discussions/add POST /api/v1/discussions/add.ext HTTP/1.1 Host: https://yoursite.vanillaforums.com  Creates a new discussion.
 Authentication: required
 Parameters    Parameter Type Description     Name string Discussion name   Body string Discussion body   Format string Discussion output format   CategoryID integer Discussion Category (ID, use if no Name)   Category string Discussion Category (Name, use if no ID)   ForeignID string Related foreign content identifier   Tags csv List of discussion tags   Type string Discussion type   Closed boolean Discussion closed state   Announce boolean Discussion announced state   Sink boolean Discussion sunk state    /discussions/bookmark POST /api/v1/discussions/bookmark.</description>
     </item>
     
     <item>
-      <title>Endpoint: moderation</title>
-      <link>http://127.0.0.1:8081/api/moderation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://127.0.0.1:8081/api/moderation/</guid>
-      <description>Moderation API Details about API endpoints for moderation.
-Simple API will be needed to make requests from an un authenticated request. To use Simple API you need to:
- Enable to SimpleAPI Plugin Prepend /api/v1/ to the URL Append ?access_token=XXXXXX to the url  Example:
-GET /api/v1/mod/preapproval.json?access_token=XXXXXX HTTP/1.1 Host: http://example.vanillaforums.com { &amp;quot;QueueName&amp;quot;: &amp;quot;premoderation&amp;quot;, &amp;quot;Queue&amp;quot;: [ .... ], &amp;quot;Page&amp;quot;: &amp;quot;p1&amp;quot;, &amp;quot;Totals&amp;quot;: { &amp;quot;Status&amp;quot;: { &amp;quot;approved&amp;quot;: 2, &amp;quot;denied&amp;quot;: 1, &amp;quot;unread&amp;quot;: 10 }, &amp;quot;Records&amp;quot;: 13, &amp;quot;PageSize&amp;quot;: 30, &amp;quot;Pages&amp;quot;: 1 } }  Permissions All of the moderation endpoints require the Garden.</description>
-    </item>
-    
-    <item>
       <title>Endpoint: multisites</title>
-      <link>http://127.0.0.1:8081/api/multisites/</link>
+      <link>//docs.vanillaforums.com/api/multisites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/multisites/</guid>
+      <guid>//docs.vanillaforums.com/api/multisites/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Overview The site hub is a special service for VIP customers. It allows you to create sites on your VIP cluster and is used for people that want to integrate communities within their entire organization. You can make hub api calls just like other api calls, but you make those calls against your site hub rather than an individual site.</description>
     </item>
     
     <item>
       <title>Endpoint: roles</title>
-      <link>http://127.0.0.1:8081/api/roles/</link>
+      <link>//docs.vanillaforums.com/api/roles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/roles/</guid>
+      <guid>//docs.vanillaforums.com/api/roles/</guid>
       <description>/roles/add POST /api/v1/roles/add.ext HTTP/1.1 Host: https://yoursite.vanillaforums.com  Add a new role.
 Authentication: required
 Parameters    Parameter Type Description     Name string The name of the role   Description string Description of this role   Permissions array The permissions of the role. Each global permission is a dot-separated key with a boolean value.   Permissions.Category array Custom category permissions. Each item in the array is a permission for a particular category.</description>
@@ -106,70 +94,70 @@ Parameters    Parameter Type Description     Name string The name of the role   
     
     <item>
       <title>Resource Routing</title>
-      <link>http://127.0.0.1:8081/developer/framework/apiv2/resource-routing/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/framework/apiv2/resource-routing/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</guid>
       <description>RESTful Resource Routing to Controller Methods This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from the /api/v2/ base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.
 Controller Names In order for a controller to be accessible from the API its name must end in &amp;ldquo;ApiController&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Smart ID</title>
-      <link>http://127.0.0.1:8081/api/smart-id/</link>
+      <link>//docs.vanillaforums.com/api/smart-id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/smart-id/</guid>
+      <guid>//docs.vanillaforums.com/api/smart-id/</guid>
       <description>Many API methods take a UserID as one of their required parameters, for example the /badge/give method. Often, especially in a SSO context, the calling system will not know the native Vanilla UserID, but will instead know some other identifying characteristic of the user, such as their Email, Username, or SSO ForeignID.
 Fields that accept Smart IDs allow these tokens to be supplied instead of a native UserID. Internally, the Email, Username or SSO ForeignID will be converted into a Vanilla UserID by the API layer and passed along to the core method.</description>
     </item>
     
     <item>
       <title>Use API on External Sites</title>
-      <link>http://127.0.0.1:8081/api/use-api-on-external-site/</link>
+      <link>//docs.vanillaforums.com/api/use-api-on-external-site/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/use-api-on-external-site/</guid>
+      <guid>//docs.vanillaforums.com/api/use-api-on-external-site/</guid>
       <description>The Vanilla Forums API can be used to display information from your community outside of the community such as your blog. This guide shows a basic example using javascript and jQuery.
 JSONP Default browser security does not let you make API calls from an external site. This is necessary to prevent a wide range of hacking and in general keeps the web a safer place. However, to get around this limitation with the API Vanilla uses a technology called JSONP.</description>
     </item>
     
     <item>
       <title>Vanilla API</title>
-      <link>http://127.0.0.1:8081/api/</link>
+      <link>//docs.vanillaforums.com/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/api/</guid>
+      <guid>//docs.vanillaforums.com/api/</guid>
       <description>Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.
 Configuring Simple API Simple API is a plugin. Once you&amp;rsquo;ve enabled the plugin you’ll see a new link in your dashboard called &amp;ldquo;API&amp;rdquo;. This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.</description>
     </item>
     
     <item>
       <title>Vanilla API v2</title>
-      <link>http://127.0.0.1:8081/apiv2/</link>
+      <link>//docs.vanillaforums.com/apiv2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/apiv2/</guid>
+      <guid>//docs.vanillaforums.com/apiv2/</guid>
       <description>The Vanilla API v2 is the latest version of Vanilla&amp;rsquo;s RESTful API. We&amp;rsquo;ve taken all the lessons learned from our first API and made a more consistent, useful API for integrating within your applications.
 Improvements in API v2  More authentication options including per-user access tokens. A live API reference in your dashboard where you can reference API methods and make calls right from within the documentation. More endpoints so you can control more of your site from the API.</description>
     </item>
     
     <item>
       <title>Writing API Endpoints</title>
-      <link>http://127.0.0.1:8081/developer/framework/apiv2/api-endpoints/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/framework/apiv2/api-endpoints/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</guid>
       <description>Controller Endpoints When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the resource routing guide. This guide concerns writing the contents of a method.
 The Controller Base Class Although controllers don&amp;rsquo;t need to inherit from any class, the Vanilla\Web\Controller class offers useful functionality and is going to be the class you inherit from almost 100% of the time.</description>
     </item>
     
     <item>
       <title>Writing APIs</title>
-      <link>http://127.0.0.1:8081/developer/framework/apiv2/</link>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/framework/apiv2/</guid>
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/</guid>
       <description>The Vanilla APIv2 Vanilla&amp;rsquo;s APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an &amp;ldquo;API first&amp;rdquo; framework where you write your API first and then think about the resulting HTML. This offers several benefits:
  An API is easier to test, lending well to automated testing. You can connect to an API from different clients and not just browser.</description>
     </item>

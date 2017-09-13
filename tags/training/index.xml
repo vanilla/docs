@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Training on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/training/</link>
+    <link>//docs.vanillaforums.com/tags/training/</link>
     <description>Recent content in Training on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/training/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/training/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Help and Training</title>
-      <link>http://127.0.0.1:8081/help/</link>
+      <link>//docs.vanillaforums.com/help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/</guid>
+      <guid>//docs.vanillaforums.com/help/</guid>
       <description>Welcome! This section focuses on the perspective of members, moderators, and administrators in their daily use of Vanilla. It includes lots of tutorials and tips for getting the most out of Vanilla. Use it to learn more about what is possible with Vanilla and to setup your new forum in a way that best suits your unique community.
 From the blog  We&#39;ve collected some helpful articles from our blog that might be useful to you as your build your community.</description>
     </item>

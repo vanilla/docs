@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Staging on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/staging/</link>
+    <link>//docs.vanillaforums.com/tags/staging/</link>
     <description>Recent content in Staging on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/staging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/staging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Staging Site</title>
-      <link>http://127.0.0.1:8081/help/cloud/staging/</link>
+      <link>//docs.vanillaforums.com/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/staging/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/staging/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Staging Site Overview For higher plan levels, we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.
 Test data We do not typically use your staging forum as the destination for your test migration.</description>
     </item>

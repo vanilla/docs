@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/series/</link>
+    <link>//docs.vanillaforums.com/series/</link>
     <description>Recent content in Series on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/series/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/series/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

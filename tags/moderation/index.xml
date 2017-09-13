@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moderation on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/moderation/</link>
+    <link>//docs.vanillaforums.com/tags/moderation/</link>
     <description>Recent content in Moderation on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/moderation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/moderation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Warnings and Notes</title>
-      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</guid>
       <description>What are Warnings? Warnings can be given to users by moderators for behavior that is not appropriate in the community. Warnings use a points system that increases a user’s warning level with successive warnings until the warnings expire. Once users reach certain points thresholds they can be jailed or banned.
 What are Notes? User notes are notes attached to individual users that only moderators can add and see. They allow moderators to keep track of information about users that may be important to other moderators.</description>
     </item>

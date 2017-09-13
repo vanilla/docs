@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emails on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/emails/</link>
+    <link>//docs.vanillaforums.com/tags/emails/</link>
     <description>Recent content in Emails on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/emails/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/emails/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Emails</title>
-      <link>http://127.0.0.1:8081/help/appearance/emails/</link>
+      <link>//docs.vanillaforums.com/help/appearance/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/emails/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/emails/</guid>
       <description>Email Appearance You can choose between sending plaintext or HTML emails. The difference is that HTML emails can include colors, images and other styling while plaintext emails are, well, plain text.
 HTML emails can be enabled or disabled from the dashboard by navigating to the &amp;lsquo;Email&amp;rsquo; link in the panel. From there, you can also send test emails and configure HTML emails.
 HTML Emails You can customize the way your forum&amp;rsquo;s HTML emails look by navigating the &amp;lsquo;Email&amp;rsquo; link in the dashboard&amp;rsquo;s panel.</description>

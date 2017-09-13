@@ -2,559 +2,559 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/</link>
+    <link>//docs.vanillaforums.com/tags/</link>
     <description>Recent content in Tags on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2016</title>
-      <link>http://127.0.0.1:8081/tags/2016/</link>
+      <link>//docs.vanillaforums.com/tags/2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/2016/</guid>
+      <guid>//docs.vanillaforums.com/tags/2016/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2017</title>
-      <link>http://127.0.0.1:8081/tags/2017/</link>
+      <link>//docs.vanillaforums.com/tags/2017/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/2017/</guid>
+      <guid>//docs.vanillaforums.com/tags/2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Addons</title>
-      <link>http://127.0.0.1:8081/tags/addons/</link>
+      <link>//docs.vanillaforums.com/tags/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/addons/</guid>
+      <guid>//docs.vanillaforums.com/tags/addons/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Analytics</title>
-      <link>http://127.0.0.1:8081/tags/analytics/</link>
+      <link>//docs.vanillaforums.com/tags/analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/analytics/</guid>
+      <guid>//docs.vanillaforums.com/tags/analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Api</title>
-      <link>http://127.0.0.1:8081/tags/api/</link>
+      <link>//docs.vanillaforums.com/tags/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/api/</guid>
+      <guid>//docs.vanillaforums.com/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apiv2</title>
-      <link>http://127.0.0.1:8081/tags/apiv2/</link>
+      <link>//docs.vanillaforums.com/tags/apiv2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/apiv2/</guid>
+      <guid>//docs.vanillaforums.com/tags/apiv2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Badges</title>
-      <link>http://127.0.0.1:8081/tags/badges/</link>
+      <link>//docs.vanillaforums.com/tags/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/badges/</guid>
+      <guid>//docs.vanillaforums.com/tags/badges/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Categories</title>
-      <link>http://127.0.0.1:8081/tags/categories/</link>
+      <link>//docs.vanillaforums.com/tags/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/categories/</guid>
+      <guid>//docs.vanillaforums.com/tags/categories/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>http://127.0.0.1:8081/tags/cloud/</link>
+      <link>//docs.vanillaforums.com/tags/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/cloud/</guid>
+      <guid>//docs.vanillaforums.com/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Comments</title>
-      <link>http://127.0.0.1:8081/tags/comments/</link>
+      <link>//docs.vanillaforums.com/tags/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/comments/</guid>
+      <guid>//docs.vanillaforums.com/tags/comments/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Configuration</title>
-      <link>http://127.0.0.1:8081/tags/configuration/</link>
+      <link>//docs.vanillaforums.com/tags/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/configuration/</guid>
+      <guid>//docs.vanillaforums.com/tags/configuration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contributing</title>
-      <link>http://127.0.0.1:8081/tags/contributing/</link>
+      <link>//docs.vanillaforums.com/tags/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/contributing/</guid>
+      <guid>//docs.vanillaforums.com/tags/contributing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Developer</title>
-      <link>http://127.0.0.1:8081/tags/developer/</link>
+      <link>//docs.vanillaforums.com/tags/developer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/developer/</guid>
+      <guid>//docs.vanillaforums.com/tags/developer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Developers</title>
-      <link>http://127.0.0.1:8081/tags/developers/</link>
+      <link>//docs.vanillaforums.com/tags/developers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/developers/</guid>
+      <guid>//docs.vanillaforums.com/tags/developers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emails</title>
-      <link>http://127.0.0.1:8081/tags/emails/</link>
+      <link>//docs.vanillaforums.com/tags/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/emails/</guid>
+      <guid>//docs.vanillaforums.com/tags/emails/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embed</title>
-      <link>http://127.0.0.1:8081/tags/embed/</link>
+      <link>//docs.vanillaforums.com/tags/embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/embed/</guid>
+      <guid>//docs.vanillaforums.com/tags/embed/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embedding</title>
-      <link>http://127.0.0.1:8081/tags/embedding/</link>
+      <link>//docs.vanillaforums.com/tags/embedding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/embedding/</guid>
+      <guid>//docs.vanillaforums.com/tags/embedding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emoji</title>
-      <link>http://127.0.0.1:8081/tags/emoji/</link>
+      <link>//docs.vanillaforums.com/tags/emoji/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/emoji/</guid>
+      <guid>//docs.vanillaforums.com/tags/emoji/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Features</title>
-      <link>http://127.0.0.1:8081/tags/features/</link>
+      <link>//docs.vanillaforums.com/tags/features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/features/</guid>
+      <guid>//docs.vanillaforums.com/tags/features/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Framework</title>
-      <link>http://127.0.0.1:8081/tags/framework/</link>
+      <link>//docs.vanillaforums.com/tags/framework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/framework/</guid>
+      <guid>//docs.vanillaforums.com/tags/framework/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functions</title>
-      <link>http://127.0.0.1:8081/tags/functions/</link>
+      <link>//docs.vanillaforums.com/tags/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/functions/</guid>
+      <guid>//docs.vanillaforums.com/tags/functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Groups</title>
-      <link>http://127.0.0.1:8081/tags/groups/</link>
+      <link>//docs.vanillaforums.com/tags/groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/groups/</guid>
+      <guid>//docs.vanillaforums.com/tags/groups/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hub</title>
-      <link>http://127.0.0.1:8081/tags/hub/</link>
+      <link>//docs.vanillaforums.com/tags/hub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/hub/</guid>
+      <guid>//docs.vanillaforums.com/tags/hub/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I18n</title>
-      <link>http://127.0.0.1:8081/tags/i18n/</link>
+      <link>//docs.vanillaforums.com/tags/i18n/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/i18n/</guid>
+      <guid>//docs.vanillaforums.com/tags/i18n/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Importing</title>
-      <link>http://127.0.0.1:8081/tags/importing/</link>
+      <link>//docs.vanillaforums.com/tags/importing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/importing/</guid>
+      <guid>//docs.vanillaforums.com/tags/importing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Installation</title>
-      <link>http://127.0.0.1:8081/tags/installation/</link>
+      <link>//docs.vanillaforums.com/tags/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/installation/</guid>
+      <guid>//docs.vanillaforums.com/tags/installation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Integration</title>
-      <link>http://127.0.0.1:8081/tags/integration/</link>
+      <link>//docs.vanillaforums.com/tags/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/integration/</guid>
+      <guid>//docs.vanillaforums.com/tags/integration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Integrations</title>
-      <link>http://127.0.0.1:8081/tags/integrations/</link>
+      <link>//docs.vanillaforums.com/tags/integrations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/integrations/</guid>
+      <guid>//docs.vanillaforums.com/tags/integrations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jsconnect</title>
-      <link>http://127.0.0.1:8081/tags/jsconnect/</link>
+      <link>//docs.vanillaforums.com/tags/jsconnect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/jsconnect/</guid>
+      <guid>//docs.vanillaforums.com/tags/jsconnect/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Locales</title>
-      <link>http://127.0.0.1:8081/tags/locales/</link>
+      <link>//docs.vanillaforums.com/tags/locales/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/locales/</guid>
+      <guid>//docs.vanillaforums.com/tags/locales/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Migration</title>
-      <link>http://127.0.0.1:8081/tags/migration/</link>
+      <link>//docs.vanillaforums.com/tags/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/migration/</guid>
+      <guid>//docs.vanillaforums.com/tags/migration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Moderation</title>
-      <link>http://127.0.0.1:8081/tags/moderation/</link>
+      <link>//docs.vanillaforums.com/tags/moderation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/moderation/</guid>
+      <guid>//docs.vanillaforums.com/tags/moderation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multisite</title>
-      <link>http://127.0.0.1:8081/tags/multisite/</link>
+      <link>//docs.vanillaforums.com/tags/multisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/multisite/</guid>
+      <guid>//docs.vanillaforums.com/tags/multisite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Notifications</title>
-      <link>http://127.0.0.1:8081/tags/notifications/</link>
+      <link>//docs.vanillaforums.com/tags/notifications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/notifications/</guid>
+      <guid>//docs.vanillaforums.com/tags/notifications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oauth</title>
-      <link>http://127.0.0.1:8081/tags/oauth/</link>
+      <link>//docs.vanillaforums.com/tags/oauth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/oauth/</guid>
+      <guid>//docs.vanillaforums.com/tags/oauth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Permissions</title>
-      <link>http://127.0.0.1:8081/tags/permissions/</link>
+      <link>//docs.vanillaforums.com/tags/permissions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/permissions/</guid>
+      <guid>//docs.vanillaforums.com/tags/permissions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plugins</title>
-      <link>http://127.0.0.1:8081/tags/plugins/</link>
+      <link>//docs.vanillaforums.com/tags/plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/plugins/</guid>
+      <guid>//docs.vanillaforums.com/tags/plugins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Posting</title>
-      <link>http://127.0.0.1:8081/tags/posting/</link>
+      <link>//docs.vanillaforums.com/tags/posting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/posting/</guid>
+      <guid>//docs.vanillaforums.com/tags/posting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ranks</title>
-      <link>http://127.0.0.1:8081/tags/ranks/</link>
+      <link>//docs.vanillaforums.com/tags/ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/ranks/</guid>
+      <guid>//docs.vanillaforums.com/tags/ranks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reactions</title>
-      <link>http://127.0.0.1:8081/tags/reactions/</link>
+      <link>//docs.vanillaforums.com/tags/reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/reactions/</guid>
+      <guid>//docs.vanillaforums.com/tags/reactions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Releases</title>
-      <link>http://127.0.0.1:8081/tags/releases/</link>
+      <link>//docs.vanillaforums.com/tags/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/releases/</guid>
+      <guid>//docs.vanillaforums.com/tags/releases/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Repository</title>
-      <link>http://127.0.0.1:8081/tags/repository/</link>
+      <link>//docs.vanillaforums.com/tags/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/repository/</guid>
+      <guid>//docs.vanillaforums.com/tags/repository/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Roles</title>
-      <link>http://127.0.0.1:8081/tags/roles/</link>
+      <link>//docs.vanillaforums.com/tags/roles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/roles/</guid>
+      <guid>//docs.vanillaforums.com/tags/roles/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Saml</title>
-      <link>http://127.0.0.1:8081/tags/saml/</link>
+      <link>//docs.vanillaforums.com/tags/saml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/saml/</guid>
+      <guid>//docs.vanillaforums.com/tags/saml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Seo</title>
-      <link>http://127.0.0.1:8081/tags/seo/</link>
+      <link>//docs.vanillaforums.com/tags/seo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/seo/</guid>
+      <guid>//docs.vanillaforums.com/tags/seo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Server</title>
-      <link>http://127.0.0.1:8081/tags/server/</link>
+      <link>//docs.vanillaforums.com/tags/server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/server/</guid>
+      <guid>//docs.vanillaforums.com/tags/server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Single Sign On</title>
-      <link>http://127.0.0.1:8081/tags/single-sign-on/</link>
+      <link>//docs.vanillaforums.com/tags/single-sign-on/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/single-sign-on/</guid>
+      <guid>//docs.vanillaforums.com/tags/single-sign-on/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Smarty</title>
-      <link>http://127.0.0.1:8081/tags/smarty/</link>
+      <link>//docs.vanillaforums.com/tags/smarty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/smarty/</guid>
+      <guid>//docs.vanillaforums.com/tags/smarty/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Smarty Functions</title>
-      <link>http://127.0.0.1:8081/tags/smarty-functions/</link>
+      <link>//docs.vanillaforums.com/tags/smarty-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/smarty-functions/</guid>
+      <guid>//docs.vanillaforums.com/tags/smarty-functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ssl</title>
-      <link>http://127.0.0.1:8081/tags/ssl/</link>
+      <link>//docs.vanillaforums.com/tags/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/ssl/</guid>
+      <guid>//docs.vanillaforums.com/tags/ssl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Staging</title>
-      <link>http://127.0.0.1:8081/tags/staging/</link>
+      <link>//docs.vanillaforums.com/tags/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/staging/</guid>
+      <guid>//docs.vanillaforums.com/tags/staging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Theming</title>
-      <link>http://127.0.0.1:8081/tags/theming/</link>
+      <link>//docs.vanillaforums.com/tags/theming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/theming/</guid>
+      <guid>//docs.vanillaforums.com/tags/theming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Training</title>
-      <link>http://127.0.0.1:8081/tags/training/</link>
+      <link>//docs.vanillaforums.com/tags/training/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/training/</guid>
+      <guid>//docs.vanillaforums.com/tags/training/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Troubleshooting</title>
-      <link>http://127.0.0.1:8081/tags/troubleshooting/</link>
+      <link>//docs.vanillaforums.com/tags/troubleshooting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/troubleshooting/</guid>
+      <guid>//docs.vanillaforums.com/tags/troubleshooting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Twitter</title>
-      <link>http://127.0.0.1:8081/tags/twitter/</link>
+      <link>//docs.vanillaforums.com/tags/twitter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/twitter/</guid>
+      <guid>//docs.vanillaforums.com/tags/twitter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vanilla Pop</title>
-      <link>http://127.0.0.1:8081/tags/vanilla-pop/</link>
+      <link>//docs.vanillaforums.com/tags/vanilla-pop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/vanilla-pop/</guid>
+      <guid>//docs.vanillaforums.com/tags/vanilla-pop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vimeo</title>
-      <link>http://127.0.0.1:8081/tags/vimeo/</link>
+      <link>//docs.vanillaforums.com/tags/vimeo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/vimeo/</guid>
+      <guid>//docs.vanillaforums.com/tags/vimeo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Warnings and Notes</title>
-      <link>http://127.0.0.1:8081/tags/warnings-and-notes/</link>
+      <link>//docs.vanillaforums.com/tags/warnings-and-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/warnings-and-notes/</guid>
+      <guid>//docs.vanillaforums.com/tags/warnings-and-notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wistia</title>
-      <link>http://127.0.0.1:8081/tags/wistia/</link>
+      <link>//docs.vanillaforums.com/tags/wistia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/wistia/</guid>
+      <guid>//docs.vanillaforums.com/tags/wistia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wordpress</title>
-      <link>http://127.0.0.1:8081/tags/wordpress/</link>
+      <link>//docs.vanillaforums.com/tags/wordpress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/wordpress/</guid>
+      <guid>//docs.vanillaforums.com/tags/wordpress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Youtube</title>
-      <link>http://127.0.0.1:8081/tags/youtube/</link>
+      <link>//docs.vanillaforums.com/tags/youtube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/tags/youtube/</guid>
+      <guid>//docs.vanillaforums.com/tags/youtube/</guid>
       <description></description>
     </item>
     
