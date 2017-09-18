@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Groups on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/groups/</link>
-    <description>Recent content in Groups on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/groups/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="//docs.vanillaforums.com/tags/groups/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="//docs.vanillaforums.com/tags/groups/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Managing Groups</title>
@@ -15,8 +13,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/groups/managing-groups/</guid>
-      <description>Adding your first groups After enabling the Groups addon, &amp;ldquo;Groups&amp;rdquo; will appear in your top-level navigation. In a customized theme, this may not be the case and you&amp;rsquo;ll need to go directly to the URL &amp;ldquo;/groups&amp;rdquo; from your forum domain (e.g. &amp;ldquo;yoursite.vanillaforums.com/groups&amp;rdquo;).
-As the administrator, click the &amp;ldquo;New Group&amp;rdquo; button near the top of the page. The &amp;ldquo;Icon&amp;rdquo; image shows on the groups lists. The &amp;ldquo;Banner&amp;rdquo; is the large image at the top of your group&amp;rsquo;s page.</description>
+      <description>
+
+&lt;h2 id=&#34;adding-your-first-groups&#34;&gt;Adding your first groups&lt;/h2&gt;
+
+&lt;p&gt;After enabling the Groups addon, &amp;ldquo;Groups&amp;rdquo; will appear in your top-level navigation. In a customized theme, this may not be the case and you&amp;rsquo;ll need to go directly to the URL &amp;ldquo;/groups&amp;rdquo; from your forum domain (e.g. &amp;ldquo;yoursite.vanillaforums.com/groups&amp;rdquo;).&lt;/p&gt;
+
+&lt;p&gt;As the administrator, click the &amp;ldquo;New Group&amp;rdquo; button near the top of the page. The &amp;ldquo;Icon&amp;rdquo; image shows on the groups lists. The &amp;ldquo;Banner&amp;rdquo; is the large image at the top of your group&amp;rsquo;s page.&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-and-deleting-groups&#34;&gt;Editing and deleting groups&lt;/h2&gt;
+
+&lt;p&gt;From the groups list, use the options (gear) dropdown menu next to each group to edit or delete them. Any edits are applied immediately. Deleting a group is irreversible and deletes its discussions as well.&lt;/p&gt;
+
+&lt;h2 id=&#34;editing-the-members-list-and-assigning-leaders&#34;&gt;Editing the members list and assigning Leaders&lt;/h2&gt;
+
+&lt;p&gt;Click &amp;ldquo;Members&amp;rdquo; at the bottom of the group&amp;rsquo;s page to see a list of everyone who is currently in the group. From this list, you can promote group members to &amp;ldquo;Leaders&amp;rdquo;. Leaders have the ability to manage the group&amp;rsquo;s members and edit the group&amp;rsquo;s settings, events, and discussions. The group&amp;rsquo;s creator cannot have their leader status removed.&lt;/p&gt;
+
+&lt;p&gt;If you need the owner of a group reassigned, contact support.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
