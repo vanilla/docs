@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/</link>
+    <description>Recent content in Tags on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2016</title>
+      <link>//docs.vanillaforums.com/tags/2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2017</title>
+      <link>//docs.vanillaforums.com/tags/2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Addons</title>
+      <link>//docs.vanillaforums.com/tags/addons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/addons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analytics</title>
+      <link>//docs.vanillaforums.com/tags/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>//docs.vanillaforums.com/tags/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apiv2</title>
+      <link>//docs.vanillaforums.com/tags/apiv2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/apiv2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Badges</title>
+      <link>//docs.vanillaforums.com/tags/badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/badges/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Categories</title>
+      <link>//docs.vanillaforums.com/tags/categories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/categories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>//docs.vanillaforums.com/tags/cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comments</title>
+      <link>//docs.vanillaforums.com/tags/comments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/comments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>//docs.vanillaforums.com/tags/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>//docs.vanillaforums.com/tags/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/contributing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developer</title>
+      <link>//docs.vanillaforums.com/tags/developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developers</title>
+      <link>//docs.vanillaforums.com/tags/developers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/developers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emails</title>
+      <link>//docs.vanillaforums.com/tags/emails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/emails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embed</title>
+      <link>//docs.vanillaforums.com/tags/embed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/embed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>//docs.vanillaforums.com/tags/embedding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/embedding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emoji</title>
+      <link>//docs.vanillaforums.com/tags/emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Features</title>
+      <link>//docs.vanillaforums.com/tags/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/features/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Framework</title>
+      <link>//docs.vanillaforums.com/tags/framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>//docs.vanillaforums.com/tags/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Groups</title>
+      <link>//docs.vanillaforums.com/tags/groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/groups/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hub</title>
+      <link>//docs.vanillaforums.com/tags/hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/hub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I18n</title>
+      <link>//docs.vanillaforums.com/tags/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/i18n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Importing</title>
+      <link>//docs.vanillaforums.com/tags/importing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/importing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>//docs.vanillaforums.com/tags/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/installation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integration</title>
+      <link>//docs.vanillaforums.com/tags/integration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integrations</title>
+      <link>//docs.vanillaforums.com/tags/integrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/integrations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jsconnect</title>
+      <link>//docs.vanillaforums.com/tags/jsconnect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/jsconnect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Locales</title>
+      <link>//docs.vanillaforums.com/tags/locales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/locales/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Migration</title>
+      <link>//docs.vanillaforums.com/tags/migration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/migration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Moderation</title>
+      <link>//docs.vanillaforums.com/tags/moderation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/moderation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multisite</title>
+      <link>//docs.vanillaforums.com/tags/multisite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/multisite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notifications</title>
+      <link>//docs.vanillaforums.com/tags/notifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/notifications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oauth</title>
+      <link>//docs.vanillaforums.com/tags/oauth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/oauth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Permissions</title>
+      <link>//docs.vanillaforums.com/tags/permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/permissions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plugins</title>
+      <link>//docs.vanillaforums.com/tags/plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posting</title>
+      <link>//docs.vanillaforums.com/tags/posting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/posting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ranks</title>
+      <link>//docs.vanillaforums.com/tags/ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/ranks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reactions</title>
+      <link>//docs.vanillaforums.com/tags/reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/reactions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Releases</title>
+      <link>//docs.vanillaforums.com/tags/releases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/releases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Repository</title>
+      <link>//docs.vanillaforums.com/tags/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/repository/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Roles</title>
+      <link>//docs.vanillaforums.com/tags/roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/roles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Saml</title>
+      <link>//docs.vanillaforums.com/tags/saml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/saml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>//docs.vanillaforums.com/tags/seo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>//docs.vanillaforums.com/tags/server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Single Sign On</title>
+      <link>//docs.vanillaforums.com/tags/single-sign-on/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/single-sign-on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smarty</title>
+      <link>//docs.vanillaforums.com/tags/smarty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/smarty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smarty Functions</title>
+      <link>//docs.vanillaforums.com/tags/smarty-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/smarty-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssl</title>
+      <link>//docs.vanillaforums.com/tags/ssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Staging</title>
+      <link>//docs.vanillaforums.com/tags/staging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/staging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theming</title>
+      <link>//docs.vanillaforums.com/tags/theming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/theming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Training</title>
+      <link>//docs.vanillaforums.com/tags/training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/training/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>//docs.vanillaforums.com/tags/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>//docs.vanillaforums.com/tags/twitter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vanilla Pop</title>
+      <link>//docs.vanillaforums.com/tags/vanilla-pop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/vanilla-pop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vimeo</title>
+      <link>//docs.vanillaforums.com/tags/vimeo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/vimeo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Warnings and Notes</title>
+      <link>//docs.vanillaforums.com/tags/warnings-and-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/warnings-and-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wistia</title>
+      <link>//docs.vanillaforums.com/tags/wistia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/wistia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>//docs.vanillaforums.com/tags/wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Youtube</title>
+      <link>//docs.vanillaforums.com/tags/youtube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

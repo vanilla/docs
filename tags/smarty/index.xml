@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/smarty/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Smarty on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/smarty/</link>
+    <description>Recent content in Smarty on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/smarty/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="//docs.vanillaforums.com/tags/smarty/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Page Links</title>
@@ -13,169 +15,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</guid>
-      <description>
-
-&lt;h2 id=&#34;page-links&#34;&gt;Page Links&lt;/h2&gt;
-
-&lt;p&gt;We&amp;rsquo;ve created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum&amp;rsquo;s navigation.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the basic syntax, where * is the link type.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;li&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The tag to wrap the link in.&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;varies&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;What the text for the link should be.&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;&amp;lt;a href=&amp;#39;%url&amp;#39; class=&amp;#39;%class&amp;#39;&amp;gt;%text&amp;lt;/a&amp;gt;&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-
-&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
-
-&lt;h3 id=&#34;function-bookmarks-link&#34;&gt;Function: {bookmarks_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the My Bookmarks page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-categories-link&#34;&gt;Function: {categories_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the categories page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-category-link&#34;&gt;Function: {category_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the current category page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-dashboard-link&#34;&gt;Function: {dashboard_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the dashboard.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-discussions-link&#34;&gt;Function: {discussions_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the discussions page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-drafts-link&#34;&gt;Function: {drafts_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the drafts page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-activity-link&#34;&gt;Function: {activity_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the recent activity page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-forum-root-link&#34;&gt;Function: {forum_root_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the forum root page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-home-link&#34;&gt;Function: {home_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the home page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-inbox-link&#34;&gt;Function: {inbox_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the inbox.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-mydiscussions-link&#34;&gt;Function: {mydiscussions_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the My Discussions page.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-nomobile-link&#34;&gt;Function: {nomobile_link}&lt;/h3&gt;
-
-&lt;p&gt;Link for showing the desktop version of the site.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-photo-link&#34;&gt;Function: {photo_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to the session&amp;rsquo;s user profile that displays as the user&amp;rsquo;s avatar.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-profile-link&#34;&gt;Function: {profile_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to session&amp;rsquo;s user profile. The link text is the username. Includes a notification count.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-signin-link&#34;&gt;Function: {signin_link}&lt;/h3&gt;
-
-&lt;p&gt;If there is a valid session, this outputs a signout link, otherwise a signin link.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-signinout-link&#34;&gt;Function: {signinout_link}&lt;/h3&gt;
-
-&lt;p&gt;If there is a valid session, this outputs a signout link, otherwise a signin link.&lt;/p&gt;
-
-&lt;h3 id=&#34;function-user-link&#34;&gt;Function: {user_link}&lt;/h3&gt;
-
-&lt;p&gt;Link to session&amp;rsquo;s user profile. The link text is this username. Does not include a notification count.&lt;/p&gt;
-</description>
+      <description>Page Links We&amp;rsquo;ve created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum&amp;rsquo;s navigation.
+Here&amp;rsquo;s the basic syntax, where * is the link type.
+{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}  Parameters   Parameter Type Default Description    wrap  string  li  The tag to wrap the link in.  text  string  varies  What the text for the link should be.</description>
     </item>
     
     <item>
@@ -184,113 +26,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-conditionals&#34;&gt;Smarty Conditionals&lt;/h2&gt;
-
-&lt;p&gt;Smarty includes a base amount of logic that you can insert into your template. One of these is a conditional statement. A couple of basic examples should give you an idea of the syntax and format of Smarty conditionals.&lt;/p&gt;
-
-&lt;p&gt;This example uses the user data from the controller&amp;rsquo;s data array to print out a welcome message if the user is signed in and a generic message if the user is not signed in. &lt;a href=&#34;../#accessing-controller-data-with-smarty&#34;&gt;Learn more about accessing the controller&amp;rsquo;s data array using Smarty.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if $User.SignedIn}
-    &amp;lt;h3&amp;gt;Welcome Back!&amp;lt;/h3&amp;gt;
-{else}
-    &amp;lt;h3&amp;gt;Hello Stranger!&amp;lt;/h3&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This example checks to see if the locale matches &amp;lsquo;fr&amp;rsquo; and if so, inserts the contents a pocket named &amp;lsquo;French Pocket&amp;rsquo;. &lt;a href=&#34;//docs.vanillaforums.com/functions/pocket.html.md&#34;&gt;Learn more about the Smarty pocket function.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if $CurrentLocale.Lang === &#39;fr&#39;}
-    {pocket name=&#39;French Pocket&#39;}
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The following PHP internal functions are available for use in Smarty if statements: array, list, isset, empty, count, sizeof, in_array, is_array, true, false, and null. We&amp;rsquo;ve also whitelisted some PHP functions in Vanilla that can be used in Smarty if statements. The most useful of these functions are outlined below.&lt;/p&gt;
-
-&lt;h2 id=&#34;conditional-category&#34;&gt;Conditional: &lt;em&gt;Category&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Returns an array representing the current category.&lt;/p&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example prints out a message if the user is browsing a page in the &amp;ldquo;General&amp;rdquo; category. Also uses the GetValue function, outlined below.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if GetValue(&#39;Name&#39;, Category()) === &#39;General&#39;}
-    &amp;lt;p&amp;gt;You&#39;re checking out content in the General category!&amp;lt;/p&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-checkpermission&#34;&gt;Conditional: &lt;em&gt;CheckPermission&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Tests whether the current user has the passed permission or array of permissions and returns true if the current user has one of the given permission(s).&lt;/p&gt;
-
-&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example checks whether the user has either the &amp;ldquo;Garden.Settings.Manage&amp;rdquo; or &amp;ldquo;Garden.Settings.View&amp;rdquo; permission and if so, adds a link to the dashboard.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if CheckPermission([&#39;Garden.Settings.Manage&#39;, &#39;Garden.Settings.View&#39;])}
-    {dashboard_link}
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-homepage&#34;&gt;Conditional: &lt;em&gt;Homepage&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;The variable &lt;code&gt;$Homepage&lt;/code&gt; is set to true if (and only if) the user is on your homepage.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example checks whether the user is on the homepage to display one message or another.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if $Homepage}
-    &amp;lt;p&amp;gt;Welcome home!&amp;lt;/p&amp;gt;
-{/if}
-
-&amp;lt;p&amp;gt;Intermediary text that is always displayed.&amp;lt;/p&amp;gt;
-
-{if !$Homepage}
-    &amp;lt;p&amp;gt;Far away from home.&amp;lt;/p&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-insection&#34;&gt;Conditional: &lt;em&gt;InSection&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Returns true if the user is in a section or one of an array or sections. You can see what section a Vanilla page belongs to by inspecting the body tag using your browser tools and checking its CSS class. There will be an Section-* class, where * is the current section.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-3&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example checks whether the user is in either the Profile, Conversation or ActivityList section and if so, adds the panel asset.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if InSection(array(&#39;Profile&#39;, &#39;Conversation&#39;, &#39;ActivityList&#39;))}
-    {asset name=&amp;quot;Panel&amp;quot;}
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-incategory&#34;&gt;Conditional: &lt;em&gt;InCategory&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Given a category&amp;rsquo;s url code, returns true if the user is on a page in that category. You can manage the url codes of your forum&amp;rsquo;s categories from the Manage Categories page in the dashboard.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-4&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example prints out a message if the user is browsing a page in a category with the url code &amp;lsquo;general-category&amp;rsquo;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{if InCategory(&#39;general-category&#39;)}
-    &amp;lt;p&amp;gt;You&#39;re checking out content in the General category!&amp;lt;/p&amp;gt;
-{/if}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;conditional-getvalue&#34;&gt;Conditional: &lt;em&gt;GetValue&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Given an array key or property name, returns its value from an associative array or an object.&lt;/p&gt;
-
-&lt;h3 id=&#34;example-5&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;See the [Category example](&amp;lsquo;#category-example&amp;rsquo;) above.&lt;/p&gt;
-
-&lt;h2 id=&#34;other-conditional-functions&#34;&gt;Other conditional functions&lt;/h2&gt;
-
-&lt;p&gt;There are a few other (less useful) functions that can be used in conditional statements in Vanilla&amp;rsquo;s Smarty implementation. These are MultiCheckPermission, SetValue and Url. These function declarations are in &lt;code&gt;/library/core/functions.general.php&lt;/code&gt;. To understand how to use these functions, refer to the source code there.&lt;/p&gt;
-</description>
+      <description>Smarty Conditionals Smarty includes a base amount of logic that you can insert into your template. One of these is a conditional statement. A couple of basic examples should give you an idea of the syntax and format of Smarty conditionals.
+This example uses the user data from the controller&amp;rsquo;s data array to print out a welcome message if the user is signed in and a generic message if the user is not signed in.</description>
     </item>
     
     <item>
@@ -299,14 +36,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-functions&#34;&gt;Smarty Functions&lt;/h2&gt;
-
-&lt;p&gt;This section outlines all the Vanilla-specific Smarty functions made available for use in your Smarty templates.&lt;/p&gt;
-
-&lt;p&gt;You are also able to use the &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.custom.functions.tpl&#34;&gt;built-in Smarty functions&lt;/a&gt; in your template.&lt;/p&gt;
-</description>
+      <description>Smarty Functions This section outlines all the Vanilla-specific Smarty functions made available for use in your Smarty templates.
+You are also able to use the built-in Smarty functions in your template.</description>
     </item>
     
     <item>
@@ -315,114 +46,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</guid>
-      <description>
-
-&lt;h2 id=&#34;smarty-modifiers&#34;&gt;Smarty Modifiers&lt;/h2&gt;
-
-&lt;p&gt;Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). &lt;em&gt;These parameters must follow the order of their appearance in the signature&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates. &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.modifiers.tpl&#34;&gt;Learn more about Smarty modifiers from the Smarty site.&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;modifier-asset-url&#34;&gt;Modifier: &lt;em&gt;asset_url&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Converts a string to an asset url. Solves the problem of trying to using a relative path when Vanilla exists in a subfolder.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;withDomain&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not to prepend the base (&lt;code&gt;http://your-forums.com/&lt;/code&gt;) URL to the outputted link&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;addVersion&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Whether or not to append a version to the resulting asset to help bust the cache&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;In the following example, if the asset_url modifier was not specified, the image would not work if Vanilla existed in a subfolder. It also adds the domain name to the url and appends the theme version number.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;img alt=&amp;quot;My logo&amp;quot; src=&amp;quot;{&amp;quot;/themes/MyTheme/design/images/my-logo.png&amp;quot;|asset_url:true:true}&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;modifier-date&#34;&gt;Modifier: &lt;em&gt;date&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Formats a timestamp consistently with Vanilla&amp;rsquo;s date formatting, which by default varies depending on how much time has passed.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;varies&lt;/td&gt;
-&lt;td&gt;The  &lt;a href=&#34;http://php.net/manual/en/function.strftime.php&#34;&gt;strftime&lt;/a&gt; format of the date&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;The following example prints out the current year and uses the &lt;a href=&#34;http://www.smarty.net/docsv2/en/language.variables.smarty.tpl&#34;&gt;{$smarty} reserved variable&lt;/a&gt; to get the current timestamp&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{$smarty.now|date:&amp;quot;%Y&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;modifier-translate&#34;&gt;Modifier: &lt;em&gt;translate&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Translates a string into the selected locale&amp;rsquo;s definition.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Default&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;default&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;none&lt;/td&gt;
-&lt;td&gt;Default translation. Good idea to set when using short-names&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;example-2&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;This example outputs the breadcrumbs, where the home link text is the translated &amp;lsquo;Forum&amp;rsquo; definition. &lt;a href=&#34;//docs.vanillaforums.com/functions/breadcrumbs.html.md&#34;&gt;Learn more about the breadcrumbs tag.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;Forum&amp;quot;|translate}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Smarty Modifiers Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). These parameters must follow the order of their appearance in the signature.
+Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates.</description>
     </item>
     
     <item>
@@ -431,120 +56,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-asset&#34;&gt;Function: &lt;code&gt;{asset}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Renders an asset from the controller.&lt;/p&gt;
-
-&lt;p&gt;Assets in Vanilla are containers for different sets of content. The content of each of these asset containers is variable depending on the page. The content of each asset is not currently configurable via the template.&lt;/p&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets. The Panel asset is optional, but you&amp;rsquo;ll likely want to at least include it in the Profile, EditProfile and Conversation sections as it has important functionality in those sections that are not included in the Content asset.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the asset&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;$name&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The id of the tag if different than the name&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The type of tag to wrap the asset in&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The class to add to the asset wrapper&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description>Function: {asset} Usage {asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}  Renders an asset from the controller.
+Assets in Vanilla are containers for different sets of content. The content of each of these asset containers is variable depending on the page. The content of each asset is not currently configurable via the template.
+Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets.</description>
     </item>
     
     <item>
@@ -553,99 +67,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-breadcrumbs&#34;&gt;Function: &lt;code&gt;{breadcrumbs}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Render a breadcrumb trail for the user based on the page they are on.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;homelink&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;Home&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Title of the first link in the breadcrumbs&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;homeurl&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;/&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;URL of the first link in the breadcrumbs&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;hidelast&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            boolean
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;false&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not to hide the currently active (last) crumb&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description> Function: {breadcrumbs} Usage {breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}  Render a breadcrumb trail for the user based on the page they are on.
+Parameters   Parameter Type Default Description    homelink  string  Home  Title of the first link in the breadcrumbs  homeurl  string  /  URL of the first link in the breadcrumbs  hidelast  boolean  false  Whether or not to hide the currently active (last) crumb    </description>
     </item>
     
     <item>
@@ -654,82 +77,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-custom-menu&#34;&gt;Function: &lt;code&gt;{custom_menu}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A bucket for addon menu items. Adds links depending on which addons are enabled.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;wrap&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;li&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Element to wrap around each link in the menu&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description> Function: {custom_menu} Usage {custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}  A bucket for addon menu items. Adds links depending on which addons are enabled.
+Parameters   Parameter Type Default Description    format  string  none  Custom format to use when wrapping links. Available template variables are %url, %class, and %text  wrap  string  li  Element to wrap around each link in the menu    </description>
     </item>
     
     <item>
@@ -738,65 +87,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-event&#34;&gt;Function: &lt;code&gt;{event}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{event name=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fire an event with the specified &lt;code&gt;name&lt;/code&gt;. &lt;a href=&#34;../../../developers/plugins/#events-%26-handlers&#34;&gt;Learn more about events in Vanilla.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Name of the event to fire&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description> Function: {event} Usage {event name=&amp;quot;string&amp;quot;}  Fire an event with the specified name. Learn more about events in Vanilla.
+Parameters   Parameter Type Default Description    name  string  none  Name of the event to fire    </description>
     </item>
     
     <item>
@@ -805,21 +97,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-homepage-title&#34;&gt;Function: &lt;code&gt;{homepage_title}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{homepage_title}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Writes the site title to the page. You can change the site title from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;This tag does not take any parameters.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>Function: {homepage_title} Usage {homepage_title}  Writes the site title to the page. You can change the site title from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
     </item>
     
     <item>
@@ -828,65 +107,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-include-file&#34;&gt;Function: &lt;code&gt;{include_file}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{include_file name=&amp;quot;string&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the file to include&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description> Function: {include_file} Usage {include_file name=&amp;quot;string&amp;quot;}  Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.
+Parameters   Parameter Type Default Description    name  string  none  The name of the file to include    </description>
     </item>
     
     <item>
@@ -895,133 +117,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-link&#34;&gt;Function: &lt;code&gt;{link}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{link path=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; notag=boolean format=&amp;quot;string&amp;quot; withdomain=boolean}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Takes a route and prepends the web root (expects &lt;code&gt;/controller/action/params&lt;/code&gt; as &lt;code&gt;path&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The relative path for the url. There are some special paths that can be used to return &amp;lsquo;intelligent&amp;rsquo; links&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;text&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;HTML text to be put inside an anchor. If this value is set then an HTML &lt;code&gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt; is returned rather than just a url&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;notag&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            boolean
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;false&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not the output should be wrapped in a tag or just be a URL&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Custom format to use when wrapping links. Available template variables are &lt;code&gt;%url&lt;/code&gt;, &lt;code&gt;%class&lt;/code&gt;, and &lt;code&gt;%text&lt;/code&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;withdomain&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            boolean
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;false&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;Whether or not to prepend the base (&lt;code&gt;http://your-forums.com/&lt;/code&gt;) URL to the outputted link&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+      <description>Function: {link} Usage {link path=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; notag=boolean format=&amp;quot;string&amp;quot; withdomain=boolean}  Takes a route and prepends the web root (expects /controller/action/params as path).
+Parameters   Parameter Type Default Description    path  string  none  The relative path for the url. There are some special paths that can be used to return &amp;lsquo;intelligent&amp;rsquo; links  text  string  none  HTML text to be put inside an anchor.</description>
     </item>
     
     <item>
@@ -1030,21 +127,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-logo&#34;&gt;Function: &lt;code&gt;{logo}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{logo}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Writes the site logo to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;This tag does not take any parameters.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>Function: {logo} Usage {logo}  Writes the site logo to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
     </item>
     
     <item>
@@ -1053,21 +137,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-mobile-logo&#34;&gt;Function: &lt;code&gt;{mobile_logo}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{mobile_logo}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Writes the mobile logo to the page. You can change the mobile logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;This tag does not take any parameters.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>Function: {mobile_logo} Usage {mobile_logo}  Writes the mobile logo to the page. You can change the mobile logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
     </item>
     
     <item>
@@ -1076,129 +147,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</guid>
-      <description>
-
-&lt;h2 id=&#34;function-module&#34;&gt;Function: &lt;code&gt;{module}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{module name=&amp;quot;string&amp;quot; ... }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is a super handy little function that renders any module in Vanilla. It instantiates the specified module class, sets the properties specified in the function&amp;rsquo;s parameters and calls the toString() function of the module.&lt;/p&gt;
-
-&lt;p&gt;The available parameters differ depending on module itself and the available modules depend on which addons are enabled. If a module is contained in an addon, the addon must be enabled in order for the module to render (a common gotcha).&lt;/p&gt;
-
-&lt;p&gt;There are many modules available in Vanilla and in its addons. They can be found in the modules directory of an application or addon. &lt;a href=&#34;../../../developers/framework/modules.html.md&#34;&gt;Learn more about modules.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
-    
-    
-    
-    
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The name of the asset&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            &lt;code&gt;$name&lt;/code&gt;
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The id of the tag if different than the name&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;id&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The type of tag to wrap the asset in&lt;/td&gt;
-                &lt;/tr&gt;
-                
-                &lt;tr class=&#34;docs-parameter&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The class to add to the asset wrapper&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-
-&lt;p&gt;You can set any property of a module by specifying it as a parameter as long as that property has a setter method or has a visibility of public.&lt;/p&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;Here&amp;rsquo;s an example of a tag that renders the Promoted Content Module, a module that can filter discussions based on role, rank, score, category, or the promoted reaction:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{module name=&amp;quot;PromotedContentModule&amp;quot; Selector=&amp;quot;role&amp;quot; Selection=&amp;quot;Developer,Administrator&amp;quot; Limit=&amp;quot;12&amp;quot; Group=&amp;quot;3&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Function: {module} Usage {module name=&amp;quot;string&amp;quot; ... }  This is a super handy little function that renders any module in Vanilla. It instantiates the specified module class, sets the properties specified in the function&amp;rsquo;s parameters and calls the toString() function of the module.
+The available parameters differ depending on module itself and the available modules depend on which addons are enabled. If a module is contained in an addon, the addon must be enabled in order for the module to render (a common gotcha).</description>
     </item>
     
     <item>
@@ -1207,67 +157,48 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</guid>
-      <description>
-
-&lt;h2 id=&#34;block-permission&#34;&gt;Block: &lt;code&gt;{permission}&lt;/code&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;{permission require=&amp;quot;string&amp;quot;}
-    Foo
-{/permission}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Only output content if the current user has the specified permission.&lt;/p&gt;
-
-&lt;h2 id=&#34;parameters&#34;&gt;Parameters&lt;/h2&gt;
-
-
-
-
+      <description> Block: {permission} Usage {permission require=&amp;quot;string&amp;quot;} Foo {/permission}  Only output content if the current user has the specified permission.
+Parameters   Parameter Type Default Description    require  string  none  The permission to check / require    </description>
+    </item>
     
+    <item>
+      <title>{pocket}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</guid>
+      <description> Function: {pocket} Usage {pocket name=&amp;quot;string&amp;quot;}  Writes a pocket to the page. Pockets placed in the template in this way should have their location set to &amp;lsquo;custom&amp;rsquo;. You can edit this setting from the &amp;lsquo;Pockets&amp;rsquo; settings page in the dashboard.
+Parameters   Parameter Type Default Description    name  string  none  The name of the pocket    </description>
+    </item>
     
+    <item>
+      <title>{searchbox}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</guid>
+      <description> Function: {searchbox} Usage {searchbox placeholder=&amp;quot;string&amp;quot;}  Writes the search box to the page.
+Parameters   Parameter Type Default Description    placeholder  string  Search  Optional input box placeholder text    </description>
+    </item>
     
+    <item>
+      <title>{text}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</guid>
+      <description> Function: {text} Usage {text code=&amp;quot;string&amp;quot; default=&amp;quot;string&amp;quot;}  Returns the custom text from a theme&amp;rsquo;s options page. Learn more about how to configure your theme options.
+Parameters   Parameter Type Default Description    code  string  none  The text code set in the theme&amp;rsquo;s information array  default  string  none  The default text if the user hasn&amp;rsquo;t overridden    </description>
+    </item>
     
-        
-        &lt;table class=&#34;docs-parameters parameters-type-function&#34;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Parameter&lt;/th&gt;
-                    &lt;th&gt;Type&lt;/th&gt;
-                    
-                    &lt;th&gt;Default&lt;/th&gt;
-                    
-                    &lt;th&gt;Description&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-        
-            &lt;tbody&gt;
-                
-                &lt;tr class=&#34;docs-parameter parameter-required&#34;&gt;
-                    &lt;td class=&#34;parameter-name&#34;&gt;&lt;code&gt;require&lt;/code&gt;&lt;/td&gt;
-                    &lt;td class=&#34;parameter-type&#34;&gt;&lt;code&gt;
-                        
-                            string
-                        
-                    &lt;/code&gt;&lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-default&#34;&gt;
-                        
-                            none
-                        
-                    &lt;/td&gt;
-                    
-                    &lt;td class=&#34;parameter-description&#34;&gt;The permission to check / require&lt;/td&gt;
-                &lt;/tr&gt;
-                
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    
-    
-    
-
-</description>
+    <item>
+      <title>{t}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</guid>
+      <description> Function: {t} Usage {t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}  Output a translatable string with an optional default.
+Parameters   Parameter Type Default Description    c  string  none  The string to output or a string short-name  d  string  $c  Default translation. Good idea to set when using short-names    </description>
     </item>
     
   </channel>

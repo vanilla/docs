@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/addons/index.xml</link>
-    <description>Recent content on Vanilla Forums Documentation</description>
+    <title>Addons on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/addons/</link>
+    <description>Recent content in Addons on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//docs.vanillaforums.com/tags/addons/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="//docs.vanillaforums.com/tags/addons/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Adding and Editing Badges</title>
@@ -13,42 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;disabling-badges&#34;&gt;Disabling badges&lt;/h2&gt;
-
-&lt;p&gt;To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active.  Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.&lt;/p&gt;
-
-&lt;p&gt;It is not currently possible to delete a badge entirely.&lt;/p&gt;
-
-&lt;h2 id=&#34;editing-a-badge&#34;&gt;Editing a badge&lt;/h2&gt;
-
-&lt;p&gt;You can safely edit the Name, Description, and/or Image of any badge without effecting its automated functionality. These will be updated for any users who previously received the badge as well.&lt;/p&gt;
-
-&lt;p&gt;The &amp;ldquo;Slug&amp;rdquo; field is what shows in the URL for the badge&amp;rsquo;s page. It is its unique identifier. Changing a badge&amp;rsquo;s Slug will cause it to be disassociated with any automation assigned to it. Therefore, &lt;em&gt;do not change the Slug of the Badges that come with Vanilla by default&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;You may change the Points for a badge at any time. Point changes are not retroactive for users who previously received it.&lt;/p&gt;
-
-&lt;h2 id=&#34;creating-your-own-badges&#34;&gt;Creating your own badges&lt;/h2&gt;
-
-&lt;p&gt;Create a memorable Name for your badge and give it a Description that explains what it is for and how users can earn it. This information will appear on the Badge&amp;rsquo;s page.&lt;/p&gt;
-
-&lt;p&gt;The Slug should consist of only lowercase letters, numbers, and hyphens. The Slug must be unique for each badge.&lt;/p&gt;
-
-&lt;p&gt;Add a 200x200 PNG for the image.&lt;/p&gt;
-
-&lt;p&gt;All badges created in your Dashboard must be given manually.&lt;/p&gt;
-
-&lt;h2 id=&#34;creating-automated-badges&#34;&gt;Creating automated badges&lt;/h2&gt;
-
-&lt;p&gt;It is not currently possible to create your own automated badges thru the Dashboard. To discuss custom possibilities for your community, contact sales.&lt;/p&gt;
-</description>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Disabling badges To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active. Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.</description>
     </item>
     
     <item>
@@ -57,63 +24,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
-      <description>
-
-&lt;h2 id=&#34;adding-a-ranks&#34;&gt;Adding a Ranks&lt;/h2&gt;
-
-&lt;p&gt;Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.&lt;/p&gt;
-
-&lt;h2 id=&#34;editing-a-rank&#34;&gt;Editing a Rank&lt;/h2&gt;
-
-&lt;p&gt;On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.&lt;/p&gt;
-
-&lt;h2 id=&#34;rank-information&#34;&gt;Rank information&lt;/h2&gt;
-
-&lt;h3 id=&#34;name-label&#34;&gt;Name &amp;amp; Label&lt;/h3&gt;
-
-&lt;p&gt;The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank. The label is what will appear next to the user&amp;rsquo;s name in discussions and comments after they attain the rank.&lt;/p&gt;
-
-&lt;h3 id=&#34;body-message&#34;&gt;Body &amp;amp; Message&lt;/h3&gt;
-
-&lt;p&gt;These only appear immediately after a user attains a rank. The &amp;ldquo;Body&amp;rdquo; is emailed to the user. The &amp;ldquo;Message&amp;rdquo; appears at the top of the page when the rank is triggered.&lt;/p&gt;
-
-&lt;h3 id=&#34;css-class&#34;&gt;CSS Class&lt;/h3&gt;
-
-&lt;p&gt;The CSS Class is a feature for theme developers. You can assign a valid CSS class to a rank and it will be applied to the wrapper around their discussion or comment. This is useful for making certain ranked users&amp;rsquo; content appear more prominently. For example, if you had an &amp;ldquo;Expert&amp;rdquo; rank, maybe you&amp;rsquo;d highlight their comments with a special background color.&lt;/p&gt;
-
-&lt;h3 id=&#34;level&#34;&gt;Level&lt;/h3&gt;
-
-&lt;p&gt;Level is a number that determines the precedence of assigning ranks. Ranks that are not manual will always attempt to give the user the rank with the highest level that they have met the criteria for.&lt;/p&gt;
-
-&lt;p&gt;If you create a manually assigned rank and do not want any automated ranks to overrule it, make sure it has a higher level than all your automated rules.&lt;/p&gt;
-
-&lt;h2 id=&#34;setting-criteria&#34;&gt;Setting Criteria&lt;/h2&gt;
-
-&lt;p&gt;You can set thresholds for:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Points&lt;/li&gt;
-&lt;li&gt;Posts (comments + discussions)&lt;/li&gt;
-&lt;li&gt;Duration of membership&lt;/li&gt;
-&lt;li&gt;Permission level (e.g. moderator or admin)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All thresholds you set must be met for the rank to be assigned. For instance, if you set Points to 50 and posts to 10, it means a member must have 50 points AND 10 posts to be assigned the rank.&lt;/p&gt;
-
-&lt;p&gt;Checking &amp;ldquo;Assigned Manually&amp;rdquo; means the criteria is ignored and the rank will only be assigned by a moderator or administrator editing the user&amp;rsquo;s profile and selecting the rank.&lt;/p&gt;
-
-&lt;h2 id=&#34;manually-assigning-a-rank&#34;&gt;Manually Assigning a Rank&lt;/h2&gt;
-
-&lt;p&gt;Rank assignment is done via &amp;ldquo;Edit Profile&amp;rdquo; from the user&amp;rsquo;s profile. Any users in a role with the permission to edit users will be able to assign a rank.&lt;/p&gt;
-
-&lt;h2 id=&#34;abilities&#34;&gt;Abilities&lt;/h2&gt;
-
-&lt;p&gt;Each ability may be given the value of &amp;ldquo;Grant&amp;rdquo;, &amp;ldquo;Revoke&amp;rdquo;, or &amp;ldquo;Default&amp;rdquo;. The default value represents what the user would be allowed to do if Ranks was disabled. The grant and revoke options override their normal abilities.&lt;/p&gt;
-
-&lt;p&gt;Some abilities are effected by other addons. It&amp;rsquo;s important to understand your current Vanilla installation before changing the default values for abilities.&lt;/p&gt;
-
-&lt;p&gt;For instance, in a default Vanilla installation, users will not have a &amp;ldquo;Title&amp;rdquo; field. Therefore, Ranks&amp;rsquo; &amp;ldquo;default&amp;rdquo; would be that no one has a Title. However, Profile Extender can be used to add a &amp;ldquo;Title&amp;rdquo; field, which would give Titles to all users. In that case, Ranks&amp;rsquo; default would be that everyone has a title.&lt;/p&gt;
-</description>
+      <description>Adding a Ranks Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.
+Editing a Rank On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.
+Rank information Name &amp;amp; Label The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank.</description>
     </item>
     
     <item>
@@ -122,50 +35,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;selecting-reactions&#34;&gt;Selecting Reactions&lt;/h2&gt;
-
-&lt;p&gt;Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Generally, we recommend using one to four reactions. Reacting should be simple and reflexive, not a complex decision over which reaction to use.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/list.png&#34; alt=&#34;The list of Reactions in the Dashboard&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactions are universal to all categories on your site. You can use CSS rules to hide certain reactions in certain categories, but they cannot be officially disabled selectively.&lt;/p&gt;
-
-&lt;h2 id=&#34;edit-a-reaction&#34;&gt;Edit a Reaction&lt;/h2&gt;
-
-&lt;p&gt;To edit a reaction, go to Reactions in the Dashboard and click the name of the Reaction you wish to edit.&lt;/p&gt;
-
-&lt;p&gt;Editing an existing reaction is the best way to tweak your list to fit the culture of your community. We recommend selecting the default reaction that most closely matches your desired reaction and simply changing its name.&lt;/p&gt;
-
-&lt;p&gt;You can also change the &amp;ldquo;Points&amp;rdquo; field to modify how many points it give to the user receiving each reaction of that type. The number of points assigned to the discussion or comment is not currently editable via the Dashboard. Yes, Reactions assigns points to users and content independently.&lt;/p&gt;
-
-&lt;p&gt;Doing this allows you to keep any automated badges associated with that reaction, which you can then rename appropriately as well. See the Badges - Adding and Editing Badges to see how to do this safely.&lt;/p&gt;
-
-&lt;h2 id=&#34;adding-a-reaction&#34;&gt;Adding a Reaction&lt;/h2&gt;
-
-&lt;p&gt;To add a new reaction, contact support or your sales representative.&lt;/p&gt;
-
-&lt;h2 id=&#34;advanced-settings&#34;&gt;Advanced Settings&lt;/h2&gt;
-
-&lt;p&gt;You can access &amp;ldquo;Advanced Settings&amp;rdquo; for Reactions via a link near the top of the Reactions page of the Dashboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/reactions/advanced.png&#34; alt=&#34;The Advanced Settings page&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Show Who Reacted to Posts&amp;rdquo; changes how reaction tallies are displayed under comments. The default is &amp;ldquo;in a popup&amp;rdquo; which requires hovering your mouse pointer over the reaction to see who reacted that way. Use &amp;ldquo;As avatars&amp;rdquo; on small to medium-sized sites to show a row of avatars under each comment for who reacted. Or select &amp;ldquo;Don&amp;rsquo;t show&amp;rdquo; to hide it entirely.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Best of Style&amp;rdquo; changes the layout of your Best Of page.&lt;/p&gt;
-
-&lt;p&gt;Reactions come with the option to order your comments based on reactions. In general, we do not recommend doing this.&lt;/p&gt;
-</description>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Selecting Reactions Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -174,62 +44,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Better indexing of content&lt;/li&gt;
-&lt;li&gt;The ability to apply filters to searches&lt;/li&gt;
-&lt;li&gt;Auto-complete of results as the user types the search terms&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;enabling-advanced-search&#34;&gt;Enabling Advanced Search&lt;/h3&gt;
-
-&lt;p&gt;To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;On the addons page of the Dashboard, enable Advanced Search&lt;/li&gt;
-&lt;li&gt;Under the Appearance section of the Dashboard, go to the Customer Theme page&lt;/li&gt;
-&lt;li&gt;In the HTML tab, look for the following code  {searchbox}&lt;/li&gt;
-&lt;li&gt;Change that code to  {searchbox_advanced}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;using-advanced-search&#34;&gt;Using Advanced Search&lt;/h2&gt;
-
-&lt;p&gt;Navigating to &lt;code&gt;/search&lt;/code&gt; will bring you to a page with an expandable search bar. Clicking the arrow on the right side of the bar will show you all the extra parameters you have available for search:
-&lt;img src=&#34;https://images.v-cdn.net/docs/search_expanded.jpg&#34; alt=&#34;You can search threads by title, author, and tags. You can narrow results down to a specific category, and choose what discussion types to search.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can also link to &lt;code&gt;/search?adv=1&lt;/code&gt; to have these options already expanded.&lt;/p&gt;
-
-&lt;p&gt;By default, users will only see these options on the &lt;code&gt;/search&lt;/code&gt; page. To switch out the search bar on your homepage, simply change out &lt;code&gt;{searchbox}&lt;/code&gt; for &lt;code&gt;{searchbox_advanced}&lt;/code&gt; in your custom theme.&lt;/p&gt;
-
-&lt;p&gt;Advanced search also enables an autocomplete function that pulls results as you type.
-&lt;img src=&#34;https://images.v-cdn.net/docs/search_autocomplete.jpg&#34; alt=&#34;Autocompleted results based on a keyword&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you are looking for something very specific, there are some additional parameters you can use to help narrow down results.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;“keyword phrase”&lt;/code&gt;: A phrase wrapped in quotes must occur in that order.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;+keyword&lt;/code&gt;: The keyword must occur in the search result.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-keyword&lt;/code&gt;: The keyword must not occur in the result.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;excluding-content-from-search&#34;&gt;Excluding Content From Search&lt;/h3&gt;
-
-&lt;p&gt;Normal viewing permissions apply to search results. Searching as a guest or member will not return results with content from moderation or administration sections.&lt;/p&gt;
-
-&lt;p&gt;Archiving a category will prevent its content from coming up in the site-based search. Threads in archived categories are still indexed by search engines. You can use this setting to exclude old announcements or other irrelevant threads from search results without causing broken links.&lt;/p&gt;
-
-&lt;h2 id=&#34;additional-resources&#34;&gt;Additional Resources:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.vanillaforums.com/help/vanilla-forums-friday-theme-tip-advanced-search/&#34;&gt;Blog: Advanced Search&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gLLtlTsC4h8&#34;&gt;Video: Advanced Search&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Overview Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.
+ Better indexing of content The ability to apply filters to searches Auto-complete of results as the user types the search terms  Enabling Advanced Search To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:</description>
     </item>
     
     <item>
@@ -238,46 +54,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/analytics/</guid>
-      <description>
-
-&lt;h2 id=&#34;what-are-vanilla-analytics&#34;&gt;What Are Vanilla Analytics?&lt;/h2&gt;
-
-&lt;p&gt;Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/analytics/analytics-overview.png&#34; alt=&#34;Example of dashboard page&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-vanilla-statistics&#34;&gt;How to use Vanilla Statistics&lt;/h2&gt;
-
-&lt;p&gt;The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server.  We generate and present you with the statistics in a graphical format for the following:&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use-vanilla-analytics&#34;&gt;How to use Vanilla Analytics&lt;/h2&gt;
-
-&lt;p&gt;You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.  For more in-depth data, click on the &amp;lsquo;Analytics&amp;rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)&lt;/p&gt;
-
-&lt;p&gt;The site overview will present you with the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Number of page views generated for the time period&lt;/li&gt;
-&lt;li&gt;Number of new users that have joined the community for the time period&lt;/li&gt;
-&lt;li&gt;Number of new discussions that have been created for the time period&lt;/li&gt;
-&lt;li&gt;Number of new comments that have been created for the time period&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Using the tabs at the top, you can view daily or monthly stats. The arrows will let you move the time period you are viewing.&lt;/p&gt;
-
-&lt;p&gt;Vanilla Statistics will also create a rolling table of data on the following:&lt;/p&gt;
-
-&lt;p&gt;Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.&lt;/p&gt;
-
-&lt;p&gt;Vanilla will also create a rolling table of data on the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Most Active Users&lt;/li&gt;
-&lt;li&gt;Most popular discussions discussions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This too can be modified by changing the time period, you select to view.&lt;/p&gt;
-</description>
+      <description>What Are Vanilla Analytics? Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.
+How to use Vanilla Statistics The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server. We generate and present you with the statistics in a graphical format for the following:
+How to use Vanilla Analytics You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.</description>
     </item>
     
     <item>
@@ -286,16 +65,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
-      <description>
-
-&lt;h2 id=&#34;applying-ranks-over-sso&#34;&gt;Applying Ranks over SSO&lt;/h2&gt;
-
-&lt;p&gt;Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.&lt;/p&gt;
-
-&lt;p&gt;This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.&lt;/p&gt;
-</description>
+      <description>Applying Ranks over SSO Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.
+You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.
+This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.</description>
     </item>
     
     <item>
@@ -304,34 +76,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;purpose&#34;&gt;Purpose&lt;/h2&gt;
-
-&lt;p&gt;Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.&lt;/p&gt;
-
-&lt;h2 id=&#34;default-badges&#34;&gt;Default badges&lt;/h2&gt;
-
-&lt;p&gt;Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions). Default badges are typically assigned to users automatically when certain conditions are met.&lt;/p&gt;
-
-&lt;h2 id=&#34;badges-list&#34;&gt;Badges list&lt;/h2&gt;
-
-&lt;p&gt;All badges are listed in the Dashboard under &amp;ldquo;Badges&amp;rdquo;. This includes any badge ever created in your forum, regardless of whether it is currently active or achievable.&lt;/p&gt;
-
-&lt;h2 id=&#34;users-badges&#34;&gt;Users&amp;rsquo; badges&lt;/h2&gt;
-
-&lt;p&gt;A list of a users&amp;rsquo; badges will display, by default, in the panel of their profile as a grid of badge images. Badges awarded incrementally (such as membership anniversaries) will &amp;ldquo;stack&amp;rdquo;, meaning only the highest-increment badge will show.&lt;/p&gt;
-
-&lt;h2 id=&#34;viewing-a-badge&#34;&gt;Viewing a badge&lt;/h2&gt;
-
-&lt;p&gt;Clicking a badge&amp;rsquo;s name in the badges list will take you to a public page describing the badge. Users can get to this page by clicking the badge in their profile. This page shows the most recent recipients of the badge.&lt;/p&gt;
-</description>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Purpose Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.
+Default badges Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions).</description>
     </item>
     
     <item>
@@ -340,44 +86,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;curating-with-reactions&#34;&gt;Curating with Reactions&lt;/h2&gt;
-
-&lt;p&gt;Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.&lt;/p&gt;
-
-&lt;p&gt;Any of the thresholds or increment values mentioned in this document can be modified via support.&lt;/p&gt;
-
-&lt;h2 id=&#34;promoting-content&#34;&gt;Promoting content&lt;/h2&gt;
-
-&lt;p&gt;Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it. It assigns five points to the discussion or comment. The user that made the post receives the number of points indicated under that reaction in your Dashboard.&lt;/p&gt;
-
-&lt;p&gt;Discussions or comments with five or more points assigned to it will be added to the Best Of page and will get the &amp;ldquo;promoted&amp;rdquo; CSS class added to them. These points can come from any type of reaction.&lt;/p&gt;
-
-&lt;p&gt;After content is added to the Best Of page, it is never removed, no matter what its future point total is. The &amp;ldquo;promoted&amp;rdquo; CSS class is reevaluated as point totals change. You can use this special class to style promoted content different (like highlighting it with a special background color).&lt;/p&gt;
-
-&lt;h2 id=&#34;burying-content&#34;&gt;Burying content&lt;/h2&gt;
-
-&lt;p&gt;Discussions and comments that reach a score of -5 or lower will be &amp;ldquo;buried&amp;rdquo;. Buried content appears collapsed by default and requires a user to click on the content before it can be read. You can style buried content using the &amp;ldquo;Buried&amp;rdquo; CSS class.&lt;/p&gt;
-
-&lt;h2 id=&#34;abuse-and-spam&#34;&gt;Abuse and Spam&lt;/h2&gt;
-
-&lt;p&gt;Abuse and Spam reactions are available to all users when enabled but have special actions attached to them. Five or more Abuse reactions will add the content to the Moderation Queue for moderator review. Ten or more will remove it. Five or more Spam reactions will move the content to the Spam Queue.&lt;/p&gt;
-
-&lt;p&gt;A user with the &amp;ldquo;Curation&amp;rdquo; permission counts as 5 of either of these reactions when they use it.&lt;/p&gt;
-
-&lt;h2 id=&#34;using-negative-reactions&#34;&gt;Using negative reactions&lt;/h2&gt;
-
-&lt;p&gt;The current default for negative reactions in new installations of Vanilla is for them to remove 1 point from the discussion or comment, but to have no effect on the point total of the user who made the post. This discourages abuse of negative reactions beyond simple voting scenarios.&lt;/p&gt;
-
-&lt;p&gt;There is always the potential for abuse when you open up avenues of self-curation in a community. In general, we discourage the use of any negative reactions unless there are established guidelines for their use in your community.&lt;/p&gt;
-</description>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Curating with Reactions Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.
+Any of the thresholds or increment values mentioned in this document can be modified via support.
+Promoting content Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it.</description>
     </item>
     
     <item>
@@ -386,22 +97,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/social/facebook/</guid>
-      <description>
-
-&lt;h2 id=&#34;facebook&#34;&gt;Facebook&lt;/h2&gt;
-
-&lt;p&gt;Facebook Connect allows users to sign in using their Facebook account. You must register your application with Facebook for this plugin to work.&lt;/p&gt;
-
-&lt;h3 id=&#34;how-to-set-up-facebook-connect&#34;&gt;How to set up Facebook Connect&lt;/h3&gt;
-
-&lt;p&gt;In order to set up Facebook Connect, you must create an &amp;ldquo;application&amp;rdquo; in Facebook at: &lt;a href=&#34;https://developers.facebook.com/apps&#34;&gt;https://developers.facebook.com/apps&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once your application has been set up, you must copy the &amp;ldquo;Application ID&amp;rdquo; and &amp;ldquo;Application Secret&amp;rdquo; into your Facebook plugin settings page from your Vanilla dashboard.&lt;/p&gt;
-
-&lt;h3 id=&#34;need-help&#34;&gt;Need help?&lt;/h3&gt;
-
-&lt;p&gt;For a complete walk-through of the steps involved, read &lt;a href=&#34;http://blog.vanillaforums.com/facebook-application-for-vanillaforums-sso/&#34;&gt;How to Create a Facebook Application for Vanillaforums Single Sign-On (SSO)&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Facebook Facebook Connect allows users to sign in using their Facebook account. You must register your application with Facebook for this plugin to work.
+How to set up Facebook Connect In order to set up Facebook Connect, you must create an &amp;ldquo;application&amp;rdquo; in Facebook at: https://developers.facebook.com/apps
+Once your application has been set up, you must copy the &amp;ldquo;Application ID&amp;rdquo; and &amp;ldquo;Application Secret&amp;rdquo; into your Facebook plugin settings page from your Vanilla dashboard.</description>
     </item>
     
     <item>
@@ -410,53 +108,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/forum-merge/</guid>
-      <description>
-
-&lt;h2 id=&#34;when-to-use-forum-merge&#34;&gt;When to Use Forum Merge&lt;/h2&gt;
-
-&lt;p&gt;The ForumMerge plug-in should be used when you want to take one existing Vanilla forum instance and merge it into another existing Vanilla forum.  Core Vanilla data, in addition to some plug-in and addon data, will be carried over from the source into the destination forum and reconciled with existing records to avoid conflicts.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-data-is-merged&#34;&gt;What Data is Merged&lt;/h2&gt;
-
-&lt;p&gt;The following Vanilla data will be considered during the merge process:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Attachments&lt;/li&gt;
-&lt;li&gt;Bookmarks&lt;/li&gt;
-&lt;li&gt;Categories&lt;/li&gt;
-&lt;li&gt;Comments&lt;/li&gt;
-&lt;li&gt;Conversations&lt;/li&gt;
-&lt;li&gt;Discussions&lt;/li&gt;
-&lt;li&gt;Roles&lt;/li&gt;
-&lt;li&gt;Users&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In addition, the following plug-ins have their data merged, if present:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Polls&lt;/li&gt;
-&lt;li&gt;Tagging&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;the-process-of-merging-forums&#34;&gt;The Process of Merging Forums&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Ensure your source forum database is on the same server and accessible by the same database user configured for your destination forum.&lt;/li&gt;
-&lt;li&gt;Install and enable the ForumMerge plug-in on the destination forum.  Enabling the plug-in may take several seconds to complete if the destination forum is large.  This is due to the addition of an OldID column across several tables.  It is also possible the plug-in cannot be enabled due to the size of some tables.  If this step fails, you should be presented with SQL commands you will need to run manually against the database before the plug-in can be successfully enabled.&lt;/li&gt;
-&lt;li&gt;Visit the Merge page, listed under Import in the dashboard sidebar.&lt;/li&gt;
-&lt;li&gt;Enter your source forum&amp;rsquo;s database name and table prefix.  If you will be merging multiple forums, you can specify a &amp;ldquo;Legacy Slug&amp;rdquo; that will identify the records coming from the source separately from any subsequent merges with a different legacy slug.&lt;/li&gt;
-&lt;li&gt;Click begin.  Cross your fingers.&lt;/li&gt;
-&lt;li&gt;If the merge is successful, the page should appear to refresh, but there is currently no status message to confirm.&lt;/li&gt;
-&lt;li&gt;If you&amp;rsquo;ll be merging in another forum, you can visit /utility/mergereset to reset all existing OldID fields.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Do not enable the Forum Merge plug-in on the source forum.  If it has been enabled in the past, you&amp;rsquo;ll need to remove all OldID and OldCategoryID columns from the relevant tables prior to running the merge.  Failure to do so will cause a fatal SQL error during the merge, because the merge-specific columns (OldID, OldCategoryID) are being selected twice.&lt;/li&gt;
-&lt;li&gt;If dumping the destination forum data into an existing forum install with ForumMerge enabled, you&amp;rsquo;ll need to disable, then re-enable the ForumMerge plug-in or visit /utility/update to apply the necessary database table updates.  Failure to do so will cause a fatal SQL error, because the required columns (OldID, OldCategoryID) aren&amp;rsquo;t present.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>When to Use Forum Merge The ForumMerge plug-in should be used when you want to take one existing Vanilla forum instance and merge it into another existing Vanilla forum. Core Vanilla data, in addition to some plug-in and addon data, will be carried over from the source into the destination forum and reconciled with existing records to avoid conflicts.
+What Data is Merged The following Vanilla data will be considered during the merge process:</description>
     </item>
     
     <item>
@@ -465,42 +118,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/gigya/</guid>
-      <description>
-
-&lt;h2 id=&#34;gigya-sign-in&#34;&gt;Gigya Sign In&lt;/h2&gt;
-
-&lt;p&gt;The Gigya Sign In adds the ability to sign to your community with Gigya Social Login. You will need to configure your site in your &lt;a href=&#34;https://platform.gigya.com/Site/partners/dashboard.aspx&#34;&gt;Gigya dashboard&lt;/a&gt; and then set up your login plugin on the &lt;a href=&#34;https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin&#34;&gt;Gigya plugins page&lt;/a&gt; before you can use the Gigya addon in Vanilla.&lt;/p&gt;
-
-&lt;h3 id=&#34;setting-up-your-site-in-gigya&#34;&gt;Setting up your site in Gigya&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Instructions on setting up a a site in Gigya can be found in their &lt;a href=&#34;http://developers.gigya.com/010_Developer_Guide/82_Socialize_Setup&#34;&gt;site setup documentation&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Once you&amp;rsquo;ve set up your site you&amp;rsquo;ll need to copy and paste your &lt;strong&gt;Client ID&lt;/strong&gt; and &lt;strong&gt;Client secret&lt;/strong&gt; into your Vanilla dashboard.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;setting-up-the-login-plugin-in-gigya&#34;&gt;Setting up the login plugin in Gigya&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;You&amp;rsquo;ll need to configure the look and feel of your login widget on the &lt;a href=&#34;https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin&#34;&gt;Gigya plugins page&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Once you&amp;rsquo;ve set up your login plugin you&amp;rsquo;ll need to copy and paste the &lt;strong&gt;head template&lt;/strong&gt; and &lt;strong&gt;body template&lt;/strong&gt; into your Vanilla dashboard.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;setting-up-the-gigya-addon-in-vanilla&#34;&gt;Setting up the Gigya Addon in Vanilla&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Go to your dashboard/addons and find the &lt;strong&gt;Gigya Sign In&lt;/strong&gt; plugin.&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Settings&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;You should see spots for all of the settings from the above steps.&lt;/li&gt;
-&lt;li&gt;Click save.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The default Vanilla theme gives 170px to alternate sign in methods. There is a place to set the login width on the &lt;a href=&#34;https://platform.gigya.com/Site/partners/Plugins.aspx#cmd%3DPlugins.LoginPlugin&#34;&gt;Gigya plugins page&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Make sure the url that you specify for your site matches your forum. If you set up a custom domain after setting up Gigya then you&amp;rsquo;ll have to change this later.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Gigya Sign In The Gigya Sign In adds the ability to sign to your community with Gigya Social Login. You will need to configure your site in your Gigya dashboard and then set up your login plugin on the Gigya plugins page before you can use the Gigya addon in Vanilla.
+Setting up your site in Gigya  Instructions on setting up a a site in Gigya can be found in their site setup documentation.</description>
     </item>
     
     <item>
@@ -509,22 +128,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/integrations/github/</guid>
-      <description>
-
-&lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
-
-&lt;p&gt;This plugin allows you to submit user discussion and comments as GitHub issues.&lt;/p&gt;
-
-&lt;h3 id=&#34;setup-instructions&#34;&gt;Setup Instructions&lt;/h3&gt;
-
-&lt;p&gt;If you already have a Github account, you need to enable API Access for this plugin to work.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/settings/applications/new&#34;&gt;Create a new application in GitHub&lt;/a&gt;, and set the callback URL by appending &lt;code&gt;/profile/githubconnect&lt;/code&gt; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your callback URL would be &lt;code&gt;http://example.com/forum/profile/githubconnect&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Once your application has been set up, you must copy the &lt;strong&gt;ClientID&lt;/strong&gt; and &lt;strong&gt;Secret&lt;/strong&gt; into your Github plugin settings page from your Vanilla dashboard.&lt;/li&gt;
-&lt;li&gt;Enter the repositories you want to be allowed into your Github plugin settings page from your Vanilla dashboard.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Github This plugin allows you to submit user discussion and comments as GitHub issues.
+Setup Instructions If you already have a Github account, you need to enable API Access for this plugin to work.
+ Create a new application in GitHub, and set the callback URL by appending /profile/githubconnect to the end of your forum’s URL. (If your forum is at example.com/forum, your callback URL would be http://example.com/forum/profile/githubconnect). Once your application has been set up, you must copy the ClientID and Secret into your Github plugin settings page from your Vanilla dashboard.</description>
     </item>
     
     <item>
@@ -533,43 +139,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</guid>
-      <description>
-
-&lt;aside class=&#34;cloudfeature&#34;&gt;&lt;p&gt;
-    &lt;img src=&#34;//docs.vanillaforums.com/img/help/cloud.png&#34; /&gt;
-    &lt;span&gt;This feature is only available on Vanilla Cloud&lt;/span&gt;
-    &lt;a href=&#34;https://vanillaforums.com&#34;&gt;Learn More...&lt;/a&gt;
-&lt;/p&gt;&lt;/aside&gt;
-
-&lt;h2 id=&#34;giving-a-badge&#34;&gt;Giving a badge&lt;/h2&gt;
-
-&lt;p&gt;Badges-&amp;gt;Give is the permission that defines who can give badges. By default, moderators and administrators have it.&lt;/p&gt;
-
-&lt;p&gt;To manually give a badge to one or more users, click the &amp;ldquo;Give&amp;rdquo; button from the Badges list. Type a username in the provided box. You can give a badge to many users at once by typing all their names, separated by commas.&lt;/p&gt;
-
-&lt;p&gt;From a user&amp;rsquo;s profile, you may select &amp;ldquo;Give Badge&amp;rdquo; from their options menu to give that user a particular badge.&lt;/p&gt;
-
-&lt;h2 id=&#34;revoking-a-badge&#34;&gt;Revoking a badge&lt;/h2&gt;
-
-&lt;p&gt;To revoke a badge from one or more users, contact support. It is not currently possible to revoke the points assigned.&lt;/p&gt;
-
-&lt;h2 id=&#34;requesting-a-badge&#34;&gt;Requesting a badge&lt;/h2&gt;
-
-&lt;p&gt;Badges-&amp;gt;Request is the permission that defines who can request a badge.&lt;/p&gt;
-
-&lt;p&gt;Manually-awarded badges will have a &amp;ldquo;Request This Badge&amp;rdquo; button on their view page. Badges that are triggered automatically do not have this option.&lt;/p&gt;
-
-&lt;p&gt;Requests for badges are viewable in the Dashboard under &amp;ldquo;Badge Requests&amp;rdquo;. There are options to Approve or Decline them individually or en masse.&lt;/p&gt;
-
-&lt;p&gt;Users with permission to Give badges will be able to see the Badge Requests page. They will also have an option under Notification Preferences in their profile to be notified of new badge requests.&lt;/p&gt;
-
-&lt;h2 id=&#34;addons-that-assign-badges&#34;&gt;Addons that assign badges&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Reactions: Gives badges for incremental levels of positive reactions received by a user&amp;rsquo;s content.&lt;/li&gt;
-&lt;li&gt;Q&amp;amp;A: Gives badges for incremental levels of accepted answers as user has posted.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Giving a badge Badges-&amp;gt;Give is the permission that defines who can give badges. By default, moderators and administrators have it.
+To manually give a badge to one or more users, click the &amp;ldquo;Give&amp;rdquo; button from the Badges list. Type a username in the provided box. You can give a badge to many users at once by typing all their names, separated by commas.</description>
     </item>
     
     <item>
@@ -578,28 +149,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/social/googleplus/</guid>
-      <description>
-
-&lt;h2 id=&#34;google-plus&#34;&gt;Google Plus&lt;/h2&gt;
-
-&lt;p&gt;The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in &lt;a href=&#34;https://code.google.com/apis/console&#34;&gt;Google API Console&lt;/a&gt;. This &lt;a href=&#34;http://youtu.be/OHEb22VrZy4&#34;&gt;Google+ Video Tutorial&lt;/a&gt; also shows you how to set this up.&lt;/p&gt;
-
-&lt;h3 id=&#34;setting-up-social-login-in-google-plus&#34;&gt;Setting up social login in Google Plus&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Once you have enabled the Google+ Plugin in your Vanilla Dashboard, go to your API Console at Google.&lt;/li&gt;
-&lt;li&gt;You will  need to create a project.&lt;/li&gt;
-&lt;li&gt;Once you have a project, click on the project name. You will be presented with a side menu. Select “Credentials”.&lt;/li&gt;
-&lt;li&gt;Create New ClientID and fill in the form.&lt;/li&gt;
-&lt;li&gt;Select Web Application as Type.&lt;/li&gt;
-&lt;li&gt;For authorized Javascript Origins URL will be your Vanilla Forums URL&lt;/li&gt;
-&lt;li&gt;For authorized redirect URL, append &amp;ldquo;/entry/googleplus&amp;rdquo; to the end of your forum’s URL. (If your forum is at &lt;code&gt;example.com/forum&lt;/code&gt;, your redirect URL would be &lt;code&gt;http://example.com/forum/entry/googleplus&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Copy over Client ID and Secret into appropriate fields in Vanilla Dashboard.&lt;/li&gt;
-&lt;li&gt;If you have never used Google APIs before you will also need to fill in Consent Screen.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;//docs.vanillaforums.com/img/help/addons/social/googleplus/settings.png&#34; alt=&#34;Settings in Google Plus&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Google Plus The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in Google API Console. This Google+ Video Tutorial also shows you how to set this up.
+Setting up social login in Google Plus  Once you have enabled the Google+ Plugin in your Vanilla Dashboard, go to your API Console at Google. You will need to create a project.</description>
     </item>
     
     <item>
@@ -608,22 +159,192 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/groups/</guid>
-      <description>
-
-&lt;h2 id=&#34;what-are-groups&#34;&gt;What are Groups?&lt;/h2&gt;
-
-&lt;p&gt;Groups is an addon for very large communities to allow their users to form their own discussion groups. These groups allows for having discussions outside the normal forum category structure in self-contained areas. Very large communities can be difficult to approach for new users. Groups can be a useful way for users to find other folks with common interests or backgrounds.&lt;/p&gt;
-
-&lt;p&gt;Groups have an events list, their own announcements, and leaders who run the show. Users can join a group freely, by application, or by invitation. Your normal moderators (with the permission Moderation.Manage) will have the ability to moderate inside groups as well.&lt;/p&gt;
-
-&lt;h2 id=&#34;why-only-very-large-communities&#34;&gt;Why only very large communities?&lt;/h2&gt;
-
-&lt;p&gt;Groups can cause discussion segregation and draw attention away from your main forum categories. Cliques can form within your community which hurt its cohesion and growth. We strongly recommend against using Groups on sites with less than several thousand currently active users (users that participate once a month or more).&lt;/p&gt;
-
-&lt;h2 id=&#34;getting-started-with-groups&#34;&gt;Getting started with Groups&lt;/h2&gt;
-
-&lt;p&gt;Try creating three to eight groups as a pilot program to introduce groups to your community. Carefully managing the list of groups available can encourage the creation of fewer groups with higher quality and participation. Ten groups with 30 members each will create a far better experience than 100 groups with three members each.&lt;/p&gt;
-</description>
+      <description>What are Groups? Groups is an addon for very large communities to allow their users to form their own discussion groups. These groups allows for having discussions outside the normal forum category structure in self-contained areas. Very large communities can be difficult to approach for new users. Groups can be a useful way for users to find other folks with common interests or backgrounds.
+Groups have an events list, their own announcements, and leaders who run the show.</description>
+    </item>
+    
+    <item>
+      <title>LinkedIn</title>
+      <link>//docs.vanillaforums.com/help/addons/social/linkedin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/linkedin/</guid>
+      <description>LinkedIn Linked In social sign in allows users to sign in using their LinkedIn account. You must register your application with LinkedIn for this addon to work.
+How to Set up LinkedIn Social Sign in  Go to the LinkedIn Developer Network at https://www.linkedin.com/secure/developer/ Click Add New Application. When you create the application, you can choose what to enter in most fields, but you have to make sure you enter specific information for some fields.</description>
+    </item>
+    
+    <item>
+      <title>MailChimp Push</title>
+      <link>//docs.vanillaforums.com/help/addons/mailchimp-push/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/mailchimp-push/</guid>
+      <description>Overview MailChimp is one of the world’s leading email marketing platforms, allowing it’s users to send newsletters, automated messages, and set up targeted campaigns to help their business.
+Our plugin synchronizes the email addresses of your community’s users with a designated mailing list. As your community grows, or users change their email address, Vanilla will send notifications to MailChimp to update the specified list.
+Enabling MailChimp Push MailChimp Push is a feature provided at every plan level, it can be activated for your forum through a support request.</description>
+    </item>
+    
+    <item>
+      <title>Managing Groups</title>
+      <link>//docs.vanillaforums.com/help/addons/groups/managing-groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/groups/managing-groups/</guid>
+      <description>Adding your first groups After enabling the Groups addon, &amp;ldquo;Groups&amp;rdquo; will appear in your top-level navigation. In a customized theme, this may not be the case and you&amp;rsquo;ll need to go directly to the URL &amp;ldquo;/groups&amp;rdquo; from your forum domain (e.g. &amp;ldquo;yoursite.vanillaforums.com/groups&amp;rdquo;).
+As the administrator, click the &amp;ldquo;New Group&amp;rdquo; button near the top of the page. The &amp;ldquo;Icon&amp;rdquo; image shows on the groups lists. The &amp;ldquo;Banner&amp;rdquo; is the large image at the top of your group&amp;rsquo;s page.</description>
+    </item>
+    
+    <item>
+      <title>Plugin Quickstart</title>
+      <link>//docs.vanillaforums.com/developer/plugins/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/plugins/quickstart/</guid>
+      <description>Quickstart Links  Read about our hooks system: Extending Vanilla with plugins Download the official Example plugin Download other plugins from the Addon Directory and borrow their code. Get help in the developer community  Quickstart Guide Vanilla is built on an object-oriented, MVC framework. If you&amp;rsquo;re coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That&amp;rsquo;s OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.</description>
+    </item>
+    
+    <item>
+      <title>Pockets</title>
+      <link>//docs.vanillaforums.com/help/addons/pockets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/pockets/</guid>
+      <description>Overview Pockets add areas to your forum where you can inject custom HTML or Javascript into your theme. It is a powerful tool that makes Vanilla flexible for ad placement, google analytics, and other small customizations.
+Pockets are designed to be used by advanced users and developers who can write and review their own code.
+Setup Pockets are available on all plan levels. To activate it, simply locate it in your addon list (/dashboard/settings/addons) and toggle it on.</description>
+    </item>
+    
+    <item>
+      <title>Private Community</title>
+      <link>//docs.vanillaforums.com/help/roles-permissions/private-community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/roles-permissions/private-community/</guid>
+      <description>Making your Community Private If you set your community to private, only registered members will be able to view and post. If a user that is not logged in browses to the community, they will see a login page.
+To make your community private:
+ Go to the Addons page in the Dashboard Turn on the &amp;lsquo;Private Community&amp;rsquo; addon Click on the addon settings, this will take you to the Roles and Permission page Turn on &amp;lsquo;Enable Private Communities&amp;rsquo;  Additional Resources:</description>
+    </item>
+    
+    <item>
+      <title>Questions and Answers</title>
+      <link>//docs.vanillaforums.com/help/addons/qna/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/qna/</guid>
+      <description>Overview Vanilla supports question and answer type discussions. Q&amp;amp;A discussions differ in the following ways:
+ When a question is answered, the member who asked the question will receive a notification and will be prompted to indicate if the answer answered the question or not.
+ Valid answers are highlighted and displayed at the top of the discussion list. Members who answer questions will receive badges (if badges are turned on).</description>
+    </item>
+    
+    <item>
+      <title>Ranks</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/</guid>
+      <description>What is a Rank? A rank can be assigned to a user to grant or remove certain privileges on your forum. A rank is not Roles &amp;amp; Permissions, which govern content access, moderation abilities, and administrator access.
+A user can only have one rank at a time. Typically, the user&amp;rsquo;s rank is displayed on their discussions and comments just after their name. If a user has a Title, that is displayed separately, after their Rank.</description>
+    </item>
+    
+    <item>
+      <title>Reactions</title>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  What are reactions? Reactions are a 1-click response to discussions and comments. Using Reactions enables community members to indicate an emotional (&amp;ldquo;Awesome&amp;rdquo;, &amp;ldquo;LOL&amp;rdquo;) or empirical (&amp;ldquo;Agree&amp;rdquo;, &amp;ldquo;Vote Down&amp;rdquo;) response without typing a comment. This introduces feedback that is otherwise missing from a community when members don&amp;rsquo;t have anything to add to a discussion via a comment. Reactions are available via an addon.</description>
+    </item>
+    
+    <item>
+      <title>Redirector</title>
+      <link>//docs.vanillaforums.com/help/addons/redirector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/redirector/</guid>
+      <description>When to Use Redirector Redirector is a plug-in that translates URLs from many popular forum platforms into Vanilla-friendly URLs. If you&amp;rsquo;re moving from one of the supported platforms, installing and enabling this plug-in will magically handle maintaining the previous platform&amp;rsquo;s links, which can be of tremendous SEO value.
+Supported Platforms  IPB Jive phpBB punBB smf vBulletin xenforo  Usage  Install and enable the plug-in. Visit a URL from your previous platform against your Vanilla installation.</description>
+    </item>
+    
+    <item>
+      <title>Reporting</title>
+      <link>//docs.vanillaforums.com/help/moderation/reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/moderation/reporting/</guid>
+      <description>What is Reporting? Reporting is a way for members to bring moderators’ attention to content that they believe is inappropriate. “Report” is an option under “Flag” in the Reactions available under each post.
+Reporting a post Go to Flag → Report in the Reactions menu at the end of the post. A popup box will prompt you to add a “Reason” both to explain the report and discourage useless reports.</description>
+    </item>
+    
+    <item>
+      <title>Salesforce</title>
+      <link>//docs.vanillaforums.com/help/addons/salesforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/salesforce/</guid>
+      <description>Overview This plugin allows you to:
+ Link your Salesforce account to your Vanilla user profile. Create cases and leads from discussions. View leads on Vanilla users profile.  Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
+Setup Configure Application in Salesforce  Log into your Salesforce Account Create new Connected App in Salesforce  Build → Create → Apps → Connected Apps → New Fill the required fields Connected App Name, API Name, Contact Email Enable OAuth Settings Set a Callback URL by appending /profile/salesforceconnect to the end of your forum&amp;rsquo;s URL.</description>
+    </item>
+    
+    <item>
+      <title>Social Connect Plugins</title>
+      <link>//docs.vanillaforums.com/help/addons/social/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/</guid>
+      <description>Social Connect Plugins Vanilla Forums integrates with a number of social applications that you can use as SSO solutions. Learn more about configuring these applications to work with your forum in this section.</description>
+    </item>
+    
+    <item>
+      <title>Tagging</title>
+      <link>//docs.vanillaforums.com/help/addons/tagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/tagging/</guid>
+      <description>Overview Tagging is a feature that allows users to add keywords to discussions. For public communities, tags help label specific content for improved findability. When used with advanced search, they help isolate content by a relevant topic and improve results. Tagging also has a theme module, which can serve as site navigation.
+Enabling Tagging Tagging is not enabled by default for new communities, it will need to be toggled on by and administrator.</description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>//docs.vanillaforums.com/help/addons/social/twitter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/social/twitter/</guid>
+      <description>Twitter Twitter Connect allows users to sign in using their Twitter account. You must register your application with Twitter for this plugin to work.
+Setting up social login in Twitter Connect  Register Vanilla with Twitter at: https://apps.twitter.com/app/new Set the Callback URL by appending /entry/twauthorize to the end of your forum’s URL. (If your forum is at example.com/forum, your Callback URL would be http://example.com/forum/entry/twauthorize). After registering, copy the &amp;ldquo;Consumer Key&amp;rdquo; and &amp;ldquo;Consumer Secret&amp;rdquo; into your Twitter plugin settings page from your Vanilla dashboard.</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks as Incentives</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</guid>
+      <description>Using Ranks: Incentives You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.
+Example Case What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.
+Gaining points on your site is done thru addons such as Badges and Reactions.</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks to Defeat Spam or Abuse</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
+      <description>Using Ranks: Spam Ranks can be used to limit the ability of spammers to take advantage of your site and protect members from abuse. To do this, limit the abilities of your newest users until they have been proven their value to the community.
+Who is this for? This guide is for communities currently having spam problems that have already tried other automated filtering solutions like Akismet and Stop Forum Spam.</description>
+    </item>
+    
+    <item>
+      <title>Zendesk</title>
+      <link>//docs.vanillaforums.com/help/addons/zendesk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/zendesk/</guid>
+      <description>Overview This plugin allows you to:
+ Link your Zendesk account to your Vanilla user profile. Submit users&amp;rsquo; discussions and comments as tickets to your hosted Zendesk.  Setup If you already have an account you need to enable API Access for this plugin to work.
+ Login to your Zendesk Site. Go to the Admin Setting. Under Channels Select API. Select the OAuth Clients. Add a client. Complete the form.</description>
     </item>
     
   </channel>
