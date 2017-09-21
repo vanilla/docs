@@ -84,7 +84,7 @@ For HTML, BBC and Markdown modes, the appropriate markup for an image will be in
 ### Changing A Post's Body Alignment
 ![Alignment](https://images.v-cdn.net/docs/AE_Alignment.PNG)
 
-These familiar buttons allow users to align text within their post to the left, center, or to the right, depending on their need or preference.  
+These familiar buttons allow users to align text within their post to the left, center, or to the right, depending on their need or preference. Alignment cannot be adjusted when using Markdown, so these buttons wont appear if Advanced Editor is set to that format. 
 
 ### HTML View
 ![HTML View Toggle](https://images.v-cdn.net/docs/AE_HTMLView.PNG)
