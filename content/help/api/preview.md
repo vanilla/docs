@@ -22,7 +22,7 @@ This preview exposes access to only the most core Vanilla resources:
 * Messages (text banners)
 * Tokens (basic API access management)
 
-The full API v2 release will introduce parity with the API v1 feature set, and will trigger the beginning of a sunset period for that API which will last at least 6 months.
+The full API v2 release will introduce parity with the API v1 feature set, and will trigger the beginning of a long sunset period for that API which we will formally announce at that time.
 
 We will continue to add new endpoints to API v2 throughout 2018 to increase your access to functionality in Vanilla's community platform.
 
