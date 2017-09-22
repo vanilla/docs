@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Seo on Vanilla Forums Documentation</title>
-    <link>//docs.vanillaforums.com/tags/seo/</link>
-    <description>Recent content in Seo on Vanilla Forums Documentation</description>
+    <title>Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/seo/index.xml</link>
+    <description>Recent content on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="//docs.vanillaforums.com/tags/seo/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="//docs.vanillaforums.com/tags/seo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SEO</title>
@@ -15,8 +13,91 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/seo/</guid>
-      <description>Search Engine Optimizations Vanilla subscribes to common sense, vetted principles for improving the findability of your site and its content. We employ no &amp;ldquo;tricks&amp;rdquo; because we believe they ultimately hurt your traffic and reputation.
-Curation Having a team dedicated to the curation of your forum is critical to its success. Concisely edited discussion titles, clearly-expressed first posts, and moving discussions to their most-appropriate category are highly effective search engine optimization techniques.</description>
+      <description>
+
+&lt;h2 id=&#34;search-engine-optimizations&#34;&gt;Search Engine Optimizations&lt;/h2&gt;
+
+&lt;p&gt;Vanilla subscribes to common sense, vetted principles for improving the findability of your site and its content. We employ no &amp;ldquo;tricks&amp;rdquo; because we believe they ultimately hurt your traffic and reputation.&lt;/p&gt;
+
+&lt;h3 id=&#34;curation&#34;&gt;Curation&lt;/h3&gt;
+
+&lt;p&gt;Having a team dedicated to the curation of your forum is critical to its success. Concisely edited discussion titles, clearly-expressed first posts, and moving discussions to their most-appropriate category are highly effective search engine optimization techniques. If it&amp;rsquo;s good for your readers and users, it&amp;rsquo;s good for SEO! Vanilla has first-class curation features to accomplish this.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nothing else on this list is as important or as powerful as curating your forum!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;domains&#34;&gt;Domains&lt;/h3&gt;
+
+&lt;p&gt;We recommend putting your community on a subdomain of your primary site. If you use Google Webmaster Tools, you can explicitly opt-in the subdomain to identify it as part of the main site, but this is completely optional.&lt;/p&gt;
+
+&lt;p&gt;There is no demonstrable additional SEO value from using a subfolder / path approach instead of a subdomain (e.g. putting your forum at &lt;code&gt;example.com/community&lt;/code&gt; instead of &lt;code&gt;community.example.com&lt;/code&gt;). Modern web architecture is dependent on sites combining many services in many physical locations. Subdomains are the correct and best-recognized way of accomplishing this.&lt;/p&gt;
+
+&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
+
+&lt;p&gt;The primary content engine of your forum is the discussion, and every discussion has a unique identifier (number) in the URL in addition to a &amp;ldquo;slug&amp;rdquo; that represents the title. Our parsing system only cares about the number, so changing the title of your discussions will not effect links working. It will, however, update the URL to improve the visibility of your content and its keyword density.&lt;/p&gt;
+
+&lt;p&gt;Category pages only use the &amp;ldquo;slug&amp;rdquo; (URL-encoded name) in their URLs, so choose their names carefully and avoid changing them. Categories we view as keyword-centric landing pages moreso than specific content due to the fact that they change constantly as discussions are added.&lt;/p&gt;
+
+&lt;p&gt;We employ canonical links for both discussions and categories.&lt;/p&gt;
+
+&lt;p&gt;We do &lt;strong&gt;not&lt;/strong&gt; put the category slug into discussion URLs. See &amp;ldquo;Antipatterns&amp;rdquo; below.&lt;/p&gt;
+
+&lt;h3 id=&#34;markup&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;p&gt;We use modern, semantic HTML5 markup in all our products. This makes it easy not only for large search engines to parse the content, but also myriad other web services you may wish to expose your content to.&lt;/p&gt;
+
+&lt;p&gt;We support Open Graph and Twitter card tags natively.&lt;/p&gt;
+
+&lt;h3 id=&#34;migrations&#34;&gt;Migrations&lt;/h3&gt;
+
+&lt;p&gt;Maintaining your existing user-generated content is the most important thing you can do when moving to Vanilla. Our cloud platform has a highly trained, professional migration team to make sure you keep your existing content and that it is properly redirected. Your team plays an important part in making this process successful.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s natural to experience a dip in search engine traffic in the months after a migration, but in our wide experience this traffic not only always recovers, but exceeds previous levels thanks to Vanilla&amp;rsquo;s superior system.&lt;/p&gt;
+
+&lt;h3 id=&#34;opt-in-features&#34;&gt;Opt-in features&lt;/h3&gt;
+
+&lt;h4 id=&#34;sitemaps-robots-txt&#34;&gt;Sitemaps &amp;amp; robots.txt&lt;/h4&gt;
+
+&lt;p&gt;We provide an optional open source addon named &amp;ldquo;Sitemaps&amp;rdquo; to all cloud customers. It adds two classic SEO features: an XML site map, and a robots.txt file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Sitemap: http://example.com/sitemapindex.xml
+User-agent: *
+Disallow: /entry/
+Disallow: /messages/
+Disallow: /profile/comments/
+Disallow: /profile/discussions/
+Disallow: /search/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;While we are happy to provide these features to those who desire them, we do not believe they provide any discernible benefit. As a popular forum software platform used by tens of thousands of sites, Vanilla is easily recognizable to search engines and they need no coaching to properly index your site. This is why we do not provide these two features as part of our core product.&lt;/p&gt;
+
+&lt;h4 id=&#34;tagging&#34;&gt;Tagging&lt;/h4&gt;
+
+&lt;p&gt;User content tagging is available in Vanilla via the open source &amp;ldquo;Tagging&amp;rdquo; addon. Its primary benefit is making it easier to find content by particular topics across categories. It may have minor search engine benefits, but it is also a double-edged sword: it can be a high-maintenance to make sure users are properly tagging content and not abusing the system. That&amp;rsquo;s why we provide this as an opt-in feature.&lt;/p&gt;
+
+&lt;h2 id=&#34;antipatterns&#34;&gt;Antipatterns&lt;/h2&gt;
+
+&lt;p&gt;Not all SEO requests are benign. Let&amp;rsquo;s talk about things that can actively damage the findability, usability, and reputation of your site.&lt;/p&gt;
+
+&lt;h3 id=&#34;custom-meta-tags&#34;&gt;Custom meta tags&lt;/h3&gt;
+
+&lt;p&gt;Adding special meta tags to &amp;ldquo;juice&amp;rdquo; your SEO ranking is a dangerous game. Search engines will severely penalize sites for attempting to mislead them, and there is no evidence they help in the first place. We do not and will not support this.&lt;/p&gt;
+
+&lt;h3 id=&#34;taxonomy-in-the-url&#34;&gt;Taxonomy in the URL&lt;/h3&gt;
+
+&lt;p&gt;Including your tagging or category structure in URLs makes them highly susceptible to breaking. Moderators should be free to curate your content, including its taxonomy. If doing so shifts the URL, this is very detrimental to the findability of your content.&lt;/p&gt;
+
+&lt;h3 id=&#34;high-load-times&#34;&gt;High load times&lt;/h3&gt;
+
+&lt;p&gt;Themeing your site to be graphics-heavy or include complex elements like rotating sliders and cumbersome animations is bad for your SEO. Users want every page to load in a second or less. Search engines know this and penalize slow sites.&lt;/p&gt;
+
+&lt;p&gt;We recommend testing your site&amp;rsquo;s load time with caching disabled on bandwidth-constrained devices.&lt;/p&gt;
+
+&lt;h3 id=&#34;embedding-your-site&#34;&gt;Embedding your site&lt;/h3&gt;
+
+&lt;p&gt;Embedding your forum in another page necessarily doubles your page load: the parent page + the forum page. This increases load times and frequently creates a worse user experience. It can also make it more difficult for users to bookmark pages and makes those links more likely to break in the future.&lt;/p&gt;
+
+&lt;p&gt;Vanilla provides embedding for ease of application to sites with limited resources. We do not recommend it for large-scale community endeavors.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
