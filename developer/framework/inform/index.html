@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Inform Messages</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/framework/inform.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/">Vanilla API</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/developer/framework/">Framework</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/assets/">Assets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/controllers/">Controllers &amp; URLs </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/database/">Database access </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/datasets/">Datasets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/email/">Email </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/helpers/">Helpers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8081/developer/framework/inform/">Inform Messages </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/i18n/">Internationalization &amp; Localization </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/models/">Models, Forms, &amp; Validation </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/modules/">Modules </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/permissions/">Permissions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/requests/">Requests </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/views/">Views </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/developer/framework/apiv2/">Writing APIs </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/embedding/">Embedding</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/changelog/">Change Log</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="toaster-notifications">Toaster Notifications</h2>
+
+<p>Inform Messages allow you to let users know of some action that your plugin or application has taken. Inform messages allow you to quickly and easily relay information to users, and handle actions based on interaction with those messages. Use them freely to notify users of saved forms, punishments, rewards, etc.</p>
+
+<p>You can send Inform Messages from within a controller or a plugin, or from a custom javascript function.</p>
+
+<p>By default, these messages are stackable, dismissable, and autodismissable. They can contain any plain-text string, or any unfiltered custom html string.</p>
+
+<p>They can be passed with JavaScript callbacks to fire on dismissal so some kind of further action can be taken. There are even CSS definitions that allow you access to over 100 readymade icon sprites you can use to denote meaning in your messaging.</p>
+
+<h2 id="using-in-core">Using in core</h2>
+
+<p>An example native inform message in Vanilla: saving drafts.</p>
+
+<p><img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5091/5503092803_d4be13195b_o.png" alt="" /></p>
+
+<p>When a comment draft is saved, you can see an inform message appear on the bottom-left of the screen. This message shows a close button on the top-right when you hover your mouse overtop, and it automatically disappears after a few seconds. The code used to make this message appear is located on line 448 of /applications/vanilla/class.postcontroller.php:</p>
+
+<pre lang="php">$this-&gt;InformMessage(sprintf(T('Draft saved at %s'), Gdn_Format::Date()));</pre>
+<p>If we didn't want to include the time that the draft was saved, we could simplify it further to:</p>
+<pre lang="php">$this-&gt;InformMessage(T('Draft saved successfully'));</pre>
+
+<p>The <code>t()</code> function is Vanilla&rsquo;s native &ldquo;Translate&rdquo; function so that the string can be converted to other languages.</p>
+
+<h2 id="using-in-a-plugin">Using in a plugin</h2>
+
+<p>Adding a message to the screen with a plugin.</p>
+
+<p><img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5019/5503917718_4f22ccd6e0_o.png" alt="" /></p>
+
+<p>The code to achieve this is pretty easy:</p>
+
+<pre lang="php">public function Base_Render_Before($Sender) {<br />   $Sender-&gt;InformMessage('This is a test!');<br />}</pre>
+<p>With this code, the message will appear on every page load for every user (signed in or not) and it will disappear after a few moments. Not exactly a useful message, but let's see what else we can do with it:</p>
+<pre lang="php">public function Base_Render_Before($Sender) {<br />   // Only show the message if the user is signed in<br />   if (Gdn::Session()-&gt;IsValid())<br />      $Sender-&gt;InformMessage('This is a test!', 'Dismissable');<br />}</pre>
+
+<p>Now the message only shows if the user has a valid session, and it doesn&rsquo;t auto-dismiss. The second parameter in the InformMessage method is either a string of CSS classes to be applied to the message container, or an array of options.</p>
+
+<p>If you don&rsquo;t provide the second parameter at all, it defaults to &ldquo;Dismissable AutoDismiss&rdquo;, which obviously makes it so the message automatically disappears after a few moments, or can be immediately dismissed by clicking the &ldquo;close&rdquo; button. If you decide to use the second parameter, here are the options available to you:</p>
+
+<ul>
+<li><strong>CssClass:</strong> An optional set of css classes to pass along to the message&rsquo;s container.</li>
+<li><strong>DismissCallback:</strong> An optional javascript callback that gets called when the &ldquo;close&rdquo; button is clicked on a message.</li>
+<li><strong>DismissCallbackUrl:</strong> An optional javascript callback url that gets requested when the &ldquo;close&rdquo; button is clicked on a message. If a dismissCallback is specified, this option will be ignored.</li>
+</ul>
+
+<h2 id="static-messages">Static messages</h2>
+
+<p>Let&rsquo;s say you want to deliver a message to a particular user, and have that message stay on the screen on every page load until that user dismisses the message. You can achieve it like this:</p>
+
+<pre lang="php">public function Base_Render_Before($Sender) {<br />   $Session = Gdn::Session();<br />   if ($Session-&gt;IsValid() &amp;&amp; $Session-&gt;User-&gt;UserID == 1 &amp;&amp; $Session-&gt;GetPreference('UserDismissedCustomMessage', false) == false) {<br />      $Sender-&gt;InformMessage(<br />         'This message will stay here until you dismiss it!',<br />         array(<br />            'CssClass' =&gt; 'Dismissable',<br />            'DismissCallbackUrl' =&gt; '/plugin/dismissmessage/'<br />         )<br />      );<br />   }<br />}<br /><br />// Handle the callback<br />public function PluginController_DismissMessage_Create($Sender) {<br />   $Session = Gdn::Session();<br />   $Session-&gt;SetPreference('UserDismissedCustomMessage', TRUE);<br />}</pre>
+
+<p><img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5254/5503327977_f14304669c_o.png" alt="" /></p>
+
+<p>This message appears for me because my UserID is 1, and it keeps showing up on every page until I dismiss it. At that point the callback url is requested via ajax, and the dismissal preference is saved so the message will no longer appear for me.</p>
+
+<h2 id="styling-a-message">Styling a message</h2>
+
+<p>Let&rsquo;s look at how we can change the appearance of these messages.</p>
+
+<p><img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5014/5503328011_3d92a293b7_o.png" alt="" /></p>
+
+<p>There are over 100 icons available for you to use. You can check them out by looking at the icon sprite file located in /applications/dashboard/design/images/inform-sprites.png, and you can see how to reference them by searching for the css definitions in /applications/dashboard/design/style.css (hint: search for &ldquo;span.InformSprite.&rdquo;).</p>
+
+<p>Here&rsquo;s the code to achieve this message:</p>
+
+<pre lang="php">$Sender-&gt;InformMessage('&lt;span class="InformSprite Skull"&gt;&lt;/span&gt; This is a test!', 'Dismissable HasSprite');</pre>
+
+<p>Note the span at the front of the message. This will contain the &ldquo;Skull&rdquo; image you see above. It&rsquo;s also necessary for the CSS definition in the second argument to contain &ldquo;HasSprite&rdquo; so that the spacing &amp; alignment of the icon all works properly.</p>
+
+<h2 id="message-origin">Message origin</h2>
+
+<p>You can also style the inform messages to appear &ldquo;From&rdquo; a specific user. <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5098/5503917812_cfa84f0c24_o.png" alt="" /></p>
+
+<p>You&rsquo;ll need to load a user record for the icon you wish to display, and then write the message to the screen like this:</p>
+
+<pre lang="php">$User = Gdn::UserModel-&gt;Get(1); // Load the user who's icon you want to show<br />$String = UserPhoto($User, 'Icon'); // IMPORTANT: Give the icon a css class of "Icon" <br />$String .= 'This is a test!'; // Append some message<br />$Sender-&gt;InformMessage($String, 'Dismissable HasIcon'); // Send to the screen</pre>
+
+<h2 id="inform-via-javascript">Inform via JavaScript</h2>
+
+<p>At some point you may need to write a message to the screen from JavaScript instead of from the server side. This can be achieved with a similar, JavaScript-based method:</p>
+<pre lang="javascript">gdn.informMessage(&lsquo;This is a test!&rsquo;);</pre>
+<p>And all of the same properties exist, so you can be as elaborate as you like:</p>
+<pre lang="javascript">gdn.informMessage(&lsquo;This is a test!&rsquo;, {&lsquo;CssClass&rsquo; : &lsquo;Dismissable&rsquo;, &lsquo;DismissCallback&rsquo; : &lsquo;some_function&rsquo;, &lsquo;DismissCallbackUrl&rsquo; : &lsquo;/relative/path/to/callback/url&rsquo;});</pre></p>
+
+<h2 id="duplication-and-stacking">Duplication and stacking</h2>
+
+<p>You can add as many messages to as many pages as you like. If a message is already present on the screen, it will not be added a second time, and new messages will simply stack one-on-top-of-the-next. <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5300/5503917872_92042ca343_o.png" alt="" /></p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

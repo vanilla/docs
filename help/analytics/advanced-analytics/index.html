@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Advanced Analytics</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/analytics/advanced-analytics.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/help/analytics/">Analytics</a>
+    </li>
+    
+    
+        
+        
+
+        
+            <ul class="nav-tier2">
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8081/help/analytics/advanced-analytics/">Advanced Analytics </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="advanced-analytics-overview">Advanced Analytics Overview</h2>
+
+<p>Available on certain plans as an add-on, Advanced Analytics give you further insights into your community.</p>
+
+<p><img src="http://127.0.0.1:8081/img/help/analytics/analytics-advanced.png" alt="Advanced Analytics" /></p>
+
+<ul>
+<li><strong>Metrics:</strong>
+Metrics a single number that quantify something for the selected time range.</li>
+<li><strong>Leaderboards:</strong>
+Leaderboards are tables showing the ranking of specific items for the selected time range.
+The &ldquo;previous&rdquo; rankings are calculated using the rankings of the previous time range.</li>
+<li><strong>Graphs:</strong>
+Graphs can come in multiple forms!
+Line, Area, Pie chart and Bar graphs use the selected time range to group the fetched information.
+Pie charts represent multiple values for the whole selected time range.</li>
+</ul>
+
+<h2 id="analytics-sections">Analytics Sections</h2>
+
+<h3 id="engagement">Engagement</h3>
+
+<h4 id="metrics">Metrics</h4>
+
+<ul>
+<li><strong>Posts Positivity Rate:</strong> Number of posts having a positive reaction divided by the number of posts having a negative reaction.</li>
+<li><strong>Average Time to First Comment:</strong> Average amount of time it took for discussions to have their first comment.</li>
+</ul>
+
+<h4 id="leaderboards">Leaderboards</h4>
+
+<ul>
+<li><strong>Members by Accumulated Reputation:</strong> Members ordered by the highest sum of reputation point accumulated.</li>
+<li><strong>Discussions with Most Comments:</strong>  Discussions ordered by highest number of comments made in it.</li>
+<li><strong>Discussions with Most Positive Reactions:</strong>  Discussions ordered by highest sum of positive reactions given to them.</li>
+<li><strong>Discussions with Most Negative Reactions:</strong>  Discussions ordered by highest sum of negative reactions given to them.
+<em>This leaderboard will only be displayed if negative reactions are in use.</em>
+<br /></li>
+</ul>
+
+<h4 id="graphs">Graphs</h4>
+
+<ul>
+<li><strong>Participation Rate:</strong> Number of distinct members that viewed a page on the forum vs the number of visits by distinct users.</li>
+<li><strong>Sentiment Ratio:</strong> Number of posts having a positive reaction vs the number of posts having a bad reaction.</li>
+<li><strong>Visits per Active User:</strong> Number of visits divided by the number of <a href="#active-user">active users</a>.</li>
+<li><strong>Average Posts per Active User:</strong> Average number of created posts grouped by <a href="#active-user">active users</a>.</li>
+<li><strong>Average Comments per Discussion:</strong> Average number of created comments grouped by discussions.</li>
+<li><strong>Average Posts per Active Users:</strong> Number of posts divided by the number of <a href="#active-user">active users</a>.</li>
+</ul>
+
+<h3 id="traffic">Traffic</h3>
+
+<h4 id="metrics-1">Metrics</h4>
+
+<ul>
+<li><strong>Page views:</strong> Number of pages viewed.</li>
+<li><strong>Active Users:</strong> Number of <a href="#active-user">active users</a>.</li>
+<li><strong>Visits:</strong> Number of visits. <em>Including guests.</em></li>
+</ul>
+
+<h4 id="leaderboards-1">Leaderboards</h4>
+
+<ul>
+<li><strong>Discussions with Most Views:</strong> Discussions ordered by the highest number of accumulated views.</li>
+</ul>
+
+<h4 id="graphs-1">Graphs</h4>
+
+<ul>
+<li><strong>Active Users:</strong> Number of users that logged in to the community.</li>
+<li><strong>Visits:</strong> Number of visits. <em>Including guests.</em></li>
+<li><strong>Unique Visits by Role Type:</strong> Number of visits, from registered users, grouped by <a href="#role-type">role types</a>.</li>
+<li><strong>Page Views:</strong> Number of total page views.</li>
+<li><strong>New Users:</strong> Number of all new registrants to the community.</li>
+</ul>
+
+<h3 id="posting">Posting</h3>
+
+<h4 id="metrics-2">Metrics</h4>
+
+<ul>
+<li><strong>Discussions:</strong> Number of discussions created.</li>
+<li><strong>Comments:</strong> Number of comments created.</li>
+<li><strong>Contributors:</strong> Number of distinct members who created a post.</li>
+</ul>
+
+<h4 id="leaderboards-2">Leaderboards</h4>
+
+<ul>
+<li><strong>Users with Most Posts:</strong> Members ordered by the highest number of post created.</li>
+<li><strong>Users with Most Discussions:</strong> Members ordered by the highest number of discussions created.</li>
+</ul>
+
+<h4 id="graphs-2">Graphs</h4>
+
+<ul>
+<li><strong>Discussions</strong>: Number of discussions created.</li>
+<li><strong>Comments</strong>: Number of comments created.</li>
+<li><strong>Posts</strong>: Number of posts created.</li>
+<li><strong>Posts by Type</strong>: Number of created posts grouped by <a href="#post-type">posts type</a>.</li>
+<li><strong>Posts by Category</strong>: Number of created posts grouped by categories.</li>
+<li><strong>Posts by Role Type</strong>: Number of created posts grouped by <a href="#role-type">role types</a>.</li>
+<li><strong>Contributors</strong>: Number of distinct members having created a post.</li>
+<li><strong>Contributors by Category</strong>: Number of distinct members, having created a post, grouped by categories.</li>
+<li><strong>Contributors by Role Type</strong>: Number of distinct members, having created a post, grouped by <a href="#role-type">role types</a>.</li>
+</ul>
+
+<h3 id="q-a">Q&amp;A</h3>
+
+<p><em>When multiple lines are displayed, the series are stacked, i.e. the values on the Y axis are a cumulative total for each point.</em></p>
+
+<h4 id="metrics-3">Metrics</h4>
+
+<ul>
+<li><strong>Questions Asked:</strong> Number of questions asked.</li>
+<li><strong>Questions Answered:</strong> Number of questions answered. <em>Questions created outside of the time range are counted.</em></li>
+<li><strong>Answers Accepted:</strong> Number of answers accepted. <em>An answer can be accepted by either the creator of the question or a moderator/administrator.</em></li>
+<li><strong>Average Time to Answer:</strong> Average amount of time it took for questions to have their first answer. <em>Questions that have no answers are not counted.</em></li>
+<li><strong>Average Time to Accept:</strong> Average amount of time it took for questions to have an accepted answer. <em>Questions without an accepted answer are not counted.</em></li>
+</ul>
+
+<h4 id="leaderboards-3">Leaderboards</h4>
+
+<ul>
+<li><strong>Questions with Most Views:</strong> Questions ordered by the highest number of accumulated views.</li>
+<li><strong>Users with Most Answers:</strong> Members ordered by the highest number of answers created.</li>
+<li><strong>Users with Most Accepted Answers:</strong> Members ordered by the highest number of answers created and then accepted as the best answer.</li>
+</ul>
+
+<h4 id="graphs-3">Graphs</h4>
+
+<ul>
+<li><strong>Questions Asked:</strong> Number of questions created.</li>
+<li><strong>Questions Answered:</strong> Number of questions having at least one answer.</li>
+<li><strong>Accepted Answers</strong>: Number of answers accepted.</li>
+</ul>
+
+<h2 id="analytics-lexicon">Analytics Lexicon</h2>
+
+<ul>
+<li><strong><a id="active-user">Active User</a>:</strong> User that are logged in.</li>
+<li><strong><a id="post-type">Post Type</a>:</strong> The post types are discussion and comments.</li>
+<li><strong><a id="post-type">Role Type</a>:</strong> There are 4 existing <a href="#role-type">role types</a> and they match the highest permission level that a user has.
+
+<ul>
+<li><strong>admin:</strong> Administrator -&gt; Garden.Settings.Manage</li>
+<li><strong>cm:</strong> Community Manager -&gt; Garden.Community.Manage</li>
+<li><strong>mod:</strong> Moderator -&gt; Garden.Moderation.Manage</li>
+<li><strong>member:</strong> Everything else</li>
+</ul></li>
+</ul>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

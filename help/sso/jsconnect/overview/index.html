@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Technical Overview</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/sso/jsconnect/overview.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+        
+        
+
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/sso/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/help/sso/saml/">SAML </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active nest">
+                    <a href="http://127.0.0.1:8081/help/sso/jsconnect/">jsConnect </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                        <ul class="nav-tier3">
+
+                            <li class="active">
+                                <a href="http://127.0.0.1:8081/help/sso/jsconnect/overview/">Technical Overview</a>
+                            </li>
+
+                            
+                                
+                                
+                                
+                                
+			    
+		    
+                        
+
+                            <li class="">
+                                <a href="http://127.0.0.1:8081/help/sso/jsconnect/seamless/">Seamless Setup</a>
+                            </li>
+
+                            
+		    
+                        
+
+                            <li class="">
+                                <a href="http://127.0.0.1:8081/help/sso/jsconnect/embed/">Embedded</a>
+                            </li>
+
+                            
+		    
+                        </ul>
+                    
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="jsconnect">jsConnect</h2>
+
+<p>For jsConnect to work you&rsquo;ll put some code on your site that identifies your users in a way that Vanilla can understand. Vanilla then requests this information when the user wants to sign in and synchronizes the user with Vanilla. This is done via <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>, which allows us to send your cookies from your site to you and obtain login information.</p>
+
+<p>Vanilla&rsquo;s web-based single sign on (SSO) has 2 parts:</p>
+
+<ol>
+<li>Your SSO endpoint (based on one of our example libraries) on <em>your</em> site.</li>
+<li>Vanilla&rsquo;s jsConnect plugin.</li>
+</ol>
+
+<p>jsConnect pings your endpoint whenever it wants to know if a user is logged in on your site. It does this using the user&rsquo;s current session, so you can use your normal &ldquo;is logged in&rdquo; detection to determine this - nothing fancy here.</p>
+
+<h2 id="your-endpoint">Your endpoint</h2>
+
+<p>Your endpoint needs to say 1 of 3 things when it&rsquo;s called:</p>
+
+<ol>
+<li>The current user is a <strong>guest</strong> (not logged in).</li>
+<li>User is logged in here, but this wasn&rsquo;t a secure request (no signature + timestamp), so here&rsquo;s their <strong>name &amp; photo only</strong>.</li>
+<li>User is logged in AND this was securely requested, so here&rsquo;s <strong>all the user data</strong> (including email and a unique ID from your system, which are required).</li>
+</ol>
+
+<p>Our example libraries help you structure the output so that jsConnect can read it correctly. <strong>If we provide a client library that you can use then we highly recommend using it.</strong></p>
+
+<p>These libraries are open source and maintained on Github:</p>
+
+<ul>
+<li><a href="https://github.com/vanillaforums/jsConnectPHP">PHP jsConnect client library</a></li>
+<li><a href="https://github.com/vanillaforums/jsConnectRuby">Ruby jsConnect client library</a></li>
+<li><a href="https://github.com/vanillaforums/jsConnectJava">Java jsConnect client library</a></li>
+<li><a href="https://github.com/vanillaforums/jsConnectdotNet">.NET jsConnect client library</a></li>
+</ul>
+
+<p>All of these libraries have one file with all of the library code you&rsquo;ll need and one file that gives an example usage. They also have a readme that tells you which file is which. <em>Please note that these libraries don&rsquo;t support <a href="http://127.0.0.1:8081/help/features/sso/jsconnect/embed">embedded SSO</a>.</em></p>
+
+<p>If your site is programmed in a language that doesn&rsquo;t have a client library then we provide documentation on our jsConnect protocol. Have a look at the <a href="http://127.0.0.1:8081/help/sso/jsconnect/seamless">jsConnect technical implementation</a>.</p>
+
+<h2 id="how-jsconnect-maps-users">How jsConnect maps users</h2>
+
+<p>After calling your endpoint and getting a &ldquo;signed in&rdquo; reply, jsConnect looks up the user. If they&rsquo;ve <em>already</em> used SSO, we&rsquo;ve permanently mapped their unique ID to our UserID, so we sign them into that account. If they <em>haven&rsquo;t</em> used SSO before, 1 of 3 things happens:</p>
+
+<ol>
+<li>If the email for the user has never been used on the forum, it makes them a new account using the data passed and signs them into it.</li>
+<li>If the email is in use and <code>AutoConnect</code> is enabled, we will immediately sign them in (and permanently store the mapping).</li>
+<li>If the email is in use and <code>AutoConnect</code> is NOT enabled, we will prompt the user for their forum password to confirm their identity. This is the default setting because it is safer to assume you haven&rsquo;t verified their email address.</li>
+</ol>
+
+<p>Vanilla Cloud customers should request Support enable <code>AutoConnect</code> if they desire it. That is an important component of a seamless experience.</p>
+
+<h2 id="tightening-the-integration">Tightening the integration</h2>
+
+<p>To get very tight SSO integration, you will also want to follow these steps. Always carefully test your <em>basic</em> SSO authentication <strong>before</strong> tightening your integration.</p>
+
+<ol>
+<li>Change your registration method to &lsquo;Connect&rsquo; to block non-SSO users from registering.</li>
+<li>Set your sign-in, sign-out, and registration URLs under jsConnect&rsquo;s settings in your Dashboard.</li>
+<li>Check &ldquo;Make this connection your default signin method.&rdquo;</li>
+<li>When linking or redirecting signed-in users to your forum, use the <code>/sso</code> endpoint on the forum. This triggers jsConnect&rsquo;s user lookup <strong>on the connection with &ldquo;default sign in method&rdquo; selected</strong> without the user needing to click. Optionally, you can provide a <code>Target</code> parameter with a relative path to specify where they should ultimately land on the forum. Example: <code>http://forum.yoursite.com/sso?Target=/categories</code>. This is the final critical step in a fully seamless experience.</li>
+<li>For seamless SSO on an embedded forum, see our <a href="http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/">embedded SSO solution</a>.</li>
+</ol>
+
+<p>If no jsConnect connection is designated as the &ldquo;Default&rdquo;, you cannot use the <code>/sso</code> endpoint. Instead, use expanded endpoint that specifies the client ID of the connection you wish to trigger: <code>/entry/jsconnect?client_id={value_in_settings}</code>. This setup is useful in situations where you are using jsConnect in addition to normal logins or alternate SSO solutions, rather than as the sole connector.</p>
+
+<h2 id="testing-the-integration">Testing the integration</h2>
+
+<p>Use the &ldquo;Test URL&rdquo; link under your jsConnect settings to see if your endpoint is returning a good response.</p>
+
+<p>Try using your browser&rsquo;s Incognite/Private window mode for testing. This allows you to have a separate &ldquo;test&rdquo; session while you stay logged in as the administrator in your main session to make changes quickly.</p>
+
+<h2 id="common-questions">Common questions</h2>
+
+<p><strong>What do we do if SSO breaks and we&rsquo;re locked out?</strong></p>
+
+<p>You can log back in using the &ldquo;hidden&rdquo; URL <code>/entry/password</code> to sign-in with an existing forum account. This page is never redirected for SSO.</p>
+
+<p><strong>Can&rsquo;t we just add users over the API?</strong></p>
+
+<p>We <em>strongly recommend against</em> adding users over the API. Using jsConnect and allowing it to add users as they sign-in is the most robust and reliable approach that will cause you the fewest issues.</p>
+
+<p><strong>Can we use multiple SSO connections?</strong></p>
+
+<p>Absolutely. However, only one can be the default, which is what will trigger when <code>/sso</code> is used.</p>
+
+<p><strong>How do we have seamless sign-in for users who go directly to the forum?</strong></p>
+
+<p>If you&rsquo;ve followed all the steps above, the only way a user can be not signed into the forum while signed into your main site is if they sign into your site separately and then manually visit the forum by typing in the address manually or clicking a browser bookmark. In this scenario, they would need to click a prompt to finish forum sign-in.</p>
+
+<p><strong>How is sign-out handled?</strong></p>
+
+<p>We bounce them to your sign-in page after they sign-out on the forum. To do the opposite, redirect users thru our sign-out page, again passing a <code>Target</code> parameter so they finish where you want them to.</p>
+
+<p><strong>Does this work for native applications, non-web scenarios, or third-party products?</strong></p>
+
+<p>No. jsConnect is purely a web-based SSO workflow for your existing login system. We have separate products for popular third-party platforms and non-web scenarios.</p>
+
+<p><strong>Can we reverse-SSO to Vanilla via API to see if a user is logged in there?</strong></p>
+
+<p>Not at this time.</p>
+
+<p><strong>Can we use jsConnect without providing an email address?</strong></p>
+
+<p>No. You absolutely must send an email, which is the only method for mapping users. If you are importing forum users without email addresses and need a way to map them over SSO, we recommend using dummy email addresses that follow a formula like <code>{uniqueID}</code>@yoursite.com.</p>
+
+<p><strong>Our system has overlapping names but Vanilla needs unique ones. How can we handle this?</strong></p>
+
+<p>We strongly recommend assigning them unique usernames in your system, then passing that unique username to jsConnect. Keep in mind that, for features like mentions and autocomplete to work, usernames must be unique and adhere to Vanilla&rsquo;s username restrictions. Passing a duplicate <code>Name</code> field for a new user over jsConnect will cause the connection to fail.</p>
+
+<p><strong>Can we set roles over jsConnect?</strong></p>
+
+<p>Yes, see our <a href="http://127.0.0.1:8081/help/features/sso/jsconnect/seamless">technical documentation</a> for more information.</p>
+
+<p><strong>The settings &amp; endpoint response look correct now, but it&rsquo;s still not working or redirecting properly.</strong></p>
+
+<p>Try clearing your cookies and browser cache and restarting your browser. Use Incognito/Private mode whenever possible. Also, beware of Firefox caching redirects; when in doubt, double-check a redirect using another browser.</p>
+
+<p>Repeatedly attempting SSO with many sessions and accounts with changing settings can cause unexpected results. This isn&rsquo;t a problem users would ever run into day-to-day.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

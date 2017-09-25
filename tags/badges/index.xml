@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Badges on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/badges/</link>
+    <description>Recent content in Badges on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/tags/badges/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding and Editing Badges</title>
+      <link>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Disabling badges To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active. Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.</description>
+    </item>
+    
+    <item>
+      <title>Giving and Requesting Badges</title>
+      <link>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Giving a badge Badges-&amp;gt;Give is the permission that defines who can give badges. By default, moderators and administrators have it.
+To manually give a badge to one or more users, click the &amp;ldquo;Give&amp;rdquo; button from the Badges list. Type a username in the provided box. You can give a badge to many users at once by typing all their names, separated by commas.</description>
+    </item>
+    
+  </channel>
+</rss>

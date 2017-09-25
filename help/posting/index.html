@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Posting</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/posting/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/help/posting/">Posting</a>
+    </li>
+    
+    
+        
+        
+
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/posting/emoji/">Emoji </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/posting/smart-embed/">Smart Embed </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="overview">Overview</h2>
+
+<p>&ldquo;Posting&rdquo; or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.</p>
+
+<p>At the bottom of each discussion, the user will encounter a text field:</p>
+
+<p><img src="https://images.v-cdn.net/docs/Posting_Editor.png" alt="Editor" /></p>
+
+<p>Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.</p>
+
+<h3 id="advanced-editor">Advanced Editor</h3>
+
+<p>Advanced Editor is activated by default on new communities. It provides an array of tools for your members to use when making a post. If you are looking for more information on how to compose and format posts in vanilla, you can read more Advanced Editor in our documentation, <a href="http://docs.vanillaforums.com/help/addons/advanced-editor/">here</a>.</p>
+
+<h2 id="discussions">Discussions</h2>
+
+<p>To create a new discussion, click on the New Discussion button at the top or bottom of any category.</p>
+
+<p><img src="https://images.v-cdn.net/docs/Posting_NewDiscussion.png" alt="New Discussion Button" /></p>
+
+<p>This button will lead you to <code>/post/discussion</code>. Here&rsquo;s what you will encounter on the new discussions page:</p>
+
+<p><img src="https://images.v-cdn.net/docs/Posting_NewPostBreakdown.png" alt="New Post Breakdown" /></p>
+
+<p><strong>1</strong> - The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the discussion on the category index.
+<strong>2</strong> - This is the <a href="http://docs.vanillaforums.com/help/addons/advanced-editor/">Advanced Editor</a>, which assists the user in formatting the text of their post, inserting images, and attaching files.
+<strong>3</strong> - This is the field where the user will type out the main body of their post.<br />
+<strong>4</strong> - Tags mark a discussion with certain keywords so it is easier to search for within the community. By default, up to five tags can be used on a post.
+<strong>5</strong> - Once the user has finished typing their post, clicking the Post Discussion button will immediately publish it. Clicking Save Draft will store the post under &ldquo;My Drafts&rdquo; in a user&rsquo;s profile menu. Preview will show the user what the finished post will look like when published. Cancel will bring the user back to the category they were viewing previously.</p>
+
+<h2 id="types-of-discussions">Types of Discussions</h2>
+
+<p>Certain addons in vanilla expand the types of discussions users can make in a community. When one of those addons is enabled, clicking the down-arrow on the “New Discussion” button will reveal several options:</p>
+
+<p><img src="https://images.v-cdn.net/docs/Posting_PollOptions.png" alt="Posting Options" /></p>
+
+<p><strong>Polls</strong> can be enabled from your dashboard on any plan level. When creating a poll, the user is presented with a few new options:</p>
+
+<p><img src="https://images.v-cdn.net/docs/Posting_PollSetup.png" alt="New Poll Setup" /></p>
+
+<p>With this form, the user can input the different answers for their poll. They can also choose to make a poll anonymous, which prevents others from knowing how specific users voted. Once the poll has been submitted, other members are allowed to vote once.</p>
+
+<p>The <strong>Ask A Question</strong> option is for users looking to get a specific information. The screen for posting a question looks identical to the New Discussion screen. When a question is asked, the bottom of each subsequent comment will have an option to mark it as an answer.</p>
+
+<p>Selecting “Yes” marks the post as an answer within that discussion and pins it to the top, right under the initial question. You can read more about our Questions and Answers plugin, <a href="http://docs.vanillaforums.com/help/addons/qna/">here</a>.</p>
+
+<p>The <strong>New Idea</strong> option is for communities with Ideation enabled. Ideas are discussions that can have various statuses and be voted on. They are limited to specific categories within a community. You can read more about Ideation, <a href="http://docs.vanillaforums.com/help/ideation/">here</a>.</p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLEdMTbLR4h8xC7XwUrfZ4s5IoQ9Of6Ihn">User Onbording Videos</a></li>
+<li><a href="http://docs.vanillaforums.com/help/addons/advanced-editor/">Advanced Editor</a></li>
+<li><a href="http://docs.vanillaforums.com/help/posting/emoji/">Emoji</a></li>
+<li><a href="http://docs.vanillaforums.com/help/posting/smart-embed/">Smart Embed</a></li>
+</ul>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

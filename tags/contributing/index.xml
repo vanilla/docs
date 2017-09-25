@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contributing on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/contributing/</link>
+    <description>Recent content in Contributing on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/tags/contributing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code of Conduct</title>
+      <link>http://127.0.0.1:8081/developer/contributing/conduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/contributing/conduct/</guid>
+      <description>Code of Conduct Adapted from Swift&amp;rsquo;s Code of Conduct v1.3 for now because a copied code is better than no code.
+As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.
+We are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.</description>
+    </item>
+    
+    <item>
+      <title>Coding Standard</title>
+      <link>http://127.0.0.1:8081/developer/contributing/coding-standard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/contributing/coding-standard/</guid>
+      <description>Standards As of May 2014, Vanilla will adhere to PSR-2 with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
+We&amp;rsquo;ve named our primary exception to PSR-2 the Lord Brackos rule - Same-line open braces on all classes, method, and function definitions.
+We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently.</description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>http://127.0.0.1:8081/developer/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/contributing/</guid>
+      <description>How to Contribute General  Welcome folks to the community and be awesome! Answer questions. Report issues like a pro (see below). Triage issues already reported! Test pre-releases. Contribute docs. Help translate Vanilla. Evaluate community addons &amp;amp; offer feedback. Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.  Developers  Contribute code via pull requests (requires Contributor Agreement) Contribute addons &amp;amp; themes to the Official Directory.</description>
+    </item>
+    
+    <item>
+      <title>Pull Requests</title>
+      <link>http://127.0.0.1:8081/developer/contributing/pull-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/contributing/pull-requests/</guid>
+      <description>Using pull requests to contribute code We love pull requests! They&amp;rsquo;re the core of our workflow.
+All code is added to Vanilla via pull requests (PRs). A pull request is simply a request to merge code from a particular branch into another (usually a feature or hotfix branch into master). GitHub&amp;rsquo;s pull request feature tracks discussion, labels, assignments, and changes over time to a pull request.
+Creating a pull request  Branch from master and checkout that branch.</description>
+    </item>
+    
+  </channel>
+</rss>

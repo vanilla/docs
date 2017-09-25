@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theming on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/theming/</link>
+    <description>Recent content in Theming on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/tags/theming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS</title>
+      <link>http://127.0.0.1:8081/developer/theming/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/css/</guid>
+      <description>Theming with CSS Theming Hosted Vanilla You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our blog.
+Adding additional CSS To add additional CSS to the existing base Vanilla CSS file:</description>
+    </item>
+    
+    <item>
+      <title>Event Hooks</title>
+      <link>http://127.0.0.1:8081/developer/theming/hooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/hooks/</guid>
+      <description>Theming Hooks Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.
+To use hooks, create a file named class.themehooks.php in your theme&amp;rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files extends Gdn_Plugin, which allows the specification of a setup() method, which is run whenever the theme is enabled.</description>
+    </item>
+    
+    <item>
+      <title>Page Links</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</guid>
+      <description>Page Links We&amp;rsquo;ve created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum&amp;rsquo;s navigation.
+Here&amp;rsquo;s the basic syntax, where * is the link type.
+{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}  Parameters   Parameter Type Default Description    wrap  string  li  The tag to wrap the link in.  text  string  varies  What the text for the link should be.</description>
+    </item>
+    
+    <item>
+      <title>Quickstart</title>
+      <link>http://127.0.0.1:8081/developer/theming/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/quickstart/</guid>
+      <description>Vanilla Forums Cloud Customers, check out our Ultimate Vanilla Forums Theme Guide.
+With Vanilla, you have full control over both the CSS and the actual HTML of every page in every application. The easiest thing for most designers is to just alter the CSS, so we&amp;rsquo;ll start there:
+Part 1: CSS &amp;amp; Design  Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: /themes/your_theme_name.</description>
+    </item>
+    
+    <item>
+      <title>Smarty</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/</guid>
+      <description>Smarty Overview Vanilla currently supports both PHP and Smarty views. Smarty is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to /applications/dashboard/views/default.</description>
+    </item>
+    
+    <item>
+      <title>Smarty Conditionals</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/conditionals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/conditionals/</guid>
+      <description>Smarty Conditionals Smarty includes a base amount of logic that you can insert into your template. One of these is a conditional statement. A couple of basic examples should give you an idea of the syntax and format of Smarty conditionals.
+This example uses the user data from the controller&amp;rsquo;s data array to print out a welcome message if the user is signed in and a generic message if the user is not signed in.</description>
+    </item>
+    
+    <item>
+      <title>Smarty Functions</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/</guid>
+      <description>Smarty Functions This section outlines all the Vanilla-specific Smarty functions made available for use in your Smarty templates.
+You are also able to use the built-in Smarty functions in your template.</description>
+    </item>
+    
+    <item>
+      <title>Smarty Modifiers</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/modifiers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/modifiers/</guid>
+      <description>Smarty Modifiers Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). These parameters must follow the order of their appearance in the signature.
+Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates.</description>
+    </item>
+    
+    <item>
+      <title>Theme Options</title>
+      <link>http://127.0.0.1:8081/developer/theming/themeoptions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/themeoptions/</guid>
+      <description>Theme Options This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.
+You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&amp;rsquo;s design folder. You can also allow an admin to add custom text to your theme.
+This functionality can be added simply by editing your theme&amp;rsquo;s about.</description>
+    </item>
+    
+    <item>
+      <title>Theme Visibility</title>
+      <link>http://127.0.0.1:8081/developer/theming/themevisibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/themevisibility/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  If you&amp;rsquo;ve got Vanilla Cloud, custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
+In order of importance, here are the rules for a theme to be visible:
+Method 1: If the theme is set to be visible with this site option:
+Garden.Themes.Visible  You can add multiple sites by separating sites with a comma.</description>
+    </item>
+    
+    <item>
+      <title>Theming</title>
+      <link>http://127.0.0.1:8081/developer/theming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/</guid>
+      <description>Theming Overview Vanilla themes are built by selectively overriding the views and CSS in the product. They are also imbued with the power of plugins via a special hooks file.
+It is extremely important to never modify Vanilla by directly editing the files distributed in the release. Nearly anything can by accomplished with views, CSS, and hooks in a properly formatted theme.
+Quickstart To override CSS, create a custom.css file in your theme; it will be included in the page after our CSS, so you can override without higher specificity or !</description>
+    </item>
+    
+    <item>
+      <title>Views / HTML</title>
+      <link>http://127.0.0.1:8081/developer/theming/views/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/views/</guid>
+      <description>Theming Views The master view The master view for your forum is the wrapper for each page in your forum. Often, this is the only view you&amp;rsquo;ll have to manipulate in your theme. The master view file is called the default.master.tpl (Smarty template) or the default.master.php. We recommend using Smarty templates for your master view, however you can decide to use a regular ol&amp;rsquo; php view if you like.</description>
+    </item>
+    
+    <item>
+      <title>about.php</title>
+      <link>http://127.0.0.1:8081/developer/theming/about-php/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/about-php/</guid>
+      <description>The &amp;ldquo;about.php&amp;rdquo; file Each theme has an about.php file that contains some important information for Vanilla. Put this file in your theme root.
+Here&amp;rsquo;s a sample file:
+&amp;lt;?php $ThemeInfo[&#39;ExampleTheme&#39;] = [ &#39;Name&#39; =&amp;gt; &amp;quot;Example Theme&amp;quot;, &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;, &#39;Version&#39; =&amp;gt; &#39;1.0.0&#39;, &#39;Author&#39; =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;, &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;, &#39;AuthorUrl&#39; =&amp;gt; &#39;www.vanillaforums.com&#39;, &#39;License&#39; =&amp;gt; &#39;Proprietary&#39;, &#39;Layout&#39; =&amp;gt; [ &#39;Discussions&#39; =&amp;gt; &#39;table&#39;, &#39;Categories&#39; =&amp;gt; &#39;modern&#39;, ] ];  Theme &amp;ldquo;key&amp;rdquo; $ThemeInfo[&#39;ExampleTheme&#39;]  It&amp;rsquo;s important to put a unique key here for your theme.</description>
+    </item>
+    
+    <item>
+      <title>{asset}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</guid>
+      <description>Function: {asset} Usage {asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}  Renders an asset from the controller.
+Assets in Vanilla are containers for different sets of content. The content of each of these asset containers is variable depending on the page. The content of each asset is not currently configurable via the template.
+Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets.</description>
+    </item>
+    
+    <item>
+      <title>{breadcrumbs}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</guid>
+      <description> Function: {breadcrumbs} Usage {breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}  Render a breadcrumb trail for the user based on the page they are on.
+Parameters   Parameter Type Default Description    homelink  string  Home  Title of the first link in the breadcrumbs  homeurl  string  /  URL of the first link in the breadcrumbs  hidelast  boolean  false  Whether or not to hide the currently active (last) crumb    </description>
+    </item>
+    
+    <item>
+      <title>{custom_menu}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</guid>
+      <description> Function: {custom_menu} Usage {custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}  A bucket for addon menu items. Adds links depending on which addons are enabled.
+Parameters   Parameter Type Default Description    format  string  none  Custom format to use when wrapping links. Available template variables are %url, %class, and %text  wrap  string  li  Element to wrap around each link in the menu    </description>
+    </item>
+    
+    <item>
+      <title>{event}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</guid>
+      <description> Function: {event} Usage {event name=&amp;quot;string&amp;quot;}  Fire an event with the specified name. Learn more about events in Vanilla.
+Parameters   Parameter Type Default Description    name  string  none  Name of the event to fire    </description>
+    </item>
+    
+    <item>
+      <title>{homepage_title}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</guid>
+      <description>Function: {homepage_title} Usage {homepage_title}  Writes the site title to the page. You can change the site title from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{include_file}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</guid>
+      <description> Function: {include_file} Usage {include_file name=&amp;quot;string&amp;quot;}  Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.
+Parameters   Parameter Type Default Description    name  string  none  The name of the file to include    </description>
+    </item>
+    
+    <item>
+      <title>{link}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</guid>
+      <description>Function: {link} Usage {link path=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; notag=boolean format=&amp;quot;string&amp;quot; withdomain=boolean}  Takes a route and prepends the web root (expects /controller/action/params as path).
+Parameters   Parameter Type Default Description    path  string  none  The relative path for the url. There are some special paths that can be used to return &amp;lsquo;intelligent&amp;rsquo; links  text  string  none  HTML text to be put inside an anchor.</description>
+    </item>
+    
+    <item>
+      <title>{logo}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</guid>
+      <description>Function: {logo} Usage {logo}  Writes the site logo to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{mobile_logo}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</guid>
+      <description>Function: {mobile_logo} Usage {mobile_logo}  Writes the mobile logo to the page. You can change the mobile logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{module}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</guid>
+      <description>Function: {module} Usage {module name=&amp;quot;string&amp;quot; ... }  This is a super handy little function that renders any module in Vanilla. It instantiates the specified module class, sets the properties specified in the function&amp;rsquo;s parameters and calls the toString() function of the module.
+The available parameters differ depending on module itself and the available modules depend on which addons are enabled. If a module is contained in an addon, the addon must be enabled in order for the module to render (a common gotcha).</description>
+    </item>
+    
+    <item>
+      <title>{permission}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</guid>
+      <description> Block: {permission} Usage {permission require=&amp;quot;string&amp;quot;} Foo {/permission}  Only output content if the current user has the specified permission.
+Parameters   Parameter Type Default Description    require  string  none  The permission to check / require    </description>
+    </item>
+    
+    <item>
+      <title>{pocket}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</guid>
+      <description> Function: {pocket} Usage {pocket name=&amp;quot;string&amp;quot;}  Writes a pocket to the page. Pockets placed in the template in this way should have their location set to &amp;lsquo;custom&amp;rsquo;. You can edit this setting from the &amp;lsquo;Pockets&amp;rsquo; settings page in the dashboard.
+Parameters   Parameter Type Default Description    name  string  none  The name of the pocket    </description>
+    </item>
+    
+    <item>
+      <title>{searchbox}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</guid>
+      <description> Function: {searchbox} Usage {searchbox placeholder=&amp;quot;string&amp;quot;}  Writes the search box to the page.
+Parameters   Parameter Type Default Description    placeholder  string  Search  Optional input box placeholder text    </description>
+    </item>
+    
+    <item>
+      <title>{text}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</guid>
+      <description> Function: {text} Usage {text code=&amp;quot;string&amp;quot; default=&amp;quot;string&amp;quot;}  Returns the custom text from a theme&amp;rsquo;s options page. Learn more about how to configure your theme options.
+Parameters   Parameter Type Default Description    code  string  none  The text code set in the theme&amp;rsquo;s information array  default  string  none  The default text if the user hasn&amp;rsquo;t overridden    </description>
+    </item>
+    
+    <item>
+      <title>{t}</title>
+      <link>http://127.0.0.1:8081/developer/theming/smarty/functions/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/theming/smarty/functions/i18n/</guid>
+      <description> Function: {t} Usage {t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}  Output a translatable string with an optional default.
+Parameters   Parameter Type Default Description    c  string  none  The string to output or a string short-name  d  string  $c  Default translation. Good idea to set when using short-names    </description>
+    </item>
+    
+  </channel>
+</rss>

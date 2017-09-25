@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Smart Embed</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/posting/smart-embed.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/help/posting/">Posting</a>
+    </li>
+    
+    
+        
+        
+
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/posting/emoji/">Emoji </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8081/help/posting/smart-embed/">Smart Embed </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="smart-embed">Smart Embed</h2>
+
+<p>Vanilla automatically embeds content from many social media sites. When creating a post, simply paste the URL into the editor, like so:</p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_youtube_editor.jpg" alt="A Youtube video Link." /></p>
+
+<p>If the URL is from a supported site and has the proper identifier, the content will automatically embed into the post body when published. While some sites offer different types of embed codes, unrecognized parameters may stop Vanilla from correctly parsing the URL. Using the methods below will ensure your content is correctly embedded.</p>
+
+<h2 id="youtube">Youtube</h2>
+
+<p>Use the full URL of any video and paste it into the editor:</p>
+
+<p><code>https://www.youtube.com/watch?v=ucO5iSV-paw</code></p>
+
+<p>You can also copy a video at a certain time:</p>
+
+<p><code>https://youtu.be/ucO5iSV-paw?t=52s</code></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_youtube_post.jpg" alt="A Youtube video, embedded." /></p>
+
+<h2 id="twitter">Twitter</h2>
+
+<p>Use a full URL of a tweet to embed it. Expanding a tweet in your timeline should provide the correct URL in your address bar. To embed a tweet from a thread, click the specific tweets timestamp.</p>
+
+<p><code>https://twitter.com/vanilla/status/814160323867447296</code></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_twitter_post.jpg" alt="A Tweet, embedded." /></p>
+
+<h2 id="vine">Vine</h2>
+
+<p>Use the specific URL of a vine to embed it. Clicking the timestamp for a vine will give you its URL, such as:
+<code>https://vine.co/v/596bJWLgZ35</code></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_vine_post.jpg" alt="A Vine, embedded." /></p>
+
+<h2 id="vimeo">Vimeo</h2>
+
+<p>Use the numerical ID for a Vimeo video, it will be in the address bar:</p>
+
+<p><code>https://vimeo.com/31976384</code></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_vimeo_post.jpg" alt="A Vimeo Video, embedded." /></p>
+
+<p>Currently the share link, or links with timestamps will not automatically embed.</p>
+
+<h2 id="pinterest">Pinterest:</h2>
+
+<p>Use the Pin URL, which has a numerical ID on the end:</p>
+
+<p><code>https://www.pinterest.com/pin/153755774758385655/</code></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_pinterest_post.jpg" alt="A Pin, embedded." /></p>
+
+<h2 id="instagram">Instagram</h2>
+
+<p>You can use either of these URL formats to embed a post from Instagram:</p>
+
+<p><code>https://www.instagram.com/p/BIDNLfhA8Oy/</code></p>
+
+<p><code>https://www.instagram.com/p/BIDNLfhA8Oy/?taken-by=vanillaforums</code></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_instagram_post.jpg" alt="An Instagram photo, embedded." /></p>
+
+<h2 id="soundcloud">SoundCloud</h2>
+
+<p>Both playlists and individual tracks will embed from SoundCloud when you insert a URL into a post.</p>
+
+<p><code>https://soundcloud.com/lauramakesart/vanilla-silence</code></p>
+
+<p>This URL will start with the first song and then continue to play the contents of the set,</p>
+
+<p><code>https://soundcloud.com/lauramakesart/vanilla-silence?in=lauramakesart/sets/vanilla-example</code></p>
+
+<p>This will play a specific track from the playlist. You can grab a specific track URL by clicking its name in the player at the bottom of your screen.</p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_soundcloud_post.jpg" alt="Some fly beats from SoundCloud, embedded." /></p>
+
+<h2 id="wistia">Wistia</h2>
+
+<p>Wistia is a video-hosting website that focuses on the professional needs of businesses. Because Wistia videos privacy is more controlled, the process of embedding them in the forum is a bit more involved.</p>
+
+<p>First, you want to find the project that you’d like to share from.</p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_wista_project_list_1.png" alt="The project list in the Wistia dashboard." /></p>
+
+<p>In that project, find the specific video that you’d like to embed in a post.</p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_wista_video_list_2.png" alt="Selecting a video." /></p>
+
+<p>Click on the video and copy the URL from the address bar. You can also click on “Video Actions” and select the “Social Sharing” option from the list.  That will give you this screen which also provides the full URL.</p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_wista_video_actions_3.png" alt="The Video Actions menu." /></p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_wisita_embed_social_4.png" alt="The Video Actions menu." /></p>
+
+<p>When you have the URL copied, go back to the post that you are writing and paste the link right into the body of the text - exactly where you want the video to appear.</p>
+
+<p><img src="https://images.v-cdn.net/docs/smartembed_wista_post.png" alt="The Video Actions menu." /></p>
+
+<p>Once you post the comment or discussion, it will auto-embed just like the other examples in this article.</p>
+
+<p>Please note, Wistia’s embed does not respect starting at a specific time. This is a limitation within the embed code from Wistia.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/reporting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/analytics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/2016/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/releases/2016/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/2017/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/releases/2017/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/appearance/accessibility/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/addons/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/analytics/advanced-analytics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/embedding/advanced/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/advanced-search/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/forum-settings/advanced-settings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/analytics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/backend/server-apache/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/api/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/apiv2/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/apiv2/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/appearance/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/assets/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/apiv2/authentication/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/apiv2/authentication/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/backend/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/badges/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/badges/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/configuration/banner/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/importing/build/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/css/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/leaving/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/forum-settings/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/changelog/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/cloud/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/categories/cloud/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/repository/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/contributing/conduct/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/contributing/coding-standard/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/comments/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/community/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/configuration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/contributing/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/controllers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/getting-started/custom-domain/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/appearance/custom-theme/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/configuration/dashboard/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/data-privacy/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/database/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/datasets/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/developer/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/developer-support/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/developers/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/email/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/emails/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/appearance/emails/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/embed/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/jsconnect/embed/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/embedding/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/embedding/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/forum-settings/embedding/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/emoji/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/posting/emoji/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/comments/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/discussions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/moderation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/multisites/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/roles/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/tools/environment/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/hooks/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/social/facebook/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/features/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/forum-merge/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/forum-settings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/framework/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/functions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/gigya/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/integrations/github/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/social/googleplus/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/groups/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/groups/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/helpers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/configuration/homepage/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/hub/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/i18n/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/ideation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/importing/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/importing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/inform/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/installation/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/integration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/integrations/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/integrations/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/i18n/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/jsconnect/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/categories/leaving/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/social/linkedin/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/locales/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/locales/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/logging/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/mailchimp-push/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/groups/managing-groups/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/configuration/message/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/migration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/migration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/models/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/moderation/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/modules/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/multisite/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/multisite/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/multisite/sync/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/notifications/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/notifications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/oauth/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/oauth/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/oauth/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/page-links/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/permissions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/permissions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/plugins/quickstart/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/plugins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/pockets/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/posting/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/posting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/roles-permissions/private-community/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/contributing/pull-requests/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/qna/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/quickstart/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/ranks/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/ranks/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/reactions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/reactions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/redirector/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/releases/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/releases/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/repository/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/requests/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/apiv2/resource-routing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/roles/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/roles-permissions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/routes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/saml/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/saml/connection-explained/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/seo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/salesforce/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/saml/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/schemas/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/jsconnect/seamless/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/seo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/server/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/ssl/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/single-sign-on/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/posting/smart-embed/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/smart-id/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/smarty/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/conditionals/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/smarty-functions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/modifiers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/social/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/spam/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/ssl/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/staging/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/staging/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/cloud/support/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/importing/support/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/tagging/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/jsconnect/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/themeoptions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/themevisibility/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/theming/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/training/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/troubleshooting/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/twitter/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/social/twitter/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/comments/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/warnings-and-notes/upgrading-from-warnings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/use-api-on-external-site/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/integrations/wordpress/using-comments/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-as-incentives/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/configuration/using/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/appearance/custom-theme/webfont/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/apiv2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/vanilla-pop/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/vanilla-pop/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/vanilla-pop/site-hub/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/importing/porter/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/views/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/views/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/vimeo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/warnings-and-notes/warning-a-user/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/warnings-and-notes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/moderation/warnings-and-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/integrations/wordpress/wishlist/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/wistia/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/integrations/wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/wordpress/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/apiv2/api-endpoints/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/framework/apiv2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/tags/youtube/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/addons/zendesk/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/about-php/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/help/sso/jsconnect/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/backend/server-nginx/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/asset/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/breadcrumbs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/custom-menu/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/event/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/homepage-title/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/include-file/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/link/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/logo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/mobile-logo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/module/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/permission/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/pocket/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/searchbox/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/text/</loc>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:8081/developer/theming/smarty/functions/i18n/</loc>
+  </url>
+  
+</urlset>

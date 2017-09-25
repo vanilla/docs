@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-api">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">API Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Endpoint: categories</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/api/categories/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/smart-id/">Smart ID</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/use-api-on-external-site/">Use API on External Sites</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active">
+        <a href="http://127.0.0.1:8081/api/categories/">Endpoint: categories</a>
+    </li>
+    
+    
+        
+        
+        
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/discussions/">Endpoint: discussions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/comments/">Endpoint: comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/roles/">Endpoint: roles</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/moderation/">Endpoint: moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/multisites/">Endpoint: multisites</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="categories-add">/categories/add</h2>
+
+<pre><code class="language-http">POST /api/v1/categories/add.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+</code></pre>
+
+<p>Adds a new category.</p>
+
+<p><a href="../#making-api-calls"><strong>Authentication</strong></a>: required</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong><code>Name</code></strong></td>
+<td><code>string</code></td>
+<td>The name of the category</td>
+</tr>
+
+<tr>
+<td><strong><code>UrlCode</code></strong></td>
+<td><code>string</code></td>
+<td>URL friendly category stub</td>
+</tr>
+
+<tr>
+<td><strong><code>Description</code></strong></td>
+<td><code>string</code></td>
+<td>Description of this category</td>
+</tr>
+
+<tr>
+<td><code>Sort</code></td>
+<td><code>integer</code></td>
+<td>Category sort order rank</td>
+</tr>
+
+<tr>
+<td><code>ParentCategoryID</code></td>
+<td><code>integer</code></td>
+<td>Parent Category (ID, use if no Name)</td>
+</tr>
+
+<tr>
+<td><code>ParentCategory</code></td>
+<td><code>string</code></td>
+<td>Parent Category (Name, use if no ID)</td>
+</tr>
+
+<tr>
+<td><code>Archived</code></td>
+<td><code>boolean</code></td>
+<td>Whether this category is archived</td>
+</tr>
+
+<tr>
+<td><code>Permissions</code></td>
+<td><code>array</code></td>
+<td>Custom permissions for the category. This must be an array with one item per role. Each item contains a role ID and the permissions to set.</td>
+</tr>
+
+<tr>
+<td><code>Permissions.RoleID</code></td>
+<td><code>integer</code></td>
+<td>The ID of the role to set the permissions for.</td>
+</tr>
+
+<tr>
+<td><code>Permissions.*</code></td>
+<td><code>boolean</code></td>
+<td>Each permission is a dot-separated key with a boolean value. The basic permissions are Vanilla.Discussions.View, Vanilla.Discussions.Add, Vanilla.Discussions.Edit, Vanilla.Discussions.Announce, Vanilla.Discussions.Sink, Vanilla.Discussions.Close, Vanilla.Discussions.Delete, Vanilla.Comments.Add, Vanilla.Comments.Edit, Vanilla.Comments.Delete</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="categories-edit">/categories/edit</h2>
+
+<pre><code class="language-http">POST /api/v1/categories/edit.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+</code></pre>
+
+<p>Edits an existing category.</p>
+
+<p><a href="../#making-api-calls"><strong>Authentication</strong></a>: required</p>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong><code>CategoryID</code></strong></td>
+<td><code>integer</code></td>
+<td>Category to be edited (ID, use if no Name)</td>
+</tr>
+
+<tr>
+<td><strong><code>Category</code></strong></td>
+<td><code>string</code></td>
+<td>Category to be edited (Name, use if no ID)</td>
+</tr>
+
+<tr>
+<td><code>Name</code></td>
+<td><code>string</code></td>
+<td>The name of the category</td>
+</tr>
+
+<tr>
+<td><code>UrlCode</code></td>
+<td><code>string</code></td>
+<td>URL friendly category stub</td>
+</tr>
+
+<tr>
+<td><code>Description</code></td>
+<td><code>string</code></td>
+<td>Description of this category</td>
+</tr>
+
+<tr>
+<td><code>ParentCategoryID</code></td>
+<td><code>integer</code></td>
+<td>Parent Category (ID, use if no Name)</td>
+</tr>
+
+<tr>
+<td><code>ParentCategory</code></td>
+<td><code>string</code></td>
+<td>Parent Category (Name, use if no ID)</td>
+</tr>
+
+<tr>
+<td><code>AllowDiscussions</code></td>
+<td><code>boolean</code></td>
+<td>Whether this category allows new discussions</td>
+</tr>
+
+<tr>
+<td><code>Archived</code></td>
+<td><code>boolean</code></td>
+<td>Whether this category is archived</td>
+</tr>
+
+<tr>
+<td><code>CustomPermissions</code></td>
+<td><code>boolean</code></td>
+<td>Whether this category has custom permissions. Setting this to <code>false</code> will wipe custom permissions.</td>
+</tr>
+
+<tr>
+<td><code>Permissions</code></td>
+<td><code>array</code></td>
+<td>Custom permissions for the category. This must be an array with one item per role. Each item contains a role ID and the permissions to set.</td>
+</tr>
+
+<tr>
+<td><code>Permissions.RoleID</code></td>
+<td><code>integer</code></td>
+<td>The ID of the role to set the permissions for.</td>
+</tr>
+
+<tr>
+<td><code>Permissions.*</code></td>
+<td><code>boolean</code></td>
+<td>Each permission is a dot-separated key with a boolean value. The basic permissions are Vanilla.Discussions.View, Vanilla.Discussions.Add, Vanilla.Discussions.Edit, Vanilla.Discussions.Announce, Vanilla.Discussions.Sink, Vanilla.Discussions.Close, Vanilla.Discussions.Delete, Vanilla.Comments.Add, Vanilla.Comments.Edit, Vanilla.Comments.Delete</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="categories-delete">/categories/delete</h2>
+
+<pre><code class="language-http">POST /api/v1/categories/delete.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+</code></pre>
+
+<p>Deletes an existing category.</p>
+
+<p><a href="../#making-api-calls"><strong>Authentication</strong></a>: required</p>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong><code>CategoryID</code></strong></td>
+<td><code>integer</code></td>
+<td>Category to be deleted (ID, use if no Name)</td>
+</tr>
+
+<tr>
+<td><strong><code>Category</code></strong></td>
+<td><code>string</code></td>
+<td>Category to be deleted (Name, use if no ID)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="categories-get">/categories/get</h2>
+
+<pre><code class="language-http">GET /api/v1/categories/get.ext?CategoryID=123 HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+</code></pre>
+
+<p>Get a single category.</p>
+
+<p><a href="../#making-api-calls"><strong>Authentication</strong></a>: required</p>
+
+<h2 id="categories-list">/categories/list</h2>
+
+<pre><code class="language-http">GET /api/v1/categories/list.ext HTTP/1.1
+Host: https://yoursite.vanillaforums.com
+</code></pre>
+
+<p>Get a list of categories.</p>
+
+<p><a href="../#making-api-calls"><strong>Authentication</strong></a>: optional<br />
+If not provided, perspective will be that of a guest.</p>
+
+<h3 id="parameters-3">Parameters</h3>
+
+<p><em>This method does not take any parameters.</em></p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

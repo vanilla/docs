@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Models, Forms, &amp; Validation</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/framework/models.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/">Vanilla API</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/developer/framework/">Framework</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/assets/">Assets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/controllers/">Controllers &amp; URLs </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/database/">Database access </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/datasets/">Datasets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/email/">Email </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/helpers/">Helpers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/inform/">Inform Messages </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/i18n/">Internationalization &amp; Localization </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8081/developer/framework/models/">Models, Forms, &amp; Validation </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/modules/">Modules </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/oauth/">OAuth </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/permissions/">Permissions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/requests/">Requests </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/developer/framework/views/">Views </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/developer/framework/apiv2/">Writing APIs </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/embedding/">Embedding</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/changelog/">Change Log</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="models">Models</h2>
+
+<p><a href="http://127.0.0.1:8081/framework/datasets">Datasets</a>
+<a href="http://127.0.0.1:8081/framework/controllers">Controllers</a>
+<a href="http://127.0.0.1:8081/framework/views">Views</a></p>
+
+<p>The theory of a Model in MVC is that it is an object representation of the data being manipulated. In Garden, however, the actual object representation of the data comes from the DataSet class in the form of a php stdClass. So, as you may have guessed already, in Garden the model isn’t a representation of the data. In Garden, a model relates directly to a table, and (with the help of the database object) allows you to retrieve information from the table, enforce the schema of that table on the data being manipulated, and put data into the table. The real power of the Model class in Garden comes from it’s ability to examine the table from which it was created, and understand the data types and requirements for putting data into that table. When combined with Garden’s Validation and Form classes, it allows you to create forms with validation already built in. The Model class itself is quite simple, and can be used on any table in the database. Let’s take a look at a very basic example of how a model could be used to get some data from a database, validate data, and update data.</p>
+
+<pre><code class="language-php">// Create a validation object to handle validation issues that the model will encounter:
+$Validation = new Gdn_Validation();
+
+// Create a new model based on a table in the database called &quot;Blog&quot;:
+$BlogModel = new Gdn_Model('Blog', $Validation);
+
+// Retrieve a DataSet from the Blog table:
+$BlogData = $BlogModel-&gt;GetWhere(array('BlogID' =&gt; '12'));
+
+// Grab the first row of the dataset as an associative array:
+$Blog = $BlogData-&gt;FirstRow('', DATASET_TYPE_ARRAY);
+
+// $Blog now contains every column of the &quot;Blog&quot; table where BlogID == 12. Let's change something:
+$Blog['Title'] = 'Some blog title';
+
+// And save it:
+$BlogModel-&gt;Save($Blog); // Validates
+
+// And let's try to insert something that we know shouldn't go into the database:
+$Blog['BlogID'] = 'Not an Integer!';
+
+// And save it:
+$BlogModel-&gt;Save($Blog); // Doesn't validate
+</code></pre>
+
+<p>When the model’s “GetWhere” method is called, it does a very simple <code>select * from Blog where BlogID = 12</code>query that returns all of the columns from that table into a dataset. At this point, the model still doesn’t know anything about the structure of the table. When the model’s “Save” method is called, the first thing it does is uses the Database object to get information about the table so that it can define the table’s schema. It looks at each column’s data types, isnullable, default values, keys, etc. Then it uses the validation object to build up a set of rules for each column. Finally, it examines the \$Blog that was passed as it’s first argument, matching up associative array keys with column names, and then checks each field against the rules automatically defined for that table. As it encounters problems, it builds up a set of validation results that can then be used however you wish (typically they are consumed by Garden’s form object and displayed on the screen). So, with just a few lines of code, I’ve grabbed data from the database, altered it, and saved it - making sure that no invalid data is inserted into the database, all exceptions are caught, and results can be delivered to the user:</p>
+
+<pre><code class="language-php">print_r($BlogModel-&gt;Validation-&gt;Results());
+// Prints:
+Array (
+    [BlogID] =&gt; Array (
+            [0] =&gt; ValidateInteger
+        )
+)
+</code></pre>
+
+<p>This means that the &ldquo;BlogID&rdquo; field has encountered a problem when attempting to validate that the BlogID value was an integer. If there had been other errors for that column, they would have also appeared, for example:</p>
+
+<pre><code class="language-php">// Empty value is also incorrect
+$Blog['BlogID'] = '';
+$BlogModel-&gt;Save($Blog);
+print_r($BlogModel-&gt;Validation-&gt;Results());
+
+// Prints:
+Array (
+    [BlogID] =&gt; Array (
+            [0] =&gt; ValidateRequired,
+            [1] =&gt; ValidateInteger
+        )
+)
+</code></pre>
+
+<p>The validation object will always collect as much information about what is wrong with the data as possible. It is then up to the developer what to do with that information. Luckily, 99% of the time the developer will just let the Form handle the validation results.</p>
+
+<h2 id="forms-validation">Forms &amp; Validation</h2>
+
+<p>In order for the database, models, validation, &amp; datasets to shine, we need to get the information out and editable by the users. This is where the Form class comes into play. Let’s take a look at an actual example of how the controller, model, validator, and form work together. Let’s say we get the following request: <code>/bloggingtool/post/new</code> Which is the same as calling the following controller in an imaginary “bloggingtool” application: <code>$Post-&gt;New();</code>My “New” method on the post controller would contain:</p>
+
+<pre><code class="language-php">public function New() {
+   $Validation = new Gdn_Validation();
+   $BlogModel = new Gdn_Model('Blog', $Validation);
+
+   // Set the BlogModel on the form.
+   $this-&gt;Form-&gt;SetModel($BlogModel);
+
+   // If the form has already been posted back...
+   if ($this-&gt;Form-&gt;AuthenticatedPostBack()) {
+      // Attempt to save the form values
+      $BlogID = $this-&gt;Form-&gt;Save();
+
+      // If it saved, redirect to the new entry:
+      if ($BlogID !== FALSE)
+         Redirect('/bloggingtool/entries/'.$BlogID);
+
+   }
+   // Render the form
+   $this-&gt;Render();
+}
+</code></pre>
+
+<p>The form’s <code>Save()</code> method calls the model’s <code>Save()</code> and then takes any validation results that came out of it. If the save was successful, the model would have returned the id of the record inserted (or updated). If not, it could take all of the validation results and write them to the screen for the user to see. That’s really all there is to saving a bunch of data to the database. You might be wondering: <strong>What fields were actually saved?</strong>That all depends on what you put on the form. The Form class is a “user interface” class, which means that a large number of it’s methods actually return xhtml. The view for my “New” method above would look something like this:</p>
+
+<pre><code class="language-php">echo $this-&gt;Form-&gt;Open();
+echo $this-&gt;Form-&gt;Errors();
+echo $this-&gt;Form-&gt;TextInput('Title');
+echo $this-&gt;Form-&gt;TextBox('Body');
+echo $this-&gt;Form-&gt;Close('Save');
+</code></pre>
+
+<p>In this example, you can see I’ve referenced two fields on the Model that is being manipulated: <em>Title</em> and <em>Body</em>. When the form’s “Save” method is called above (and the Model’s “Save” method is called therein), the model validates and attempts to save the data. If one of these two fields were required, it would return a validation result that would then be written to the screen by <code>$this-&gt;Form-&gt;Errors()</code>. Furthermore, if there were a field on the “Blog” table that were required and not present on this form, it would have a validation result for that as well. What if we were editing a blog post instead of creating a new one?</p>
+
+<pre><code class="language-php">public function Edit($BlogID = '') {
+   $Validation = new Gdn_Validation();
+   $BlogModel = new Gdn_Model('Blog', $Validation);
+
+   // Load the blog being edited 
+   $Blog = $BlogModel -&gt;GetWhere(array('BlogID' =&gt; $BlogID)) -&gt;FirstRow();
+
+   // Set the BlogModel on the form.
+   $this-&gt;Form-&gt;SetModel($BlogModel);
+
+   // Make sure the form knows which item we are editing.
+   $this-&gt;Form-&gt;AddHidden('BlogID', $BlogID);
+
+   // If the form has NOT been posted back...
+   if ($this-&gt;Form-&gt;AuthenticatedPostBack() === FALSE) {
+      // Set the blog on the form
+      $this-&gt;Form-&gt;SetData($Blog);
+   } else {
+      // Attempt to save the form values
+      $BlogID = $this-&gt;Form-&gt;Save();
+
+      // If it saved, redirect to the new entry:
+      if ($BlogID !== FALSE)
+         Redirect('/bloggingtool/entries/'.$BlogID);
+
+   }
+   // Render the form
+   $this-&gt;Render();
+}
+</code></pre>
+
+<p>I load the blog and set it’s data onto the form using <code>$this-&gt;Form-&gt;SetData()</code>. At that point the form takes over and knows to either (a) render the existing data if the form has not been posted back, or (b) render the postback data otherwise. And since I added the BlogID to the form’s hidden field collection, the model will know that it should update a blog row instead of insert a new one.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

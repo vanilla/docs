@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Vanilla Pop with Site Hub</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/vanilla-pop/site-hub.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/help/addons/">Addons</a>
+    </li>
+    
+    
+        
+        
+
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/advanced-search/">Advanced Search </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/help/reputation/badges/">Badges </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/forum-merge/">Forum Merge </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/gigya/">Gigya Sign In </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/help/addons/groups/">Groups </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/mailchimp-push/">MailChimp Push </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/pockets/">Pockets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/qna/">Questions and Answers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/help/reputation/ranks/">Ranks </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/help/reputation/reactions/">Reactions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/redirector/">Redirector </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/salesforce/">Salesforce </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="http://127.0.0.1:8081/help/addons/social/">Social Connect Plugins </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/tagging/">Tagging </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active nest">
+                    <a href="http://127.0.0.1:8081/help/addons/vanilla-pop/">Vanilla Pop </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                        <ul class="nav-tier3">
+
+                            <li class="active">
+                                <a href="http://127.0.0.1:8081/help/addons/vanilla-pop/site-hub/">Vanilla Pop with Site Hub</a>
+                            </li>
+
+                            
+                                
+                                
+                                
+                                
+			    
+		    
+                        </ul>
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="http://127.0.0.1:8081/help/addons/zendesk/">Zendesk </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<aside class="cloudfeature"><p>
+    <img src="http://127.0.0.1:8081/img/help/cloud.png" />
+    <span>This feature is only available on Vanilla Cloud</span>
+    <a href="https://vanillaforums.com">Learn More...</a>
+</p></aside>
+
+<h2 id="differences">Differences</h2>
+
+<p>Vanilla Pop works in much the same way on the hub as it does on regular sites. The node email addresses are slightly different and there are a few more features which are detailed below.</p>
+
+<h2 id="node-email-addresses">Node Email Addresses</h2>
+
+<p>Each node&rsquo;s email address is comprised of two parts: The node slug and the hub slug seperated by a dot, followed by a vanillaforums.email domain. You can see this by going to the <strong>Incoming Email</strong> page in your nodes&rsquo; dashboards.</p>
+
+<h3 id="example">Example</h3>
+
+<p>Let&rsquo;s say you are on the <strong>acme</strong> hub and you create a node with the slug <strong>anvil</strong>. You will see that the node&rsquo;s email address will be shown as <code>anvil.acme@vanillaforums.emal</code>.</p>
+
+<h3 id="emailing-directly-into-a-category">Emailing Directly Into a Category</h3>
+
+<p>You can email directly into a category by prepending the category&rsquo;s URL code to the node&rsquo;s email address followed by a dot.</p>
+
+<h3 id="example-1">Example</h3>
+
+<p>Let&rsquo;s say in the above example you want to email the <strong>general</strong> category. You would send an email to <code>general.anvil.acme@vanillaforums.email</code>.</p>
+
+<h2 id="using-one-email-address-for-an-entire-hub">Using One Email Address for an Entire Hub</h2>
+
+<p>The hub provides a flexible way to email any node and even any category within a node. However, let&rsquo;s say you want to set up a single email address for your entire hub and have emails route into the nodes.</p>
+
+<p>Each hub can use an abbreviated email address and then make use of the email subject to route the email to the correct node. If you want to do this then the email address for your entire hub is the hub slug followed by the vanillaforums.email domain. Then the first word of the subject will be matched against a node and optional category. You can optionally enclose the first word in square brackets.</p>
+
+<h3 id="example-2">Example</h3>
+
+<p>From the above examples, you have the <strong>acme</strong> hub, and the <strong>anvil</strong> node, and the <strong>general</strong> category.</p>
+
+<ul>
+<li>The hub&rsquo;s email address is <code>acme@vanillaforums.email</code></li>
+<li>An email with the subject <code>[anvil] I need some help</code> will be routed to the anvil node.</li>
+<li>An email with the subject <code>[general.anvil] I need some help</code> will be routed to the general category of the anvil node.</li>
+</ul>
+
+<h3 id="removing-the-node-slug-to-email-categories">Removing the Node Slug to Email Categories</h3>
+
+<p>You can have your hub configured to remove the need for node slugs in the subject of emails. To do so you must do the following:</p>
+
+<ol>
+<li>Ensure that you use unique URL codes across all of your nodes. This is your responsibility.</li>
+<li>Make a support request to configure your hub to look at the category of a node first.</li>
+</ol>
+
+<h3 id="setting-up-a-custom-email-address-for-your-hub">Setting Up a Custom Email Address for Your Hub</h3>
+
+<p>The reason why the hub supports a single email address is to allow you to set up a single custom email address for your communities and then use the subject to route emails accordingly. In order to do so you must have control over the email address and then you must do the following:</p>
+
+<ol>
+<li>Set up your email address to forward all emails to the hub&rsquo;s email address.</li>
+<li>Make a support request notifying Vanilla staff of your forward. Tell them what the email address is and they will configure your hub to send emails from that address.</li>
+</ol>
+
+<p>In order to make the email forwarding work you must ensure the following:</p>
+
+<ol>
+<li>The emails must not be altered when being forwarded (ex. don&rsquo;t add a &ldquo;Fw: &ldquo; prefix to the subjects).</li>
+<li>In order to ensure the best email routing the email should re-addd any arguments in the email address to the forum&rsquo;s email address. This is common behaviour amongst most email servers.</li>
+</ol>
+
+<h2 id="email-replies-and-hub-email-addresses">Email Replies and Hub Email Addresses</h2>
+
+<p>Most emails sent to your communities will be in reply to a notification such as a comment or a private message. In this case Vanilla adds special routing information to help make sure the reply is routed to the correct community. In this case this information will take precidence over the specific email address. In most cases users will not know this, but if you specifically try and alter an email address when replying to try and make the email send to a specific community, you might still find that the email still goes to its originally indended destination.</p>
+
+<h2 id="emailing-to-a-non-existant-node">Emailing to a Non-Existant Node</h2>
+
+<p>If your email address or subject is malformed in such a way that Vanilla cannot find the node you are trying to email then it will send back a response telling you that the site you are trying to email could not be found.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

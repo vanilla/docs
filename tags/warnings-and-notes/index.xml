@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Warnings and Notes on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/warnings-and-notes/</link>
+    <description>Recent content in Warnings and Notes on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/tags/warnings-and-notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding and Editing User Notes</title>
+      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <description>Adding a Note To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.
+Viewing Notes To view a user’s notes go to their profile. There will be a notes link on the side panel. Note that both notes and warnings are displayed in the same list.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading from Warnings</title>
+      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/upgrading-from-warnings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/upgrading-from-warnings/</guid>
+      <description>Warnings &amp;amp; Notes is version 2 The first version of this addon was titled simply &amp;ldquo;Warnings&amp;rdquo;. It did not include the User Notes feature. It had more granular controls for Warning a user with particular point levels and durations.
+We recommend all users disable the &amp;ldquo;Warnings&amp;rdquo; addon if they still have it and immediately enable the &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; addon instead.
+Why does &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; have less granular settings?</description>
+    </item>
+    
+    <item>
+      <title>Warning a User</title>
+      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/warning-a-user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/warning-a-user/</guid>
+      <description>Warning a User You can warn a user from their profile, or from a post that they’ve made. Warnings may be given by users with the permission Garden.Moderation.Manage or Moderation.Warnings.Add (if present).
+Profile Warning To warn a user from their profile click on their edit profile drop down. There should be an item called Warn.
+Warn from a Post You can warn a user for a post they’ve made. To do this click on the post’s flag menu and click Warn.</description>
+    </item>
+    
+  </channel>
+</rss>

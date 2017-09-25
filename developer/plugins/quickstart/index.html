@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="http://127.0.0.1:8081/css/docs.css" rel="stylesheet">
+        <link href="http://127.0.0.1:8081/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/jquery.store.js"></script>
+        <script src="http://127.0.0.1:8081/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="http://127.0.0.1:8081/js/vendor/lunr.js"></script>
+        <script src="http://127.0.0.1:8081/js/search.js"></script>
+
+        <link rel="shortcut icon" href="http://127.0.0.1:8081/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://127.0.0.1:8081/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="http://127.0.0.1:8081/">
+                <img class="logo" src="http://127.0.0.1:8081/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Plugin Quickstart</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/plugins/quickstart.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/api/">Vanilla API</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/framework/">Framework</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/embedding/">Embedding</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/changelog/">Change Log</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="http://127.0.0.1:8081/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="active">
+                    <a href="http://127.0.0.1:8081/developer/plugins/quickstart/">Plugin Quickstart </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="http://127.0.0.1:8081/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="http://127.0.0.1:8081/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="quickstart-links">Quickstart Links</h2>
+
+<ul>
+<li>Read about our hooks system: <a href="http://127.0.0.1:8081/developer/plugins">Extending Vanilla with plugins</a></li>
+<li>Download the official <a href="https://open.vanillaforums.com/addon/example-plugin">Example plugin</a></li>
+<li>Download other plugins from the <a href="https://open.vanillaforums.com/addons">Addon Directory</a> and borrow their code.</li>
+<li>Get help in the <a href="https://open.vanillaforums.com/categories/developers">developer community</a></li>
+</ul>
+
+<h2 id="quickstart-guide">Quickstart Guide</h2>
+
+<p>Vanilla is built on an object-oriented, MVC framework. If you&rsquo;re coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That&rsquo;s OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.</p>
+
+<p>Ready to code? Grab the <a href="https://open.vanillaforums.com/addon/example-plugin">Example plugin</a> and use it below for an even quicker start. Hang onto your butts, here we go:</p>
+
+<ol>
+<li>Name your plugin.</li>
+<li>Define your plugin.</li>
+<li>Find your hooks.</li>
+<li>Write your code.</li>
+<li>Add helper files.</li>
+</ol>
+
+<h3 id="1-name-your-plugin">1. Name your plugin</h3>
+
+<p>Conventionally, Vanilla uses, well, pretty vanilla plugin names. We often favor descriptive names over clever ones or mini-brands.</p>
+
+<p>Your plugin needs a user-facing name, and a &lsquo;slug&rsquo; name without spaces or special characters. If your plugin is named &ldquo;Lincoln&rsquo;s Fancy Plugin&rdquo; a good slug name would be <code>LincolnsFancyPlugin</code> or even just <code>FancyPlugin</code>.</p>
+
+<h3 id="2-define-your-plugin">2. Define your plugin</h3>
+
+<p>First, create a folder in the <code>plugin</code> directory, using the slug name you selected (e.g. <code>FancyPlugin</code>). Inside the folder, create a file that includes the slug name (e.g. <code>class.fancyplugin.php</code>). Next, open the file and add the plugin definition at the top, like this:</p>
+
+<pre><code>&lt;?php
+// Define the plugin:
+$PluginInfo['FancyPlugin'] = array(
+   'Name' =&gt; 'Lincoln&amp;rsquo;s Fancy Plugin',
+   'Description' =&gt; 'This is a sample plugin.',
+   'Version' =&gt; '1.0',
+   'Author' =&gt; &quot;Your Name&quot;,
+   'AuthorEmail' =&gt; 'you@yourdomain.com',
+   'AuthorUrl' =&gt; 'http://yourdomain.com',
+   'MobileFriendly' =&gt; TRUE,
+);
+</code></pre>
+
+<p>The array key (<code>FancyPlugin</code> above) <strong><em>must exactly match</em></strong> the folder name, including capitalization.</p>
+
+<h4 id="define-basic-info">Define basic info</h4>
+
+<p>The <code>Name</code> parameter is optional; it will default to the slug if omitted. To include special characters here or in the description, use their HTML code.</p>
+
+<p>Provide a great <code>Description</code> that briefly explains what your plugin does from the users&rsquo; perspective. For <code>Version</code>, familiarize yourself with <a href="http://semver.org/">semantic versioning</a>.</p>
+
+<p>The <code>Author</code> parameters are at your discretion. We recommend using a support address for both the email and URL.</p>
+
+<p>The <code>MobileFriendly</code> parameter allows the plugin to be automatically disabled when accessing the site via a mobile device. We recommend defining it as <code>TRUE</code>. If omitted, it defaults to <code>FALSE</code>.</p>
+
+<p>All further optional parameters described below default to <code>FALSE</code> if not defined.</p>
+
+<h4 id="define-a-settings-page">Define a settings page</h4>
+
+<p>To create a &ldquo;Settings&rdquo; button that will appear on the plugin after it is enabled, add these to your definition:</p>
+
+<pre><code>   'SettingsUrl' =&gt; '/settings/somepagehere',
+   'SettingsPermission' =&gt; 'Garden.Settings.Manage',
+</code></pre>
+
+<h4 id="define-requirements">Define requirements</h4>
+
+<p>You can require a certain version of Vanilla or that other plugins be enabled before yours can be enabled. Require a certain version of Vanilla by adding this:</p>
+
+<pre><code>   'RequiredApplications' =&gt; array('Vanilla' =&gt; '2.0.18'),
+</code></pre>
+
+<p>Require some other plugins to be enabled first in much the same way:</p>
+
+<pre><code>   'RequiredPlugins' =&gt; array('Akismet' =&gt; '1.0.1', 'StopForumSpam' =&gt; '1.0'),
+</code></pre>
+
+<p>Note that this only requires them at the time of enabling. A user could later disable the plugin(s). Therefore, it is very important to <strong>use defensive programming techniques to guard against missing prerequisites</strong>, rather than simply assuming they will always be there just because you put it in the requirements.</p>
+
+<h4 id="define-new-permissions">Define new permissions</h4>
+
+<p>Adding new permissions via plugin is easy. Any defined here will be added as soon as the plugin is enabled. It&rsquo;s important to know more about <a href="http://docs.vanillaforums.com/developers/framework/permissions/">using permissions in Vanilla</a> before doing this.</p>
+
+<p>You can provide an array of permission names using dot syntax. You can optionally use key/value pairs to set a default (<code>1</code> will give all roles the permission; <code>0</code> is the default and leaves it off for all roles to start).</p>
+
+<pre><code>'RegisterPermissions' =&gt; array('FancyPlugin.DoStuff.Add' =&gt; 1),
+</code></pre>
+
+<p>Or set the default to whether or not the role currently has an existing permission:</p>
+
+<pre><code>'RegisterPermissions' =&gt; array('FancyPlugin.DoStuff.Add' =&gt; 'Garden.Settings.Manage`),
+</code></pre>
+
+<p>This allows you to set good defaults while allowing them to be changed independently in the future.</p>
+
+<h4 id="whew">Whew!</h4>
+
+<p>That whole definitions section probably didn&rsquo;t <em>seem</em> very quick, but you just did a huge amount of work in just a few lines of code.</p>
+
+<h3 id="3-find-your-hooks">3. Find your hooks</h3>
+
+<p>Try the <a href="https://open.vanillaforums.com/addon/eventi-plugin">Eventi plugin</a> to visualize where events are fired in Vanilla. Use the hooks in the <a href="https://open.vanillaforums.com/addon/example-plugin">Example plugin</a> to see what they do.</p>
+
+<p>Read the <a href="http://127.0.0.1:8081/developer/plugins">plugin hooks tutorial</a> for more on how to override &amp; extend Vanilla.</p>
+
+<p>Use an IDE and use the project search functionality to locate instances of <code>FireEvent</code> in the <a href="http://github.com/vanilla/vanilla">core repo</a>. Many doc blocks show what events are fired within their methods. Or, search for <code>_Handler</code> in the <a href="http://github.com/vanilla/addons">addons repo</a> to see examples and common uses.</p>
+
+<p>Lastly, <a href="https://open.vanillaforums.com/addons">find a plugin</a> that does something similar to what you&rsquo;re trying to do, and check out its code. Maybe between 3 or 4 plugins you can find a good portion of what you&rsquo;re trying to accomplish.</p>
+
+<h3 id="4-write-your-code">4. Write your code</h3>
+
+<p>After your <code>$PluginInfo</code> array, you&rsquo;ll need a class. Always extend <code>Gdn_Plugin</code>, and name the class using the slug name of your plugin followed by the word &lsquo;Plugin&rsquo; to avoid namespace conflicts.</p>
+
+<pre><code>class FancyPlugin extends Gdn_Plugin {
+
+}
+</code></pre>
+
+<p>Inside the class, give methods special names to invoke hooks. Most hooks in a plugin are written like this:</p>
+
+<pre><code>public function SomeController_SomeEvent_Handler($Sender, $Args) {
+   // Do something.
+}
+</code></pre>
+
+<p>Use the <code>$Sender</code> variable to call methods from the controller or model that triggered your code. Use the <code>$Args</code> variable to change parameters or detect certain situations. This is where you&rsquo;ll want to start digging into the finer points of <a href="http://127.0.0.1:8081/developer/plugins">extending Vanilla with plugins</a>.</p>
+
+<p>You can also use normal methods to reuse code. For instance, maybe you need 2 different hooks to do the same thing:</p>
+
+<pre><code>public function DiscussionsController_SomeEvent_Handler($Sender, $Args) {
+   $this-&gt;CommonMethod($Sender, $Args);
+}
+
+public function CategoriesController_SomeOtherEvent_Handler($Sender, $Args) {
+   $this-&gt;CommonMethod($Sender, $Args);
+}
+
+public function CommonMethod($Sender, $Args) {
+   // Do something for both the events above so we keep things DRY.
+}
+</code></pre>
+
+<p>Need a simple settings page? See the <code>ConfigurationModule</code> and how it is used in other plugins for a quick &amp; easy way of making one.</p>
+
+<p>After your class, you can define any functions from core that you wish to override. Do this very conservatively and carefully.</p>
+
+<h3 id="5-add-helper-files">5. Add helper files</h3>
+
+<p>By convention, place CSS files in a folder named <code>design</code>, Javascript files in a folder named <code>js</code>, views (templates) in a folder named <code>views</code>.</p>
+
+<p>To include a CSS file in all non-Dashboard pages:</p>
+
+<pre><code>public function AssetModel_StyleCss_Handler($Sender) {
+   $Sender-&gt;AddCssFile('fancy.css', 'plugins/FancyPlugin');
+}
+</code></pre>
+
+<p>Note the second parameter is the folder.</p>
+
+<p>To include a CSS file in a specific page (e.g. the Discussions list):</p>
+
+<pre><code>public function DiscussionsController_Render_Before($Sender) {
+   $Sender-&gt;AddCssFile('fancy.css', 'plugins/FancyPlugin');
+}
+</code></pre>
+
+<p>To include a JS file: <code>$Sender-&gt;AddJsFile('fancy.js', 'plugins/FancyPlugin');</code>.</p>
+
+<p>To output the view <code>fancy.php</code> in your <code>views</code> folder: <code>$Sender-&gt;Render('fancy', '', 'plugins/FancyPlugin');</code></p>
+
+<p>Again, for a simple settings page, don&rsquo;t create your own views. Use the <code>ConfigurationModule</code>.</p>
+
+<h2 id="quickstart-epilogue">Quickstart Epilogue</h2>
+
+<p>That should put you well on your way to your first Vanilla plugin! Dream big, but pick something small for your first attempt. You&rsquo;ll learn a ton, and be better positioned to go big after that.</p>
+
+<p>Final tips:</p>
+
+<ul>
+<li>Use the <a href="http://127.0.0.1:8081/developer/troubleshooting">troubleshooting guide</a>.</li>
+<li>Use <code>decho()</code> to output variables &amp; <code>Trace()</code> to leave breadcrumbs.</li>
+<li><strong>Wrap all URLs</strong> with <code>Url()</code> to account for subfolder&rsquo;d forums.</li>
+<li><strong>Never hard-code paths</strong>. Use constants like <code>PATH_UPLOADS</code>.</li>
+<li><strong>Use models</strong> to access the database rather than writing your own queries. E.g.: Need discussions? Look at <code>DiscussionModel</code>.</li>
+<li>Adding your own data to the database? Read about the <a href="http://127.0.0.1:8081/developer/framework/database">database query builder</a>.</li>
+</ul>
+
+<p>And, as always, ask the talented &amp; helpful folks on our <a href="https://open.vanillaforums.com">community forum</a> when you get stuck.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="http://127.0.0.1:8081/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

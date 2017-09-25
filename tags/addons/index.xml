@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Addons on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/addons/</link>
+    <description>Recent content in Addons on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/tags/addons/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding and Editing Badges</title>
+      <link>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Disabling badges To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active. Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.</description>
+    </item>
+    
+    <item>
+      <title>Adding and Editing Ranks</title>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</guid>
+      <description>Adding a Ranks Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.
+Editing a Rank On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.
+Rank information Name &amp;amp; Label The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank.</description>
+    </item>
+    
+    <item>
+      <title>Adding and Editing Reactions</title>
+      <link>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Selecting Reactions Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Search</title>
+      <link>http://127.0.0.1:8081/help/addons/advanced-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/advanced-search/</guid>
+      <description>Overview Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.
+ Better indexing of content The ability to apply filters to searches Auto-complete of results as the user types the search terms  Enabling Advanced Search To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:</description>
+    </item>
+    
+    <item>
+      <title>Analytics</title>
+      <link>http://127.0.0.1:8081/help/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/analytics/</guid>
+      <description>What Are Vanilla Analytics? Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.
+How to use Vanilla Statistics The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server. We generate and present you with the statistics in a graphical format for the following:
+How to use Vanilla Analytics You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.</description>
+    </item>
+    
+    <item>
+      <title>Applying Ranks over SSO</title>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</guid>
+      <description>Applying Ranks over SSO Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.
+You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.
+This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.</description>
+    </item>
+    
+    <item>
+      <title>Badges</title>
+      <link>http://127.0.0.1:8081/help/reputation/badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/badges/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Purpose Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.
+Default badges Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions).</description>
+    </item>
+    
+    <item>
+      <title>Curating with Reactions</title>
+      <link>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Curating with Reactions Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.
+Any of the thresholds or increment values mentioned in this document can be modified via support.
+Promoting content Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it.</description>
+    </item>
+    
+    <item>
+      <title>Facebook</title>
+      <link>http://127.0.0.1:8081/help/addons/social/facebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/social/facebook/</guid>
+      <description>Facebook Facebook Connect allows users to sign in using their Facebook account. You must register your application with Facebook for this plugin to work.
+How to set up Facebook Connect In order to set up Facebook Connect, you must create an &amp;ldquo;application&amp;rdquo; in Facebook at: https://developers.facebook.com/apps
+Once your application has been set up, you must copy the &amp;ldquo;Application ID&amp;rdquo; and &amp;ldquo;Application Secret&amp;rdquo; into your Facebook plugin settings page from your Vanilla dashboard.</description>
+    </item>
+    
+    <item>
+      <title>Forum Merge</title>
+      <link>http://127.0.0.1:8081/help/addons/forum-merge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/forum-merge/</guid>
+      <description>When to Use Forum Merge The ForumMerge plug-in should be used when you want to take one existing Vanilla forum instance and merge it into another existing Vanilla forum. Core Vanilla data, in addition to some plug-in and addon data, will be carried over from the source into the destination forum and reconciled with existing records to avoid conflicts.
+What Data is Merged The following Vanilla data will be considered during the merge process:</description>
+    </item>
+    
+    <item>
+      <title>Gigya Sign In</title>
+      <link>http://127.0.0.1:8081/help/addons/gigya/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/gigya/</guid>
+      <description>Gigya Sign In The Gigya Sign In adds the ability to sign to your community with Gigya Social Login. You will need to configure your site in your Gigya dashboard and then set up your login plugin on the Gigya plugins page before you can use the Gigya addon in Vanilla.
+Setting up your site in Gigya  Instructions on setting up a a site in Gigya can be found in their site setup documentation.</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://127.0.0.1:8081/help/integrations/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/integrations/github/</guid>
+      <description>Github This plugin allows you to submit user discussion and comments as GitHub issues.
+Setup Instructions If you already have a Github account, you need to enable API Access for this plugin to work.
+ Create a new application in GitHub, and set the callback URL by appending /profile/githubconnect to the end of your forum’s URL. (If your forum is at example.com/forum, your callback URL would be http://example.com/forum/profile/githubconnect). Once your application has been set up, you must copy the ClientID and Secret into your Github plugin settings page from your Vanilla dashboard.</description>
+    </item>
+    
+    <item>
+      <title>Giving and Requesting Badges</title>
+      <link>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Giving a badge Badges-&amp;gt;Give is the permission that defines who can give badges. By default, moderators and administrators have it.
+To manually give a badge to one or more users, click the &amp;ldquo;Give&amp;rdquo; button from the Badges list. Type a username in the provided box. You can give a badge to many users at once by typing all their names, separated by commas.</description>
+    </item>
+    
+    <item>
+      <title>Google Plus</title>
+      <link>http://127.0.0.1:8081/help/addons/social/googleplus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/social/googleplus/</guid>
+      <description>Google Plus The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in Google API Console. This Google+ Video Tutorial also shows you how to set this up.
+Setting up social login in Google Plus  Once you have enabled the Google+ Plugin in your Vanilla Dashboard, go to your API Console at Google. You will need to create a project.</description>
+    </item>
+    
+    <item>
+      <title>Groups</title>
+      <link>http://127.0.0.1:8081/help/addons/groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/groups/</guid>
+      <description>What are Groups? Groups is an addon for very large communities to allow their users to form their own discussion groups. These groups allows for having discussions outside the normal forum category structure in self-contained areas. Very large communities can be difficult to approach for new users. Groups can be a useful way for users to find other folks with common interests or backgrounds.
+Groups have an events list, their own announcements, and leaders who run the show.</description>
+    </item>
+    
+    <item>
+      <title>LinkedIn</title>
+      <link>http://127.0.0.1:8081/help/addons/social/linkedin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/social/linkedin/</guid>
+      <description>LinkedIn Linked In social sign in allows users to sign in using their LinkedIn account. You must register your application with LinkedIn for this addon to work.
+How to Set up LinkedIn Social Sign in  Go to the LinkedIn Developer Network at https://www.linkedin.com/secure/developer/ Click Add New Application. When you create the application, you can choose what to enter in most fields, but you have to make sure you enter specific information for some fields.</description>
+    </item>
+    
+    <item>
+      <title>MailChimp Push</title>
+      <link>http://127.0.0.1:8081/help/addons/mailchimp-push/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/mailchimp-push/</guid>
+      <description>Overview MailChimp is one of the world’s leading email marketing platforms, allowing it’s users to send newsletters, automated messages, and set up targeted campaigns to help their business.
+Our plugin synchronizes the email addresses of your community’s users with a designated mailing list. As your community grows, or users change their email address, Vanilla will send notifications to MailChimp to update the specified list.
+Enabling MailChimp Push MailChimp Push is a feature provided at every plan level, it can be activated for your forum through a support request.</description>
+    </item>
+    
+    <item>
+      <title>Managing Groups</title>
+      <link>http://127.0.0.1:8081/help/addons/groups/managing-groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/groups/managing-groups/</guid>
+      <description>Adding your first groups After enabling the Groups addon, &amp;ldquo;Groups&amp;rdquo; will appear in your top-level navigation. In a customized theme, this may not be the case and you&amp;rsquo;ll need to go directly to the URL &amp;ldquo;/groups&amp;rdquo; from your forum domain (e.g. &amp;ldquo;yoursite.vanillaforums.com/groups&amp;rdquo;).
+As the administrator, click the &amp;ldquo;New Group&amp;rdquo; button near the top of the page. The &amp;ldquo;Icon&amp;rdquo; image shows on the groups lists. The &amp;ldquo;Banner&amp;rdquo; is the large image at the top of your group&amp;rsquo;s page.</description>
+    </item>
+    
+    <item>
+      <title>Plugin Quickstart</title>
+      <link>http://127.0.0.1:8081/developer/plugins/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/plugins/quickstart/</guid>
+      <description>Quickstart Links  Read about our hooks system: Extending Vanilla with plugins Download the official Example plugin Download other plugins from the Addon Directory and borrow their code. Get help in the developer community  Quickstart Guide Vanilla is built on an object-oriented, MVC framework. If you&amp;rsquo;re coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That&amp;rsquo;s OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.</description>
+    </item>
+    
+    <item>
+      <title>Pockets</title>
+      <link>http://127.0.0.1:8081/help/addons/pockets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/pockets/</guid>
+      <description>Overview Pockets add areas to your forum where you can inject custom HTML or Javascript into your theme. It is a powerful tool that makes Vanilla flexible for ad placement, google analytics, and other small customizations.
+Pockets are designed to be used by advanced users and developers who can write and review their own code.
+Setup Pockets are available on all plan levels. To activate it, simply locate it in your addon list (/dashboard/settings/addons) and toggle it on.</description>
+    </item>
+    
+    <item>
+      <title>Private Community</title>
+      <link>http://127.0.0.1:8081/help/roles-permissions/private-community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/roles-permissions/private-community/</guid>
+      <description>Making your Community Private If you set your community to private, only registered members will be able to view and post. If a user that is not logged in browses to the community, they will see a login page.
+To make your community private:
+ Go to the Addons page in the Dashboard Turn on the &amp;lsquo;Private Community&amp;rsquo; addon Click on the addon settings, this will take you to the Roles and Permission page Turn on &amp;lsquo;Enable Private Communities&amp;rsquo;  Additional Resources:</description>
+    </item>
+    
+    <item>
+      <title>Questions and Answers</title>
+      <link>http://127.0.0.1:8081/help/addons/qna/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/qna/</guid>
+      <description>Overview Vanilla supports question and answer type discussions. Q&amp;amp;A discussions differ in the following ways:
+ When a question is answered, the member who asked the question will receive a notification and will be prompted to indicate if the answer answered the question or not.
+ Valid answers are highlighted and displayed at the top of the discussion list. Members who answer questions will receive badges (if badges are turned on).</description>
+    </item>
+    
+    <item>
+      <title>Ranks</title>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/</guid>
+      <description>What is a Rank? A rank can be assigned to a user to grant or remove certain privileges on your forum. A rank is not Roles &amp;amp; Permissions, which govern content access, moderation abilities, and administrator access.
+A user can only have one rank at a time. Typically, the user&amp;rsquo;s rank is displayed on their discussions and comments just after their name. If a user has a Title, that is displayed separately, after their Rank.</description>
+    </item>
+    
+    <item>
+      <title>Reactions</title>
+      <link>http://127.0.0.1:8081/help/reputation/reactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/reactions/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  What are reactions? Reactions are a 1-click response to discussions and comments. Using Reactions enables community members to indicate an emotional (&amp;ldquo;Awesome&amp;rdquo;, &amp;ldquo;LOL&amp;rdquo;) or empirical (&amp;ldquo;Agree&amp;rdquo;, &amp;ldquo;Vote Down&amp;rdquo;) response without typing a comment. This introduces feedback that is otherwise missing from a community when members don&amp;rsquo;t have anything to add to a discussion via a comment. Reactions are available via an addon.</description>
+    </item>
+    
+    <item>
+      <title>Redirector</title>
+      <link>http://127.0.0.1:8081/help/addons/redirector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/redirector/</guid>
+      <description>When to Use Redirector Redirector is a plug-in that translates URLs from many popular forum platforms into Vanilla-friendly URLs. If you&amp;rsquo;re moving from one of the supported platforms, installing and enabling this plug-in will magically handle maintaining the previous platform&amp;rsquo;s links, which can be of tremendous SEO value.
+Supported Platforms  IPB Jive phpBB punBB smf vBulletin xenforo  Usage  Install and enable the plug-in. Visit a URL from your previous platform against your Vanilla installation.</description>
+    </item>
+    
+    <item>
+      <title>Reporting</title>
+      <link>http://127.0.0.1:8081/help/moderation/reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/moderation/reporting/</guid>
+      <description>What is Reporting? Reporting is a way for members to bring moderators’ attention to content that they believe is inappropriate. “Report” is an option under “Flag” in the Reactions available under each post.
+Reporting a post Go to Flag → Report in the Reactions menu at the end of the post. A popup box will prompt you to add a “Reason” both to explain the report and discourage useless reports.</description>
+    </item>
+    
+    <item>
+      <title>Salesforce</title>
+      <link>http://127.0.0.1:8081/help/addons/salesforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/salesforce/</guid>
+      <description>Overview This plugin allows you to:
+ Link your Salesforce account to your Vanilla user profile. Create cases and leads from discussions. View leads on Vanilla users profile.  Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
+Setup Configure Application in Salesforce  Log into your Salesforce Account Create new Connected App in Salesforce  Build → Create → Apps → Connected Apps → New Fill the required fields Connected App Name, API Name, Contact Email Enable OAuth Settings Set a Callback URL by appending /profile/salesforceconnect to the end of your forum&amp;rsquo;s URL.</description>
+    </item>
+    
+    <item>
+      <title>Social Connect Plugins</title>
+      <link>http://127.0.0.1:8081/help/addons/social/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/social/</guid>
+      <description>Social Connect Plugins Vanilla Forums integrates with a number of social applications that you can use as SSO solutions. Learn more about configuring these applications to work with your forum in this section.</description>
+    </item>
+    
+    <item>
+      <title>Tagging</title>
+      <link>http://127.0.0.1:8081/help/addons/tagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/tagging/</guid>
+      <description>Overview Tagging is a feature that allows users to add keywords to discussions. For public communities, tags help label specific content for improved findability. When used with advanced search, they help isolate content by a relevant topic and improve results. Tagging also has a theme module, which can serve as site navigation.
+Enabling Tagging Tagging is not enabled by default for new communities, it will need to be toggled on by and administrator.</description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>http://127.0.0.1:8081/help/addons/social/twitter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/social/twitter/</guid>
+      <description>Twitter Twitter Connect allows users to sign in using their Twitter account. You must register your application with Twitter for this plugin to work.
+Setting up social login in Twitter Connect  Register Vanilla with Twitter at: https://apps.twitter.com/app/new Set the Callback URL by appending /entry/twauthorize to the end of your forum’s URL. (If your forum is at example.com/forum, your Callback URL would be http://example.com/forum/entry/twauthorize). After registering, copy the &amp;ldquo;Consumer Key&amp;rdquo; and &amp;ldquo;Consumer Secret&amp;rdquo; into your Twitter plugin settings page from your Vanilla dashboard.</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks as Incentives</title>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-as-incentives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-as-incentives/</guid>
+      <description>Using Ranks: Incentives You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.
+Example Case What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.
+Gaining points on your site is done thru addons such as Badges and Reactions.</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks to Defeat Spam or Abuse</title>
+      <link>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
+      <description>Using Ranks: Spam Ranks can be used to limit the ability of spammers to take advantage of your site and protect members from abuse. To do this, limit the abilities of your newest users until they have been proven their value to the community.
+Who is this for? This guide is for communities currently having spam problems that have already tried other automated filtering solutions like Akismet and Stop Forum Spam.</description>
+    </item>
+    
+    <item>
+      <title>Zendesk</title>
+      <link>http://127.0.0.1:8081/help/addons/zendesk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/addons/zendesk/</guid>
+      <description>Overview This plugin allows you to:
+ Link your Zendesk account to your Vanilla user profile. Submit users&amp;rsquo; discussions and comments as tickets to your hosted Zendesk.  Setup If you already have an account you need to enable API Access for this plugin to work.
+ Login to your Zendesk Site. Go to the Admin Setting. Under Channels Select API. Select the OAuth Clients. Add a client. Complete the form.</description>
+    </item>
+    
+  </channel>
+</rss>

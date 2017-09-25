@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/categories/cloud/</link>
+    <description>Recent content in Cloud on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cancellation</title>
+      <link>http://127.0.0.1:8081/help/cloud/leaving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/cloud/leaving/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  The Worst Day Hey, it happens. On rare occassion, we need to go our separate ways. We hate to see any customer leave, but it&amp;rsquo;s important any cloud providers you use have a strong data ownership policy. Ours is pretty simple: It&amp;rsquo;s your data.
+Getting your data There are four custom components to any forum:
+ Database Uploaded files (avatars, images, etc) Theme or plugin done as a customer-specific customization Config  Of these, the only one we do not ever provide is the config.</description>
+    </item>
+    
+  </channel>
+</rss>

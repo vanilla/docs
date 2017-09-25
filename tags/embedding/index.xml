@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Embedding on Vanilla Forums Documentation</title>
+    <link>http://127.0.0.1:8081/tags/embedding/</link>
+    <description>Recent content in Embedding on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://127.0.0.1:8081/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced Embedding</title>
+      <link>http://127.0.0.1:8081/developer/embedding/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/embedding/advanced/</guid>
+      <description>Overview The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs easyXDM and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.
+Setting Up Advanced Embedding Enable forum embedding via the Dashboard. Then set Garden.Embed.Allow to 2 in your config. Cloud customers will have this done by support staff.</description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>http://127.0.0.1:8081/developer/embedding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/developer/embedding/</guid>
+      <description>Embedding Forum Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe
+Embedding Checklist
+ Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width.</description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>http://127.0.0.1:8081/help/forum-settings/embedding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/forum-settings/embedding/</guid>
+      <description>Embedding Forum Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe
+Embedding Checklist
+ Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width.</description>
+    </item>
+    
+    <item>
+      <title>Using Comments</title>
+      <link>http://127.0.0.1:8081/help/integrations/wordpress/using-comments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://127.0.0.1:8081/help/integrations/wordpress/using-comments/</guid>
+      <description>Transition to Vanilla Comments Vanilla doesn&amp;rsquo;t have access to your WordPress comments, so simply turning off WP&amp;rsquo;s comments and turning on Vanilla&amp;rsquo;s would hide all your existing comments. There&amp;rsquo;s 3 ways to go about remedying this.
+The first is to import all your WordPress comments to Vanilla. You will need need the XML export from your WordPress Dashboard to do this. VanillaForums.com clients may request this as an additional service via support or their sales representative.</description>
+    </item>
+    
+  </channel>
+</rss>
