@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Universal Comments</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/comments/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active">
+        <a href="//docs.vanillaforums.com/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+        
+        
+        
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="vanilla-comments">Vanilla Comments</h2>
+
+<p>Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.</p>
+
+<h2 id="what-are-universal-comments">What are Universal Comments?</h2>
+
+<p>We made Comment integration easy with WordPress (<a href="//docs.vanillaforums.com/help/features/wordpress/using-comments/">learn more about that here</a>.), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.</p>
+
+<h2 id="how-to-use-universal-comments">How to use Universal Comments.</h2>
+
+<p>To know if you can use Vanilla Universal Comments, you need to know if your content has a unique id. What does that mean? In your URL or code, is there a way to identify the difference between two pages? For example in Magento you have a productid, in Concrete5 there is the PageId, in MODX it’s the Resource ID, and so on.</p>
+
+<p>This identifier is how you can assign a comment box from Vanilla to a specific document on any platform. Essentially, if you have a way to identify unique content, you can use Vanilla Comments.</p>
+
+<p>Once you&rsquo;ve determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Blog Comments” under the “Forum” heading. You will see the following:</p>
+
+<p><img src="//docs.vanillaforums.com/img/help/features/comments/settings.png" alt="Universal Comments" /></p>
+
+<p>You want to make sure you have enabled embedding. The next step is to select the Universal Code setting tab:</p>
+
+<p><img src="//docs.vanillaforums.com/img/help/features/comments/universal-code.png" alt="Universal Comments tab" /></p>
+
+<p>On this tab you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.</p>
+
+<p><img src="//docs.vanillaforums.com/img/help/features/comments/universal-code-identifier.png" alt="Universal Comments tab" /></p>
+
+<p>Please note, before you paste the code in your platform’s template or theme, you will need to modify the elements highlighted in yellow.</p>
+
+<p>The first element you need to review is that the correct full url/path to your Vanilla install is in the code.</p>
+
+<p>The second element you will need to add, and that is the code that calls the unique id for the current page. Replace &ldquo;your-content-identifier&rdquo; with the appropriate code so Vanilla can connect the discussion created to the proper content.</p>
+
+<p>Finally within the comments code, you can:</p>
+
+<ul>
+<li>You can modify Universal Comments code to allow all comments to appear in one discussion thread</li>
+<li>You can make the comments to appear in a certain category of your community. This can be helpful if you integrate Vanilla Comments into a ecommerce shop where you want all product reviews to be placed in the “Product Review” category.</li>
+</ul>
+
+<p>There are some additional settings you may wish to also review :</p>
+
+<ul>
+<li>Configure Comment Counts code to show the number of comments you have.</li>
+<li>Decide how many comments you wish to appear per page</li>
+<li>Under advanced settings add your trusted domains.</li>
+</ul>
+
+<p>If you are using WordPress, check out our <a href="//docs.vanillaforums.com/help/features/wordpress/using-comments/">how to integrate comments with WordPress</a>.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ranks on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/ranks/</link>
+    <description>Recent content in Ranks on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/ranks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding and Editing Ranks</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
+      <description>Adding a Ranks Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.
+Editing a Rank On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.
+Rank information Name &amp;amp; Label The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank.</description>
+    </item>
+    
+    <item>
+      <title>Applying Ranks over SSO</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
+      <description>Applying Ranks over SSO Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.
+You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.
+This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks as Incentives</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</guid>
+      <description>Using Ranks: Incentives You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.
+Example Case What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.
+Gaining points on your site is done thru addons such as Badges and Reactions.</description>
+    </item>
+    
+    <item>
+      <title>Using Ranks to Defeat Spam or Abuse</title>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
+      <description>Using Ranks: Spam Ranks can be used to limit the ability of spammers to take advantage of your site and protect members from abuse. To do this, limit the abilities of your newest users until they have been proven their value to the community.
+Who is this for? This guide is for communities currently having spam problems that have already tried other automated filtering solutions like Akismet and Stop Forum Spam.</description>
+    </item>
+    
+  </channel>
+</rss>

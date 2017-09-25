@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Using The Config</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/configuration/using.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/api/">Vanilla API</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/framework/">Framework</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/embedding/">Embedding</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/changelog/">Change Log</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="//docs.vanillaforums.com/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/configuration/banner/">Banner Settings </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/configuration/dashboard/">Dashboard </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/configuration/homepage/">Homepage Settings </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/configuration/message/">Messages </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="//docs.vanillaforums.com/developer/configuration/using/">Using The Config </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="when-to-use-the-config">When to use the config</h2>
+
+<p>Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.</p>
+
+<p>If you have large quantities of data or data that is written frequently, consider using the <a href="//docs.vanillaforums.com/developer/framework/database">database</a> instead.</p>
+
+<h2 id="reading-from-config">Reading from config</h2>
+
+<p>The <code>c</code> function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in <a href="//docs.vanillaforums.com/developer/configuration">dot notation</a>. The second is an optional default value to return if requested config setting is not defined.</p>
+
+<p>Example:
+<code>$Value = c('Name.Of.Setting', 'DefaultValue');</code></p>
+
+<p>You can call a partial config key to get an array of all values below it in dot notation. For instance, say this was in your config:</p>
+
+<pre><code class="language-php">$Configuration['Example']['Settings']['A'] = 1;
+$Configuration['Example']['Settings']['B'] = 2;
+</code></pre>
+
+<p>Now calling <code>c('Examples.Settings');</code> will return <code>array('A'=&gt;1, 'B'=&gt;2)</code>.</p>
+
+<h2 id="writing-to-config">Writing to config</h2>
+
+<p>Save to the config with the <code>SaveToConfig</code> function. It takes the name of the config value, a new value to associate with it, and an optional options array. In the options array, you can pass the key <code>Save</code> with the value <code>FALSE</code> to make the config change only apply for this pageload.</p>
+
+<p>Change a config setting permanently: <code>SaveToConfig('Name.Of.Setting', 'NewValue');</code></p>
+
+<p>Change a config setting only for this pageload: <code>SaveToConfig('Name.Of.Setting', 'NewValue', array('Save' =&gt; FALSE));</code></p>
+
+<p>Simply passing the value <code>FALSE</code> in place of the options array has the same effect as passing <code>array('Save' =&gt; FALSE)</code>.</p>
+
+<aside class="warning">Do not used numeric-key arrays as config values. Associative arrays are fine.</aside>
+
+<h2 id="configuration-module">Configuration module</h2>
+
+<p>We&rsquo;ve created a shortcut for making simple settings pages using the <code>ConfigurationModule</code>.</p>
+
+<p>The configuration module can be instantiated and rendered from any plugin. You <code>Initialize</code> it with an array of config values, each of which has its own array of properties to define it (type of field, label, default, etc). See <code>applications/dashboard/modules/class.configurationmodule.php</code> for details.</p>
+
+<p>This is how the Akismet plugin uses the ConfigurationModule to build a simple settings page consisting of a text field and a dropdown:</p>
+
+<pre><code class="language-php">$Cf = new ConfigurationModule($Sender);
+$Cf-&gt;Initialize(array(
+    'Plugins.Akismet.Key' =&gt; ['Description' =&gt; $KeyDesc],
+    'Plugins.Akismet.Server' =&gt; [
+        'Description' =&gt; 'You can use either Akismet or TypePad antispam.', 
+        'Control' =&gt; 'DropDown', 'Items' =&gt; [
+            '' =&gt; 'Aksimet', 
+            'api.antispam.typepad.com' =&gt; 'TypePad', 
+            'DefaultValue' =&gt; ''
+        ]
+    ]
+));
+$Cf-&gt;RenderAll();
+</code></pre>
+
+<p>That&rsquo;s all there is to it - no custom view is involved.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

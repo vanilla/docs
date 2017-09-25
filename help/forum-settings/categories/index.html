@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Categories</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/forum-settings/categories/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="//docs.vanillaforums.com/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="active">
+                    <a href="//docs.vanillaforums.com/help/forum-settings/categories/">Categories </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/forum-settings/embedding/">Embedding </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/forum-settings/advanced-settings/">Advanced Settings </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="what-are-categories">What Are Categories</h2>
+
+<p>Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category.
+You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to <code>/vanilla/settings/categories</code>.</p>
+
+<p><img src="//docs.vanillaforums.com/img/help/categories/categories-nav.png" alt="Categories Navigation" /></p>
+
+<p>At the top of the page, you will presented with the option to either add a new category, or disable them completely. Disabling categories will streamline your forum, reducing the forum to the &ldquo;Recent Discussion&rdquo; view. You can toggle categories off on at any point. If you decide to use categories once more, any threads that were already designated to a particular section will be restored. Threads made while categories were not in use will be placed into whatever category is at the top of your list.</p>
+
+<h2 id="choosing-your-category-layout">Choosing Your Category Layout</h2>
+
+<p>Before modifying your individual categories, you can choose how they will appear on your homepage. In the Dashboard, under the “Homepage&rdquo; panel there is a &ldquo;Category Layout&rdquo; section.  In this area, there are options for how to display the Categories page for your users.</p>
+
+<p><strong>The Modern Layout</strong> removes the extra columns for discussion and comment totals, making for a clean look.</p>
+
+<p><strong>The Table Layout</strong> shows discussion and comment totals as columns, along with user avatar and the thread title of the most recent post in the section.</p>
+
+<p><strong>The Mixed Layout</strong> option shows up to five of the most recently updated discussions under each category, providing quick navigation to new content.</p>
+
+<p><img src="//docs.vanillaforums.com/img/help/categories/categories-add.png" alt="Add Categories" /></p>
+
+<h2 id="choosing-how-categories-display">Choosing How Categories Display</h2>
+
+<p>Categories are easily arranged. Just click on the left side of a specific category to drag and drop it into your desired position. Changes to organization will be reflected immediately on the main forum index.</p>
+
+<p><img src="https://images.v-cdn.net/docs/drag_and_drop.png" alt="Click and drag the small &quot;hamburger menu&quot; icon on the left side of each created category to rearrange them." /></p>
+
+<p>There are some other options that affect how categories are viewed on the forum. Opening the right drop down will reveal the “Display As” menu. These settings critically change the way a category behaves.</p>
+
+<p><img src="https://images.v-cdn.net/docs/display_as_menu.png" alt="The &quot;Display As&quot; options." /></p>
+
+<p><strong>Discussions</strong> - The default category, where users can post discussions.</p>
+
+<p><strong>Heading</strong> - Unclickable Headings that help with forum organization. On the homepage, they will display differently according to your theme. Generally they are bold, and will split your categories into sections:</p>
+
+<p><img src="https://images.v-cdn.net/docs/categories_index.png" alt="The main page of your forum may be set to recent discussions, best of, or categories. This is an example of a categories page in the &quot;Bootstrap 3&quot; theme, with headings differentiating the sections. " /></p>
+
+<p><strong>Flat</strong> - This is a paginated directory structure that can handle thousands of categories. They are sorted alphabetically by default, and cannot be manually arranged.</p>
+
+<p>Flat categories have a module that can be inserted into your theme. This will blend right in with your index and list a small number of the categories that the section contains. It has a quick search module, allowing for users to shift through hundreds of categories with ease. This is great for sites that have a large number of products.</p>
+
+<p><img src="https://images.v-cdn.net/docs/display_as_flat.png" alt="The flat categories module, shown here blending in with the theme." /></p>
+
+<p>To add this to your theme, use this module:
+<code>{module name=&quot;FlatCategoryModule&quot; categoryID=00}</code></p>
+
+<p>You can find the numerical categoryID in the URL when you are editing a category.
+<img src="https://images.v-cdn.net/docs/category_ID.png" alt="You can find the ID appended to the URL when editing in the dashboard, or in by adding .json to a category URL when navigating the community. This shows an example URL." /></p>
+
+<p><strong>Nested</strong> - Creates a clickable heading that only contains more categories. Unlike Flat categories, this is generally for creating small sections within your forum, and can be manually organized.</p>
+
+<h2 id="other-settings">Other Settings</h2>
+
+<p><strong>Category URL</strong>- You can change the slug for a category to simplify the URL. It will automatically populate with the title of the category. Proper syntax for URLs is required here, so spaces are not allowed.</p>
+
+<p><strong>Descriptions</strong>- You can add a description to you category. This will appear on the homepage or under the title on the categories page, depending on your theme.</p>
+
+<p><strong>Photo</strong>- You can add a picture or icon to your category, which will appear on the main index in some themes.</p>
+
+<p><strong>CSS class</strong> - The specified text will be added as a class for the category&rsquo;s HTML wrapper. This makes it so that you can target it specifically when building a theme.</p>
+
+<p><strong>Hide from the recent discussions</strong>- This prevents threads in the category from appearing on <code>/discussions</code>.</p>
+
+<p><strong>Archived</strong>- This removes the category from the main index and prevents threads in the category from coming up in the site-based search. Archived Categories are still indexed by search engines and can prevent broken links.</p>
+
+<p><strong>Permissions</strong>- Enabling “This category has custom permissions” will reveal some new options.</p>
+
+<p><img src="https://images.v-cdn.net/docs/other_options.png" alt="Custom permission options add another layer of control over a category. This image shows the list of options that appear.  " /></p>
+
+<p>If you have a plugin like Q&amp;A enabled, you can use these options to choose where your users can create those threads. You can also disable polls and file uploads, if they don&rsquo;t suit the category.</p>
+
+<p>Under that will be a list of all of your roles. You can restrict who can view, post in, or perform moderation actions in particular categories.</p>
+
+<p><strong>Maximum Category Display Depth</strong> - This setting is located in the Advanced section of the dashboard, <code>vanilla/settings/advanced</code>. The default setting is &ldquo;No Limit&rdquo;, but you can choose to set a level at which nested categories will be placed in a comma-delimited list. The subcategories will appear as hyperlinks under their root category when viewing the forum index.</p>
+
+<p><img src="https://images.v-cdn.net/docs/category_depth.png" alt="The comma-delimited list, displayed as &quot;child categories&quot; under the root. " /></p>
+
+<h2 id="deleting-a-category">Deleting a Category</h2>
+
+<p>You can delete a category from the dashboard, the option is in the right-hand menu of each category:</p>
+
+<p><img src="https://images.v-cdn.net/docs/delete_menu.png" alt="The delete option is the very the bottom of the menu." /></p>
+
+<p>Upon deleting a category, you will be prompted to select a replacement category from a drop-down menu. If you elect not to choose a replacement category, all threads and posts will be deleted.</p>
+
+<p><img src="https://images.v-cdn.net/docs/delete_warning.png" alt="The red warning that appears on this page is all that stands between you and deleting your content. Heed the warning and be sure to transfer the threads to a new location before confirming the action." /></p>
+
+<p><strong>It is not possible to recover a deleted category.</strong>  It is important to make sure that you have selected a new destination if you’d like to retain the contained threads. Alternatively, you can archive categories by removing viewing and posting permissions for users, rather than deleting content. This is recommended, as it avoids the accidental loss of threads.</p>
+
+<p>Additional Resources:</p>
+
+<ul>
+<li><a href="https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/">Blog: How to Structure Categories</a></li>
+</ul>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

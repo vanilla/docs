@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hub on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/hub/</link>
+    <description>Recent content in Hub on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/hub/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Endpoint: multisites</title>
+      <link>//docs.vanillaforums.com/api/multisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/api/multisites/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Overview The site hub is a special service for VIP customers. It allows you to create sites on your VIP cluster and is used for people that want to integrate communities within their entire organization. You can make hub api calls just like other api calls, but you make those calls against your site hub rather than an individual site.</description>
+    </item>
+    
+    <item>
+      <title>Vanilla Pop with Site Hub</title>
+      <link>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Differences Vanilla Pop works in much the same way on the hub as it does on regular sites. The node email addresses are slightly different and there are a few more features which are detailed below.
+Node Email Addresses Each node&amp;rsquo;s email address is comprised of two parts: The node slug and the hub slug seperated by a dot, followed by a vanillaforums.</description>
+    </item>
+    
+  </channel>
+</rss>

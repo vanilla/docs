@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comments on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/comments/</link>
+    <description>Recent content in Comments on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/comments/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posting</title>
+      <link>//docs.vanillaforums.com/help/posting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/posting/</guid>
+      <description>Overview &amp;ldquo;Posting&amp;rdquo; or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.
+At the bottom of each discussion, the user will encounter a text field:
+Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.</description>
+    </item>
+    
+    <item>
+      <title>Universal Comments</title>
+      <link>//docs.vanillaforums.com/help/comments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/comments/</guid>
+      <description>Vanilla Comments Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.
+What are Universal Comments? We made Comment integration easy with WordPress (learn more about that here.), but we also wanted to make it possible to add comments to any site where you can identify unique content.</description>
+    </item>
+    
+  </channel>
+</rss>

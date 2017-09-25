@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Using Ranks as Incentives</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/reputation/ranks/using-ranks-as-incentives.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="//docs.vanillaforums.com/help/addons/">Addons</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/advanced-search/">Advanced Search </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/reputation/badges/">Badges </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/forum-merge/">Forum Merge </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/gigya/">Gigya Sign In </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/addons/groups/">Groups </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/mailchimp-push/">MailChimp Push </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/pockets/">Pockets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/qna/">Questions and Answers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active nest">
+                    <a href="//docs.vanillaforums.com/help/reputation/ranks/">Ranks </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                        <ul class="nav-tier3">
+
+                            <li class="">
+                                <a href="//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/">Adding and Editing Ranks</a>
+                            </li>
+
+                            
+		    
+                        
+
+                            <li class="">
+                                <a href="//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/">Applying Ranks over SSO</a>
+                            </li>
+
+                            
+		    
+                        
+
+                            <li class="active">
+                                <a href="//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/">Using Ranks as Incentives</a>
+                            </li>
+
+                            
+                                
+                                
+                                
+                                
+			    
+		    
+                        
+
+                            <li class="">
+                                <a href="//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/">Using Ranks to Defeat Spam or Abuse</a>
+                            </li>
+
+                            
+		    
+                        </ul>
+                    
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/reputation/reactions/">Reactions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/redirector/">Redirector </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/salesforce/">Salesforce </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/addons/social/">Social Connect Plugins </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/tagging/">Tagging </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/addons/vanilla-pop/">Vanilla Pop </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/zendesk/">Zendesk </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="using-ranks-incentives">Using Ranks: Incentives</h2>
+
+<p>You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.</p>
+
+<h3 id="example-case">Example Case</h3>
+
+<p>What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.</p>
+
+<p>Gaining points on your site is done thru addons such as Badges and Reactions. Users who gain the point levels of the default ranks have demonstrated their ability to positively contribute to your community.</p>
+
+<h3 id="suggested-abilities">Suggested abilities</h3>
+
+<p>Levels 1 and 2 will remain as default, or you can assign them abilities according the <em>Using Ranks to Defeat Spam and Abuse</em> document.</p>
+
+<p>Level 3, set the follow abilities.</p>
+
+<ul>
+<li>Title: Give</li>
+<li>Location: Give</li>
+<li>Me Actions: Give</li>
+</ul>
+
+<p>&ldquo;Title&rdquo; and &ldquo;Location&rdquo; are fields that appear in every comment a user makes. This allows them to display more information about themselves. &ldquo;Me Actions&rdquo; are a fun ability to make specially-formatted posts based on chatroom actions. Add a comment that simple says &ldquo;/me runs away&rdquo; (minus the quotes) to see it inaction as an administrator.</p>
+
+<p>Level 4, set the same as Level 3, plus:</p>
+
+<ul>
+<li>Signatures: Give</li>
+<li>Discussion &amp; Comment Editing: Authors may edit for 1 week</li>
+</ul>
+
+<p>&ldquo;Signatures&rdquo; are snippets of text or images that a user may add to their profile which will show after every comment they make. You must have the Signatures addon enabled for this to work.</p>
+
+<p>Discussion &amp; Comment Editing is something that makes forum use more enjoyable for members, but has a high potential for abuse. Therefore, only more trusted members should have longer editing time windows.</p>
+
+<p>Level 5, set the same as Level 3 and 4, plus:</p>
+
+<ul>
+<li>Content Curation: Give</li>
+<li>Discussion &amp; Comment Editing: Authors may edit for 1 month</li>
+</ul>
+
+<p>Content Curation is an effect that interacts with the Reactions addon. The ability to Curate gives the special reaction &ldquo;Promote&rdquo; if it&rsquo;s available on your site, which is +5 points and puts the post on the Best Of page. It also means a &ldquo;Spam&rdquo; reaction from that user can move a post immediately to your Spam Queue for review by moderators.</p>
+
+<p>Again, we set a longer Discussion &amp; Comment Editing timeout for our most-trusted and experienced users.</p>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

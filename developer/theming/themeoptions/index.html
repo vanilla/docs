@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-developer">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Theme Options</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/developer/theming/themeoptions.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/api/">Vanilla API</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/framework/">Framework</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/embedding/">Embedding</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/backend/">Backend</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/changelog/">Change Log</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/community/">Community</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/configuration/">Configuration</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/contributing/">Contributing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/data-privacy/">Data privacy</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/tools/">Developer Tools</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/importing/">Importing</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/installation/">Installation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/locales/">Locales</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/developer/plugins/">Plugins</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/routes/">Routes</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/quickstart/">Quickstart </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/css/">CSS </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/developer/theming/smarty/">Smarty </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/views/">Views / HTML </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/hooks/">Event Hooks </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="active">
+                    <a href="//docs.vanillaforums.com/developer/theming/themeoptions/">Theme Options </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/developer/theming/themevisibility/">Theme Visibility </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/developer/troubleshooting/">Troubleshooting</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="theme-options">Theme Options</h2>
+
+<p>This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.</p>
+
+<p>You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&rsquo;s design folder. You can also allow an admin to add custom text to your theme.</p>
+
+<p>This functionality can be added simply by editing your theme&rsquo;s <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php</a> file by adding an &lsquo;Options&rsquo; key to your theme info array with an array as its value. The content of the &lsquo;Options&rsquo; array is discussed below.</p>
+
+<h3 id="choosing-between-stylesheets">Choosing Between Stylesheets</h3>
+
+<p>In the design folder of your theme, you can add any number of CSS files. The naming convention is <code>custom_*.css</code>, where * is the theme variant.</p>
+
+<p>You will still need to have the custom.css file as a default for when the theme is first enabled. In order to allow the admin to switch back to the default, you&rsquo;ll need to add an option where the value is simply %s.</p>
+
+<p>So, let&rsquo;s say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:</p>
+
+<pre><code class="language-php">'Options' =&gt; [
+    'Styles' =&gt; [
+        'Default' =&gt; '%s',
+        'Blue' =&gt; '%s_blue',
+        'Green' =&gt; '%s_green',
+    ],
+]
+</code></pre>
+
+<p>The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of <code>screenshot_*.ext</code> where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use <code>screenshot.ext</code> for the default theme.</p>
+
+<h3 id="adding-custom-text-to-a-theme">Adding Custom Text to a Theme</h3>
+
+<p>To add custom text to a theme, add a &lsquo;Text&rsquo; key to the &lsquo;Options&rsquo; array. The value of of the &lsquo;Text&rsquo; key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of &lsquo;textbox&rsquo;, which is a regular text input, or &lsquo;textarea&rsquo;, the default, which is a multiline textarea element.</p>
+
+<p>The text saved in this field can then be inserted into your theme template. If using Smarty, you can use the <a href="developer/theming/smarty/functions/text/">text function</a> to insert the text in the theme, using the Text array&rsquo;s key as the &lsquo;code&rsquo; parameter. For example, if you had this options array:</p>
+
+<pre><code class="language-php">'Options' =&gt; [
+    'Text' =&gt; [
+        'Custom&amp;nbsp;Text' =&gt; [
+                'Description' =&gt; 'Custom text to be inserted in the theme.',
+                'Type' =&gt; 'textbox'
+        ]
+    ]
+]
+</code></pre>
+
+<p>Then you could insert the text into your theme using the Smarty tag:</p>
+
+<pre><code>{text code=&quot;Custom&amp;nbsp;Text&quot; default=&quot;Some default custom text&quot;}
+</code></pre>
+
+<p>The text is saved in your config, so you could also access it in PHP using <code>c('ThemeOption.Custom&amp;nbsp;Text', &quot;Some default custom text&quot;);</code> <a href="../developers/configuration/using.html.md">Learn more about the config here.</a></p>
+
+<h3 id="example">Example</h3>
+
+<p>Here&rsquo;s an example $ThemeInfo array that uses both the above theme options, so you can see how it all comes together.</p>
+
+<pre><code class="language-php">$ThemeInfo['mytheme'] = [
+    'Name' =&gt; 'My Theme',
+    'Description' =&gt; 'My Theme is the greatest.',
+    'Version' =&gt; '1.0.0',
+    'Author' =&gt; 'Your Name',
+    'AuthorEmail' =&gt; 'your@email.com',
+    'AuthorUrl' =&gt; 'http://yourwebsite.com',
+    'Options' =&gt; [
+        'Description' =&gt; 'This theme has an alternative colour scheme and custom text.',
+        'Styles' =&gt; [
+            'Default' =&gt; '%s_default',
+            'Dark' =&gt; '%s_dark',
+            'Blue' =&gt; '%s_blue',
+        ],
+        'Text' =&gt; [
+            'Custom&amp;nbsp;Text' =&gt; [
+                    'Description' =&gt; 'Custom text to be inserted in the theme.',
+                    'Type' =&gt; 'textbox'
+            ]
+        ]
+    ]
+];
+</code></pre>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

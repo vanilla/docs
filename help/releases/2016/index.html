@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>2016 Cloud Releases</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/releases/2016.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/addons/">Addons</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="//docs.vanillaforums.com/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+        
+        
+        
+        
+            <ul class="nav-tier2">
+	    
+                <li class="active">
+                    <a href="//docs.vanillaforums.com/help/releases/2016/">2016 Cloud Releases </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/releases/2017/">2017 Cloud Releases </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="release-notes">Release Notes</h2>
+
+<p>In 2016, VIP releases were every other month. Other customers received updates on an ad-hoc basis.</p>
+
+<h3 id="december">December</h3>
+
+<ul>
+<li>Add full IPv6 support.</li>
+<li>Add and improve addon icons.</li>
+<li>Add meta tags for discussion links to generate Twitter cards (when added to tweets).</li>
+<li>Add settings to Dashboard for category max display depth.</li>
+<li>Add some padding to HTML tables in posts (improve legibility).</li>
+<li>Add support for our new CDN.</li>
+<li>Add accessibility attributes to Customize Theme.</li>
+<li>Add pager to log views.</li>
+<li>Improve category headings detection and table view support.</li>
+<li>Improve markup of category settings page.</li>
+<li>Ensure password editing fields toggle appropriately.</li>
+<li>Allow removal of button from HTML email.</li>
+<li>Restore Theme Preview functionality (except for Mobile 2014).</li>
+<li>Default to secure cookies if &ldquo;ForceSSL&rdquo; is set and using HTTPS.</li>
+<li>Skip validating discussion title when a draft is saved.</li>
+<li>Improve markup and make further enhancements to Dashboard v3.</li>
+<li>Restrict upload filename to be per post instead of by entire discussion.</li>
+<li>Allow uploading a Photo when creating a new category.</li>
+<li>Avoid auto-scrolling to top when in comment embed.</li>
+<li>Confirm that user wants to delete images before deleting (in Dashboard).</li>
+<li>Update documentation links for Social Connect addons.</li>
+<li>Replace &ldquo;Hide Category&rdquo; with &ldquo;Mute Category&rdquo; option.</li>
+<li>Allow new messages to accept a subject parameter (if enabled) via URL.</li>
+<li>Fix delete message button (in Dashboard).</li>
+<li>Fix delete ban button (in Dashboard).</li>
+<li>Fix category depth calculation in subcommunities.</li>
+<li>Fix IP filtering on user management page</li>
+<li>Fix heading categories sometimes being wrapped in an anchor.</li>
+<li>Fix dashboard pager next button when there are 0 results.</li>
+<li>Fix the user photo in search.</li>
+<li>Fix extra &lt;br&gt; tags in plain text emails.</li>
+<li>Fix issue where nav is cut off on category add/edit.</li>
+<li>Fix wrong heading for &ldquo;activity&rdquo; on profile page</li>
+<li>Fix activity notifications falsely flagging as sent when it was skipped.</li>
+<li>Fix ICO transparency issue after upload (in Dashboard).</li>
+<li>Fix permission check for Change Log page to allow moderators (Moderation.Manage).</li>
+<li>Fix avatar cropping in profile.</li>
+<li>jsConnect: Add warning to jsConnect dashboard when provider is in test mode.</li>
+<li>jsConnect: [Security] Add content-type to callback endpoint to prevent potential XSS.</li>
+<li>Badges: Add badge name as alt text to badge images.</li>
+<li>Badges: Add the ability to edit thresholds for some badges.</li>
+<li>Polls: Fix results percentage.</li>
+<li>Polls: Fix cancel button.</li>
+<li>Polls: Hide category dropdown when already inside a category.</li>
+<li>Polls: Fix auto-selecting first child category in category dropdown.</li>
+<li>Q&amp;A: Fix auto-selecting first child category in category dropdown.</li>
+<li>Reactions: Add inform message to Reactions enable toggle (in Dashboard).</li>
+<li>Reactions: Fix RSS view when BestOf is configured as tiles.</li>
+<li>Reactions: Fix customizations reverting after database updates.</li>
+<li>Reactions: [Security] Add missing CSRF protection on &ldquo;react&rdquo; endpoint.</li>
+<li>Reactions: Fix reactions popup possible overlap.</li>
+<li>Reactions: Translate reaction names in navigation breadcrumbs.</li>
+<li>MailChimp: Fix issue with synchronizing lists.</li>
+<li>Profile Extender: Fix checkbox display on registration.</li>
+<li>Ignore: Fix failure to unignore user if their ignore privileges have been revoked.</li>
+<li>Groups: Fix search in groups when the category is not viewable.</li>
+<li>Warnings &amp; Notes: Fix extra line after quote.</li>
+<li>Civil Tongue: Add support for groups and group events.</li>
+<li>Salesforce: Remove from options on profile social connect.</li>
+<li>Split/Merge: Make the System user the new discussion&rsquo;s author when splitting comments.</li>
+<li>SAML: Allow SAML to accommodate differently-configured XML responses.</li>
+<li>SimpleAPI: Fix situations where other addons could conflict with API endpoints.</li>
+</ul>
+
+<h3 id="september">September</h3>
+
+<ul>
+<li>New Dashboard! This changed every page in the moderator/admin backend, including all addon settings pages.</li>
+<li>Add navigation memory to the Dashboard. It will now preserve menu collapsing states &amp; your page within each section between visits.</li>
+<li>Add &ldquo;Flat Categories&rdquo; feature and optional navigation module. This allows browsing hundreds of categories as an alphabetical directory.</li>
+<li>Improve how categories are managed in the Dashboard.</li>
+<li>Categories now default to type &ldquo;Nested&rdquo; and must have a type assigned.</li>
+<li>Add full recipients list to Badges. Click the &ldquo;Given&rdquo; number from &ldquo;Badges&rdquo; in the Dashboard.</li>
+<li>Add new &ldquo;Post Numbering&rdquo; addon (by request only, currently).</li>
+<li>Add new &ldquo;Role Tracker&rdquo; addon (by request only, currently).</li>
+<li>Add ability to convert discussions to &ldquo;ideas&rdquo; (if Ideation is enabled).</li>
+<li>Add ability to configure warnings in Warnings &amp; Notes addon.</li>
+<li>Add redirects for Lithium and Ning community imports (Redirector addon).</li>
+<li>Add support for vBulletin 3 &amp; 4 showthread.php?p={POSTID} URL redirects.</li>
+<li>Allow &ldquo;Location&rdquo; and &ldquo;Title&rdquo; to be edited from User Edit.</li>
+<li>Fix Profile Extender&rsquo;s handling of non-ASCII characters in field names.</li>
+<li>Refactored how we handle all requests (dispatcher).</li>
+<li>Update MailChimp addon to use v3 of their API and support MailChimp &ldquo;groups&rdquo;.</li>
+<li>Update Facebook addon to use versioned endpoint.</li>
+<li>Fix &ldquo;Mark All Viewed&rdquo; endpoint to prevent accidental or malicious triggering and fix its redirect.</li>
+<li>Fix Bootstrap3 theme color schemes &ldquo;paper&rdquo; and &ldquo;sandstone&rdquo;.</li>
+<li>Remove &ldquo;SafeStyles&rdquo; option (previously deprecated).</li>
+<li>General addon code maintenance done on: Groups, Reactions, Ranks, Polls, SAMLSSO, and Badges.</li>
+<li>Fix issue with embedding where you could stay scrolled down when changing page.</li>
+<li>Add username validation to /message/add endpoint (when pre-filling &ldquo;To:&rdquo; field via URL).</li>
+<li>Fix conflict between Discussion Photos addon and Ideation addon.</li>
+<li>Add ability for Smarty templates to access <code>isMobile</code> function, <code>userAgentType</code> function, <code>homepage_title</code> function, and <code>Homepage</code> (boolean variable).</li>
+<li>Fix issue where default role settings weren&rsquo;t transferred from old system correctly.</li>
+<li>Add additional line break to welcome email.</li>
+<li>Do not wrap images in a div if they are already in an anchor to fix potential clicking issue.</li>
+<li>Fix autocomplete dropdown display in modals with Bootstrap3 theme.</li>
+<li>Add the post that a user was warned for in the email notification.</li>
+<li>Do not serve empty (or comment-only) CSS files from Custom Theme feature.</li>
+<li>Fix photos&rsquo; URL for /user/summary API endpoint.</li>
+<li>Fix quotes that are done on a user with spaces in its name.</li>
+<li>Fix <code>tabindex</code> for comments, conversations, discussions (for keyboard navigation around page).</li>
+<li>Add announcements to discussions RSS (in posting order).</li>
+<li>Block adding banning rules that would HAL-9000 the entire crew, like <code>*.*</code>.</li>
+<li>Fix the basic (not advanced, which had no issue) search pager.</li>
+<li>Do not revalidate username on edit if no change on user edit.</li>
+<li>Do not send <code>noindex</code> meta on error pages to prevent legit pages from being un-indexed.</li>
+<li>Increase the priority of custom.css to be higher.</li>
+<li>Fix log link showing when no log exists.</li>
+<li>Allow &ldquo;Unanswered Questions&rdquo; page title to be translated (Q&amp;A addon).</li>
+<li>Add support for alternate SAML document structures (SSO).</li>
+<li>Enforce max tags limit on the front end and cleanup tag validation.</li>
+<li>Encode slashes in usernames when creating profile links.</li>
+<li>Allow comment drafts to be orphaned (instead of removed) when their discussion is deleted and rework drafts view.</li>
+<li>Unregister plugins immediately after it has been disabled instead of waiting until the next page request.</li>
+<li>Hide email preferences when email is disabled globally.</li>
+<li>Hide the RSS icon from categories that are type &lsquo;Categories&rsquo; since they contain no discussions.</li>
+<li>Trim all control characters from discussion title (helps prevent broken or blank titles).</li>
+<li>Fix scenario where discussion title could be blank.</li>
+<li>Fix user search to allow numeric usernames as long as it&rsquo;s an exact match.</li>
+<li>Akismet will now validate your key before accepting it (Cloud customers do not require their own key; it is optional).</li>
+<li>Improve Akismet addon description and deprecate TypePad option (no longer offered by TypePad).</li>
+<li>Hide Participated menu for guests (Participated addon).</li>
+<li>Let welcome email fallback to HomepageTitle when the site&rsquo;s name is not set properly.</li>
+<li>Turn off autocomplete on text fields when editing users in dashboard (to prevent accidental data insertion).</li>
+<li>Improve how table layouts choose their column widths according to the content in them.</li>
+<li>Improve Q&amp;A and how it interacts with Subcommunities, especially displaying an Unanswered count per community.</li>
+<li>Change H2s for H1s for a few edit profile pages.</li>
+<li>Improve consistency in module (widget) titles (usually H4) so they are properly configurable.</li>
+<li>Add invited user data to user exports.</li>
+<li>Fix button height in Share This widget.</li>
+<li>Add OAuth2 library to core product for building custom implementations more easily.</li>
+<li>Fix potential duplicate rank promotion notifications.</li>
+<li>Change the priority order of the SimpleAPI plugin so Subcommunities does not interfere with API calls.</li>
+</ul>
+
+<h3 id="july">July</h3>
+
+<ul>
+<li>New plugin: Role Tracker (aggregates discussions with posts by users in particular roles).</li>
+<li>New plugin: Welcome Post (invites newly registered to start an intro discussion immediately).</li>
+<li>Upgrade to Smarty 3 templating engine for custom themes. It&rsquo;s a little bit stricter, faster, and more secure than Smarty 2 was.</li>
+<li>Further improve scaling for large numbers of categories. Faster page loads!</li>
+<li>Add option to exclude moderators and/or admins from leaderboards.</li>
+<li>Move profile thumbnail editing to same page as photo uploading.</li>
+<li>OpenID: Prevent bad rendering when URL is invalid.</li>
+<li>Don&rsquo;t show Google+ login when enabled but not configured.</li>
+<li>Add support for inline (async) forms for future Vanilla use.</li>
+<li>Keep attachments when a discussion becomes a comment via Split/Merge.</li>
+<li>Automatically update CSRF token with async requests. This is so we can invalidate them more frequently in the future, improving our security.</li>
+<li>Add the ideation page as a target for messages.</li>
+<li>Add the categories page as a target for messages.</li>
+<li>Set a limit on the page number in Best Of (it helps performance to not let pages go infinitely high).</li>
+<li>Fix edge cases where notifications preferences would not display completely.</li>
+<li>Tighten security of Target parameter during sign in to disallow bad redirects.</li>
+<li>Refresh the page after announcing a discussion.</li>
+<li>Markdown: Allow starting lists without a newline.</li>
+<li>Change how IP addresses are logged and allow IPv6 (no more 0.0.0.2 placeholder addresses appearing).</li>
+<li>Remove the invite feature from the Getting Started page.</li>
+<li>Remove site logo from Deflector theme footer.</li>
+<li>Fix Cyrillic character recognition in CivilTongueEx, allowing</li>
+<li>Fix Ideation crashing /discussions/promoted.</li>
+<li>Fix default translation of &ldquo;Post Discussion&rdquo;.</li>
+<li>QnA: Fix &ldquo;unanswered&rdquo; status for discussions converted to questions by an admin.</li>
+<li>Hub: Add synchronize for subcommunities and default locale.</li>
+<li>Fix emoji menu not being properly dismissed.</li>
+<li>Hide &ldquo;Dismiss&rdquo; option on announcements from guests because it didn’t actually do anything.</li>
+<li>Add CSRF prevention and remove redirect from Mark All Viewed option.</li>
+<li>Encode mail subject properly (UTF-8).</li>
+<li>Fix broken reaction pagination on profile pages.</li>
+<li>Fix emoji and mention from rendering inside WYSIWYG code blocks.</li>
+<li>Add $Homepage Smarty variable that is true/false depending on if you are on the homepage.</li>
+<li>Fix double encoding Open Graph title tag. This would have shown up as extra ampersands in Facebook shares and the like.</li>
+<li>Hub: Do not sync category permissions for an overridden role.</li>
+<li>Hub: Add optional landing page.</li>
+<li>Switch to separate library for password hashing. We&rsquo;re compartmentalizing some features like this to make maintenance easier.</li>
+<li>We completed some very large projects to carefully rework several parts of our framework to get ready for API v2, but there&rsquo;s no outward effect of this for you.</li>
+</ul>
+
+<h3 id="may">May</h3>
+
+<ul>
+<li>Upgrade to reCaptcha 2 (&ldquo;NoCaptcha&rdquo;).</li>
+<li>Make &ldquo;NBBC&rdquo; our new BBCode parsing library by default (no more plugin).</li>
+<li>Add ability for SAML SSO to not be the default login method.</li>
+<li>Allow moving a discussion between subcommunities.</li>
+<li>Add support for switching subcommunities.</li>
+<li>Improve category scaling.</li>
+<li>Make activities self-prune after 2 months to improve performance.</li>
+<li>Always redirect to the first page after saving a discussion.</li>
+<li>Add analytics tracking for Q&amp;A&rsquo;s accepted answers (coming soon to analytics).</li>
+<li>Allow censoring content in conversation message notifications.</li>
+<li>Allow censoring poll votes in comments.</li>
+<li>Fix a number of edge cases where certain actions could block other actions without a page refresh.</li>
+<li>Fix condition where category announcements disappeared from recent discussions page.</li>
+<li>Add caching for the default authentication provider.</li>
+<li>Improve security in signin redirects.</li>
+<li>Improve use of &lsquo;Alt&rsquo; CSS class, which will be removed eventually (now redundant with current CSS specs).</li>
+<li>Add option to configure a redirect after logout on Auth0 plugin.</li>
+<li>Update Triple-A and Bootstrap 3 themes.</li>
+<li>Fix issue where Vimeo and Instagram embeds overflow out of the Best Of Tiles.</li>
+<li>Fix where SplitMerge addon may be unable to save split discussion with &ldquo;Html&rdquo; format.</li>
+<li>Fix the love bug (various problems with &lt; 3 in user-generated content).</li>
+<li>Prevent unneeded recurring updates in dashboard&rsquo;s database updater.</li>
+<li>Fix Gravatar&rsquo;s use of system default avatar.</li>
+<li>Add optional rating parameter to Gravatar.</li>
+<li>Fix GitHub signin and API permission issues.</li>
+<li>Fix new discussion button showing in subcommunity when user has no permission.</li>
+<li>Allow the Photo field to be set in /profile/edit.</li>
+<li>Only use CommentID for spam check if available.</li>
+<li>Fix incorrect permission being checked in some category management actions.</li>
+<li>Groups: Simplify &amp; fix event timezone handling.</li>
+<li>Make initial spoiler text the same colour as its background.</li>
+<li>Fix RSS title encoding.</li>
+<li>Add the ability to capture a user&rsquo;s time zone.</li>
+<li>Fix LinkedIn &ldquo;profile connect&rdquo; feature.</li>
+<li>Move Recaptcha into a plugin</li>
+<li>Add support for Instagram embeds in Mobile 2014.</li>
+<li>Do more image optimizations.</li>
+<li>Fix Safari issue where back button wouldn&rsquo;t refresh the page.</li>
+<li>Fixes issue where people can quote a post and see uncensored content.</li>
+<li>Remove gender from user-facing elements like registration.</li>
+<li>Prevent &ldquo;Messages&rdquo; from being displayed when you do not have view permission.</li>
+<li>QnA: Return the correct number of questions for a subcommunity.</li>
+<li>Switch YouTube links to https.</li>
+<li>Fix mention issues including using an &lsquo;@&rsquo; in the middle of two words.</li>
+<li>Fix PNG compression issues in file uploads.</li>
+<li>Fix some minor issues that could make spoilers malfunction.</li>
+<li>Add a safety feature to avoid too-big database changes all at once.</li>
+<li>Allow any user with moderate permission to add discussions and events in a group.</li>
+<li>Fix aggressive span stripping in the HTML purifier.</li>
+</ul>
+
+<h3 id="march">March</h3>
+
+<ul>
+<li>New addon: Ideation (vote on ideas) - Contact your CSM for more details</li>
+<li>New addon: Microsoft Account SSO</li>
+<li>New addon: CAS SSO</li>
+<li>New addon: Keyword Blocker (send posts with certain keywords to mod queue)</li>
+<li>New addon: Necro Posts (labels recently-revived discussions)</li>
+<li>New addon: User Points Booster (allow awarding points for discussions or comments)</li>
+<li>New addon: Whitelist (provide an IP whitelist for site access)</li>
+<li>HTML emails now available.</li>
+<li>Applicants list is now asynchronous with improved UI.</li>
+<li>Spoilers added as core feature with updated formatting.</li>
+<li>Automatic bans (from Banning rules) can now be reversed.</li>
+<li>Reactions will now always show on all devices, instead of on-hover for larger screens (&ldquo;desktop&rdquo;).</li>
+<li>Sign In form now auto-focuses on Username field.</li>
+<li>Fix newest comment data for zero-comment discussions in table view.</li>
+<li>Post excerpts (as in search) now have a minimum length of 32 even if a double-return is found first.</li>
+<li>Remove line breaks in meta description.</li>
+<li>Added events to support new analytics system.</li>
+<li>Fix styling of &lsquo;/me&rsquo; posts.</li>
+<li>QnA: Allow users to accept their own answer.</li>
+<li>Reactions: Add an option to allow users to react to their own posts.</li>
+<li>Add advanced editor options to New Poll screen.</li>
+<li>Fix plus signs in URLs, especially usernames / profiles.</li>
+<li>Improve SSO workflow for existing usernames.</li>
+<li>Rework discussion sorting and filtering architecture.</li>
+<li>Add no-store header to profiles so read/unread status updates on Back button.</li>
+<li>Pockets: fix repeating pockets between discussions, and enable on table view.</li>
+<li>Subcommunities: Fix category dropdown filtering when in a subcommunity.</li>
+<li>Hide editor toolbar when previewing.</li>
+<li>Fix double-deletion of comment drafts when posting, which could cause a Javascript error.</li>
+<li>Fix scenario where Quotes could interfere with Spoilers.</li>
+<li>Vanillicons: Now defaults to v2.</li>
+<li>NBBC: Fix scenario that could break search results formatting.</li>
+<li>Fix opaque photo cropping box.</li>
+<li>Fix and unify logic for determining permission to edit a user&rsquo;s photo.</li>
+<li>Allow quotes to be collapsed in reported posts.</li>
+<li>Allow collapsing of quotes with alternate formatting.</li>
+<li>Make even deeply-nested quotes minimally legible.</li>
+<li>Update dropdown menu rendering in several places.</li>
+<li>Update number formatting for discussion &amp; comment counts on All Categories page.</li>
+<li>Update stock themes for Ideation.</li>
+<li>Groups: Allow anyone who can edit an event to also delete it.</li>
+</ul>
+
+<h3 id="january">January</h3>
+
+<ul>
+<li>Restore no-store header to discussion &amp; category lists (fixes &ldquo;read&rdquo; markers not updating on &ldquo;Back&rdquo;).</li>
+<li>Improved formatting of Vanilla Comments in certain input formats.</li>
+<li>Updated Smarty template parsing library.</li>
+<li>Fix an issue in draft saving.</li>
+<li>Fix spam deletion error.</li>
+<li>Update Editor to use files&rsquo; real names when downloading.</li>
+<li>Fix RSS feed when table view is in use.</li>
+<li>Remove deprecated form field name prefixing.</li>
+<li>Add more category data to VanillaPop emails.</li>
+<li>Update gifv embed to prefer WebM.</li>
+<li>Various low-level fixes for PHP 7 compatibility.</li>
+<li>Fix CSRF check when deleting a ban.</li>
+<li>Close open redirect &amp; fix flood control in database updating endpoint.</li>
+<li>Improve security in how Vimeo is embedded.</li>
+<li>Add Wistia embed.</li>
+<li>Enforce POST data for several endpoints.</li>
+<li>Improve theme compatibility with Groups.</li>
+<li>Automatically remove spaces around Banning rules to prevent bad data being entered.</li>
+<li>Improve image resizing to always use highest quality images possible.</li>
+<li>Fix Facebook SSO: retrieval of email address, avatar distortion, &amp; name overwriting.</li>
+<li>Remove &ldquo;dashboard&rdquo; namespace from several dashboard URLs.</li>
+<li>Fix several MySQL strict mode errors.</li>
+<li>Remove livequery jQuery extension and all remaining uses of it.</li>
+<li>Remove base64 encoding from all asynchronous requests.</li>
+<li>Allow setting of avatar via API.</li>
+<li>Allow category permissions to be set via API.</li>
+<li>Allow certain configurations to be set depending on permission level.</li>
+<li>Re-add user count to the user list whenever possible based on size of table.</li>
+<li>Give full formatting bar to Activity form.</li>
+</ul>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>

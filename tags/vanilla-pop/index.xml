@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vanilla Pop on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/vanilla-pop/</link>
+    <description>Recent content in Vanilla Pop on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/vanilla-pop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vanilla Pop</title>
+      <link>//docs.vanillaforums.com/help/addons/vanilla-pop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/vanilla-pop/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Email Interaction Vanilla Pop is a feature of Vanilla&amp;rsquo;s Enterprise forums that allows you to interact with your forum through email.
+ With Vanilla Pop you can: Reply to an emailed discussion on the forum or through email. Have conversations through email, but keep a record on Vanilla.  Your Forum&amp;rsquo;s Email Address The top of the page tells you your forum&amp;rsquo;s email address.</description>
+    </item>
+    
+    <item>
+      <title>Vanilla Pop with Site Hub</title>
+      <link>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  Differences Vanilla Pop works in much the same way on the hub as it does on regular sites. The node email addresses are slightly different and there are a few more features which are detailed below.
+Node Email Addresses Each node&amp;rsquo;s email address is comprised of two parts: The node slug and the hub slug seperated by a dot, followed by a vanillaforums.</description>
+    </item>
+    
+  </channel>
+</rss>

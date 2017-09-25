@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Single Sign On on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/single-sign-on/</link>
+    <description>Recent content in Single Sign On on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/single-sign-on/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Embedded</title>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/embed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/embed/</guid>
+      <description>Embedding with Seamless jsConnect Part 1 of this documentation told you how to set up jsConnect SSO for site-wide SSO. However, if you have Vanilla embedded in a page you&amp;rsquo;ll notice that the SSO doesn&amp;rsquo;t automatically sign you in even if users are signed in to the containing page. In order to make the sign in seamless you need to add some SSO information to your embed code.
+First, we&amp;rsquo;ll address another important issue: Mobile Safari.</description>
+    </item>
+    
+    <item>
+      <title>OAuth</title>
+      <link>//docs.vanillaforums.com/help/sso/oauth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/oauth/</guid>
+      <description>SSO with OAuth: Overview Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:
+ Facebook Twitter LinkedIn Google+  Because OAuth 2.0 is an SSO framework and not a narrowly defined protocol (see OAuth 2.0 Spec), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins.</description>
+    </item>
+    
+    <item>
+      <title>SAML</title>
+      <link>//docs.vanillaforums.com/help/sso/saml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/saml/</guid>
+      <description>SSO with SAML: Overview Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAML SSO addon, and configuring it via its Settings page (Dashboard → Addons → SAML SSO → Settings button).
+SAML accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.
+Vanilla&amp;rsquo;s SAML mapping is as follows (the right value is the SAML key):</description>
+    </item>
+    
+    <item>
+      <title>SAML Connection explained</title>
+      <link>//docs.vanillaforums.com/help/sso/saml/connection-explained/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/saml/connection-explained/</guid>
+      <description>Creating a new SAML connection When creating a new SAML connection you will need to fill the following fields:
+Connection ID This field is the new of your connexion and is used to distinguish it from other potential SSO connexion.
+Entity ID The name of your SAML entity. It can be anything but is often the URL of your site.
+Site Name A short name for the site. This is displayed on the SSO Sign In button.</description>
+    </item>
+    
+    <item>
+      <title>Seamless Setup</title>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</guid>
+      <description>Seamless SSO with jsConnect jsConnect uses javascript to allow cross-domain single-signon with another site. We provide several client libraries to help you implement jsConnect on your site. If your site has been programmed in a language that doesn&amp;rsquo;t have a client library than this is documentation is for you.
+Please note that this is technical documentation and requires knowledge programming to understand.
+Functions You&#39;ll Need jsConnect makes use of some functions that are available in most modern programming languages.</description>
+    </item>
+    
+    <item>
+      <title>Single Sign-On (SSO)</title>
+      <link>//docs.vanillaforums.com/help/sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/</guid>
+      <description>Single Sign-On overview Single sign-on (SSO) is how to let your users sign on to a third-party system (like a Vanilla Forum) without needing a separate username and password.
+In broad terms, an SSO solution defines how two systems securely communicate the identity of a user that is switching between them. In the context of Vanilla, that means the forum securely talking to your site or identity provider to see if a user is signed in, and then automatically using that identity.</description>
+    </item>
+    
+    <item>
+      <title>Technical Overview</title>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/overview/</guid>
+      <description>jsConnect For jsConnect to work you&amp;rsquo;ll put some code on your site that identifies your users in a way that Vanilla can understand. Vanilla then requests this information when the user wants to sign in and synchronizes the user with Vanilla. This is done via JSONP, which allows us to send your cookies from your site to you and obtain login information.
+Vanilla&amp;rsquo;s web-based single sign on (SSO) has 2 parts:</description>
+    </item>
+    
+    <item>
+      <title>jsConnect</title>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/</guid>
+      <description>Why jsConnect? SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of time, and generally is not feasible for small-to-medium business owners.
+If you have a website that stores your user&amp;rsquo;s identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we&amp;rsquo;ve abstracted most of the work to our side of the connection, and provide sample code for making your side.</description>
+    </item>
+    
+  </channel>
+</rss>

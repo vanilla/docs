@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roles on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/tags/roles/</link>
+    <description>Recent content in Roles on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/tags/roles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Roles &amp; Permissions</title>
+      <link>//docs.vanillaforums.com/help/roles-permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/roles-permissions/</guid>
+      <description>Overview Roles and Permissions are used in tandem to control what users can see and do in your community. Upon account creation, there are 6 default Roles in your Vanilla account. Each of the default Roles have permissions that you would expect from the Role name:
+ Guest: This is a special role that represents inactive sessions in Vanilla. You can use this role to restrict what logged out users see when viewing your forum.</description>
+    </item>
+    
+  </channel>
+</rss>

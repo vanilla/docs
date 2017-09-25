@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developers on Vanilla Forums Documentation</title>
+    <link>//docs.vanillaforums.com/developer/</link>
+    <description>Recent content in Developers on Vanilla Forums Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//docs.vanillaforums.com/developer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced Embedding</title>
+      <link>//docs.vanillaforums.com/developer/embedding/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/embedding/advanced/</guid>
+      <description>Overview The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs easyXDM and a special container layer to achieve this. It requires a more in-depth setup than Vanilla&amp;rsquo;s basic embed solution.
+Setting Up Advanced Embedding Enable forum embedding via the Dashboard. Then set Garden.Embed.Allow to 2 in your config. Cloud customers will have this done by support staff.</description>
+    </item>
+    
+    <item>
+      <title>Apache</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-apache/</guid>
+      <description>Apache Pre-requisite You need to have the mod_rewrite module enabled.
+Configuration Vanilla includes an .htaccess file for out-of-box Apache support. You may need to edit it, as indicated inside itself, for subfolder usage. Obviously, .htaccess files must be enabled for your web root.
+If you are able to, you can also take the content of the .htaccess and use it directly in your main server config file.
+Hardening The provided .</description>
+    </item>
+    
+    <item>
+      <title>Assets</title>
+      <link>//docs.vanillaforums.com/developer/framework/assets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/assets/</guid>
+      <description>Assets Assets organize content in a document. Assets are called by the main template (e.g. default.master.tpl) which renders the content currently stored in them. Assets are managed with code via plugins or the theme hooks file.
+Default assets Vanilla uses these assets by default: Head, Content, Panel, and Foot. You cannot rely on every theme having a Panel, which is typically used as a sidebar. The Content asset is required, because it is where the view is rendered.</description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/authentication/</guid>
+      <description>Authenticating API Calls When making calls to the API you&amp;rsquo;ll need to pass an access token in order to authenticate as a user. Vanilla has core support for access tokens, with the following features:
+ Access tokens can be issued, verified, and revoked with the AccessTokenModel An access token submitted in the Authorization header will authenticate the appropriate user. Expired access tokens are automatically pruned from the access token table, but stick around for a bit to give appropriate expired errors.</description>
+    </item>
+    
+    <item>
+      <title>Backend</title>
+      <link>//docs.vanillaforums.com/developer/backend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/</guid>
+      <description>Server Vanilla works with Apache, nginx (our preference) or IIS with proper configuration. The core team does not officially support IIS but accept bug reports and patches related to it. Information and help may be provided on our community forum. We welcome additions to this documentation.
+See the dedicated sections for more information about Apache and nginx.
+Advanced Handling of Headers To utilize advanced handling of request and networking headers, it is recommended you make the necessary modifications in a bootstrap.</description>
+    </item>
+    
+    <item>
+      <title>Banner Settings</title>
+      <link>//docs.vanillaforums.com/developer/configuration/banner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/banner/</guid>
+      <description>Banner Settings On the Banner Settings page you can control the following aspects of your forum:
+ Homepage title: This is the title displayed on your home page. This title will also appear in search engines. Site Description: This is the site description for your homepage. Other pages will have description generated by the content. Banner Title: This is the title will in your community&amp;rsquo;s banner, if you have not uploaded a banner image.</description>
+    </item>
+    
+    <item>
+      <title>Building new porters</title>
+      <link>//docs.vanillaforums.com/developer/importing/build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
+      <description> Building a new porter file We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.
+ Copy an existing class, like class.smf.php and rename it. Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.  </description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>//docs.vanillaforums.com/developer/theming/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/css/</guid>
+      <description>Theming with CSS Theming Hosted Vanilla You can overide any theming you want in the customize theme section in your Vanilla dashboard. Apply any CSS you feel is appropriate to override the current theme. If you are looking to learn more about customizing CSS in our hosted product, check out theme tips on our blog.
+Adding additional CSS To add additional CSS to the existing base Vanilla CSS file:</description>
+    </item>
+    
+    <item>
+      <title>Change Log</title>
+      <link>//docs.vanillaforums.com/developer/changelog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/changelog/</guid>
+      <description>Version Change Log This is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the forum. We provide separate cloud release notes since they are scheduled differently.
+Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.
+2.3 Released 18 Nov 2016
+2.2.1 Released 7 May 2016
+2.2 Released 12 Nov 2015
+2.1.13 Released 29 Oct 2015</description>
+    </item>
+    
+    <item>
+      <title>Code of Conduct</title>
+      <link>//docs.vanillaforums.com/developer/contributing/conduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/contributing/conduct/</guid>
+      <description>Code of Conduct Adapted from Swift&amp;rsquo;s Code of Conduct v1.3 for now because a copied code is better than no code.
+As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.
+We are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.</description>
+    </item>
+    
+    <item>
+      <title>Coding Standard</title>
+      <link>//docs.vanillaforums.com/developer/contributing/coding-standard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/contributing/coding-standard/</guid>
+      <description>Standards As of May 2014, Vanilla will adhere to PSR-2 with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
+We&amp;rsquo;ve named our primary exception to PSR-2 the Lord Brackos rule - Same-line open braces on all classes, method, and function definitions.
+We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently.</description>
+    </item>
+    
+    <item>
+      <title>Community</title>
+      <link>//docs.vanillaforums.com/developer/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/community/</guid>
+      <description>Developers Community We have a vibrant developers&amp;rsquo; community. Please register there to ask general questions, contribute feedback and ideas, help others, add your own plugins &amp;amp; themes to the official directory, and sign the contributors&amp;rsquo; agreement.
+Get Notified Want to get notified about the newest releases?
+ Sign up for the VanillaForums.org newsletter in your community profile. Watch the RSS feed for the &amp;lsquo;blog&amp;rsquo; category. Follow our Twitter account.  Plugins These addons are currently used on our community forum.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>//docs.vanillaforums.com/developer/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/</guid>
+      <description>Vanilla configuration files Vanilla uses a file-based configuration system.
+Vanilla is distributed with a file at /conf/config-defaults.php which we will call &amp;ldquo;config-defaults&amp;rdquo;. After installation, a file is created at /conf/config.php which we will call simply &amp;ldquo;config&amp;rdquo; or &amp;ldquo;config.php&amp;rdquo;.
+Your config-defaults file should never be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism thru which it will happen.</description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>//docs.vanillaforums.com/developer/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/contributing/</guid>
+      <description>How to Contribute General  Welcome folks to the community and be awesome! Answer questions. Report issues like a pro (see below). Triage issues already reported! Test pre-releases. Contribute docs. Help translate Vanilla. Evaluate community addons &amp;amp; offer feedback. Do accessibility testing! Unplug your mouse, turn on a screen reader, and see what it&amp;rsquo;s like to use Vanilla.  Developers  Contribute code via pull requests (requires Contributor Agreement) Contribute addons &amp;amp; themes to the Official Directory.</description>
+    </item>
+    
+    <item>
+      <title>Controllers &amp; URLs</title>
+      <link>//docs.vanillaforums.com/developer/framework/controllers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/controllers/</guid>
+      <description>Controllers In our MVC context, controllers are the traffic cops. They receive a parsed request (typically the URL in the address bar), build some data using models, and send it back to the browser in a view.
+Dispatcher Vanilla maps URLs to controllers in a fairly direct way. The Dispatcher (Gdn_Dispatcher) receives incoming requests and invokes the appropriate controller(s).
+Mapping URLs First it looks for an application name, then a controller name, then a method name, then any arguments which will be passed in the order given.</description>
+    </item>
+    
+    <item>
+      <title>Dashboard</title>
+      <link>//docs.vanillaforums.com/developer/configuration/dashboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/dashboard/</guid>
+      <description>Dashboard The Administration Panel, known as the Dashboard, provides access to the control features of your Vanilla Forum. Each Administration Panel is presented in sections, the header, the main navigation, the work area, and the footer. The top portion of all Panels, the header, is featured in a dark blue gradient. The header shows the name of your forum as a link to your forum&amp;rsquo;s main page, a profile link (shown as your user name), and Sign Out.</description>
+    </item>
+    
+    <item>
+      <title>Data privacy</title>
+      <link>//docs.vanillaforums.com/developer/data-privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/data-privacy/</guid>
+      <description>Types of Information Vanilla makes distinctions about what user information is public vs. personal, and we deal with these types of information in different ways. This is a technical document to avoid privacy issues when configuring your forum or writing a plugin.
+Public user info We consider usernames and user IDs (User.Name and User.UserID) to be public information. This data is used in URLs, embedded in page data, and generally available to any user with basic permission to view or access your forum.</description>
+    </item>
+    
+    <item>
+      <title>Database access</title>
+      <link>//docs.vanillaforums.com/developer/framework/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/database/</guid>
+      <description>Database layer Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in /library/databases). However, at this time, the Vanilla team has no plans to support additional databases.
+The best way to access the database is via existing models. For instance, to get a list of discussions, use the Get method in the DiscussionModel.</description>
+    </item>
+    
+    <item>
+      <title>Datasets</title>
+      <link>//docs.vanillaforums.com/developer/framework/datasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/datasets/</guid>
+      <description>Datasets The Gdn_Dataset object is a way to store data. Most of the time, this data is the result of a query to the database. When you use our database object (as you always should) to execute a database select query, it will return a dataset.
+Here are a few commonly used methods you&amp;rsquo;ll want to know about:
+ count() returns the number of records in the dataset. firstRow() returns the first record in the dataset.</description>
+    </item>
+    
+    <item>
+      <title>Developer Tools</title>
+      <link>//docs.vanillaforums.com/developer/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/tools/</guid>
+      <description>Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All our developers use MacOS.
+Stacks Supported  PHP 5.6 - 7.1 (as of Vanilla 2.5) Unix, Windows, or OSX nginx, Apache, or IIS MySQL, Percona, or MariaDB  Cloud Stack  PHP 7.1 nginx Percona Varnish memcached Zend OPcache Sphinx OpenStack  Developer Tools  homebrew git xdebug PHPUnit Composer Hub CodeSniffer Phing Travis CI Scrutinizer  Frontend Build  Sass SCSS-Lint Yarn Node.</description>
+    </item>
+    
+    <item>
+      <title>Developers</title>
+      <link>//docs.vanillaforums.com/developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/</guid>
+      <description>Welcome! The Developers section is primarily targeted at folks using the open source product who have at least a basic understanding of PHP, HTML, CSS and Javascript.
+Clients of VanillaForums.com (cloud) should contact support to address technical issues. Our hosted product does not allow direct file access to ensure security and performance, which precludes many instructions in this section.
+Security Issues and Responsible Disclosure Found a security issue? Please contact us at support@vanillaforums.</description>
+    </item>
+    
+    <item>
+      <title>Email</title>
+      <link>//docs.vanillaforums.com/developer/framework/email/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/email/</guid>
+      <description>Sending Emails The Garden framework includes an Email object for sending and configuring emails. The formatting of Vanilla Emails is handled by the EmailTemplate property of the Email object.
+EmailTemplate The EmailTemplate object helps to organize the components of an email and prepare them for output.
+These components are:
+ Title: A string, placed in a &amp;lt;h1&amp;gt; block before the rest of the email text in the default email template.</description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>//docs.vanillaforums.com/developer/embedding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/embedding/</guid>
+      <description>Embedding Forum Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe
+Embedding Checklist
+ Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width.</description>
+    </item>
+    
+    <item>
+      <title>Environment Setup</title>
+      <link>//docs.vanillaforums.com/developer/tools/environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/tools/environment/</guid>
+      <description>After you&amp;rsquo;ve got your tools ready, here&amp;rsquo;s how to set some of them up to work together nicely. We assume you&amp;rsquo;re using MacOS. This is all pretty useless if you&amp;rsquo;re not.
+Automate dependency building To automatically recompile Composer dependencies when you make commits, pull, or checkout a different release branch, add this:
+#!/bin/sh composer install  To these files in your git repository (creating them if they do not exist):</description>
+    </item>
+    
+    <item>
+      <title>Event Hooks</title>
+      <link>//docs.vanillaforums.com/developer/theming/hooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/hooks/</guid>
+      <description>Theming Hooks Themes can be imbued with the power of plugins via a special hooks php file. Using the hooks file, you can override existing functions in Vanilla, plug in to existing Vanilla events, and set data for your views.
+To use hooks, create a file named class.themehooks.php in your theme&amp;rsquo;s root directory (/themes/your_theme_name/class.themehooks.php) and edit it there. Hooks files extends Gdn_Plugin, which allows the specification of a setup() method, which is run whenever the theme is enabled.</description>
+    </item>
+    
+    <item>
+      <title>Framework</title>
+      <link>//docs.vanillaforums.com/developer/framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/</guid>
+      <description>Garden&amp;rsquo;s place in Vanilla Vanilla is built on an MVC framework named Garden. Its purpose is to provide an extensible, pluggable platform on which to build all the addons that make Vanilla awesome. The design of its database handling was influenced by CodeIgniter, but its plugin architecture is pretty unique.
+Technically, Vanilla is a forum application (addon) built on top of the Garden framework. However, we typically refer to the entire stack as &amp;ldquo;Vanilla&amp;rdquo; for branding consistency and simplicity - including in these docs.</description>
+    </item>
+    
+    <item>
+      <title>Helpers</title>
+      <link>//docs.vanillaforums.com/developer/framework/helpers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/helpers/</guid>
+      <description>Helper Functions This is a quickstart guide to some of Vanilla&amp;rsquo;s globally available functions and methods. Familiarizing yourself with them will save you time and effort in the long term, and give you clues about how best to use the framework.
+This is by no means an exhaustive list, nor full signature documentation. You&amp;rsquo;ll want to find them in the source code (files at /library/core/functions.*.php) for more info.
+Getting &amp;amp; setting See functions.</description>
+    </item>
+    
+    <item>
+      <title>Homepage Settings</title>
+      <link>//docs.vanillaforums.com/developer/configuration/homepage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/homepage/</guid>
+      <description>Homepage The Homepage settings allows you to change the default homepage of your community when they visit your site. By default, Vanilla will use &amp;ldquo;Discussions&amp;rdquo; as your homepage, but you can change it to whatever you like.</description>
+    </item>
+    
+    <item>
+      <title>Importing</title>
+      <link>//docs.vanillaforums.com/developer/importing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/</guid>
+      <description>Importing to Vanilla Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.
+Download Vanilla Porter
+Vanilla Porter is a tool that you can upload to your current web server to run in your web browser. It exports any platform to a generic format that the &amp;ldquo;Import&amp;rdquo; option in your new Vanilla Forum can read.</description>
+    </item>
+    
+    <item>
+      <title>Inform Messages</title>
+      <link>//docs.vanillaforums.com/developer/framework/inform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/inform/</guid>
+      <description>Toaster Notifications Inform Messages allow you to let users know of some action that your plugin or application has taken. Inform messages allow you to quickly and easily relay information to users, and handle actions based on interaction with those messages. Use them freely to notify users of saved forms, punishments, rewards, etc.
+You can send Inform Messages from within a controller or a plugin, or from a custom javascript function.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>//docs.vanillaforums.com/developer/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/installation/</guid>
+      <description>Installing Vanilla Our current installation and upgrade instructions are in the README file that comes with Vanilla. If you run into issues, see the Developers &amp;gt; Troubleshooting section of these docs.
+Cloud Solution For a 1-click installation hosted plan with professional support and services, see Vanilla Forums Cloud Hosting plans.</description>
+    </item>
+    
+    <item>
+      <title>Internationalization &amp; Localization</title>
+      <link>//docs.vanillaforums.com/developer/framework/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/i18n/</guid>
+      <description> Adding translatable phrases to Vanilla Considerations for adding phrases to Vanilla or your addon:
+ Default to English. Use the t() for all user-viewed text. Never use t() for HTML classes or other frontend code. Always use a succinct definition string. Avoid jargon or regional dialect.  </description>
+    </item>
+    
+    <item>
+      <title>Locales</title>
+      <link>//docs.vanillaforums.com/developer/locales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/locales/</guid>
+      <description>Translating Vanilla Want to help us improve our translations? We have a Transifex project for contributing to this. Create an account there and submit your improvements.
+Need to customize the phrasing just on your site in particular? See &amp;ldquo;Overriding locales&amp;rdquo; below.
+Translation tips Want to help translate? Awesome! Here are some tips for creating great translations.
+ Please make sure that your changes use generic terminology and good grammar that can apply to all forums and avoids interest- or region-specific terms.</description>
+    </item>
+    
+    <item>
+      <title>Messages</title>
+      <link>//docs.vanillaforums.com/developer/configuration/message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/message/</guid>
+      <description>Messages Messages can appear anywhere in your community, and can be used to inform your users of news and events.
+Configuring Messages Messages can be added to your forum by clicking on the Add Message button when on the Message page, and choosing the following Message options:
+ You can determine on which page a Message will seen, for example just on the profile page. You can add a Message to a specific category.</description>
+    </item>
+    
+    <item>
+      <title>Models, Forms, &amp; Validation</title>
+      <link>//docs.vanillaforums.com/developer/framework/models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/models/</guid>
+      <description>Models Datasets Controllers Views
+The theory of a Model in MVC is that it is an object representation of the data being manipulated. In Garden, however, the actual object representation of the data comes from the DataSet class in the form of a php stdClass. So, as you may have guessed already, in Garden the model isn’t a representation of the data. In Garden, a model relates directly to a table, and (with the help of the database object) allows you to retrieve information from the table, enforce the schema of that table on the data being manipulated, and put data into the table.</description>
+    </item>
+    
+    <item>
+      <title>Modules</title>
+      <link>//docs.vanillaforums.com/developer/framework/modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/modules/</guid>
+      <description>If controller methods represent the main content/purpose of a page, modules represent secondary information or functions. Modules are small groupings of functionality or information on a page. Some modules that are bundled with Garden include:
+ HeadModule - Allows addition of javascript, css &amp;amp; meta information to be rendered in the page. MenuModule - Handles management and rendering of items in the main menu. PagerModule - Takes information about a dataset and renders a pagelist.</description>
+    </item>
+    
+    <item>
+      <title>OAuth</title>
+      <link>//docs.vanillaforums.com/developer/framework/oauth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/oauth/</guid>
+      <description>SSO with OAuth: Overview Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:
+ Facebook Twitter LinkedIn Google+  Because OAuth 2.0 is an SSO framework and not a narrowly defined protocol (see OAuth 2.0 Spec), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins.</description>
+    </item>
+    
+    <item>
+      <title>Page Links</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/</guid>
+      <description>Page Links We&amp;rsquo;ve created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum&amp;rsquo;s navigation.
+Here&amp;rsquo;s the basic syntax, where * is the link type.
+{*_link wrap=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; format=&amp;quot;string&amp;quot;}  Parameters   Parameter Type Default Description    wrap  string  li  The tag to wrap the link in.  text  string  varies  What the text for the link should be.</description>
+    </item>
+    
+    <item>
+      <title>Permissions</title>
+      <link>//docs.vanillaforums.com/developer/framework/permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/permissions/</guid>
+      <description>Permissions Overview Vanilla uses permissions to restrict access to particular content, options, or workflows. There are a number of functions built into the framework to do this efficiently. We eschew role-detection as a means of access control.
+For example, we would never check to make sure someone was in a role named Moderator before granting access to an option, we would check a permission like Garden.Moderation.Manage.
+Naming Permissions We use the same dot notation syntax for permissions as we do for config settings.</description>
+    </item>
+    
+    <item>
+      <title>Plugin Quickstart</title>
+      <link>//docs.vanillaforums.com/developer/plugins/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/plugins/quickstart/</guid>
+      <description>Quickstart Links  Read about our hooks system: Extending Vanilla with plugins Download the official Example plugin Download other plugins from the Addon Directory and borrow their code. Get help in the developer community  Quickstart Guide Vanilla is built on an object-oriented, MVC framework. If you&amp;rsquo;re coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That&amp;rsquo;s OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.</description>
+    </item>
+    
+    <item>
+      <title>Plugins</title>
+      <link>//docs.vanillaforums.com/developer/plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/plugins/</guid>
+      <description>Extending Vanilla with plugins Vanilla is a very customizable, flexible platform because there are many ways to hook into it without ever modifying its code.
+Events &amp;amp; Handlers Any class that extends the class &amp;ldquo;Pluggable&amp;rdquo; has the ability to call
+$this-&amp;gt;fireEvent(&#39;EventName&#39;);  and then plugins can attach to that event to perform an action.
+There is a PluginManager that detects any enabled plugins. When the FireEvent method is called, it pings the PluginManager class to see if there are any plugins that want to attach to the event name being fired.</description>
+    </item>
+    
+    <item>
+      <title>Pull Requests</title>
+      <link>//docs.vanillaforums.com/developer/contributing/pull-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/contributing/pull-requests/</guid>
+      <description>Using pull requests to contribute code We love pull requests! They&amp;rsquo;re the core of our workflow.
+All code is added to Vanilla via pull requests (PRs). A pull request is simply a request to merge code from a particular branch into another (usually a feature or hotfix branch into master). GitHub&amp;rsquo;s pull request feature tracks discussion, labels, assignments, and changes over time to a pull request.
+Creating a pull request  Branch from master and checkout that branch.</description>
+    </item>
+    
+    <item>
+      <title>Quickstart</title>
+      <link>//docs.vanillaforums.com/developer/theming/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/quickstart/</guid>
+      <description>Vanilla Forums Cloud Customers, check out our Ultimate Vanilla Forums Theme Guide.
+With Vanilla, you have full control over both the CSS and the actual HTML of every page in every application. The easiest thing for most designers is to just alter the CSS, so we&amp;rsquo;ll start there:
+Part 1: CSS &amp;amp; Design  Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: /themes/your_theme_name.</description>
+    </item>
+    
+    <item>
+      <title>Requests</title>
+      <link>//docs.vanillaforums.com/developer/framework/requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/requests/</guid>
+      <description>Requests Vanilla&amp;rsquo;s base Controller class (the class from which all controllers are extended) accepts a DeliveryType parameter on every request. Depending on the type of delivery being requested, a controller in Garden will deliver all of a page, part of a page, or part of a page plus extra information as JSON.
+DeliveryType There are four delivery types available:
+ DELIVERY_TYPE_ALL: Entire page (default). DELIVERY_TYPE_ASSET: Content for the requested asset.</description>
+    </item>
+    
+    <item>
+      <title>Resource Routing</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/</guid>
+      <description>RESTful Resource Routing to Controller Methods This section tells you how to name your controller objects and methods so that they can be accessed by API requests. By default, all of your controllers are accessed from the /api/v2/ base path. After that, the rest of the path and the HTTP method determines what method gets called within your app.
+Controller Names In order for a controller to be accessible from the API its name must end in &amp;ldquo;ApiController&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Routes</title>
+      <link>//docs.vanillaforums.com/developer/routes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/routes/</guid>
+      <description>Routes Route management allows you to create custom urls to specific pages within your Vanilla 2 installation. It also comes with some pre-defined default values.
+Pre-defined Routes There are four pre-defined routes that have special meaning. They are: * DefaultController - This is the main page to load when the root url of your Vanilla installation is viewed. * Default404 - The page to view when the requested url could not be found.</description>
+    </item>
+    
+    <item>
+      <title>Schemas</title>
+      <link>//docs.vanillaforums.com/developer/schemas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/schemas/</guid>
+      <description>Schemas Garden\Schema In Vanilla, the Garden\Schema class is used to whitelist parameters for a data structure and validate array of data. It is primarily used for filtering input to API endpoints.
+The constructor of Garden\Schema accepts an associative array, describing the expected parameters. The keys of the array define the name of a parameter and its flags (e.g. data type, is required). The values of the array provide a description for each parameter.</description>
+    </item>
+    
+    <item>
+      <title>Smarty</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/</guid>
+      <description>Smarty Overview Vanilla currently supports both PHP and Smarty views. Smarty is a template engine that allows dynamic content to be inserted into a HTML template using tags. These tags are wrapped in curly braces: {tag}, and can represent variables or the output of a function call. They are replaced when the page is rendered. The default master view in Vanilla is a smarty template. See it in action by navigating to /applications/dashboard/views/default.</description>
+    </item>
+    
+    <item>
+      <title>Smarty Conditionals</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/conditionals/</guid>
+      <description>Smarty Conditionals Smarty includes a base amount of logic that you can insert into your template. One of these is a conditional statement. A couple of basic examples should give you an idea of the syntax and format of Smarty conditionals.
+This example uses the user data from the controller&amp;rsquo;s data array to print out a welcome message if the user is signed in and a generic message if the user is not signed in.</description>
+    </item>
+    
+    <item>
+      <title>Smarty Functions</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/</guid>
+      <description>Smarty Functions This section outlines all the Vanilla-specific Smarty functions made available for use in your Smarty templates.
+You are also able to use the built-in Smarty functions in your template.</description>
+    </item>
+    
+    <item>
+      <title>Smarty Modifiers</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/modifiers/</guid>
+      <description>Smarty Modifiers Smarty modifiers can be applied to variables, custom functions or strings. You can use a modifier by adding a | (pipe) after the element you wish to modify and adding the modifier name. Modifiers can also accept parameters which are separated by a : (colon). These parameters must follow the order of their appearance in the signature.
+Vanilla supports the built-in Smarty modifiers as documented on the Smarty site, and has created a few more for you to use in your templates.</description>
+    </item>
+    
+    <item>
+      <title>Supported platforms</title>
+      <link>//docs.vanillaforums.com/developer/importing/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/support/</guid>
+      <description>Supported platforms Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the Vanilla Porter.
+PHP forums  Vanilla 1 phpBB 2-3 vBulletin 3-5 bbPress 1 SimplePress 1 Simple Machines 1-2 PunBB 1 IP.Board 3 XenForo Joomla Kunena Drupal Advanced Forum MyBB esoTalk Expression Engine  ASP / .NET forums Requires conversion to MySQL first.</description>
+    </item>
+    
+    <item>
+      <title>Theme Options</title>
+      <link>//docs.vanillaforums.com/developer/theming/themeoptions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/themeoptions/</guid>
+      <description>Theme Options This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.
+You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme&amp;rsquo;s design folder. You can also allow an admin to add custom text to your theme.
+This functionality can be added simply by editing your theme&amp;rsquo;s about.</description>
+    </item>
+    
+    <item>
+      <title>Theme Visibility</title>
+      <link>//docs.vanillaforums.com/developer/theming/themevisibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/themevisibility/</guid>
+      <description>This feature is only available on Vanilla Cloud Learn More...  If you&amp;rsquo;ve got Vanilla Cloud, custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
+In order of importance, here are the rules for a theme to be visible:
+Method 1: If the theme is set to be visible with this site option:
+Garden.Themes.Visible  You can add multiple sites by separating sites with a comma.</description>
+    </item>
+    
+    <item>
+      <title>Theming</title>
+      <link>//docs.vanillaforums.com/developer/theming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/</guid>
+      <description>Theming Overview Vanilla themes are built by selectively overriding the views and CSS in the product. They are also imbued with the power of plugins via a special hooks file.
+It is extremely important to never modify Vanilla by directly editing the files distributed in the release. Nearly anything can by accomplished with views, CSS, and hooks in a properly formatted theme.
+Quickstart To override CSS, create a custom.css file in your theme; it will be included in the page after our CSS, so you can override without higher specificity or !</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>//docs.vanillaforums.com/developer/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/troubleshooting/</guid>
+      <description>Troubleshooting Vanilla These are some generic tips for addressing problems during an upgrade.
+ Set $Configuration[&#39;Debug&#39;] = TRUE; in your conf/config.php to reveal full error messages. Remember to remove it when you are done. Clear your browser cache and cookies, then restart your browser. Clear *.ini files from the cache folder. Revert to the default theme. You can do this manually in conf/config.php by setting the $Configuration[&#39;Garden&#39;][&#39;Theme&#39;] value to default.</description>
+    </item>
+    
+    <item>
+      <title>Using The Config</title>
+      <link>//docs.vanillaforums.com/developer/configuration/using/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/configuration/using/</guid>
+      <description>When to use the config Use the config for saving settings in your theme or plugin. You should only save small amounts of data to the config, and it should not be data that is changed frequently.
+If you have large quantities of data or data that is written frequently, consider using the database instead.
+Reading from config The c function is the appropriate shortcut for reading from the config.</description>
+    </item>
+    
+    <item>
+      <title>Vanilla Porter</title>
+      <link>//docs.vanillaforums.com/developer/importing/porter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/importing/porter/</guid>
+      <description>Migrating a forum to Vanilla Vanilla Porter is the export tool for converting your legacy forum to Vanilla. The process is four steps:
+ Export your old forum data to a special &amp;ldquo;Porter file&amp;rdquo;. Create a new Vanilla forum. Import the Porter file in Vanilla&amp;rsquo;s Dashboard. Verify &amp;amp; finalize your new forum.  Vanilla Porter requires a MySQL database and PHP 5.3+ with zlib support enabled.
+Before migrating We recommend these best practices:</description>
+    </item>
+    
+    <item>
+      <title>Views</title>
+      <link>//docs.vanillaforums.com/developer/framework/views/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/views/</guid>
+      <description>Views Once a controller method is called to handle the request, how is the xhtml of the page put together? Views. There are two types of views in Garden: &amp;ldquo;Views&amp;rdquo; and &amp;ldquo;Master Views&amp;rdquo;. A view relates directly to the controller method that called it and handles rendering content related to that request. You can typically think of a view as the content for that page. For example, if a Vanilla-&amp;gt;Discussion-&amp;gt;All() method is called, the view for that method would handle rendering all of the discussions.</description>
+    </item>
+    
+    <item>
+      <title>Views / HTML</title>
+      <link>//docs.vanillaforums.com/developer/theming/views/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/views/</guid>
+      <description>Theming Views The master view The master view for your forum is the wrapper for each page in your forum. Often, this is the only view you&amp;rsquo;ll have to manipulate in your theme. The master view file is called the default.master.tpl (Smarty template) or the default.master.php. We recommend using Smarty templates for your master view, however you can decide to use a regular ol&amp;rsquo; php view if you like.</description>
+    </item>
+    
+    <item>
+      <title>Writing API Endpoints</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/</guid>
+      <description>Controller Endpoints When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the resource routing guide. This guide concerns writing the contents of a method.
+The Controller Base Class Although controllers don&amp;rsquo;t need to inherit from any class, the Vanilla\Web\Controller class offers useful functionality and is going to be the class you inherit from almost 100% of the time.</description>
+    </item>
+    
+    <item>
+      <title>Writing APIs</title>
+      <link>//docs.vanillaforums.com/developer/framework/apiv2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/framework/apiv2/</guid>
+      <description>The Vanilla APIv2 Vanilla&amp;rsquo;s APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an &amp;ldquo;API first&amp;rdquo; framework where you write your API first and then think about the resulting HTML. This offers several benefits:
+ An API is easier to test, lending well to automated testing. You can connect to an API from different clients and not just browser.</description>
+    </item>
+    
+    <item>
+      <title>about.php</title>
+      <link>//docs.vanillaforums.com/developer/theming/about-php/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/about-php/</guid>
+      <description>The &amp;ldquo;about.php&amp;rdquo; file Each theme has an about.php file that contains some important information for Vanilla. Put this file in your theme root.
+Here&amp;rsquo;s a sample file:
+&amp;lt;?php $ThemeInfo[&#39;ExampleTheme&#39;] = [ &#39;Name&#39; =&amp;gt; &amp;quot;Example Theme&amp;quot;, &#39;Description&#39; =&amp;gt; &amp;quot;Custom theme example&amp;quot;, &#39;Version&#39; =&amp;gt; &#39;1.0.0&#39;, &#39;Author&#39; =&amp;gt; &amp;quot;Stéphane LaFlèche&amp;quot;, &#39;AuthorEmail&#39; =&amp;gt; &#39;stephane.l@vanillaforums.com&#39;, &#39;AuthorUrl&#39; =&amp;gt; &#39;www.vanillaforums.com&#39;, &#39;License&#39; =&amp;gt; &#39;Proprietary&#39;, &#39;Layout&#39; =&amp;gt; [ &#39;Discussions&#39; =&amp;gt; &#39;table&#39;, &#39;Categories&#39; =&amp;gt; &#39;modern&#39;, ] ];  Theme &amp;ldquo;key&amp;rdquo; $ThemeInfo[&#39;ExampleTheme&#39;]  It&amp;rsquo;s important to put a unique key here for your theme.</description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>//docs.vanillaforums.com/developer/backend/server-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/backend/server-nginx/</guid>
+      <description>nginx Configuration The key to specifically running Vanilla under nginx is getting the basic rewrite rule in nginx.conf correct. You can see a working example in the Hardening section.
+Some tips: - When configuring fastcgi make sure that you use $realpath_root instead of $document_root. - Make sure that you set the fastcgi_param X_REWRITE parameter to 1.
+Hardening Here are some directories that should be forbidden:
+location ~* &amp;quot;/\.git&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/build/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/cache/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/cgi-bin/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/uploads/import/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/conf/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/tests/&amp;quot; { deny all; return 403; } location ~* &amp;quot;^/vendor/&amp;quot; { deny all; return 403; }  We alo recommend to disallow any script but /index.</description>
+    </item>
+    
+    <item>
+      <title>{asset}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/asset/</guid>
+      <description>Function: {asset} Usage {asset name=&amp;quot;string&amp;quot; id=&amp;quot;string&amp;quot; tag=&amp;quot;string&amp;quot; class=&amp;quot;string&amp;quot;}  Renders an asset from the controller.
+Assets in Vanilla are containers for different sets of content. The content of each of these asset containers is variable depending on the page. The content of each asset is not currently configurable via the template.
+Vanilla&amp;rsquo;s asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets.</description>
+    </item>
+    
+    <item>
+      <title>{breadcrumbs}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/</guid>
+      <description> Function: {breadcrumbs} Usage {breadcrumbs homelink=&amp;quot;string&amp;quot; hidelast=boolean}  Render a breadcrumb trail for the user based on the page they are on.
+Parameters   Parameter Type Default Description    homelink  string  Home  Title of the first link in the breadcrumbs  homeurl  string  /  URL of the first link in the breadcrumbs  hidelast  boolean  false  Whether or not to hide the currently active (last) crumb    </description>
+    </item>
+    
+    <item>
+      <title>{custom_menu}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/</guid>
+      <description> Function: {custom_menu} Usage {custom_menu format=&amp;quot;string&amp;quot; wrap=&amp;quot;string&amp;quot;}  A bucket for addon menu items. Adds links depending on which addons are enabled.
+Parameters   Parameter Type Default Description    format  string  none  Custom format to use when wrapping links. Available template variables are %url, %class, and %text  wrap  string  li  Element to wrap around each link in the menu    </description>
+    </item>
+    
+    <item>
+      <title>{event}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/event/</guid>
+      <description> Function: {event} Usage {event name=&amp;quot;string&amp;quot;}  Fire an event with the specified name. Learn more about events in Vanilla.
+Parameters   Parameter Type Default Description    name  string  none  Name of the event to fire    </description>
+    </item>
+    
+    <item>
+      <title>{homepage_title}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/</guid>
+      <description>Function: {homepage_title} Usage {homepage_title}  Writes the site title to the page. You can change the site title from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{include_file}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/</guid>
+      <description> Function: {include_file} Usage {include_file name=&amp;quot;string&amp;quot;}  Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.
+Parameters   Parameter Type Default Description    name  string  none  The name of the file to include    </description>
+    </item>
+    
+    <item>
+      <title>{link}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/link/</guid>
+      <description>Function: {link} Usage {link path=&amp;quot;string&amp;quot; text=&amp;quot;string&amp;quot; notag=boolean format=&amp;quot;string&amp;quot; withdomain=boolean}  Takes a route and prepends the web root (expects /controller/action/params as path).
+Parameters   Parameter Type Default Description    path  string  none  The relative path for the url. There are some special paths that can be used to return &amp;lsquo;intelligent&amp;rsquo; links  text  string  none  HTML text to be put inside an anchor.</description>
+    </item>
+    
+    <item>
+      <title>{logo}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/logo/</guid>
+      <description>Function: {logo} Usage {logo}  Writes the site logo to the page. You can change the site logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{mobile_logo}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/</guid>
+      <description>Function: {mobile_logo} Usage {mobile_logo}  Writes the mobile logo to the page. You can change the mobile logo from the &amp;lsquo;Banner&amp;rsquo; settings page in the dashboard.
+Parameters This tag does not take any parameters.</description>
+    </item>
+    
+    <item>
+      <title>{module}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/module/</guid>
+      <description>Function: {module} Usage {module name=&amp;quot;string&amp;quot; ... }  This is a super handy little function that renders any module in Vanilla. It instantiates the specified module class, sets the properties specified in the function&amp;rsquo;s parameters and calls the toString() function of the module.
+The available parameters differ depending on module itself and the available modules depend on which addons are enabled. If a module is contained in an addon, the addon must be enabled in order for the module to render (a common gotcha).</description>
+    </item>
+    
+    <item>
+      <title>{permission}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/permission/</guid>
+      <description> Block: {permission} Usage {permission require=&amp;quot;string&amp;quot;} Foo {/permission}  Only output content if the current user has the specified permission.
+Parameters   Parameter Type Default Description    require  string  none  The permission to check / require    </description>
+    </item>
+    
+    <item>
+      <title>{pocket}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/</guid>
+      <description> Function: {pocket} Usage {pocket name=&amp;quot;string&amp;quot;}  Writes a pocket to the page. Pockets placed in the template in this way should have their location set to &amp;lsquo;custom&amp;rsquo;. You can edit this setting from the &amp;lsquo;Pockets&amp;rsquo; settings page in the dashboard.
+Parameters   Parameter Type Default Description    name  string  none  The name of the pocket    </description>
+    </item>
+    
+    <item>
+      <title>{searchbox}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/</guid>
+      <description> Function: {searchbox} Usage {searchbox placeholder=&amp;quot;string&amp;quot;}  Writes the search box to the page.
+Parameters   Parameter Type Default Description    placeholder  string  Search  Optional input box placeholder text    </description>
+    </item>
+    
+    <item>
+      <title>{text}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/text/</guid>
+      <description> Function: {text} Usage {text code=&amp;quot;string&amp;quot; default=&amp;quot;string&amp;quot;}  Returns the custom text from a theme&amp;rsquo;s options page. Learn more about how to configure your theme options.
+Parameters   Parameter Type Default Description    code  string  none  The text code set in the theme&amp;rsquo;s information array  default  string  none  The default text if the user hasn&amp;rsquo;t overridden    </description>
+    </item>
+    
+    <item>
+      <title>{t}</title>
+      <link>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/</guid>
+      <description> Function: {t} Usage {t c=&amp;quot;string&amp;quot; d=&amp;quot;string&amp;quot;}  Output a translatable string with an optional default.
+Parameters   Parameter Type Default Description    c  string  none  The string to output or a string short-name  d  string  $c  Default translation. Good idea to set when using short-names    </description>
+    </item>
+    
+  </channel>
+</rss>
