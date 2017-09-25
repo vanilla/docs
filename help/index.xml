@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Help and Training on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/help/</link>
+    <link>//docs.vanillaforums.com/help/</link>
     <description>Recent content in Help and Training on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/help/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/help/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reporting</title>
-      <link>http://127.0.0.1:8081/help/moderation/reporting/</link>
+      <link>//docs.vanillaforums.com/help/moderation/reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/reporting/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/reporting/</guid>
       <description>What is Reporting? Reporting is a way for members to bring moderators’ attention to content that they believe is inappropriate. “Report” is an option under “Flag” in the Reactions available under each post.
 Reporting a post Go to Flag → Report in the Reactions menu at the end of the post. A popup box will prompt you to add a “Reason” both to explain the report and discourage useless reports.</description>
     </item>
     
     <item>
       <title>Analytics</title>
-      <link>http://127.0.0.1:8081/help/analytics/</link>
+      <link>//docs.vanillaforums.com/help/analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/analytics/</guid>
+      <guid>//docs.vanillaforums.com/help/analytics/</guid>
       <description>What Are Vanilla Analytics? Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.
 How to use Vanilla Statistics The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server. We generate and present you with the statistics in a graphical format for the following:
 How to use Vanilla Analytics You can get an overview of your community&amp;rsquo;s analytics by clicking on the &amp;lsquo;Dashboard Site Overview&amp;rsquo; tab.</description>
@@ -32,29 +32,40 @@ How to use Vanilla Analytics You can get an overview of your community&amp;rsquo
     
     <item>
       <title>API</title>
-      <link>http://127.0.0.1:8081/help/api/</link>
+      <link>//docs.vanillaforums.com/help/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/api/</guid>
+      <guid>//docs.vanillaforums.com/help/api/</guid>
       <description>API Vanilla&amp;rsquo;s API is documented here.</description>
     </item>
     
     <item>
-      <title>2016 Cloud Releases</title>
-      <link>http://127.0.0.1:8081/help/releases/2016/</link>
+      <title>API Preview Release</title>
+      <link>//docs.vanillaforums.com/help/api/preview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/releases/2016/</guid>
+      <guid>//docs.vanillaforums.com/help/api/preview/</guid>
+      <description>API v2 Overview Vanilla is presenting a preview release of our upcoming API v2. This is a complete rewrite and rearchitecture of our API to be a low-level feature of our platform rather than a wrapper around our existing product.
+This preview exposes access to only the most core Vanilla resources:
+ Users Roles Discussions Comments Categories Conversations (private messages) Messages (text banners) Tokens (basic API access management)  The full API v2 release will introduce parity with the API v1 feature set, and will trigger the beginning of a long sunset period for that API which we will formally announce at that time.</description>
+    </item>
+    
+    <item>
+      <title>2016 Cloud Releases</title>
+      <link>//docs.vanillaforums.com/help/releases/2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/releases/2016/</guid>
       <description>Release Notes In 2016, VIP releases were every other month. Other customers received updates on an ad-hoc basis.
 December  Add full IPv6 support. Add and improve addon icons. Add meta tags for discussion links to generate Twitter cards (when added to tweets). Add settings to Dashboard for category max display depth. Add some padding to HTML tables in posts (improve legibility). Add support for our new CDN. Add accessibility attributes to Customize Theme.</description>
     </item>
     
     <item>
       <title>2017 Cloud Releases</title>
-      <link>http://127.0.0.1:8081/help/releases/2017/</link>
+      <link>//docs.vanillaforums.com/help/releases/2017/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/releases/2017/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/2017/</guid>
       <description>Release Notes Quarterly VIP releases contain all numbered releases within said quarter.
 Sometimes bug fixes are backported to the current release, meaning they show up in production earlier than the date noted.
 Q2 release 6 (Thursday, June 29)  Improve load time of Vanilla Statistics dashboard summaries. Triple-A theme: Added missing icons for Reactions. Dashboard: Font tweaks for right panel. Dashboard: Fix inaccurate toggle position for embedding URLs in Posting Settings.</description>
@@ -62,29 +73,29 @@ Q2 release 6 (Thursday, June 29)  Improve load time of Vanilla Statistics dashbo
     
     <item>
       <title>Accessibility</title>
-      <link>http://127.0.0.1:8081/help/appearance/accessibility/</link>
+      <link>//docs.vanillaforums.com/help/appearance/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/accessibility/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/accessibility/</guid>
       <description>Overview We strive for maximum accessibility in our product design and take defects in it seriously.
 &amp;lsquo;508 Compliance&amp;rsquo; refers to a US law that requires that US government websites to be accessible to persons with disabilities (e.g. visual or physical impairment). Accessibility means, among many other things, that a person must be able to use the website with software that reads the website aloud and/or using only a keyboard. Many private companies use the 508 guidelines to ensure websites are accessible.</description>
     </item>
     
     <item>
       <title>Adding and Editing Badges</title>
-      <link>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/badges/adding-and-editing-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/adding-and-editing-badges/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Disabling badges To disable a badge and prevent it from displaying publicly, click &amp;ldquo;Yes&amp;rdquo; in the badge&amp;rsquo;s row under the &amp;ldquo;Active&amp;rdquo; column. That will toggle it to &amp;ldquo;No&amp;rdquo;, indicating it is no longer active. Inactive badges remain awarded to any users that received it previously. You can re-enable them by clicking &amp;ldquo;No&amp;rdquo;, which will then toggle back to &amp;ldquo;Yes&amp;rdquo;, indicating it is active again.</description>
     </item>
     
     <item>
       <title>Adding and Editing Ranks</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/adding-and-editing-ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/adding-and-editing-ranks/</guid>
       <description>Adding a Ranks Go to the &amp;ldquo;Ranks&amp;rdquo; page of the Dashboard and click the &amp;ldquo;Add Rank&amp;rdquo; button at the bottom of the list.
 Editing a Rank On the &amp;ldquo;Ranks&amp;rdquo; page, click the &amp;ldquo;Edit&amp;rdquo; button next to the Rank you wish to modify.
 Rank information Name &amp;amp; Label The name of the rank is how it is referred to. Users will see it in the notification they receive when they attain the rank.</description>
@@ -92,69 +103,69 @@ Rank information Name &amp;amp; Label The name of the rank is how it is referred
     
     <item>
       <title>Adding and Editing Reactions</title>
-      <link>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/reactions/adding-and-editing-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/adding-and-editing-reactions/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Selecting Reactions Vanilla comes with a wide range of reactions in your Dashboard, of which a few are enabled by default. You can toggle them on or off depending on what reactions are appropriate to your community. To enable or disable a reaction on your forum, click the &amp;ldquo;Active/Inactive&amp;rdquo; toggle next to each reaction in the Dashboard under &amp;ldquo;Reactions&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Adding and Editing User Notes</title>
-      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/adding-and-editing-user-notes/</guid>
       <description>Adding a Note To add a note for a user go to their profile. In their edit profile drop down there should be an item called Add Note. Users must have the permission Garden.Moderation.Manage or Moderation.UserNotes.Add (if present) to add notes.
 Viewing Notes To view a user’s notes go to their profile. There will be a notes link on the side panel. Note that both notes and warnings are displayed in the same list.</description>
     </item>
     
     <item>
       <title>Addons</title>
-      <link>http://127.0.0.1:8081/help/addons/</link>
+      <link>//docs.vanillaforums.com/help/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/</guid>
       <description>What Are Addons? Addons are like apps for your forum. They can be enabled or disabled from your Dashboard. Each one can add one or more features, or modify how an existing feature works. You can tailor your users&amp;rsquo; experience to the needs of your community by carefully selecting addons.
 Vanilla is structured such that its baseline installation only contains features that we feel are essential to every community. Addons let you flavor Vanilla to the specific needs of the community you are building.</description>
     </item>
     
     <item>
       <title>Advanced Analytics</title>
-      <link>http://127.0.0.1:8081/help/analytics/advanced-analytics/</link>
+      <link>//docs.vanillaforums.com/help/analytics/advanced-analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/analytics/advanced-analytics/</guid>
+      <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
       <description>Advanced Analytics Overview Available on certain plans as an add-on, Advanced Analytics give you further insights into your community.
  Metrics: Metrics a single number that quantify something for the selected time range. Leaderboards: Leaderboards are tables showing the ranking of specific items for the selected time range. The &amp;ldquo;previous&amp;rdquo; rankings are calculated using the rankings of the previous time range. Graphs: Graphs can come in multiple forms! Line, Area, Pie chart and Bar graphs use the selected time range to group the fetched information.</description>
     </item>
     
     <item>
       <title>Advanced Search</title>
-      <link>http://127.0.0.1:8081/help/addons/advanced-search/</link>
+      <link>//docs.vanillaforums.com/help/addons/advanced-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/advanced-search/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/advanced-search/</guid>
       <description>Overview Advanced Search adds robust options to Vanilla’s native search to help users hunt down specific content within your community. It is available on Corporate level plans and above.
  Better indexing of content The ability to apply filters to searches Auto-complete of results as the user types the search terms  Enabling Advanced Search To enable Advanced Search, you will need to enable the addon and then make a change to your base theme:</description>
     </item>
     
     <item>
       <title>Advanced Settings</title>
-      <link>http://127.0.0.1:8081/help/forum-settings/advanced-settings/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/forum-settings/advanced-settings/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/advanced-settings/</guid>
       <description> Advanced Settings The following settings can be configured in the Dashboard under Forum Settings &amp;gt; Advanced:
  Discussions per page (the number of discussions displayed on a page) Comments per page (the number of comments displayed on a page) Editing time limit (this can be used to prevent edits after a certain time period. Some user Roles and permissions will may override this limit) Enable checkboxes (this  </description>
     </item>
     
     <item>
       <title>Appearance</title>
-      <link>http://127.0.0.1:8081/help/appearance/</link>
+      <link>//docs.vanillaforums.com/help/appearance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/</guid>
       <description>Customizing Your Forum&amp;rsquo;s Appearance Your community should have a unique look and feel to match your website, app or product. The appearance section of your Dashboard lets you control how your community forum will look.
 Site Title and Logo In your Dashboard under Appearance &amp;gt; Banner you can set the following:
  Home page title Site description Banner title (what is displayed in the browser title bar) Banner logo Mobile banner logo Favicon (the small logo that appears on the browser tab) Share image (an image that is sometimes displayed when someone posts a link to your community to a social media site)  Homepage In your Dashboard under Appearance &amp;gt; Homepage you can set the following:</description>
@@ -162,10 +173,10 @@ Site Title and Logo In your Dashboard under Appearance &amp;gt; Banner you can s
     
     <item>
       <title>Applying Ranks over SSO</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/applying-ranks-over-sso/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/applying-ranks-over-sso/</guid>
       <description>Applying Ranks over SSO Create a new rank or edit an existing one, checking &amp;ldquo;Applied Manually&amp;rdquo;.
 You can now edit a user&amp;rsquo;s profile and select that Rank or apply it over SSO by adding a matching RankID or Rank_Name parameter to the callback.
 This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on the rank. Also make sure that no automatically-triggered Ranks have a higher level, or they will override when triggered.</description>
@@ -173,20 +184,20 @@ This only works if you have checked &amp;ldquo;Applied Manually&amp;rdquo; on th
     
     <item>
       <title>Badges</title>
-      <link>http://127.0.0.1:8081/help/reputation/badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Purpose Badges are designed to reinforce desirable behaviors on a forum. They are not necessarily awards for the best or most of something, but rather signs that point the way to positive participation in a community.
 Default badges Vanilla&amp;rsquo;s Badges addon automatically creates a wide variety of badges. Some relate to core forum functions (like commenting), and some are only triggered by using additional addons (like Reactions).</description>
     </item>
     
     <item>
       <title>Cancellation</title>
-      <link>http://127.0.0.1:8081/help/cloud/leaving/</link>
+      <link>//docs.vanillaforums.com/help/cloud/leaving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/leaving/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/leaving/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  The Worst Day Hey, it happens. On rare occassion, we need to go our separate ways. We hate to see any customer leave, but it&amp;rsquo;s important any cloud providers you use have a strong data ownership policy. Ours is pretty simple: It&amp;rsquo;s your data.
 Getting your data There are four custom components to any forum:
  Database Uploaded files (avatars, images, etc) Theme or plugin done as a customer-specific customization Config  Of these, the only one we do not ever provide is the config.</description>
@@ -194,30 +205,30 @@ Getting your data There are four custom components to any forum:
     
     <item>
       <title>Categories</title>
-      <link>http://127.0.0.1:8081/help/forum-settings/categories/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/forum-settings/categories/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/categories/</guid>
       <description>What Are Categories Categories are how Vanilla organizes discussions within a community. Categories can be added, edited, deleted, sorted, and tiered via the Dashboard. Every discussion is placed in one (and only one) category. You can find Categories under the Settings tab Dashboard, listed under “Forum Settings”. You can access it directly by going to /vanilla/settings/categories.
 At the top of the page, you will presented with the option to either add a new category, or disable them completely.</description>
     </item>
     
     <item>
       <title>Code Repository</title>
-      <link>http://127.0.0.1:8081/help/cloud/repository/</link>
+      <link>//docs.vanillaforums.com/help/cloud/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/repository/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/repository/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Shared Private Repository Our VIP plans come with the option to open a private code repository that you share with the Vanilla Forums team on GitHub. This allows your developers to view and contribute to your custom features and theme.
 Setup Your customer success manager will provide you with this repository. Please allow the Vanilla team to organize its structure appropriately and name files.</description>
     </item>
     
     <item>
       <title>Curating with Reactions</title>
-      <link>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/reactions/curating-with-reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/curating-with-reactions/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Curating with Reactions Reactions can provide your community with powerful self-curation tools. It&amp;rsquo;s very important to understand your community (or the community you intend to build) before selecting what reactions to use.
 Any of the thresholds or increment values mentioned in this document can be modified via support.
 Promoting content Promote is a special reaction. Only users with the &amp;ldquo;Curation&amp;rdquo; permission (or that ability via Ranks) are able to use it.</description>
@@ -225,20 +236,20 @@ Promoting content Promote is a special reaction. Only users with the &amp;ldquo;
     
     <item>
       <title>Custom Domain</title>
-      <link>http://127.0.0.1:8081/help/getting-started/custom-domain/</link>
+      <link>//docs.vanillaforums.com/help/getting-started/custom-domain/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/getting-started/custom-domain/</guid>
+      <guid>//docs.vanillaforums.com/help/getting-started/custom-domain/</guid>
       <description>Custom Domain for Your Forum Community Instead of having your community url look like this: mysite.vanillacommunity.com, it can look like this: mysite.com or community.mysite.com. It’s a simple, two-step process that we recommend for all new forum owners. Please note that you must purchase or create your desired url from a domain registrar before customizing your Vanilla Forums domain.
 Setup  Log in to the domain name registrar where your domain is hosted (ex.</description>
     </item>
     
     <item>
       <title>Custom Theme</title>
-      <link>http://127.0.0.1:8081/help/appearance/custom-theme/</link>
+      <link>//docs.vanillaforums.com/help/appearance/custom-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/custom-theme/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/custom-theme/</guid>
       <description> Customize Theme Vanilla&amp;rsquo;s base theme HTML can be modified and CSS can be overriden. In order to modify a Vanilla theme, you must posses good knowledge of HTML and CSS. Please consult the Vanilla Forums Theme Guide for detailed theming instructions.
 Additional Resources:
  Vanilla Forums Theme Guide Vanilla Blog: Theme Tips Video: Theming Vanilla Forums  </description>
@@ -246,20 +257,20 @@ Additional Resources:
     
     <item>
       <title>Developer Support</title>
-      <link>http://127.0.0.1:8081/help/cloud/developer-support/</link>
+      <link>//docs.vanillaforums.com/help/cloud/developer-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/developer-support/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/developer-support/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Developer Support VIP plans include developer support, offered for a fixed period of time for a fixed number of individuals in your organization. During that time, those folks can reach out directly to Vanilla developers for advanced assistance in setting up embedding, single sign-on, theming, and appropriate addons &amp;amp; settings.
 We will continue to assist you with our outstanding professional support even after your developer support ends.</description>
     </item>
     
     <item>
       <title>Emails</title>
-      <link>http://127.0.0.1:8081/help/appearance/emails/</link>
+      <link>//docs.vanillaforums.com/help/appearance/emails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/emails/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/emails/</guid>
       <description>Email Appearance You can choose between sending plaintext or HTML emails. The difference is that HTML emails can include colors, images and other styling while plaintext emails are, well, plain text.
 HTML emails can be enabled or disabled from the dashboard by navigating to the &amp;lsquo;Email&amp;rsquo; link in the panel. From there, you can also send test emails and configure HTML emails.
 HTML Emails You can customize the way your forum&amp;rsquo;s HTML emails look by navigating the &amp;lsquo;Email&amp;rsquo; link in the dashboard&amp;rsquo;s panel.</description>
@@ -267,20 +278,20 @@ HTML Emails You can customize the way your forum&amp;rsquo;s HTML emails look by
     
     <item>
       <title>Embedded</title>
-      <link>http://127.0.0.1:8081/help/sso/jsconnect/embed/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/jsconnect/embed/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/embed/</guid>
       <description>Embedding with Seamless jsConnect Part 1 of this documentation told you how to set up jsConnect SSO for site-wide SSO. However, if you have Vanilla embedded in a page you&amp;rsquo;ll notice that the SSO doesn&amp;rsquo;t automatically sign you in even if users are signed in to the containing page. In order to make the sign in seamless you need to add some SSO information to your embed code.
 First, we&amp;rsquo;ll address another important issue: Mobile Safari.</description>
     </item>
     
     <item>
       <title>Embedding</title>
-      <link>http://127.0.0.1:8081/help/forum-settings/embedding/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/embedding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/forum-settings/embedding/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/embedding/</guid>
       <description>Embedding Forum Embedding Vanilla Forums works by putting a snippet of code on your website page, and may be a choice if you want to insert your forum into a site quickly. The snippet points to some javascript and the forum is embedded into the page using an iframe
 Embedding Checklist
  Choose the embed friendly theme. This theme has minimal padding around it and will look good at any width.</description>
@@ -288,20 +299,20 @@ Embedding Checklist
     
     <item>
       <title>Emoji</title>
-      <link>http://127.0.0.1:8081/help/posting/emoji/</link>
+      <link>//docs.vanillaforums.com/help/posting/emoji/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/posting/emoji/</guid>
+      <guid>//docs.vanillaforums.com/help/posting/emoji/</guid>
       <description> Emoji Emoji is a way to express yourself in graphical form in your community. The following are the emoji and the code to use for them to appear.
    Emoji Type Code To Use In Forum     Smileys    &amp;lsquo;smile&amp;rsquo; :smile:   &amp;lsquo;smiley&amp;rsquo; :smiley:   &amp;lsquo;wink&amp;rsquo; :wink:   &amp;lsquo;blush&amp;rsquo; :blush:   &amp;lsquo;neutral&amp;rsquo; :neutral:   &amp;lsquo;relaxed&amp;rsquo; :relaxed:   &amp;lsquo;grin&amp;rsquo; :grin:   &amp;lsquo;joy&amp;rsquo; :joy:   &amp;lsquo;sweat_smile&amp;rsquo; :sweat_smile:   &amp;lsquo;lol&amp;rsquo; :lol:   &amp;lsquo;innocent&amp;rsquo; :innocent:   &amp;lsquo;naughty&amp;rsquo; :naughty:   &amp;lsquo;yum&amp;rsquo; :yum:   &amp;lsquo;relieved&amp;rsquo; :relieved:   &amp;lsquo;love&amp;rsquo; :love:   &amp;lsquo;sunglasses&amp;rsquo; :sunglasses:   &amp;lsquo;smirk&amp;rsquo; :smirk:   &amp;lsquo;expressionless&amp;rsquo; :expressionless:   &amp;lsquo;unamused&amp;rsquo; :unamused:   &amp;lsquo;sweat&amp;rsquo; :sweat:   &amp;lsquo;pensive&amp;rsquo; :pensive:   &amp;lsquo;confused&amp;rsquo; :confused:   &amp;lsquo;confounded&amp;rsquo; :confounded:   &amp;lsquo;kissing&amp;rsquo; :kissing:   &amp;lsquo;kissing_heart&amp;rsquo; :kissing_heart:   &amp;lsquo;kissing_smiling_eyes&amp;rsquo; :kissing_smiling_eyes:   &amp;lsquo;kissing_closed_eyes&amp;rsquo; :kissing_closed_eyes:   &amp;lsquo;tongue&amp;rsquo; :tongue:   &amp;lsquo;disappointed&amp;rsquo; :disappointed:   &amp;lsquo;worried&amp;rsquo; :worried:   &amp;lsquo;angry&amp;rsquo; :angry:   &amp;lsquo;rage&amp;rsquo; :rage:   &amp;lsquo;cry&amp;rsquo; :cry:   &amp;lsquo;persevere&amp;rsquo; :persevere:   &amp;lsquo;triumph&amp;rsquo; :triumph:   &amp;lsquo;frowning&amp;rsquo; :frowning:   &amp;lsquo;anguished&amp;rsquo; :anguished:   &amp;lsquo;fearful&amp;rsquo; :fearful:   &amp;lsquo;weary&amp;rsquo; :weary:   &amp;lsquo;sleepy&amp;rsquo; :sleepy:   &amp;lsquo;tired_face&amp;rsquo; :tired_face:   &amp;lsquo;grimace&amp;rsquo; :grimace:   &amp;lsquo;bawling&amp;rsquo; :bawling:   &amp;lsquo;open_mouth&amp;rsquo; :open_mouth:   &amp;lsquo;hushed&amp;rsquo; :hushed:   &amp;lsquo;cold_sweat&amp;rsquo; :cold_sweat:   &amp;lsquo;scream&amp;rsquo; :scream:   &amp;lsquo;astonished&amp;rsquo; :astonished:   &amp;lsquo;flushed&amp;rsquo; :flushed:   &amp;lsquo;sleeping&amp;rsquo; :sleeping:   &amp;lsquo;dizzy&amp;rsquo; :dizzy:   &amp;lsquo;no_mouth&amp;rsquo; :no_mouth:   &amp;lsquo;mask&amp;rsquo; :mask:   &amp;lsquo;star&amp;rsquo; :star:   &amp;lsquo;cookie&amp;rsquo; :cookie:   &amp;lsquo;warning&amp;rsquo; :warning:   &amp;lsquo;mrgreen&amp;rsquo; :mrgreen:   Love    &amp;lsquo;heart&amp;rsquo; :heart:   &amp;lsquo;heartbreak&amp;rsquo; :heartbreak:   &amp;lsquo;kiss&amp;rsquo; :kiss:   Hand gestures    &amp;rsquo;+1&amp;rsquo; :+1:   &amp;rsquo;-1&amp;rsquo; :-1:   Custom icons    &amp;lsquo;trollface&amp;rsquo; :trollface:    </description>
     </item>
     
     <item>
       <title>Facebook</title>
-      <link>http://127.0.0.1:8081/help/addons/social/facebook/</link>
+      <link>//docs.vanillaforums.com/help/addons/social/facebook/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/social/facebook/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/social/facebook/</guid>
       <description>Facebook Facebook Connect allows users to sign in using their Facebook account. You must register your application with Facebook for this plugin to work.
 How to set up Facebook Connect In order to set up Facebook Connect, you must create an &amp;ldquo;application&amp;rdquo; in Facebook at: https://developers.facebook.com/apps
 Once your application has been set up, you must copy the &amp;ldquo;Application ID&amp;rdquo; and &amp;ldquo;Application Secret&amp;rdquo; into your Facebook plugin settings page from your Vanilla dashboard.</description>
@@ -309,50 +320,50 @@ Once your application has been set up, you must copy the &amp;ldquo;Application 
     
     <item>
       <title>Forum Merge</title>
-      <link>http://127.0.0.1:8081/help/addons/forum-merge/</link>
+      <link>//docs.vanillaforums.com/help/addons/forum-merge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/forum-merge/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/forum-merge/</guid>
       <description>When to Use Forum Merge The ForumMerge plug-in should be used when you want to take one existing Vanilla forum instance and merge it into another existing Vanilla forum. Core Vanilla data, in addition to some plug-in and addon data, will be carried over from the source into the destination forum and reconciled with existing records to avoid conflicts.
 What Data is Merged The following Vanilla data will be considered during the merge process:</description>
     </item>
     
     <item>
       <title>Forum Settings</title>
-      <link>http://127.0.0.1:8081/help/forum-settings/</link>
+      <link>//docs.vanillaforums.com/help/forum-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/forum-settings/</guid>
+      <guid>//docs.vanillaforums.com/help/forum-settings/</guid>
       <description> Forum Settings In the Forum Settings section of the Dashboard, you&amp;rsquo;ll be able to configure the following:
  Create and organize forum Categories Advanced settings, such as setting the number of discussions per page Tagging setup Setting Vanilla to Embed and finding embed code. Configuring Ideation  </description>
     </item>
     
     <item>
       <title>Getting Started</title>
-      <link>http://127.0.0.1:8081/help/getting-started/</link>
+      <link>//docs.vanillaforums.com/help/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/getting-started/</guid>
+      <guid>//docs.vanillaforums.com/help/getting-started/</guid>
       <description>Welcome! Welcome to Vanilla! We&amp;rsquo;re glad to have you as a customer (or user!) and we&amp;rsquo;re eager to help make your community a success. This section is designed to give you a jump-start in that direction and is intended for first-time or novice Vanilla administrators.
 First Steps If you&amp;rsquo;re launching a new community from scratch, you already know that it can feel like a daunting experience with numerous choices and decisions to make.</description>
     </item>
     
     <item>
       <title>Gigya Sign In</title>
-      <link>http://127.0.0.1:8081/help/addons/gigya/</link>
+      <link>//docs.vanillaforums.com/help/addons/gigya/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/gigya/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/gigya/</guid>
       <description>Gigya Sign In The Gigya Sign In adds the ability to sign to your community with Gigya Social Login. You will need to configure your site in your Gigya dashboard and then set up your login plugin on the Gigya plugins page before you can use the Gigya addon in Vanilla.
 Setting up your site in Gigya  Instructions on setting up a a site in Gigya can be found in their site setup documentation.</description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>http://127.0.0.1:8081/help/integrations/github/</link>
+      <link>//docs.vanillaforums.com/help/integrations/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/integrations/github/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/github/</guid>
       <description>Github This plugin allows you to submit user discussion and comments as GitHub issues.
 Setup Instructions If you already have a Github account, you need to enable API Access for this plugin to work.
  Create a new application in GitHub, and set the callback URL by appending /profile/githubconnect to the end of your forum’s URL. (If your forum is at example.com/forum, your callback URL would be http://example.com/forum/profile/githubconnect). Once your application has been set up, you must copy the ClientID and Secret into your Github plugin settings page from your Vanilla dashboard.</description>
@@ -360,70 +371,70 @@ Setup Instructions If you already have a Github account, you need to enable API 
     
     <item>
       <title>Giving and Requesting Badges</title>
-      <link>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</link>
+      <link>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/badges/giving-and-requesting-badges/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/badges/giving-and-requesting-badges/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Giving a badge Badges-&amp;gt;Give is the permission that defines who can give badges. By default, moderators and administrators have it.
 To manually give a badge to one or more users, click the &amp;ldquo;Give&amp;rdquo; button from the Badges list. Type a username in the provided box. You can give a badge to many users at once by typing all their names, separated by commas.</description>
     </item>
     
     <item>
       <title>Google Plus</title>
-      <link>http://127.0.0.1:8081/help/addons/social/googleplus/</link>
+      <link>//docs.vanillaforums.com/help/addons/social/googleplus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/social/googleplus/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/social/googleplus/</guid>
       <description>Google Plus The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in Google API Console. This Google+ Video Tutorial also shows you how to set this up.
 Setting up social login in Google Plus  Once you have enabled the Google+ Plugin in your Vanilla Dashboard, go to your API Console at Google. You will need to create a project.</description>
     </item>
     
     <item>
       <title>Groups</title>
-      <link>http://127.0.0.1:8081/help/addons/groups/</link>
+      <link>//docs.vanillaforums.com/help/addons/groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/groups/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/groups/</guid>
       <description>What are Groups? Groups is an addon for very large communities to allow their users to form their own discussion groups. These groups allows for having discussions outside the normal forum category structure in self-contained areas. Very large communities can be difficult to approach for new users. Groups can be a useful way for users to find other folks with common interests or backgrounds.
 Groups have an events list, their own announcements, and leaders who run the show.</description>
     </item>
     
     <item>
       <title>Ideation</title>
-      <link>http://127.0.0.1:8081/help/ideation/</link>
+      <link>//docs.vanillaforums.com/help/ideation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/ideation/</guid>
+      <guid>//docs.vanillaforums.com/help/ideation/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Ideation Ideation gives forum users the ability to upvote and optionally downvote discussions.
 Ideas Overview An idea is a discussion that can be voted on by forum users. It has a status that lets moderators easily communicate decisions made on the idea, and determines whether it&amp;rsquo;s open or closed for voting. You can modify, add or delete available statuses from the dashboard.</description>
     </item>
     
     <item>
       <title>Integrations</title>
-      <link>http://127.0.0.1:8081/help/integrations/</link>
+      <link>//docs.vanillaforums.com/help/integrations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/integrations/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/</guid>
       <description>Integrations Vanilla integrates with several third party applications, including:
  Salesforce Zendesk GitHub Wordpress Akismet WithList MailChimp Social logins (Facebook, Twitter, LinkedIn, etc.)  Vanilla also supports integration through an API.</description>
     </item>
     
     <item>
       <title>LinkedIn</title>
-      <link>http://127.0.0.1:8081/help/addons/social/linkedin/</link>
+      <link>//docs.vanillaforums.com/help/addons/social/linkedin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/social/linkedin/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/social/linkedin/</guid>
       <description>LinkedIn Linked In social sign in allows users to sign in using their LinkedIn account. You must register your application with LinkedIn for this addon to work.
 How to Set up LinkedIn Social Sign in  Go to the LinkedIn Developer Network at https://www.linkedin.com/secure/developer/ Click Add New Application. When you create the application, you can choose what to enter in most fields, but you have to make sure you enter specific information for some fields.</description>
     </item>
     
     <item>
       <title>Logging</title>
-      <link>http://127.0.0.1:8081/help/cloud/logging/</link>
+      <link>//docs.vanillaforums.com/help/cloud/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/logging/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/logging/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Advanced logging Additional logging is available on our highest-tier plans for an additional fee to cover the additional load &amp;amp; performance hit incurred by more verbose logs.
 The logs are available via a Dashboard page under &amp;ldquo;Event Log&amp;rdquo;. They can be filtered by date range, event name, and severity. Sorting is chronological or reverse-chronological.
 Events We are currently able to log the following additional events for auditing purposes.</description>
@@ -431,10 +442,10 @@ Events We are currently able to log the following additional events for auditing
     
     <item>
       <title>MailChimp Push</title>
-      <link>http://127.0.0.1:8081/help/addons/mailchimp-push/</link>
+      <link>//docs.vanillaforums.com/help/addons/mailchimp-push/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/mailchimp-push/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/mailchimp-push/</guid>
       <description>Overview MailChimp is one of the world’s leading email marketing platforms, allowing it’s users to send newsletters, automated messages, and set up targeted campaigns to help their business.
 Our plugin synchronizes the email addresses of your community’s users with a designated mailing list. As your community grows, or users change their email address, Vanilla will send notifications to MailChimp to update the specified list.
 Enabling MailChimp Push MailChimp Push is a feature provided at every plan level, it can be activated for your forum through a support request.</description>
@@ -442,30 +453,30 @@ Enabling MailChimp Push MailChimp Push is a feature provided at every plan level
     
     <item>
       <title>Managing Groups</title>
-      <link>http://127.0.0.1:8081/help/addons/groups/managing-groups/</link>
+      <link>//docs.vanillaforums.com/help/addons/groups/managing-groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/groups/managing-groups/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/groups/managing-groups/</guid>
       <description>Adding your first groups After enabling the Groups addon, &amp;ldquo;Groups&amp;rdquo; will appear in your top-level navigation. In a customized theme, this may not be the case and you&amp;rsquo;ll need to go directly to the URL &amp;ldquo;/groups&amp;rdquo; from your forum domain (e.g. &amp;ldquo;yoursite.vanillaforums.com/groups&amp;rdquo;).
 As the administrator, click the &amp;ldquo;New Group&amp;rdquo; button near the top of the page. The &amp;ldquo;Icon&amp;rdquo; image shows on the groups lists. The &amp;ldquo;Banner&amp;rdquo; is the large image at the top of your group&amp;rsquo;s page.</description>
     </item>
     
     <item>
       <title>Migration</title>
-      <link>http://127.0.0.1:8081/help/cloud/migration/</link>
+      <link>//docs.vanillaforums.com/help/cloud/migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/migration/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/migration/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Overview Vanilla offers full, professional migration services from nearly any platform imaginable. If you provide the data, we&amp;rsquo;ll figure out how to make it work in Vanilla.
 The process below assumes you will provide a database dump. We also perform API-based migrations from cloud services when that is necessary and possible. Talk to your account representative if you require a different type of migration like this.</description>
     </item>
     
     <item>
       <title>Moderation</title>
-      <link>http://127.0.0.1:8081/help/moderation/</link>
+      <link>//docs.vanillaforums.com/help/moderation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/</guid>
       <description>Moderation Overview Vanilla tries to make moderation easy by giving you access to many moderation features through the public UI and by inviting members to participate in reporting abuse.
 Managing Users In the Dasboard under the Moderation Tab, you&amp;rsquo;ll be able to lookup users. Clicking on the pencil icon will let you edit a user&amp;rsquo;s profile information, appoint roles and perform a password reset.
 If the Spoof plugin is turned on, you can also spoof this user, i.</description>
@@ -473,49 +484,49 @@ If the Spoof plugin is turned on, you can also spoof this user, i.</description>
     
     <item>
       <title>Multisite</title>
-      <link>http://127.0.0.1:8081/help/multisite/</link>
+      <link>//docs.vanillaforums.com/help/multisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/multisite/</guid>
+      <guid>//docs.vanillaforums.com/help/multisite/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Multisite management Vanilla&amp;rsquo;s cloud solution offers a number of configuration settings for enterprise-grade deployments.
 Deployment Types Single Community This is a classic forum setup. It is the equivalent of 1 installation of forum software. It can have any number of categories (what other products call “topic areas” or “forums/subforums”) arranged in a hierarchy. Each Single Community needs a domain or subdomain assigned.</description>
     </item>
     
     <item>
       <title>Multisite Sync</title>
-      <link>http://127.0.0.1:8081/help/multisite/sync/</link>
+      <link>//docs.vanillaforums.com/help/multisite/sync/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/multisite/sync/</guid>
+      <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
       <description>Hub Sync A number of settings can be synced between the hub and its nodes.</description>
     </item>
     
     <item>
       <title>Notifications</title>
-      <link>http://127.0.0.1:8081/help/notifications/</link>
+      <link>//docs.vanillaforums.com/help/notifications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/notifications/</guid>
+      <guid>//docs.vanillaforums.com/help/notifications/</guid>
       <description>Overview Notifications for certain forum events can be delivered in-app (via Growl-style popups) and/or via email. New users will be opted in to a list of notifications that can be configured by the administrator. Users may edit these preferences in their profile at any time.
 Any notification level may be selectively disabled globally. It is also possible to globally disable all email sending by setting Garden.Email = false in your config.</description>
     </item>
     
     <item>
       <title>OAuth</title>
-      <link>http://127.0.0.1:8081/help/sso/oauth/</link>
+      <link>//docs.vanillaforums.com/help/sso/oauth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/oauth/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/oauth/</guid>
       <description>SSO with OAuth: Overview Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:
  Facebook Twitter LinkedIn Google+  Because OAuth 2.0 is an SSO framework and not a narrowly defined protocol (see OAuth 2.0 Spec), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins.</description>
     </item>
     
     <item>
       <title>Pockets</title>
-      <link>http://127.0.0.1:8081/help/addons/pockets/</link>
+      <link>//docs.vanillaforums.com/help/addons/pockets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/pockets/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/pockets/</guid>
       <description>Overview Pockets add areas to your forum where you can inject custom HTML or Javascript into your theme. It is a powerful tool that makes Vanilla flexible for ad placement, google analytics, and other small customizations.
 Pockets are designed to be used by advanced users and developers who can write and review their own code.
 Setup Pockets are available on all plan levels. To activate it, simply locate it in your addon list (/dashboard/settings/addons) and toggle it on.</description>
@@ -523,10 +534,10 @@ Setup Pockets are available on all plan levels. To activate it, simply locate it
     
     <item>
       <title>Posting</title>
-      <link>http://127.0.0.1:8081/help/posting/</link>
+      <link>//docs.vanillaforums.com/help/posting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/posting/</guid>
+      <guid>//docs.vanillaforums.com/help/posting/</guid>
       <description>Overview &amp;ldquo;Posting&amp;rdquo; or commenting on a discussion is the primary way users will interact with your community. There is a range of discussion types, helping communities adjust the functionality to suit their needs.
 At the bottom of each discussion, the user will encounter a text field:
 Users are able to type their comments here and submit them by hitting the “Post Comment” button. That comment will immediately append the bottom of the discussion, adding it to the conversation.</description>
@@ -534,20 +545,20 @@ Users are able to type their comments here and submit them by hitting the “Pos
     
     <item>
       <title>Premium Services</title>
-      <link>http://127.0.0.1:8081/help/cloud/</link>
+      <link>//docs.vanillaforums.com/help/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Cloud Services Overview This section details services and processes that are only offered on certain plan levels. It includes workflows between Vanilla Forums and our clients, suggestions for getting the most out of your services, and expectations for how services will be delivered and communicated.
 If you are a cloud client and have any questions, please contact support, your account representative, or your customer success manager if one has been assigned to you.</description>
     </item>
     
     <item>
       <title>Private Community</title>
-      <link>http://127.0.0.1:8081/help/roles-permissions/private-community/</link>
+      <link>//docs.vanillaforums.com/help/roles-permissions/private-community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/roles-permissions/private-community/</guid>
+      <guid>//docs.vanillaforums.com/help/roles-permissions/private-community/</guid>
       <description>Making your Community Private If you set your community to private, only registered members will be able to view and post. If a user that is not logged in browses to the community, they will see a login page.
 To make your community private:
  Go to the Addons page in the Dashboard Turn on the &amp;lsquo;Private Community&amp;rsquo; addon Click on the addon settings, this will take you to the Roles and Permission page Turn on &amp;lsquo;Enable Private Communities&amp;rsquo;  Additional Resources:</description>
@@ -555,10 +566,10 @@ To make your community private:
     
     <item>
       <title>Questions and Answers</title>
-      <link>http://127.0.0.1:8081/help/addons/qna/</link>
+      <link>//docs.vanillaforums.com/help/addons/qna/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/qna/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/qna/</guid>
       <description>Overview Vanilla supports question and answer type discussions. Q&amp;amp;A discussions differ in the following ways:
  When a question is answered, the member who asked the question will receive a notification and will be prompted to indicate if the answer answered the question or not.
  Valid answers are highlighted and displayed at the top of the discussion list. Members who answer questions will receive badges (if badges are turned on).</description>
@@ -566,59 +577,59 @@ To make your community private:
     
     <item>
       <title>Ranks</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/</guid>
       <description>What is a Rank? A rank can be assigned to a user to grant or remove certain privileges on your forum. A rank is not Roles &amp;amp; Permissions, which govern content access, moderation abilities, and administrator access.
 A user can only have one rank at a time. Typically, the user&amp;rsquo;s rank is displayed on their discussions and comments just after their name. If a user has a Title, that is displayed separately, after their Rank.</description>
     </item>
     
     <item>
       <title>Reactions</title>
-      <link>http://127.0.0.1:8081/help/reputation/reactions/</link>
+      <link>//docs.vanillaforums.com/help/reputation/reactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/reactions/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/reactions/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  What are reactions? Reactions are a 1-click response to discussions and comments. Using Reactions enables community members to indicate an emotional (&amp;ldquo;Awesome&amp;rdquo;, &amp;ldquo;LOL&amp;rdquo;) or empirical (&amp;ldquo;Agree&amp;rdquo;, &amp;ldquo;Vote Down&amp;rdquo;) response without typing a comment. This introduces feedback that is otherwise missing from a community when members don&amp;rsquo;t have anything to add to a discussion via a comment. Reactions are available via an addon.</description>
     </item>
     
     <item>
       <title>Redirector</title>
-      <link>http://127.0.0.1:8081/help/addons/redirector/</link>
+      <link>//docs.vanillaforums.com/help/addons/redirector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/redirector/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/redirector/</guid>
       <description>When to Use Redirector Redirector is a plug-in that translates URLs from many popular forum platforms into Vanilla-friendly URLs. If you&amp;rsquo;re moving from one of the supported platforms, installing and enabling this plug-in will magically handle maintaining the previous platform&amp;rsquo;s links, which can be of tremendous SEO value.
 Supported Platforms  IPB Jive phpBB punBB smf vBulletin xenforo  Usage  Install and enable the plug-in. Visit a URL from your previous platform against your Vanilla installation.</description>
     </item>
     
     <item>
       <title>Release Notes (Cloud)</title>
-      <link>http://127.0.0.1:8081/help/releases/</link>
+      <link>//docs.vanillaforums.com/help/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/releases/</guid>
+      <guid>//docs.vanillaforums.com/help/releases/</guid>
       <description>Cloud release schedule Our customers on VIP plans receive a product update once per quarter with new features, fixes, and enhancements. We coordinate these releases with our customers and provide custom QA or custom scheduling as required.
 Customers with a success manager receive updates approximately every other week at a fixed time which is not pre-announced. Other plan levels and all staging sites may receive these updates on an ad-hoc basis.</description>
     </item>
     
     <item>
       <title>Roles &amp; Permissions</title>
-      <link>http://127.0.0.1:8081/help/roles-permissions/</link>
+      <link>//docs.vanillaforums.com/help/roles-permissions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/roles-permissions/</guid>
+      <guid>//docs.vanillaforums.com/help/roles-permissions/</guid>
       <description>Overview Roles and Permissions are used in tandem to control what users can see and do in your community. Upon account creation, there are 6 default Roles in your Vanilla account. Each of the default Roles have permissions that you would expect from the Role name:
  Guest: This is a special role that represents inactive sessions in Vanilla. You can use this role to restrict what logged out users see when viewing your forum.</description>
     </item>
     
     <item>
       <title>SAML</title>
-      <link>http://127.0.0.1:8081/help/sso/saml/</link>
+      <link>//docs.vanillaforums.com/help/sso/saml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/saml/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/saml/</guid>
       <description>SSO with SAML: Overview Vanilla has implemented the parts of the SAML 2.0 spec required for SSO. This is done by enabling the SAML SSO addon, and configuring it via its Settings page (Dashboard → Addons → SAML SSO → Settings button).
 SAML accounts are mapped to existing forum accounts by email address, or a new account is created if no match is found.
 Vanilla&amp;rsquo;s SAML mapping is as follows (the right value is the SAML key):</description>
@@ -626,10 +637,10 @@ Vanilla&amp;rsquo;s SAML mapping is as follows (the right value is the SAML key)
     
     <item>
       <title>SAML Connection explained</title>
-      <link>http://127.0.0.1:8081/help/sso/saml/connection-explained/</link>
+      <link>//docs.vanillaforums.com/help/sso/saml/connection-explained/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/saml/connection-explained/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/saml/connection-explained/</guid>
       <description>Creating a new SAML connection When creating a new SAML connection you will need to fill the following fields:
 Connection ID This field is the new of your connexion and is used to distinguish it from other potential SSO connexion.
 Entity ID The name of your SAML entity. It can be anything but is often the URL of your site.
@@ -638,20 +649,20 @@ Site Name A short name for the site. This is displayed on the SSO Sign In button
     
     <item>
       <title>SEO</title>
-      <link>http://127.0.0.1:8081/help/seo/</link>
+      <link>//docs.vanillaforums.com/help/seo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/seo/</guid>
+      <guid>//docs.vanillaforums.com/help/seo/</guid>
       <description>Search Engine Optimizations Vanilla subscribes to common sense, vetted principles for improving the findability of your site and its content. We employ no &amp;ldquo;tricks&amp;rdquo; because we believe they ultimately hurt your traffic and reputation.
 Curation Having a team dedicated to the curation of your forum is critical to its success. Concisely edited discussion titles, clearly-expressed first posts, and moving discussions to their most-appropriate category are highly effective search engine optimization techniques.</description>
     </item>
     
     <item>
       <title>Salesforce</title>
-      <link>http://127.0.0.1:8081/help/addons/salesforce/</link>
+      <link>//docs.vanillaforums.com/help/addons/salesforce/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/salesforce/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/salesforce/</guid>
       <description>Overview This plugin allows you to:
  Link your Salesforce account to your Vanilla user profile. Create cases and leads from discussions. View leads on Vanilla users profile.  Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
 Setup Configure Application in Salesforce  Log into your Salesforce Account Create new Connected App in Salesforce  Build → Create → Apps → Connected Apps → New Fill the required fields Connected App Name, API Name, Contact Email Enable OAuth Settings Set a Callback URL by appending /profile/salesforceconnect to the end of your forum&amp;rsquo;s URL.</description>
@@ -659,10 +670,10 @@ Setup Configure Application in Salesforce  Log into your Salesforce Account Crea
     
     <item>
       <title>Seamless Setup</title>
-      <link>http://127.0.0.1:8081/help/sso/jsconnect/seamless/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/jsconnect/seamless/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/seamless/</guid>
       <description>Seamless SSO with jsConnect jsConnect uses javascript to allow cross-domain single-signon with another site. We provide several client libraries to help you implement jsConnect on your site. If your site has been programmed in a language that doesn&amp;rsquo;t have a client library than this is documentation is for you.
 Please note that this is technical documentation and requires knowledge programming to understand.
 Functions You&#39;ll Need jsConnect makes use of some functions that are available in most modern programming languages.</description>
@@ -670,69 +681,69 @@ Functions You&#39;ll Need jsConnect makes use of some functions that are availab
     
     <item>
       <title>Setting up SSL (https)</title>
-      <link>http://127.0.0.1:8081/help/cloud/ssl/</link>
+      <link>//docs.vanillaforums.com/help/cloud/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/ssl/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/ssl/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Setting up SSL (https) with Vanilla Cloud Vanilla offers SSL support in Corporate plans and above. In order for us to to enable SSL for your forum, you will need to provide Vanilla with the following:
 Certificates start like this: -----BEGIN CERTIFICATE-----  Private keys start like this: -----BEGIN RSA PRIVATE KEY-----   The SSL Certificate for your forum&amp;rsquo;s domain in PEM format.</description>
     </item>
     
     <item>
       <title>Single Sign-On (SSO)</title>
-      <link>http://127.0.0.1:8081/help/sso/</link>
+      <link>//docs.vanillaforums.com/help/sso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/</guid>
       <description>Single Sign-On overview Single sign-on (SSO) is how to let your users sign on to a third-party system (like a Vanilla Forum) without needing a separate username and password.
 In broad terms, an SSO solution defines how two systems securely communicate the identity of a user that is switching between them. In the context of Vanilla, that means the forum securely talking to your site or identity provider to see if a user is signed in, and then automatically using that identity.</description>
     </item>
     
     <item>
       <title>Smart Embed</title>
-      <link>http://127.0.0.1:8081/help/posting/smart-embed/</link>
+      <link>//docs.vanillaforums.com/help/posting/smart-embed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/posting/smart-embed/</guid>
+      <guid>//docs.vanillaforums.com/help/posting/smart-embed/</guid>
       <description>Smart Embed Vanilla automatically embeds content from many social media sites. When creating a post, simply paste the URL into the editor, like so:
 If the URL is from a supported site and has the proper identifier, the content will automatically embed into the post body when published. While some sites offer different types of embed codes, unrecognized parameters may stop Vanilla from correctly parsing the URL. Using the methods below will ensure your content is correctly embedded.</description>
     </item>
     
     <item>
       <title>Social Connect Plugins</title>
-      <link>http://127.0.0.1:8081/help/addons/social/</link>
+      <link>//docs.vanillaforums.com/help/addons/social/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/social/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/social/</guid>
       <description>Social Connect Plugins Vanilla Forums integrates with a number of social applications that you can use as SSO solutions. Learn more about configuring these applications to work with your forum in this section.</description>
     </item>
     
     <item>
       <title>Spam</title>
-      <link>http://127.0.0.1:8081/help/moderation/spam/</link>
+      <link>//docs.vanillaforums.com/help/moderation/spam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/spam/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/spam/</guid>
       <description>Spam Prevention Vanilla is equipped with several layers of SPAM prevention. While automated tools do most of the work, we encourage you to be vigilant and to enlist your membership to report any suspected spam.
 Spam Detection Vanilla includes 2 spam detection plugins: StopForumSpam and Akismet. These can be turned on in your Dashboard from the Addons page. * Akismet: this plugin feeds your posts through the Akismet spam detection algorythm which looks at several factors including live data to determine if a post is spam.</description>
     </item>
     
     <item>
       <title>Staging Site</title>
-      <link>http://127.0.0.1:8081/help/cloud/staging/</link>
+      <link>//docs.vanillaforums.com/help/cloud/staging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/staging/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/staging/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Staging Site Overview For higher plan levels, we provide a separate staging forum. You can use this account for testing addons, features, and theme changes before they reach your production site. Your customer success manager will provide this account for you upon request.
 Test data We do not typically use your staging forum as the destination for your test migration.</description>
     </item>
     
     <item>
       <title>Support</title>
-      <link>http://127.0.0.1:8081/help/cloud/support/</link>
+      <link>//docs.vanillaforums.com/help/cloud/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/cloud/support/</guid>
+      <guid>//docs.vanillaforums.com/help/cloud/support/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Cloud Support We provide professional support exclusively for our cloud clients. Because of this, we require the forum owner to request support, or to specifically authorize other users to receive support.
 Support is available by:
  Using the &amp;ldquo;Support&amp;rdquo; form in your Dashboard. Visiting the official support forum at https://support.vanillaforums.com. Sign in with the same email you used to register for cloud hosting.</description>
@@ -740,50 +751,50 @@ Support is available by:
     
     <item>
       <title>Tagging</title>
-      <link>http://127.0.0.1:8081/help/addons/tagging/</link>
+      <link>//docs.vanillaforums.com/help/addons/tagging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/tagging/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/tagging/</guid>
       <description>Overview Tagging is a feature that allows users to add keywords to discussions. For public communities, tags help label specific content for improved findability. When used with advanced search, they help isolate content by a relevant topic and improve results. Tagging also has a theme module, which can serve as site navigation.
 Enabling Tagging Tagging is not enabled by default for new communities, it will need to be toggled on by and administrator.</description>
     </item>
     
     <item>
       <title>Technical Overview</title>
-      <link>http://127.0.0.1:8081/help/sso/jsconnect/overview/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/jsconnect/overview/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/overview/</guid>
       <description>jsConnect For jsConnect to work you&amp;rsquo;ll put some code on your site that identifies your users in a way that Vanilla can understand. Vanilla then requests this information when the user wants to sign in and synchronizes the user with Vanilla. This is done via JSONP, which allows us to send your cookies from your site to you and obtain login information.
 Vanilla&amp;rsquo;s web-based single sign on (SSO) has 2 parts:</description>
     </item>
     
     <item>
       <title>Twitter</title>
-      <link>http://127.0.0.1:8081/help/addons/social/twitter/</link>
+      <link>//docs.vanillaforums.com/help/addons/social/twitter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/social/twitter/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/social/twitter/</guid>
       <description>Twitter Twitter Connect allows users to sign in using their Twitter account. You must register your application with Twitter for this plugin to work.
 Setting up social login in Twitter Connect  Register Vanilla with Twitter at: https://apps.twitter.com/app/new Set the Callback URL by appending /entry/twauthorize to the end of your forum’s URL. (If your forum is at example.com/forum, your Callback URL would be http://example.com/forum/entry/twauthorize). After registering, copy the &amp;ldquo;Consumer Key&amp;rdquo; and &amp;ldquo;Consumer Secret&amp;rdquo; into your Twitter plugin settings page from your Vanilla dashboard.</description>
     </item>
     
     <item>
       <title>Universal Comments</title>
-      <link>http://127.0.0.1:8081/help/comments/</link>
+      <link>//docs.vanillaforums.com/help/comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/comments/</guid>
+      <guid>//docs.vanillaforums.com/help/comments/</guid>
       <description>Vanilla Comments Vanilla comments allow any website with a unique content id to add a commenting system that can seamlessly integrate with their Vanilla community. Comments made on content on their website will create discussions in their community. Also any comment made on the forum discussion will be reflected back under the content.
 What are Universal Comments? We made Comment integration easy with WordPress (learn more about that here.), but we also wanted to make it possible to add comments to any site where you can identify unique content.</description>
     </item>
     
     <item>
       <title>Upgrading from Warnings</title>
-      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/upgrading-from-warnings/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/upgrading-from-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/upgrading-from-warnings/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/upgrading-from-warnings/</guid>
       <description>Warnings &amp;amp; Notes is version 2 The first version of this addon was titled simply &amp;ldquo;Warnings&amp;rdquo;. It did not include the User Notes feature. It had more granular controls for Warning a user with particular point levels and durations.
 We recommend all users disable the &amp;ldquo;Warnings&amp;rdquo; addon if they still have it and immediately enable the &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; addon instead.
 Why does &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; have less granular settings?</description>
@@ -791,20 +802,20 @@ Why does &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; have less granular setti
     
     <item>
       <title>Using Comments</title>
-      <link>http://127.0.0.1:8081/help/integrations/wordpress/using-comments/</link>
+      <link>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/integrations/wordpress/using-comments/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</guid>
       <description>Transition to Vanilla Comments Vanilla doesn&amp;rsquo;t have access to your WordPress comments, so simply turning off WP&amp;rsquo;s comments and turning on Vanilla&amp;rsquo;s would hide all your existing comments. There&amp;rsquo;s 3 ways to go about remedying this.
 The first is to import all your WordPress comments to Vanilla. You will need need the XML export from your WordPress Dashboard to do this. VanillaForums.com clients may request this as an additional service via support or their sales representative.</description>
     </item>
     
     <item>
       <title>Using Ranks as Incentives</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-as-incentives/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-as-incentives/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-as-incentives/</guid>
       <description>Using Ranks: Incentives You can use Ranks as an incentive for members to participate by rewarding them for more and better participation.
 Example Case What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.
 Gaining points on your site is done thru addons such as Badges and Reactions.</description>
@@ -812,20 +823,20 @@ Gaining points on your site is done thru addons such as Badges and Reactions.</d
     
     <item>
       <title>Using Ranks to Defeat Spam or Abuse</title>
-      <link>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
+      <link>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
+      <guid>//docs.vanillaforums.com/help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse/</guid>
       <description>Using Ranks: Spam Ranks can be used to limit the ability of spammers to take advantage of your site and protect members from abuse. To do this, limit the abilities of your newest users until they have been proven their value to the community.
 Who is this for? This guide is for communities currently having spam problems that have already tried other automated filtering solutions like Akismet and Stop Forum Spam.</description>
     </item>
     
     <item>
       <title>Using Web Fonts</title>
-      <link>http://127.0.0.1:8081/help/appearance/custom-theme/webfont/</link>
+      <link>//docs.vanillaforums.com/help/appearance/custom-theme/webfont/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/appearance/custom-theme/webfont/</guid>
+      <guid>//docs.vanillaforums.com/help/appearance/custom-theme/webfont/</guid>
       <description>Using Web Fonts The easiest way to change the font in the base theme is to use a web font. You will have to add a link to the font in the theme HTML and target the
 For example, to change the font to the Google Font Lato:
  Get the link snippet from fonts.google.com: &amp;lt;link href=&amp;quot;https://fonts.googleapis.com/css?family=Lato&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt; Get the CSS rule: font-family: &#39;Lato&#39;, sans-serif; Go to HTML tab on the Customize Theme page of the Vanilla Dashboard Add the font link snippet above in between the  tags Add the following to the CSS tab: body {font-family: &#39;Lato&#39;, sans-serif;}  Notes: * Knowledge of CSS is required to use the CSS customization features of Vanilla * If you would like to install a font that is not available as a webfont, please contact Vanilla support.</description>
@@ -833,30 +844,30 @@ For example, to change the font to the Google Font Lato:
     
     <item>
       <title>Vanilla Pop</title>
-      <link>http://127.0.0.1:8081/help/addons/vanilla-pop/</link>
+      <link>//docs.vanillaforums.com/help/addons/vanilla-pop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/vanilla-pop/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/vanilla-pop/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Email Interaction Vanilla Pop is a feature of Vanilla&amp;rsquo;s Enterprise forums that allows you to interact with your forum through email.
  With Vanilla Pop you can: Reply to an emailed discussion on the forum or through email. Have conversations through email, but keep a record on Vanilla.  Your Forum&amp;rsquo;s Email Address The top of the page tells you your forum&amp;rsquo;s email address.</description>
     </item>
     
     <item>
       <title>Vanilla Pop with Site Hub</title>
-      <link>http://127.0.0.1:8081/help/addons/vanilla-pop/site-hub/</link>
+      <link>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/vanilla-pop/site-hub/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/vanilla-pop/site-hub/</guid>
       <description>This feature is only available on Vanilla Cloud Learn More...  Differences Vanilla Pop works in much the same way on the hub as it does on regular sites. The node email addresses are slightly different and there are a few more features which are detailed below.
 Node Email Addresses Each node&amp;rsquo;s email address is comprised of two parts: The node slug and the hub slug seperated by a dot, followed by a vanillaforums.</description>
     </item>
     
     <item>
       <title>Warning a User</title>
-      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/warning-a-user/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/warning-a-user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/warning-a-user/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/warning-a-user/</guid>
       <description>Warning a User You can warn a user from their profile, or from a post that they’ve made. Warnings may be given by users with the permission Garden.Moderation.Manage or Moderation.Warnings.Add (if present).
 Profile Warning To warn a user from their profile click on their edit profile drop down. There should be an item called Warn.
 Warn from a Post You can warn a user for a post they’ve made. To do this click on the post’s flag menu and click Warn.</description>
@@ -864,29 +875,29 @@ Warn from a Post You can warn a user for a post they’ve made. To do this click
     
     <item>
       <title>Warnings and Notes</title>
-      <link>http://127.0.0.1:8081/help/moderation/warnings-and-notes/</link>
+      <link>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/moderation/warnings-and-notes/</guid>
+      <guid>//docs.vanillaforums.com/help/moderation/warnings-and-notes/</guid>
       <description>What are Warnings? Warnings can be given to users by moderators for behavior that is not appropriate in the community. Warnings use a points system that increases a user’s warning level with successive warnings until the warnings expire. Once users reach certain points thresholds they can be jailed or banned.
 What are Notes? User notes are notes attached to individual users that only moderators can add and see. They allow moderators to keep track of information about users that may be important to other moderators.</description>
     </item>
     
     <item>
       <title>WishList Integration</title>
-      <link>http://127.0.0.1:8081/help/integrations/wordpress/wishlist/</link>
+      <link>//docs.vanillaforums.com/help/integrations/wordpress/wishlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/integrations/wordpress/wishlist/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/wordpress/wishlist/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WordPress Integration</title>
-      <link>http://127.0.0.1:8081/help/integrations/wordpress/</link>
+      <link>//docs.vanillaforums.com/help/integrations/wordpress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/integrations/wordpress/</guid>
+      <guid>//docs.vanillaforums.com/help/integrations/wordpress/</guid>
       <description>Wordpress Integration Vanilla&amp;rsquo;s integration to Wordpress lets you do a few things:
  SSO from Wordpress to Vanilla Use Vanilla as a commenting system on your Wordpress blog Add a widget to your Wordpress site.  Vanilla plugin for Wordpress You can find the Wordpress plugin here.
 Integration Setup Instructions Integration instructions can be found here.</description>
@@ -894,10 +905,10 @@ Integration Setup Instructions Integration instructions can be found here.</desc
     
     <item>
       <title>Zendesk</title>
-      <link>http://127.0.0.1:8081/help/addons/zendesk/</link>
+      <link>//docs.vanillaforums.com/help/addons/zendesk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/addons/zendesk/</guid>
+      <guid>//docs.vanillaforums.com/help/addons/zendesk/</guid>
       <description>Overview This plugin allows you to:
  Link your Zendesk account to your Vanilla user profile. Submit users&amp;rsquo; discussions and comments as tickets to your hosted Zendesk.  Setup If you already have an account you need to enable API Access for this plugin to work.
  Login to your Zendesk Site. Go to the Admin Setting. Under Channels Select API. Select the OAuth Clients. Add a client. Complete the form.</description>
@@ -905,10 +916,10 @@ Integration Setup Instructions Integration instructions can be found here.</desc
     
     <item>
       <title>jsConnect</title>
-      <link>http://127.0.0.1:8081/help/sso/jsconnect/</link>
+      <link>//docs.vanillaforums.com/help/sso/jsconnect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/jsconnect/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/jsconnect/</guid>
       <description>Why jsConnect? SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of time, and generally is not feasible for small-to-medium business owners.
 If you have a website that stores your user&amp;rsquo;s identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we&amp;rsquo;ve abstracted most of the work to our side of the connection, and provide sample code for making your side.</description>
     </item>

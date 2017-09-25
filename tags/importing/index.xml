@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Importing on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/importing/</link>
+    <link>//docs.vanillaforums.com/tags/importing/</link>
     <description>Recent content in Importing on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/importing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/importing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building new porters</title>
-      <link>http://127.0.0.1:8081/developer/importing/build/</link>
+      <link>//docs.vanillaforums.com/developer/importing/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/build/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/build/</guid>
       <description> Building a new porter file We don&amp;rsquo;t support your forum? Here are some tips for getting started rolling your own.
  Copy an existing class, like class.smf.php and rename it. Start simple. Get a working porter for users, categories, discussions, and comments before expanding its scope.  </description>
     </item>
     
     <item>
       <title>Importing</title>
-      <link>http://127.0.0.1:8081/developer/importing/</link>
+      <link>//docs.vanillaforums.com/developer/importing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/</guid>
       <description>Importing to Vanilla Already have a community on another platform? Great! We have a tool called Vanilla Porter that can help you migrate from many other popular platforms.
 Download Vanilla Porter
 Vanilla Porter is a tool that you can upload to your current web server to run in your web browser. It exports any platform to a generic format that the &amp;ldquo;Import&amp;rdquo; option in your new Vanilla Forum can read.</description>
@@ -32,20 +32,20 @@ Vanilla Porter is a tool that you can upload to your current web server to run i
     
     <item>
       <title>Supported platforms</title>
-      <link>http://127.0.0.1:8081/developer/importing/support/</link>
+      <link>//docs.vanillaforums.com/developer/importing/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/support/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/support/</guid>
       <description>Supported platforms Migration tools are available for the following platforms. All migration tools minimally support users, categories, discussions, and comments. For a current per-platform, per-feature support list, see the Vanilla Porter.
 PHP forums  Vanilla 1 phpBB 2-3 vBulletin 3-5 bbPress 1 SimplePress 1 Simple Machines 1-2 PunBB 1 IP.Board 3 XenForo Joomla Kunena Drupal Advanced Forum MyBB esoTalk Expression Engine  ASP / .NET forums Requires conversion to MySQL first.</description>
     </item>
     
     <item>
       <title>Vanilla Porter</title>
-      <link>http://127.0.0.1:8081/developer/importing/porter/</link>
+      <link>//docs.vanillaforums.com/developer/importing/porter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/developer/importing/porter/</guid>
+      <guid>//docs.vanillaforums.com/developer/importing/porter/</guid>
       <description>Migrating a forum to Vanilla Vanilla Porter is the export tool for converting your legacy forum to Vanilla. The process is four steps:
  Export your old forum data to a special &amp;ldquo;Porter file&amp;rdquo;. Create a new Vanilla forum. Import the Porter file in Vanilla&amp;rsquo;s Dashboard. Verify &amp;amp; finalize your new forum.  Vanilla Porter requires a MySQL database and PHP 5.3+ with zlib support enabled.
 Before migrating We recommend these best practices:</description>

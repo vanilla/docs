@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oauth on Vanilla Forums Documentation</title>
-    <link>http://127.0.0.1:8081/tags/oauth/</link>
+    <link>//docs.vanillaforums.com/tags/oauth/</link>
     <description>Recent content in Oauth on Vanilla Forums Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://127.0.0.1:8081/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//docs.vanillaforums.com/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OAuth</title>
-      <link>http://127.0.0.1:8081/help/sso/oauth/</link>
+      <link>//docs.vanillaforums.com/help/sso/oauth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://127.0.0.1:8081/help/sso/oauth/</guid>
+      <guid>//docs.vanillaforums.com/help/sso/oauth/</guid>
       <description>SSO with OAuth: Overview Vanilla currently provides OAuth2 integrations with these third-party services as ready-to-go addons:
  Facebook Twitter LinkedIn Google+  Because OAuth 2.0 is an SSO framework and not a narrowly defined protocol (see OAuth 2.0 Spec), custom services work is typically required to set up an OAuth solution for your forum. In an attempt to minimize the amount of custom services required to create SSO integrations, Vanilla has created a base class that can easily be extended by custom plugins.</description>
     </item>

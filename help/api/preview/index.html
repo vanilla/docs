@@ -107,10 +107,10 @@ n.id = i;
                 <div class="column column-3"></div>
                 <div id="title" class="column column-9">
                     <div class="docs-title">
-    <h1>Analytics</h1>
+    <h1>API Preview Release</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/help/analytics/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/api/preview.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -194,25 +194,10 @@ n.id = i;
 	    
 
 
-    <li  class="active nest">
+    <li  class=" nest">
         <a href="//docs.vanillaforums.com/help/analytics/">Analytics</a>
     </li>
     
-    
-        
-        
-
-        
-            <ul class="nav-tier2">
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/help/analytics/advanced-analytics/">Advanced Analytics </a>
-                </li>
-                
-                
-
-	    </ul>
-        
     
 	    
 
@@ -302,43 +287,56 @@ n.id = i;
 
                 
 
-<h2 id="what-are-vanilla-analytics">What Are Vanilla Analytics?</h2>
+<h2 id="api-v2-overview">API v2 Overview</h2>
 
-<p>Vanilla comes with analytics allows forum administrators to review vital activity on their forums over a specific time periods.</p>
+<p>Vanilla is presenting a preview release of our upcoming API v2. This is a complete rewrite and rearchitecture of our API to be a low-level feature of our platform rather than a wrapper around our existing product.</p>
 
-<p><img src="//docs.vanillaforums.com/img/help/analytics/analytics-overview.png" alt="Example of dashboard page" /></p>
-
-<h2 id="how-to-use-vanilla-statistics">How to use Vanilla Statistics</h2>
-
-<p>The Vanilla Statistics plugin is a display layer for the data that is sent to our analytics server.  We generate and present you with the statistics in a graphical format for the following:</p>
-
-<h2 id="how-to-use-vanilla-analytics">How to use Vanilla Analytics</h2>
-
-<p>You can get an overview of your community&rsquo;s analytics by clicking on the &lsquo;Dashboard Site Overview&rsquo; tab.  For more in-depth data, click on the &lsquo;Analytics&rsquo; tab. (The advanced analytics seen in this tab are available on certain subscription plans only.)</p>
-
-<p>The site overview will present you with the following:</p>
+<p>This preview exposes access to only the most core Vanilla resources:</p>
 
 <ul>
-<li>Number of page views generated for the time period</li>
-<li>Number of new users that have joined the community for the time period</li>
-<li>Number of new discussions that have been created for the time period</li>
-<li>Number of new comments that have been created for the time period</li>
+<li>Users</li>
+<li>Roles</li>
+<li>Discussions</li>
+<li>Comments</li>
+<li>Categories</li>
+<li>Conversations (private messages)</li>
+<li>Messages (text banners)</li>
+<li>Tokens (basic API access management)</li>
 </ul>
 
-<p>Using the tabs at the top, you can view daily or monthly stats. The arrows will let you move the time period you are viewing.</p>
+<p>The full API v2 release will introduce parity with the API v1 feature set, and will trigger the beginning of a long sunset period for that API which we will formally announce at that time.</p>
 
-<p>Vanilla Statistics will also create a rolling table of data on the following:</p>
+<p>We will continue to add new endpoints to API v2 throughout 2018 to increase your access to functionality in Vanilla&rsquo;s community platform.</p>
 
-<p>Using the tabs at the top, you can view daily or monthly analytics. The arrows will let you move the time period you are viewing.</p>
+<h2 id="getting-the-api-v2-preview">Getting the API v2 preview</h2>
 
-<p>Vanilla will also create a rolling table of data on the following:</p>
+<p>All cloud customers below the VIP level now have access to the API v2 endpoints.</p>
 
-<ul>
-<li>Most Active Users</li>
-<li>Most popular discussions discussions</li>
-</ul>
+<p>Contact your Customer Success Manager or email support@vanillaforums.com to enable your customized, in-dashboard docs.</p>
 
-<p>This too can be modified by changing the time period, you select to view.</p>
+<p><strong>No special steps will be necessary if you simply want to wait for the full API v2 release.</strong></p>
+
+<p>If you are at the VIP level, you already have the release on your staging site. If you want the API preview release in production, talk to your Customer Success Manager to coordinate a new product release to your cluster.</p>
+
+<h2 id="using-the-api-v2-preview">Using the API v2 preview</h2>
+
+<p>You may continue using API v1 alongside API v2.</p>
+
+<h3 id="get-a-token">Get a token</h3>
+
+<p>As an administrator, mannually visit the URL <code>/profile/token</code> to generate a personal access token. In API v2, all tokens are assigned to a user account. There is no global token as in API v1. <strong>Your API v1 token will not work.</strong></p>
+
+<h3 id="read-the-docs">Read the docs</h3>
+
+<p>We dynamically generate API v2 docs in your dashboard so they are specific to your currently enabled addons. They are available as &ldquo;API v2&rdquo; under the &ldquo;Technical&rdquo; section of the &ldquo;Settings&rdquo; tab once you have requested them to be enabled (see above).</p>
+
+<h3 id="test-carefully">Test carefully!</h3>
+
+<p>The examples and &ldquo;Try it now!&rdquo; options really do fire immediately against your database. If you decide to &ldquo;test&rdquo; the discussion <strong>Delete</strong> endpoint, it really will delete it, and no, there&rsquo;s no undo!</p>
+
+<h3 id="report-back">Report back</h3>
+
+<p>The point of this preview is to gather feedback and find issues. Please contact support when you find them, and provide reproduction steps and examples whenever possible. We want to deliver the best product possible and we highly value your help in doing so.</p>
 
 
             
