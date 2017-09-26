@@ -59,7 +59,6 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
 3. From the root of the folder, use `yarn` to install the project: `$ yarn install`
-4. Verifiy that you have `hugo-cli` install globally: `$ yarn install -g hugo-cli`
 
 That should be it, you now have a working copy of the docs.
 
@@ -79,3 +78,12 @@ When you're done writing docs or making edits, just create a pull-request agains
 Publishing is easy. Just build the site statically using `$ grunt build` and then push it to the `gh-pages` branch using `$ grunt push`. 
 
 Note: **Having built the site using the live editor is NOT SUFFICIENT for a push**, and will likely break the deployment. Always deploy a freshly built site using `grunt build`.
+
+#### Troubleshooting
+
+"-bash: grunt: command not found" error? Try `npm install -g grunt-cli`.
+
+"Warning: Error: not found: hugo Use --force to continue." error? Try `brew install hugo`.
+
+"Warning: Task "sass" not found. Use --force to continue." error? Try `npm install node-sass`. Still a problem or already had that? Maybe try `npm rebuild node-sass`.
+
