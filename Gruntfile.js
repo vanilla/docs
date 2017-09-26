@@ -32,7 +32,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['build/js/**/*.js'],
-                tasks: ['jshint', 'concat']
+                tasks: ['js']
             }
         },
 
@@ -208,6 +208,14 @@ module.exports = function (grunt) {
      */
     grunt.registerTask('push', [
         'gh-pages:push'
+    ]);
+
+    /*
+     * Javscript tasks
+     */
+    grunt.registerTask('js', [
+        'concat',
+        'jshint'
     ]);
 
     /*
