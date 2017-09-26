@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 tasks: ['sass_globbing', 'sass', 'postcss']
             },
             hugo: {
-                files: ['content/**', 'layouts/**', 'data/**', 'static/**', '!static/js/lunr-index.json'],
+                files: ['content/**', 'layouts/**', 'data/**', 'static/**', 'archetypes/**', 'config.yaml', 'config-dev.yaml', '!static/js/lunr-index.json'],
                 tasks: ['hugo:dev', 'index']
             },
             js: {
