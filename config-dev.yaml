@@ -1,6 +1,9 @@
 baseurl: "http://127.0.0.1:8081"
 title: "Vanilla Forums Documentation"
-builddrafts: false
+buildDrafts: true
+buildFuture: true
+verbose: true
+watch: false
 
 contentdir: "content"
 layoutdir: "layouts"

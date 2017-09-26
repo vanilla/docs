@@ -29,6 +29,10 @@ module.exports = function (grunt) {
             hugo: {
                 files: ['content/**', 'layouts/**', 'data/**', 'static/**', '!static/js/lunr-index.json'],
                 tasks: ['hugo:dev', 'index']
+            },
+            js: {
+                files: ['build/js/**/*.js'],
+                tasks: ['jshint', 'concat']
             }
         },
 
@@ -107,24 +111,22 @@ module.exports = function (grunt) {
             }
         },
 
-//        filerev: {
-//            options: {
-//                algorithm: 'md5',
-//                length: 8
-//            },
-//            json: {
-//                src: 'public/js/*.json'
-//            },
-//            images: {
-//                src: 'public/img/**/*.{svg,png,jpg}'
-//            },
-//            assets: {
-//                src: [
-//                    'public/js/**/*.js',
-//                    'public/css/**/*.css'
-//                ]
-//            }
-//        },
+        jshint: {
+            options: {
+                force: false,
+                jshintrc: 'build/js/.jshintrc'
+            },
+            all: ['build/js/src/**/*.js']
+        },
+
+        concat: {
+            dist: {
+                src: [
+                    'build/js/**/*.js'
+                ],
+                dest: 'static/js/custom.js'
+            }
+        },
 
         lunr_index: {
             options: {
@@ -169,8 +171,7 @@ module.exports = function (grunt) {
         'hugo',
         'css',
         'js',
-        'index',
-        'varnish'
+        'index'
     ]);
 
     /*
@@ -186,24 +187,6 @@ module.exports = function (grunt) {
         'postcss'
     ]);
 
-    /*
-     * This task would perform javascript related tasks
-     */
-    grunt.registerTask('js', [
-
-    ]);
-
-    /*
-     * This task cleans up the generated HTML
-     */
-    grunt.registerTask('varnish', [
-//        'useminPrepare',
-//        'concat',
-//        'uglify',
-//        'cssmin',
-//        'filerev',
-//        'usemin'
-    ]);
 
     grunt.registerTask('index', [
         'lunr_index'
@@ -312,10 +295,9 @@ module.exports = function (grunt) {
         args = [
             '--destination=./' + options.dest
         ];
+
         if (target === 'dev') {
             args.push('--config=' + path.resolve('./config-dev.yaml'));
-            args.push('--buildDrafts=true');
-            args.push('--buildFuture=true');
         } else {
             args.push('--config=' + path.resolve('./config.yaml'));
         }
