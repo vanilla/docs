@@ -48,6 +48,7 @@
     "build": "grunt",
     "edit": "grunt edit",
     "index": "grunt index",
-    "watch": "grunt watch"
+    "watch": "grunt watch",
+    "push": "grunt push"
   }
 }

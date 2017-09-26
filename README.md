@@ -58,7 +58,8 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 	* OS X: `$ brew install yarn`
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
-3. From the root of the folder, use `yarn` to install the project: `$ yarn install`
+3. Install Hugo `brew install hugo` [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/)
+4. From the root of the folder, use `yarn` to install the project: `$ yarn install`
 
 That should be it, you now have a working copy of the docs.
 
@@ -75,7 +76,7 @@ When you're done writing docs or making edits, just create a pull-request agains
 
 #### Publishing (for maintainers)
 
-Publishing is easy. Just build the site statically using `$ grunt build` and then push it to the `gh-pages` branch using `$ grunt push`. 
+Publishing is easy. Just build the site statically using `$ yarn run build` and then push it to the `gh-pages` branch using `$ yarn run push`. 
 
 Note: **Having built the site using the live editor is NOT SUFFICIENT for a push**, and will likely break the deployment. Always deploy a freshly built site using `grunt build`.
 
@@ -85,5 +86,5 @@ Note: **Having built the site using the live editor is NOT SUFFICIENT for a push
 
 "Warning: Error: not found: hugo Use --force to continue." error? Try `brew install hugo`.
 
-"Warning: Task "sass" not found. Use --force to continue." error? Try `npm install node-sass`. Still a problem or already had that? Maybe try `npm rebuild node-sass`.
+"Warning: Task "sass" not found. Use --force to continue." error? Try `npm install -g node-sass`. Still a problem or already had that? Maybe try `npm rebuild node-sass`.
 

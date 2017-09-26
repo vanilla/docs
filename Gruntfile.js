@@ -40,7 +40,7 @@ module.exports = function (grunt) {
             docs: {
                 options: {
                     hostname: '127.0.0.1',
-                    port: 8081,
+                    port: 1313,
                     protocol: 'http',
                     base: 'public',
                     livereload: true
