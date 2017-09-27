@@ -37,7 +37,6 @@
     "grunt-sass": "^1.2.0",
     "grunt-sass-globbing": "^1.5.1",
     "grunt-usemin": "^3.1.1",
-    "hugo-cli": "^0.4.2",
     "hugo-lunr": "0.0.4",
     "jshint": "^2.9.5",
     "load-grunt-tasks": "^3.5.0",
