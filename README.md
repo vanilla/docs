@@ -67,8 +67,6 @@ That should be it, you now have a working copy of the docs.
 
 The docs can be viewed live while you edit them, which makes writing new content really easy. 
 
-**If you've never ran this command, make sure you run `$ yarn run build` once before. Also note watch waits for changes. You'll need to make one before it runs through its tasks.**
-
 Simply enable editing mode: `$ yarn run edit`
 You should now have a locally accessible webserver providing the docs site at `http://127.0.0.1:8081`. This site should be livereload-enabled, so changes you make locally should trigger a page reload on the site. Now create some docs!
 
