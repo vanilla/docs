@@ -175,6 +175,23 @@ module.exports = function (grunt) {
     ]);
 
     /*
+     * Builds the whole site from scratch - in dev mode
+     *
+     * hugo: prepares public/ HTML from content
+     * css: builds css from scss
+     * js: prepares javascript
+     * index: runs lunr index
+     * clean: revisions and minifies files
+     */
+    grunt.registerTask('buildDev', [
+        'clean',
+        'hugo:dev',
+        'css',
+        'js',
+        'index'
+    ]);
+
+    /*
      * This task builds and prepares css
      *
      * sass_globbing: supports wildcard @import statements
@@ -196,10 +213,12 @@ module.exports = function (grunt) {
      * Allows live editing
      *
      * connect: creates a server
+     * buildDev: build site in dev mode
      * watch: waits for changes to source files and re-runs grunt tasks
      */
     grunt.registerTask('edit', [
         'connect',
+        'buildDev',
         'watch'
     ]);
 
