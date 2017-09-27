@@ -76,9 +76,7 @@ When you're done writing docs or making edits, just create a pull-request agains
 
 #### Publishing (for maintainers)
 
-Publishing is easy. Just build the site statically using `$ yarn run build` and then push it to the `gh-pages` branch using `$ yarn run push`. 
-
-Note: **Having built the site using the live editor is NOT SUFFICIENT for a push**, and will likely break the deployment. Always deploy a freshly built site using `grunt build`.
+Publishing is easy. Just commit your changes to master and wait for them to be automatically deployed live. **DO NOT MANUALLY DEPLOY THIS REPOSITORY**. You'll break it.
 
 #### Troubleshooting
 
