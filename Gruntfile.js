@@ -100,6 +100,15 @@ module.exports = function (grunt) {
             }
         },
 
+        autoprefixer: {
+            options: {
+                browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"]
+            },
+            dist: {
+                src: ['static/css/**/*.css']
+            }
+        },
+
         imagemin: {
             dist: {
                 files: [{

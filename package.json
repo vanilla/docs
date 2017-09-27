@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/vanilla/docs#readme",
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
+    "autoprefixer": "^7.1.4",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
@@ -53,6 +53,7 @@
     "watch": "grunt watch",
     "push": "grunt push",
     "clean": "grunt clean",
+    "autoprefixer": "grunt autoprefixer",
     "js": "grunt js"
   }
 }
