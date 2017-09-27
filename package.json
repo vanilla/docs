@@ -48,6 +48,7 @@
   "scripts": {
     "build": "grunt",
     "edit": "grunt edit",
+    "buildDev": "grunt buildDev",
     "index": "grunt index",
     "watch": "grunt watch",
     "push": "grunt push",
