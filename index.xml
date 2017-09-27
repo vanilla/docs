@@ -121,6 +121,17 @@ Viewing Notes To view a user’s notes go to their profile. There will be a note
     </item>
     
     <item>
+      <title>Additional Settings</title>
+      <link>//docs.vanillaforums.com/help/addons/advanced-editor/additional-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/advanced-editor/additional-settings/</guid>
+      <description>Advanced settings Advanced Editor has different modes to help you accommodate the needs of your community.
+By default, all forums are set to use Markdown as their post format.
+Wysiwyg WYSIWYG stands for &amp;ldquo;What you see is what you get&amp;rdquo;. It is a familiar and intuitive format for most end users. In this mode, pictures and text formatting will display in the editor as the user composes their post, eliminating the need for them to understand formatting tags.</description>
+    </item>
+    
+    <item>
       <title>Addons</title>
       <link>//docs.vanillaforums.com/help/addons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -138,6 +149,16 @@ Vanilla is structured such that its baseline installation only contains features
       <guid>//docs.vanillaforums.com/help/analytics/advanced-analytics/</guid>
       <description>Advanced Analytics Overview Available on certain plans as an add-on, Advanced Analytics give you further insights into your community.
  Metrics: Metrics a single number that quantify something for the selected time range. Leaderboards: Leaderboards are tables showing the ranking of specific items for the selected time range. The &amp;ldquo;previous&amp;rdquo; rankings are calculated using the rankings of the previous time range. Graphs: Graphs can come in multiple forms! Line, Area, Pie chart and Bar graphs use the selected time range to group the fetched information.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Editor</title>
+      <link>//docs.vanillaforums.com/help/addons/advanced-editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/addons/advanced-editor/</guid>
+      <description>Overview Advance Editor adds formatting and style controls that can be utilized while composing a post. The editor can be set to use WYSIWYG, simple HTML, Markdown, TextEx or BBCode. This plugin is available on all plan levels and can easily be toggled on in the &amp;lsquo;Addon&amp;rsquo; menu of the Dashboard.
+Important Functions Once enabled, Advanced Editor provides your users with familiar formatting tools. Here is a quick rundown of the functions that are currently available:</description>
     </item>
     
     <item>

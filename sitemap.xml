@@ -57,6 +57,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/help/addons/advanced-editor/additional-settings/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/tags/addons/</loc>
     <priority>0</priority>
   </url>
@@ -67,6 +71,15 @@
   
   <url>
     <loc>//docs.vanillaforums.com/help/analytics/advanced-analytics/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/tags/advanced-editor/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/help/addons/advanced-editor/</loc>
   </url>
   
   <url>
@@ -160,12 +173,12 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/categories/</loc>
+    <loc>//docs.vanillaforums.com/tags/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/categories/</loc>
+    <loc>//docs.vanillaforums.com/categories/</loc>
     <priority>0</priority>
   </url>
   
@@ -178,12 +191,12 @@
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/categories/cloud/</loc>
+    <loc>//docs.vanillaforums.com/tags/cloud/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//docs.vanillaforums.com/tags/cloud/</loc>
+    <loc>//docs.vanillaforums.com/categories/cloud/</loc>
     <priority>0</priority>
   </url>
   

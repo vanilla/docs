@@ -784,25 +784,17 @@ a:hover {
   list-style-type: none;
   margin: 0px;
   padding-left: 0;
+  line-height: 1.2;
 }
 
 .docs-content #sidebar ul li {
   margin-left: 20px;
 }
 
-.docs-content #sidebar ul li:first-child {
-  padding-top: 8px;
-}
-
-.docs-content #sidebar ul li:last-child {
-  padding-bottom: 8px;
-}
-
 .docs-content #sidebar ul li a {
   display: block;
   color: #808A8F;
-  padding: 8px 10px 8px 20px;
-  margin-left: -20px;
+  padding: 10px 4px;
 }
 
 .docs-content #sidebar ul li.active a {
@@ -812,8 +804,8 @@ a:hover {
 
 .docs-content #sidebar ul li:before {
   position: relative;
-  left: -14px;
-  top: 10px;
+  left: -12px;
+  top: 11px;
   display: block;
   width: 0px;
   height: 0px;
@@ -852,6 +844,10 @@ a:hover {
 
 .docs-content #sidebar ul.nav-tier1 > ul {
   border-bottom: 1px dotted #E4E4E4;
+}
+
+.docs-content #sidebar ul.nav-tier3 {
+  margin-left: 20px;
 }
 
 .docs-parameters .docs-parameter.parameter-required td.parameter-name {

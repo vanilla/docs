@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vanilla Forums, create an online community that your customers will love">
+        <meta name="author" content="Vanilla Community">
+
+        <title>Vanilla Forums Documentation</title>
+
+        <link href="//docs.vanillaforums.com/css/docs.css" rel="stylesheet">
+        <link href="//docs.vanillaforums.com/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
+        <script src="//docs.vanillaforums.com/js/search.js"></script>
+
+        <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
+        <style type="text/css">
+            .callout {
+                table-layout: fixed;
+            }
+        </style>
+
+        
+<script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-12713112-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    (function(d, s, i, r) {
+        if (d.getElementById(i)) {
+            return;
+        }
+        var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+n.id = i;
+        n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/95135.js';
+        e.parentNode.insertBefore(n, e);
+    })(document, "script", "hs-analytics", 300000);
+</script>
+
+    </head>
+
+    <body class="docs grid docs-layout-single docs-layout-section-help">
+
+        <header class="docs-header">
+    
+    <div class="row">
+
+        <div class="column column-4">
+            
+            <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
+                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
+                <span class="docs-docs-tag">Docs</span>
+            </a>
+            
+        </div>
+        
+        <div class="column column-8">
+            <div class="vertical-group docs-header-tray">
+                <div class="docs-header-search js-search">
+    <div class="docs-search-wrap">
+        <i class="fa fa-search" ></i>
+        <input class="docs-search js-search-input" id="docs-search" />
+    </div>
+    <ul class="docs-search-results js-search-results">
+        <a>
+            <li>
+                <span class="title"></span>
+                <span class="tags"></span>
+            </li>
+        </a>
+    </ul>
+</div>
+                <div class="docs-cta">
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+        <div class="docs-title-wrapper">
+            <div class="row">
+                <div class="column column-3"></div>
+                <div id="title" class="column column-9">
+                    <div class="docs-title">
+    <h1>Advanced Editor</h1>
+    
+    <div class="docs-page docs-improve">
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/advanced-editor/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+    </div>
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="docs-content">
+    <div class="row">
+        <div id="nav" class="column column-3">
+            <aside id="sidebar">
+    <div class="docs-nav nav-collapse">
+        
+        <ul class="sidebar-menu nav-tier1">
+
+
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/getting-started/">Getting Started</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/">Help and Training</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/appearance/">Appearance</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/forum-settings/">Forum Settings</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="active nest">
+        <a href="//docs.vanillaforums.com/help/addons/">Addons</a>
+    </li>
+    
+    
+        
+        
+
+        
+            <ul class="nav-tier2">
+	    
+                <li class="active nest">
+                    <a href="//docs.vanillaforums.com/help/addons/advanced-editor/">Advanced Editor </a>
+                </li>
+                
+                
+                    
+                    
+               
+                    
+                        <ul class="nav-tier3">
+
+                            <li class="">
+                                <a href="//docs.vanillaforums.com/help/addons/advanced-editor/additional-settings/">Additional Settings</a>
+                            </li>
+
+                            
+		    
+                        </ul>
+                    
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/advanced-search/">Advanced Search </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/reputation/badges/">Badges </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/forum-merge/">Forum Merge </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/gigya/">Gigya Sign In </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/addons/groups/">Groups </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/mailchimp-push/">MailChimp Push </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/pockets/">Pockets </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/qna/">Questions and Answers </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/reputation/ranks/">Ranks </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/reputation/reactions/">Reactions </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/redirector/">Redirector </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/salesforce/">Salesforce </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/addons/social/">Social Connect Plugins </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/tagging/">Tagging </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class=" nest">
+                    <a href="//docs.vanillaforums.com/help/addons/vanilla-pop/">Vanilla Pop </a>
+                </li>
+                
+                
+
+	    
+	    
+                <li class="">
+                    <a href="//docs.vanillaforums.com/help/addons/zendesk/">Zendesk </a>
+                </li>
+                
+                
+
+	    </ul>
+        
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/ideation/">Ideation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/moderation/">Moderation</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/sso/">Single Sign-On (SSO)</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/analytics/">Analytics</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/integrations/">Integrations</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/roles-permissions/">Roles &amp; Permissions</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/notifications/">Notifications</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/comments/">Universal Comments</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class="">
+        <a href="//docs.vanillaforums.com/help/seo/">SEO</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/multisite/">Multisite</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/posting/">Posting</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/cloud/">Premium Services</a>
+    </li>
+    
+    
+	    
+
+
+    <li  class=" nest">
+        <a href="//docs.vanillaforums.com/help/releases/">Release Notes (Cloud)</a>
+    </li>
+    
+    
+	    
+
+
+
+        </ul>
+        
+    </div>
+</aside>
+        </div>
+
+        <div id="content" class="column column-9">
+
+            
+
+                
+
+<h2 id="overview">Overview</h2>
+
+<p>Advance Editor adds formatting and style controls that can be utilized while composing a post. The editor can be set to use WYSIWYG, simple HTML, Markdown, TextEx or BBCode. This plugin is available on all plan levels and can easily be toggled on in the &lsquo;Addon&rsquo; menu of the Dashboard.</p>
+
+<p><img src="https://images.v-cdn.net/docs/Posting_Editor.png" alt="A full view of editor" /></p>
+
+<h2 id="important-functions">Important Functions</h2>
+
+<p>Once enabled, Advanced Editor provides your users with familiar formatting tools. Here is a quick rundown of the functions that are currently available:</p>
+
+<h3 id="text-formatting">Text Formatting</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_Bold-Italic-Strike.PNG" alt="The bold, italic, and strikethrough buttons" /></p>
+
+<p>This first set of buttons allows you to add bold, italic, or strike through tags to selected text. The standard keyboard shortcuts, ctrl+b, ctrl+i, and ctrl+s also work when you have begun typing inside the editor.</p>
+
+<h3 id="lists">Lists</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_List.PNG" alt="Number List, Bullet List" /></p>
+
+<p>These two buttons give the user the ability to start a list - using either numbers or bullet-points to mark each item in the list. After hitting one of those two options, Advanced Editor will jump you to the first point in your list. After writing the first point, hitting enter will bring you to the next point. Once you’re done with your list, just hit enter twice, and it will let you work on other aspects of your post.</p>
+
+<h3 id="headings-and-special-text-formatting">Headings and Special Text Formatting</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_HeadingFormats.PNG" alt="The format button and its menu" /></p>
+
+<p>This button provides access to a list of formats that can be applied to text and serve various functions. First, the two headings will allow for some basic text size changes:</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_HeadingFormatExamples.PNG" alt="Heading Examples" /></p>
+
+<p>Quoting creates a block quote from your currently selected text. Additionally, you can turn on the &ldquo;Quoting&rdquo; addon in your dashboard to display a button on each post in your community. Quoting a post directly will automatically link back to the comment, and user.</p>
+
+<p>Content placed in a spoiler will be hidden until the ‘Show’ button is clicked. The Spoiler format is not visible while editing a post, even in wysiwyg. You can interact with the toggle once the post is published.</p>
+
+<p>The code tag allows you to place code in your post without formatting conflicts. The way this displays on your forum will depend on your theme. There is an addon called &ldquo;Syntax Prettfyier&rdquo; that adds enhanced options to how code is displayed in your forum, allowing you to override the default CSS and add numbered lines, if desired.</p>
+
+<h3 id="emoji">Emoji</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_Emojis.PNG" alt="Emoji" /></p>
+
+<p>This button contains a list of emoji that can be used within a post. You can find a list of current emoji, <a href="https://blog.vanillaforums.com/features/the-complete-list-vanilla-emoji/">here</a>.</p>
+
+<h3 id="adding-urls">Adding URLs</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_URL.PNG" alt="URL" /></p>
+
+<p>This button allows the user to create a hyperlink within their post. After highlighting the text that needs to be a link, the user can click on this button to paste the URL into the form. Once ‘Ok’ is clicked, the highlighted text will become a link to the designated website.</p>
+
+<h3 id="attaching-images-and-uploading-files">Attaching Images and Uploading Files</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_FileUpload2.PNG" alt="Attach File Tool" /></p>
+
+<p>This next icon indicates the Attach File tool. With Advanced Editor, there are a few easy ways to attach files to a post.</p>
+
+<p>The easiest way to upload is the drag-and-drop method. Dragging a file from your computer&rsquo;s file explorer and hovering it over your new post will display an overlay, letting you know that you can drop it into the editor. Dropping it into the editor will immediately upload the file.</p>
+
+<p>You&rsquo;ll know that the file upload was successful when you see the name of the file appear in a small box underneath the comment box. Clicking the small X next to the file will remove it from the post. You can click the icon again to place it back, or save the post to remove it permanently.</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_ExampleFile.PNG" alt="Successful File Upload" /></p>
+
+<p>After you post your comment with an attached file, other users will see the upload appear underneath your comment in box labeled with the file&rsquo;s name. Clicking on the box starts an automatic download of that file to the user&rsquo;s computer.</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_ImageUpload.PNG" alt="Attach Image Tool" /></p>
+
+<p>Next to attach file is the Attach Image tool. The Attach Image tool works almost identically to the File Upload tool above, except that when a user uploads an image to a post, the image is automatically embedded. .JPG, .PNG and .GIF files will be displayed.</p>
+
+<p>This menu also allows you to take a URL from an image hosted on another site and embed that in the post directly.</p>
+
+<p>Below is an animated example of the drag-And-drop method of image attachments. If the editor is in WYSIWYG mode, the image will appear in the editor just as it will when its posted:</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_DragAndDropExample.gif" alt="Drag and Drop Image Example" /></p>
+
+<p>For HTML, BBC and Markdown modes, the appropriate markup for an image will be inserted where the cursor is, and the image will appear when the post is published. File types other than images that are dropped in will appear underneath the comment box.</p>
+
+<h3 id="changing-a-post-s-body-alignment">Changing A Post&rsquo;s Body Alignment</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_Alignment.PNG" alt="Alignment" /></p>
+
+<p>These familiar buttons allow users to align text within their post to the left, center, or to the right, depending on their need or preference. Alignment cannot be adjusted when using Markdown, so these buttons wont appear if Advanced Editor is set to that format.</p>
+
+<h3 id="html-view">HTML View</h3>
+
+<p><img src="https://images.v-cdn.net/docs/AE_HTMLView.PNG" alt="HTML View Toggle" /></p>
+
+<p>This last button toggles HTML view for posts created in WYSIWYG for more advanced editing and format correction.</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_HTMLViewExample.PNG" alt="HTML View" /></p>
+
+<p>You can return to the normal WYSIWYG view by hitting the HTML view toggle again.</p>
+
+<h2 id="additional-settings">Additional settings</h2>
+
+<p>If you are an administrator, you can change the settings for the editor in the Dashboard. Click the Settings icon next to advanced-editor on your addon list, or navigate directly to <code>/settings/editor</code>.</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_DashboardSettings.PNG" alt="Advanced Editor Dashboard Settings" /></p>
+
+<p>A quick breakdown of these additional settings can be found, <a href="http://docs.vanillaforums.com/help/posting/additional-settings/">here</a>.</p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+<li><a href="http://docs.vanillaforums.com/help/posting/">More information on posting</a></li>
+<li><a href="http://docs.vanillaforums.com/help/posting/emoji/">Using Emoji</a></li>
+<li><a href="http://docs.vanillaforums.com/help/posting/smart-embed/">Using Smart Embed</a></li>
+</ul>
+
+
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+        <div class="docs-platform">
+    
+    <div class="row">
+    
+        <div class="column column-3"></div>
+        <div class="column column-9">
+            <div class="docs-platform-choice choice-cloud">
+                
+                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
+                <div class="choice-details">
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        We believe that online communities should be intuitive, engaging and true to your brand.
+                    </p>
+                </div>
+                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+        
+        <footer class="docs-footer">
+    
+    <div class="row">
+        
+        <div class="column column-6">
+            <div class="docs-copyright">
+    Copyright &copy 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</div>
+        </div>
+        
+        <div class="column column-6">
+            <div class="docs-links">
+    <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
+</div>
+        </div>
+        
+    </div>
+</footer>
+        
+    </body>
+    
+</html>
