@@ -160,11 +160,11 @@ module.exports = function (grunt) {
     /*
      * Builds the whole site from scratch
      *
+     * clean: revisions and minifies files
      * hugo: prepares public/ HTML from content
      * css: builds css from scss
      * js: prepares javascript
      * index: runs lunr index
-     * clean: revisions and minifies files
      */
     grunt.registerTask('build', [
         'clean',
