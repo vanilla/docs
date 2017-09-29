@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1024" viewBox="0 0 1440 1024">
+  <defs>
+    <linearGradient id="faceted_bg-a" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%" stop-opacity=".161"/>
+    </linearGradient>
+    <linearGradient id="faceted_bg-b" x1="0%" y1="50%" y2="50%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%" stop-opacity=".161"/>
+    </linearGradient>
+    <linearGradient id="faceted_bg-c" x1="100%" x2="0%" y1="50%" y2="50%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%" stop-opacity=".161"/>
+    </linearGradient>
+    <linearGradient id="faceted_bg-d" x1="50%" x2="50%" y1="100%" y2="0%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%" stop-opacity=".161"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" opacity=".43">
+    <polygon fill="url(#faceted_bg-a)" points="1167 143 873.9 192.75 873.9 192.75 933 405"/>
+    <polygon fill="url(#faceted_bg-b)" points="1123.18 388.05 1167 143 933 405"/>
+    <polygon fill="url(#faceted_bg-c)" points="1069 691 930.18 615.66 927 853 1069 823.26 1069 823.26"/>
+    <polygon fill="url(#faceted_bg-c)" points="1069 823.26 1069 823.26 1309 773 1069 691"/>
+    <polygon fill="url(#faceted_bg-c)" points="1069 691 1123.18 388.05 933 405"/>
+    <polygon fill="url(#faceted_bg-b)" points="511 855 927 853 809.58 684.52"/>
+    <polygon fill="url(#faceted_bg-c)" points="930.18 615.66 809.58 684.52 927 853 930.18 615.66"/>
+    <polygon fill="url(#faceted_bg-c)" points="930.18 615.66 930.18 615.66 933 405 697 523 809.58 684.52"/>
+    <polygon fill="url(#faceted_bg-c)" points="697 523 511 855 809.58 684.52"/>
+    <polygon fill="url(#faceted_bg-d)" points="873.9 192.75 697 523 933 405"/>
+    <polygon fill="url(#faceted_bg-c)" points="748.63 178.06 748.63 178.06 426.07 28.45 535 375"/>
+    <polygon fill="url(#faceted_bg-b)" points="697 523 748.63 178.06 535 375"/>
+    <polygon fill="url(#faceted_bg-d)" points="524.45 585.98 697 523 535 375"/>
+    <polygon fill="url(#faceted_bg-c)" points="133 767 297 669 237 413"/>
+    <polygon fill="url(#faceted_bg-b)" points="930.18 615.66 1069 691 933 405"/>
+    <polygon fill="url(#faceted_bg-d)" points="426.07 28.45 173 121 237 413 426.07 28.45"/>
+    <polygon fill="url(#faceted_bg-c)" points="535 375 297 669 524.45 585.98"/>
+    <polygon fill="url(#faceted_bg-c)" points="1069 691 1309 773 1205 557.56"/>
+    <polygon fill="url(#faceted_bg-c)" points="524.45 585.98 511 855 697 523"/>
+    <polygon fill="url(#faceted_bg-a)" points="426.07 28.45 237 413 535 375"/>
+    <polygon fill="url(#faceted_bg-c)" points="237 413 297 669 535 375"/>
+    <polygon fill="url(#faceted_bg-d)" points="297 669 511 855 524.45 585.98"/>
+    <polygon fill="url(#faceted_bg-c)" points="297 669 297 1024 390.45 1024 511 855"/>
+    <polygon fill="url(#faceted_bg-d)" points="133 767 229.71 1024 297 1024 297 669"/>
+    <polygon fill="url(#faceted_bg-d)" points="506.61 1024 602.03 1024 511 855"/>
+    <polygon fill="url(#faceted_bg-c)" points="0 356.18 0 584.03 237 413"/>
+    <polygon fill="url(#faceted_bg-d)" points="237 413 0 584.03 0 732.35 133 767"/>
+    <polygon fill="url(#faceted_bg-c)" points="0 732.35 0 1014 133 767"/>
+    <polygon fill="url(#faceted_bg-d)" points="0 1014 0 1024 229.71 1024 133 767"/>
+    <polygon fill="url(#faceted_bg-b)" points="390.45 1024 506.61 1024 511 855"/>
+    <polygon fill="url(#faceted_bg-d)" points="511 855 602.03 1024 836.24 1024 927 853"/>
+    <polygon fill="url(#faceted_bg-d)" points="1309 773 1391 983 1440 1019.41 1440 673.19"/>
+    <polygon fill="url(#faceted_bg-d)" points="1069 823.26 1140.5 1024 1238.17 1024 1309 773"/>
+    <polygon fill="url(#faceted_bg-b)" points="1309 773 1238.17 1024 1440 1024 1440 1019.41 1391 983"/>
+    <polygon fill="url(#faceted_bg-c)" points="836.24 1024 993.73 1024 927 853"/>
+    <polygon fill="url(#faceted_bg-b)" points="927 853 993.73 1024 1140.5 1024 1069 823.26"/>
+    <polygon fill="url(#faceted_bg-b)" points="1440 523.9 1440 401.65 1281 483"/>
+    <polygon fill="url(#faceted_bg-c)" points="1440 233.08 1440 79.25 1167 143"/>
+    <polygon fill="url(#faceted_bg-d)" points="173 121 0 251.68 0 356.18 237 413"/>
+    <polygon fill="url(#faceted_bg-a)" points="1440 79.25 1440 0 1229.36 0 1167 143"/>
+    <polygon fill="url(#faceted_bg-c)" points="1167 143 1229.36 0 973.45 0 873.9 192.75"/>
+    <polygon fill="url(#faceted_bg-b)" points="1069 691 1205 557.56 1123.18 388.05 1281 483 1440 401.65 1440 359.82 1123.18 388.05"/>
+    <polygon fill="url(#faceted_bg-c)" points="1205 557.56 1309 773 1440 673.19 1440 523.9 1281 483"/>
+    <polygon fill="url(#faceted_bg-c)" points="1123.18 388.05 1205 557.56 1281 483"/>
+    <polygon fill="url(#faceted_bg-d)" points="1123.18 388.05 1440 359.82 1440 233.08 1167 143"/>
+    <polygon fill="url(#faceted_bg-c)" points="426.07 28.45 385.14 0 0 0 0 1.52 173 121"/>
+    <polygon fill="url(#faceted_bg-c)" points="503.88 0 385.14 0 426.07 28.45"/>
+    <polygon fill="url(#faceted_bg-a)" points="0 1.52 0 251.68 173 121"/>
+    <polygon fill="url(#faceted_bg-a)" points="748.63 178.06 748.63 178.06 748.63 178.06 697 523 873.9 192.75 820.24 0 775.28 0"/>
+    <polygon fill="url(#faceted_bg-c)" points="426.07 28.45 748.63 178.06 775.28 0 503.88 0 426.07 28.45"/>
+    <polygon fill="url(#faceted_bg-d)" points="873.9 192.75 973.45 0 820.24 0 873.9 192.75"/>
+  </g>
+</svg>
