@@ -1,0 +1,22 @@
+<div id="nav" class="column column-panel">
+
+    {{ if (eq (lower .Type) "api") }}
+        {{ partial "menu/api.html" . }}
+    {{ end }}
+
+
+    {{ if (eq (lower .Type) "apiv2") }}
+        {{ partial "menu/apiv2.html" . }}
+    {{ end }}
+
+
+    {{ if (eq (lower .Type) "help") }}
+        {{ partial "menu/help.html" . }}
+    {{ end }}
+
+
+    {{ if (eq (lower .Type) "developer") }}
+        {{ partial "menu/developer.html" . }}
+    {{ end }}
+
+</div>

@@ -108,3 +108,18 @@ body {
         
     }
 }
+
+.content {
+    display: block;
+    margin: auto;
+    padding: 0 $site-padding;
+    max-width: $site-widthPadded;
+}
+
+.column-main {
+    flex-grow: 1;
+}
+
+.column-panel {
+    width: $panel-width;
+}

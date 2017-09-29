@@ -1,12 +1,11 @@
 {{ partial "header.html" . }}
 
 <div class="docs-content">
+    <div class="panelBackgroundBleed"></div>
     <div class="row">
-        <div id="nav" class="column column-3">
-            {{ partial "menu/developer.html" . }}
-        </div>
+        {{ partial "panel.html" . }}
 
-        <div id="content" class="column column-9">
+        <div id="content" class="column column-main">
 
             {{ if .Params.toc }}
 
@@ -16,14 +15,11 @@
                     </div>
                 </div>
 
-                {{ .Content }}
-
-            {{ else }}
-
-                {{ .Content }}
-
             {{ end }}
-            
+
+            {{ .Content }}
+
+            in list
         </div>
     </div>
 </div>

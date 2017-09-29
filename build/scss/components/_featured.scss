@@ -61,3 +61,20 @@
     }
     
 }
+
+.featured-loader {
+    @include spinnerLoader;
+}
+
+.featured-items {
+    .featured-loader {
+        display: none;
+    }
+
+    &.isLoading {
+        .featured-loader {
+            display: block;
+            margin: 20px 0;
+        }
+    }
+}

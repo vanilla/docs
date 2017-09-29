@@ -19,6 +19,7 @@
         <script src="/js/lunr-index.json" id="search-manifest" type="application/json"></script>
         <script src="/js/vendor/lunr.js"></script>
         <script src="/js/search.js"></script>
+        <script src="/js/custom.js"></script>
 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -34,13 +35,21 @@
 
     <body class="docs grid docs-layout-single docs-layout-section-{{ .Section }}">
 
-        {{ partial "header/slimheader.html" . }}
+        <div class="stickyFooter">
+            {{ partial "header/slimheader.html" . }}
 
-        <div class="docs-title-wrapper">
-            <div class="row">
-                <div class="column column-3"></div>
-                <div id="title" class="column column-9">
-                    {{ partial "title.html" . }}
+            <div class="docs-title-wrapper">
+                <div class="row">
+                    <div class="column column-3"></div>
+                    <div id="title" class="column column-9">
+                        {{ partial "title.html" . }}
+
+
+                    </div>
                 </div>
             </div>
-        </div>
+
+
+
+
+

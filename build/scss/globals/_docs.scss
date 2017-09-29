@@ -9,7 +9,6 @@ body {
     .row {
         margin: 0px auto;
         width: 100%;
-        max-width: 1140px;
     }
 }
 
@@ -18,4 +17,9 @@ body {
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
+}
+
+.stickyFooter {
+    min-height: calc(100vh - #{$footer-minHeight});
+    background: white;
 }

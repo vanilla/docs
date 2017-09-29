@@ -3,10 +3,15 @@ title: Help and Training
 tags:
 - Training
 category: "help"
+layout: "_single"
 menu:
   help:
     identifier: help
     weight: 1
+version:
+  added: 1
+  deprecated: 2
+  removed: 3
 ---
 
 ## Welcome!
