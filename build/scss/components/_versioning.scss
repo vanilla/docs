@@ -1,0 +1,13 @@
+.versionings {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.versioning {
+  display: block;
+  font-size: $versioning-fontSize;
+  color: $versioning-color;
+  margin: 0;
+}
