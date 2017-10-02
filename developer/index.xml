@@ -501,7 +501,7 @@ Pre-defined Routes There are four pre-defined routes that have special meaning. 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/schemas/</guid>
-      <description>Schemas Garden\Schema In Vanilla, the Garden\Schema class is used to whitelist parameters for a data structure and validate array of data. It is primarily used for filtering input to API endpoints.
+      <description>Garden\Schema In Vanilla, the Garden\Schema class is used to whitelist parameters for a data structure and validate array of data. It is primarily used for filtering input to API endpoints.
 The constructor of Garden\Schema accepts an associative array, describing the expected parameters. The keys of the array define the name of a parameter and its flags (e.g. data type, is required). The values of the array provide a description for each parameter.</description>
     </item>
     

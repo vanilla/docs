@@ -746,7 +746,8 @@ If the URL is from a supported site and has the proper identifier, the content w
       
       <guid>//docs.vanillaforums.com/help/moderation/spam/</guid>
       <description>Spam Prevention Vanilla is equipped with several layers of SPAM prevention. While automated tools do most of the work, we encourage you to be vigilant and to enlist your membership to report any suspected spam.
-Spam Detection Vanilla includes 2 spam detection plugins: StopForumSpam and Akismet. These can be turned on in your Dashboard from the Addons page. * Akismet: this plugin feeds your posts through the Akismet spam detection algorythm which looks at several factors including live data to determine if a post is spam.</description>
+Spam Detection Vanilla includes 2 spam detection plugins: StopForumSpam and Akismet. These can be turned on in your Dashboard from the Addons page.
+ Akismet: this plugin feeds your posts through the Akismet spam detection algorythm which looks at several factors including live data to determine if a post is spam.</description>
     </item>
     
     <item>
