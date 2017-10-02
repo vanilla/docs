@@ -43,7 +43,12 @@
                 </a>
 
                 <div class="vertical-group docs-header-tray">
-                    {{ partial "header/search.html" . }}
+                    <svg class="vanillaLogo">
+                        <title>Vanilla</title>
+                        <use class="logo-horizontal" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-horizontal"></use>
+                    </svg>
+
+
                     {{ partial "header/cta.html" . }}
                 </div>
             </header>
@@ -53,38 +58,17 @@
 
             <main class="landing-main">
                 <div class="docs-welcome">
-                    <div class="row">
+                    <h1 class="pageTitle">
+                        Welcome to the Vanilla Forums<br/>
+                        Documentation repository
+                    </h1>
 
-                        <div class="column column-2"></div>
-                        <div class="column column-8">
-                            <div class="docs-welcome-hero">
-                                <h1 class="pageTitle">
-                                    Welcome to the Vanilla Forums<br/>
-                                    Documentation repository
-                                </h1>
-                                <h2>
-                                    How can we help?
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="column column-2"></div>
-
-                    </div>
+                    {{ partial "header/search.html" . }}
                 </div>
 
                 <div class="docs-chooser">
-                    <div class="row">
-
-                        <div class="column column-1"></div>
-                        <div class="column column-5">
-                            {{ partial "chooser/help.html" . }}
-                        </div>
-                        <div class="column column-5">
-                            {{ partial "chooser/developer.html" . }}
-                        </div>
-                        <div class="column column-1"></div>
-
-                    </div>
+                    {{ partial "chooser/help.html" . }}
+                    {{ partial "chooser/developer.html" . }}
                 </div>
 
                 <div class="docs-api-gutter">

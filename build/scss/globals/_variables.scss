@@ -20,7 +20,7 @@ $panelSlate:            #F2F5FA !default;
 
 $pageTitle-color:       #555A62 !default;
 $pageTitle-fontSize:    30px !default;
-$fontWeight-bold:  600 !default;
+$fontWeight-bold:       600 !default;
 
 
 $regularText:           #505A5F !default;
@@ -56,13 +56,18 @@ $defaultEasing:         ease-in-out;
 $site-padding:          32px;
 $site-width:            1400px;
 $site-widthPadded:      $site-width + 2 * $site-padding;
-$landing-width:         678px;
-$landing-widthPadded:   $landing-width + 2 * $site-padding;
 
 $footer-minHeight:      28px;
 $header-minHeight:      60px;
 $panel-width:           250px;
 $panel-bg:              #fafbfb;
+
+// Landing Page
+
+$landing-blockWidth:    327px;
+$landing-blockSpace:    24px;
+$landing-width:         $landing-blockWidth + $landing-blockWidth + $landing-blockSpace;
+$landing-widthPadded:   $landing-width + 2 * $site-padding;
 
 
 // Versioning
