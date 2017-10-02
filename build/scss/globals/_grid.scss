@@ -14,10 +14,6 @@ body {
         box-sizing: border-box;
     }
     
-    .row {
-        display: flex;
-    }
-    
     .column {
         display: block;
     }
@@ -114,12 +110,23 @@ body {
     margin: auto;
     padding: 0 $site-padding;
     max-width: $site-widthPadded;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
 }
 
 .column-main {
     flex-grow: 1;
+    max-width: calc(100% - #{$panel-width});
+    background-color: white;
 }
 
 .column-panel {
     width: $panel-width;
+    flex-basis: $panel-width;
+    min-height: 100%;
 }

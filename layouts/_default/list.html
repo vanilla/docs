@@ -1,26 +1,35 @@
 {{ partial "header.html" . }}
+<!-- Template: List -->
 
 <div class="docs-content">
     <div class="panelBackgroundBleed"></div>
-    <div class="row">
-        {{ partial "panel.html" . }}
+    <div class="content">
+        <main class="row mainContent">
+            {{ partial "panel.html" . }}
 
-        <div id="content" class="column column-main">
+            <div id="content" class="column column-main">
 
-            {{ if .Params.toc }}
+                {{ partial "breadcrumbs.html" . }}
+                {{ partial "title.html" . }}
+                {{ partial "versioning.html" .Params }}
 
-                <div class="docs-toc-wrapper">
-                    <div id="toc" class="column column-3 docs-toc {{ if gt (len .TableOfContents) 2500 }}compact{{ end }}">
-                        {{ .TableOfContents }}
+                {{ if .Params.toc }}
+
+                    <div class="docs-toc-wrapper">
+                        <div id="toc" class="column column-3 docs-toc {{ if gt (len .TableOfContents) 2500 }}compact{{ end }}">
+                            {{ .TableOfContents }}
+                        </div>
                     </div>
+
+                {{ end }}
+
+                <div class="userContent">
+                    {{ .Content }}
                 </div>
 
-            {{ end }}
-
-            {{ .Content }}
-
-            in list
-        </div>
+                {{ partial "platforms.html" . }}
+            </div>
+        </main>
     </div>
 </div>
 

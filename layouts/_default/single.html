@@ -1,13 +1,18 @@
 {{ partial "header.html" . }}
+<!-- Template: Single -->
 
 <div class="docs-content">
     <div class="panelBackgroundBleed"></div>
     <div class="content">
-        <div class="row">
+        <main class="row mainContent">
 
             {{ partial "panel.html" . }}
 
             <div id="content" class="column column-main">
+
+                {{ partial "breadcrumbs.html" . }}
+                {{ partial "title.html" . }}
+                {{ partial "versioning.html" .Params }}
 
                 {{ if .Params.toc }}
 
@@ -19,11 +24,13 @@
 
                 {{ end }}
 
-                {{ .Content }}
+                <div class="userContent">
+                    {{ .Content }}
 
-                in single
+                    {{ partial "platforms.html" . }}
+                </div>
             </div>
-        </div>
+        </main>
     </div>
 </div>
 

@@ -6,6 +6,10 @@ menu:
   developer:
     identifier: api
     weight: 1
+versioning:
+  deprecated: 1.4b
+  added: 1.4a
+  removed: 1.4c
 ---
 
 Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.
@@ -13,6 +17,7 @@ Vanilla has had a read-only ReSTful API for some time, but until now, no formal 
 ## Configuring Simple API
 
 Simple API is a plugin. Once you've enabled the plugin you’ll see a new link in your dashboard called "API". This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.
+
 
 ### Access Token
 

@@ -4,25 +4,30 @@ $lightBlue:             $vanillaLightBlue;
 
 $vanillaPink:           #F52C6E !default;
 $vanillaLightPink:      #F6447F !default;
-$lightPink:             $vanillaLightPink;
-$faintPink:             #fff3f6 !default;
+$lightPink:             $vanillaLightPink !default;
+$faintPink:             rgba(199, 37, 78, 0.1) !default;
 
 $gradientPink:          #F5296D;
 $gradientBlue:          #0291DB;
-$gradientMid:           #7B5DA4;
+$gradientMid: #0f255a;
 
 $body:                  #F5F8FA !default;
 
 $panelDark:             #333333 !default;
 $panelDarkDim:          #232323 !default;
-$panelLight:            #F5F8FA !default;
+$panelLight:            #EBEBEB !default;
 $panelSlate:            #F2F5FA !default;
+
+$pageTitle-color:       #555A62 !default;
+$pageTitle-fontSize:    30px !default;
+$fontWeight-bold:  600 !default;
+
 
 $regularText:           #505A5F !default;
 $lighterText:           #808A8F !default;
 $lightText:             #A8A9AB !default;
 $ghostText:             #EAEAEA !default;
-$darkText:              #333333 !default;
+$darkText:              #555A62 !default;
 $disabledText:          $lightText !default;
 
 $borderGray:            #959595 !default;
@@ -44,8 +49,6 @@ $panelBlue:             #BBE1F5 !default;
 $panelBlueText:         #0272AC !default;
 
 // Animation
-
-
 $defaultTiming:         .3s;
 $defaultEasing:         ease-in-out;
 
@@ -54,10 +57,15 @@ $site-padding:          32px;
 $site-width:            1400px;
 $site-widthPadded:      $site-width + 2 * $site-padding;
 $footer-minHeight:      28px;
-$panel-width:           226px;
+$header-minHeight:      60px;
+$panel-width:           250px;
+$panel-bg:              #fafbfb;
 
 
 // Versioning
+$fontSize-small:        12px;
+$versioning-color:      #92959a;
 
-$versioning-fontSize: 12px;
-$versioning-color: #92959a;
+// Logos
+$logoHorizontal-width: 115px;
+$logoHorizontal-height: 34.28px;

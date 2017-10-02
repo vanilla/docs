@@ -1,25 +1,12 @@
-.docs.docs-layout-section-developer {
-    .docs-header {
-        background-color: $panelDark;
-            
-        .docs-header-tray {
-            
-            .docs-header-search {
-                
-                .docs-search-wrap {
-                    background: $panelDarkDim;
-                }
-                
-                .docs-search-results {
-                    
-                    li {
+.docs-search-wrap {
+    background: $panelDarkDim;
+}
 
-                        &:hover {
-                            background: $panelDark;
-                        }
-                    }
-                }
-            }
+.docs-search-results {
+    li {
+        &:hover {
+            background: $panelDark;
         }
     }
 }
+

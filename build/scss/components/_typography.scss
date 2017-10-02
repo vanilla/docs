@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Open+Sans:400,400i,600,600i');
+
+
+h1,
+.pageTitle {
+  margin: 0;
+  font-size: 30px;
+  color: $pageTitle-color;
+  font-weight: $fontWeight-bold;
+}
+
+h2 {
+  margin: 0px;
+  color: $vanillaPink;
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 6px;
+
+  em, i {
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+h3 {
+  color: $darkText;
+  font-size: 16px;
+  font-weight: $fontWeight-bold;
+  margin-top: 1.6em;
+}
+
+h4 {
+  color: $vanillaBlue;
+  font-size: 14px;
+  font-weight: normal;
+}

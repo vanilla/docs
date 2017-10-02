@@ -30,18 +30,35 @@
     </head>
 
     <body class="docs grid docs-layout-landing">
-        
-        <div class="docs-cap">
+        <div class="landing-bg"></div>
 
-            {{ partial "header/slimheader.html" . }}
 
+        <header class="landing-header">
+            <a class="vertical-group docs-header-logo" href="/">
+                <svg class="vanillaLogo">
+                    <title>Vanilla</title>
+                    <use class="logo-horizontal" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-horizontal"></use>
+                    <!--<use class="logo-vertical" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-vertical"></use>-->
+                </svg>
+            </a>
+
+            <div class="vertical-group docs-header-tray">
+                {{ partial "header/search.html" . }}
+                {{ partial "header/cta.html" . }}
+            </div>
+        </header>
+
+
+
+
+        <main class="landing-main">
             <div class="docs-welcome">
                 <div class="row">
 
                     <div class="column column-2"></div>
                     <div class="column column-8">
                         <div class="docs-welcome-hero">
-                            <h1>
+                            <h1 class="pageTitle">
                                 Welcome to the Vanilla Forums<br/>
                                 Documentation repository
                             </h1>
@@ -54,48 +71,47 @@
 
                 </div>
             </div>
-            
-        </div>
-        
-        <div class="docs-chooser">
-            <div class="row">
 
-                <div class="column column-1"></div>
-                <div class="column column-5">
-                    {{ partial "chooser/help.html" . }}
-                </div>
-                <div class="column column-5">
-                    {{ partial "chooser/developer.html" . }}
-                </div>
-                <div class="column column-1"></div>
+            <div class="docs-chooser">
+                <div class="row">
 
+                    <div class="column column-1"></div>
+                    <div class="column column-5">
+                        {{ partial "chooser/help.html" . }}
+                    </div>
+                    <div class="column column-5">
+                        {{ partial "chooser/developer.html" . }}
+                    </div>
+                    <div class="column column-1"></div>
+
+                </div>
             </div>
-        </div>
-        
-        <div class="docs-api-gutter">
-            Looking for our <a href="/api">API Docs</a>?
-        </div>
 
-        <div class="docs-footer docs-landing-footer">
-            <div class="row">
-
-                <div class="column column-3"></div>
-                <div class="column column-6">
-                    {{ partial "footer/copyright.html" . }}
-                </div>
-                <div class="column column-3"></div>
-
+            <div class="docs-api-gutter">
+                Looking for our <a href="/api">API Docs</a>?
             </div>
-            <div class="row">
 
-                <div class="column column-3"></div>
-                <div class="column column-6">
-                    {{ partial "footer/links.html" . }}
+            <div class="docs-footer docs-landing-footer">
+                <div class="row">
+
+                    <div class="column column-3"></div>
+                    <div class="column column-6">
+                        {{ partial "footer/copyright.html" . }}
+                    </div>
+                    <div class="column column-3"></div>
+
                 </div>
-                <div class="column column-3"></div>
+                <div class="row">
 
+                    <div class="column column-3"></div>
+                    <div class="column column-6">
+                        {{ partial "footer/links.html" . }}
+                    </div>
+                    <div class="column column-3"></div>
+
+                </div>
             </div>
-        </div>
+        </main>
 
     </body>
 </html>

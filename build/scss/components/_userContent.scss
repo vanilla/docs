@@ -1,0 +1,195 @@
+.userContent {
+  line-height: 1.6;
+
+  h2 {
+    margin: 0;
+    color: $vanillaPink;
+    font-size: 18px;
+    font-weight: $fontWeight-bold;
+
+    em, i {
+      font-style: normal;
+      font-weight: normal;
+    }
+  }
+
+  h3 {
+    color: $darkText;
+    font-size: 16px;
+    font-weight: $fontWeight-bold;
+    margin-top: 1.6em;
+  }
+
+  h4 {
+    color: $vanillaBlue;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1.6em;
+
+    + h2 {
+      margin-top: 30px;
+    }
+  }
+
+  ul, ol {
+    font-size: 14px;
+
+    li {
+      // line-height: 1.4;
+      margin-top: .8em;
+    }
+
+    + h2 {
+      margin-top: 30px;
+    }
+  }
+
+  a {
+    color: $vanillaBlue;
+  }
+
+  pre {
+    background: rgba($panelLight, .2);
+    color: $vanillaPink;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid rgba(#979797, .2);;
+
+    code {
+      background: transparent;
+      padding: 36px 14px;
+      font-size: 14px;
+    }
+
+    + h2 {
+      margin-top: 30px;
+    }
+  }
+
+  code {
+    background: $faintPink;
+    color: $vanillaPink;
+    font-family: "Fira Mono", monospace;
+    font-size: 13px;
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    + h2 {
+      margin-top: 30px;
+    }
+
+    td, th {
+      text-align: left;
+      padding: 16px 8px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    thead {
+      th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $borderDarken;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid $borderDarken;
+        }
+      }
+
+      tr:last-child {
+        td {
+          border: 0px;
+        }
+      }
+    }
+  }
+
+  aside {
+    position: relative;
+    font-size: 12px;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    border-radius: 2px;
+    overflow: hidden;
+
+    p {
+      &:after {
+        position: absolute;
+        display: block;
+
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    &.warning {
+      color: $panelRedText;
+      background-color: $panelRed;
+    }
+
+    &.note {
+      color: $panelYellowText;
+      background-color: $panelYellow;
+    }
+
+    &.cloudfeature {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-weight: bold;
+
+      color: $panelBlueText;
+      background-color: $panelBlue;
+
+      p {
+        margin: 5px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        * {
+          margin-right: 10px;
+        }
+
+        a {
+          border-bottom: 1px dotted $vanillaBlue;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &.nav-edge {
+      position: relative;
+      margin-left: -32px;
+      padding: 0px;
+
+      img {
+        border: 0px;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid $borderDarken;
+  }
+}

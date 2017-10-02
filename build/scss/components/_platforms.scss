@@ -12,7 +12,12 @@
         justify-content: flex-start;
         
         img {
-            margin-right: 30px;
+            margin: {
+                top: 10px;
+                right: 30px;
+            }
+            border: 0;
+            align-self: flex-start;
         }
         
         .choice-details {

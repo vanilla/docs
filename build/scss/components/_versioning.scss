@@ -1,13 +1,18 @@
 .versionings {
   display: block;
-  margin: 0;
   padding: 0;
   list-style: none;
+  margin: {
+    top: 0;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+  }
 }
 
 .versioning {
   display: block;
-  font-size: $versioning-fontSize;
+  font-size: $fontSize-small;
   color: $versioning-color;
   margin: 0;
 }

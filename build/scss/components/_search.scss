@@ -60,3 +60,35 @@
         }
     }
 }
+
+
+.docs-header-search {
+
+    .docs-search-wrap {
+        background: rgba(black, .3);
+        border: 1px solid rgba(255,255,255,0.72);
+        border-radius: 2px;
+        padding: 0px 20px;
+        color: $ghostText;
+    }
+
+    input {
+        border: none;
+        background: transparent;
+        color: $ghostText;
+        height: 33px;
+        width: 100px;
+
+        transition: width 0.2s;
+
+        &:focus {
+            outline: none;
+            width: 200px;
+        }
+    }
+
+    i {
+        margin-left: -10px;
+        font-size: 14px;
+    }
+}

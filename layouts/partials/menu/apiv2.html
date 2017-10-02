@@ -2,8 +2,7 @@
 
 {{ $currentNode := . }}
 {{ range .Site.Menus.apiv2 }}
-
-    <li  class="{{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
         <a href="{{.URL}}">{{.Name}}</a>
     </li>
 
@@ -14,7 +13,7 @@
         {{ if .HasChildren }}
             <ul class="nav-tier2">{{ range .Children }}
 
-                <li class="{{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                     <a href="{{.URL}}">{{ .Name }} </a>
                 </li>
 
@@ -25,7 +24,7 @@
                     {{ if .HasChildren }}
                         <ul class="nav-tier3">{{ range .Children }}
 
-                            <li class="{{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                            <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                 <a href="{{.URL}}">{{ .Name }}</a>
                             </li>
 
@@ -36,7 +35,7 @@
                                 {{ if .HasChildren }}
                                     <ul class="nav-tier4">{{ range .Children }}
 
-                                        <li class="{{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                                        <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                             <a href="{{.URL}}">{{ .Name }} </a>
                                         </li>
 
@@ -47,7 +46,7 @@
                                             {{ if .HasChildren }}
                                                 <ul class="nav-tier5">{{ range .Children }}
 
-                                                    <li class="{{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                                                    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                                         <a href="{{.URL}}">{{ .Name }} </a>
                                                     </li>
 
