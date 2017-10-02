@@ -56,6 +56,9 @@ $defaultEasing:         ease-in-out;
 $site-padding:          32px;
 $site-width:            1400px;
 $site-widthPadded:      $site-width + 2 * $site-padding;
+$landing-width:         678px;
+$landing-widthPadded:   $landing-width + 2 * $site-padding;
+
 $footer-minHeight:      28px;
 $header-minHeight:      60px;
 $panel-width:           250px;

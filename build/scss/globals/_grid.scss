@@ -105,12 +105,17 @@ body {
     }
 }
 
+.contentLanding,
 .content {
     display: block;
     margin: auto;
     padding: 0 $site-padding;
     max-width: $site-widthPadded;
     width: 100%;
+}
+
+.contentLanding {
+    max-width: $landing-widthPadded;
 }
 
 .row {

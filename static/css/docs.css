@@ -183,12 +183,17 @@ body {
   height: 100%;
 }
 
+.contentLanding,
 .content {
   display: block;
   margin: auto;
   padding: 0 32px;
   max-width: 1464px;
   width: 100%;
+}
+
+.contentLanding {
+  max-width: 742px;
 }
 
 .row {

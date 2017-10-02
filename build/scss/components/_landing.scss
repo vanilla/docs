@@ -1,42 +1,37 @@
 .docs-layout-landing {
     background: $body;
+    background: linear-gradient(45deg, $gradientPink 30%, $gradientMid 50%, $gradientBlue 70%);
+    min-height: 100vh;
 
-    .docs-cap {
-        background: linear-gradient(45deg, $gradientBlue 0%, $gradientMid 50%, $gradientPink 100%);
 
         .docs-header {
-            background: transparent;
-            color: white;
+        background: transparent;
+        color: white;
 
-            .docs-search-wrap {
-                background: rgba($borderDark, 0.4);
-            }
+        .docs-search-wrap {
+            background: rgba($borderDark, 0.4);
+        }
+    }
+
+    .docs-welcome {
+        padding: 40px 0px 220px 0px;
+        color: white;
+
+        .column {
+            text-align: center;
         }
 
-        .docs-welcome {
-            padding: 40px 0px 220px 0px;
-            color: white;
-
-            .column {
-                text-align: center;
-            }
-
-            .docs-welcome-hero {
-                width: 100%;
-            }
-
-            h1 {
-                font-size: 36px;
-                font-weight: 300;
-            }
-
-            h2 {
-                margin-top: 30px;
-                font-weight: normal;
-                font-size: 20px;
-                color: $ghostText;
-            }
+        .docs-welcome-hero {
+            width: 100%;
         }
+
+        h2 {
+            margin-top: 30px;
+            font-weight: normal;
+            font-size: 20px;
+            color: $ghostText;
+        }
+
     }
 
     .docs-chooser {
@@ -160,4 +155,19 @@
         // }
     }
 
+}
+
+.landing-bg {
+    position: absolute;
+    opacity: .8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {
+        image: url('../img/svgs/faceted_bg.svg');
+        repeat: no-repeat;
+        position: 50% 50%;
+        size: cover;
+    }
 }
