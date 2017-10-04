@@ -2,6 +2,7 @@
     display: flex;
     align-items: flex-start;
     width: 100%;
+    margin-bottom: 6px;
 
     .docs-improve {
         margin-left: auto;
@@ -24,6 +25,10 @@
             background: white;
             color: $borderGray;
         }
+    }
+
+    + .userContent {
+        margin-top: 25px;
     }
 }
 

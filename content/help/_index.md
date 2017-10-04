@@ -8,10 +8,6 @@ menu:
   help:
     identifier: help
     weight: 1
-version:
-  added: 2.0
-  deprecated: 2.1
-  removed: 2.3
 ---
 
 ## Welcome!
