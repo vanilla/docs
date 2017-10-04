@@ -1,53 +1,53 @@
 {{ partial "menu/header.html" . }}
 
 {{ $currentNode := . }}
-{{ range .Site.Menus.api }}
+{{ range .Site.Menus.developer }}
 
-    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
         <a href="{{.URL}}">{{.Name}}</a>
     </li>
     
-    {{ if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}
+    {{ if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}
         {{ $.Scratch.Set "CurrentMenu" . }}
         {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
         
         {{ if .HasChildren }}
-            <ul class="nav-tier2">{{ range .Children }}
+            <ul class="nav-tier nav-tier2">{{ range .Children }}
 	    
-                <li class="menuItem {{if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                <li class="menuItem {{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                     <a href="{{.URL}}">{{ .Name }} </a>
                 </li>
                 
-                {{ if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}
+                {{ if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}
                     {{ $.Scratch.Set "CurrentMenu" . }}
                     {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
                
                     {{ if .HasChildren }}
-                        <ul class="nav-tier3">{{ range .Children }}
+                        <ul class="nav-tier nav-tier3">{{ range .Children }}
 
-                            <li class="menuItem {{if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                            <li class="menuItem {{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                 <a href="{{.URL}}">{{ .Name }}</a>
                             </li>
 
-                            {{ if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}
+                            {{ if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}
                                 {{ $.Scratch.Set "CurrentMenu" . }}
                                 {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
                                 
                                 {{ if .HasChildren }}
-                                    <ul class="nav-tier4">{{ range .Children }}
+                                    <ul class="nav-tier nav-tier4">{{ range .Children }}
                                         
-                                        <li class="menuItem {{if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                                        <li class="menuItem {{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                             <a href="{{.URL}}">{{ .Name }} </a>
                                         </li>
 
-					{{ if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}
+					                    {{ if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}
                                             {{ $.Scratch.Set "CurrentMenu" . }}
                                             {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
                                             
                                             {{ if .HasChildren }}
-                                                <ul class="nav-tier5">{{ range .Children }}
+                                                <ul class="nav-tier nav-tier5">{{ range .Children }}
 				    
-                                                    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "api" .) ($currentNode.HasMenuCurrent "api" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                                                    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "developer" .) ($currentNode.HasMenuCurrent "developer" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                                         <a href="{{.URL}}">{{ .Name }} </a>
                                                     </li>
 				    
@@ -57,7 +57,7 @@
 			    
                                     {{ end }}</ul>
                                 {{ end }}
-			    {{ end }}
+			                {{ end }}
 		    
                         {{ end }}</ul>
                     {{ end }}

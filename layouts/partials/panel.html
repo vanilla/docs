@@ -1,22 +1,24 @@
-<div id="nav" class="column column-panel">
+<nav id="nav" class="column column-panel">
 
     {{ if (eq (lower .Type) "api") }}
-        {{ partial "menu/api.html" . }}
+
+        {{ $.Scratch.Set "menuData" $.Site.Menus.api }}
+        {{ $.Scratch.Set "menuName" "api" }}
+
+    {{ else if (eq (lower .Type) "apiv2") }}
+
+        {{ $.Scratch.Set "menuData" $.Site.Menus.apiv2 }}
+        {{ $.Scratch.Set "menuName" "api2" }}
+
+    {{ else if (eq (lower .Type) "help") }}
+
+        {{ $.Scratch.Set "menuData" $.Site.Menus.help }}
+        {{ $.Scratch.Set "menuName" "help" }}
+
+    {{ else if (eq (lower .Type) "developer") }}
+        {{ $.Scratch.Set "menuData" $.Site.Menus.developer }}
+        {{ $.Scratch.Set "menuName" "developer" }}
     {{ end }}
 
-
-    {{ if (eq (lower .Type) "apiv2") }}
-        {{ partial "menu/apiv2.html" . }}
-    {{ end }}
-
-
-    {{ if (eq (lower .Type) "help") }}
-        {{ partial "menu/help.html" . }}
-    {{ end }}
-
-
-    {{ if (eq (lower .Type) "developer") }}
-        {{ partial "menu/developer.html" . }}
-    {{ end }}
-
-</div>
+    {{ partial "menu/genericMenu.html" . }}
+</nav>

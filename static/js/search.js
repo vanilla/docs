@@ -112,4 +112,10 @@ $(function($){
 
     $(document).on('input', '.js-search-input', searchHandler);
 
+    // Close dropdown when clicking elsewhere
+    $('body').on('click', function(){
+        $('.js-search-results.open').each(function(){
+            $(this).removeClass('open');
+        });
+    });
 });

@@ -6,24 +6,6 @@
         height: $header-minHeight;
     }
 
-    .docs-header-logo {
-        color: white;
-
-        img.logo {
-            height: 30px;
-        }
-
-        .docs-docs-tag {
-            font-size: 18px;
-            font-weight: normal;
-
-            &:before {
-                content: "|";
-                margin-right: 10px;
-                vertical-align: 2px;
-            }
-        }
-    }
 
     .docs-header-tray {
         justify-content: flex-end;
@@ -46,35 +28,13 @@
                 }
             }
         }
+    }
 
-        .docs-header-search {
+    .docs-search {
+        width: 100px;
 
-            .docs-search-wrap {
-                background: rgba($borderDark, 0.2);
-                border: 1px solid transparent;
-                padding: 0px 20px;
-                color: $ghostText;
-            }
-
-            input {
-                border: none;
-                background: transparent;
-                color: $ghostText;
-                height: 33px;
-                width: 100px;
-
-                transition: width 0.2s;
-
-                &:focus {
-                    outline: none;
-                    width: 200px;
-                }
-            }
-
-            i {
-                margin-left: -10px;
-                font-size: 14px;
-            }
+        &:focus {
+            min-width: 200px;
         }
     }
 }
@@ -86,7 +46,3 @@
     }
 }
 
-.vanillaLogo {
-    width: $logoHorizontal-width;
-    height: $logoHorizontal-height;
-}

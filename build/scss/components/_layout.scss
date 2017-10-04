@@ -1,12 +1,11 @@
 .docs-title {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
 
     .docs-improve {
-        margin: 0px;
         margin-left: auto;
-        display: flex;
-        align-items: center;
+
 
         a {
             font: 0/0 a;
@@ -32,86 +31,6 @@
     position: relative;
     height: 100%;
 
-    //ul {
-    //    list-style-type: none;
-    //    margin: 0px;
-    //    padding-left: 0;
-    //
-    //    li {
-    //        margin-left: 20px;
-    //
-    //        &:first-child {
-    //            padding-top: 8px;
-    //        }
-    //
-    //        &:last-child {
-    //            padding-bottom: 8px;
-    //        }
-    //
-    //        a {
-    //            display: block;
-    //            color: $lighterText;
-    //            padding: 8px 10px 8px 20px;
-    //            margin-left: -20px;
-    //        }
-    //
-    //        &.active {
-    //            a {
-    //                color: $vanillaBlue;
-    //                font-weight: 600;
-    //            }
-    //        }
-    //
-    //        &:before {
-    //            position: relative;
-    //            left: -14px;
-    //            top: 10px;
-    //
-    //            display: block;
-    //            width: 0px;
-    //            height: 0px;
-    //
-    //            font: normal normal normal 14px/1 FontAwesome;
-    //            font-size: inherit;
-    //            text-rendering: auto;
-    //            -webkit-font-smoothing: antialiased;
-    //            -moz-osx-font-smoothing: grayscale;
-    //        }
-    //
-    //        &.nest {
-    //
-    //            &:before {
-    //                content: "\f0da";
-    //            }
-    //
-    //            &.active {
-    //                &:before {
-    //                    content: "\f0d7";
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-    //
-    //ul.nav-tier1 {
-    //
-    //    > li {
-    //        border-bottom: 1px dotted $borderDarken;
-    //
-    //        &:last-child {
-    //            padding-bottom: 8px;
-    //        }
-    //
-    //        a {
-    //            color: $regularText;
-    //            font-size: 13px;
-    //        }
-    //    }
-    //
-    //    > ul {
-    //        border-bottom: 1px dotted $borderDarken;
-    //    }
-    //}
 
     &::before {
         content: "";
@@ -124,7 +43,6 @@
         background: $panel-bg;
     }
 }
-
 
 .docs-nav {
     position: relative;
@@ -139,22 +57,37 @@
     display: block;
     padding: 0;
     margin: 0;
+
+    &.sidebar-menu {
+        margin-left: $navTier-padding;
+    }
+}
+
+.menuItem-children {
+    padding: 0;
+    margin: 0;
 }
 
 .menuItem {
     display: block;
-    padding: 5px 24px;
+    padding: 5px 0;
     font-size: 14px;
     color: $darkText;
     line-height: 1.5;
 
-    a {
-        color: inherit !important;
-    }
 
-    &.active {
-        background-color: rgba(85, 90 ,98 , .10);
+    &.isActive {
+        > .sidebar-link {
+            background-color: rgba(85, 90 ,98 , .10);
+        }
     }
+}
+
+.sidebar-link {
+    display: block;
+    color: inherit !important;
+    line-height: 1.5;
+    padding: 5px 24px;
 }
 
 .mainContent {

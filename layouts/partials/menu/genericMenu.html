@@ -1,0 +1,7 @@
+{{ $menuData := ($.Scratch.Get "menuData") }}
+{{ $menuName := ($.Scratch.Get "menuName") }}
+{{ $rootNode := . }}
+
+{{ partial "menu/header.html" . }}
+{{ partial "menu/genericMenu_tier.html" (dict "rootNode" $rootNode "menuName" $menuName "menuData" $menuData "tier" 1) }}
+{{ partial "menu/footer.html" . }}

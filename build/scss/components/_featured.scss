@@ -1,65 +1,50 @@
-#content {
-    
-    .docs-featured {
+.featured-item {
+    position: relative;
+    display: block;
 
-        .featured-items {
-            display: flex;
-            justify-content: center;
+    padding: 20px;
+    min-height: 200px;
+    border-radius: 2px;
+    border: 1px solid $borderDarken;
 
-            .featured-item {
-                flex: 1;
-                position: relative;
-                display: block;
-                
-                padding: 20px;
-                margin-right: 30px;
-                min-height: 200px;
-                border-radius: 2px;
-                border: 1px solid $borderDarken;
-                
-                &:before {
-                    content: "";
-                    position: absolute;
-                    bottom: -1px;
-                    right: -1px;
-                    border-width: 24px 24px 0 0;
-                    border-style: solid;
-                    border-color: $borderDarken white;
-                }
+    + .featured-item {
+        margin-top: 30px;
+    }
 
-                &:last-child {
-                    margin-right: 0px;
-                }
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        border-width: 24px 24px 0 0;
+        border-style: solid;
+        border-color: $borderDarken white;
+    }
 
-                .article-title {
-                    font-size: 15px;
-                    font-weight: bolder;
-                    margin: 0px 0px 10px 0px;
-                }
 
-                p {
-                    font-size: 13px;
-                    line-height: 20px;
-                    color: $regularText;
-                }
+    .article-title {
+        font-size: 15px;
+        font-weight: bolder;
+        margin: 0px 0px 10px 0px;
+    }
 
-                &:hover {
-                    border-color: $vanillaPink;
-                    
-                    .article-title {
-                        color: $vanillaPink;
-                    }
-                    
-                    &:before {
-                        border-color: $vanillaPink white;
-                    }
-                }
-            }
+    p {
+        font-size: 13px;
+        line-height: 20px;
+        color: $regularText;
+    }
 
+    &:hover {
+        border-color: $vanillaPink;
+
+        .article-title {
+            color: $vanillaPink;
         }
 
+        &:before {
+            border-color: $vanillaPink white;
+        }
     }
-    
 }
 
 .featured-loader {
@@ -74,7 +59,7 @@
     &.isLoading {
         .featured-loader {
             display: block;
-            margin: 20px 0;
+            margin: 20px auto;
         }
     }
 }

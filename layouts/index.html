@@ -16,47 +16,31 @@
         <script src="/js/lunr-index.json" id="search-manifest" type="application/json"></script>
         <script src="/js/vendor/lunr.js"></script>
         <script src="/js/search.js"></script>
+        <script src="/js/custom.js"></script>
         
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <style type="text/css">
-            .callout {
-                table-layout: fixed;
-            }
-        </style>
-        
         {{ partial "trackers.html" . }}
         
     </head>
 
-    <body class="docs grid docs-layout-landing">
-        <div class="landing-bg"></div>
+    <body class="docs grid singletonPage">
+        {{ partial "svgs.html" . }}
+        <div class="singleton-bg"></div>
 
-        <div class="contentLanding">
-            <header class="landing-header">
-                <a class="vertical-group docs-header-logo" href="/">
-                    <svg class="vanillaLogo">
-                        <title>Vanilla</title>
-                        <use class="logo-horizontal" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-horizontal"></use>
-                        <!--<use class="logo-vertical" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-vertical"></use>-->
-                    </svg>
-                </a>
+        <div class="contentSingleton">
+            <header class="singleton-header">
+                <span class="vertical-group docs-header-logo">
+                    {{ partial "logo.html" . }}
+                </span>
 
                 <div class="vertical-group docs-header-tray">
-                    <svg class="vanillaLogo">
-                        <title>Vanilla</title>
-                        <use class="logo-horizontal" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-horizontal"></use>
-                    </svg>
-
-
                     {{ partial "header/cta.html" . }}
                 </div>
             </header>
 
 
-
-
-            <main class="landing-main">
+            <main class="singleton-main">
                 <div class="docs-welcome">
                     <h1 class="pageTitle">
                         Welcome to the Vanilla Forums<br/>
@@ -71,35 +55,13 @@
                     {{ partial "chooser/developer.html" . }}
                 </div>
 
-                <div class="docs-api-gutter">
-                    Looking for our <a href="/api">API Docs</a>?
-                </div>
+                {{ partial "chooser/api.html" . }}
 
-                <div class="docs-footer docs-landing-footer">
-                    <div class="row">
-
-                        <div class="column column-3"></div>
-                        <div class="column column-6">
-                            {{ partial "footer/copyright.html" . }}
-                        </div>
-                        <div class="column column-3"></div>
-
-                    </div>
-                    <div class="row">
-
-                        <div class="column column-3"></div>
-                        <div class="column column-6">
-                            {{ partial "footer/links.html" . }}
-                        </div>
-                        <div class="column column-3"></div>
-
-                    </div>
+                <div class="docs-landing-footer">
+                    {{ partial "footer/copyright.html" . }}
+                    {{ partial "footer/links.html" . }}
                 </div>
             </main>
-
         </div>
-
-
-
     </body>
 </html>
