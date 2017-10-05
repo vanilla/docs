@@ -65,7 +65,7 @@ $(function($){
     var searchHandler = function (e) {
         var $input = $(e.currentTarget),
             matches = [],
-            query = $input.val();
+            query = escapeHTML($input.val());
     
         if (query.length < 3) {
             $results.removeClass('open');
