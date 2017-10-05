@@ -1,22 +1,19 @@
-.docs {
-    
-    .docs-footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $panelDark;
-        font-size: 12px;
+.docs-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $panelDark;
+    font-size: 12px;
+    color: $lightText;
+    letter-spacing: 0.05em;
+    min-height: $footer-minHeight;
+
+    a {
         color: $lightText;
-        letter-spacing: 0.05em;
-        min-height: $footer-minHeight;
-        
-        a {
-            color: $lightText;
-        }
-        
-        .docs-copyright {
-            margin: 5px 0px;
-        }
+    }
+
+    .docs-copyright {
+        margin: 5px 0px;
     }
 }
 

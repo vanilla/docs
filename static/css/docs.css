@@ -409,7 +409,7 @@ a:hover {
   margin: 20px auto;
 }
 
-.docs .docs-footer {
+.docs-footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -426,14 +426,14 @@ a:hover {
   font-size: 12px;
   color: #A8A9AB;
   letter-spacing: 0.05em;
-  min-height: 28px;
+  min-height: 60px;
 }
 
-.docs .docs-footer a {
+.docs-footer a {
   color: #A8A9AB;
 }
 
-.docs .docs-footer .docs-copyright {
+.docs-footer .docs-copyright {
   margin: 5px 0px;
 }
 
@@ -552,7 +552,7 @@ a:hover {
 }
 
 .mainContent {
-  min-height: calc(100vh - 88px);
+  min-height: calc(100vh - 120px);
 }
 
 .docs-header-logo {
