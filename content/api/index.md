@@ -2,14 +2,6 @@
 title: Vanilla API
 tags: ["API"]
 category: "api"
-menu:
-  developer:
-    identifier: api
-    weight: 1
-versioning:
-  deprecated: 1.4b
-  added: 1.4a
-  removed: 1.4c
 ---
 
 Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.
