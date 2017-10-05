@@ -819,7 +819,6 @@ a:hover {
   background: white;
   text-align: left;
   border: 1px solid rgba(85, 90, 98, 0.12);
-  padding: 12px 17px;
 }
 
 .searchResult:hover {
@@ -840,6 +839,7 @@ a:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding: 12px 17px;
 }
 
 .searchResult-title {
@@ -900,14 +900,14 @@ a:hover {
   background: linear-gradient(45deg, #F5296D 30%, #0f255a 50%, #0291DB 70%);
 }
 
-.singleton-bg::before {
+.singleton-gradient {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .8;
+  opacity: .1;
   background-image: url("../img/svgs/faceted_bg.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;

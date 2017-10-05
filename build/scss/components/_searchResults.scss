@@ -23,7 +23,6 @@
     background: white;
     text-align: left;
     border: 1px solid rgba(85, 90, 98, .12);
-    padding: 12px 17px;
 
     &:hover {
         background: $panelDark;
@@ -43,6 +42,7 @@
 .searchResult-link {
     display: block;
     user-select: none;
+    padding: 12px 17px;
 }
 
 .searchResult-title {
