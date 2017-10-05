@@ -64,12 +64,14 @@
     padding: 8px;
     border-radius: 2px;
     border: 1px solid rgba(#979797, .2);
-    white-space: normal;
+
 
     code {
       background: transparent;
       padding: 36px 14px;
       font-size: $fontSize-medium;
+      overflow: scroll;
+      display: block;
     }
 
     + h2 {
