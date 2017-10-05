@@ -67,12 +67,17 @@
     .menuItem-children {
         display: none;
     }
+    
+    .sidebar-link.hasActiveChildren {
+        + .menuItem-children {
+            display: block;
+        }
+    }
 }
 
 
 
 .menuItem {
-
     display: block;
     padding: 0;
     font-size: $fontSize-medium;

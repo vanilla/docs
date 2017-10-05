@@ -621,6 +621,10 @@ a:hover {
   display: none;
 }
 
+#nav .sidebar-link.hasActiveChildren + .menuItem-children {
+  display: block;
+}
+
 .menuItem {
   display: block;
   padding: 0;
