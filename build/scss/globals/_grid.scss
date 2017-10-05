@@ -13,89 +13,7 @@ body {
     .column {
         box-sizing: border-box;
     }
-    
-    .row {
-        display: flex;
-    }
-    
-    .column {
-        display: block;
-    }
-    
-    // 12 Columns
-    
-    .column + .column {
-        padding-left: 12px;
-    }
-    
-    .column {
-        &.left {
-            justify-content: flex-start;
-        }
-        &.right {
-            justify-content: flex-end;
-        }
-        &.middle {
-            justify-content: center;
-        }
-        &.top {
-            align-items: flex-start;
-        }
-        &.bottom {
-            align-items: flex-end;
-        }
-        &.center {
-            align-items: center;
-        }
-    }
-    
-    .column-1 {
-        flex: 1;
-    }
 
-    .column-2 {
-        flex: 2;
-    }
-
-    .column-3 {
-        flex: 3;
-    }
-
-    .column-4 {
-        flex: 4;
-    }
-
-    .column-5 {
-        flex: 5;
-    }
-
-    .column-6 {
-        flex: 6;
-    }
-
-    .column-7 {
-        flex: 7;
-    }
-
-    .column-8 {
-        flex: 8;
-    }
-
-    .column-9 {
-        flex: 9;
-    }
-
-    .column-10 {
-        flex: 10;
-    }
-
-    .column-11 {
-        flex: 11;
-    }
-
-    .column-12 {
-        flex: 12;
-    }
     
     .vertical-group {
         display: flex;
@@ -107,4 +25,51 @@ body {
         }
         
     }
+}
+
+.contentSingleton,
+.content {
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 0 $site-padding;
+    max-width: $site-widthPadded;
+    width: 100%;
+
+    @include mediaQuery-mobile {
+        padding: {
+            left: $site-padding_mobile;
+            right: $site-padding_mobile;
+        }
+    }
+}
+
+.contentSingleton {
+    max-width: $landing-widthPadded;
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.column-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    max-width: calc(100% - #{$panel-width * 2});
+    background-color: white;
+    padding: 0 $mainColumn-padding $mainColumn-padding;
+}
+
+.column-panel {
+    width: $panel-width;
+    flex-basis: $panel-width;
+    min-height: 100%;
+}
+
+.column-flexGrow {
+    flex-grow: 1;
 }

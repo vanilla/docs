@@ -42,6 +42,46 @@ The `content/api` folder is for API documentation and api-related information (s
 
  * Consciously build menus using the front-matter
 
+
+## Versioning
+
+We've got a feature to add versioning to the docs. 
+
+## Versioning the Page
+In the "front matter" section, add the following:
+
+~~~
+version:
+  added: 2.0
+  deprecated: 2.1
+  removed: 2.3
+~~~
+
+This will set the versioning info right under the page title. Only add the info you need. So for example, if a feature has been added and is not depricated, you'd enter:
+
+~~~
+version:
+  added: 2.0
+~~~
+
+
+## Versioning a section
+
+If you do not wish to version the entire page, you can insert a shortcode anywhere in your markdown file to add versioning.
+
+Here's an example:
+
+~~~
+{{% versioning added="2.0" deprecated="2.1" removed="2.3" %}}
+~~~
+
+Only add the info you need. So for example, if a feature has been added and is not depricated, you'd enter:
+
+~~~
+{{% versioning added="2.0" %}}
+~~~
+
+
 ## Technical Setup
 
 These documents are built using the [Hugo](https://gohugo.io) static site generator. The content is formatted in Markdown and the templates use the [Go html/template](http://gohugo.io/templates/go-templates/) library. The generator supports both partials and shortcodes (partials that can be used in the content too).

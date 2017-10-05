@@ -1,72 +1,70 @@
 {{ partial "menu/header.html" . }}
 
 {{ $currentNode := . }}
-{{ range .Site.Menus.help }}
+{{ range .Site.Menus.apiv2 }}
 
-    <li  class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
         <a href="{{.URL}}">{{.Name}}</a>
     </li>
-    
-    {{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+
+    {{ if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}
         {{ $.Scratch.Set "CurrentMenu" . }}
         {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
-        
+
         {{ if .HasChildren }}
-            <ul class="nav-tier2">{{ range .Children }}
-	    
-                <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+            <ul class="nav-tier nav-tier2">{{ range .Children }}
+
+                <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                     <a href="{{.URL}}">{{ .Name }} </a>
                 </li>
-                
-                {{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+
+                {{ if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}
                     {{ $.Scratch.Set "CurrentMenu" . }}
                     {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
-               
-                    {{ if .HasChildren }}
-                        <ul class="nav-tier3">{{ range .Children }}
 
-                            <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                    {{ if .HasChildren }}
+                        <ul class="nav-tier nav-tier3">{{ range .Children }}
+
+                            <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                 <a href="{{.URL}}">{{ .Name }}</a>
                             </li>
 
-                            {{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+                            {{ if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}
                                 {{ $.Scratch.Set "CurrentMenu" . }}
                                 {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
-                                
+
                                 {{ if .HasChildren }}
-                                    <ul class="nav-tier4">{{ range .Children }}
-                                        
-                                        <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                                    <ul class="nav-tier nav-tier4">{{ range .Children }}
+
+                                        <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                             <a href="{{.URL}}">{{ .Name }} </a>
                                         </li>
 
-					{{ if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}
+                                        {{ if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}
                                             {{ $.Scratch.Set "CurrentMenu" . }}
                                             {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
-                                            
+
                                             {{ if .HasChildren }}
-                                                <ul class="nav-tier5">{{ range .Children }}
-				    
-                                                    <li class="{{if or ($currentNode.IsMenuCurrent "help" .) ($currentNode.HasMenuCurrent "help" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
+                                                <ul class="nav-tier nav-tier5">{{ range .Children }}
+
+                                                    <li class="menuItem {{if or ($currentNode.IsMenuCurrent "apiv2" .) ($currentNode.HasMenuCurrent "apiv2" .) }}active{{end}}{{if .HasChildren}} nest{{end}}">
                                                         <a href="{{.URL}}">{{ .Name }} </a>
                                                     </li>
-				    
+
                                                 {{ end }}</ul>
                                             {{ end }}
                                         {{ end }}
-			    
+
                                     {{ end }}</ul>
                                 {{ end }}
-			    {{ end }}
-		    
+                            {{ end }}
                         {{ end }}</ul>
                     {{ end }}
                 {{ end }}
-
-	    {{ end }}</ul>
+        {{ end }}</ul>
         {{ end }}
     {{ end }}
-	    
+
 {{end}}
 
 {{ partial "menu/footer.html" . }}

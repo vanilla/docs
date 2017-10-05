@@ -1,0 +1,21 @@
+{{ $rootNode := .rootNode }}
+{{ $menuName := .menuName }}
+{{ $menuData := .menuData }}
+{{ $tier := .tier }}
+
+<ul class='sidebar-menu nav-tier nav-tier{{ .tier }}'>
+    {{ range .menuData }}
+        {{ $isActive := ($rootNode.IsMenuCurrent $menuName . ) }}
+        {{ $hasActiveChildren := ( $rootNode.HasMenuCurrent $menuName . ) }}
+        <li class='menuItem{{if $isActive}} isActive{{ end }}{{if $hasActiveChildren}} hasActiveChildren{{ end }}{{ if eq $tier 2 }} {{ if or ($isActive) ($hasActiveChildren) }} js-showInRightPanel{{ end }}{{ end }}'>
+            <a href="{{ .URL }}" class="sidebar-link{{if $isActive}} isActive{{ end }}">
+                {{ .Name }}
+            </a>
+            {{ if .HasChildren }}
+                <div class="menuItem-children">
+                    {{ partial "menu/genericMenu_tier.html" (dict "rootNode" $rootNode "menuName" $menuName "tier" (add 1 $tier) "menuData" .Children ) }}
+                </div>
+            {{ end }}
+        </li>
+    {{ end }}
+</ul>

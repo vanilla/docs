@@ -1,0 +1,130 @@
+
+#sidebar {
+    position: relative;
+    height: 100%;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        border: 1px solid #ECEDED;
+        height: 100%;
+        background: $panel-bg;
+    }
+}
+
+.docs-nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    padding: 57px 0;
+}
+
+
+
+.sidebar-menu {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+
+
+    .sidebar-menu {
+        .sidebar-link {
+            padding-left: $navItem-horizontalPadding + $navTier-padding;
+        }
+
+        .sidebar-menu {
+            .sidebar-link {
+                padding-left: $navItem-horizontalPadding * 2 + $navTier-padding;
+            }
+
+            .sidebar-menu {
+                .sidebar-link {
+                    padding-left: $navItem-horizontalPadding * 3 + $navTier-padding;
+                }
+
+                .sidebar-menu {
+                    .sidebar-link {
+                        padding-left: $navItem-horizontalPadding * 4 + $navTier-padding;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menuItem-children {
+    padding: 0;
+    margin: 0;
+}
+
+#nav { // Main nav
+    .menuItem-children {
+        display: none;
+    }
+
+    .nav-tier1 > .menuItem.isActive,
+    .nav-tier1 > .menuItem.hasActiveChildren {
+        > .menuItem-children {
+            display: block;
+        }
+    }
+
+    .nav-tier2 > .menuItem.hasActiveChildren {
+        background-color: rgba($navItem-bg, .1) !important;
+    }
+}
+
+
+
+.menuItem {
+    display: block;
+    padding: 0;
+    font-size: $fontSize-medium;
+    color: $darkText;
+    line-height: 1.5;
+}
+
+.sidebar-link {
+    @include defaultTransition(background);
+    display: block;
+    color: inherit !important;
+    line-height: 1.5;
+    padding: 5px $navItem-horizontalPadding;
+
+    &:hover {
+        background-color: rgba($navItem-bg, .05);
+    }
+
+    &.isActive {
+        background-color: rgba($navItem-bg, .1) !important;
+    }
+}
+
+.subNav-title {
+    font-weight: $fontWeight-bold;
+    font-size: $fontSize-medium;
+    color: $darkText;
+    text-transform: uppercase;
+    padding: 0 $navItem-horizontalPadding;
+    margin: 0 0 12px;
+}
+
+.subNav {
+    border: 1px solid #F4F4F4;
+    padding: 18px 0;
+
+}
+
+.column-panel {
+    &.noContent {
+        .docs-nav {
+            display: none !important;
+        }
+    }
+}

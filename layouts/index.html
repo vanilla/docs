@@ -16,86 +16,54 @@
         <script src="/js/lunr-index.json" id="search-manifest" type="application/json"></script>
         <script src="/js/vendor/lunr.js"></script>
         <script src="/js/search.js"></script>
+        <script src="/js/custom.js"></script>
         
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <style type="text/css">
-            .callout {
-                table-layout: fixed;
-            }
-        </style>
-        
         {{ partial "trackers.html" . }}
         
     </head>
 
-    <body class="docs grid docs-layout-landing">
-        
-        <div class="docs-cap">
-
-            {{ partial "header/slimheader.html" . }}
-
-            <div class="docs-welcome">
-                <div class="row">
-
-                    <div class="column column-2"></div>
-                    <div class="column column-8">
-                        <div class="docs-welcome-hero">
-                            <h1>
-                                Welcome to the Vanilla Forums<br/>
-                                Documentation repository
-                            </h1>
-                            <h2>
-                                How can we help?
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="column column-2"></div>
-
-                </div>
-            </div>
-            
+    <body class="docs grid singletonPage">
+        {{ partial "svgs.html" . }}
+        <div class="singleton-bg">
+            <div class="singleton-gradient"></div>
         </div>
-        
-        <div class="docs-chooser">
-            <div class="row">
 
-                <div class="column column-1"></div>
-                <div class="column column-5">
-                    {{ partial "chooser/help.html" . }}
+        <div class="contentSingleton">
+            <header class="singleton-header">
+                <span class="vertical-group docs-header-logo">
+                    {{ partial "logo.html" . }}
+                </span>
+
+                <div class="vertical-group docs-header-tray">
+                    {{ partial "header/cta.html" . }}
                 </div>
-                <div class="column column-5">
+            </header>
+
+
+            <main class="singleton-main">
+                <div class="docs-welcome">
+                    <h1 class="pageTitle">
+                        Welcome to the Vanilla Forums<br/>
+                        Documentation repository
+                    </h1>
+
+                    {{ partial "header/search.html" . }}
+                </div>
+
+                <div class="docs-chooser">
+                    {{ partial "chooser/help.html" . }}
                     {{ partial "chooser/developer.html" . }}
                 </div>
-                <div class="column column-1"></div>
 
-            </div>
-        </div>
-        
-        <div class="docs-api-gutter">
-            Looking for our <a href="/api">API Docs</a>?
-        </div>
+                {{ partial "chooser/api.html" . }}
 
-        <div class="docs-footer docs-landing-footer">
-            <div class="row">
-
-                <div class="column column-3"></div>
-                <div class="column column-6">
+                <div class="docs-landing-footer">
                     {{ partial "footer/copyright.html" . }}
-                </div>
-                <div class="column column-3"></div>
-
-            </div>
-            <div class="row">
-
-                <div class="column column-3"></div>
-                <div class="column column-6">
                     {{ partial "footer/links.html" . }}
                 </div>
-                <div class="column column-3"></div>
-
-            </div>
+            </main>
         </div>
-
     </body>
 </html>

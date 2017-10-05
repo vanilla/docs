@@ -1,31 +1,15 @@
-.docs-title-wrapper {
-    position: relative;
-    background: $panelLight;
-    border-bottom: 1px solid $borderShadow;
-    box-shadow: 0px 1px 0px 0px $shadowLight;
-
-    .docs-title {
-        height: 60px;
-    }
-}
-
 .docs-title {
     display: flex;
-    align-items: center;
-
-    h1 {
-        font-weight: normal;
-        font-size: 20px;
-        margin: 0px;
-    }
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 6px;
 
     .docs-improve {
-        margin: 0px;
         margin-left: auto;
-        display: flex;
-        align-items: center;
+
 
         a {
+            display: block;
             font: 0/0 a;
             text-shadow: none;
             color: transparent;
@@ -45,106 +29,6 @@
     }
 }
 
-.docs-content {
-    background: white;
-    padding: 20px 0px 50px 0px;
-
-    #sidebar {
-        font-size: 12px;
-        padding-right: 20px;
-
-        .docs-nav {
-            display: inline-block;
-            width: 100%;
-            border-right: 1px solid $borderDarken;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0px;
-            padding-left: 0;
-
-            li {
-                margin-left: 20px;
-
-                &:first-child {
-                    padding-top: 8px;
-                }
-
-                &:last-child {
-                    padding-bottom: 8px;
-                }
-
-                a {
-                    display: block;
-                    color: $lighterText;
-                    padding: 8px 10px 8px 20px;
-                    margin-left: -20px;
-                }
-
-                &.active {
-                    a {
-                        color: $vanillaBlue;
-                        font-weight: 600;
-                    }
-                }
-
-                &:before {
-                    position: relative;
-                    left: -14px;
-                    top: 10px;
-
-                    display: block;
-                    width: 0px;
-                    height: 0px;
-
-                    font: normal normal normal 14px/1 FontAwesome;
-                    font-size: inherit;
-                    text-rendering: auto;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                }
-
-                &.nest {
-
-                    &:before {
-                        content: "\f0da";
-                    }
-
-                    &.active {
-                        &:before {
-                            content: "\f0d7";
-                        }
-                    }
-                }
-            }
-        }
-
-        ul.nav-tier1 {
-
-            > li {
-                border-bottom: 1px dotted $borderDarken;
-
-                &:last-child {
-                    padding-bottom: 8px;
-                }
-
-                a {
-                    text-transform: uppercase;
-                    color: $regularText;
-                    font-size: 13px;
-                }
-
-                &.active {
-                    a {
-                        color: $vanillaBlue;
-                    }
-                }
-            }
-
-            > ul {
-                border-bottom: 1px dotted $borderDarken;
-            }
-        }
-    }
+.mainContent {
+    min-height: calc(100vh - #{$footer-minHeight + $header-minHeight});
 }
