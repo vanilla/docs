@@ -24,12 +24,11 @@
 
                 {{ end }}
 
-
                 <div class="userContent">
                     {{ .Content }}
-
-                    {{ partial "platforms.html" . }}
                 </div>
+
+                {{ partial "platforms.html" . }}
             </div>
 
             {{ partial "panel_subSection.html" . }}

@@ -547,10 +547,6 @@ a:hover {
   color: #959595;
 }
 
-.docs-title + .userContent {
-  margin-top: 25px;
-}
-
 .mainContent {
   min-height: calc(100vh - 120px);
 }
@@ -713,6 +709,7 @@ a:hover {
 .platform-title {
   font-size: 24px;
   color: #555A62;
+  margin-top: 0;
 }
 
 .platform-description {
@@ -1107,7 +1104,6 @@ h2 {
   color: #F52C6E;
   font-size: 24px;
   font-weight: normal;
-  padding-bottom: 6px;
 }
 
 h2 em, h2 i {
@@ -1119,13 +1115,27 @@ h3 {
   color: #555A62;
   font-size: 16px;
   font-weight: 600;
-  margin-top: 1.6em;
 }
 
 h4 {
   color: #0291DB;
   font-size: 14px;
   font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 .8em;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 1.6em;
 }
 
 .userContent {
@@ -1135,8 +1145,15 @@ h4 {
   line-height: 1.6;
 }
 
+.userContent h2,
+.userContent h3,
+.userContent h4,
+.userContent h5,
+.userContent h6 {
+  margin-top: 2.5em;
+}
+
 .userContent h2 {
-  margin: 0;
   color: #F52C6E;
   font-size: 18px;
   font-weight: 600;
@@ -1157,25 +1174,15 @@ h4 {
 .userContent h4 {
   color: #0291DB;
   font-size: 16px;
-  font-weight: normal;
-}
-
-.userContent p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 1.6em;
-}
-
-.userContent p + h2 {
-  margin-top: 30px;
+  font-weight: 600;
 }
 
 .userContent ul, .userContent ol {
   font-size: 16px;
-  margin-bottom: 1.6em;
+  margin: 0 0 1.6em;
 }
 
-.userContent ul li, .userContent ol li {
+.userContent ul li + li, .userContent ol li + li {
   margin-top: .8em;
 }
 
@@ -1225,9 +1232,16 @@ h4 {
   margin-top: 30px;
 }
 
-.userContent table td, .userContent table th {
+.userContent table td {
   text-align: left;
   padding: 16px 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.userContent table th {
+  text-align: left;
+  padding: 6px 8px;
   font-size: 14px;
   line-height: 20px;
 }

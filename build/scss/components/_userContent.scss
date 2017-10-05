@@ -4,8 +4,19 @@
   font-size: $fontSize-large;
   line-height: 1.6;
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+  {
+    margin-top: 2.5em;
+  }
+
+
+
+
   h2 {
-    margin: 0;
     color: $vanillaPink;
     font-size: 18px;
     font-weight: $fontWeight-bold;
@@ -26,25 +37,14 @@
   h4 {
     color: $vanillaBlue;
     font-size: $fontSize-large;
-    font-weight: normal;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 1.6em;
-
-    + h2 {
-      margin-top: 30px;
-    }
+    font-weight: $fontWeight-bold;
   }
 
   ul, ol {
     font-size: $fontSize-large;
-    margin-bottom: 1.6em;
+    margin: 0 0 1.6em;
 
-    li {
-      // line-height: 1.4;
+    li + li {
       margin-top: .8em;
     }
 
@@ -94,9 +94,16 @@
       margin-top: 30px;
     }
 
-    td, th {
+    td {
       text-align: left;
       padding: 16px 8px;
+      font-size: $fontSize-medium;
+      line-height: 20px;
+    }
+
+    th {
+      text-align: left;
+      padding: 6px 8px;
       font-size: $fontSize-medium;
       line-height: 20px;
     }
