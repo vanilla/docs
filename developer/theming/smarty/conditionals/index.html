@@ -15,18 +15,14 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script src="//docs.vanillaforums.com/js/vendor/jquery-3.0.0.min.js"></script>
-        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/jquery.store.js" defer></script>
         <script src="//docs.vanillaforums.com/js/lunr-index.json" id="search-manifest" type="application/json"></script>
-        <script src="//docs.vanillaforums.com/js/vendor/lunr.js"></script>
-        <script src="//docs.vanillaforums.com/js/search.js"></script>
+        <script src="//docs.vanillaforums.com/js/vendor/lunr.js" defer></script>
+        <script src="//docs.vanillaforums.com/js/search.js" defer></script>
+        <script src="//docs.vanillaforums.com/js/custom.js" defer></script>
 
         <link rel="shortcut icon" href="//docs.vanillaforums.com/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="//docs.vanillaforums.com/apple-touch-icon.png" />
-        <style type="text/css">
-            .callout {
-                table-layout: fixed;
-            }
-        </style>
 
         
 <script type="text/javascript">
@@ -61,339 +57,1071 @@ n.id = i;
 
     </head>
 
-    <body class="docs grid docs-layout-single docs-layout-section-developer">
+    <body class="docs grid docs-layout-single docs-layout-section-developer pageType-developer">
+        <svg style="display: none !important;" >
+    <symbol id="svg-edit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M18.9346421,3.20506492 L20.6035124,4.9125404 C20.8995737,5.21545031 20.866032,5.74125214 20.5201979,6.09508619 L9.80199109,17.0612323 C9.63824528,17.2287659 9.37352931,17.4250637 9.16879257,17.5309681 L4.73761136,20.3394573 C4.27779226,20.5773083 3.84532275,20.1619513 4.05391552,19.6828148 L6.6051453,14.929605 C6.70099854,14.7094305 6.88731206,14.4337761 7.06062625,14.2564527 L17.7788331,3.29030665 C18.1213164,2.93990083 18.6373198,2.90086483 18.9346421,3.20506492 L18.9346421,3.20506492 Z M18.2004577,4.2613186 L7.87770914,14.8228584 C7.76500867,14.9381659 7.61639304,15.1228541 7.53821114,15.2431014 L4.74477828,19.5395286 L8.83101583,16.5863551 C8.95243449,16.4986043 9.13907389,16.3370947 9.24839156,16.2252482 L19.5711401,5.66370837 C19.6838406,5.54840085 19.7288123,5.41999604 19.679143,5.36917772 L18.4883291,4.15081737 C18.4379385,4.09926105 18.2004577,4.2613186 18.2004577,4.2613186 L18.2004577,4.2613186 Z M6.4777077,18.5077655 L4.72478358,19.5895161 L5.73501769,17.7478952 L5.37691185,17.3815055 L6.4777077,18.5077655 Z M15.6953878,5.40976246 L16.4105329,4.71078643 L19.0000534,7.36020914 L18.2849083,8.05918516 L15.6953878,5.40976246 Z M6.79289322,15.5 L7.5,14.7928932 L9.20710678,16.5 L8.5,17.2071068 L6.79289322,15.5 Z"></path>
+</symbol>
+
+    <symbol id="svg-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17.752">
+  <path d="M16.455,13.822l4.061,3.823a1.673,1.673,0,0,1-.01,2.364l-.249.249a1.672,1.672,0,0,1-2.364.01l-4.081-3.843a7.181,7.181,0,1,1,3.634-6.238A7.126,7.126,0,0,1,16.455,13.822Zm-6.232,1.821a5.457,5.457,0,1,0-5.484-5.457A5.471,5.471,0,0,0,10.223,15.643Z" transform="translate(-3 -3)" style="fill: currentColor;"></path>
+</symbol>
+
+    <symbol id="svg-logo-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 69">
+  <path d="M24.157,45.95c-.235-.526-.468-1.052-.7-1.582-.593-1.387-1.143-2.792-1.625-4.222-2.367-7.023-3.325-15.761,2.606-21.318a14.915,14.915,0,0,1,6.723-3.516c.6-.148,2.519-.366,2.795-.464.667-.239.383-1.984.272-2.483C33.656,9.773,30.3,8.81,28.009,9.031a9.678,9.678,0,0,0-6.017,3.4,19.2,19.2,0,0,0-3.42,5.43c-3.237,7.613-1.685,20.052.414,23.549a16.788,16.788,0,0,0-2.709-2.591c-.786-.752-1.583-1.491-2.35-2.262a23.077,23.077,0,0,1-4.177-5.417A21,21,0,0,1,7.1,21.68,10.451,10.451,0,0,1,8.386,16c-1.975-.383-3.848.759-5.289,2-1.675,1.44-3.29,3.5-3.078,5.83.235,2.572,1.79,5.028,3.006,7.24A39.538,39.538,0,0,0,12.42,42.115a44.3,44.3,0,0,0,6.474,4.5c1.532.879,3.543,1.919,5.3,1.062.161-.078.46-.191.508-.38s-.109-.455-.186-.626c-.111-.246-.249-.478-.359-.724M66.491,26.629c.811-1.567,2.885-3.928,2.269-5.843a2.849,2.849,0,0,0-4.429-1.266c-2.145,1.784-2.022,12.137-1.259,13.658.405,1.7,3.155,2.936,4.348,1.275a.7.7,0,0,0-.12-1,1.576,1.576,0,0,0-.689-.085c-1.085-.064-1.33-2.368-1.294-3.168a8.824,8.824,0,0,1,1.175-3.576m-9.086,8.016c-.357-2.868,2.577-7,2.479-10.324-.046-1.577-.483-3.436-1.984-4.236a2.872,2.872,0,0,0-.663-.248,6.518,6.518,0,0,0-2.141-.069,7.069,7.069,0,0,0-2.315.628,10.364,10.364,0,0,0-3.419,2.853c-.476.566-.925,1.154-1.379,1.738.036-.047-.272-.53-.308-.593-.118-.2-.246-.4-.382-.6a6.657,6.657,0,0,0-.924-1.056,3.826,3.826,0,0,0-2.273-1.1,2.9,2.9,0,0,0-1.373.269,2.183,2.183,0,0,0-.97.73,2.173,2.173,0,0,0-.008,1.657,33.962,33.962,0,0,0,2.064,4.537c.071.157.141.316.207.475a16.945,16.945,0,0,1,1.653,5.162c.068,1.178-.645,2.845.331,3,3.175.382,2.291-5.114,2.975-7.993a6.4,6.4,0,0,1,4.18-4.778.8.8,0,0,1,.631.012.824.824,0,0,1,.4.691,19.1,19.1,0,0,1-.77,4.455,31.545,31.545,0,0,0-.653,4.845c-.117,3.091.793,6.23,4.148,6.969,1.649.363,3.171.429,4.5-.761,1.182-1.058,1.874-2.714.791-4.106-2.22.13-4.474.4-4.794-2.165m30.3-32.307c5.867-.1-5.019,15.278-9.614,15.15,2.012-4.968,6.668-15.114,9.614-15.15M81.17,39.278a8.449,8.449,0,0,1-2.143-.724,5.958,5.958,0,0,1-1.356-1.08,8.193,8.193,0,0,1-1.722-3.013,15.851,15.851,0,0,1-.745-4.986,25.025,25.025,0,0,1,.8-6.31,20.389,20.389,0,0,1,.9-2.752c.14-.34.439-.955.439-.955s1.232-.048,1.682-.13c4.706-.857,8.877-4.8,11.183-8.859C91.791,7.686,93.453,3.163,90.1.963,84.838-2.491,80.064,4.2,77.991,7.646a46.418,46.418,0,0,0-2.972,6.024c-.369.882-.721,1.771-1.067,2.663-.122.315-.527,1.314-.527,1.314s-.646-.109-.819-.152a9.161,9.161,0,0,1-1.212-.388c-1.1-.439-2.427-1.2-2.748-2.442,4.376,1.482,6.393-5.976,1.652-6.827-2.782-.384-4.365,1.955-4.077,4.548a7.383,7.383,0,0,0,1.806,4.206A9.19,9.19,0,0,0,71.7,18.76c.3.106.9.3.9.3l.339.091s-.147.563-.187.7c-.247.863-.486,1.727-.708,2.6a42.563,42.563,0,0,0-1.068,5.477,28.431,28.431,0,0,0-.122,5.376c.233,3.363.855,7.654,3.549,9.988,1.236,1.071,3.6,1.837,5.1.9,1.316-.822,1.657-2.571,2.136-3.929a.753.753,0,0,0-.11-.82.891.891,0,0,0-.357-.154m20.365-30.4c1.664.729-2.978,12.58-12.869,15.969,1.855-6.37,10.563-17,12.869-15.969M94.621,41.488a8.543,8.543,0,0,1-1.583-.77,8.974,8.974,0,0,1-2.458-2.233A13.524,13.524,0,0,1,88.188,32a26.425,26.425,0,0,1-.183-4.16c12.317-2.651,18.3-16.292,16.364-19.648C102.613,5.143,99.1,6.069,95.991,8.1A27.758,27.758,0,0,0,84,26.2a4.912,4.912,0,0,1-2.273.017c-.294-.065-.736-.315-1.03-.215a.54.54,0,0,0-.281.727,1.3,1.3,0,0,0,.652.6,7.269,7.269,0,0,0,2.52.836c-.583,5.218,1.1,13.645,4.422,17.157a4.54,4.54,0,0,0,4.527,1.238c1.493-.415,3.951-1.928,3.379-3.809a1.959,1.959,0,0,0-1.29-1.264m13.842-10.1A14.655,14.655,0,0,1,106.2,34.9c-.908,1.113-1.926,2.237-3.321,2.376a3.068,3.068,0,0,1-.856-.037,2.531,2.531,0,0,1-2.36-2.9,7.216,7.216,0,0,1,2.122-4.71c2.546-2.5,8.642-3,6.676,1.759m7.494-4.222c-1.86-.267-3.188,1.56-4.464,2.165,1.1-2.968-1.374-4.881-1.983-5.495-8.52-5.672-20.561,9.336-14.547,15.152a7.941,7.941,0,0,0,9.588.333c.4,4.68,9.518,5.411,9.587.832-11.1,2.879,2.022-6.491,3.637-9.99a2.068,2.068,0,0,0-1.818-3m-81.326,8.6A3.316,3.316,0,0,1,32.8,37.239c-3.415,1.165-4.95-2.707-4.936-5.283a5.838,5.838,0,0,1,1.472-4.031,4.282,4.282,0,0,1,3.5-1.119,2.378,2.378,0,0,1,1.2.583,3.9,3.9,0,0,1,1.05,2.408,16.628,16.628,0,0,1,.261,2.613,6.358,6.358,0,0,1-.719,3.356m7.912,1.787a4.762,4.762,0,0,1-1.824-1.2,6.942,6.942,0,0,1-1.068-2.526A18.555,18.555,0,0,1,39.44,27.8c.074-1,.167-1.994.266-2.99.081-.811.168-1.622.242-2.433a7.118,7.118,0,0,0,.072-1.344l-.006-.042c-.229-1.331-1.991-1.885-3.352-.909a3.38,3.38,0,0,0-1.21,2.015c-.1.4-.167.808-.236,1.214a6.177,6.177,0,0,1-.241,1.184c-.1.253-.175-.016-.252-.157a4.1,4.1,0,0,0-.313-.487,3.982,3.982,0,0,0-.772-.779,4.56,4.56,0,0,0-2.04-.852,6.831,6.831,0,0,0-1.856-.057,5.223,5.223,0,0,0-.992.208c-2.4.763-3.8,3.312-4.567,5.611a14.308,14.308,0,0,0-.668,3.354A16.3,16.3,0,0,0,23.6,34.8a14.494,14.494,0,0,0,.8,3.238,10.141,10.141,0,0,0,1.468,2.675,5.28,5.28,0,0,0,5.317,2.152,7.914,7.914,0,0,0,5.267-5.1c.091-.288.1-.953.463-.8.192.082.506.932.639,1.135a5.885,5.885,0,0,0,1.8,1.818c1.15.7,4.9,1.317,4.547-1.04-.12-.8-.715-1.047-1.363-1.325" style="fill: currentColor;"></path>
+  <path d="M46.24,54.171a6.832,6.832,0,1,0,0,13.659H70.76a6.832,6.832,0,1,0,0-13.659Zm0-1.171H70.76a8,8,0,1,1,0,16H46.24a8,8,0,1,1,0-16Zm-.17,2.341A5.659,5.659,0,0,0,40.412,61h0a5.659,5.659,0,0,0,5.659,5.659H70.93A5.659,5.659,0,0,0,76.588,61h0a5.659,5.659,0,0,0-5.659-5.659H46.07Zm6.294,5.675a3.51,3.51,0,0,1-1.049,2.74,4.359,4.359,0,0,1-3.029.951H46.174V57.464h2.342a4.018,4.018,0,0,1,2.837.936A3.39,3.39,0,0,1,52.364,61.016Zm-1.643.04q0-2.333-2.123-2.333h-.842v4.716h.679Q50.721,63.439,50.721,61.056Zm9.395.02A3.857,3.857,0,0,1,59.2,63.84a4.072,4.072,0,0,1-5.266,0,3.872,3.872,0,0,1-.919-2.774,3.82,3.82,0,0,1,.921-2.762,3.5,3.5,0,0,1,2.641-.954,3.452,3.452,0,0,1,2.631.961A3.867,3.867,0,0,1,60.116,61.076Zm-5.445,0a2.959,2.959,0,0,0,.475,1.828,1.681,1.681,0,0,0,1.419.614q1.893,0,1.893-2.442t-1.883-2.447a1.693,1.693,0,0,0-1.424.617A2.947,2.947,0,0,0,54.671,61.076Zm9.594-2.437a1.629,1.629,0,0,0-1.383.651,2.965,2.965,0,0,0-.49,1.816q0,2.423,1.873,2.423a6.075,6.075,0,0,0,1.9-.381v1.288a5.426,5.426,0,0,1-2.051.372,3.177,3.177,0,0,1-2.49-.959,3.98,3.98,0,0,1-.862-2.752,4.383,4.383,0,0,1,.424-1.979,3.006,3.006,0,0,1,1.217-1.3,3.686,3.686,0,0,1,1.86-.453,5.144,5.144,0,0,1,2.184.51l-.51,1.248a8.591,8.591,0,0,0-.842-.337A2.579,2.579,0,0,0,64.265,58.638ZM71.593,62.7a1.851,1.851,0,0,1-.727,1.546,3.226,3.226,0,0,1-2.023.565,4.872,4.872,0,0,1-2.113-.436V62.944a8.874,8.874,0,0,0,1.278.461,3.889,3.889,0,0,0,.957.134,1.392,1.392,0,0,0,.8-.193.654.654,0,0,0,.278-.575.622.622,0,0,0-.122-.379,1.356,1.356,0,0,0-.36-.32,9.351,9.351,0,0,0-.967-.49,4.611,4.611,0,0,1-1.026-.6,2.263,2.263,0,0,1-.546-.669,2.041,2.041,0,0,1,.467-2.4,2.845,2.845,0,0,1,1.855-.55,4.5,4.5,0,0,1,1.11.134,7.784,7.784,0,0,1,1.1.377l-.51,1.194a7.62,7.62,0,0,0-.987-.332,3.269,3.269,0,0,0-.768-.094,1.038,1.038,0,0,0-.689.2.662.662,0,0,0-.24.53.641.641,0,0,0,.1.354,1.052,1.052,0,0,0,.309.292,9.647,9.647,0,0,0,1,.508,3.989,3.989,0,0,1,1.434.974A1.863,1.863,0,0,1,71.593,62.7Z" style="fill: currentColor ;fill-opacity: 0.7"></path>
+</symbol>
+
+    <svg id="svg-logo-horizontal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.43 35.999">
+  <path d="M18.325,34.462c-.178-.394-.355-.789-.527-1.186-.45-1.04-.867-2.094-1.233-3.166-1.8-5.267-2.522-11.821,1.977-15.988a11.358,11.358,0,0,1,5.1-2.637c.459-.111,1.911-.274,2.12-.348.506-.179.291-1.488.206-1.862-.437-1.945-2.98-2.667-4.721-2.5a7.362,7.362,0,0,0-4.565,2.549,14.377,14.377,0,0,0-2.594,4.073c-2.456,5.71-1.279,15.039.314,17.662a12.674,12.674,0,0,0-2.055-1.943c-.6-.564-1.2-1.118-1.783-1.7A17.333,17.333,0,0,1,7.4,23.353,15.616,15.616,0,0,1,5.385,16.26,7.765,7.765,0,0,1,6.362,12a5.011,5.011,0,0,0-4.012,1.5c-1.271,1.08-2.5,2.626-2.335,4.372C.192,19.8,1.372,21.64,2.295,23.3a29.744,29.744,0,0,0,7.127,8.287,33.619,33.619,0,0,0,4.911,3.377c1.162.659,2.688,1.439,4.021.8.122-.058.349-.144.385-.285s-.083-.341-.141-.469c-.084-.184-.189-.359-.272-.543m32.114-14.49c.615-1.175,2.189-2.946,1.722-4.382a2.172,2.172,0,0,0-3.36-.95c-1.627,1.338-1.534,9.1-.955,10.243.307,1.274,2.393,2.2,3.3.956a.524.524,0,0,0-.091-.747,1.208,1.208,0,0,0-.522-.063c-.823-.048-1.009-1.776-.981-2.376a6.566,6.566,0,0,1,.891-2.682m-6.892,6.012c-.271-2.151,1.955-5.252,1.881-7.743a3.537,3.537,0,0,0-1.5-3.177,2.195,2.195,0,0,0-.5-.186,5,5,0,0,0-1.624-.052,5.41,5.41,0,0,0-1.756.471,7.841,7.841,0,0,0-2.593,2.14c-.361.425-.7.866-1.046,1.3.027-.035-.207-.4-.234-.444-.09-.153-.186-.3-.29-.446a5.01,5.01,0,0,0-.7-.792,2.916,2.916,0,0,0-1.724-.822,2.224,2.224,0,0,0-1.041.2,1.654,1.654,0,0,0-.736.548,1.613,1.613,0,0,0-.006,1.243,25.333,25.333,0,0,0,1.565,3.4c.054.118.107.237.157.357a12.606,12.606,0,0,1,1.254,3.872c.051.884-.489,2.134.251,2.248,2.409.287,1.738-3.835,2.257-5.995a4.816,4.816,0,0,1,3.171-3.583.55.55,0,0,1,.78.527,14.175,14.175,0,0,1-.584,3.341,23.405,23.405,0,0,0-.5,3.634c-.088,2.319.6,4.673,3.147,5.227a3.583,3.583,0,0,0,3.414-.571,2.216,2.216,0,0,0,.6-3.08c-1.684.1-3.394.3-3.636-1.623M66.533,1.754c4.45-.072-3.807,11.458-7.293,11.362C60.766,9.39,64.3,1.781,66.533,1.754m-4.959,27.7a6.46,6.46,0,0,1-1.626-.543,4.512,4.512,0,0,1-1.029-.81,6.128,6.128,0,0,1-1.306-2.26,11.764,11.764,0,0,1-.565-3.74,18.568,18.568,0,0,1,.606-4.733,15.17,15.17,0,0,1,.685-2.064c.107-.255.333-.716.333-.716s.935-.036,1.276-.1c3.569-.642,6.734-3.6,8.483-6.644,1.2-2.087,2.461-5.479-.082-7.13-3.991-2.59-7.613,2.425-9.186,5.012a34.652,34.652,0,0,0-2.255,4.518c-.28.662-.547,1.329-.809,2-.093.236-.4.985-.4.985s-.49-.082-.621-.114a7.007,7.007,0,0,1-.92-.291A3.207,3.207,0,0,1,52.073,11c3.32,1.112,4.85-4.482,1.254-5.12-2.111-.288-3.312,1.466-3.092,3.411a5.506,5.506,0,0,0,1.37,3.155,6.988,6.988,0,0,0,2.783,1.626c.225.079.681.222.681.222l.257.068s-.112.422-.142.526c-.187.647-.369,1.3-.537,1.947a31.6,31.6,0,0,0-.81,4.107,21.083,21.083,0,0,0-.092,4.032c.177,2.522.649,5.74,2.693,7.491.938.8,2.728,1.378,3.871.672,1-.617,1.257-1.929,1.62-2.947a.56.56,0,0,0-.084-.615.68.68,0,0,0-.271-.115m15.449-22.8c1.262.547-2.259,9.435-9.762,11.977,1.407-4.777,8.013-12.751,9.762-11.977M71.777,31.115a6.512,6.512,0,0,1-1.2-.578,6.78,6.78,0,0,1-1.865-1.675A10.072,10.072,0,0,1,66.9,24a19.6,19.6,0,0,1-.139-3.12C76.1,18.891,80.64,8.66,79.172,6.143c-1.333-2.286-4-1.592-6.356-.069a20.83,20.83,0,0,0-9.1,13.575,3.768,3.768,0,0,1-1.725.013c-.223-.048-.558-.236-.781-.161a.4.4,0,0,0-.213.545.983.983,0,0,0,.495.45,5.558,5.558,0,0,0,1.912.627c-.442,3.914.835,10.234,3.354,12.868a3.471,3.471,0,0,0,3.434.929c1.133-.312,3-1.446,2.563-2.857a1.478,1.478,0,0,0-.978-.948m10.5-7.574a10.977,10.977,0,0,1-1.715,2.635,4.072,4.072,0,0,1-2.519,1.782,2.353,2.353,0,0,1-.65-.028,1.9,1.9,0,0,1-1.79-2.175,5.384,5.384,0,0,1,1.61-3.532c1.931-1.876,6.556-2.249,5.064,1.319m5.685-3.167c-1.411-.2-2.418,1.17-3.386,1.623.835-2.226-1.042-3.661-1.5-4.121-6.463-4.254-15.6,7-11.035,11.364a6.078,6.078,0,0,0,7.273.25c.307,3.51,7.22,4.058,7.272.624-8.417,2.159,1.534-4.868,2.759-7.493a1.551,1.551,0,0,0-1.379-2.247M26.27,26.825a2.51,2.51,0,0,1-1.39,1.1c-2.59.874-3.755-2.03-3.744-3.962a4.349,4.349,0,0,1,1.116-3.023,3.272,3.272,0,0,1,2.655-.839,1.813,1.813,0,0,1,.914.437,2.908,2.908,0,0,1,.8,1.806,12.334,12.334,0,0,1,.2,1.96,4.723,4.723,0,0,1-.545,2.517m6,1.341a3.616,3.616,0,0,1-1.383-.9,5.175,5.175,0,0,1-.81-1.895,13.761,13.761,0,0,1-.16-4.52c.056-.749.127-1.5.2-2.242.061-.608.127-1.216.184-1.825a5.279,5.279,0,0,0,.054-1.008l0-.031a1.567,1.567,0,0,0-2.543-.682,2.53,2.53,0,0,0-.918,1.511c-.076.3-.126.606-.179.911a4.587,4.587,0,0,1-.183.888c-.075.19-.133-.012-.191-.118a3.071,3.071,0,0,0-.237-.365,3,3,0,0,0-.585-.584,3.481,3.481,0,0,0-1.547-.639,5.24,5.24,0,0,0-1.408-.043,4,4,0,0,0-.752.156c-1.821.572-2.883,2.484-3.464,4.208a10.624,10.624,0,0,0-.507,2.516,12.089,12.089,0,0,0,.066,2.6,10.769,10.769,0,0,0,.606,2.428,7.58,7.58,0,0,0,1.113,2.006,4.027,4.027,0,0,0,4.033,1.614,5.973,5.973,0,0,0,4-3.827c.069-.216.073-.715.351-.6.145.062.384.7.485.851a4.439,4.439,0,0,0,1.368,1.363c.872.524,3.716.988,3.449-.78-.091-.6-.543-.785-1.034-.994m71.281-8.754a5.4,5.4,0,0,0,0,10.8h18.62a5.4,5.4,0,0,0,0-10.8Zm0-.925h18.62a6.325,6.325,0,0,1,0,12.648h-18.62a6.325,6.325,0,0,1,0-12.648Zm.047,1.851h0a4.473,4.473,0,1,0,0,8.946h18.525A4.473,4.473,0,0,0,126.6,24.81h0a4.473,4.473,0,0,0-4.473-4.473H103.6Zm4.6,4.486a2.836,2.836,0,0,1-.8,2.166,3.226,3.226,0,0,1-2.3.752h-1.6V22.015h1.779a2.976,2.976,0,0,1,2.155.74A2.739,2.739,0,0,1,108.2,24.823Zm-1.248.031q0-1.845-1.612-1.845H104.7v3.728h.515Q106.956,26.738,106.956,24.855Zm7.134.016a3.128,3.128,0,0,1-.7,2.185,3,3,0,0,1-4,0,3.141,3.141,0,0,1-.7-2.193,3.1,3.1,0,0,1,.7-2.183,2.6,2.6,0,0,1,2.005-.754,2.564,2.564,0,0,1,2,.76A3.137,3.137,0,0,1,114.09,24.87Zm-4.135,0a2.411,2.411,0,0,0,.36,1.445,1.256,1.256,0,0,0,1.077.486q1.438,0,1.438-1.931t-1.43-1.935a1.264,1.264,0,0,0-1.081.488A2.4,2.4,0,0,0,109.955,24.87Zm7.285-1.927a1.22,1.22,0,0,0-1.05.515,2.415,2.415,0,0,0-.372,1.435q0,1.915,1.422,1.915a4.454,4.454,0,0,0,1.445-.3v1.018a3.977,3.977,0,0,1-1.558.294,2.363,2.363,0,0,1-1.891-.758,3.232,3.232,0,0,1-.655-2.176,3.585,3.585,0,0,1,.322-1.565,2.341,2.341,0,0,1,.924-1.03,2.711,2.711,0,0,1,1.412-.358,3.779,3.779,0,0,1,1.659.4l-.388.987a6.377,6.377,0,0,0-.639-.266A1.889,1.889,0,0,0,117.241,22.943Zm5.565,3.208a1.487,1.487,0,0,1-.552,1.222,2.381,2.381,0,0,1-1.536.446,3.576,3.576,0,0,1-1.6-.345V26.347a6.567,6.567,0,0,0,.971.364,2.844,2.844,0,0,0,.727.106,1.025,1.025,0,0,0,.606-.153.524.524,0,0,0,.211-.454.505.505,0,0,0-.093-.3,1.045,1.045,0,0,0-.273-.253,7,7,0,0,0-.734-.388,3.474,3.474,0,0,1-.779-.474,1.776,1.776,0,0,1-.415-.529,1.522,1.522,0,0,1-.155-.7,1.487,1.487,0,0,1,.51-1.195,2.1,2.1,0,0,1,1.409-.435,3.293,3.293,0,0,1,.843.106,5.752,5.752,0,0,1,.839.3l-.388.944a5.628,5.628,0,0,0-.75-.262,2.389,2.389,0,0,0-.583-.074.767.767,0,0,0-.523.161.532.532,0,0,0-.182.419.523.523,0,0,0,.074.28.814.814,0,0,0,.234.231,7.222,7.222,0,0,0,.761.4,3.031,3.031,0,0,1,1.089.77A1.513,1.513,0,0,1,122.806,26.151Z" style="fill:currentColor;"></path>
+</svg>
+
+</svg>
 
         <header class="docs-header">
-    
-    <div class="row">
-
-        <div class="column column-4">
-            
+    <div class="content">
+        <div class="row">
             <a class="vertical-group docs-header-logo" href="//docs.vanillaforums.com/">
-                <img class="logo" src="//docs.vanillaforums.com/img/logo.svg" alt="Vanilla Forums" width="102" height="41" />
-                <span class="docs-docs-tag">Docs</span>
+                <svg class="vanillaLogo">
+    <title>Vanilla Docs</title>
+    <use class="logo-horizontal" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo-horizontal"></use>
+</svg>
+
             </a>
-            
-        </div>
-        
-        <div class="column column-8">
+
             <div class="vertical-group docs-header-tray">
                 <div class="docs-header-search js-search">
-    <div class="docs-search-wrap">
-        <i class="fa fa-search" ></i>
-        <input class="docs-search js-search-input" id="docs-search" />
-    </div>
-    <ul class="docs-search-results js-search-results">
-        <a>
-            <li>
-                <span class="title"></span>
-                <span class="tags"></span>
-            </li>
-        </a>
+    <label class="docs-search-wrap">
+        <svg class="searchIcon">
+            <title>Magnifying Glass</title>
+            <use class="logo-horizontal" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-search"></use>
+        </svg>
+        <input class="docs-search-input js-search-input" placeholder="Search&hellip;" id="docs-search" />
+    </label>
+    <ul class="searchResults js-search-results">
+        <li class="searchResult">
+            <a class="searchResult-link">
+                <div class="searchResult-title"></div>
+                <div class="searchResult-tags"></div>
+            </a>
+        </li>
     </ul>
 </div>
+
                 <div class="docs-cta">
-    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary button-small">Request a Demo</a>
+    <a href="http://pages.vanillaforums.com/demo-request-vanilla-forums?utm_source=vanilladocs&utm_medium=cta&utm_campaign=demo-request" class="docs-button button-primary">Request a Demo</a>
 </div>
 
             </div>
         </div>
-
     </div>
-
 </header>
 
-        <div class="docs-title-wrapper">
-            <div class="row">
-                <div class="column column-3"></div>
-                <div id="title" class="column column-9">
-                    <div class="docs-title">
-    <h1>Smarty Conditionals</h1>
+
+
+
+<div class="docs-content">
+    <div class="panelBackgroundBleed"></div>
+    <div class="content">
+        <main class="row mainContent">
+
+            <aside id="nav" class="column column-panel mainNav">
+
+    
+        
+        
+    
+
+    
+
+
+
+<nav id="sidebar">
+    <div class="docs-nav nav-collapse">
+
+
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier1'>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/framework/" class="sidebar-link">
+                Framework
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/assets/" class="sidebar-link">
+                Assets
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/controllers/" class="sidebar-link">
+                Controllers &amp; URLs
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/database/" class="sidebar-link">
+                Database access
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/datasets/" class="sidebar-link">
+                Datasets
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/email/" class="sidebar-link">
+                Email
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/helpers/" class="sidebar-link">
+                Helpers
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/inform/" class="sidebar-link">
+                Inform Messages
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/i18n/" class="sidebar-link">
+                Internationalization &amp; Localization
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/models/" class="sidebar-link">
+                Models, Forms, &amp; Validation
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/modules/" class="sidebar-link">
+                Modules
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/oauth/" class="sidebar-link">
+                OAuth
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/permissions/" class="sidebar-link">
+                Permissions
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/requests/" class="sidebar-link">
+                Requests
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/views/" class="sidebar-link">
+                Views
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/framework/apiv2/" class="sidebar-link">
+                Writing APIs
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier3'>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/framework/apiv2/resource-routing/" class="sidebar-link">
+                Resource Routing
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/framework/apiv2/api-endpoints/" class="sidebar-link">
+                Writing API Endpoints
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/framework/apiv2/authentication/" class="sidebar-link">
+                Authentication
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/embedding/" class="sidebar-link">
+                Embedding
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/backend/" class="sidebar-link">
+                Backend
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/backend/server-apache/" class="sidebar-link">
+                Apache
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/backend/server-nginx/" class="sidebar-link">
+                nginx
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/changelog/" class="sidebar-link">
+                Change Log
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/community/" class="sidebar-link">
+                Community
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/configuration/" class="sidebar-link">
+                Configuration
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/configuration/banner/" class="sidebar-link">
+                Banner Settings
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/configuration/dashboard/" class="sidebar-link">
+                Dashboard
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/configuration/homepage/" class="sidebar-link">
+                Homepage Settings
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/configuration/message/" class="sidebar-link">
+                Messages
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/configuration/using/" class="sidebar-link">
+                Using The Config
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/contributing/" class="sidebar-link">
+                Contributing
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/contributing/conduct/" class="sidebar-link">
+                Code of Conduct
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/contributing/coding-standard/" class="sidebar-link">
+                Coding Standard
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/contributing/pull-requests/" class="sidebar-link">
+                Pull Requests
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/data-privacy/" class="sidebar-link">
+                Data privacy
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/tools/" class="sidebar-link">
+                Developer Tools
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/tools/environment/" class="sidebar-link">
+                Environment Setup
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/importing/" class="sidebar-link">
+                Importing
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/importing/build/" class="sidebar-link">
+                Building new porters
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/importing/support/" class="sidebar-link">
+                Supported platforms
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/importing/porter/" class="sidebar-link">
+                Vanilla Porter
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/installation/" class="sidebar-link">
+                Installation
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/locales/" class="sidebar-link">
+                Locales
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/plugins/" class="sidebar-link">
+                Plugins
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/plugins/quickstart/" class="sidebar-link">
+                Plugin Quickstart
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/routes/" class="sidebar-link">
+                Routes
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/schemas/" class="sidebar-link">
+                Schemas
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem hasActiveChildren'>
+            <a href="//docs.vanillaforums.com/developer/theming/" class="sidebar-link">
+                Theming
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier2'>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/quickstart/" class="sidebar-link">
+                Quickstart
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/css/" class="sidebar-link">
+                CSS
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem hasActiveChildren  js-showInRightPanel'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/" class="sidebar-link">
+                Smarty
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier3'>
+    
+        
+        
+        <li class='menuItem isActive'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/conditionals/" class="sidebar-link isActive">
+                Smarty Conditionals
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/" class="sidebar-link">
+                Smarty Functions
+            </a>
+            
+                <div class="menuItem-children">
+                    
+
+
+
+
+<ul class='sidebar-menu nav-tier nav-tier4'>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/page-links/" class="sidebar-link">
+                Page Links
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/asset/" class="sidebar-link">
+                {asset}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/breadcrumbs/" class="sidebar-link">
+                {breadcrumbs}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/custom-menu/" class="sidebar-link">
+                {custom_menu}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/event/" class="sidebar-link">
+                {event}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/homepage-title/" class="sidebar-link">
+                {homepage_title}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/include-file/" class="sidebar-link">
+                {include_file}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/link/" class="sidebar-link">
+                {link}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/logo/" class="sidebar-link">
+                {logo}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/mobile-logo/" class="sidebar-link">
+                {mobile_logo}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/module/" class="sidebar-link">
+                {module}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/permission/" class="sidebar-link">
+                {permission}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/pocket/" class="sidebar-link">
+                {pocket}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/searchbox/" class="sidebar-link">
+                {searchbox}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/text/" class="sidebar-link">
+                {text}
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/i18n/" class="sidebar-link">
+                {t}
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/theming/smarty/modifiers/" class="sidebar-link">
+                Smarty Modifiers
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/views/" class="sidebar-link">
+                Views / HTML
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/hooks/" class="sidebar-link">
+                Event Hooks
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/about-php/" class="sidebar-link">
+                about.php
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/themeoptions/" class="sidebar-link">
+                Theme Options
+            </a>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/developer/theming/themevisibility/" class="sidebar-link">
+                Theme Visibility
+            </a>
+            
+        </li>
+    
+</ul>
+
+                </div>
+            
+        </li>
+    
+        
+        
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/developer/troubleshooting/" class="sidebar-link">
+                Troubleshooting
+            </a>
+            
+        </li>
+    
+</ul>
+
+    </div>
+</nav>
+
+
+</aside>
+
+
+            <div id="content" class="column column-main">
+
+                
+
+
+
+
+
+<div class="breadcrumbs">
+    
+        <ol class="breadcrumbs-list contentMargin" itemscope itemtype="http://schema.org/BreadcrumbList">
+
+        
+            
+            
+
+            
+
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+                
+                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='//docs.vanillaforums.com/developer'>
+                
+
+                <span class="breadcrumb-label" itemprop="name">
+                    
+                        Home
+                    
+                </span>
+
+                <meta itemprop="position" content="1" />
+
+            
+                </a>
+            
+            </li>
+            
+
+        
+            
+            
+
+            
+                <li class="breadcrumb-item breadcrumbs-separator">›</li>
+            
+
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+                
+                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='//docs.vanillaforums.com/developer/theming'>
+                
+
+                <span class="breadcrumb-label" itemprop="name">
+                    
+                        theming
+                    
+                </span>
+
+                <meta itemprop="position" content="2" />
+
+            
+                </a>
+            
+            </li>
+            
+
+        
+            
+            
+
+            
+                <li class="breadcrumb-item breadcrumbs-separator">›</li>
+            
+
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+                
+                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='//docs.vanillaforums.com/developer/theming/smarty'>
+                
+
+                <span class="breadcrumb-label" itemprop="name">
+                    
+                        smarty
+                    
+                </span>
+
+                <meta itemprop="position" content="3" />
+
+            
+                </a>
+            
+            </li>
+            
+
+        
+            
+            
+
+            
+                <li class="breadcrumb-item breadcrumbs-separator">›</li>
+            
+
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+                
+                    <span class="breadcrumb-link isLast">
+                
+
+                <span class="breadcrumb-label" itemprop="name">
+                    
+                        conditionals
+                    
+                </span>
+
+                <meta itemprop="position" content="4" />
+
+            
+                </span>
+            
+            </li>
+            
+
+        
+        </ol>
+    
+</div>
+
+                <div class="docs-title">
+    <h1 class="pageTitle">Smarty Conditionals</h1>
     
     <div class="docs-page docs-improve">
           <a href="https://github.com/vanilla/docs/edit/master/content/developer/theming/smarty/conditionals.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
-                </div>
-            </div>
-        </div>
-
-
-<div class="docs-content">
-    <div class="row">
-        <div id="nav" class="column column-3">
-            <aside id="sidebar">
-    <div class="docs-nav nav-collapse">
-        
-        <ul class="sidebar-menu nav-tier1">
-
-
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/api/">Vanilla API</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/framework/">Framework</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/embedding/">Embedding</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/backend/">Backend</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/changelog/">Change Log</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/community/">Community</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/configuration/">Configuration</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/contributing/">Contributing</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/data-privacy/">Data privacy</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/tools/">Developer Tools</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/importing/">Importing</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/installation/">Installation</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/locales/">Locales</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class=" nest">
-        <a href="//docs.vanillaforums.com/developer/plugins/">Plugins</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/routes/">Routes</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/schemas/">Schemas</a>
-    </li>
-    
-    
-	    
-
-
-    <li  class="active nest">
-        <a href="//docs.vanillaforums.com/developer/theming/">Theming</a>
-    </li>
-    
-    
-        
-        
-        
-        
-            <ul class="nav-tier2">
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/quickstart/">Quickstart </a>
-                </li>
-                
                 
 
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/css/">CSS </a>
-                </li>
-                
+
                 
 
-	    
-	    
-                <li class="active nest">
-                    <a href="//docs.vanillaforums.com/developer/theming/smarty/">Smarty </a>
-                </li>
-                
-                
+                <div class="userContent">
                     
-                    
-               
-                    
-                        <ul class="nav-tier3">
-
-                            <li class="active">
-                                <a href="//docs.vanillaforums.com/developer/theming/smarty/conditionals/">Smarty Conditionals</a>
-                            </li>
-
-                            
-                                
-                                
-                                
-                                
-			    
-		    
-                        
-
-                            <li class=" nest">
-                                <a href="//docs.vanillaforums.com/developer/theming/smarty/functions/">Smarty Functions</a>
-                            </li>
-
-                            
-		    
-                        
-
-                            <li class="">
-                                <a href="//docs.vanillaforums.com/developer/theming/smarty/modifiers/">Smarty Modifiers</a>
-                            </li>
-
-                            
-		    
-                        </ul>
-                    
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/views/">Views / HTML </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/hooks/">Event Hooks </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/about-php/">about.php </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/themeoptions/">Theme Options </a>
-                </li>
-                
-                
-
-	    
-	    
-                <li class="">
-                    <a href="//docs.vanillaforums.com/developer/theming/themevisibility/">Theme Visibility </a>
-                </li>
-                
-                
-
-	    </ul>
-        
-    
-	    
-
-
-    <li  class="">
-        <a href="//docs.vanillaforums.com/developer/troubleshooting/">Troubleshooting</a>
-    </li>
-    
-    
-	    
-
-
-
-        </ul>
-        
-    </div>
-</aside>
-        </div>
-
-        <div id="content" class="column column-9">
-
-            
-
-                
 
 <h2 id="smarty-conditionals">Smarty Conditionals</h2>
 
@@ -500,61 +1228,65 @@ n.id = i;
 
 <p>There are a few other (less useful) functions that can be used in conditional statements in Vanilla&rsquo;s Smarty implementation. These are MultiCheckPermission, SetValue and Url. These function declarations are in <code>/library/core/functions.general.php</code>. To understand how to use these functions, refer to the source code there.</p>
 
+                </div>
 
-            
-            
-        </div>
-    </div>
+                <div class="platforms">
+    <article class="platform">
+        <h2 class="platform-title">
+            Cloud Hosting
+        </h2>
+        <p class="platform-description">
+            We believe that online communities should be intuitive, engaging and true to your brand. Vanilla allows you to create a customized community that rewards positive participation, automatically curates content and lets members drive moderation.
+        </p>
+        <a href="https://vanillaforums.com/" class="platform-link">
+            Learn More &hellip;
+        </a>
+    </article>
 </div>
 
-        
-        <div class="docs-platform">
-    
-    <div class="row">
-    
-        <div class="column column-3"></div>
-        <div class="column column-9">
-            <div class="docs-platform-choice choice-cloud">
-                
-                <img src="//docs.vanillaforums.com/img/cloud-hosting.svg" />
-                <div class="choice-details">
-                    <h3>Cloud Hosting</h3>
-                    <p>
-                        We believe that online communities should be intuitive, engaging and true to your brand.
-                    </p>
-                </div>
-                <a href="https://vanillaforums.com" class="docs-button button-outline">Learn more</a>
-                
+            </div>
+
+            <aside id="nav_sub" class="column column-panel noContent">
+    <div class="docs-nav">
+        <div class="subNav">
+            <h2 class="subNav-title">
+                In this section
+            </h2>
+            <div id="subNav-content" class="subNav-content">
+
             </div>
         </div>
-
     </div>
-    
-</div>
-        
-        <footer class="docs-footer">
-    
-    <div class="row">
-        
-        <div class="column column-6">
-            <div class="docs-copyright">
-    Copyright &copy; 2009-2017 Vanilla Forums, Inc. All rights reserved.
+</aside>
+        </main>
+    </div>
 </div>
 
-        </div>
-        
-        <div class="column column-6">
+
+        <footer class="docs-footer">
+    <div class="content">
+        <div class="docs-footer-content">
+            <div class="docs-copyright">
+    Copyright &copy; 2009-2017 Vanilla Forums, Inc. <br class="copyright-break"/>All rights reserved.
+</div>
+
+
             <div class="docs-links">
     <a class="docs-links-item item-docs" href="http://docs.vanillaforums.com">Documentation</a>
+    <span class="docs-links-separator">•</span>
     <a class="docs-links-item item-blog" href="https://blog.vanillaforums.com">Blog</a>
+    <span class="docs-links-separator">•</span>
     <a class="docs-links-item item-cloud" href="https://vanillaforums.com">Cloud</a>
+    <span class="docs-links-separator">•</span>
     <a class="docs-links-item item-community" href="https://vanillaforums.org/discussions">Community</a>
+    <span class="docs-links-separator">•</span>
     <a class="docs-links-item item-api" href="http://docs.vanillaforums.com/api">API</a>
+    <span class="docs-links-separator">•</span>
     <a class="docs-links-item item-github" href="https://github.com/vanilla/vanilla">GitHub</a>
+    <span class="docs-links-separator">•</span>
     <a class="docs-links-item item-issues" href="https://github.com/vanilla/vanilla/issues">Issues</a>
 </div>
         </div>
-        
     </div>
 </footer>
         

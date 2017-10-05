@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 1024">
+    <defs>
+        <linearGradient id="a" x1="1008.55" y1="745.421" x2="717.22" y2="713.241" gradientTransform="matrix(1, 0, 0, -1, 0, 1024)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1"/>
+        </linearGradient>
+        <linearGradient id="b" x1="990.898" y1="643.172" x2="1341.118" y2="905.062" xlink:href="#a"/>
+        <linearGradient id="c" x1="954.039" y1="261.231" x2="1081.849" y2="382.751" xlink:href="#a"/>
+        <linearGradient id="d" x1="1069" y1="266.87" x2="1361.4" y2="266.87" xlink:href="#a"/>
+        <linearGradient id="e" x1="933" y1="484.475" x2="1202.4" y2="484.475" xlink:href="#a"/>
+        <linearGradient id="f" x1="844.95" y1="147.621" x2="533.824" y2="327.259" xlink:href="#a"/>
+        <linearGradient id="g" x1="981.001" y1="320.308" x2="808.421" y2="220.678" xlink:href="#a"/>
+        <linearGradient id="h" x1="933" y1="479.24" x2="639.89" y2="479.24" xlink:href="#a"/>
+        <linearGradient id="i" x1="511" y1="335" x2="875.42" y2="335" xlink:href="#a"/>
+        <linearGradient id="j" x1="782.337" y1="670.548" x2="909.947" y2="489.278" xlink:href="#a"/>
+        <linearGradient id="k" x1="426.07" y1="822.275" x2="795.94" y2="822.275" xlink:href="#a"/>
+        <linearGradient id="l" x1="535" y1="673.47" x2="798.92" y2="673.47" xlink:href="#a"/>
+        <linearGradient id="m" x1="526.5" y1="546.08" x2="694.86" y2="411.95" xlink:href="#a"/>
+        <linearGradient id="n" x1="748.63" y1="845.94" x2="748.63" y2="845.94" xlink:href="#a"/>
+        <linearGradient id="o" x1="133" y1="434" x2="330.94" y2="434" xlink:href="#a"/>
+        <linearGradient id="p" x1="930.18" y1="476" x2="1127.51" y2="476" xlink:href="#a"/>
+        <linearGradient id="q" x1="173" y1="803.275" x2="464.44" y2="803.275" xlink:href="#a"/>
+        <linearGradient id="r" x1="382.097" y1="560.723" x2="501.387" y2="354.103" xlink:href="#a"/>
+        <linearGradient id="s" x1="1109.829" y1="281.202" x2="1322.179" y2="393.052" xlink:href="#a"/>
+        <linearGradient id="t" x1="656.06" y1="332.703" x2="444.81" y2="342.023" xlink:href="#a"/>
+        <linearGradient id="u" x1="237" y1="803.275" x2="590.46" y2="803.275" xlink:href="#a"/>
+        <linearGradient id="v" x1="244.67" y1="385.214" x2="465.54" y2="767.764" xlink:href="#a"/>
+        <linearGradient id="w" x1="410.725" y1="438.02" x2="410.725" y2="127.06" xlink:href="#a"/>
+        <linearGradient id="x" x1="404" y1="0" x2="404" y2="416.57" xlink:href="#a"/>
+        <linearGradient id="y" x1="365.448" y1="118.558" x2="33.908" y2="309.968" xlink:href="#a"/>
+        <linearGradient id="z" x1="521.87" y1="61.511" x2="601.38" y2="114.271" xlink:href="#a"/>
+        <linearGradient id="aa" x1="0" y1="553.895" x2="275.44" y2="553.895" xlink:href="#a"/>
+        <linearGradient id="ab" x1="213.519" y1="396.467" x2="-54.661" y2="551.297" xlink:href="#a"/>
+        <linearGradient id="ac" x1="-45.825" y1="245.825" x2="134.755" y2="65.245" xlink:href="#a"/>
+        <linearGradient id="ad" x1="0" y1="128.5" x2="290.45" y2="128.5" xlink:href="#a"/>
+        <linearGradient id="ae" x1="390.45" y1="84.5" x2="554.48" y2="84.5" xlink:href="#a"/>
+        <linearGradient id="af" x1="590.5" y1="85.5" x2="1006.5" y2="85.5" xlink:href="#a"/>
+        <linearGradient id="ag" x1="1372.628" y1="125.512" x2="1537.688" y2="326.782" xlink:href="#a"/>
+        <linearGradient id="ah" x1="1103.6" y1="69.49" x2="1369.24" y2="233.6" xlink:href="#a"/>
+        <linearGradient id="ai" x1="1238.17" y1="125.5" x2="1479.92" y2="125.5" xlink:href="#a"/>
+        <linearGradient id="aj" x1="861.659" y1="108.029" x2="990.869" y2="-37.801" xlink:href="#a"/>
+        <linearGradient id="ak" x1="981.739" y1="39.061" x2="1140.999" y2="181.261" xlink:href="#a"/>
+        <linearGradient id="al" x1="1313.66" y1="581.572" x2="1470.63" y2="556.292" xlink:href="#a"/>
+        <linearGradient id="am" x1="1272.991" y1="792.839" x2="1430.671" y2="1015.699" xlink:href="#a"/>
+        <linearGradient id="an" x1="0" y1="757" x2="339.94" y2="757" xlink:href="#a"/>
+        <linearGradient id="ao" x1="1188.65" y1="951.508" x2="1528.01" y2="986.838" xlink:href="#a"/>
+        <linearGradient id="ap" x1="1135.589" y1="843.339" x2="860.929" y2="1119.069" xlink:href="#a"/>
+        <linearGradient id="aq" x1="1120.48" y1="487.064" x2="1536.62" y2="522.854" xlink:href="#a"/>
+        <linearGradient id="ar" x1="1248.802" y1="346.688" x2="1449.992" y2="525.398" xlink:href="#a"/>
+        <linearGradient id="as" x1="1130.703" y1="567.047" x2="1273.273" y2="499.357" xlink:href="#a"/>
+        <linearGradient id="at" x1="1144.22" y1="794.25" x2="1473.1" y2="600.77" xlink:href="#a"/>
+        <linearGradient id="au" x1="260.58" y1="1071.85" x2="55.14" y2="803.63" xlink:href="#a"/>
+        <linearGradient id="av" x1="385.14" y1="1009.775" x2="609.05" y2="1009.775" xlink:href="#a"/>
+        <linearGradient id="aw" x1="0" y1="897.4" x2="326.45" y2="897.4" xlink:href="#a"/>
+        <linearGradient id="ax" x1="858.56" y1="662.56" x2="530.98" y2="990.14" xlink:href="#a"/>
+        <linearGradient id="ay" x1="617.48" y1="1045.09" x2="537.47" y2="714.89" xlink:href="#a"/>
+        <linearGradient id="az" x1="958.451" y1="1039" x2="782.661" y2="863.22" xlink:href="#a"/>
+    </defs>
+    <title>Faceted Background</title>
+    <polygon points="1167 143 873.9 192.75 873.9 192.75 933 405 1167 143" style="opacity: 0.42;isolation: isolate;fill: url(#a)"/>
+    <polygon points="1123.18 388.05 1167 143 933 405 1123.18 388.05" style="opacity: 0.42;isolation: isolate;fill: url(#b)"/>
+    <polygon points="1069 691 930.18 615.66 927 853 1069 823.26 1069 823.26 1069 691" style="opacity: 0.42;isolation: isolate;fill: url(#c)"/>
+    <polygon points="1069 823.26 1069 823.26 1309 773 1069 691 1069 823.26" style="opacity: 0.42;isolation: isolate;fill: url(#d)"/>
+    <polygon points="1069 691 1123.18 388.05 933 405 1069 691" style="opacity: 0.42;isolation: isolate;fill: url(#e)"/>
+    <polygon points="511 855 927 853 809.58 684.52 511 855" style="opacity: 0.42;isolation: isolate;fill: url(#f)"/>
+    <polygon points="930.18 615.66 809.58 684.52 927 853 930.18 615.66 930.18 615.66" style="opacity: 0.42;isolation: isolate;fill: url(#g)"/>
+    <polygon points="930.18 615.66 930.18 615.66 933 405 697 523 809.58 684.52 930.18 615.66" style="opacity: 0.42;isolation: isolate;fill: url(#h)"/>
+    <polygon points="697 523 511 855 809.58 684.52 697 523" style="opacity: 0.42;isolation: isolate;fill: url(#i)"/>
+    <polygon points="873.9 192.75 697 523 933 405 873.9 192.75" style="opacity: 0.42;isolation: isolate;fill: url(#j)"/>
+    <polygon points="748.63 178.06 748.63 178.06 426.07 28.45 535 375 748.63 178.06" style="opacity: 0.42;isolation: isolate;fill: url(#k)"/>
+    <polygon points="697 523 748.63 178.06 535 375 697 523" style="opacity: 0.42;isolation: isolate;fill: url(#l)"/>
+    <polygon points="524.45 585.98 697 523 535 375 524.45 585.98" style="opacity: 0.42;isolation: isolate;fill: url(#m)"/>
+    <polygon points="748.63 178.06 748.63 178.06 748.63 178.06 748.63 178.06" style="opacity: 0.42;isolation: isolate;fill: url(#n)"/>
+    <polygon points="133 767 297 669 237 413 133 767" style="opacity: 0.42;isolation: isolate;fill: url(#o)"/>
+    <polygon points="930.18 615.66 1069 691 933 405 930.18 615.66" style="opacity: 0.42;isolation: isolate;fill: url(#p)"/>
+    <polygon points="426.07 28.45 173 121 237 413 426.07 28.45 426.07 28.45" style="opacity: 0.42;isolation: isolate;fill: url(#q)"/>
+    <polygon points="535 375 297 669 524.45 585.98 535 375" style="opacity: 0.42;isolation: isolate;fill: url(#r)"/>
+    <polygon points="1069 691 1309 773 1205 557.56 1069 691" style="opacity: 0.42;isolation: isolate;fill: url(#s)"/>
+    <polygon points="524.45 585.98 511 855 697 523 524.45 585.98" style="opacity: 0.42;isolation: isolate;fill: url(#t)"/>
+    <polygon points="426.07 28.45 237 413 535 375 426.07 28.45" style="opacity: 0.42;isolation: isolate;fill: url(#u)"/>
+    <polygon points="237 413 297 669 535 375 237 413" style="opacity: 0.42;isolation: isolate;fill: url(#v)"/>
+    <polygon points="297 669 511 855 524.45 585.98 297 669" style="opacity: 0.42;isolation: isolate;fill: url(#w)"/>
+    <polygon points="297 669 297 1024 390.45 1024 511 855 297 669" style="opacity: 0.42;isolation: isolate;fill: url(#x)"/>
+    <polygon points="133 767 229.71 1024 297 1024 297 669 133 767" style="opacity: 0.42;isolation: isolate;fill: url(#y)"/>
+    <polygon points="506.61 1024 602.03 1024 511 855 506.61 1024" style="opacity: 0.42;isolation: isolate;fill: url(#z)"/>
+    <polygon points="0 356.18 0 584.03 237 413 0 356.18" style="opacity: 0.42;isolation: isolate;fill: url(#aa)"/>
+    <polygon points="237 413 0 584.03 0 732.35 133 767 237 413" style="opacity: 0.42;isolation: isolate;fill: url(#ab)"/>
+    <polygon points="0 732.35 0 1014 133 767 0 732.35" style="opacity: 0.42;isolation: isolate;fill: url(#ac)"/>
+    <polygon points="0 1014 0 1024 229.71 1024 133 767 0 1014" style="opacity: 0.42;isolation: isolate;fill: url(#ad)"/>
+    <polygon points="390.45 1024 506.61 1024 511 855 390.45 1024" style="opacity: 0.42;isolation: isolate;fill: url(#ae)"/>
+    <polygon points="511 855 602.03 1024 836.24 1024 927 853 511 855" style="opacity: 0.42;isolation: isolate;fill: url(#af)"/>
+    <polygon points="1309 773 1391 983 1440 1019.41 1440 673.19 1309 773" style="opacity: 0.42;isolation: isolate;fill: url(#ag)"/>
+    <polygon points="1069 823.26 1140.5 1024 1238.17 1024 1309 773 1069 823.26" style="opacity: 0.42;isolation: isolate;fill: url(#ah)"/>
+    <polygon points="1309 773 1238.17 1024 1440 1024 1440 1019.41 1391 983 1309 773" style="opacity: 0.42;isolation: isolate;fill: url(#ai)"/>
+    <polygon points="836.24 1024 993.73 1024 927 853 836.24 1024" style="opacity: 0.42;isolation: isolate;fill: url(#aj)"/>
+    <polygon points="927 853 993.73 1024 1140.5 1024 1069 823.26 927 853" style="opacity: 0.42;isolation: isolate;fill: url(#ak)"/>
+    <polygon points="1440 523.9 1440 401.65 1281 483 1440 523.9" style="opacity: 0.42;isolation: isolate;fill: url(#al)"/>
+    <polygon points="1440 233.08 1440 79.25 1167 143 1440 233.08" style="opacity: 0.42;isolation: isolate;fill: url(#am)"/>
+    <polygon points="173 121 0 251.68 0 356.18 237 413 173 121" style="opacity: 0.42;isolation: isolate;fill: url(#an)"/>
+    <polygon points="1440 79.25 1440 0 1229.36 0 1167 143 1440 79.25" style="opacity: 0.42;isolation: isolate;fill: url(#ao)"/>
+    <polygon points="1167 143 1229.36 0 973.45 0 873.9 192.75 1167 143" style="opacity: 0.42;isolation: isolate;fill: url(#ap)"/>
+    <polygon points="1069 691 1205 557.56 1123.18 388.05 1281 483 1440 401.65 1440 359.82 1123.18 388.05 1069 691" style="opacity: 0.42;isolation: isolate;fill: url(#aq)"/>
+    <polygon points="1205 557.56 1309 773 1440 673.19 1440 523.9 1281 483 1205 557.56" style="opacity: 0.42;isolation: isolate;fill: url(#ar)"/>
+    <polygon points="1123.18 388.05 1205 557.56 1281 483 1123.18 388.05" style="opacity: 0.42;isolation: isolate;fill: url(#as)"/>
+    <polygon points="1123.18 388.05 1440 359.82 1440 233.08 1167 143 1123.18 388.05" style="opacity: 0.42;isolation: isolate;fill: url(#at)"/>
+    <polygon points="426.07 28.45 385.14 0 0 0 0 1.52 173 121 426.07 28.45" style="opacity: 0.42;isolation: isolate;fill: url(#au)"/>
+    <polygon points="503.88 0 385.14 0 426.07 28.45 503.88 0" style="opacity: 0.42;isolation: isolate;fill: url(#av)"/>
+    <polygon points="0 1.52 0 251.68 173 121 0 1.52" style="opacity: 0.42;isolation: isolate;fill: url(#aw)"/>
+    <polygon points="748.63 178.06 748.63 178.06 748.63 178.06 697 523 873.9 192.75 820.24 0 775.28 0 748.63 178.06" style="opacity: 0.42;isolation: isolate;fill: url(#ax)"/>
+    <polygon points="426.07 28.45 748.63 178.06 775.28 0 503.88 0 426.07 28.45 426.07 28.45" style="opacity: 0.42;isolation: isolate;fill: url(#ay)"/>
+    <polygon points="873.9 192.75 973.45 0 820.24 0 873.9 192.75 873.9 192.75" style="opacity: 0.42;isolation: isolate;fill: url(#az)"/>
+</svg>
