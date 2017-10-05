@@ -68,10 +68,15 @@
         display: none;
     }
 
-    .sidebar-link.hasActiveChildren {
-        + .menuItem-children {
+    .nav-tier1 > .menuItem.isActive,
+    .nav-tier1 > .menuItem.hasActiveChildren {
+        > .menuItem-children {
             display: block;
         }
+    }
+
+    .nav-tier2 > .menuItem.hasActiveChildren {
+        background-color: rgba($navItem-bg, .1) !important;
     }
 }
 

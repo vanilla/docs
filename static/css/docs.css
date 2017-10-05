@@ -621,8 +621,13 @@ a:hover {
   display: none;
 }
 
-#nav .sidebar-link.hasActiveChildren + .menuItem-children {
+#nav .nav-tier1 > .menuItem.isActive > .menuItem-children,
+#nav .nav-tier1 > .menuItem.hasActiveChildren > .menuItem-children {
   display: block;
+}
+
+#nav .nav-tier2 > .menuItem.hasActiveChildren {
+  background-color: rgba(85, 90, 98, 0.1) !important;
 }
 
 .menuItem {
@@ -1126,6 +1131,7 @@ h4 {
 .userContent {
   display: block;
   width: 100%;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -1143,14 +1149,14 @@ h4 {
 
 .userContent h3 {
   color: #555A62;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   margin-top: 1.6em;
 }
 
 .userContent h4 {
   color: #0291DB;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
 }
 
@@ -1165,7 +1171,8 @@ h4 {
 }
 
 .userContent ul, .userContent ol {
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 1.6em;
 }
 
 .userContent ul li, .userContent ol li {

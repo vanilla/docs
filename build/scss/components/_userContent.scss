@@ -1,6 +1,7 @@
 .userContent {
   display: block;
   width: 100%;
+  font-size: $fontSize-large;
   line-height: 1.6;
 
   h2 {
@@ -17,14 +18,14 @@
 
   h3 {
     color: $darkText;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: $fontWeight-bold;
     margin-top: 1.6em;
   }
 
   h4 {
     color: $vanillaBlue;
-    font-size: $fontSize-medium;
+    font-size: $fontSize-large;
     font-weight: normal;
   }
 
@@ -39,7 +40,8 @@
   }
 
   ul, ol {
-    font-size: $fontSize-medium;
+    font-size: $fontSize-large;
+    margin-bottom: 1.6em;
 
     li {
       // line-height: 1.4;
