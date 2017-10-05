@@ -75,7 +75,7 @@ Here's an example:
 {{% versioning added="2.0" deprecated="2.1" removed="2.3" %}}
 ~~~
 
-Only add the info you need. So for example, if a feature has been added and is not depricated, you'd enter:
+Only add the info you need. So for example, if a feature has been added and is not deprecated, you'd enter:
 
 ~~~
 {{% versioning added="2.0" %}}
