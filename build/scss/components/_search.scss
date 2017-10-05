@@ -34,13 +34,20 @@
     border: none;
     background: rgba(black, .5);
     color: white;
-    line-height: 2;
-    padding: 3px 15px 3px 37px;
-    width: 100%;
+    display: block;
+
     font-size: $fontSize-medium;
+    line-height: $fontSize-medium * 2;
+    padding: 6px 15px 6px 37px;
+    width: 100%;
     transition: width 0.2s;
+    height: 36px;
 
     &:focus {
         outline: none;
     }
+}
+
+::-ms-clear {
+    display: none;
 }

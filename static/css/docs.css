@@ -225,6 +225,7 @@ span.breadcrumb-link {
   padding: 7px 20px;
   border-radius: 2px;
   font-size: 14px;
+  line-height: 1.46;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.42);
   color: white;
@@ -782,17 +783,23 @@ a:hover {
   border: none;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  line-height: 2;
-  padding: 3px 15px 3px 37px;
-  width: 100%;
+  display: block;
   font-size: 14px;
+  line-height: 28px;
+  padding: 6px 15px 6px 37px;
+  width: 100%;
   -webkit-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  height: 36px;
 }
 
 .docs-search-input:focus {
   outline: none;
+}
+
+::-ms-clear {
+  display: none;
 }
 
 .searchResults {
