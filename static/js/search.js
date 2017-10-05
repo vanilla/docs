@@ -60,7 +60,7 @@ $(function($){
     }
 
     var $results = $('.js-search-results'),
-        $template = $results.find('a');
+        $template = $results.find('.searchResult');
 
     var searchHandler = function (e) {
         var $input = $(e.currentTarget),
@@ -97,9 +97,9 @@ $(function($){
                     categories = match.tags.join(' / ');
                 }
 
-                $item.attr('href', url);
-                $item.find('.title').text(title);
-                $item.find('.tags').text(categories);
+                $item.find('.searchResult-link').attr('href', url);
+                $item.find('.searchResult-title').text(title);
+                $item.find('.searchResult-tags').text(categories);
 
                 $results.append($item);
             });

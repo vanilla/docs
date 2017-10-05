@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     identifier: forum-settings
-    weight: 3
+    weight: 4
 aliases:
 - /forum-settings/forum-settings
 ---

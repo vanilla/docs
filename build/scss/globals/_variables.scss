@@ -49,6 +49,8 @@ $panelYellowText:           #9E998E !default;
 $panelBlue:                 #BBE1F5 !default;
 $panelBlueText:             #0272AC !default;
 
+// Spacing
+$mainColumn-padding:        42px;
 
 // Animation
 $defaultTiming:             .3s;
@@ -79,15 +81,17 @@ $choiceApi-bg_hover: rgba($vanillaPink, .7);
 
 // Versioning
 $fontSize-small:            12px;
+$fontSize-medium:           14px;
 $versioning-color:          #92959a;
 
 // Logos
 $logoHorizontal-width:      115px;
 $logoHorizontal-height:     34.28px;
 
-// nav-tier
+// nav
 $navTier-padding:           12px;
-
+$navItem-bg:                #555A62;
+$navItem-horizontalPadding: 18px;
 
 // Media Queries
 $mediaQuery-mobile:         768px;

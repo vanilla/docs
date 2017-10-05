@@ -17,23 +17,21 @@ function updateSubNav() {
     var $mainNav = $('#nav');
     var $secondaryNav = $('#nav_sub');
     var $secondaryNavContent = $('#subNav-content');
-    var $subNavContent = $mainNav.find('.menuItem.isActive .menuItem-children');
+    var $subNavContent = $mainNav.find('.menuItem.js-isActive .menuItem-children');
 
 
     if( $subNavContent.length > 0 ) {
         $secondaryNavContent.html( $subNavContent.html() );
-        $secondaryNav.addClass('hasContent');
+        $secondaryNav.removeClass('noContent');
     } else {
         $secondaryNavContent.html( '' );
-        $secondaryNav.removeClass('hasContent');
+        $secondaryNav.addClass('noContent');
     }
 }
 
 function navInit() {
     updateSubNav();
-
 }
-
 
 
 $(function(){

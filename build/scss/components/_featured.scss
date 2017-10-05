@@ -8,7 +8,7 @@
     border: 1px solid $borderDarken;
 
     + .featured-item {
-        margin-top: 30px;
+        margin-top: $mainColumn-padding/2;
     }
 
     &:before {

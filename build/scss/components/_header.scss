@@ -6,13 +6,18 @@
         height: $header-minHeight;
     }
 
+    .docs-search-wrap {
+        width: 336px;
+    }
 
     .docs-header-tray {
         justify-content: flex-end;
+        align-items: center;
         text-align: right;
+        margin-left: auto;
 
-        > div {
-            margin-left: 20px;
+        .docs-header-search {
+            margin-right: 15px;
         }
 
         .docs-cta {
@@ -38,11 +43,3 @@
         }
     }
 }
-
-
-.pageType-help {
-    .docs-header {
-        background-color: $vanillaBlue;
-    }
-}
-

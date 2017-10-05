@@ -32,69 +32,6 @@
     }
 }
 
-#sidebar {
-    position: relative;
-    height: 100%;
-
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50vw;
-        border: 1px solid #ECEDED;
-        height: 100%;
-        background: $panel-bg;
-    }
-}
-
-.docs-nav {
-    position: relative;
-    display: block;
-    width: 100%;
-    min-height: 100%;
-    padding: 70px 0;
-}
-
-.sidebar-menu {
-    list-style: none;
-    display: block;
-    padding: 0;
-    margin: 0;
-
-    &.sidebar-menu {
-        margin-left: $navTier-padding;
-    }
-}
-
-.menuItem-children {
-    padding: 0;
-    margin: 0;
-}
-
-.menuItem {
-    display: block;
-    padding: 5px 0;
-    font-size: 14px;
-    color: $darkText;
-    line-height: 1.5;
-
-
-    &.isActive {
-        > .sidebar-link {
-            background-color: rgba(85, 90 ,98 , .10);
-        }
-    }
-}
-
-.sidebar-link {
-    display: block;
-    color: inherit !important;
-    line-height: 1.5;
-    padding: 5px 24px;
-}
-
 .mainContent {
     min-height: calc(100vh - #{$footer-minHeight + $header-minHeight});
 }

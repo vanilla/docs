@@ -10,3 +10,32 @@ function stripTags(html) {
     tmp.innerHTML = html;
     return tmp.textContent || tmp.innerText || "";
 }
+
+
+
+function updateSubNav() {
+    var $mainNav = $('#nav');
+    var $secondaryNav = $('#nav_sub');
+    var $secondaryNavContent = $('#subNav-content');
+    var $subNavContent = $mainNav.find('.menuItem.js-isActive .menuItem-children');
+
+
+    if( $subNavContent.length > 0 ) {
+        $secondaryNavContent.html( $subNavContent.html() );
+        $secondaryNav.removeClass('noContent');
+    } else {
+        $secondaryNavContent.html( '' );
+        $secondaryNav.addClass('noContent');
+    }
+}
+
+function navInit() {
+    updateSubNav();
+}
+
+
+$(function(){
+    navInit();
+});
+
+

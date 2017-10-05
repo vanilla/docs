@@ -68,7 +68,7 @@
     }
 
     .docs-links {
-        font-size: 14px;
+        font-size: $fontSize-medium;
         color: inherit;
         letter-spacing: 0;
     }
@@ -133,7 +133,7 @@
 
     em {
         display: block;
-        font-size: 14px;
+        font-size: $fontSize-medium;
         color: white;
         opacity: .7;
         font-style: normal;
@@ -141,7 +141,7 @@
     }
 
     p {
-        font-size: 14px;
+        font-size: $fontSize-medium;
         line-height: 22px;
     }
 

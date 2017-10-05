@@ -61,7 +61,7 @@ body {
     flex-grow: 1;
     max-width: calc(100% - #{$panel-width * 2});
     background-color: white;
-    padding: 0 42px;
+    padding: 0 $mainColumn-padding $mainColumn-padding;
 }
 
 .column-panel {

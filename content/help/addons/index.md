@@ -6,7 +6,7 @@ category: help
 menu:
   help:
     identifier: addons
-    weight: 4
+    weight: 5
 aliases:
 - /addons
 ---

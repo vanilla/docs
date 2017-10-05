@@ -1,4 +1,6 @@
 .userContent {
+  display: block;
+  width: 100%;
   line-height: 1.6;
 
   h2 {
@@ -22,7 +24,7 @@
 
   h4 {
     color: $vanillaBlue;
-    font-size: 14px;
+    font-size: $fontSize-medium;
     font-weight: normal;
   }
 
@@ -37,7 +39,7 @@
   }
 
   ul, ol {
-    font-size: 14px;
+    font-size: $fontSize-medium;
 
     li {
       // line-height: 1.4;
@@ -59,12 +61,13 @@
     font-size: 12px;
     padding: 8px;
     border-radius: 2px;
-    border: 1px solid rgba(#979797, .2);;
+    border: 1px solid rgba(#979797, .2);
+    white-space: normal;
 
     code {
       background: transparent;
       padding: 36px 14px;
-      font-size: 14px;
+      font-size: $fontSize-medium;
     }
 
     + h2 {
@@ -92,7 +95,7 @@
     td, th {
       text-align: left;
       padding: 16px 8px;
-      font-size: 14px;
+      font-size: $fontSize-medium;
       line-height: 20px;
     }
 
@@ -100,7 +103,7 @@
       th {
         vertical-align: bottom;
         border-bottom: 2px solid $borderDarken;
-        font-size: 14px;
+        font-size: $fontSize-medium;
         font-weight: bold;
       }
     }

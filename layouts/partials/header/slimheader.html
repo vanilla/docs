@@ -1,16 +1,13 @@
 <header class="docs-header">
     <div class="content">
         <div class="row">
-            <div class="column column-4">
-                <a class="vertical-group docs-header-logo" href="/">
-                    {{ partial "logo.html" . }}
-                </a>
-            </div>
-            <div class="column column-8">
-                <div class="vertical-group docs-header-tray">
-                    {{ partial "header/search.html" . }}
-                    {{ partial "header/cta.html" . }}
-                </div>
+            <a class="vertical-group docs-header-logo" href="/">
+                {{ partial "logo.html" . }}
+            </a>
+
+            <div class="vertical-group docs-header-tray">
+                {{ partial "header/search.html" . }}
+                {{ partial "header/cta.html" . }}
             </div>
         </div>
     </div>

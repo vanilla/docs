@@ -8,9 +8,6 @@
 @import "globals/mixins/mixin.mediaQueries";
 @import "globals/grid";
 @import "globals/gradient";
-
 @import "globals/docs";
-
-// Application specific styles
-
-@import "tmp/componentsMap";
+@import "tmp/componentsMap"; // Automatic import of all "components" partials
+@import "overwrites/help";
