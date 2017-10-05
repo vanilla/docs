@@ -57,7 +57,7 @@ version:
   removed: 2.3
 ~~~
 
-This will set the versioning info right under the page title. Only add the info you need. So for example, if a feature has been added and is not depricated, you'd enter:
+This will set the versioning info right under the page title. Only add the info you need. So for example, if a feature has been added and is not deprecated, you'd enter:
 
 ~~~
 version:
@@ -98,7 +98,7 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 	* OS X: `$ brew install yarn`
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
-3. Install Hugo `brew install hugo` [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/)
+3. Install Hugo `brew install hugo` [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/) OR if you already have hugo, run `brew upgrade hugo`
 4. From the root of the folder, use `yarn` to install the project: `$ yarn install`
 
 That should be it, you now have a working copy of the docs.
@@ -118,7 +118,7 @@ When you're done writing docs or making edits, just create a pull-request agains
 
 Publishing is easy. Just build the site statically using `$ yarn run build` and then push it to the `gh-pages` branch using `$ yarn run push`. 
 
-Note: **Having built the site using the live editor is NOT SUFFICIENT for a push**, and will likely break the deployment. Always deploy a freshly built site using `grunt build`.
+Note: **Having built the site using the live editor is NOT SUFFICIENT for a push**, and will likely break the deployment. Always deploy a freshly built site using `$ yarn run build`.
 
 #### Troubleshooting
 
