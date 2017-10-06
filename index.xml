@@ -81,6 +81,16 @@ Q2 release 6 (Thursday, June 29)  Improve load time of Vanilla Statistics dashbo
     </item>
     
     <item>
+      <title>API Reference</title>
+      <link>//docs.vanillaforums.com/apiv2/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/apiv2/swagger/</guid>
+      <description>The base URL of your API is https://&amp;lt;your domain&amp;gt;/api/v2.
+            </description>
+    </item>
+    
+    <item>
       <title>Accessibility</title>
       <link>//docs.vanillaforums.com/help/appearance/accessibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

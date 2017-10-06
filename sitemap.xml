@@ -41,6 +41,10 @@
   </url>
   
   <url>
+    <loc>//docs.vanillaforums.com/apiv2/swagger/</loc>
+  </url>
+  
+  <url>
     <loc>//docs.vanillaforums.com/help/appearance/accessibility/</loc>
   </url>
   
@@ -835,6 +839,11 @@
   
   <url>
     <loc>//docs.vanillaforums.com/developer/importing/support/</loc>
+  </url>
+  
+  <url>
+    <loc>//docs.vanillaforums.com/tags/swagger/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

@@ -10,6 +10,16 @@
     
     
     <item>
+      <title>API Reference</title>
+      <link>//docs.vanillaforums.com/apiv2/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/apiv2/swagger/</guid>
+      <description>The base URL of your API is https://&amp;lt;your domain&amp;gt;/api/v2.
+            </description>
+    </item>
+    
+    <item>
       <title>Authentication</title>
       <link>//docs.vanillaforums.com/apiv2/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
