@@ -11,6 +11,7 @@
         <link href="/css/docs.css" rel="stylesheet">
         <link href="/css/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+        <link rel="canonical" href="{{ $.Permalink }}" />
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
@@ -21,20 +22,33 @@
         <script src="/js/search.js" defer></script>
         <script src="/js/custom.js" defer></script>
 
+
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
         {{ partial "trackers.html" . }}
-
         {{ if .Params.swagger }}
         <script src="/js/swagger/swagger-ui-bundle.js"></script>
         <script src="/js/swagger/swagger-ui-standalone-preset.js"></script>
         <script src="/js/swagger/swagger-ui-plugin.js"></script>
         <link href="/css/swagger-ui.css" rel="stylesheet">
-        {{ end }}
-
+        {{ end }}{{ (print "<!-- " ($.Scratch.Get "TemplateName") " -->") | safeHTML  }}
     </head>
 
     <body class="docs grid docs-layout-single docs-layout-section-{{ .Section }} pageType-{{lower .Type}}">
+        {{ if (eq (lower .Type) "api") }}
+            {{ $.Scratch.Set "menuData" $.Site.Menus.api }}
+            {{ $.Scratch.Set "menuName" "api" }}
+        {{ else if (eq (lower .Type) "apiv2") }}
+            {{ $.Scratch.Set "menuData" $.Site.Menus.apiv2 }}
+            {{ $.Scratch.Set "menuName" "api2" }}
+        {{ else if (eq (lower .Type) "help") }}
+            {{ $.Scratch.Set "menuData" $.Site.Menus.help }}
+            {{ $.Scratch.Set "menuName" "help" }}
+        {{ else if (eq (lower .Type) "developer") }}
+            {{ $.Scratch.Set "menuData" $.Site.Menus.developer }}
+            {{ $.Scratch.Set "menuName" "developer" }}
+        {{ end }}
+        {{ $rootNode := . }}
+
         {{ partial "svgs.html" . }}
         {{ partial "header/slimheader.html" . }}
