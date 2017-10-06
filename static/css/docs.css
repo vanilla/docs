@@ -279,6 +279,16 @@ span.breadcrumb-link {
   background-color: rgba(245, 44, 110, 0.7);
 }
 
+@media screen and (max-width: 788px) {
+  .choiceApi-link {
+    display: block;
+  }
+  .choiceApi-link .choiceApi-left {
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
 .choiceApi-title {
   font-size: 24px;
   display: block;
@@ -509,6 +519,18 @@ a:hover {
 
 .docs-header .docs-search:focus {
   min-width: 200px;
+}
+
+@media screen and (min-width: 1465px) {
+  .docsMobileHeader {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1464px) {
+  .docsDesktopHeader {
+    display: none;
+  }
 }
 
 .docs-title {
@@ -890,7 +912,7 @@ a:hover {
   margin-bottom: 0px;
 }
 
-.singleton-bg {
+.singleton-gradient {
   position: fixed;
   top: 0;
   left: 0;
@@ -901,7 +923,16 @@ a:hover {
   background: linear-gradient(45deg, #F5296D 30%, #0f255a 50%, #0291DB 70%);
 }
 
-.singleton-gradient {
+@media screen and (max-width: 788px) {
+  .singleton-gradient {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #F5296D), color-stop(50%, #0f255a), color-stop(70%, #0291DB));
+    background: -webkit-linear-gradient(bottom, #F5296D 30%, #0f255a 50%, #0291DB 70%);
+    background: -o-linear-gradient(bottom, #F5296D 30%, #0f255a 50%, #0291DB 70%);
+    background: linear-gradient(0deg, #F5296D 30%, #0f255a 50%, #0291DB 70%);
+  }
+}
+
+.singleton-bg {
   content: "";
   position: absolute;
   top: 0;
@@ -959,6 +990,13 @@ a:hover {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .singleton-header .docs-button {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 .docs-welcome {
@@ -1028,6 +1066,7 @@ a:hover {
 
 .docs-welcome-choice .docs-button {
   width: 260px;
+  max-width: 100%;
 }
 
 .docs-welcome-choice .docs-button:hover {
@@ -1142,6 +1181,10 @@ p {
   width: 100%;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.userContent > h2:first-child {
+  margin-top: 0.8em;
 }
 
 .userContent h2,

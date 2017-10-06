@@ -25,6 +25,14 @@
     color: white;
     background-color: $choiceApi-bg_hover;
   }
+
+  @include mediaQuery-landing {
+    display: block;
+    .choiceApi-left {
+      max-width: 100%;
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .choiceApi-title {

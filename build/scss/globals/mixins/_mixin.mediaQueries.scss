@@ -4,6 +4,18 @@
   }
 }
 
+@mixin mediaQuery-hasBleed {
+  @media screen and (min-width: $site-widthPadded + 1px) {
+    @content;
+  }
+}
+
+@mixin mediaQuery-noBleed {
+  @media screen and (max-width: $site-widthPadded) {
+    @content;
+  }
+}
+
 @mixin mediaQuery-mobile {
   @media screen and (max-width: $mediaQuery-mobile) {
     @content;

@@ -19,8 +19,6 @@
         .docs-header-search {
             margin-right: 15px;
         }
-
-
     }
 
     .docs-search {
@@ -29,5 +27,17 @@
         &:focus {
             min-width: 200px;
         }
+    }
+}
+
+@include mediaQuery-hasBleed {
+    .docsMobileHeader {
+        display: none;
+    }
+}
+
+@include mediaQuery-noBleed {
+    .docsDesktopHeader {
+        display: none;
     }
 }
