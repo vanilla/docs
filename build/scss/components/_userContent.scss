@@ -4,6 +4,10 @@
   font-size: $fontSize-large;
   line-height: 1.6;
 
+  > h2:first-child {
+    margin-top: 0.8em;
+  }
+
   h2,
   h3,
   h4,
@@ -12,9 +16,6 @@
   {
     margin-top: 2.5em;
   }
-
-
-
 
   h2 {
     color: $vanillaPink;
