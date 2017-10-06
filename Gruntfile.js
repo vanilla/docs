@@ -28,7 +28,7 @@ module.exports = function (grunt) {
             },
             hugo: {
                 files: ['content/**', 'layouts/**', 'data/**', 'static/**', 'archetypes/**', 'config.yaml', 'config-dev.yaml', '!static/js/lunr-index.json'],
-                tasks: ['hugo:dev', 'index']
+                tasks: ['clean', 'hugo:dev', 'index']
             },
             js: {
                 files: ['build/js/**/*.js'],
