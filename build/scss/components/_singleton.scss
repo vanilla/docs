@@ -31,16 +31,20 @@
 
 }
 
-.singleton-bg {
+.singleton-gradient {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background: linear-gradient(45deg, $gradientPink 30%, $gradientMid 50%, $gradientBlue 70%);
+
+    @include mediaQuery-landing {
+        background: linear-gradient(0deg, $gradientPink 30%, $gradientMid 50%, $gradientBlue 70%);
+    }
 }
 
-.singleton-gradient {
+.singleton-bg {
     content: "";
     position: absolute;
     top: 0;
@@ -92,6 +96,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mediaQuery-mobile {
+        .docs-button {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
 }
 
 .docs-welcome {
@@ -147,6 +158,7 @@
 
     .docs-button {
         width: 260px;
+        max-width: 100%;
 
         &:hover {
             border-color: $vanillaPink;
