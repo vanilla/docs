@@ -5,8 +5,8 @@
         "description": "API access to your community.",
         "version": "2.0-alpha"
     },
-    "host": "vanilla.dev",
-    "basePath": "/base/api/v2",
+    "host": "example.com",
+    "basePath": "/api/v2",
     "paths": {
         "/categories": {
             "get": {

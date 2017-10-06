@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
         ],
         plugins: [
             SwaggerUIBundle.plugins.DownloadUrl,
-            HideTopbarPlugin,
+            HideTopbarPlugin
         ],
         layout: "StandaloneLayout",
         validatorUrl: null,
