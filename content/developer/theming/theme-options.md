@@ -8,7 +8,7 @@ menu:
     parent: theming
     weight: 70
 aliases:
-- /theming/themeoptions
+  - /developer/theming/themeoptions
 ---
 ## Theme Options
 

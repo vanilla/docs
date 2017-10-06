@@ -8,7 +8,8 @@ menu:
     parent: theming
     weight: 80
 aliases:
-- /theming/visibility
+- /developer/theming/visibility
+- /developer/theming/themevisibility
 ---
 
 {{% cloudfeature %}}

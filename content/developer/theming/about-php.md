@@ -82,10 +82,10 @@ This is an optional property that tells Vanilla which views the theme was meant 
   * mixed
 
 ### Visibility
-If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your theme's visibility]({{< relref "developer/theming/themevisibility.md" >}}).
+If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your theme's visibility]({{< relref "developer/theming/theme-visibility.md" >}}).
 
 
 ### Theme Options:
 
-The about.php file also supports [Theme Options]({{< relref "developer/theming/themeoptions.md" >}}).
+The about.php file also supports [Theme Options]({{< relref "developer/theming/theme-options.md" >}}).
  

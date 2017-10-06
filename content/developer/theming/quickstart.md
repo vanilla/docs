@@ -18,7 +18,7 @@ With Vanilla, you have full control over both the CSS and the actual HTML of eve
 
 1. Copy the /themes/default folder and rename it to your theme name so it sits in the root theme folder like this: `/themes/your_theme_name`.
 2. Create an [about.php]({{< relref "developer/theming/about-php.md" >}}) file and edit the information to reflect your theme's information.
-3. If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your theme's visibility]({{< relref "developer/theming/themevisibility.md" >}}). If not, skip this step.
+3. If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your theme's visibility]({{< relref "developer/theming/theme-visibility.md" >}}). If not, skip this step.
 4. Create a custom.css file in the "design" folder of your custom theme.
 5. Go to your Dashboard &gt; Themes, and apply your new theme. If you don't see it, delete the **theme-index.php** in the **cache** folder.
 6. Edit the custom.css file to your heart's content!
