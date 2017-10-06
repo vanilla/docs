@@ -2,6 +2,8 @@
 {{ $menuName := ($.Scratch.Get "menuName") }}
 {{ $rootNode := . }}
 
-{{ partial "menu/header.html" . }}
-{{ partial "menu/genericMenu_tier.html" (dict "rootNode" $rootNode "menuName" $menuName "menuData" $menuData "tier" 1) }}
-{{ partial "menu/footer.html" . }}
+<nav id="sidebar">
+    <div class="docs-nav nav-collapse">
+        {{ partial "menu/genericMenu_tier.html" (dict "rootNode" $rootNode "menuName" $menuName "menuData" $menuData "tier" 1) }}
+    </div>
+</nav>
