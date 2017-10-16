@@ -11,47 +11,53 @@ aliases:
 - /addons/salesforce
 ---
 
-## Overview
-
-This plugin allows you to:
-
-- Link your Salesforce account to your Vanilla user profile.
-- Create cases and leads from discussions.
-- View leads on Vanilla users profile.
-
 ## Requirements
 
-You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
+You must have SSL enabled on your domain. (Your forum must be served over HTTPS.)
+
+## Features
+
+This addon allows users that have the `Staff.Allow` permission to do the following:
+
+- Link your Salesforce account to your Vanilla user profile.
+- Create Salesforce cases and leads from Vanilla discussions (per discussion, not per comment).
+- Salesforce cases and leads appear as "attachments" on your Vanilla discussion for authorized users.
+- View Salesforce leads from Vanilla user profiles.
+
+The Vanilla administrator may alternatively setup a global Salesforce connection rather than using individual connections.
+
+We also offer single sign-on from Salesforce.
 
 ## Setup
 
-### Configure Application in Salesforce
+### Salesforce: Create & Configure Application
 
 1. Log into your Salesforce Account
-1. Create new Connected App in Salesforce
+1. Create new Connected App in Salesforce.
   1. Build → Create → Apps → Connected Apps → New
-  1. Fill the required fields **Connected App Name**, **API Name**, **Contact Email**
-  1. Enable OAuth Settings
+  1. Fill the required fields: **Connected App Name**, **API Name**, **Contact Email**.
+  1. Enable OAuth Settings.
   1. Set a Callback URL by appending `/profile/salesforceconnect` to the end of your forum's URL.
      - If your forum is at `https://forum.example.com/`, your Callback URL would be `https://forum.example.com/profile/salesforceconnect`.
      - If your forum is at `https://forum.example.com/en/`, your Callback URL would be `https://forum.example.com/en/profile/salesforceconnect`.
-     - Callback URL must be HTTPS
-  1. Add **Full access (full)** and **Perform requests on your behalf at any time (refresh_token, offline_access)** to Selected OAuth Scopes.
-  1. Save ![](/img/help/addons/salesforce/app_create.png)
+     - Callback URL must be HTTPS.
+  1. Add to Selected OAuth Scopes:
+     - **Full access (full)**
+     - **Perform requests on your behalf at any time (refresh_token, offline_access)**
+  1. Save. ![](/img/help/addons/salesforce/app_create.png)
 
-### Configure Plugin in Vanilla
+### Vanilla: Enable & Configure Addon
 
-1. Log into your Vanilla forum
-1. Go into the plugin's settings
-1. Fill out the requested information
+1. Log into your Vanilla forum.
+1. Dashboard → Addons, and click the Salesforce addon's settings icon.
+1. Fill out the requested information.
     - Where to find your ApplicationID and Secret in Salesforce?
 
-    In the app creation section mentioned in [Configure Application in Salesforce](#configure-application-in-salesforce) under API you will see
-    Consumer Key (which is the ApplicationID) and Consumer Secret (which is the Secret)
+    In the app creation section mentioned in [Configure Application in Salesforce](#configure-application-in-salesforce) under API you will see Consumer Key (which is the ApplicationID) and Consumer Secret (which is the Secret)
 
     ![](/img/help/addons/salesforce/key_secret.png)
 
-### Link your account
+### Vanilla: Link your account
 
 1. Login to Vanilla.
 1. Go to your profile page.
@@ -60,7 +66,7 @@ You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
 1. Click "Connect" on Salesforce.
 1. Follow the instructions from there.
 
-## F.A.Q
+## Troubleshooting
 
 ### I can't link my account.
 
