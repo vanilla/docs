@@ -329,7 +329,7 @@ n.id = i;
     
         
         
-        <li class='menuItem hasActiveChildren'>
+        <li class='menuItem'>
             <a href="//docs.vanillaforums.com/help/addons/" class="sidebar-link">
                 Addons
             </a>
@@ -611,7 +611,7 @@ n.id = i;
     
         
         
-        <li class='menuItem hasActiveChildren  js-showInRightPanel'>
+        <li class='menuItem '>
             <a href="//docs.vanillaforums.com/help/addons/social/" class="sidebar-link">
                 Social Connect Plugins
             </a>
@@ -653,8 +653,8 @@ n.id = i;
     
         
         
-        <li class='menuItem isActive'>
-            <a href="//docs.vanillaforums.com/help/addons/social/linkedin/" class="sidebar-link isActive">
+        <li class='menuItem'>
+            <a href="//docs.vanillaforums.com/help/addons/social/linkedin/" class="sidebar-link">
                 LinkedIn
             </a>
             
@@ -1112,7 +1112,7 @@ n.id = i;
     
         
         
-        <li class='menuItem'>
+        <li class='menuItem hasActiveChildren'>
             <a href="//docs.vanillaforums.com/help/posting/" class="sidebar-link">
                 Posting
             </a>
@@ -1145,8 +1145,8 @@ n.id = i;
     
         
         
-        <li class='menuItem '>
-            <a href="//docs.vanillaforums.com/help/posting/uploading-files/" class="sidebar-link">
+        <li class='menuItem isActive  js-showInRightPanel'>
+            <a href="//docs.vanillaforums.com/help/posting/uploading-files/" class="sidebar-link isActive">
                 Uploading Files
             </a>
             
@@ -1348,44 +1348,16 @@ n.id = i;
                 <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 
                 
-                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='//docs.vanillaforums.com/help/addons'>
+                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='//docs.vanillaforums.com/help/posting'>
                 
 
                 <span class="breadcrumb-label" itemprop="name">
                     
-                        addons
+                        posting
                     
                 </span>
 
                 <meta itemprop="position" content="2" />
-
-            
-                </a>
-            
-            </li>
-            
-
-        
-            
-            
-
-            
-                <li class="breadcrumb-item breadcrumbs-separator">›</li>
-            
-
-                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-
-                
-                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='//docs.vanillaforums.com/help/addons/social'>
-                
-
-                <span class="breadcrumb-label" itemprop="name">
-                    
-                        social
-                    
-                </span>
-
-                <meta itemprop="position" content="3" />
 
             
                 </a>
@@ -1409,11 +1381,11 @@ n.id = i;
 
                 <span class="breadcrumb-label" itemprop="name">
                     
-                        linkedin
+                        uploading files
                     
                 </span>
 
-                <meta itemprop="position" content="4" />
+                <meta itemprop="position" content="3" />
 
             
                 </span>
@@ -1427,10 +1399,10 @@ n.id = i;
 </div>
 
                 <div class="docs-title">
-    <h1 class="pageTitle">LinkedIn</h1>
+    <h1 class="pageTitle">Uploading Files</h1>
     
     <div class="docs-page docs-improve">
-          <a href="https://github.com/vanilla/docs/edit/master/content/help/addons/social/linkedin/index.md"><i class="fa fa-pencil"></i>Improve this document</a>
+          <a href="https://github.com/vanilla/docs/edit/master/content/help/posting/uploading-files.md"><i class="fa fa-pencil"></i>Improve this document</a>
     </div>
     
 </div>
@@ -1442,22 +1414,69 @@ n.id = i;
                 <div class="userContent">
                     
 
-<h2 id="linkedin">LinkedIn</h2>
+<h2 id="enabling-file-attachments">Enabling File Attachments</h2>
 
-<p>Linked In social sign in allows users to sign in using their LinkedIn account. You must register your application with LinkedIn for this addon to work.</p>
+<p>This functionality is built into Advanced Editor, which is enabled in your community by default. If you are looking to embed videos, tweets, or other content into your post, we’ve documented that process <a href="http://docs.vanillaforums.com/help/posting/smart-embed/">here</a>.</p>
 
-<h3 id="how-to-set-up-linkedin-social-sign-in">How to Set up LinkedIn Social Sign in</h3>
+<h3 id="inserting-images-and-uploading-files">Inserting Images and Uploading Files</h3>
 
-<ol>
-<li>Go to the LinkedIn Developer Network at <a href="https://www.linkedin.com/secure/developer">https://www.linkedin.com/secure/developer</a>/</li>
-<li>Click <strong>Add New Application</strong>. When you create the application, you can choose what to enter in most fields, but you have to make sure you enter specific information for some fields.</li>
-<li>Under <strong>Website URL</strong> enter your forum&rsquo;s root url.</li>
-<li>Under <strong>Default Scope</strong> make sure you&rsquo;ve selected at least <strong>r_basicprofile</strong> and <strong>r_emailaddress</strong>.</li>
-<li>Set the <strong>OAuth 2.0 Redirect URLs</strong> by appending both <code>/entry/connect/linkedin</code> and <code>/profile/linkedinconnect</code> to the end of your forum’s URL. (If your forum is at <code>example.com/forum</code>, your Redirect URLs would be <code>http://example.com/forum/entry/connect/linkedin</code> and <code>http://example.com/forum/profile/linkedinconnect</code>).</li>
-<li>Once your application has been set up, you must copy the <strong>Client ID</strong> and <strong>Client Secret</strong> into your LinkedIn plugin settings page from your Vanilla dashboard.</li>
-</ol>
+<p><img src="https://images.v-cdn.net/docs/AE_FileUpload2.PNG" alt="Attach File Tool" /></p>
 
-<p><img src="//docs.vanillaforums.com/img/help/addons/social/linkedin/settings.jpg" alt="Settings in LinkedIn" /></p>
+<p>This icon indicates the Attach File tool. With Advanced Editor, there are a few ways to attach files to a post.</p>
+
+<p>The easiest way to upload is the drag-and-drop method. Dragging a file from your computer&rsquo;s file explorer and hovering it over your new post will display an overlay, letting you know that you can drop it into the editor. Dropping it into the editor will immediately upload the file.</p>
+
+<p>You&rsquo;ll know that the file upload was successful when you see the name of the file appear in a small box underneath the comment box. Clicking the small X next to the file will remove it from the post. You can click the icon again to place it back, or save the post to remove it permanently.</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_ExampleFile.PNG" alt="Successful File Upload" /></p>
+
+<p>After you post your comment with an attached file, other users will see the upload appear underneath your comment in box labeled with the file&rsquo;s name. Clicking on the box starts an automatic download of that file to the user&rsquo;s computer.</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_ImageUpload.PNG" alt="Attach Image Tool" /></p>
+
+<p>Next to attach file is the Attach Image tool. The Attach Image tool works almost identically to the File Upload tool above, except that when a user uploads an image to a post, the image is automatically embedded. .JPG, .PNG and .GIF files will be displayed.</p>
+
+<p>This menu also allows you to take a URL from an image hosted on another site and embed that in the post directly.</p>
+
+<p>Below is an animated example of the drag-And-drop method of image attachments. If the editor is in WYSIWYG mode, the image will appear in the editor just as it will when its posted:</p>
+
+<p><img src="https://images.v-cdn.net/docs/AE_DragAndDropExample.gif" alt="Drag and Drop Image Example" /></p>
+
+<p>For HTML, BBC and Markdown modes, the appropriate markup for an image will be inserted where the cursor is, and the image will appear when the post is published. File types other than images that are dropped in will appear underneath the comment box.</p>
+
+<h2 id="supported-file-types">Supported File Types</h2>
+
+<p>There are some restrictions to the file types and sizes allowed on the hosted version of Vanilla. Listed below are the current types that File Upload allows by default:</p>
+
+<ul>
+<li>7z</li>
+<li>Ai</li>
+<li>Bmp</li>
+<li>Doc</li>
+<li>Docx</li>
+<li>Fla</li>
+<li>Gif</li>
+<li>Gz</li>
+<li>Ico</li>
+<li>Jpeg</li>
+<li>Jpg</li>
+<li>Log</li>
+<li>Pdf</li>
+<li>Png</li>
+<li>Ppt</li>
+<li>Psd</li>
+<li>Rar</li>
+<li>Swf</li>
+<li>Tar.gz</li>
+<li>Tiff</li>
+<li>Tgz</li>
+<li>Txt</li>
+<li>Xls</li>
+<li>Xlsx</li>
+<li>Zip</li>
+</ul>
+
+<p>You can submit a support request if your particular community needs a file type whitelisted.</p>
 
                 </div>
 

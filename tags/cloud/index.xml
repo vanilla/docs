@@ -87,7 +87,8 @@ Deployment Types Single Community This is a classic forum setup. It is the equiv
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
-      <description>Hub Sync A number of settings can be synced between the hub and its nodes.</description>
+      <description>Hub Sync The hub has the ability to synchronize/push some configuration/data on the nodes. This allows an administrator to, for example, create a category on the hub and sync it to all the nodes. If the category is renamed or deleted at a later time hub it would be synchronized to the nodes again.
+What can be synced?  A predefined set of configuration. This needs to be set up by a developer.</description>
     </item>
     
     <item>

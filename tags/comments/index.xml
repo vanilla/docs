@@ -30,5 +30,16 @@ Users are able to type their comments here and submit them by hitting the “Pos
 What are Universal Comments? We made Comment integration easy with WordPress (learn more about that here.), but we also wanted to make it possible to add comments to any site where you can identify unique content.</description>
     </item>
     
+    <item>
+      <title>Uploading Files</title>
+      <link>//docs.vanillaforums.com/help/posting/uploading-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/posting/uploading-files/</guid>
+      <description>Enabling File Attachments This functionality is built into Advanced Editor, which is enabled in your community by default. If you are looking to embed videos, tweets, or other content into your post, we’ve documented that process here.
+Inserting Images and Uploading Files This icon indicates the Attach File tool. With Advanced Editor, there are a few ways to attach files to a post.
+The easiest way to upload is the drag-and-drop method.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1143,6 +1143,15 @@ n.id = i;
             
         </li>
     
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/help/posting/uploading-files/" class="sidebar-link">
+                Uploading Files
+            </a>
+            
+        </li>
+    
 </ul>
 
                 </div>
@@ -1407,7 +1416,24 @@ n.id = i;
 
 <h2 id="hub-sync">Hub Sync</h2>
 
-<p>A number of settings can be synced between the hub and its nodes.</p>
+<p>The hub has the ability to synchronize/push some configuration/data on the nodes. This allows an administrator to,
+for example, create a category on the hub and sync it to all the nodes. If the category is renamed or deleted at a later
+time hub it would be synchronized to the nodes again.</p>
+
+<h2 id="what-can-be-synced">What can be synced?</h2>
+
+<ul>
+<li>A predefined set of configuration. <em>This needs to be set up by a developer.</em>
+
+<ul>
+<li>It can be used to force an addon/theme to be enabled or disabled on all the nodes.</li>
+</ul></li>
+<li>AuthenticationProviders (SAML, OAuth2, &hellip;)</li>
+<li>Categories</li>
+<li>Badges</li>
+<li>Roles</li>
+<li>Subcommunities</li>
+</ul>
 
                 </div>
 

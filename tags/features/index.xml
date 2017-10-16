@@ -546,6 +546,17 @@ Why does &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; have less granular setti
     </item>
     
     <item>
+      <title>Uploading Files</title>
+      <link>//docs.vanillaforums.com/help/posting/uploading-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/posting/uploading-files/</guid>
+      <description>Enabling File Attachments This functionality is built into Advanced Editor, which is enabled in your community by default. If you are looking to embed videos, tweets, or other content into your post, we’ve documented that process here.
+Inserting Images and Uploading Files This icon indicates the Attach File tool. With Advanced Editor, there are a few ways to attach files to a post.
+The easiest way to upload is the drag-and-drop method.</description>
+    </item>
+    
+    <item>
       <title>Using Comments</title>
       <link>//docs.vanillaforums.com/help/integrations/wordpress/using-comments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -519,7 +519,8 @@ Deployment Types Single Community This is a classic forum setup. It is the equiv
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/multisite/sync/</guid>
-      <description>Hub Sync A number of settings can be synced between the hub and its nodes.</description>
+      <description>Hub Sync The hub has the ability to synchronize/push some configuration/data on the nodes. This allows an administrator to, for example, create a category on the hub and sync it to all the nodes. If the category is renamed or deleted at a later time hub it would be synchronized to the nodes again.
+What can be synced?  A predefined set of configuration. This needs to be set up by a developer.</description>
     </item>
     
     <item>
@@ -684,9 +685,9 @@ Curation Having a team dedicated to the curation of your forum is critical to it
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/salesforce/</guid>
-      <description>Overview This plugin allows you to:
- Link your Salesforce account to your Vanilla user profile. Create cases and leads from discussions. View leads on Vanilla users profile.  Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
-Setup Configure Application in Salesforce  Log into your Salesforce Account Create new Connected App in Salesforce  Build → Create → Apps → Connected Apps → New Fill the required fields Connected App Name, API Name, Contact Email Enable OAuth Settings Set a Callback URL by appending /profile/salesforceconnect to the end of your forum&amp;rsquo;s URL.</description>
+      <description>Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS.)
+Features This addon allows users that have the Staff.Allow permission to do the following:
+ Link your Salesforce account to your Vanilla user profile. Create Salesforce cases and leads from Vanilla discussions (per discussion, not per comment). Salesforce cases and leads appear as &amp;ldquo;attachments&amp;rdquo; on your Vanilla discussion for authorized users. View Salesforce leads from Vanilla user profiles.</description>
     </item>
     
     <item>
@@ -820,6 +821,17 @@ What are Universal Comments? We made Comment integration easy with WordPress (le
       <description>Warnings &amp;amp; Notes is version 2 The first version of this addon was titled simply &amp;ldquo;Warnings&amp;rdquo;. It did not include the User Notes feature. It had more granular controls for Warning a user with particular point levels and durations.
 We recommend all users disable the &amp;ldquo;Warnings&amp;rdquo; addon if they still have it and immediately enable the &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; addon instead.
 Why does &amp;ldquo;Warnings &amp;amp; Notes&amp;rdquo; have less granular settings?</description>
+    </item>
+    
+    <item>
+      <title>Uploading Files</title>
+      <link>//docs.vanillaforums.com/help/posting/uploading-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//docs.vanillaforums.com/help/posting/uploading-files/</guid>
+      <description>Enabling File Attachments This functionality is built into Advanced Editor, which is enabled in your community by default. If you are looking to embed videos, tweets, or other content into your post, we’ve documented that process here.
+Inserting Images and Uploading Files This icon indicates the Attach File tool. With Advanced Editor, there are a few ways to attach files to a post.
+The easiest way to upload is the drag-and-drop method.</description>
     </item>
     
     <item>

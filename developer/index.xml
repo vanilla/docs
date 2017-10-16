@@ -123,7 +123,7 @@ We are committed to making participation in this project a harassment-free exper
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/developer/contributing/coding-standard/</guid>
-      <description>Standards As of May 2014, Vanilla will adhere to PSR-2 with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
+      <description>Standards As of May 2014, Vanilla will adhere to PSR-2 (and therefore PSR-1) with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
 We&amp;rsquo;ve named our primary exception to PSR-2 the Lord Brackos rule - Same-line open braces on all classes, method, and function definitions.
 We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it&amp;rsquo;s annoying and hard to read when everything is styled differently.</description>
     </item>

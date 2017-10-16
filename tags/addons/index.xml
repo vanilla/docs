@@ -302,9 +302,9 @@ Reporting a post Go to Flag → Report in the Reactions menu at the end of the p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//docs.vanillaforums.com/help/addons/salesforce/</guid>
-      <description>Overview This plugin allows you to:
- Link your Salesforce account to your Vanilla user profile. Create cases and leads from discussions. View leads on Vanilla users profile.  Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS)
-Setup Configure Application in Salesforce  Log into your Salesforce Account Create new Connected App in Salesforce  Build → Create → Apps → Connected Apps → New Fill the required fields Connected App Name, API Name, Contact Email Enable OAuth Settings Set a Callback URL by appending /profile/salesforceconnect to the end of your forum&amp;rsquo;s URL.</description>
+      <description>Requirements You must have SSL enabled on your domain. (Your forum must be served over HTTPS.)
+Features This addon allows users that have the Staff.Allow permission to do the following:
+ Link your Salesforce account to your Vanilla user profile. Create Salesforce cases and leads from Vanilla discussions (per discussion, not per comment). Salesforce cases and leads appear as &amp;ldquo;attachments&amp;rdquo; on your Vanilla discussion for authorized users. View Salesforce leads from Vanilla user profiles.</description>
     </item>
     
     <item>

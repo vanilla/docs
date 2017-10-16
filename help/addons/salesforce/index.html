@@ -1143,6 +1143,15 @@ n.id = i;
             
         </li>
     
+        
+        
+        <li class='menuItem '>
+            <a href="//docs.vanillaforums.com/help/posting/uploading-files/" class="sidebar-link">
+                Uploading Files
+            </a>
+            
+        </li>
+    
 </ul>
 
                 </div>
@@ -1405,63 +1414,72 @@ n.id = i;
                 <div class="userContent">
                     
 
-<h2 id="overview">Overview</h2>
+<h2 id="requirements">Requirements</h2>
 
-<p>This plugin allows you to:</p>
+<p>You must have SSL enabled on your domain. (Your forum must be served over HTTPS.)</p>
+
+<h2 id="features">Features</h2>
+
+<p>This addon allows users that have the <code>Staff.Allow</code> permission to do the following:</p>
 
 <ul>
 <li>Link your Salesforce account to your Vanilla user profile.</li>
-<li>Create cases and leads from discussions.</li>
-<li>View leads on Vanilla users profile.</li>
+<li>Create Salesforce cases and leads from Vanilla discussions (per discussion, not per comment).</li>
+<li>Salesforce cases and leads appear as &ldquo;attachments&rdquo; on your Vanilla discussion for authorized users.</li>
+<li>View Salesforce leads from Vanilla user profiles.</li>
 </ul>
 
-<h2 id="requirements">Requirements</h2>
+<p>The Vanilla administrator may alternatively setup a global Salesforce connection rather than using individual connections.</p>
 
-<p>You must have SSL enabled on your domain. (Your forum must be served over HTTPS)</p>
+<p>We also offer single sign-on from Salesforce.</p>
 
 <h2 id="setup">Setup</h2>
 
-<h3 id="configure-application-in-salesforce">Configure Application in Salesforce</h3>
+<h3 id="salesforce-create-configure-application">Salesforce: Create &amp; Configure Application</h3>
 
 <ol>
 <li>Log into your Salesforce Account</li>
-<li>Create new Connected App in Salesforce
+<li>Create new Connected App in Salesforce.
 
 <ol>
 <li>Build → Create → Apps → Connected Apps → New</li>
-<li>Fill the required fields <strong>Connected App Name</strong>, <strong>API Name</strong>, <strong>Contact Email</strong></li>
-<li>Enable OAuth Settings</li>
+<li>Fill the required fields: <strong>Connected App Name</strong>, <strong>API Name</strong>, <strong>Contact Email</strong>.</li>
+<li>Enable OAuth Settings.</li>
 <li>Set a Callback URL by appending <code>/profile/salesforceconnect</code> to the end of your forum&rsquo;s URL.
 
 <ul>
 <li>If your forum is at <code>https://forum.example.com/</code>, your Callback URL would be <code>https://forum.example.com/profile/salesforceconnect</code>.</li>
 <li>If your forum is at <code>https://forum.example.com/en/</code>, your Callback URL would be <code>https://forum.example.com/en/profile/salesforceconnect</code>.</li>
-<li>Callback URL must be HTTPS</li>
+<li>Callback URL must be HTTPS.</li>
 </ul></li>
-<li>Add <strong>Full access (full)</strong> and <strong>Perform requests on your behalf at any time (refresh_token, offline_access)</strong> to Selected OAuth Scopes.</li>
-<li>Save <img src="//docs.vanillaforums.com/img/help/addons/salesforce/app_create.png" alt="" /></li>
+<li>Add to Selected OAuth Scopes:
+
+<ul>
+<li><strong>Full access (full)</strong></li>
+<li><strong>Perform requests on your behalf at any time (refresh_token, offline_access)</strong></li>
+</ul></li>
+<li>Save. <img src="//docs.vanillaforums.com/img/help/addons/salesforce/app_create.png" alt="" /></li>
 </ol></li>
 </ol>
 
-<h3 id="configure-plugin-in-vanilla">Configure Plugin in Vanilla</h3>
+<h3 id="vanilla-enable-configure-addon">Vanilla: Enable &amp; Configure Addon</h3>
 
 <ol>
-<li>Log into your Vanilla forum</li>
-<li>Go into the plugin&rsquo;s settings</li>
+<li>Log into your Vanilla forum.</li>
+<li>Dashboard → Addons, and click the Salesforce addon&rsquo;s settings icon.</li>
 
-<li><p>Fill out the requested information</p>
+<li><p>Fill out the requested information.</p>
 
 <ul>
 <li>Where to find your ApplicationID and Secret in Salesforce?</li>
 </ul>
 
-<p>In the app creation section mentioned in <a href="#configure-application-in-salesforce">Configure Application in Salesforce</a> under API you will see
-Consumer Key (which is the ApplicationID) and Consumer Secret (which is the Secret)</p>
+<p>In the app creation section mentioned in <a href="#configure-application-in-salesforce">Configure Application in Salesforce</a> under API you will see Consumer Key (which is the ApplicationID) and Consumer Secret (which is the Secret)</p>
 
 <p><img src="//docs.vanillaforums.com/img/help/addons/salesforce/key_secret.png" alt="" /></p></li>
 </ol>
 
-<h3 id="link-your-account">Link your account</h3>
+<h3 id="vanilla-link-your-account">Vanilla: Link your account</h3>
 
 <ol>
 <li>Login to Vanilla.</li>
@@ -1472,7 +1490,7 @@ Consumer Key (which is the ApplicationID) and Consumer Secret (which is the Secr
 <li>Follow the instructions from there.</li>
 </ol>
 
-<h2 id="f-a-q">F.A.Q</h2>
+<h2 id="troubleshooting">Troubleshooting</h2>
 
 <h3 id="i-can-t-link-my-account">I can&rsquo;t link my account.</h3>
 
