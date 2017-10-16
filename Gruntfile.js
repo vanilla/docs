@@ -96,7 +96,10 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
-                src: 'static/css/**/*.css'
+                src: [
+                    'public/css/**/*.css',
+                    '!public/css/fonts/**/*.css'
+                ]
             }
         },
 
