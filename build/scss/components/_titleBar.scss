@@ -1,0 +1,24 @@
+.docs-title {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.docs-improve {
+  margin-left: auto;
+}
+
+.editPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: none;
+  color: $borderGray;
+  text-decoration: none !important;
+  border: 1px solid $borderGray;
+  border-radius: 2px;
+  min-height: 36px;
+  min-width: 42px;
+}
+
