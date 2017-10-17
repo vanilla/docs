@@ -412,7 +412,18 @@ a:hover {
   min-width: 200px;
 }
 
-.pencilIcon {
+.headingAnchor {
+  display: inline-block;
+  vertical-align: middle;
+  color: #0291DB;
+  margin-left: 10px;
+}
+
+.headingAnchor:hover {
+  color: #F52C6E;
+}
+
+.icon {
   display: block;
   margin: auto;
   line-height: 1;
@@ -994,6 +1005,7 @@ p {
 .userContent h4,
 .userContent h5,
 .userContent h6 {
+  position: relative;
   margin-top: 2.5em;
 }
 

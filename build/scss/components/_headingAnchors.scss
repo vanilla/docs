@@ -1,0 +1,10 @@
+.headingAnchor {
+  display: inline-block;
+  vertical-align: middle;
+  color: $vanillaBlue;
+  margin-left: 10px;
+
+  &:hover {
+    color: $vanillaPink;
+  }
+}
