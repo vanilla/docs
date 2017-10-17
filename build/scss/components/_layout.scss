@@ -1,34 +1,3 @@
-.docs-title {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 6px;
-
-    .docs-improve {
-        margin-left: auto;
-
-
-        a {
-            display: block;
-            font: 0/0 a;
-            text-shadow: none;
-            color: transparent;
-        }
-
-        i {
-            display: block;
-            border: 1px solid $borderGray;
-            background: white;
-            border-radius: 2px;
-            padding: 8px 12px;
-
-            font-size: 18px;
-            background: white;
-            color: $borderGray;
-        }
-    }
-}
-
 .mainContent {
     min-height: calc(100vh - #{$footer-minHeight + $header-minHeight});
 }
