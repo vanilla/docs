@@ -511,39 +511,12 @@ a:hover {
   min-width: 200px;
 }
 
-.docs-title {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 100%;
-  margin-bottom: 6px;
-}
-
-.docs-title .docs-improve {
-  margin-left: auto;
-}
-
-.docs-title .docs-improve a {
+.pencilIcon {
   display: block;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-}
-
-.docs-title .docs-improve i {
-  display: block;
-  border: 1px solid #959595;
-  background: white;
-  border-radius: 2px;
-  padding: 8px 12px;
-  font-size: 18px;
-  background: white;
-  color: #959595;
+  margin: auto;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
 }
 
 .mainContent {
@@ -1081,6 +1054,45 @@ a:hover {
   .docs-welcome .pageTitle br {
     display: none;
   }
+}
+
+.docs-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.docs-improve {
+  margin-left: auto;
+}
+
+.editPage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-shadow: none;
+  color: #959595;
+  text-decoration: none !important;
+  border: 1px solid #959595;
+  border-radius: 2px;
+  min-height: 36px;
+  min-width: 42px;
 }
 
 h1,
