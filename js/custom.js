@@ -1,3 +1,8 @@
+function hasAttr(el, attributeName) {
+    var attribute = $(el).attr(attributeName);
+    return (typeof attribute !== typeof undefined && attribute !== false);
+}
+
 var escapeHTML = (function() {
     var $escaper = $('<div>');
     return function(html) {
@@ -10,8 +15,6 @@ function stripTags(html) {
     tmp.innerHTML = html;
     return tmp.textContent || tmp.innerText || "";
 }
-
-
 
 function updateSubNav() {
     var $mainNav = $('#nav');
@@ -34,6 +37,18 @@ function navInit() {
 }
 
 
+
+function anchorifyPage() {
+    var anchorSVG = '<svg class="icon iconLink"><title>Anchor</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-link"></use></svg>';
+    $('.userContent').find('h1, h2, h3, h4, h5, h6').each(function(){
+
+        var anchor = hasAttr($(this), 'id') ? '#' + $(this).attr('id') : '';
+
+        $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
+    });
+}
+
 $(function(){
     navInit();
+    anchorifyPage();
 });
