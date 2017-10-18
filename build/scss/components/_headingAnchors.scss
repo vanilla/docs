@@ -2,7 +2,10 @@
   display: inline-block;
   vertical-align: middle;
   color: $vanillaBlue;
-  margin-left: 10px;
+  margin: {
+    left: 10px;
+    top: -.2em;
+  }
 
   &:hover {
     color: $vanillaPink;
