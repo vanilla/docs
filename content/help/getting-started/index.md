@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     identifier: getting-started
-    weight: 1
+    weight: 2
 aliases:
 - /getting-started
 ---

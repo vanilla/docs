@@ -92,20 +92,14 @@ module.exports = function (grunt) {
                 map: true, // inline sourcemaps
 
                 processors: [
-                    require('autoprefixer')({browsers: 'last 2 versions'}) // add vendor prefixes
+                    require('autoprefixer')({browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"]}) // add vendor prefixes
                 ]
             },
             dist: {
-                src: 'static/css/**/*.css'
-            }
-        },
-
-        autoprefixer: {
-            options: {
-                browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"]
-            },
-            dist: {
-                src: ['static/css/**/*.css']
+                src: [
+                    'public/css/**/*.css',
+                    '!public/css/fonts/**/*.css'
+                ]
             }
         },
 

@@ -1,0 +1,11 @@
+@mixin mediaQuery-landing {
+  @media screen and (max-width: $landing-widthPadded) {
+    @content;
+  }
+}
+
+@mixin mediaQuery-mobile {
+  @media screen and (max-width: $mediaQuery-mobile) {
+    @content;
+  }
+}

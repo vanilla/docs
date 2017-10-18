@@ -16,8 +16,9 @@ Vanilla is equipped with several layers of SPAM prevention.  While automated too
 ### Spam Detection 
 
 Vanilla includes 2 spam detection plugins:  StopForumSpam and Akismet.  These can be turned on in your Dashboard from the Addons page. 
- * Akismet: this plugin feeds your posts through the Akismet spam detection algorythm which looks at several factors including live data to determine if a post is spam. 
- * StopForumSpam:  this plugin checks users against a list of reported spammers and will report posts as spam or reject them outright. The threshold for reporting and rejection can be set in the plugin's settings. 
+
+* Akismet: this plugin feeds your posts through the Akismet spam detection algorythm which looks at several factors including live data to determine if a post is spam. 
+* StopForumSpam:  this plugin checks users against a list of reported spammers and will report posts as spam or reject them outright. The threshold for reporting and rejection can be set in the plugin's settings. 
 
 ### Spam Reaction 
 

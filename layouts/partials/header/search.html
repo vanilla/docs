@@ -1,14 +1,17 @@
 <div class="docs-header-search js-search">
-    <div class="docs-search-wrap">
-        <i class="fa fa-search" ></i>
-        <input class="docs-search js-search-input" id="docs-search" />
-    </div>
-    <ul class="docs-search-results js-search-results">
-        <a>
-            <li>
-                <span class="title"></span>
-                <span class="tags"></span>
-            </li>
-        </a>
+    <label class="docs-search-wrap">
+        <svg class="searchIcon">
+            <title>Magnifying Glass</title>
+            <use class="searchIcon-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-search"></use>
+        </svg>
+        <input class="docs-search-input js-search-input" placeholder="Search&hellip;" id="docs-search" />
+    </label>
+    <ul class="searchResults js-search-results">
+        <li class="searchResult">
+            <a class="searchResult-link">
+                <div class="searchResult-title"></div>
+                <div class="searchResult-tags"></div>
+            </a>
+        </li>
     </ul>
 </div>

@@ -1,0 +1,48 @@
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{ $url := trim $url "/" }}
+{{ $.Scratch.Add "path" "/" }}
+{{ $breadcrumbtrail := split $url "/" }}
+{{ $breadcrumbCount := $breadcrumbtrail | len }}
+
+<div class="breadcrumbs">
+    {{ if ne $breadcrumbCount 1 }}
+        <ol class="breadcrumbs-list contentMargin" itemscope itemtype="http://schema.org/BreadcrumbList">
+
+        {{ range $index, $element := $breadcrumbtrail }}
+            {{ $.Scratch.Add "path" $element }}
+            {{ $.Scratch.Set "isLast" (eq (len $breadcrumbtrail) (add $index 1)) }}
+
+            {{ if ne $index 0 }}
+                <li class="breadcrumb-item breadcrumbs-separator">›</li>
+            {{ end }}
+
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+                {{ if $.Scratch.Get "isLast" }}
+                    <span class="breadcrumb-link isLast">
+                {{ else }}
+                    <a class="breadcrumb-link" itemscope itemtype="http://schema.org/Thing" itemprop="item" href='{{ $.Scratch.Get "path" }}'>
+                {{ end }}
+
+                <span class="breadcrumb-label" itemprop="name">
+                    {{ if eq $index 0 }}
+                        Home
+                    {{ else }}
+                        {{ replace . "-" " " }}
+                    {{ end }}
+                </span>
+
+                <meta itemprop="position" content="{{ add $index 1 }}" />
+
+            {{ if $.Scratch.Get "isLast" }}
+                </span>
+            {{ else }}
+                </a>
+            {{ end }}
+            </li>
+            {{ $.Scratch.Add "path" "/" }}
+
+        {{ end }}
+        </ol>
+    {{ end }}
+</div>

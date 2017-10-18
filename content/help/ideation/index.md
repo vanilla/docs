@@ -4,7 +4,7 @@ category: help
 menu:
   help:
     identifier: ideation
-    weight: 6
+    weight: 5
 aliases:
 - /ideation
 ---

@@ -1,0 +1,20 @@
+#swagger-ui {
+    @import 'swagger/mixins';
+    @import 'swagger/variables';
+    @import 'swagger/colors';
+    @import 'swagger/type';
+    @import 'swagger/layout';
+    @import 'swagger/buttons';
+    @import 'swagger/form';
+    @import 'swagger/modal';
+    @import 'swagger/models';
+    @import 'swagger/table';
+    @import 'swagger/topbar';
+    //@import 'information';
+    @import 'swagger/authorize';
+    @import 'swagger/errors';
+    @include text_body();
+    @import 'swagger/split-pane-mode';
+    @import 'swagger/custom';
+    @import 'swagger/docsOverwrites';
+}
