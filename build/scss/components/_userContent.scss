@@ -61,15 +61,15 @@
   pre {
     background: rgba($panelLight, .2);
     color: $vanillaPink;
-    font-size: 12px;
-    padding: 8px;
+    padding: 12px;
     border-radius: 2px;
     border: 1px solid rgba(#979797, .2);
+    margin-bottom: $fontSize-medium * 1.6;
 
 
     code {
       background: transparent;
-      padding: 36px 14px;
+      padding: 0.2em 0 0;
       font-size: $fontSize-medium;
       overflow: scroll;
       display: block;
