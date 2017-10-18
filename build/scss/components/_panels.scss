@@ -58,6 +58,10 @@
     }
 }
 
+.sidebar-link {
+    position: relative;
+}
+
 .menuItem-children {
     padding: 0;
     margin: 0;
@@ -87,15 +91,15 @@
     padding: 0;
     font-size: $fontSize-medium;
     color: $darkText;
-    line-height: 1.5;
+    line-height: $panel-lineHeight;
 }
 
 .sidebar-link {
     @include defaultTransition(background);
     display: block;
     color: inherit !important;
-    line-height: 1.5;
-    padding: 5px $navItem-horizontalPadding;
+    line-height: $panel-lineHeight;
+    padding: $panel-verticalPadding $navItem-horizontalPadding;
 
     &:hover {
         background-color: rgba($navItem-bg, .05);
@@ -104,6 +108,11 @@
     &.isActive {
         background-color: rgba($navItem-bg, .1) !important;
     }
+}
+
+.sidebar-linkWrap {
+    display: block;
+    position: relative;
 }
 
 .subNav-title {

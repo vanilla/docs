@@ -7,9 +7,18 @@
     {{ range .menuData }}
         {{ $isActive := ($rootNode.IsMenuCurrent $menuName . ) }}
         {{ $hasActiveChildren := ( $rootNode.HasMenuCurrent $menuName . ) }}
+        {{ $visibleChildren := or $isActive $hasActiveChildren}}
         <li class='menuItem{{if $isActive}} isActive{{ end }}{{if $hasActiveChildren}} hasActiveChildren{{ end }}{{ if eq $tier 2 }} {{ if or ($isActive) ($hasActiveChildren) }} js-showInRightPanel{{ end }}{{ end }}'>
             <a href="{{ .URL }}" class="sidebar-link{{if $isActive}} isActive{{ end }}">
-                {{ .Name }}
+                <div class="sidebar-linkWrap">
+                    {{ if .HasChildren }}
+                        <span class="flyoutArrow">
+                            <span class="flyoutArrow-triangle{{if $visibleChildren}} isOpen{{ end }}">▾</span>
+                            <span class="flyoutArrow-rightArrow">&raquo;</span>
+                        </span>
+                    {{ end }}
+                    {{ .Name }}
+                </div>
             </a>
             {{ if .HasChildren }}
                 <div class="menuItem-children">
