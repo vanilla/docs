@@ -66,10 +66,23 @@ body {
   padding: 0 42px 42px;
 }
 
+@media screen and (max-width: 1464px) {
+  .column-main {
+    max-width: calc(100% - 350px);
+    padding-left: 32px;
+    padding-right: 0;
+  }
+}
+
 .column-panel {
   width: 250px;
-  flex-basis: 250px;
   min-height: 100%;
+}
+
+@media screen and (max-width: 1464px) {
+  .column-panel {
+    width: 350px;
+  }
 }
 
 .column-flexGrow {
@@ -181,7 +194,17 @@ span.breadcrumb-link {
 .docs-button:hover {
   color: white;
   background: #F6447F;
+  border: 1px solid #F52C6E;
+}
+
+.docs-button.button-cta {
+  color: white;
+  background: #F52C6E;
   border: 1px solid #F6447F;
+}
+
+.docs-button.button-cta:hover {
+  background: #e12663;
 }
 
 .choiceApi {
@@ -367,16 +390,17 @@ a:hover {
   vertical-align: middle;
 }
 
-.menuItem-children .flyoutArrow-triangle {
-  display: none;
-}
-
-.menuItem-children .flyoutArrow-rightArrow {
-  display: inline-block;
-}
-
 #nav_sub .flyoutArrow {
   display: none;
+}
+
+@media screen and (min-width: 1465px) {
+  .menuItem-children .flyoutArrow-triangle {
+    display: none;
+  }
+  .flyoutArrow-rightArrow {
+    display: inline-block;
+  }
 }
 
 .docs-footer {
@@ -559,7 +583,13 @@ a:hover {
 }
 
 #nav .nav-tier2 > .menuItem.hasActiveChildren {
-  background-color: rgba(85, 90, 98, 0.1) !important;
+  background-color: rgba(85, 90, 98, 0.1);
+}
+
+@media screen and (max-width: 1464px) {
+  #nav .menuItem-children.isOpen-tablet {
+    display: block;
+  }
 }
 
 .menuItem {
@@ -607,6 +637,12 @@ a:hover {
 
 .column-panel.noContent .docs-nav {
   display: none !important;
+}
+
+@media screen and (max-width: 1464px) {
+  #nav_sub {
+    display: none;
+  }
 }
 
 .docs-parameters .docs-parameter.parameter-required td.parameter-name {

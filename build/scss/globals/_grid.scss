@@ -62,12 +62,23 @@ body {
     max-width: calc(100% - #{$panel-width * 2});
     background-color: white;
     padding: 0 $mainColumn-padding $mainColumn-padding;
+
+    @include mediaQuery-noBleed {
+        max-width: calc(100% - #{$panel-widthTablet});
+        padding: {
+            left: $site-padding;
+            right: 0;
+        }
+    }
 }
 
 .column-panel {
     width: $panel-width;
-    flex-basis: $panel-width;
     min-height: 100%;
+
+    @include mediaQuery-noBleed {
+        width: $panel-widthTablet;
+    }
 }
 
 .column-flexGrow {

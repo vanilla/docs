@@ -69,6 +69,7 @@
 }
 
 #nav { // Main nav
+
     .menuItem-children {
         display: none;
     }
@@ -81,7 +82,15 @@
     }
 
     .nav-tier2 > .menuItem.hasActiveChildren {
-        background-color: rgba($navItem-bg, .1) !important;
+        background-color: rgba($navItem-bg, .1);
+    }
+
+    @include mediaQuery-noBleed {
+        .menuItem-children {
+            &.isOpen-tablet {
+                display: block;
+            }
+        }
     }
 }
 
@@ -136,5 +145,12 @@
         .docs-nav {
             display: none !important;
         }
+    }
+}
+
+
+@include mediaQuery-noBleed {
+    #nav_sub {
+        display: none;
     }
 }
