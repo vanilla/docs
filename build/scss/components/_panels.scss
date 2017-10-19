@@ -81,16 +81,20 @@
         }
     }
 
-    .nav-tier2 > .menuItem.hasActiveChildren {
-        background-color: rgba($navItem-bg, .1);
-    }
-
     @include mediaQuery-noBleed {
         .menuItem-children {
             &.isOpen-tablet {
                 display: block;
             }
         }
+    }
+
+    @include mediaQuery-mobile {
+        display: none;
+
+
+
+
     }
 }
 

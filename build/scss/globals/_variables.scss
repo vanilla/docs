@@ -66,7 +66,6 @@ $site-widthPadded:          $site-width + 2 * $site-padding;
 $footer-minHeight:          60px;
 $header-minHeight:          60px;
 $panel-width:               250px;
-$panel-widthTablet:         350px;
 $panel-bg:                  #fafbfb;
 $panel-lineHeight:          1.5;
 $panel-verticalPadding:     5px;
@@ -98,5 +97,25 @@ $navTier-padding:           12px;
 $navItem-bg:                #555A62;
 $navItem-horizontalPadding: 18px;
 
+// Hamburger
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+$hamburger-height                      : 24;
+$hamburger-lineHeight                  : 2;
+$hamburger-quarterLineHeight           : ceil(($hamburger-lineHeight / 4));
+$hamburger-hypotenuse                  : sqrt((2 * $hamburger-height * $hamburger-height));
+$hamburger-offset                      : ($hamburger-hypotenuse / 4) - ($hamburger-quarterLineHeight / 2);
+
+
 // Media Queries
-$mediaQuery-mobile:         768px;
+$mediaQuery-mobile:         880px;

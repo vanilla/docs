@@ -38,7 +38,7 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .contentSingleton,
   .content {
     padding-left: 18px;
@@ -68,8 +68,16 @@ body {
 
 @media screen and (max-width: 1464px) {
   .column-main {
-    max-width: calc(100% - 350px);
+    max-width: calc(100% - 250px);
     padding-left: 32px;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .column-main {
+    max-width: 100%;
+    padding-left: 0;
     padding-right: 0;
   }
 }
@@ -77,12 +85,6 @@ body {
 .column-panel {
   width: 250px;
   min-height: 100%;
-}
-
-@media screen and (max-width: 1464px) {
-  .column-panel {
-    width: 350px;
-  }
 }
 
 .column-flexGrow {
@@ -450,6 +452,59 @@ a:hover {
   justify-content: space-between;
 }
 
+.hamburgerMenu {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.8, 0.8, 0.25, 1.25);
+  position: absolute;
+  top: 2px;
+  left: 32px;
+  display: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  height: 60px;
+  width: 60px;
+}
+
+@media screen and (max-width: 880px) {
+  .hamburgerMenu {
+    display: block;
+  }
+}
+
+.hamburger {
+  transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger-filler {
+  width: 100%;
+  height: 7px;
+  position: relative;
+  display: block;
+}
+
+.hamburger-ingredient {
+  transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
 .docs-header {
   background-color: #333333;
   font-size: 16px;
@@ -582,13 +637,15 @@ a:hover {
   display: block;
 }
 
-#nav .nav-tier2 > .menuItem.hasActiveChildren {
-  background-color: rgba(85, 90, 98, 0.1);
-}
-
 @media screen and (max-width: 1464px) {
   #nav .menuItem-children.isOpen-tablet {
     display: block;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #nav {
+    display: none;
   }
 }
 
@@ -1091,6 +1148,7 @@ p {
   width: 100%;
   font-size: 16px;
   line-height: 1.6;
+  padding-top: 26px;
 }
 
 .userContent h2,
@@ -1146,15 +1204,15 @@ p {
 .userContent pre {
   background: rgba(235, 235, 235, 0.2);
   color: #F52C6E;
-  font-size: 12px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 2px;
   border: 1px solid rgba(151, 151, 151, 0.2);
+  margin-bottom: 22.4px;
 }
 
 .userContent pre code {
   background: transparent;
-  padding: 36px 14px;
+  padding: 0.2em 0 0;
   font-size: 14px;
   overflow: scroll;
   display: block;
@@ -1268,6 +1326,17 @@ p {
   max-width: 100%;
   height: auto;
   border: 1px solid #E4E4E4;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .versionings {

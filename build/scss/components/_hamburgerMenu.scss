@@ -1,0 +1,49 @@
+.hamburgerMenu {
+  @include wackyTransition(transform opacity);
+  position: absolute;
+  top: 2px;
+  left: $site-padding;
+  display: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  height: $header-minHeight;
+  width: $header-minHeight;
+
+  @include mediaQuery-mobile {
+    display: block;
+  }
+}
+
+.hamburger {
+  transition: all 233ms cubic-bezier(.5, 0, 0, 1);
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger-filler {
+  width: 100%;
+  height: #{($hamburger-height - (5 * $hamburger-lineHeight)) / 2}px;
+  position: relative;
+  display: block;
+}
+
+.hamburger-ingredient {
+  transition: all 400ms cubic-bezier(.5, 0, 0, 1);
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  position: relative;
+  display: block;
+  height: #{$hamburger-lineHeight}px;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}

@@ -64,9 +64,17 @@ body {
     padding: 0 $mainColumn-padding $mainColumn-padding;
 
     @include mediaQuery-noBleed {
-        max-width: calc(100% - #{$panel-widthTablet});
+        max-width: calc(100% - #{$panel-width});
         padding: {
             left: $site-padding;
+            right: 0;
+        }
+    }
+
+    @include mediaQuery-mobile {
+        max-width: 100%;
+        padding: {
+            left: 0;
             right: 0;
         }
     }
@@ -75,10 +83,6 @@ body {
 .column-panel {
     width: $panel-width;
     min-height: 100%;
-
-    @include mediaQuery-noBleed {
-        width: $panel-widthTablet;
-    }
 }
 
 .column-flexGrow {
