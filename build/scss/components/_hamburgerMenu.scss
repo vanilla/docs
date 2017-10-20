@@ -1,5 +1,6 @@
 .hamburgerMenu {
   @include appearanceNone;
+  user-select: none;
   display: none;
   cursor: pointer;
   border: 0;

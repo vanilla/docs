@@ -1,9 +1,34 @@
-.docs-content {
-    #content {
-        .cloudfeature {
-            img {
-                border: 0;
-            }
-        }
+.cloudfeature {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    color: $panelBlueText;
+    background-color: $panelBlue;
+}
+
+
+.cloudFeature-image {
+    border: 0;
+}
+
+.cloudFeature-learnMore {
+    border-bottom: 1px dotted $vanillaBlue;
+    outline: none;
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 85px;
+}
+
+.cloudfeature-p {
+    margin: 0;
+    padding: 0;
+}
+
+@include mediaQuery-mobile {
+    .cloudFeature-image {
+        display: none;
     }
 }

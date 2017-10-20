@@ -36,15 +36,35 @@ function navInit() {
     updateSubNav();
 }
 
-
+function scrollToInit($el, callback) {
+    $el.on('click touchstart' , function (e) {
+        e.preventDefault();
+        //calculate destination place
+        var dest = 0;
+        if ($el.offset().top > $(document).height() - $(window).height()) {
+            dest = $(document).height() - $(window).height();
+        } else {
+            dest = $el.offset().top;
+        }
+        //go to destination
+        $('html,body').animate({
+            scrollTop: dest
+        }, 300, 'swing', function(){
+            if( callback ){
+                callback();
+            }
+        });
+    });
+}
 
 function anchorifyPage() {
     var anchorSVG = '<svg class="icon iconLink"><title>Anchor</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-link"></use></svg>';
     $('.userContent').find('h1, h2, h3, h4, h5, h6').each(function(){
-
-        var anchor = hasAttr($(this), 'id') ? '#' + $(this).attr('id') : '';
-
-        $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
+        if (hasAttr($(this), 'id')) {
+            var anchor = '#' + $(this).attr('id');
+            $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
+            scrollToInit($(anchor));
+        }
     });
 }
 

@@ -254,8 +254,37 @@ span.breadcrumb-link {
   flex-grow: 1;
 }
 
-.docs-content #content .cloudfeature img {
+.cloudfeature {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #0272AC;
+  background-color: #BBE1F5;
+}
+
+.cloudFeature-image {
   border: 0;
+}
+
+.cloudFeature-learnMore {
+  border-bottom: 1px dotted #0291DB;
+  outline: none;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 85px;
+}
+
+.cloudfeature-p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 880px) {
+  .cloudFeature-image {
+    display: none;
+  }
 }
 
 body {
@@ -450,6 +479,7 @@ a:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  user-select: none;
   display: none;
   cursor: pointer;
   border: 0;
@@ -519,16 +549,6 @@ a:hover {
 
 .docs-header .docs-search:focus {
   min-width: 200px;
-}
-
-@media screen and (max-width: 880px) {
-  .docs-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-  }
 }
 
 .headerPlaceholder {
@@ -798,6 +818,9 @@ a:hover {
 }
 
 @media screen and (max-width: 880px) {
+  #nav {
+    heigth: 100vh;
+  }
   .docs-nav {
     padding-top: 12px;
     padding-bottom: 24px;
@@ -922,6 +945,12 @@ a:hover {
 
 .docs-search-input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 880px) {
+  .docs-search-input {
+    font-size: 16px;
+  }
 }
 
 ::-ms-clear {
@@ -1332,6 +1361,17 @@ p {
   color: #0291DB;
 }
 
+.userContent code {
+  background: rgba(199, 37, 78, 0.1);
+  color: #F52C6E;
+  font-family: "Fira Mono", monospace;
+  font-size: 13px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  max-width: 100%;
+  word-break: break-all;
+}
+
 .userContent pre {
   background: rgba(235, 235, 235, 0.2);
   color: #F52C6E;
@@ -1347,19 +1387,11 @@ p {
   font-size: 14px;
   overflow: scroll;
   display: block;
+  word-break: keep-all;
 }
 
 .userContent pre + h2 {
   margin-top: 30px;
-}
-
-.userContent code {
-  background: rgba(199, 37, 78, 0.1);
-  color: #F52C6E;
-  font-family: "Fira Mono", monospace;
-  font-size: 13px;
-  padding: 2px 4px;
-  border-radius: 2px;
 }
 
 .userContent table {
@@ -1417,30 +1449,6 @@ p {
 .userContent aside.note {
   color: #9E998E;
   background-color: #FFFBEF;
-}
-
-.userContent aside.cloudfeature {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #0272AC;
-  background-color: #BBE1F5;
-}
-
-.userContent aside.cloudfeature p {
-  margin: 5px 0px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.userContent aside.cloudfeature p * {
-  margin-right: 10px;
-}
-
-.userContent aside.cloudfeature p a {
-  border-bottom: 1px dotted #0291DB;
-  margin-left: auto;
 }
 
 .userContent aside.nav-edge {

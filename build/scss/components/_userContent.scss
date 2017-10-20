@@ -68,6 +68,17 @@
     color: $vanillaBlue;
   }
 
+  code {
+    background: $faintPink;
+    color: $vanillaPink;
+    font-family: "Fira Mono", monospace;
+    font-size: 13px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    max-width: 100%;
+    word-break: break-all;
+  }
+
   pre {
     background: rgba($panelLight, .2);
     color: $vanillaPink;
@@ -83,6 +94,7 @@
       font-size: $fontSize-medium;
       overflow: scroll;
       display: block;
+      word-break: keep-all;
     }
 
     + h2 {
@@ -90,14 +102,7 @@
     }
   }
 
-  code {
-    background: $faintPink;
-    color: $vanillaPink;
-    font-family: "Fira Mono", monospace;
-    font-size: 13px;
-    padding: 2px 4px;
-    border-radius: 2px;
-  }
+
 
   table {
     border-collapse: collapse;
@@ -161,31 +166,6 @@
     &.note {
       color: $panelYellowText;
       background-color: $panelYellow;
-    }
-
-    &.cloudfeature {
-      margin-top: 0px;
-      margin-bottom: 20px;
-      font-weight: bold;
-
-      color: $panelBlueText;
-      background-color: $panelBlue;
-
-      p {
-        margin: 5px 0px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        * {
-          margin-right: 10px;
-        }
-
-        a {
-          border-bottom: 1px dotted $vanillaBlue;
-          margin-left: auto;
-        }
-      }
     }
 
     &.nav-edge {

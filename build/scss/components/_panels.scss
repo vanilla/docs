@@ -190,6 +190,10 @@
 }
 
 @include mediaQuery-mobile {
+    #nav {
+        heigth: 100vh;
+    }
+
     .docs-nav {
         padding: {
             top: 12px;
