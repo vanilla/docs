@@ -21,10 +21,15 @@ Vanilla supports the built-in Smarty modifiers as documented on the Smarty site,
 
 Converts a string to an asset url. Solves the problem of trying to using a relative path when Vanilla exists in a subfolder.
 
+
+{{% scrollableTables %}}
+
 Parameter       | Type      | Default   | Description
 ---             | ---       | ---       | ---
 `withDomain`    | `boolean` | `false`   | Whether or not to prepend the base (`http://your-forums.com/`) URL to the outputted link
 `addVersion`    | `boolean`  | `false`  | Whether or not to append a version to the resulting asset to help bust the cache
+
+{{% /scrollableTables %}}
 
 ### Example
 
@@ -38,9 +43,13 @@ In the following example, if the asset_url modifier was not specified, the image
 
 Formats a timestamp consistently with Vanilla's date formatting, which by default varies depending on how much time has passed.
 
+{{% scrollableTables %}}
+
 Parameter   | Type      | Default   | Description
 ---         | ---       | ---       | ---
 `format`    | `string`  | varies    | The  [strftime](http://php.net/manual/en/function.strftime.php) format of the date
+
+{{% /scrollableTables %}}
 
 ### Example
 
@@ -54,9 +63,13 @@ The following example prints out the current year and uses the [{$smarty} reserv
 
 Translates a string into the selected locale's definition.
 
+{{% scrollableTables %}}
+
 Parameter   | Type      | Default   | Description
 ---         | ---       | ---       | ---
 `default`   | `string`  | none      | Default translation. Good idea to set when using short-names
+
+{{% /scrollableTables %}}
 
 ### Example
 
