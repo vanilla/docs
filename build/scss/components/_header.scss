@@ -1,6 +1,11 @@
 .docs-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: $panelDark;
     font-size: 16px;
+    z-index: 5;
 
     .row {
         height: $header-minHeight;

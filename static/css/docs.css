@@ -496,8 +496,13 @@ a:hover {
 }
 
 .docs-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #333333;
   font-size: 16px;
+  z-index: 5;
 }
 
 .docs-header .row {
@@ -1268,6 +1273,18 @@ p {
 .userContent h6 {
   position: relative;
   margin-top: 2.5em;
+}
+
+.userContent h2::before,
+.userContent h3::before,
+.userContent h4::before,
+.userContent h5::before,
+.userContent h6::before {
+  display: block;
+  content: " ";
+  margin-top: -60px;
+  height: 60px;
+  visibility: hidden;
 }
 
 .userContent h2 {
