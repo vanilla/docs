@@ -1,4 +1,24 @@
 <aside id="nav" class="column column-panel mainNav">
+    <div class="panelHeader">
+        <div class="panelHeader-topRow">
+            <button id="hamburger-close" class="btn btn-transparent hamburgerMenu hamburgerMenu-close">
+                <svg class="hamburger-closeIcon" viewBox="0 0 24 24">
+                    <title>Close</title>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-close"></use>
+                </svg>
+            </button>
+
+            <a class="docs-header-logo" href="/">
+                {{ partial "logo-mobile.html" . }}
+            </a>
+
+            <div class="mobileSpacer">&nbsp;</div>
+        </div>
+
+        {{ partial "header/cta.html" . }}
+
+        {{ partial "header/search.html" . }}
+    </div>
 
     {{ if (eq (lower .Type) "api") }}
 

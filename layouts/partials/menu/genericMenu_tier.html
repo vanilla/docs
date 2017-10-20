@@ -21,7 +21,7 @@
                 </div>
             </a>
             {{ if .HasChildren }}
-                <div class="menuItem-children">
+                <div class="menuItem-children{{if $visibleChildren}} isOpen-tablet{{ end }}">
                     {{ partial "menu/genericMenu_tier.html" (dict "rootNode" $rootNode "menuName" $menuName "tier" (add 1 $tier) "menuData" .Children ) }}
                 </div>
             {{ end }}

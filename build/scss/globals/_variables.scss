@@ -4,6 +4,7 @@ $lightBlue:                 $vanillaLightBlue;
 
 $vanillaPink:               #F52C6E !default;
 $vanillaLightPink:          #F6447F !default;
+$vanillaDarkPink:           #e12663;
 $lightPink:                 $vanillaLightPink !default;
 $faintPink:                 rgba(199, 37, 78, 0.1) !default;
 
@@ -85,16 +86,39 @@ $choiceApi-bg_hover: rgba($vanillaPink, .7);
 $fontSize-small:            12px;
 $fontSize-medium:           14px;
 $fontSize-large:            16px;
+$fontSize-extraLarge:       18px;
 $versioning-color:          #92959a;
 
 // Logos
 $logoHorizontal-width:      115px;
 $logoHorizontal-height:     34.28px;
 
+$logoVertical-width:      72px;
+$logoVertical-ratio:      69/118;
+$logoVertical-height:     $logoVertical-width * $logoVertical-ratio;
+
 // nav
 $navTier-padding:           12px;
 $navItem-bg:                #555A62;
 $navItem-horizontalPadding: 18px;
 
+// Hamburger
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+$hamburger-width                       : 24px;
+$hamburger-height                      : 22px;
+$hamburger-lineHeight                  : 3px;
+$hamburger-offset                      : ($hamburger-width - $hamburger-lineHeight * 3) / 2;
+
 // Media Queries
-$mediaQuery-mobile:         768px;
+$mediaQuery-mobile:         880px;

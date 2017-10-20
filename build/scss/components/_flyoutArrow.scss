@@ -32,19 +32,21 @@
   vertical-align: middle;
 }
 
-.menuItem-children {
-  .flyoutArrow-triangle {
+#nav_sub {
+  .flyoutArrow {
     display: none;
-  }
-
-  .flyoutArrow-rightArrow {
-    display: inline-block;
   }
 }
 
 
-#nav_sub {
-  .flyoutArrow {
-    display: none;
+@include mediaQuery-hasBleed {
+  .menuItem-children {
+    .flyoutArrow-triangle {
+      display: none;
+    }
+  }
+
+  .flyoutArrow-rightArrow {
+    display: inline-block;
   }
 }

@@ -17,3 +17,9 @@
   :-ms-input-placeholder      {@content}
   // scss-lint:enable PseudoElement
 }
+
+@mixin appearanceNone {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}

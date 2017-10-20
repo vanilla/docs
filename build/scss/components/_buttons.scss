@@ -13,6 +13,16 @@
     &:hover {
         color: white;
         background: $vanillaLightPink;
+        border: 1px solid $vanillaPink;
+    }
+
+    &.button-cta {
+        color: white;
+        background: $vanillaPink;
         border: 1px solid $vanillaLightPink;
+
+        &:hover {
+            background: $vanillaDarkPink;
+        }
     }
 }
