@@ -1110,6 +1110,11 @@ a:hover {
   justify-content: space-between;
 }
 
+.singleton-header .docs-header-search {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
 .docs-welcome {
   text-align: center;
 }

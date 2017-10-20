@@ -92,6 +92,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .docs-header-search {
+        margin: {
+            left: 15px;
+            right: 0;
+        }
+    }
 }
 
 .docs-welcome {
