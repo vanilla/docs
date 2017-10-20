@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a list of reactions.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -32,7 +32,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a reaction by UrlCode
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -49,7 +49,7 @@ Host: https://yoursite.vanillaforums.com
 
 Creates a new reaction.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -70,7 +70,7 @@ Host: https://yoursite.vanillaforums.com
 
 Modifies an existing reaction.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -91,7 +91,7 @@ Host: https://yoursite.vanillaforums.com
 
 Activate or de-activate a reaction.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 

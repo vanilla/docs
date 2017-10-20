@@ -26,7 +26,7 @@ Host: https://yoursite.vanillaforums.com
 
 Gets a list of sites in your hub.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -43,7 +43,7 @@ Host: https://yoursite.vanillaforums.com
 
 Create a new site and queues it for building. When a site is created it will not be immediately available, but instead be in a *Building* status. Usually, sites take about a minute to build.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -61,7 +61,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get the details of an individual site by ID.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -78,4 +78,4 @@ Host: https://yoursite.vanillaforums.com
 
 Synchronize the sites against the hub. Note that this method doesn't have to be called as the nodes automatically synchronize every 20 minutes.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required

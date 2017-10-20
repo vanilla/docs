@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Adjust a user’s Online privacy.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -35,7 +35,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a count of users currently online.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 

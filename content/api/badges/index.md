@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a list of available badges.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -32,7 +32,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a badge by ID.
 
-[__Authentication__](../#making-api-calls): No
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): No
 
 ### Parameters
 
@@ -49,7 +49,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a user’s current badge list.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -66,7 +66,7 @@ Host: https://yoursite.vanillaforums.com
 
 Creates a new badge.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -87,7 +87,7 @@ Host: https://yoursite.vanillaforums.com
 
 Edit a badge.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Usage
 
@@ -114,7 +114,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Gives an existing user a badge.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 

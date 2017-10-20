@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Insert a user.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -47,7 +47,7 @@ Host: https://yoursite.vanillaforums.com
 
 Modify user information.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -73,7 +73,7 @@ Host: https://yoursite.vanillaforums.com
 
 Upload a new avatar
 
-[__Authentication__](../#making-api-calls): required 
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required 
 
 ### Parameters
 
@@ -95,7 +95,7 @@ Host: https://yoursite.vanillaforums.com
 
 Gets a list of discussions that the user posted.
 
-[__Authentication__](../#making-api-calls): No
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): No
 
 ### GET Parameters
 
@@ -112,7 +112,7 @@ Host: https://yoursite.vanillaforums.com
 
 Gets a list of comments that a user posted.
 
-[__Authentication__](../#making-api-calls): No  
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): No  
 
 ### GET Parameters
 
@@ -129,7 +129,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Get multiple users’ information.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -147,7 +147,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Get/Set user notification preferences.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### GET Parameters
 
@@ -187,7 +187,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Get user information.
 
-[__Authentication__](../#making-api-calls): no, But Perspective will be that of a guest
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): no, But Perspective will be that of a guest
 
 ### Parameters
 
@@ -206,7 +206,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Gets/Sets single-sign-on (SSO) information for a user.
 
-[__Authentication__](../#making-api-calls): yes
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): yes
 
 ### GET
 
@@ -242,7 +242,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Delete a user from the application.
 
-[__Authentication__](../#making-api-calls): yes
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): yes
 
 ### Parameters
 

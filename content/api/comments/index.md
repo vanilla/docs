@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Creates a new comment.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 

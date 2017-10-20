@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a user’s ignore list.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -34,7 +34,7 @@ Host: https://yoursite.vanillaforums.com
 
 Add someone to a user’s ignore list.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -52,7 +52,7 @@ Host: https://yoursite.vanillaforums.com
 
 Remove someone from a user’s ignore list.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -70,7 +70,7 @@ Host: https://yoursite.vanillaforums.com
 
 Bestow or Revoke a user’s ignore privilege.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 

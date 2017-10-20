@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a list of available ranks.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -32,7 +32,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve a rank.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 

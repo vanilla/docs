@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Adds a new category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -43,7 +43,7 @@ Host: https://yoursite.vanillaforums.com
 
 Edits an existing category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -72,7 +72,7 @@ Host: https://yoursite.vanillaforums.com
 
 Deletes an existing category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -90,7 +90,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a single category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ## /categories/list
 
@@ -101,7 +101,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a list of categories.
 
-[__Authentication__](../#making-api-calls): optional  
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): optional  
 If not provided, perspective will be that of a guest.
 
 ### Parameters
