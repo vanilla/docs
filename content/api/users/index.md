@@ -1,11 +1,11 @@
 ---
-title: "Endpoint: users”
+title: "Endpoint: users"
 tags: ["API"]
 category: "api"
 menu:
   api:
     identifier: users
-    weight: 200
+    weight: 400
 ---
 
 ## /users/add
@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Insert a user.
 
-[__Authentication__](../#making-api-calls): required  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): required
 
 ### Parameters
 
@@ -36,7 +36,7 @@ Insert a user.
 
 ### Notes
 
-The Photo field submitted here is only able to take a remotely hosted URL, not a file upload. In order to upload an avatar to the service, use the [/users/photo API](http://docs.vanillaforums.com/api/users/)
+The Photo field submitted here is only able to take a remotely hosted URL, not a file upload. In order to upload an avatar to the service, use the [users/photo]({{< relref "#users-photo" >}})
 
 ## /users/edit
 
@@ -47,7 +47,7 @@ Host: https://yoursite.vanillaforums.com
 
 Modify user information.
 
-[__Authentication__](../#making-api-calls): required  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): required
 
 ### Parameters
 
@@ -73,7 +73,7 @@ Host: https://yoursite.vanillaforums.com
 
 Upload a new avatar
 
-[__Authentication__](../#making-api-calls): required  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): required 
 
 ### Parameters
 
@@ -84,7 +84,7 @@ Upload a new avatar
 
 ### Notes
 
-The Picture field submitted here takes a file upload using the multipart /form-data Content-Type in the request headers. It does not support a string URL like [/users/edit#Photo](http://docs.vanillaforums.com/api/users/)
+The Picture field submitted here takes a file upload using the multipart /form-data Content-Type in the request headers. It does not support a string URL like [users/edit#Photo]({{< relref "#users-edit" >}})
 
 ## /users/discussions
 
@@ -129,7 +129,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Get multiple users’ information.
 
-[__Authentication__](../#making-api-calls): required  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): required
 
 ### Parameters
 
@@ -140,13 +140,14 @@ Get multiple users’ information.
 ## /users/notifications
 
 ```http
-GET, POST /api/v1/users/notifications.ext HTTP/1.1
+GET /api/v1/users/notifications.ext HTTP/1.1
+POST 
 HOST: https://yoursite.vanillaforums.com
 ```
 
 Get/Set user notification preferences.
 
-[__Authentication__](../#making-api-calls): required  [more](http://docs.vanillaforums.com/api/) 
+[__Authentication__](../#making-api-calls): required
 
 ### GET Parameters
 
@@ -186,7 +187,7 @@ HOST: https://yoursite.vanillaforums.com
 
 Get user information.
 
-[__Authentication__](../#making-api-calls): no, But Perspective will be that of a guest  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): no, But Perspective will be that of a guest
 
 ### Parameters
 
@@ -198,13 +199,14 @@ Get user information.
 ## /users/sso
 
 ```http
-GET, POST /api/v1/users/sso.ext HTTP/1.1
+GET /api/v1/users/sso.ext HTTP/1.1
+POST
 HOST: https://yoursite.vanillaforums.com
 ```
 
 Gets/Sets single-sign-on (SSO) information for a user.
 
-[__Authentication__](../#making-api-calls): yes  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): yes
 
 ### GET
 
@@ -240,23 +242,13 @@ HOST: https://yoursite.vanillaforums.com
 
 Delete a user from the application.
 
-[__Authentication__](../#making-api-calls): yes  [more](http://docs.vanillaforums.com/api/)
+[__Authentication__](../#making-api-calls): yes
 
 ### Parameters
 
 | Parameter          | Type                      | Description                              |
 | ------------------ | ------------------------- | ---------------------------------------- |
 | __`User`__         | [`smart id`](../smart-id) | Required. The user to retrieve           |
-| __`DeleteMethod`__ | `string`                  | Required. The method of content deletion. This should be one of:__`keep`__ Keep the user’s content__`wipe`__ Replace the user’s content with a “this content has been deleted” type method,__`delete`__ Delete the user’s content |
-
-
-
-
-
-
-
-
-
-
+| __`DeleteMethod`__ | `string`                  | Required. The method of content deletion. This should be one of: `keep` the user's content. `wipe` Replace the user's content with a “this content has been deleted” type method, `delete` Delete the user's content |
 
 
