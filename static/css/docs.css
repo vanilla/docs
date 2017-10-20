@@ -135,6 +135,7 @@ body {
 .breadcrumb-item {
   float: left;
   font-size: 12px;
+  line-height: 1.5;
   margin: 0;
 }
 
