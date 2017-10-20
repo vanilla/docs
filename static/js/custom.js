@@ -37,7 +37,7 @@ function navInit() {
 }
 
 function scrollToInit($el, callback) {
-    $el.on('click touchstart' , function (e) {
+    $el.find('.headingAnchor').on('click touchstart' , function (e) {
         e.preventDefault();
         //calculate destination place
         var dest = 0;
@@ -63,7 +63,9 @@ function anchorifyPage() {
         if (hasAttr($(this), 'id')) {
             var anchor = '#' + $(this).attr('id');
             $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
-            scrollToInit($(anchor));
+            scrollToInit($(anchor), function(){
+                window.location = anchor;
+            });
         }
     });
 }
