@@ -17,7 +17,7 @@ Host: https://yoursite.vanillaforums.com
 
 Add a new role.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -39,7 +39,7 @@ Host: https://yoursite.vanillaforums.com
 
 Edit a role.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
@@ -59,7 +59,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get all of the roles.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ## /roles/get
 
@@ -70,7 +70,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a single role.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
 
