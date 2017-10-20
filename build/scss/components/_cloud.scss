@@ -12,6 +12,13 @@
 
 .cloudFeature-image {
     border: 0 !important;
+    margin-right: 10px;
+}
+
+.cloudfeature-p {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
 }
 
 .cloudFeature-learnMore {
@@ -20,11 +27,7 @@
     display: inline-block;
     white-space: nowrap;
     min-width: 85px;
-}
-
-.cloudfeature-p {
-    margin: 0;
-    padding: 0;
+    margin-left: 15px;
 }
 
 @include mediaQuery-mobile {

@@ -267,6 +267,13 @@ span.breadcrumb-link {
 
 .cloudFeature-image {
   border: 0 !important;
+  margin-right: 10px;
+}
+
+.cloudfeature-p {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
 }
 
 .cloudFeature-learnMore {
@@ -275,11 +282,7 @@ span.breadcrumb-link {
   display: inline-block;
   white-space: nowrap;
   min-width: 85px;
-}
-
-.cloudfeature-p {
-  margin: 0;
-  padding: 0;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 880px) {
