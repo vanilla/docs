@@ -36,9 +36,13 @@ Retrieve a badge by ID.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
 | __`Badge`__  | [`smart id`](../smart-id)            | Required. Badge to retrieve             |
+
+{{% /scrollableTables %}}
 
 ## /badges/user
 
@@ -53,9 +57,13 @@ Retrieve a user’s current badge list.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                |
 | ---------- | ------------------------- | -------------------------- |
 | __`User`__ | [`smart id`](../smart-id) | Required. User whose badges should be listed |
+
+{{% /scrollableTables %}}
 
 ## /badges/add
 
@@ -70,6 +78,8 @@ Creates a new badge.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                              |
 | ---------- | ------------------------- | ---------------------------------------- |
 | __`Name`__ | `string` 		 | Badge name |
@@ -77,6 +87,8 @@ Creates a new badge.
 | `Description `    | `string` | Badge description   |
 | `Points `    | integer | Badge point value   |
 | `Photo `    | file | Badge image  |
+
+{{% /scrollableTables %}}
 
 ## /badges/edit
 
@@ -95,6 +107,8 @@ All fields are optional except Badge. Updates are sparse, so supply only the fie
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                              |
 | ---------- | ------------------------- | ---------------------------------------- |
 | __`Badge`__ | [`smart id`](../smart-id) | Required. The badge we’re modifying|
@@ -104,6 +118,7 @@ All fields are optional except Badge. Updates are sparse, so supply only the fie
 | `Points `    | integer | Badge point value   |
 | `Photo `    | file | Badge image. If supplied, the Content-Type of the request should be forced to multipart/form-data  |
 
+{{% /scrollableTables %}}
 
 ## /badges/give
 
@@ -118,9 +133,12 @@ Gives an existing user a badge.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                                  | Description                  |
 | ---------- | ------------------------------------- | ---------------------------- |
 | __`User`__ | [`smart id`](../smart-id)  | Required. The user who should get the badge|
 | __`BadgeID`__ | integer | Required. The ID of the badge to give|
 | `Reason`| `string` | Optional friendly message to provide with the badge|
 
+{{% /scrollableTables %}}

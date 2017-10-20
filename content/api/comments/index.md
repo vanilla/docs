@@ -21,6 +21,8 @@ Creates a new comment.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type      | Description
 ---                 | ---       | ---
 __`DiscussionID`__  | `integer` | Discussion to post comment to
@@ -28,3 +30,5 @@ __`Body`__          | `string`  | Comment body
 __`Format`__        | `string`  | Comment output format
 `ForeignID`         | `string`  | Related foreign content identifier
 `Type`              | `string`  | Comment type
+
+{{% /scrollableTables %}}

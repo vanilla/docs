@@ -21,6 +21,8 @@ Insert a user.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
 | __`Name`__  | `string`                              | Username                                |
@@ -33,6 +35,8 @@ Insert a user.
 | `Location`  | `string`                              | Freeform user location                  |
 | `Role`      | [`multi smart id`](../multi smart-id) | Role ID (corresponds to GDN_Role)       |
 | `Rank`      | [`smart id`](../smart-id)             | Rank ID (corresponds to GDN_Rank)       |
+
+{{% /scrollableTables %}}
 
 ### Notes
 
@@ -51,6 +55,8 @@ Modify user information.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
 | __`User`__  | [`smart id`](../smart-id)             | Required. The user to edit              |
@@ -63,6 +69,7 @@ Modify user information.
 | `Role`      | [`multi smart id`](../multi smart-id) | Role ID (corresponds to GDN_Role)       |
 | `Rank`      | [`smart id`](../smart-id)             | Rank ID (corresponds to GDN_Rank)       |
 
+{{% /scrollableTables %}}
 
 ## /users/photo
 
@@ -151,12 +158,17 @@ Get/Set user notification preferences.
 
 ### GET Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                              |
 | ---------- | ------------------------- | ---------------------------------------- |
 | __`User`__ | [`smart id`](../smart-id) | Required. The user whose settings to retrieve or modify. Required for setting and getting. |
 
+{{% /scrollableTables %}}
 
 ### POST Parameters
+
+{{% scrollableTablesWide %}}
 
 | Parameter                   | Type    | Description                              |
 | --------------------------- | ------- | ---------------------------------------- |
@@ -178,6 +190,8 @@ Get/Set user notification preferences.
 | `Popup.BadgeRequest`        | integer | Popup notify when a new badge is requested |
 | `Email.Applicant`           | integer | Email notify when anyone applies for membership |
 
+{{% /scrollableTablesWide %}}
+
 ## /users/get
 
 ```http
@@ -191,10 +205,13 @@ Get user information.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                     |
 | ---------- | ------------------------- | ------------------------------- |
 | __`User`__ | [`smart id`](../smart-id) | Required. The user to retrieve. |
 
+{{% /scrollableTables %}}
 
 ## /users/sso
 
@@ -214,16 +231,21 @@ Gets the SSO information for a single user.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                |
 | ---------- | ------------------------- | -------------------------- |
 | __`User`__ | [`smart id`](../smart-id) | Required. The user to get. |
 
+{{% /scrollableTables %}}
 
 ### POST
 
 Update the SSO information for a user.
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 | Parameter            | Type     | Description                              |
 | -------------------- | -------- | ---------------------------------------- |
@@ -232,6 +254,7 @@ Update the SSO information for a user.
 | __`Username/Email`__ | `string` | Either the username or the email of the user in Vanilla |
 | __`Password`__       | `string` | The password of the user in Vanilla      |
 
+{{% /scrollableTables %}}
 
 ## /users/delete
 
@@ -246,9 +269,11 @@ Delete a user from the application.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter          | Type                      | Description                              |
 | ------------------ | ------------------------- | ---------------------------------------- |
 | __`User`__         | [`smart id`](../smart-id) | Required. The user to retrieve           |
 | __`DeleteMethod`__ | `string`                  | Required. The method of content deletion. This should be one of: `keep` the user's content. `wipe` Replace the user's content with a “this content has been deleted” type method, `delete` Delete the user's content |
 
-
+{{% /scrollableTables %}}

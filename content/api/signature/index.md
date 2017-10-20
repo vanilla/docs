@@ -21,9 +21,13 @@ Get a user’s signature, and other signature configuration properties.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
 | __`User`__  | [`smart id`](../smart-id)             | Required. The user whose list we’re modifying|
+
+{{% /scrollableTables %}}
 
 ## /signature/set
 
@@ -36,6 +40,8 @@ Add someone to a user’s ignore list.
 
 [__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
+{{% scrollableTables %}}
+
 ### Parameters
 
 | Parameter   | Type                                  | Description                             |
@@ -46,3 +52,5 @@ Add someone to a user’s ignore list.
 | `HideAll` | integer                             | Whether to simply hide signatures entirely|
 | `HideImages`    | integer                            | Whether to hide images in signatures       |
 | `HideMobile`     | integer                            | Whether to hide signatures while viewing on a mobile device|
+
+{{% /scrollableTables %}}

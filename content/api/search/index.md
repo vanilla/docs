@@ -22,14 +22,19 @@ No
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
 | __`search`__ | `string`             | The string used to search|
+
+{{% /scrollableTables %}}
 
 ### Advanced Search
 
 If you have advanced search enabled then search can take these additional parameters.
 
+{{% scrollableTablesWide %}}
 
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
@@ -44,3 +49,5 @@ If you have advanced search enabled then search can take these additional parame
 | `date` | `string`             | Specify a date to search on. This can be a data specified in yyyy-mm-dd syntax, but can also include text such as “Monday” or “today” or “last week” |
 | `within` | `string`             | You can use this in conjunction with the date parameter to provide a range of dates. You can pass a string such as “1 day” or “3 weeks” etc |
 | `page` | `string`             | The page of results you want to get. You can also specify a range like 1-10 to get the first 10 results|
+
+{{% /scrollableTablesWide %}}

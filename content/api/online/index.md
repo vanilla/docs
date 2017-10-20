@@ -21,10 +21,14 @@ Adjust a user’s Online privacy.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter   | Type                                  | Description                             |
 | ----------- | ------------------------------------- | --------------------------------------- |
 | __`User`__  		| [`smart id`](../smart-id)             | Required. The user whose privilege we’re modifying|
 | __`PrivateMode`__ 	| `string`                        | Required. ‘true’ or ‘false. Whether not this user is hidden from Online status|
+
+{{% /scrollableTables %}}
 
 ## /online/count
 

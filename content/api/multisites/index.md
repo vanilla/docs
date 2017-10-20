@@ -47,10 +47,14 @@ Create a new site and queues it for building. When a site is created it will not
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type      | Description
 ---                 | ---       | ---
 __`Name`__          | `string`  | A human readable name for the site.
 __`Slug`__          | `string`  | The site's folder. Make sure to use just alphanumeric, lowercase characters for the slug.
+
+{{% /scrollableTables %}}
 
 ## GET /multisites/{id}
 

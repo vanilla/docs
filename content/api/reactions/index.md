@@ -53,6 +53,8 @@ Creates a new reaction.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                |
 | ---------- | ------------------------- | -------------------------- |
 | __`UrlCode`__  | `string`            			 | Required. URL code (slug) for new reaction         |
@@ -60,6 +62,8 @@ Creates a new reaction.
 | `Description`    | `string`                  | Description of reaction           |
 | `Class`    | `string`                  | Class, or grouping, of this reaction        |
 | `Points`    | `string`                  | Points awarded for reaction       |
+
+{{% /scrollableTables %}}
 
 ## /reactions/edit
 
@@ -74,6 +78,8 @@ Modifies an existing reaction.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 | Parameter  | Type                      | Description                              |
 | ---------- | ------------------------- | ---------------------------------------- |
 | __`UrlCode`__ | `string`   | Required. URL code (slug) of reaction|
@@ -81,6 +87,8 @@ Modifies an existing reaction.
 |`Description` | `string`   | Description of reaction|
 |`Class` | `string`   | Class,  or grouping of this reaction|
 |`Points` | `string`   | Points awarded for reaction|
+
+{{% /scrollableTables %}}
 
 ## /reactions/toggle
 

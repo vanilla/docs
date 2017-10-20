@@ -21,6 +21,8 @@ Creates a new discussion.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type      | Description
 ---                 | ---       | ---
 __`Name`__          | `string`  | Discussion name
@@ -35,6 +37,7 @@ __`Category`__      | `string`  | Discussion Category (Name, use if no ID)
 `Announce`          | `boolean` | Discussion announced state
 `Sink`              | `boolean` | Discussion sunk state
 
+{{% /scrollableTables %}}
 
 ## /discussions/bookmark
 
@@ -49,11 +52,15 @@ Bookmark or unbookmark a discussion.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type                      | Description
 ---                 | ---                       | ---
 __`Discussion`__    | [`smart id`](../smart-id) | Discussion to be bookmarked
 `User`              | [`smart id`](../smart-id) | The user bookmarking the discussion. If blank then the currently authenticated user will be used
 `Bookmark`          | `boolean`                 | Whether or not to bookmark the discussion
+
+{{% /scrollableTables %}}
 
 ### Notes
 
@@ -85,6 +92,8 @@ Edits an existing discussion.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type                      | Description
 ---                 | ---                       | ---
 __`Discussion`__    | [`smart id`](../smart-id) | Discussion to be deleted.
@@ -100,6 +109,7 @@ __`Discussion`__    | [`smart id`](../smart-id) | Discussion to be deleted.
 `Announce`          | `boolean`                 | Discussion announced state
 `Sink`              | `boolean`                 | Discussion sunk state
 
+{{% /scrollableTables %}}
 
 ## /discussions/list
 
@@ -126,10 +136,14 @@ If not provided, perspective will be that of a guest.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter                   | Type                  | Description
 ---                         | ---                   | ---
 __`CategoryIdentifier`__    | `integer` `string`    | Category identifier (`CategoryID` or `UrlCode`)
 `Page`                      | `integer`             | Page number
+
+{{% /scrollableTables %}}
 
 ## /discussions/promoted
 
@@ -145,6 +159,8 @@ If not provided, perspective will be that of a guest.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type               | Description
 ---                 | ---                | ---
 __`selector`__      | `string`           | What property to filter the discussions by. The available selectors are listed in the Selectors and Selections section below.
@@ -152,6 +168,8 @@ __`selector`__      | `string`           | What property to filter the discussio
 `contenttype`       | `string`           | The value can be `all`, `discussions`, or `comments`. You can choose to fetch only comments or only discussions. The default is all.
 `limit`             | `integer`          | The number of posts to fetch. The max number is 50.
 `expiry`            | `integer`          | How long in seconds to cache the content.
+
+{{% /scrollableTables %}}
 
 ##### Selectors and Selections
 

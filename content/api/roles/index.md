@@ -21,6 +21,8 @@ Add a new role.
 
 ### Parameters
 
+{{% scrollableTablesWide %}}
+
 Parameter                           | Type      | Description
 ---                                 | ---       | ---
 __`Name`__                          | `string`  | The name of the role
@@ -29,6 +31,8 @@ __`Description`__                   | `string`  | Description of this role
 `Permissions.Category`              | `array`   | Custom category permissions. Each item in the array is a permission for a particular category. Note that the category must be configured to have custom permissions to be viable in this array.
 `Permissions.Category.CategoryID`   | `integer` | The ID of the category to set the permission for.
 `Permissions.Category.*`            | `boolean` | Each custom category permission is a dot-separated key with a boolean value.
+
+{{% /scrollableTablesWide %}}
 
 ## /roles/edit
 

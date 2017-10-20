@@ -1411,6 +1411,10 @@ p {
   width: 100%;
 }
 
+.userContent table code {
+  word-break: normal;
+}
+
 .userContent table + h2 {
   margin-top: 30px;
 }
@@ -1477,6 +1481,18 @@ p {
   max-width: 100%;
   height: auto;
   border: 1px solid #E4E4E4;
+}
+
+.table-scroll {
+  overflow: auto;
+}
+
+.table-scroll table {
+  min-width: 500px;
+}
+
+.table-scroll.isExtraWide table {
+  min-width: 750px;
 }
 
 .sr-only {

@@ -120,12 +120,16 @@ List the items in each of the queues.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter       | Type      | Description
 ---             | ---       | ---
 `Page`          | `string`  | Page Number. Default is first page.
 `CategoryID`    | `int`     | Category ID. Default all categories.
 `Status`        | `string`  | approved, denied, unread
 `SortOrder`     | `string`  | asc, or desc. Default desc.
+
+{{% /scrollableTables %}}
 
 ### Example
 
@@ -169,6 +173,8 @@ Add content to an existing queue.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter           | Type      | Description
 ---                 | ---       | ---
 **`Name`**          | `string`  | Content Title.    RE: Discussion Title for comments
@@ -180,6 +186,8 @@ Parameter           | Type      | Description
 **`ForeignIPAddress`** | `string`  | The user who generated the content
 `CategoryID`        | `string`  | Category ID
 `CustomerVariables` |           | Up to 10 custom variables
+
+{{% /scrollableTables %}}
 
 ### Response
 
@@ -219,10 +227,14 @@ Update an item in the queue.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter   | Type      | Description
 ---         | ---       | ---
 `Status`    | `enum`    | approved, denied, unread
 `Queue`     | `enum`    | spam, reported, premoderation
+
+{{% /scrollableTables %}}
 
 ### Example
 
@@ -249,19 +261,24 @@ Batch update items in queue.
 
 ### Parameters
 
+{{% scrollableTables %}}
+
 Parameter  | Type      | Description
 ---        | ---       | ---
 `IDs`      | `string`  | CSV of queue ids
 `Status`   | `enum`    | approved, denied, unread
 `Queue`    | `enum`    | spam, reported, premoderation
 
+{{% /scrollableTables %}}
+
 ### DELETE Parameters
 
 Batch delete items in queue.
 
-Parameter  | Type      |
+Parameter  | Type      | Description
 ---        | ---       | ---
 `IDs`      | `string`  | CSV of queue ids
+
 
 ## POST /mod/approve/{id}
 
@@ -296,13 +313,16 @@ Report Content to the queue.  This endpoint will remove content if the number of
 
 ### Parameters
 
-Parameter  | Type      |
+{{% scrollableTables %}}
+
+Parameter  | Type      | Description
 ---        | ---       | ---
 `ForeignID`      | `int`  | ID of the content. ie. DiscussionID
 `ForeignType`      | `string`  | Type of content. ie. Discussion
 `Reason`      | `string`  | Reason the content is being reported
 `ReportUserID`      | `int`  | UserID of the user reporting.
 
+{{% /scrollableTables %}}
 
 ### Example
 ```
@@ -315,11 +335,11 @@ Host: http://example.vanillaforums.com
 }
 ```
 
-
-
 ### Database Table
 
 All of these rows will be returned in output of the above calls.
+
+{{% scrollableTables %}}
 
 Parameter       | Type      | Description
 ---             | ---       | ---
@@ -337,3 +357,5 @@ Parameter       | Type      | Description
 `DateStatus`    |  `string` | Timestamp
 `StatusUserID`  | `int`     | The user who last change the status
 `Attributes`    | `string`  | see Attributes Document
+
+{{% /scrollableTables %}}

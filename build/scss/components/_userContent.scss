@@ -111,6 +111,10 @@
     border-collapse: collapse;
     width: 100%;
 
+    code {
+      word-break: normal;
+    }
+
     + h2 {
       margin-top: 30px;
     }
@@ -186,5 +190,19 @@
     max-width: 100%;
     height: auto;
     border: 1px solid $borderDarken;
+  }
+}
+
+.table-scroll {
+  overflow: auto;
+
+  table {
+    min-width: 500px;
+  }
+
+  &.isExtraWide {
+    table {
+      min-width: 750px;
+    }
   }
 }
