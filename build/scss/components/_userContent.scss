@@ -15,13 +15,14 @@
     margin-top: 2.5em;
   }
 
-
-
-
   h2 {
     color: $vanillaPink;
     font-size: 18px;
     font-weight: $fontWeight-bold;
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     em, i {
       font-style: normal;

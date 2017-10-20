@@ -13,18 +13,6 @@ body {
     .column {
         box-sizing: border-box;
     }
-
-    
-    .vertical-group {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        
-        > * {
-            
-        }
-        
-    }
 }
 
 .contentSingleton,

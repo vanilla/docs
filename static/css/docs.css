@@ -22,12 +22,6 @@ body {
   box-sizing: border-box;
 }
 
-.grid .vertical-group {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 .contentSingleton,
 .content {
   position: relative;
@@ -453,20 +447,17 @@ a:hover {
 }
 
 .hamburgerMenu {
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.8, 0.8, 0.25, 1.25);
-  position: absolute;
-  top: 2px;
-  left: 32px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: none;
   cursor: pointer;
-  display: block;
-  position: relative;
-  appearance: none;
   border: 0;
   background: transparent;
   height: 60px;
   width: 60px;
+  padding: 0 18px;
+  outline: 0;
 }
 
 @media screen and (max-width: 880px) {
@@ -477,20 +468,15 @@ a:hover {
 
 .hamburger {
   transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
-  display: block;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   position: relative;
   width: 24px;
-  height: 24px;
-}
-
-.hamburger-filler {
-  width: 100%;
-  height: 7px;
-  position: relative;
-  display: block;
+  height: 22px;
 }
 
 .hamburger-ingredient {
@@ -499,10 +485,14 @@ a:hover {
   width: 100%;
   position: relative;
   display: block;
-  height: 2px;
+  height: 3px;
   background-color: #fff;
   margin: 0;
   padding: 0;
+}
+
+.hamburgerMenu-close {
+  color: #fff;
 }
 
 .docs-header {
@@ -518,23 +508,76 @@ a:hover {
   width: 336px;
 }
 
-.docs-header .docs-header-tray {
-  justify-content: flex-end;
-  align-items: center;
-  text-align: right;
-  margin-left: auto;
-}
-
-.docs-header .docs-header-tray .docs-header-search {
-  margin-right: 15px;
-}
-
 .docs-header .docs-search {
   width: 100px;
 }
 
 .docs-header .docs-search:focus {
   min-width: 200px;
+}
+
+@media screen and (max-width: 880px) {
+  .docs-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+}
+
+.headerPlaceholder {
+  min-height: 60px;
+}
+
+.docs-header-search {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.mobileHeader {
+  display: none;
+  background-color: #333333;
+}
+
+.mobileSection {
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  max-width: calc(100% - 120px);
+  flex-grow: 1;
+  text-align: center;
+}
+
+.mobileSpacer {
+  display: none;
+  width: 60px;
+  flex-basis: 60px;
+}
+
+.desktopHeader-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+}
+
+@media screen and (max-width: 880px) {
+  .mobileSpacer {
+    display: block;
+  }
+  .panelBackgroundBleed {
+    display: none;
+  }
+  .mobileHeader {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .desktopHeader {
+    display: none;
+  }
 }
 
 .headingAnchor {
@@ -571,20 +614,28 @@ a:hover {
   height: 34.28px;
 }
 
+.vanillaMobileLogo {
+  display: block;
+  width: 72px;
+  height: 42.1016949153px;
+}
+
 #sidebar {
   position: relative;
   height: 100%;
 }
 
-#sidebar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50vw;
-  border: 1px solid #ECEDED;
-  height: 100%;
-  background: #fafbfb;
+@media screen and (min-width: 881px) {
+  #sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    border: 1px solid #ECEDED;
+    height: 100%;
+    background: #fafbfb;
+  }
 }
 
 .docs-nav {
@@ -645,7 +696,25 @@ a:hover {
 
 @media screen and (max-width: 880px) {
   #nav {
-    display: none;
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    transform: translateX(-110%);
+    background-color: #fff;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body.mobileOpenPanel {
+    overflow: hidden !important;
+  }
+  body.mobileOpenPanel #nav {
+    transform: translateX(0);
   }
 }
 
@@ -696,9 +765,49 @@ a:hover {
   display: none !important;
 }
 
+.panelHeader {
+  background-color: #333333;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.panelHeader .docs-cta {
+  margin: 0 auto 12px;
+}
+
+.panelHeader .docs-header-search {
+  margin: 0 6px;
+  max-width: 100%;
+}
+
+.panelHeader-topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 881px) {
+  .panelHeader {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .docs-nav {
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+}
+
 @media screen and (max-width: 1464px) {
   #nav_sub {
     display: none;
+  }
+  .flyoutArrow {
+    display: none;
+  }
+  .menuItem-children {
+    display: block !important;
   }
 }
 
@@ -750,7 +859,6 @@ a:hover {
 
 .docs-header-search {
   position: relative;
-  margin: auto;
   max-width: 525px;
 }
 
@@ -822,6 +930,8 @@ a:hover {
   width: 100%;
   display: none;
   z-index: 15;
+  overflow: auto;
+  max-height: calc(100vh - 155px);
   padding: 0px;
   margin: 0px;
   list-style: none;
@@ -1166,6 +1276,10 @@ p {
   font-weight: 600;
 }
 
+.userContent h2:first-child {
+  margin-top: 0;
+}
+
 .userContent h2 em, .userContent h2 i {
   font-style: normal;
   font-weight: normal;
@@ -1339,6 +1453,12 @@ p {
   border: 0;
 }
 
+@media screen and (min-width: 881px) {
+  .mobileOnly {
+    display: none;
+  }
+}
+
 .versionings {
   display: block;
   padding: 0;
@@ -1360,10 +1480,14 @@ body.pageType-help .searchResult:hover {
   background: #0291DB;
 }
 
+body.pageType-help .mobileHeader,
+body.pageType-help .panelHeader,
 body.pageType-help .docs-header {
   background-color: #0291DB;
 }
 
+body.pageType-help .mobileHeader .docs-search-input,
+body.pageType-help .panelHeader .docs-search-input,
 body.pageType-help .docs-header .docs-search-input {
   background: rgba(0, 0, 0, 0.02);
 }

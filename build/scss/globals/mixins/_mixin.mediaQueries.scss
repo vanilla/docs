@@ -23,3 +23,9 @@
   }
 }
 
+@mixin mediaQuery-notMobile {
+  @media screen and (min-width: $mediaQuery-mobile + 1px) {
+    @content;
+  }
+}
+

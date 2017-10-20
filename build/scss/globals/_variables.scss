@@ -86,11 +86,16 @@ $choiceApi-bg_hover: rgba($vanillaPink, .7);
 $fontSize-small:            12px;
 $fontSize-medium:           14px;
 $fontSize-large:            16px;
+$fontSize-extraLarge:       18px;
 $versioning-color:          #92959a;
 
 // Logos
 $logoHorizontal-width:      115px;
 $logoHorizontal-height:     34.28px;
+
+$logoVertical-width:      72px;
+$logoVertical-ratio:      69/118;
+$logoVertical-height:     $logoVertical-width * $logoVertical-ratio;
 
 // nav
 $navTier-padding:           12px;
@@ -110,12 +115,10 @@ $navItem-horizontalPadding: 18px;
   @return $x1;
 }
 
-$hamburger-height                      : 24;
-$hamburger-lineHeight                  : 2;
-$hamburger-quarterLineHeight           : ceil(($hamburger-lineHeight / 4));
-$hamburger-hypotenuse                  : sqrt((2 * $hamburger-height * $hamburger-height));
-$hamburger-offset                      : ($hamburger-hypotenuse / 4) - ($hamburger-quarterLineHeight / 2);
-
+$hamburger-width                       : 24px;
+$hamburger-height                      : 22px;
+$hamburger-lineHeight                  : 3px;
+$hamburger-offset                      : ($hamburger-width - $hamburger-lineHeight * 3) / 2;
 
 // Media Queries
 $mediaQuery-mobile:         880px;

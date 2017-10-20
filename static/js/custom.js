@@ -48,7 +48,18 @@ function anchorifyPage() {
     });
 }
 
+function mobileNavInit() {
+    $('#hamburger').on('click', function(){
+        $('body').addClass('mobileOpenPanel');
+    });
+
+    $('#hamburger-close').on('click', function(){
+        $('body').removeClass('mobileOpenPanel');
+    });
+}
+
 $(function(){
     navInit();
     anchorifyPage();
+    mobileNavInit();
 });

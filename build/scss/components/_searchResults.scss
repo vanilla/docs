@@ -6,6 +6,9 @@
     display: none;
     z-index: 15;
 
+    overflow: auto;
+    max-height: calc(100vh - 155px);
+
     padding: 0px;
     margin: 0px;
     list-style: none;
