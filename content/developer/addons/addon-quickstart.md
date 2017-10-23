@@ -119,7 +119,7 @@ You can provide an array of permission names using dot syntax. You can optionall
 
 ```json
 "registerPermissions": {
-    "FancyAddon.DoStuff.Add" => 1
+    "FancyAddon.Stuff.Add" => 1
 },
 ```
 
@@ -127,7 +127,7 @@ Or set the default to whether or not the role currently has an existing permissi
 
 ```json
 "registerPermissions": {
-    "Plugins.FancyAddon.PermissionName": "Garden.Settings.Manage"
+    "FancyAddon.Stuff.Add": "Garden.Settings.Manage"
 },
 ```
 
@@ -160,14 +160,16 @@ class FancyPlugin extends Gdn_Plugin {
 Inside the class, write some event handlers. Most handlers are written like this:
 
 ```php
-public function someController_someEvent_handler($sender, $args) {
+/**
+ * @param object $sender Sending object instance.
+ * @param array $args Event's arguments.
+ */
+public function base_someEvent_handler($sender, $args) {
    // Do something.
 }
 ```
 
-Use the `$sender` variable to call methods from the controller or model that triggered your code. 
-
-Use the `$args` variable to change parameters or detect certain situations. This is where you'll want to start digging into the finer points of [extending Vanilla with Event Handlers documentation](/developer/addons/events-and-handlers).
+Use the `$sender` parameter to access the Sending object instance and the `$args` variable to change parameters or detect certain situations. This is where you'll want to start digging into the finer points of [extending Vanilla with Event Handlers documentation](/developer/addons/events-and-handlers#eventhandlers).
 
 You can also use normal methods to reuse code. For instance, maybe you need 2 different hooks to do the same thing:
 
@@ -203,10 +205,10 @@ public function assetModel_styleCss_handler($sender) {
 
 Note the second parameter is the folder.
 
-To include a CSS file in a specific page (e.g. the Discussions list):
+To include a CSS file in a specific controller (e.g. the Discussions list):
 
 ```php
-public function discussionsController_render_before($Sender) {
+public function discussionsController_render_before($sender) {
    $sender->addCssFile('fancy.css', 'plugins/fancyaddon');
 }
 ```

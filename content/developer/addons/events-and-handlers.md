@@ -10,7 +10,8 @@ menu:
   developer:
     parent: addons
 ---
-## Events & Handlers
+
+## Events
 
 Any class that extends the class "Pluggable" has the ability to call
 
@@ -33,7 +34,6 @@ class MyPlugin extends Gdn_Plugin() {
 ```
 Notice that 2 parameters are passed. The first is the object invoking the event (usually `$this`). The second is *optional*, and is an array of event arguments being passed as additional info or options to be modified.
 
-
 ## EventArguments
 
 Usually these arguments are the data being set up by the object, a toggle the handler can switch on or off, or other contextual info.
@@ -50,6 +50,29 @@ Now in our `Handler` method above, $args would be an array of `'DuckDodgers' => 
 To invoke a handler on ALL methods, use the prefix `base` instead of an object name. Example: `base_kaboom_handler`. It is best to avoid unnecessary calls by using this *very* conservatively.
 
 Custom events are added on a case-by-case basis as the need arises. If you feel you need a new event, request it on the community forum.
+
+## Handlers
+
+Any class extending `Gdn_Plugin` can handle these events fired by and instance of `Gdn_Pluggable`. These handlers look like this:
+
+```php
+/**
+ * @param object $sender Sending object instance.
+ * @param array $args Event's arguments.
+ */
+public function base_someEvent_handler($sender, $args) {
+   // Do something.
+}
+```
+
+Each handler's function name is made up of 3 parts. 
+- The name of class implementing `Gdn_Pluggable` to listen for
+- The event name
+- `handler`
+
+Using `base` instead of a class name will allow your handler to listen to every fired event for your event name. So `base_someEvent_handler` would listen for a `fireEvent('SomeEvent')` on every instance of `Gdn_Pluggable`, while `profileController_getConnections_handler` would listen only on the `ProfileController` for the `fireEvent('GetConnections)`.
+
+The handler is passed a `$sender` and `$args` so that you method can call methods on it's sending instance of `Gdn_Pluggable` and its event arguments.
 
 ## Magic Events
 
