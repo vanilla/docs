@@ -1122,6 +1122,11 @@ a:hover {
   text-align: center;
 }
 
+.docs-welcome .docs-header-search {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .docs-chooser {
   width: 100%;
   display: flex;

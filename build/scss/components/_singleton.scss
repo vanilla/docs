@@ -24,9 +24,6 @@
             font-weight: 300;
             margin-bottom: 0px;
         }
-        // p {
-            // font-weight: lighter;
-        // }
     }
 
 }
@@ -103,6 +100,13 @@
 
 .docs-welcome {
     text-align: center;
+
+    .docs-header-search {
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
 }
 
 .docs-chooser {
