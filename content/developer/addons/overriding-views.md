@@ -1,24 +1,28 @@
 ---
-title: Views / HTML
+title: Overriding Views
 tags:
+- Developer
 - Theming
-category: developer
+- View
+- Override
+category: addons
 menu:
   developer:
-    parent: theming
-    weight: 40
+    parent: addons
+    weight: 10
 aliases:
 - /theming/views
+- /developer/theming/views
 ---
 ## Theming Views
 
-### The master view
+### The Master View
 
 The master view for your forum is the wrapper for each page in your forum. Often, this is the only view you'll have to manipulate in your theme. The master view file is called the default.master.tpl (Smarty template) or the default.master.php. We recommend using Smarty templates for your master view, however you can decide to use a regular ol' php view if you like.
 
 To override the default master view:
 
-1. Create a new file called default.master.tpl (or default.master.php)
+1. Create a new file called `default.master.tpl` (or default.master.php)
 2. Place it in the views folder in your theme folder (i.e., /themes/your_theme_name/views/)
 
 If you're new to this, it's probably a good idea to copy the content of /applications/dashboard/views/default.master.tpl into your theme's master view and manipulate it from there.

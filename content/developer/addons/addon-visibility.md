@@ -1,23 +1,24 @@
 ---
-title: Theme Visibility
+title: Addon Visibility
 tags:
 - Theming
-category: developer
+- Plugin
+- Addon
+- Visibility
+category: addons
 menu:
   developer:
-    parent: theming
-    weight: 80
+    parent: addons
 aliases:
 - /theming/visibility
+- /developer/theming/themevisibility
 ---
 
 {{% cloudfeature %}}
 
-If you've got [Vanilla Cloud](http://vanillaforums.com), custom themes will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
-
+If you've got [Vanilla Cloud](http://vanillaforums.com), custom addons will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
 
 **In order of importance**, here are the rules for a theme to be visible:
-
 
 ## Method 1:
 If the theme is set to be visible with this site option:
@@ -26,11 +27,9 @@ Garden.Themes.Visible
 ```
 You can add multiple sites by separating sites with a comma. **This method is discouraged**. Themes are generally visible to all clients, or only to one client.
 
-
-
 ## Method 2:
 
-In the [about.php]({{< relref "developer/theming/about-php.md" >}}) file, you can set the theme's visibility with **Hidden**.
+In the [about.php](/developer/theming/about-php) file, you can set the theme's visibility with **Hidden**.
 
 Example:
 
