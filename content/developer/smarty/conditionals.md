@@ -1,14 +1,15 @@
 ---
-title: Smarty Conditionals
+title: Conditionals
 tags:
 - Theming
 - Smarty
 category: developer
 menu:
   developer:
-    parent: theming-smarty
+    parent: smarty
 aliases:
 - /theming/smarty/conditionals
+- /developer/theming/smarty/conditionals
 ---
 ## Smarty Conditionals
 
