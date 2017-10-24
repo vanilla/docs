@@ -9,7 +9,7 @@ category: addons
 menu:
   developer:
     parent: addons
-    weight: 10
+    weight: 0
 aliases:
 - /theming/quickstart
 - /developer/theming/quickstart

@@ -1,5 +1,5 @@
 ---
-title: Controllers
+title: Overriding Functions
 tags:
 - Developers
 - Addons
@@ -9,8 +9,8 @@ category: addons
 menu:
   developer:
     parent: addons
+    weight: 14
 ---
-## Function Overrides
 
 Sometimes you may want to override an existing core function in Vanilla. In order to facilitate this all functions in the framework are declared like so:
 

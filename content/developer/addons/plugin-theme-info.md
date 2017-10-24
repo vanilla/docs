@@ -12,17 +12,16 @@ category: addons
 menu:
   developer:
     parent: addons
+    weight: 17
 aliases:
 - /developer/theming/about-php
 ---
 
-{{% versioning added="2.0" %}}
-
-## PHP Information Format
+{{% versioning deprecated="2.5" %}}
 
 For Vanilla versions < `2.5` addons are split into themes, and plugins. Their information is declared in a similar way to the [addon.json file](/developer/addons/addon-info), but is instead declared in PHP.
 
-### Themes
+## Themes
 
 Each theme should have an `about.php` file which will declare its `$ThemeInfo`. Put this file in your theme's root folder.
 
@@ -46,7 +45,7 @@ $ThemeInfo['example-theme'] = [
 ];
 ```
 
-### Plugins
+## Plugins
 
 A Plugin should declare `$PluginInfo` at the top of its plugin file.
 

@@ -7,12 +7,11 @@ category: addons
 menu:
   developer:
     parent: addons
-    weight: 70
+    weight: 0
 aliases:
 - /theming/themeoptions
 - /developer/theming/themeoptions
 ---
-## Theme Options
 
 This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.
 
@@ -20,27 +19,70 @@ You can configure a custom dashboard settings page for your theme that allows an
 
 This functionality can be added simply by editing your theme's [addon information](/developer/addons/addon-info.md) file by adding an 'options' key to your theme's `addon.json` with an object as its value. The content of the 'options' object is discussed below.
 
-### Choosing Between Stylesheets
+## Choosing Between Stylesheets
 
 In the design folder of your theme, you can add any number of CSS files. The naming convention is `custom_*.css`, where * is the theme variant.
 
-You will still need to have the custom.css file as a default for when the theme is first enabled. In order to allow the admin to switch back to the default, you'll need to add an option where the value is simply %s.
-
-So, let's say you have three CSS files you want to let the user chose from: custom_blue.css, custom_green.css, and custom.css (the default). This is how your Options array should look:
-
+Given options like the following:
 ```json
 "options": {
-    "Styles": {
-        "Default": "%s",
+    "styles": {
+        "Default": "%s", 
         "Blue": "%s_blue",
-        "Green": "%s_green",
+        "Green": "%s_green"
     },
 }
 ```
 
+The blue option has a key of `Blue` and a value of `%s_blue`. If a value of `%s_blue` is selected, than the stylesheet at `design/custom_blue.css` will be loaded. This is in addition to the `design/custom.css` file that is always loaded if found.
+
+The key with a value of "%s" will not load any additional stylesheets. Only `design/custom.css`.
+
+So, the above options lets you choose between 3 different combinations of CSS files. 
+- **Default** - `custom.css`
+- **Blue** - `custom.css` & `custom_blue.css`
+- **Green** - `custom.css` & custom_green.css`
+
+If want to load only a variant css file (ex. load just `custom_blue.css`). You would remove the "Default" option.
+
+```json
+"options": {
+    "styles": {
+        "Blue": "%s_blue",
+        "Green": "%s_green"
+    },
+}
+```
+
+The issue here is that there is no default. You can set one in your themehooks file though.
+
+```php
+class MyCustomThemeHooks extends Gdn_Plugin {
+    /**
+     * Runs when the theme is enabled
+     */
+    public function setup() {
+        $this->structure();
+    }
+
+    /**
+     * Runs on `/utility/update`
+     */
+    public function structure() {
+        // Set default theme option
+        saveToConfig([
+            "Garden.ThemeOptions.Styles.Key" => "Blue",
+            "Garden.ThemeOptions.Styles.Value" => "%s_blue",
+        ]);
+    }
+}
+```
+
+## Screenshots
+
 The theme options settings page will also look for screenshots in the design folder of your theme that follow the naming convention of `screenshot_*.ext` where * is the theme variant and the extension is one of png, jpg or gif. If it finds the screenshots, they will be displayed on the theme options settings page. Use `screenshot.ext` for the default theme.
 
-### Adding Custom Text to a Theme
+## Adding Custom Text to a Theme
 
 To add custom text to a theme, add a 'Text' key to the 'options' object. The value of of the 'Text' key will be an array that can have multiple values. Each one of these will be text field on the settings page. You can specify a Type of 'textbox', which is a regular text input, or 'textarea', the default, which is a multiline textarea element.
 
@@ -48,7 +90,7 @@ The text saved in this field can then be inserted into your theme template. If u
 
 ```json
 "options": {
-    "Text": {
+    "text": {
         "Custom&nbsp;Text": {
             "Description": "Custom text to be inserted in the theme.",
             "Type": "textbox"
@@ -87,12 +129,12 @@ Here's an example `addon.json` array that uses both the above theme options, so 
         "discussions": "Modern"
     },
     "options": {
-        "Styles": {
+        "styles": {
             "Default": "%s",
             "Blue": "%s_blue",
             "Green": "%s_green",
         },
-        "Text": {
+        "text": {
             "Custom&nbsp;Text": {
                 "Description": "Custom text to be inserted in the theme.",
                 "Type": "textbox"

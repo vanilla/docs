@@ -10,6 +10,7 @@ category: addons
 menu:
   developer:
     parent: addons
+    weight: 16
 ---
 ## Creating New Functionality
 

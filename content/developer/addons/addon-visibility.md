@@ -8,6 +8,7 @@ tags:
 category: addons
 menu:
   developer:
+    weight: 11
     parent: addons
 aliases:
 - /theming/visibility
@@ -16,60 +17,84 @@ aliases:
 
 {{% cloudfeature %}}
 
-If you've got [Vanilla Cloud](http://vanillaforums.com), custom addons will be hidden by default. This is to ensure custom themes are only visible to their respective owners.
+If you have [Vanilla Cloud](http://vanillaforums.com), custom addons will be hidden by default. This is to ensure custom addons are only visible to their respective owners.
 
-**In order of importance**, here are the rules for a theme to be visible:
+There are multiple methods for changing addon visibility. Later methods take precedance over earlier ones for backwards compatibility reasons.
 
-## Method 1:
-If the theme is set to be visible with this site option:
+## The `sites` key:
+
+If no other methods have been used, the **sites** key is used.
+
+```json
+{
+    "type": "addon",
+    "key": "fancyaddon",
+    "name": "Lincoln&rsquo;s Fancy Addon ",
+    "description": "This is a fancy addon!",
+    "version": "1.0.0",
+    "mobileFriendly": true,
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "you@yourdomain.com",
+            "homepage": "http://yourdomain.com"
+        }
+    ],
+    "sites": [
+        "mysite.vanillastaging.com",
+        "mysite.vanillacommunities.com"
+    ]
+}
 ```
-Garden.Themes.Visible
+
+Adding a domain to the `sites` array allows a vanilla forum hosted at that domain see your addon. These domains should be the original vanilla domain, *not* a custom domain.
+
+**This is the best method for custom client addons**.
+
+## Site Configuration Option
+
+The following method works only with `theme` type addons. A theme can be shown on a specific site by using the following config key:
+
+```json
+{
+    "Garden": {
+        "Themes": {
+            "Visible": 'mysite.vanillacommunities.com, mysite.vanillastaging.com'
+        }
+    }
+}
 ```
-You can add multiple sites by separating sites with a comma. **This method is discouraged**. Themes are generally visible to all clients, or only to one client.
+You can add multiple domains by separating them with a comma. 
 
-## Method 2:
+**This method is discouraged**.
 
-In the [about.php](/developer/theming/about-php) file, you can set the theme's visibility with **Hidden**.
+## The `hidden` key
+
+In the [addon.json](/developer/addons/addon-info) file, you can set the addon's visibility with the `hidden` key.
 
 Example:
 
-```
-$ThemeInfo['ExampleTheme'] = [
-    'Name'        => "Example Theme",
-    'Description' => "Custom theme example",
-    'Version'     => '1.0.0',
-    'Author'      => "Stéphane LaFlèche",
-    'AuthorEmail' => 'stephane.l@vanillaforums.com',
-    'AuthorUrl'   => 'www.vanillaforums.com',
-    'License'     => 'Proprietary',
-    'Hidden'      => true
-];
-```
-
-All core themes have their **Hidden** variable set to **false** to be visible to clients.
-
-
-
-## Method 3:
-
-If there is no config set and a theme doesn't explicitly have **Hidden** set, the **Sites** variable is used.
-
-```
-$ThemeInfo['ExampleTheme'] = [
-    'Name'        => "Example Theme",
-    'Description' => "Custom theme example",
-    'Version'     => '1.0.0',
-    'Author'      => "Stéphane LaFlèche",
-    'AuthorEmail' => 'stephane.l@vanillaforums.com',
-    'AuthorUrl'   => 'www.vanillaforums.com',
-    'License'     => 'Proprietary',
-    'Sites'       => ['example.staging.com', 'example.production.com']
-];
+```json
+{
+    "key": "example-theme",
+    "name": "Example Theme",
+    "description": "Custom Theme Example",
+    "version": "2.0.0",
+    "type": "theme",
+    "license": "MIT",
+    "author": [
+        {
+            "name": "Adam Charron",
+            "email": "adam.c@vanillaforums.com"
+        }
+    ],
+    "hidden": true
+}
 ```
 
-This is a list of sites that can view the theme. **This is the best method for custom client themes**.
+Core themes have their `hidden` key set to `false` to be visible to all clients.
 
-### Notes
+## Notes
 
 - You can use an asterisk in the site name for wildcard matches (ex. 'site-*.example.com'). Wildcards are great for clusters that are on the Vanilla Hub.
-- The variable **Site** works like **Sites**, but only takes one site, as a string. This variable is deprecated, use **Sites** instead.
+- The key `key` works like `sites`, but only takes one site, as a string. This key is deprecated, use `sites` instead.

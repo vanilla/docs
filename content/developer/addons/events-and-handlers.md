@@ -9,6 +9,7 @@ category: addons
 menu:
   developer:
     parent: addons
+    weight: 13
 ---
 
 ## Events

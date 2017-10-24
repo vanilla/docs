@@ -9,6 +9,7 @@ tags:
 category: addons
 menu:
   developer:
+    weight: 10
     parent: addons
 version:
   added: 2.5
@@ -23,21 +24,9 @@ Every Vanilla addons must declare certain information about itself. This include
 - Addon configuration details
 - Details about how to load the addon
 
-### Which format do I use?
-
-Addon information can come in different formats be located in different places depending on which version of Vanilla you are running
-
-**I am using Vanilla Forums >= 2.4 or Vanilla Cloud**
-
-Use the new [addon.json](#the-addon-json-file) format.
-
-**I am using Vanilla Forums < 2.4**
-
-See [PHP Information Format](#php-information-format).
-
 ## The `addon.json` file
 
-In an effort to simplify the management and creation of plugins, applications, and themes, Vanilla `2.4` and onwards uses a single unified addon information format. The new format is a `json` file that should live in the root of your addon's directory. It looks like this:
+In an effort to simplify the management and creation of plugins, applications, and themes, Vanilla `2.5` and onwards uses a single unified addon information format. The new format is a `json` file that should live in the root of your addon's directory. It looks like this:
 
 ### `addon.json` example
 

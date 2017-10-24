@@ -10,6 +10,7 @@ category: addons
 menu:
   developer:
     parent: addons
+    weight: 12
 aliases:
 - /developers/plugins/quickstart
 - /developer/plugins/quickstart
