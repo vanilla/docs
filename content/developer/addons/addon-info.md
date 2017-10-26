@@ -11,10 +11,9 @@ menu:
   developer:
     weight: 10
     parent: addons
-version:
+versioning:
   added: 2.5
 ---
-{{% versioning added="2.5" %}}
 
 Every Vanilla addons must declare certain information about itself. This includes:
 

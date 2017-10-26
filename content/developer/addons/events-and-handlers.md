@@ -10,6 +10,8 @@ menu:
   developer:
     parent: addons
     weight: 13
+aliases:
+- /developer/theming/hooks/
 ---
 
 ## Events

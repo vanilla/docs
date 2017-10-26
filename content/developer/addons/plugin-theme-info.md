@@ -6,7 +6,7 @@ tags:
 - Configuration
 - about.php
 - addon.json
-version:
+versioning:
   deprecated: 2.5
 category: addons
 menu:
@@ -16,8 +16,6 @@ menu:
 aliases:
 - /developer/theming/about-php
 ---
-
-{{% versioning deprecated="2.5" %}}
 
 For Vanilla versions < `2.5` addons are split into themes, and plugins. Their information is declared in a similar way to the [addon.json file](/developer/addons/addon-info), but is instead declared in PHP.
 
