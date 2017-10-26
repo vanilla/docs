@@ -1,14 +1,15 @@
 ---
-title: Smarty Modifiers
+title: Modifiers
 tags:
 - Theming
 - Smarty
 category: developer
 menu:
   developer:
-    parent: theming-smarty
+    parent: smarty
 aliases:
 - /theming/smarty/modifiers
+- /developer/theming/smarty/modifiers
 ---
 
 ## Smarty Modifiers

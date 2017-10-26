@@ -81,4 +81,4 @@ $Definition['TranslationString2'] = "Otra cosa en español";
 
 ## Defining new translations strings
 
-If you are creating a custom theme or plugin for a multilingual community you may want to offer translations strings for text defined in your theme/plugin. Vanilla offers ways to define these strings in [Smarty Templates](http://docs.vanillaforums.com/developer/theming/smarty/functions/i18n/) and in [PHP](http://docs.vanillaforums.com/developer/framework/i18n/).
+If you are creating a custom theme or plugin for a multilingual community you may want to offer translations strings for text defined in your theme/plugin. Vanilla offers ways to define these strings in [Smarty Templates](/developer/smarty/functions/#function-t) and in [PHP](http://docs.vanillaforums.com/developer/framework/i18n/).

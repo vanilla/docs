@@ -5,11 +5,10 @@ tags:
 category: developer
 menu:
   developer:
-    parent: theming
-    weight: 30
-    identifier: theming-smarty
+    identifier: smarty
 aliases:
 - /theming/smarty
+- /developer/theming/smarty
 ---
 ## Smarty Overview
 
