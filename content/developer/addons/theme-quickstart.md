@@ -24,11 +24,11 @@ With Vanilla, you have full control over both the CSS and the actual HTML of eve
 1. [Create a Master View (Optional)](#4-create-a-master-view-optional).
 1. [Themehooks (Optional)](#5-themehooks-optional).
 
-### 1. Name your Theme
+## 1. Name your Theme
 
 Your theme needs a user-facing name, and a 'slug' name without spaces or special characters. If your theme is named "Adam's Fancy Theme" a good slug name would be `adams-fancy-theme` or even just `fancytheme`.
 
-### 2. Define your Theme
+## 2. Define your Theme
 
 First, create a folder in the `themes` directory, using the slug name you selected (e.g. `adams-fancy-theme`). Next let's create a file called `addon.json`. This file will define basic information about our theme. See an exhuastive list of [all of the options](/developer/addons/addon-info). Next open the file add the theme information. You can use this as a starting point:
 
@@ -53,7 +53,7 @@ The `key` value (`adams-fancy-theme` above) ***must exactly match*** the folder 
 
 Now run `composer install` in your Vanilla installation directory to regenerate your cache. Alternatively you could delete the `cache/theme-index.php` file. Visit the **themes** page of your dashboard and enable your theme!
 
-#### Define basic info
+### Define basic info
 
 The `name` parameter is optional; it will default to the slug if omitted. To include special characters here or in the description, use their [HTML entity code](https://www.w3schools.com/html/html_entities.asp).
 
@@ -63,7 +63,7 @@ The `authors` parameters are at your discretion. We recommend using a support ad
 
 All further optional parameters described below default to `false` if not defined.
 
-#### Set Layout Options
+### Set Layout Options
 
 Some theme's only work with a specific view. Add the following to your addon.json to set the default layouts for the theme.
 
@@ -87,7 +87,7 @@ modern
 table
 mixed
 
-#### Add a Thumbnail for Your Theme
+### Add a Thumbnail for Your Theme
 
 The dashboard can show a thumbnail for your theme on the themes page. Create a image called `screenshot.png` (600px wide and 480px high is a good size) and place it in the root of your theme folder.  Then add the following to your `addon.json`
 
@@ -95,21 +95,21 @@ The dashboard can show a thumbnail for your theme on the themes page. Create a i
 "icon": "screenshot.png"
 ```
 
-#### Visibility
+### Visibility
 
 If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your themes's visibility](/developer/adddons/addon-visibility).
 
-#### Whew!
+### Whew!
 
 That whole definitions section probably didn't *seem* very quick, but you just did a huge amount of work in just a few lines of code. Your theme is now hooked up to Vanilla and ready to edit!
 
-### 3. CSS & Design
+## 3. CSS & Design
 
 Creata a new directory inside of your theme called `design`. Inside of that directory create a new file called `custom.css` and place any of your custom styles here. More complex themes may use a CSS pre-processor like `sass`, `less`, or `stylus` in order to gain advanced css features. You can use these, just make sure that your output file is still called `custom.css` inside of the `design` folder.
 
 Learn more by reading our docs on [Theming with CSS](/developer/addons/theming-width-css)
 
-### 4. Create a Master View (optional)
+## 4. Create a Master View (optional)
 
 If you don't like the way we've structured our HTML, you can edit that too. Our pages are made up of two parts:
 

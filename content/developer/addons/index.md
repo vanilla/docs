@@ -9,6 +9,7 @@ tags:
 category: developer
 menu:
   developer:
+    weight: 11
     identifier: addons
 aliases:
 - /developers/plugins
@@ -21,7 +22,7 @@ Vanilla is a very customizable, flexible platform because there are many ways to
 
 Vannilla addons used to be made up of plugins, applications, and themes. Each had varying functionalities and capabilities. Starting in Vanilla `2.5` these differences have been reduced and  
 
-#### An `Addon` can contain 
+### An `Addon` can contain 
 
 - A Plugin (an instance of `Gdn_Plugin`)
     - [Handle events](/developer/addons/events-and-handlers) fired by existing classes that extend `Gdn_Pluggable` - Controllers, Modules, Models, Router, Plugin, Model, etc
@@ -33,7 +34,7 @@ Vannilla addons used to be made up of plugins, applications, and themes. Each ha
 - Models (instances of `Gdn_Model`)
 - New views or view overrides
 
-#### What are Themes?
+### What are Themes?
 
 The goal of a theme is to selectively override CSS and views in a product. Themes are a special type of Addon, with some additional facilities provided in order to to simplify the process.
 

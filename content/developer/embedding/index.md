@@ -7,7 +7,6 @@ category: help
 menu:
   developer:
     identifier: embedding
-    weight: 100
 aliases:
 - /features/embedding
 ---
