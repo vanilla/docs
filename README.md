@@ -51,7 +51,7 @@ We've got a feature to add versioning to the docs.
 In the "front matter" section, add the following:
 
 ~~~
-version:
+versioning:
   added: 2.0
   deprecated: 2.1
   removed: 2.3
@@ -60,7 +60,7 @@ version:
 This will set the versioning info right under the page title. Only add the info you need. So for example, if a feature has been added and is not deprecated, you'd enter:
 
 ~~~
-version:
+versioning:
   added: 2.0
 ~~~
 
