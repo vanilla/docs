@@ -95,85 +95,172 @@ Theme's tend to be a little bit simpler and would look like this:
 }
 ```
 
-### Details
+## Item Details
 
-#### key
+### key
 
 The theme key. This should be unique and ***must exactly match*** the folder name, including capitalization. So an addon with the key `example-addon` would need to be located in a `plugins/example-addon` directory in your Vanilla installation. Addon keys and their directories should be named in `dashed-lower-case`.
 
-#### name
+```json
+
+```
+
+### name
 
 The name of your addon. This will appear in the dashboard. Defaults to the `key`.
 
 *To include special characters here or in the description, use their [HTML entity code](https://www.w3schools.com/html/html_entities.asp).*
 
-#### description
+```json
+"name": "Adam&rsquo;s Fancy Addon"
+```
+
+### description
 
 A short description of your addon. This will also appear in the dashboard.
 
 *To include special characters here or in the description, use their [HTML entity code](https://www.w3schools.com/html/html_entities.asp).*
 
-#### version
+```json
+"description": "An addon to add some specific functionality to a forum. It's made to support some use case affects x, y, and z parts of the forum."
+```
+
+### version
 
 Version of the addon. You should increment this every time you ship a new version  of your addon. Try to familiarize yourself with [semantic versioning](http://semver.org/).
 
-#### documentationUrl
+```json
+"version": "1.0.6",
+```
+
+### documentationUrl
 
 A link to documentation of your addon. It will show as an icon next to the addon name in the dashboard.
 
-#### type
+```json
+"documentationUrl": "http://mysite.com/myplugindocumentation.html",
+```
+
+### type
 
 Can be either `addon`, `theme`, or `locale`.
 
-#### license
+```json
+"type": "theme",
+```
+
+### license
 
 License that you wish to distribute your addon under.
 
-#### priority
+```json
+"license": "MIT",
+```
 
-Addons with the highest priority number load before others. You should avoid using this is you can.
+### priority
 
-#### icon
+Addons use a priority system to determine which order they load in. The higher the priority an addon has, the later in the process it loads. Avoid using this is you can.
+
+The following defaults are set:
+
+- **Application**: `10`
+- **Locale**: `11` 
+- **Plugin**: `100`
+- **Theme**: `1000`
+
+```json
+"priority": "99",
+```
+
+### icon
 
 The location of the your icon file relative to the addon's folder.
 
-#### mobileFriendly
+```json
+"icon": "my-addon-icon.jpg",
+```
 
-`true` or `false`. Allows the addon to be automatically disabled when accessing the site via a mobile device. Defaults to `false`.
+### mobileFriendly
 
-#### settingsUrl
+`true` or `false`. Allows the addon to be automatically disabled when accessing the site via a mobile device. Defaults to `true`.
+
+```json
+"mobileFriendly": false,
+```
+
+### settingsUrl
 
 Link to an in-dashboard settings page. This will be loaded in a popup over the addon manager.
 
-#### settingsPermission
+```json
+"settingsUrl": "/settings/mysettingspage",
+```
+
+### settingsPermission
 
 The permission required to access the addon's settings page.
 
-#### registerPermissions
+```json
+"settingsPermission": "Garden.Settings.Manage",
+```
+
+### registerPermissions
 
 A map of new permissions created by the addon, and the default value of that permission. If the user has the permission on the right side, they will have the permission on the left side by default.
 
-#### authors
+```json
+"registerPermissions"
+```
+
+### authors
 
 An array of authors of an addon.
 
-#### require
+```json
+"registerPermissions": {
+    "FancyAddon.NewPostType.Add": "Garden.Discussions.Add",
+    "FancyAddon.Stuff.Manage": "Garden.Settings.Manage"
+},
+```
+
+### require
 
 An map of dependancies and their minimum version. The addon manager ensure these addons (or vanilla version) will be active to enable your addon. If they are not found, the addon will not be able to be turned on.
 
-#### layout
+```json
+"require": {
+    "vanilla": ">=2.4",
+    "someOtherPlugin": ">=1.4.1"
+},
+```
+
+### layout
 A theme only property that tells Vanilla which views the theme users. Sometimes custom themes only work with a specific view. Keep in mind that this will not block an admin from changing the views, but it will give them a warning in the dashboard.
 
-**Layouts for Discussions:**
+#### Layouts for Discussions
 
 - modern
 - table
 
-**Layouts for categories:**
+#### Layouts for categories
 
 - modern
 - table
 - mixed
 
-#### Sites
+```json
+"layout": {
+    "categories": "modern",
+    "discussions": "modern"
+},
+```
+
+### Sites
 A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Visibility](/developer/addons/addon-visibility) for details.
+
+```json
+"sites": [
+    "mysite.vanillastaging.com",
+    "mysite.vanillacommunities.com
+],
+```
