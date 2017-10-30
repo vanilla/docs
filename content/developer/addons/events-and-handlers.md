@@ -5,6 +5,10 @@ tags:
 - Addons
 - Events
 - Handlers
+- fireEvent
+- EventArguments
+- magic
+- create
 category: addons
 menu:
   developer:

@@ -5,6 +5,9 @@ tags:
 - Addons
 - Configuration
 - about.php
+- ThemeInfo
+- PluginInfo
+- conversion
 - addon.json
 versioning:
   deprecated: 2.5

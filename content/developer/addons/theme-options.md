@@ -3,6 +3,10 @@ title: Theme Options
 tags:
 - Theming
 - Options
+- Stylesheets
+- Text
+- Screenshots
+- Custom
 category: addons
 menu:
   developer:

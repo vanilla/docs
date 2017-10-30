@@ -89,9 +89,13 @@ Theme's tend to be a little bit simpler and would look like this:
         }
     ],
     "layout": {
-        "categories": "Modern",
-        "discussions": "Modern"
-    }
+        "categories": "modern",
+        "discussions": "modern"
+    },
+    "sites": [
+        "mysite.vanillastaging.com",
+        "mysite.vanillacommunities.com"
+    ]
 }
 ```
 

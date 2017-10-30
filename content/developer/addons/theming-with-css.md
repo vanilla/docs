@@ -4,6 +4,8 @@ tags:
 - Theming
 - CSS
 - Hosted
+- Theme
+- Theming
 category: addons
 menu:
   developer:
@@ -47,14 +49,14 @@ For instance, let's say you want to hide the discussions link in the side panel 
 
 ```css
 .Discussions {
-  display: none;
+    display: none;
 }
 ```
 This rule will succeed in hiding the link, but also the body of the Discussions page, as the body element includes the Discussions CSS class. A better, safer rule would be:
 
 ```css
 .Section-DiscussionList .FilterMenu .Discussions {
-  display: none;
+    display: none;
 }
 ```
 

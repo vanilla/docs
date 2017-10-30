@@ -5,6 +5,9 @@ tags:
 - Developers
 - Addons
 - Quickstart
+- Master
+- Themehooks
+- Theme
 category: addons
 menu:
   developer:

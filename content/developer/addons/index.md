@@ -4,7 +4,7 @@ tags:
 - Developers
 - Addons
 - Plugins
-- Addons
+- Addon
 - Themes
 category: developer
 menu:

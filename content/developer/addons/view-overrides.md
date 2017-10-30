@@ -5,6 +5,12 @@ tags:
 - Theming
 - View
 - Override
+- Master
+- default.master
+- Smarty
+- Head
+- Content
+- Asset
 category: addons
 menu:
   developer:

@@ -5,6 +5,7 @@ tags:
 - Plugin
 - Addon
 - Visibility
+- Hidden
 category: addons
 menu:
   developer:

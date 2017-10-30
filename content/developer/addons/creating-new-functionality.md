@@ -5,7 +5,8 @@ tags:
 - Addons
 - Controllers
 - Controller
-- Virtual
+- Models
+- New
 category: addons
 menu:
   developer:
@@ -16,7 +17,7 @@ menu:
 
 Addons can do more than just modify existing parts of Vanilla. It can create entirely new ones! Addons can create new Controllers, Models, and Modules in the same way that Vanilla itself does. This is recommended only for developers who are already comfortable with Vanilla's framework. [Read more about the Vanilla Framework](/developer/framework).
 
-Confused about addons and themes? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
+Confused about addons and plugins? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
 
 #### Modules
 
