@@ -37,7 +37,7 @@ You are also able to use the [built-in Smarty functions](http://www.smarty.net/d
 
 ## Function: `{asset}`
 
-#### Usage
+### Usage
 
 ```
 {asset name="string" id="string" tag="string" class="string"}
@@ -48,13 +48,13 @@ Assets in Vanilla are containers for different sets of content. The content of e
 
 Vanilla's asset names are Head, Foot, Content and Panel. Your template will need to contain the Head, Foot and Content assets. The Panel asset is optional, but you'll likely want to at least include it in the Profile, EditProfile and Conversation sections as it has important functionality in those sections that are not included in the Content asset.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/asset.json" >}}
 
 ## Function: `{breadcrumbs}`
 
-#### Usage
+### Usage
 
 ```
 {breadcrumbs homelink="string" hidelast=boolean}
@@ -62,13 +62,13 @@ Vanilla's asset names are Head, Foot, Content and Panel. Your template will need
 
 Render a breadcrumb trail for the user based on the page they are on.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/breadcrumbs.json" >}}
 
 ## Function: `{custom_menu}`
 
-#### Usage
+### Usage
 
 ```
 {custom_menu format="string" wrap="string"}
@@ -76,13 +76,13 @@ Render a breadcrumb trail for the user based on the page they are on.
 
 A bucket for addon menu items. Adds links depending on which addons are enabled.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/custom_menu.json" >}}
 
 ## Function: `{event}`
 
-#### Usage
+### Usage
 
 ```
 {event name="string"}
@@ -90,14 +90,14 @@ A bucket for addon menu items. Adds links depending on which addons are enabled.
 
 Fire an event with the specified `name`. [Learn more about events in Vanilla.](../../../developers/plugins/#events-%26-handlers)
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/event.json" >}}
 
 
 ## Function: `{homepage_title}`
 
-#### Usage
+### Usage
 
 ```
 {homepage_title}
@@ -105,13 +105,13 @@ Fire an event with the specified `name`. [Learn more about events in Vanilla.](.
 
 Writes the site title to the page. You can change the site title from the 'Banner' settings page in the dashboard.
 
-#### Parameters
+### Parameters
 
 _This tag does not take any parameters._
 
 ## Function: `{t}`
 
-#### Usage
+### Usage
 
 ```
 {t c="string" d="string"}
@@ -119,13 +119,13 @@ _This tag does not take any parameters._
 
 Output a translatable string with an optional default.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/t.json" >}}
 
 ## Function: `{include_file}`
 
-#### Usage
+### Usage
 
 ```
 {include_file name="string"}
@@ -133,13 +133,13 @@ Output a translatable string with an optional default.
 
 Inserts the contents the specified file into the template. The file must be in the same directory as the Smarty template file. Especially useful for inserting html headers or footers into a Smarty template.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/include_file.json" >}}
 
 ## Function: `{link}`
 
-#### Usage
+### Usage
 
 ```
 {link path="string" text="string" notag=boolean format="string" withdomain=boolean}
@@ -147,7 +147,7 @@ Inserts the contents the specified file into the template. The file must be in t
 
 Takes a route and prepends the web root (expects `/controller/action/params` as `path`).
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/link.json" >}}
 
@@ -155,7 +155,7 @@ Takes a route and prepends the web root (expects `/controller/action/params` as 
 
 We've created dedicated Smarty functions for a number of links to Vanilla pages that make it easier to build your forum's navigation.
 
-#### Usage
+### Usage
 Here's the basic syntax, where * is the link type.
 
 ```
@@ -164,85 +164,85 @@ Here's the basic syntax, where * is the link type.
 
 They take all of the same parameters as a `{link}` but have the `path` and `string` prefilled. These include 
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/link.json" >}}
 
 ### Available `{*_link}` functions
 
 
-##### Function: {bookmarks_link}
+#### Function: {bookmarks_link}
 
 Link to the My Bookmarks page.
 
-##### Function: {categories_link}
+#### Function: {categories_link}
 
 Link to the categories page.
 
-##### Function: {category_link}
+#### Function: {category_link}
 
 Link to the current category page.
 
-##### Function: {dashboard_link}
+#### Function: {dashboard_link}
 
 Link to the dashboard.
 
-##### Function: {discussions_link}
+#### Function: {discussions_link}
 
 Link to the discussions page.
 
-##### Function: {drafts_link}
+#### Function: {drafts_link}
 
 Link to the drafts page.
 
-##### Function: {activity_link}
+#### Function: {activity_link}
 
 Link to the recent activity page.
 
-##### Function: {forum_root_link}
+#### Function: {forum_root_link}
 
 Link to the forum root page.
 
-##### Function: {home_link}
+#### Function: {home_link}
 
 Link to the home page.
 
-##### Function: {inbox_link}
+#### Function: {inbox_link}
 
 Link to the inbox.
 
-##### Function: {mydiscussions_link}
+#### Function: {mydiscussions_link}
 
 Link to the My Discussions page.
 
-##### Function: {nomobile_link}
+#### Function: {nomobile_link}
 
 Link for showing the desktop version of the site.
 
-##### Function: {photo_link}
+#### Function: {photo_link}
 
 Link to the session's user profile that displays as the user's avatar.
 
-##### Function: {profile_link}
+#### Function: {profile_link}
 
 Link to session's user profile. The link text is the username. Includes a notification count.
 
-##### Function: {signin_link}
+#### Function: {signin_link}
 
 If there is a valid session, this outputs a signout link, otherwise a signin link.
 
-##### Function: {signinout_link}
+#### Function: {signinout_link}
 
 If there is a valid session, this outputs a signout link, otherwise a signin link.
 
-##### Function: {user_link}
+#### Function: {user_link}
 
 Link to session's user profile. The link text is this username. Does not include a notification count.
 
 
 ## Function: `{logo}` & `{mobile_logo}`
 
-#### Usage
+### Usage
 
 ```
 {logo}
@@ -251,13 +251,13 @@ Link to session's user profile. The link text is this username. Does not include
 
 Writes the site logo to the page. You can change the site logo from the 'Banner' settings page in the dashboard.
 
-#### Parameters
+### Parameters
 
 _These tags does not take any parameters._
 
 ## Function: `{module}`
 
-#### Usage
+### Usage
 
 ```
 {module name="string" ... }
@@ -269,7 +269,7 @@ The available parameters differ depending on module itself and the available mod
 
 There are many modules available in Vanilla and in its addons. They can be found in the modules directory of an application or addon. [Learn more about modules.](../../../developers/framework/modules.html.md)
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/asset.json" >}}
 
@@ -285,7 +285,7 @@ Here's an example of a tag that renders the Promoted Content Module, a module th
 
 ## Block: `{permission}`
 
-#### Usage
+### Usage
 
 ```
 {permission require="string"}
@@ -295,13 +295,13 @@ Here's an example of a tag that renders the Promoted Content Module, a module th
 
 Only output content if the current user has the specified permission.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/permission.json" >}}
 
 ## Function: `{pocket}`
 
-#### Usage
+### Usage
 
 ```
 {pocket name="string"}
@@ -309,13 +309,13 @@ Only output content if the current user has the specified permission.
 
 Writes a pocket to the page. Pockets placed in the template in this way should have their location set to 'custom'. You can edit this setting from the 'Pockets' settings page in the dashboard.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/pocket.json" >}}
 
 ## Function: `{searchbox}`
 
-#### Usage
+### Usage
 
 ```
 {searchbox placeholder="string"}
@@ -323,13 +323,13 @@ Writes a pocket to the page. Pockets placed in the template in this way should h
 
 Writes the search box to the page.
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/searchbox.json" >}}
 
 ## Function: `{text}`
 
-#### Usage
+### Usage
 
 ```
 {text code="string" default="string"}
@@ -337,6 +337,6 @@ Writes the search box to the page.
 
 Returns the custom text from a theme's options page. [Learn more about how to configure your theme options.](developer/theming/themeoptions/)
 
-#### Parameters
+### Parameters
 
 {{< params "theming/function/text.json" >}}
