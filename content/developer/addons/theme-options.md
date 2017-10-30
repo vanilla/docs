@@ -13,17 +13,20 @@ aliases:
 - /developer/theming/themeoptions
 ---
 
-This is a rather advanced theme configuration and is often unnecessary but can be very useful in certain circumstances.
+Themes offer a simplified way to create a minimal dashboard page with some special options for the site. This can help reduce the need for a Plugin.
 
-You can configure a custom dashboard settings page for your theme that allows an admin to choose between different CSS files in your theme's design folder. You can also allow an admin to add custom text to your theme.
+Confused about addons and plugins? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
 
-This functionality can be added simply by editing your theme's [addon information](/developer/addons/addon-info.md) file by adding an 'options' key to your theme's `addon.json` with an object as its value. The content of the 'options' object is discussed below.
+This functionality is defined using a theme's [addon.json](/developer/addons/addon-info). Still using the deprecated [about.php](/developer/addons/plugin-theme-info)? Follow along by learning [differences between addon.json and AddonInfo/PluginInfo](/developer/addons/plugin-theme-info/#translation-guide-from-addon-json).
 
 ## Choosing Between Stylesheets
+
+A theme can offer a custom dashboard settings page that allows an admin to choose between different CSS files in its design folder.
 
 In the design folder of your theme, you can add any number of CSS files. The naming convention is `custom_*.css`, where * is the theme variant.
 
 Given options like the following:
+
 ```json
 "options": {
     "styles": {

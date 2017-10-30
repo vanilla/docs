@@ -6,6 +6,8 @@ tags:
 - Configuration
 - about.php
 - addon.json
+- addon-info
+- addon
 category: addons
 menu:
   developer:
@@ -22,6 +24,12 @@ Every Vanilla addons must declare certain information about itself. This include
 - Addon support links
 - Addon configuration details
 - Details about how to load the addon
+
+## Legacy addon information formats
+
+Confused about addons and plugins? We've made some changes recently. Learn about how addons, plugins, and themes interact with each other in our new [Addon Documentation](/developer/addons/#addons-and-plugins-and-themes-oh-my).
+
+Some existing plugins/themes may use `$ThemeInfo` and `$PluginInfo` declarations in PHP to declare their information. This form is deprecated, but will continue to function going forward. See [Plugin & Theme Info](/developer/addons/plugin-theme-info) for details.
 
 ## The `addon.json` file
 
@@ -54,7 +62,11 @@ In an effort to simplify the management and creation of plugins, applications, a
     ],
     "require": {
         "vanilla": ">=2.4"
-    }
+    },
+    "sites": [
+        "mysite.vanillastaging.com",
+        "mysite.vanillacommunities.com"
+    ]
 }
 ```
 
@@ -154,11 +166,14 @@ A theme only property that tells Vanilla which views the theme users. Sometimes 
 
 **Layouts for Discussions:**
 
-  * modern
-  * table
+- modern
+- table
 
 **Layouts for categories:**
 
-  * modern
-  * table
-  * mixed
+- modern
+- table
+- mixed
+
+#### Sites
+A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Visibility](/developer/addons/addon-visibility) for details.

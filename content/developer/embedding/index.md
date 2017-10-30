@@ -9,6 +9,7 @@ menu:
     identifier: embedding
 aliases:
 - /features/embedding
+- /help/forum-settings/embedding
 ---
 
 ## Embedding Forum

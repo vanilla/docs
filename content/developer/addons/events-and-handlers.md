@@ -11,12 +11,17 @@ menu:
     parent: addons
     weight: 13
 aliases:
-- /developer/theming/hooks/
+- /theming/hooks
+- /developer/theming/hooks
 ---
+
+Addons have the ability to listen for events fired in the rest of Vanilla and even other Addons!. This is normally done inside of a `Gdn_Plugin` but can be done inside of anything inheriting from `Gdn_Pluggable`.
+
+Confused about addons and plugins? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
 
 ## Events
 
-Any class that extends the class "Pluggable" has the ability to call
+Any class that extends the class "Gdn_Pluggable" has the ability to call
 
 ```php
 $this->fireEvent('EventName');

@@ -11,7 +11,6 @@ menu:
     parent: addons
     weight: 0
 aliases:
-- /theming/quickstart
 - /developer/theming/quickstart
 ---
 **Vanilla Forums Cloud Customers, check out our [Ultimate Vanilla Forums Theme Guide](http://blog.vanillaforums.com/help/vanilla-forums-themes/).**
@@ -97,7 +96,7 @@ The dashboard can show a thumbnail for your theme on the themes page. Create a i
 
 ### Visibility
 
-If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your themes's visibility](/developer/adddons/addon-visibility).
+If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your themes's visibility](/developer/addons/addon-visibility).
 
 ### Whew!
 

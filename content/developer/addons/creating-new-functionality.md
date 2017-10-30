@@ -16,6 +16,8 @@ menu:
 
 Addons can do more than just modify existing parts of Vanilla. It can create entirely new ones! Addons can create new Controllers, Models, and Modules in the same way that Vanilla itself does. This is recommended only for developers who are already comfortable with Vanilla's framework. [Read more about the Vanilla Framework](/developer/framework).
 
+Confused about addons and themes? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
+
 #### Modules
 
 Looking to add a small reusable component? Create your own module. Add a new file `class.mymodule.module.php` in the root of your addon. Open it and create a new class extending `Gdn_Module`. Next creating a `views/modules` directory inside of your addon. Inside of this folder create a file named like your modules class name. For example, if your module were called `MyFancyWidgetModule` your would create a view file called `myfancywidget.php`. This file must be lowercased and have the `Module` removed from the classname.

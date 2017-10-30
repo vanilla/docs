@@ -30,7 +30,8 @@ Here are a few gotchas that can occur when styling Vanilla.
 
 ## Layouts
 
-Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it's best to decide which layout you'd like to use before you start styling your theme. This layout can be selected from the dashboard's Homepage section. You can also specify your theme's layout in the $ThemeInfo array in your theme's [addon.json](/developer/addons/addon-info) file. When your theme is enabled, the settings in the Layout section will be set to match what is specified in that file. See the [Theming Quickstart Guide](/developer/addons/them-quickstart#set-layout-options) for instructions on setting these values.
+Vanilla offers either a HTML table layout or list layout for its Categories and Discussions listings. Each layout has its own set of CSS classes, so it's best to decide which layout you'd like to use before you start styling your theme.
+ This layout can be selected from the dashboard's Homepage section. You can also specify your theme's layout in a theme's [addon.json](/developer/addons/addon-info) or [about.php](/developer/addons/plugin-theme-info) file. When your theme is enabled, the settings in the Layout section will be set to match what is specified in that file. See the [Theming Quickstart Guide](/developer/addons/theme-quickstart#define-basic-info) for instructions on setting these values.
 
 ## Addons
 

@@ -60,7 +60,7 @@ If you've read this far, you may have noticed we've used some variables above to
 
 **For use in testing environments only**, to view all the variables you have access to, you can include a special tag anywhere in your default master view: `{debug}` After adding this tag, refresh your forum page in a browser. A popup will show all the data variables available for use on the given page (you gotta make sure your browser's allowing popups here).
 
-To go even further, you can use [themehooks](/theming/hooks) to assign data to variables that you can then use in your view.
+To go even further, you can use [event handlers](/developer/addons/events-and-handlers) to assign data to variables that you can then use in your view.
 
 ## Smarty default master view example
 
@@ -117,7 +117,7 @@ To see how it all fits together, here's a default master view using Smarty:
 
 ## Overriding other views
 
-Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it's possible to accomplish what you're trying to do using good ol' CSS, or [themehooks](/theming/hooks), or by being clever with the configuration of your master view, those are probably better ways to go.
+Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it's possible to accomplish what you're trying to do using good ol' CSS, or [event handlers](/developer/addons/events-and-handlers), or by being clever with the configuration of your master view, those are probably better ways to go.
 
 With that warning out of the way, here's how you can override a view in Vanilla. Some plugins and every application contains a views folder. To override any file in this folder:
 
@@ -143,9 +143,9 @@ Here's an example of a file that changes the heading of the discussion column in
 
 ```php
 <?php
-if (!function_exists('DiscussionHeading')):
-    function DiscussionHeading() {
-        return htmlspecialchars(Gdn::Controller()->data('Category.Name', T('Discussion')));
+if (!function_exists('discussionHeading')):
+    function discussionHeading() {
+        return htmlspecialchars(Gdn::controller()->data('Category.Name', t('Discussion')));
     }
 endif;
 

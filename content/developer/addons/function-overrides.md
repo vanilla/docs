@@ -12,7 +12,11 @@ menu:
     weight: 14
 ---
 
-Sometimes you may want to override an existing core function in Vanilla. In order to facilitate this all functions in the framework are declared like so:
+Sometimes you may want to override an existing core function in Vanilla. This can be done anywhere inside of your addon, but is generally best done at the bottom of your Plugin.
+
+Confused about addons and plugins? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
+
+In order to facilitate this all functions in the framework are declared like so:
 
 ```php
 if (!function_exists('functionName')) {

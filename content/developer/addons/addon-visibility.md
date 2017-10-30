@@ -19,11 +19,13 @@ aliases:
 
 If you have [Vanilla Cloud](http://vanillaforums.com), custom addons will be hidden by default. This is to ensure custom addons are only visible to their respective owners.
 
+This functionality is defined using a theme's [addon.json](/developer/addons/addon-info). Still using the deprecated [about.php](/developer/addons/plugin-theme-info)? Follow along by learning [differences between addon.json and AddonInfo/PluginInfo](/developer/addons/plugin-theme-info/#translation-guide-from-addon-json).
+
 There are multiple methods for changing addon visibility. Later methods take precedance over earlier ones for backwards compatibility reasons.
 
 ## The `sites` key:
 
-If no other methods have been used, the **sites** key is used.
+If no other methods have been used, the **sites** key is used. It should be set in the [addon.json file](/developers/addons/addon-info). Confused about addons and plugins? Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
 
 ```json
 {
@@ -70,7 +72,7 @@ You can add multiple domains by separating them with a comma.
 
 ## The `hidden` key
 
-In the [addon.json](/developer/addons/addon-info) file, you can set the addon's visibility with the `hidden` key.
+In the [addon.json file](/developer/addons/addon-info), you can set the addon's visibility with the `hidden` key.
 
 Example:
 

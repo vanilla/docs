@@ -17,11 +17,12 @@ aliases:
 ---
 ## Quickstart Links
 
-* Read about our event and handler system: [Vanilla Events & Handlers](/developer/addons/events-and-handlers)
-* See details about the [Addon Information Format](/developer/addons/addon-info)
-* Download the official [Example addon](https://open.vanillaforums.com/addon/example-plugin)
+* Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
+* Read about our event and handler system: [Vanilla Events & Handlers](/developer/addons/events-and-handlers).
+* See details about the [Addon Information Format](/developer/addons/addon-info).
+* Download the official [Example addon](https://open.vanillaforums.com/addon/example-plugin).
 * Download other addons from the [Addon Directory](https://open.vanillaforums.com/addons) and borrow their code.
-* Get help in the [developer community](https://open.vanillaforums.com/categories/developers)
+* Get help in the [developer community](https://open.vanillaforums.com/categories/developers).
 
 ## Quickstart Guide
 
@@ -49,7 +50,7 @@ First, create a folder in the `plugins` directory, using the slug name you selec
 {
     "type": "addon",
     "key": "fancyaddon",
-    "name": "Lincoln&rsquo;s Fancy Addon ",
+    "name": "Lincoln&rsquo;s Fancy Addon",
     "description": "This is a fancy addon!",
     "version": "1.0.0",
     "mobileFriendly": true,
