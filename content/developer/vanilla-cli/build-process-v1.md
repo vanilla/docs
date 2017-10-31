@@ -3,9 +3,9 @@ title: Build Process - 1.0
 tags:
 - Developers
 - CLI
-- Build
-- Tools
-- Processes
+- Build Tools
+- Process
+- v1
 category: developer
 menu:
   developer:

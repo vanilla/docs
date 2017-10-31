@@ -3,9 +3,10 @@ title: Build Quickstart
 tags:
 - Developers
 - CLI
-- Build
-- Tools
-- Processes
+- Build Tools
+- Quickstart
+- Convert
+- Conversion
 category: developer
 menu:
   developer:
