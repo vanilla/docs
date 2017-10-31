@@ -12,13 +12,15 @@ category: developer
 menu:
   developer:
     parent: cli
+versioning:
+  added: 2.4.2
 ---
 
-The Vanilla CLI's sass and javascript build processes provide multiple methods to import other sass/css or javascript files.
+The Vanilla CLI's sass and javascript build processes provide multiple methods to import other sass/css or javascript files. *This only works with the built-in build processes.*
 
 ## Javascript
 
-The javascript files are bundled *not concatenated*. Concatenation is how many legacy process work. A legacy build script would need to define the order that javscript files would get loaded in and they would get attatched to each other in order. Each file place their contents in the global namespace and rely on their particular order to only reference things loaded before themselves. Bundling allows import/require statements to be resolved dynamically, and be deduplicated. All dependancies must be implicitly defined at the top of each file.
+The javascript files are bundled *not concatenated*. Concatenation is how many legacy process work. A legacy build script would need to define the order that javscript files would get loaded in and they would get attatched to each other in order. Each file would place their contents in the global namespace and rely on their particular order to only reference things loaded before themselves. Bundling allows import/require statements to be resolved dynamically, and be deduplicated. All dependancies must be implicitly defined at the top of each file.
 
 ### Syntax
 

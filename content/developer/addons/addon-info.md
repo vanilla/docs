@@ -259,6 +259,14 @@ A theme only property that tells Vanilla which views the theme users. Sometimes 
 },
 ```
 
+### buildProcessVersion
+
+Which process version to use for the [Vanilla CLI's build tool](/developer/vanilla-cli#build-tools). Currently available processes are [1.0](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy).
+
+```json
+"buildProcessVersion": "1.0",
+```
+
 ### Sites
 A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Visibility](/developer/addons/addon-visibility) for details.
 
