@@ -6,6 +6,8 @@ tags:
 - Addon
 - Plugin
 - Quickstart
+- Permissions
+- events
 category: addons
 menu:
   developer:
