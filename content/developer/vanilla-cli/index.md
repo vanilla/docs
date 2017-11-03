@@ -42,7 +42,7 @@ The Vanilla CLI bundles it's own build tool to make starting and mainting your V
 
 Both the core of Vanilla and its many addons often have their own tools to build their frontend dependencies. Normally these tools bundle, concatenate, and/or minify the javascript and styles, compress images and other assets, and may include a CSS authoring tool such as [Sass](http://sass-lang.com/) or [Less](http://lesscss.org/). Many of these build toolchains accomplish the same objective but in different ways.
 
-The Vanilla Build Tool aims to provide a consistant experience to building frontend assets for Vanilla. If you specify a build process in your [addon.json](/developer/addons/addon-info/#buildprocessversion) it will use that process automatically, but falls back to [legacy build process](/developer/vanilla-cli/build-process-legacy) for older projects. This is to try to smooth the edges of working with older addons, but is not as simple as using one of the built in processes.
+The Vanilla Build Tool aims to provide a consistant experience to building frontend assets for Vanilla. If you specify a build process in your [addon.json](/developer/addons/addon-info/#build) it will use that process automatically, but falls back to [legacy build process](/developer/vanilla-cli/build-process-legacy) for older projects. This is to try to smooth the edges of working with older addons, but is not as simple as using one of the built in processes.
 
 ### Usage
 `vanilla build [<options>]`
@@ -50,7 +50,10 @@ The Vanilla Build Tool aims to provide a consistant experience to building front
 ### Options
 
 #### `--process [process_version]`
-Select the build process you wish to use. This will override any other method of settings such the `buildProcessVersion` in the [addon.json](/developer/addons/addon-info/#buildprocessversion).
+Select the build process you wish to use. This will override any other method of settings such the `build.processVersion` in the [addon.json](/developer/addons/addon-info/#build). Current options are [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy).
+
+#### `--csstool [tool_name]`
+Select the CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.
 
 #### `--watch`
 Run the build process in watch mode. This will listen for changes in your code and recompile the parts that have changed. It spawns a local server meant to hook into the [livereload](http://livereload.com/extensions/) browser extension for [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/livereload/), and [Safari](http://livereload.com/extensions/). This is officially supported by the `1.0` build process only. It may also work with the `legacy` build process if the addon supports it.
@@ -63,8 +66,7 @@ This tool has its own javascript dependencies that it relies on to function prop
 
 ## Addon Utilities
 
-The Vanilla CLI offers a few utilities to make managing your addons easier
-These commands all make managing addons a little bit easier. They only work with addons currently installed in a Vanilla installation and function by using Vanilla's built in addon manager to do the heavy lifting. As a result, these commands require you to point them to the vanilla directory with the `--vanillasrc` parameter.
+The Vanilla CLI offers a few utilities to make managing your addons easier. They only work with addons currently installed in a Vanilla installation and function by using Vanilla's built in addon manager to do the heavy lifting. As a result, these commands require you to point them to the vanilla directory with the `--vanillasrc` parameter.
 
 Alternatively you can set the the environmental variable `VANILLACLI_VANILLA_SRC_DIR` to the installation path.
 
@@ -94,7 +96,7 @@ You vanilla installation's source directory.
 
 ## `vanilla addon-json [<options>]`
 
-Convert addons from using `$PluginInfo` / `$ThemeInfo` / `about.php` metadata declaration to the new addon.json format. This will convert all addons linked to you vanilla installation.
+Convert addons from using `$PluginInfo` / `$ThemeInfo` / `about.php` metadata declaration to the [newer addon.json format](/developer/addons/addon-info). This will convert all addons linked to you vanilla installation.
 
 ### Options
 
