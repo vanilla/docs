@@ -44,7 +44,7 @@ Image files can be placed in the `src/images` folder. Each image is its own entr
 
 ### Stylesheets
 
-Each entry stylesheet will be run through their preprocessor and be outputed into the `design` folder with the filename `<entryname>.css`. So if you would like the outputted file to be `design/myfile.css`, you would use a source file at `src/scss/myfile.scss` or `src/less/myfile.less`. Themes automatically load the css file located at `design/custom.css` so you normally want a source file called `custom.scss` or `custom.less`. All partials will be resolved. See [Sass Bundling](/developer/vanilla-cli/bundling-process/#sass) and [Less Bundling](/developer/vanilla-cli/bundling-process/#less)for more information on how stylesheet bundling works.
+Each entry stylesheet will be run through their preprocessor and be outputed into the `design` folder with the filename `<entryname>.css`. So for an outputted file to be `design/myfile.css`, its source file would need to be located at `src/scss/myfile.scss` or `src/less/myfile.less`. Themes automatically load the css file located at `design/custom.css` a source file called `custom.scss` or `custom.less` is common. All partials will be resolved. See [Sass Bundling](/developer/vanilla-cli/bundling-process/#sass) and [Less Bundling](/developer/vanilla-cli/bundling-process/#less)for more information on how stylesheet bundling works.
 
 ### Javascript
 
