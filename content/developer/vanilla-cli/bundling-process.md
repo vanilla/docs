@@ -175,3 +175,16 @@ And the package.json defined `style` or `main` pointing to `somefile.scss`
 ```
 
 Using this type of import makes scss modules easier to consume and is already used in different modules on npm. If you want to use a module that doesn't have a `style` key in it's package.json you can use the relative path import, but consider making a PR on the project!
+
+## Less
+
+Less partials can be required with
+
+```css
+@import "./_some-relative-partial.less";
+
+// Or if the file is directly relative
+@import "_some-relative-partial.less";
+```
+
+The full file name is required for Less imports.
