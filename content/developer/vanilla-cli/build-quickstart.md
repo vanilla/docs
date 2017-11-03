@@ -27,11 +27,11 @@ Creating a new project with the Vanilla CLI, the process is simple. There are ju
 
 ## Converting Existing Projects
 
-Existing projects using Sass, Less, or normal CSS can be converted to use the Vanilla build tool with relatively minor modifications. Other CSS preprocessors are currently not supported, so those projects cannot be converted without radical changes in their code.
+Existing projects using Sass, or normal CSS can be converted to use the Vanilla build tool with relatively minor modifications. Other CSS preprocessors are currently not supported, so those projects cannot be converted without radical changes in their code.
 
 ### Using npm instead of bower
 
-Some existing build process may contain bower components. Bower is deprecated and is not supported by the Vanilla build tool so these dependancies will need to be fetched another way. The best place to check is on [npm](http://npmjs.org). If the package is still maintained that's the place to look. Once found, be sure to install it with `yarn add <my-package-name>`.
+Some existing build process may contain bower components. Bower is deprecated and is not supported by the Vanilla build tool so these dependancies will need to be fetched another way. The best place to check is on [npm](http://npmjs.org). If the packag is still maintained that's the place to look. Once found, be sure to install it with `yarn add <my-package-name>`.
 
 Many projects using Bower also use a tool called `wiredep` to automatically wire up all of the installed components. This will need to be removed. See the [bundling process documentation](/developer/vanilla-cli/bundling-process) for information about the proper way to bundle together these dependencies.
 
