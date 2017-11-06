@@ -16,6 +16,8 @@ versioning:
 
 This is the primary build process. It is based on the build tool [gulp](http://gulpjs.com/). It builds stylesheets using [node-sass](https://github.com/sass/node-sass) or [less](https://github.com/less/less.js/tree/master) and bundles javascript with [Webpack](https://github.com/webpack/webpack) and [babel](https://babeljs.io/).
 
+This build process was formerly called `1.0`. It has now been renamed to `v1`. Existing addon.json files referencing the process version `1.0` will continue to work.
+
 ## Folder Structure
 
 Source files are always found in one of two places - the `src` directory or the `node_modules` directory. Node modules can be installed from [npm](https://www.npmjs.com/) with [yarn](https://yarnpkg.com/en/).
