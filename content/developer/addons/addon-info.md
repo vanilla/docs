@@ -259,12 +259,24 @@ A theme only property that tells Vanilla which views the theme users. Sometimes 
 },
 ```
 
-### buildProcessVersion
+### build
 
-Which process version to use for the [Vanilla CLI's build tool](/developer/vanilla-cli#build-tools). Currently available processes are [1.0](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy).
+Specifies options for the [Vanilla CLI's build tool](/developer/vanilla-cli#build-tools).
 
+#### build.processVersion
+
+Which process version to use. Currently available processes are [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy). The default is `legacy` for backwards compatibility purposes.
+
+#### build.cssTool
+
+Which CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.
+
+#### Example 
 ```json
-"buildProcessVersion": "1.0",
+"build": {
+    "processVersion": "v1",
+    "cssTool": "scss"
+}
 ```
 
 ### Sites
