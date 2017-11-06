@@ -26,6 +26,8 @@ Source files are always found in one of two places - the `src` directory or the 
 
 This build process works with the [Sass preprocessor](http://sass-lang.com/) and the [Less preprocessor](http://lesscss.org/). Only one preprocessor may be used at a time. A preprocessor is selected either through the [addon.json file](/developer/addons/addon-info#build) or as a [command line argument](/developer/vanilla-cli/)
 
+This tool has better support for Sass than Less. Less support exists primarily to facilitate the conversion of older addons.
+
 #### Sass
 
 Source files should be placed in the `src/scss` directory. Any file ending in `*.scss` that does not begin with an underscore `_` is considered a source file. Filenames beginning with an underscore such as `_partial.scss` signify a partial. These do not get built on their own and must use the `@import` directive to include them. See [The Sass language guide](http://sass-lang.com/guide) for more details.
