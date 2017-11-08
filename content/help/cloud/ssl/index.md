@@ -18,6 +18,12 @@ aliases:
 
 Vanilla offers SSL support in Corporate plans and above. In order for us to to enable SSL for your forum, you will need to provide Vanilla with the following:
 
+1. The **SSL Certificate** for your forum's domain in PEM format.
+
+2. The **SSL Certificate Private Key** for your forum's domain in PEM format, and with **no password**.
+
+3. The optional **Intermediate SSL Certificate** for your certificate issuing authority.
+
 ```
 Certificates start like this:
 -----BEGIN CERTIFICATE-----
@@ -27,12 +33,6 @@ Certificates start like this:
 Private keys start like this:
 -----BEGIN RSA PRIVATE KEY-----
 ```
-
-1. The **SSL Certificate** for your forum's domain in PEM format.
-
-2. The **SSL Certificate Private Key** for your forum's domain in PEM format, and with **no password**.
-
-3. The optional **Intermediate SSL Certificate** for your certificate issuing authority.
 
 ### What kind of certificates can we use?
 
