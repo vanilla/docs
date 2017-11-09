@@ -259,6 +259,16 @@ A theme only property that tells Vanilla which views the theme users. Sometimes 
 },
 ```
 
+### Sites
+A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Visibility](/developer/addons/addon-visibility) for details.
+
+```json
+"sites": [
+    "mysite.vanillastaging.com",
+    "mysite.vanillacommunities.com
+],
+```
+
 ### build
 
 Specifies options for the [Vanilla CLI's build tool](/developer/vanilla-cli#build-tools).
@@ -279,12 +289,74 @@ Which CSS preprocessor to use. Current options are `scss` and `less`. The defaul
 }
 ```
 
-### Sites
-A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Visibility](/developer/addons/addon-visibility) for details.
+### lint
+
+Specifies options for the [Vanilla CLI's lint tool](/developer/vanilla-cli#linting-tools).
+
+#### lint.scripts
+
+##### lint.scripts.enable
+
+Enable linting of script files. Defaults to true.
+
+##### lint.scripts.configFile
+
+Provide a path to an ESLint config file. By default the following files will be checked:
+- `<addonDirectory>/.eslintrc`
+- `<addonDirectory>/.eslintrc.json`
+- `<addonDirectory>/.eslintrc.yaml`
+- `<addonDirectory>/config.eslintrc.js`
+
+#### lint.styles
+
+##### lint.scripts.enable
+
+Enable linting of SCSS stylesheets. Defaults to true.
+
+##### lint.scripts.configFile
+
+Provide a path to an StyleLint config file. By default the following files will be checked:
+- `<addonDirectory>/.stylelintrc`
+- `<addonDirectory>/.stylelintrc.json`
+- `<addonDirectory>/.stylelintrc.yaml`
+- `<addonDirectory>/config.stylelintrc.js`
+
+#### paths
+
+An array of files or globs to lint. Defaults to
+```json
+[
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.scss"
+]
+```
+
+#### Example
 
 ```json
-"sites": [
-    "mysite.vanillastaging.com",
-    "mysite.vanillacommunities.com
-],
+"lint": {
+    "scripts": {
+        "configFile": "otherDirectory/.eslintrc"
+    },
+    "styles": {
+        "enable": false,
+    },
+    "paths": [
+        "otherDirectory/src/**/.js",
+        "otherDirectory/src/**/.jsx"
+    ]
+}
+```
+
+#### build.cssTool
+
+Which CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.
+
+#### Example 
+```json
+"build": {
+    "processVersion": "v1",
+    "cssTool": "scss"
+}
 ```
