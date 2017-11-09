@@ -91,7 +91,9 @@ Lint the files and attempt to automatically fix certain types of linting errors.
 
 ### Arguments
 
-Arguments should be file paths or globs to be linted. The default arguments are `src/**/*.js src/**/*.jsx src/**/*.scss`. `node_modules` and `vendor` directories will be ignored automatically. This allows arbitrary files to be linted.
+Arguments should be file paths or globs to be linted. The default arguments are `"src/**/*.js" "src/**/*.jsx" "src/**/*.scss"`. `node_modules` and `vendor` directories will be ignored automatically. This allows arbitrary files to be linted.
+
+Be sure to put quotes around glob arguments. If there are no quotes a glob bash/zsh/fish may automatically expand the glob, which will prevent files from being ignored properly.
 
 ## Addon Utilities
 
