@@ -1,5 +1,5 @@
 $(function($){
-    
+
     var cache = {
         set: function (key, val, exp) {
             cache.store.set(key, {
@@ -60,13 +60,13 @@ $(function($){
     }
 
     var $results = $('.js-search-results'),
-        $template = $results.find('.searchResult');
+        $template = $results.find('.searchResult').first();
 
     var searchHandler = function (e) {
         var $input = $(e.currentTarget),
             matches = [],
             query = escapeHTML($input.val());
-    
+
         if (query.length < 3) {
             $results.removeClass('open');
             return;
