@@ -302,6 +302,7 @@ Enable linting of script files. Defaults to true.
 ##### lint.scripts.configFile
 
 Provide a path to an ESLint config file. By default the following files will be checked:
+
 - `<addonDirectory>/.eslintrc`
 - `<addonDirectory>/.eslintrc.json`
 - `<addonDirectory>/.eslintrc.yaml`
@@ -316,6 +317,7 @@ Enable linting of SCSS stylesheets. Defaults to true.
 ##### lint.scripts.configFile
 
 Provide a path to an StyleLint config file. By default the following files will be checked:
+
 - `<addonDirectory>/.stylelintrc`
 - `<addonDirectory>/.stylelintrc.json`
 - `<addonDirectory>/.stylelintrc.yaml`

@@ -66,7 +66,7 @@ This tool has its own javascript dependencies that it relies on to function prop
 
 ## Linting Tools
 
-The Vanilla CLI bundles a linter that enforces Vanilla Forums standards of code quality for SCSS stylesheets and javscripts files. It is built using [ESLint](https://eslint.org/) and [StyleLint](https://stylelint.io/).
+The Vanilla CLI bundles a linter that enforces Vanilla Forums standards of code quality for SCSS stylesheets and javscripts files. It is built using [ESLint](https://eslint.org/) and [StyleLint](https://stylelint.io/). Options are determined with fallbacks in this order CLI Options/Args > Configuration > Defaults. Configuration can be specific in the [addon.json file](/developer/addons/addon-info#lint).
 
 ### Usage
 `vanilla build [<options>] [<arguments>]`
