@@ -213,7 +213,10 @@ The permission required to access the addon's settings page.
 A map of new permissions created by the addon, and the default value of that permission. If the user has the permission on the right side, they will have the permission on the left side by default.
 
 ```json
-"registerPermissions"
+"registerPermissions": {
+    "FancyAddon.NewPostType.Add": "Garden.Discussions.Add",
+    "FancyAddon.Stuff.Manage": "Garden.Settings.Manage"
+},
 ```
 
 ### authors
@@ -221,10 +224,13 @@ A map of new permissions created by the addon, and the default value of that per
 An array of authors of an addon.
 
 ```json
-"registerPermissions": {
-    "FancyAddon.NewPostType.Add": "Garden.Discussions.Add",
-    "FancyAddon.Stuff.Manage": "Garden.Settings.Manage"
-},
+"authors": [
+    {
+        "name": "Your Name",
+        "email": "you@yourdomain.com",
+        "homepage": "http://yourdomain.com"
+    }
+],
 ```
 
 ### require
