@@ -123,7 +123,7 @@ All fields are optional except Badge. Updates are sparse, so supply only the fie
 ## /badges/give
 
 ```http
-POST /api/v1/badges/give.ext HTTP/1.1
+POST /api/v1/badges/giveuser.ext HTTP/1.1
 HOST: https://yoursite.vanillaforums.com
 ```
 
