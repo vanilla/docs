@@ -63,7 +63,7 @@ If you are using Subcommunities or the Multilingual Plugin to enable multiple lo
 
 ### Overriding Locales with the Subcommunities plugin or the Multilingual plugin
 
-If you have [Subcommunities](/help/multisite/#subcommunities) or the [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) enabled you probably don't want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the `locale/` folder of an [addon](/developer/addons) and name them `{locale-id}.php`. For example, the French language file would located at `/plugins/<someaddon>/locale/fr.php` or `/themes/<sometheme>/locale/fr.php`.
+If you have [Subcommunities](/help/multisite/#subcommunities) or the [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) enabled you probably don't want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the `locale/` folder of an [addon](/developer/addons) and name them `{locale-id}.php`. For example, the French language file would be located at `/plugins/<someaddon>/locale/fr.php` or `/themes/<sometheme>/locale/fr.php`.
 
 **`locale/fr.php`**
 ```php
