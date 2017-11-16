@@ -35,6 +35,8 @@ Want to help translate? Awesome! Here are some tips for creating great translati
 
 The [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) allows each user select their preference from all enabled locales.
 
+[Subcommunities](/help/multisite/#subcommunities) allow a single site to be split into mutlitple communities. Each community specifies it's own locale.
+
 ## Overriding locales
 
 ```php
@@ -55,11 +57,12 @@ You can override your default locale by adding a `conf/locale.php` file to your 
 
 To find out what the translation strings for core components are please check our open source [Locales Repo](https://github.com/vanilla/locales). The core strings can be found in the [`tx-source/site_core.php`](https://github.com/vanilla/locales/blob/master/tx-source/site_core.php) file. 
 
-If you are using the Multilingual Plugin to enable multiple locales, please note his override will effect **all** locales.
+If you are using the Multilingual Plugin or Subcommunities to enable multiple locales, please note his override will effect **all** locales.
 
-### Overriding Locales with the Multilingual plugin
+### Overriding Locales with the Multilingual plugin or the Subcommunities plugin
 
-If you have the [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) enabled you may not want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the `locale/` folder and name them `{locale-id}.php`. For example, the French language file would located at `locale/fr.php`.
+If you have the [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) or 
+[Subcommunities](/help/multisite/#subcommunities) enabled you probably don't want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the `locale/` folder of an [addon](/developer/addons) and name them `{locale-id}.php`. For example, the French language file would located at `/plugins/<someaddon>/locale/fr.php` or `/themes/<sometheme>/locale/fr.php`.
 
 **`locale/fr.php`**
 ```php
