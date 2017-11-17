@@ -35,9 +35,11 @@ Want to help translate? Awesome! Here are some tips for creating great translati
 
 {{% cloudfeature %}}
 
-[Subcommunities](/help/multisite/#subcommunities) allow a single site to be split into mutlitple communities. Each community specifies it's own locale. This feature is available 
+[Subcommunities](/help/multisite/#subcommunities) allow a single site to be split into multiple communities. Each community maps to a top level category and gets its own subfolder on the site. Everything inside this subfolder (categories, discussions, and anything else viewed from that subfolder) uses a locale specified in the dashboard. One site can have multiple subcommunities in different languages, and share the same user base, search system, and conversations.
 
 The [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) allows each user select their preference from all enabled locales.
+
+The Subcommunities plugin and the Mutlilingual plugin can't be activated at the same time.
 
 ## Overriding locales
 
