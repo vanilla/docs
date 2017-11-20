@@ -64,6 +64,37 @@ Log additional output to stdout. This is helpful for finding out what might be w
 #### `--reset`
 This tool has its own javascript dependencies that it relies on to function properly. Some of these are native modules and may require recompilation if your OS or Node.js installation get upgraded. This flags clears all cached modules and reinstall/recompiles them. The tool will attempt to do this automatically if necessary, but this command can be useful for fixing dependency related issues.
 
+## Linting Tools
+
+The Vanilla CLI bundles a linter that enforces Vanilla Forums standards of code quality for SCSS stylesheets and javscripts files. It is built using [ESLint](https://eslint.org/) and [StyleLint](https://stylelint.io/). Options are determined with fallbacks in this order CLI Options/Args > Configuration > Defaults. Configuration can be specific in the [addon.json file](/developer/addons/addon-info#lint).
+
+### Usage
+`vanilla build [<options>] [<arguments>]`
+
+### Options
+
+#### `--scripts`
+
+Causes the tool to only run the javascript related parts of the process.
+
+#### `--scripts`
+
+Causes the tool to only run the javascript related parts of the process.
+
+#### `--watch`
+
+Run to the tool in watch mode. Changed files will be linted. Currently newly added files require a re-running the command.
+
+#### `--fix`
+
+Lint the files and attempt to automatically fix certain types of linting errors.
+
+### Arguments
+
+Arguments should be file paths or globs to be linted. The default arguments are `"src/**/*.js" "src/**/*.jsx" "src/**/*.scss"`. `node_modules` and `vendor` directories will be ignored automatically. This allows arbitrary files to be linted.
+
+Be sure to put quotes around glob arguments. If there are no quotes a glob bash/zsh/fish may automatically expand the glob, which will prevent files from being ignored properly.
+
 ## Addon Utilities
 
 The Vanilla CLI offers a few utilities to make managing your addons easier. They only work with addons currently installed in a Vanilla installation and function by using Vanilla's built in addon manager to do the heavy lifting. As a result, these commands require you to point them to the vanilla directory with the `--vanillasrc` parameter.
