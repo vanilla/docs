@@ -1,62 +1,56 @@
 .docs-header-search {
     position: relative;
+    max-width: 525px;
+}
 
-    .docs-search-results {
+.docs-search-wrap {
+    position: relative;
+    display: block;
+    background-color: rgba(#1A1A1A, .3);
+    border: 1px solid rgba(255, 255, 255, .5);
+    color: white;
+    font-weight: $fontWeight-normal;
+
+    .searchIcon {
+        display: block;
         position: absolute;
-        top: 42px;
-        right: 0px;
-        width: 280px;
-        display: none;
-        z-index: 15;
-        
-        padding: 0px;
-        margin: 0px;
-        list-style: none;
-        
-        border: 1px solid $borderShadow;
-        border-bottom: 0px;
-        box-shadow: 0 6px 12px rgba(0,0,0,.175);
-        
-        &.open {
-            display: block;
-        }
-        
-        a {
-            display: block;
-        }
-        
-        li {
-
-            background: white;
-            text-align: left;
-            border-bottom: 1px solid $borderShadow;
-            padding: 10px;
-
-            .title {
-                font-size: 14px;
-                font-weight: bolder;
-                color: $darkText;
-            }
-
-            .tags {
-                display: block;
-                font-size: 12px;
-                font-weight: light;
-                margin-top: 3px;
-                color: $vanillaPink;
-            }
-
-            &:hover {
-                background: $vanillaBlue;
-
-                .title {
-                    color: white;
-                }
-
-                .tags {
-                    color: white;
-                }
-            }
-        }
+        top: 0;
+        left: 10px;
+        bottom: 0;
+        margin: auto 0;
+        width: 18px;
+        height: 18px;
     }
+
+
+    @include placeholder {
+        color: inherit;
+        opacity: .8;
+    }
+}
+
+.docs-search-input {
+    border: none;
+    background: rgba(black, .1);
+    color: white;
+    display: block;
+
+    font-size: $fontSize-medium;
+    line-height: $fontSize-medium * 2;
+    padding: 6px 15px 6px 37px;
+    width: 100%;
+    transition: width 0.2s;
+    height: 36px;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include mediaQuery-mobile {
+        font-size: 16px;
+    }
+}
+
+::-ms-clear {
+    display: none;
 }

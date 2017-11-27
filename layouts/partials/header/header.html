@@ -1,0 +1,31 @@
+<div class="headerPlaceholder">
+    <header class="docs-header" id="siteHeader">
+        <div class="mobileHeader">
+            <button id="hamburger" class="btn btn-transparent hamburgerMenu">
+                <span class="sr-only">
+                    Menu
+                </span>
+                <span class="hamburger">
+                    <span class="hamburger-ingredient hamburger-topBread"></span>
+                    <span class="hamburger-ingredient hamburger-meat"></span>
+                    <span class="hamburger-ingredient hamburger-bottomBread"></span>
+                </span>
+            </button>
+            <div class="mobileSection">
+                {{ .Type }}
+            </div>
+            <div class="mobileSpacer">&nbsp;</div>
+        </div>
+
+        <div class="content desktopHeader">
+            <div class="row desktopHeader-row">
+                <a class="vertical-group docs-header-logo" href="/">
+                    {{ partial "logo-desktop.html" . }}
+                </a>
+
+                {{ partial "header/search.html" . }}
+                {{ partial "header/cta.html" . }}
+            </div>
+        </div>
+    </header>
+</div>

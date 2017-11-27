@@ -5,7 +5,7 @@ var S = require("string");
 var path = require('path');
 
 module.exports = function (grunt) {
-    
+
     // Load all Grunt tasks matching the `grunt-*` pattern
     require('load-grunt-tasks')(grunt);
 
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
+
         watch: {
             options: {
                 livereload: true
@@ -27,23 +27,27 @@ module.exports = function (grunt) {
                 tasks: ['sass_globbing', 'sass', 'postcss']
             },
             hugo: {
-                files: ['content/**', 'layouts/**', 'data/**', 'static/**', '!static/js/lunr-index.json'],
+                files: ['content/**', 'layouts/**', 'data/**', 'static/**', 'archetypes/**', 'config.yaml', 'config-dev.yaml', '!static/js/lunr-index.json'],
                 tasks: ['hugo:dev', 'index']
+            },
+            js: {
+                files: ['build/js/**/*.js'],
+                tasks: ['js']
             }
         },
-        
+
         connect: {
             docs: {
                 options: {
                     hostname: '127.0.0.1',
-                    port: 8080,
+                    port: 1313,
                     protocol: 'http',
                     base: 'public',
                     livereload: true
                 }
             }
         },
-        
+
         clean: {
             dist: {
                 src: [
@@ -52,7 +56,7 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        
+
         sass: {
             options: {
                 sourceMap: true,
@@ -71,7 +75,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        
+
         sass_globbing: {
             docs: {
                 files: {
@@ -82,20 +86,23 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         postcss: {
             options: {
                 map: true, // inline sourcemaps
 
                 processors: [
-                    require('autoprefixer')({browsers: 'last 2 versions'}) // add vendor prefixes
+                    require('autoprefixer')({browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"]}) // add vendor prefixes
                 ]
             },
             dist: {
-                src: 'static/css/**/*.css'
+                src: [
+                    'public/css/**/*.css',
+                    '!public/css/fonts/**/*.css'
+                ]
             }
         },
-        
+
         imagemin: {
             dist: {
                 files: [{
@@ -106,40 +113,38 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        
-//        filerev: {
-//            options: {
-//                algorithm: 'md5',
-//                length: 8
-//            },
-//            json: {
-//                src: 'public/js/*.json'
-//            },
-//            images: {
-//                src: 'public/img/**/*.{svg,png,jpg}'
-//            },
-//            assets: {
-//                src: [
-//                    'public/js/**/*.js',
-//                    'public/css/**/*.css'
-//                ]
-//            }
-//        },
-        
+
+        jshint: {
+            options: {
+                force: false,
+                jshintrc: 'build/js/.jshintrc'
+            },
+            all: ['build/js/src/**/*.js']
+        },
+
+        concat: {
+            dist: {
+                src: [
+                    'build/js/**/*.js'
+                ],
+                dest: 'static/js/custom.js'
+            }
+        },
+
         lunr_index: {
             options: {
                 source: 'content',
                 dest: 'static/js/lunr-index.json'
             }
         },
-        
+
         hugo: {
             options: {
                 source: 'content',
                 dest: 'public'
             }
         },
-        
+
         'gh-pages': {
             push: {
                 options: {
@@ -150,32 +155,48 @@ module.exports = function (grunt) {
         }
 
     });
-    
+
     grunt.registerTask('default', [
         'build'
     ]);
 
     /*
      * Builds the whole site from scratch
-     * 
+     *
+     * clean: revisions and minifies files
      * hugo: prepares public/ HTML from content
      * css: builds css from scss
      * js: prepares javascript
      * index: runs lunr index
-     * clean: revisions and minifies files
      */
     grunt.registerTask('build', [
         'clean',
         'hugo',
         'css',
         'js',
-        'index',
-        'varnish'
+        'index'
     ]);
-    
+
+    /*
+     * Builds the whole site from scratch - in dev mode
+     *
+     * clean: revisions and minifies files
+     * hugo: prepares public/ HTML from content
+     * css: builds css from scss
+     * js: prepares javascript
+     * index: runs lunr index
+     */
+    grunt.registerTask('buildDev', [
+        'clean',
+        'hugo:dev',
+        'css',
+        'js',
+        'index'
+    ]);
+
     /*
      * This task builds and prepares css
-     * 
+     *
      * sass_globbing: supports wildcard @import statements
      * sass: builds scss files into css
      * postcss: prefixes css statements with browser-specific versions
@@ -185,55 +206,47 @@ module.exports = function (grunt) {
         'sass',
         'postcss'
     ]);
-    
-    /*
-     * This task would perform javascript related tasks
-     */
-    grunt.registerTask('js', [
-        
-    ]);
-    
-    /*
-     * This task cleans up the generated HTML
-     */
-    grunt.registerTask('varnish', [
-//        'useminPrepare',
-//        'concat',
-//        'uglify',
-//        'cssmin',
-//        'filerev',
-//        'usemin'
-    ]);
-    
+
+
     grunt.registerTask('index', [
         'lunr_index'
     ]);
-    
+
     /*
      * Allows live editing
-     * 
+     *
      * connect: creates a server
+     * buildDev: build site in dev mode
      * watch: waits for changes to source files and re-runs grunt tasks
      */
     grunt.registerTask('edit', [
         'connect',
+        'buildDev',
         'watch'
     ]);
-    
+
     /*
      * Deploys dist (public/) files to gh-pages branch
      */
     grunt.registerTask('push', [
         'gh-pages:push'
     ]);
-    
+
+    /*
+     * Javscript tasks
+     */
+    grunt.registerTask('js', [
+        'concat',
+        'jshint'
+    ]);
+
     /*
      * Creates lunr.js index of content
      */
     grunt.registerTask("lunr_index", function() {
 
         grunt.log.writeln("Build lunr index");
-        
+
         var options = this.options();
 
         var indexPages = function() {
@@ -280,7 +293,7 @@ module.exports = function (grunt) {
             }
 
             var href = S(abspath).chompLeft(options.source).chompRight(".md").s;
-            
+
             // href for index.md files stops at the folder name
             if (filename === "index.md") {
                 href = S(abspath).chompLeft(options.source).chompRight(filename).s;
@@ -299,26 +312,26 @@ module.exports = function (grunt) {
 
         grunt.file.write(options.dest, JSON.stringify(indexPages()));
     });
-    
+
     /*
      * Compiles hugo content into HTML
      */
     grunt.registerTask('hugo', function (target) {
         var options = this.options();
         var target = target || 'final';
-        
+
         var args, done;
         done = this.async();
         args = [
-            '--config=' + path.resolve('./config.yaml'),
             '--destination=./' + options.dest
         ];
+
         if (target === 'dev') {
-            args.push('--baseUrl=http://127.0.0.1:8080');
-            args.push('--buildDrafts=true');
-            args.push('--buildFuture=true');
+            args.push('--config=' + path.resolve('./config-dev.yaml'));
+        } else {
+            args.push('--config=' + path.resolve('./config.yaml'));
         }
-        
+
         // Run hugo
         grunt.util.spawn({
             cmd: 'hugo',
@@ -330,7 +343,7 @@ module.exports = function (grunt) {
             if (error) {
                 done(error);
             }
-            
+
             done();
         });
     });

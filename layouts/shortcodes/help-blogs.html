@@ -1,17 +1,69 @@
 <div class="docs-featured docs-help-blogs">
-    <h2>From the blog</h2>
+    <h2 id="from-the-blog">From the blog</h2>
     
     <p>
         We've collected some helpful articles from <a href="https://blog.vanillaforums.com">our blog</a> that might be useful to you as your build your community.
     </p>
-    
-    <div class="featured-items">
-    {{ range first 3 .Site.Data.blogs.help.articles }}
-        {{ $blog := . }}
-        <a class="featured-item" href="{{ $blog.url }}">
-            <div class="article-title">{{ $blog.title }}</div>
-            <p>{{ $blog.description }}</p>
-        </a>
-    {{end}}
+
+
+
+    <div id="fromTheBlog" class="featured-items isLoading">
+
+        <div class="featured-loader"></div>
+
     </div>
+
+    <script>
+        $(function(){
+            var request = new XMLHttpRequest();
+            request.open('GET', 'https://blog.vanillaforums.com/feed/', true);
+
+            request.onload = function() {
+                if (request.status >= 200 && request.status < 400) {
+                    try {
+                        var xmlParser = new DOMParser();
+                        var xmlDoc = xmlParser.parseFromString(request.responseText, 'text/xml');
+                        var blogPosts = xmlDoc.getElementsByTagName('item');
+                        var $fromTheBlog = $('#fromTheBlog');
+                        var validResults = 0;
+
+                        for(var key in blogPosts) {
+                            var blogPost = blogPosts[key];
+                            var url = escapeHTML(stripTags($(blogPost.getElementsByTagName('link')).text()));
+                            var title = escapeHTML(stripTags($(blogPost.getElementsByTagName('title')).text()));
+                            var description = escapeHTML(stripTags($(blogPost.getElementsByTagName('description')).text()));
+
+                            if(url !== '' && title !== '' && description !== '') {
+                                $fromTheBlog.append('<a class="featured-item" href="' + url + '"><div class="article-title">' + title + '</div><p>' + description + '</p></a>');
+                                validResults++;
+                            } else {
+                                console.log('Bad entry: ', blogPost);
+                            }
+
+                            if(validResults >= 3) {
+                                break;
+                            }
+                        }
+
+                        if(validResults > 0) {
+                            $fromTheBlog.removeClass('isLoading');
+                            $fromTheBlog.find('.loader').remove();
+                        }
+
+                    } catch(err) {
+                        console.log('Error parsing data: ', err);
+                    }
+                } else {
+                    // We reached our target server, but it returned an error
+                    console.log('Error returned from server.');
+                }
+            };
+
+            request.onerror = function(err) {
+                console.log('Error fetching data from Vanilla Blog\'s RSS Feed: ', err);
+            };
+
+            request.send();
+        });
+    </script>
 </div>

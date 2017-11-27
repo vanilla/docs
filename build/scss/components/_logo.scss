@@ -1,0 +1,15 @@
+.docs-header-logo {
+  color: white !important;
+}
+
+.vanillaLogo {
+  display: block;
+  width: $logoHorizontal-width;
+  height: $logoHorizontal-height;
+}
+
+.vanillaMobileLogo {
+  display: block;
+  width: $logoVertical-width;
+  height: $logoVertical-height;
+}

@@ -7,7 +7,7 @@ category: help
 menu:
   help:
     identifier: notifications
-    weight: 100
+    weight: 14
 aliases:
 - /features/notifications
 ---

@@ -1,0 +1,217 @@
+#sidebar {
+    position: relative;
+    height: 100%;
+
+    @include mediaQuery-notMobile {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50vw;
+            border: 1px solid #ECEDED;
+            height: 100%;
+            background: $panel-bg;
+        }
+    }
+}
+
+.docs-nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    padding: 57px 0;
+}
+
+.sidebar-menu {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+
+
+    .sidebar-menu {
+        .sidebar-link {
+            padding-left: $navItem-horizontalPadding + $navTier-padding;
+        }
+
+        .sidebar-menu {
+            .sidebar-link {
+                padding-left: $navItem-horizontalPadding * 2 + $navTier-padding;
+            }
+
+            .sidebar-menu {
+                .sidebar-link {
+                    padding-left: $navItem-horizontalPadding * 3 + $navTier-padding;
+                }
+
+                .sidebar-menu {
+                    .sidebar-link {
+                        padding-left: $navItem-horizontalPadding * 4 + $navTier-padding;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.menuItem-children {
+    padding: 0;
+    margin: 0;
+}
+
+#nav { // Main nav
+
+    .menuItem-children {
+        display: none;
+    }
+
+    .nav-tier1 > .menuItem.isActive,
+    .nav-tier1 > .menuItem.hasActiveChildren {
+        > .menuItem-children {
+            display: block;
+        }
+    }
+
+    @include mediaQuery-noBleed {
+        .menuItem-children {
+            &.isOpen-tablet {
+                display: block;
+            }
+        }
+    }
+
+    @include mediaQuery-mobile {
+        @include defaultTransition(transform);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        transform: translateX(-110%);
+        background-color: #fff;
+        z-index: 10;
+    }
+}
+
+@include mediaQuery-mobile {
+    body.mobileOpenPanel {
+        #nav {
+            transform: translateX(0);
+        }
+        overflow: hidden !important;
+    }
+}
+
+.menuItem {
+    display: block;
+    padding: 0;
+    font-size: $fontSize-medium;
+    color: $darkText;
+    line-height: $panel-lineHeight;
+}
+
+.sidebar-link {
+    @include defaultTransition(background);
+    display: block;
+    color: inherit !important;
+    line-height: $panel-lineHeight;
+    padding: $panel-verticalPadding $navItem-horizontalPadding;
+
+    &:hover {
+        background-color: rgba($navItem-bg, .05);
+    }
+
+    &.isActive {
+        background-color: rgba($navItem-bg, .1) !important;
+    }
+}
+
+.sidebar-linkWrap {
+    display: block;
+    position: relative;
+}
+
+.subNav-title {
+    font-weight: $fontWeight-bold;
+    font-size: $fontSize-medium;
+    color: $darkText;
+    text-transform: uppercase;
+    padding: 0 $navItem-horizontalPadding;
+    margin: 0 0 12px;
+}
+
+.subNav {
+    border: 1px solid #F4F4F4;
+    padding: 18px 0;
+
+}
+
+.column-panel {
+    &.noContent {
+        .docs-nav {
+            display: none !important;
+        }
+    }
+}
+
+.panelHeader {
+    background-color: $panelDark;
+    text-align: center;
+    padding-bottom: 8px;
+
+    .docs-cta {
+        margin: 0 auto 12px;
+    }
+
+    .docs-header-search {
+        margin: 0 6px;
+        max-width: 100%;
+    }
+}
+
+.panelHeader-topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@include mediaQuery-notMobile {
+    .panelHeader {
+        display: none;
+    }
+}
+
+@include mediaQuery-mobile {
+    #nav {
+        heigth: 100vh;
+    }
+
+    .docs-nav {
+        padding: {
+            top: 12px;
+            bottom: 24px;
+        }
+    }
+}
+
+@include mediaQuery-noBleed {
+    #nav_sub {
+        display: none;
+    }
+
+    .flyoutArrow {
+        display: none;
+    }
+
+    .menuItem-children {
+        display: block !important;
+    }
+}

@@ -1,0 +1,29 @@
+baseurl: "http://127.0.0.1:1313"
+title: "Vanilla Forums Documentation"
+buildDrafts: true
+buildFuture: true
+watch: false
+
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
+
+canonifyurls: true
+
+params:
+    description: "Vanilla Forums Documentation"
+    author: "Vanilla Community"
+
+    links:
+        docs: "http://docs.vanillaforums.com"
+        blog: "https://blog.vanillaforums.com"
+        cloud: "https://vanillaforums.com"
+        community: "https://vanillaforums.org/discussions"
+        api: "http://docs.vanillaforums.com/api"
+        github: "https://github.com/vanilla/vanilla"
+        issues: "https://github.com/vanilla/vanilla/issues"
+
+taxonomies:
+    category: "categories"
+    tag: "tags"
+    series: "series"

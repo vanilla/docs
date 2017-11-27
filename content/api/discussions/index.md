@@ -17,9 +17,11 @@ Host: https://yoursite.vanillaforums.com
 
 Creates a new discussion.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type      | Description
 ---                 | ---       | ---
@@ -35,6 +37,7 @@ __`Category`__      | `string`  | Discussion Category (Name, use if no ID)
 `Announce`          | `boolean` | Discussion announced state
 `Sink`              | `boolean` | Discussion sunk state
 
+{{% /scrollableTables %}}
 
 ## /discussions/bookmark
 
@@ -45,15 +48,19 @@ Host: https://yoursite.vanillaforums.com
 
 Bookmark or unbookmark a discussion.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type                      | Description
 ---                 | ---                       | ---
 __`Discussion`__    | [`smart id`](../smart-id) | Discussion to be bookmarked
 `User`              | [`smart id`](../smart-id) | The user bookmarking the discussion. If blank then the currently authenticated user will be used
 `Bookmark`          | `boolean`                 | Whether or not to bookmark the discussion
+
+{{% /scrollableTables %}}
 
 ### Notes
 
@@ -69,7 +76,7 @@ Host: https://yoursite.vanillaforums.com
 
 List a user's bookmarked discussions.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 
 ## /discussions/edit
@@ -81,9 +88,11 @@ Host: https://yoursite.vanillaforums.com
 
 Edits an existing discussion.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type                      | Description
 ---                 | ---                       | ---
@@ -100,6 +109,7 @@ __`Discussion`__    | [`smart id`](../smart-id) | Discussion to be deleted.
 `Announce`          | `boolean`                 | Discussion announced state
 `Sink`              | `boolean`                 | Discussion sunk state
 
+{{% /scrollableTables %}}
 
 ## /discussions/list
 
@@ -108,7 +118,7 @@ POST /api/v1/discussions/list.ext HTTP/1.1
 Host: https://yoursite.vanillaforums.com
 ```
 
-[__Authentication__](../#making-api-calls): optional  
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): optional  
 If not provided, perspective will be that of a guest.
 
 
@@ -121,15 +131,19 @@ Host: https://yoursite.vanillaforums.com
 
 Get a list of discussions within a category.
 
-[__Authentication__](../#making-api-calls): optional  
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): optional  
 If not provided, perspective will be that of a guest.
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter                   | Type                  | Description
 ---                         | ---                   | ---
 __`CategoryIdentifier`__    | `integer` `string`    | Category identifier (`CategoryID` or `UrlCode`)
 `Page`                      | `integer`             | Page number
+
+{{% /scrollableTables %}}
 
 ## /discussions/promoted
 
@@ -140,10 +154,12 @@ HOST: https://yoursite.vanillaforums.com
 
 Get a list of discussions filtered by the selector and selection parameters.
 
-[__Authentication__](../#making-api-calls): optional  
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): optional  
 If not provided, perspective will be that of a guest.
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type               | Description
 ---                 | ---                | ---
@@ -152,6 +168,8 @@ __`selector`__      | `string`           | What property to filter the discussio
 `contenttype`       | `string`           | The value can be `all`, `discussions`, or `comments`. You can choose to fetch only comments or only discussions. The default is all.
 `limit`             | `integer`          | The number of posts to fetch. The max number is 50.
 `expiry`            | `integer`          | How long in seconds to cache the content.
+
+{{% /scrollableTables %}}
 
 ##### Selectors and Selections
 

@@ -1,44 +1,124 @@
-$vanillaBlue:           #0291DB !default;
-$vanillaLightBlue:      #E3F5FF !default;
-$lightBlue:             $vanillaLightBlue;
+$vanillaBlue:               #0291DB !default;
+$vanillaLightBlue:          #E3F5FF !default;
+$lightBlue:                 $vanillaLightBlue;
 
-$vanillaPink:           #F52C6E !default;
-$vanillaLightPink:      #F6447F !default;
-$lightPink:             $vanillaLightPink;
-$faintPink:             #fff3f6 !default;
+$vanillaPink:               #F52C6E !default;
+$vanillaLightPink:          #F6447F !default;
+$vanillaDarkPink:           #e12663;
+$lightPink:                 $vanillaLightPink !default;
+$faintPink:                 rgba(199, 37, 78, 0.1) !default;
 
-$gradientPink:          #F5296D;
-$gradientBlue:          #0291DB;
-$gradientMid:           #7B5DA4;
+$gradientPink:              #F5296D;
+$gradientBlue:              #0291DB;
+$gradientMid: #0f255a;
 
-$body:                  #F5F8FA !default;
+$body:                      #F5F8FA !default;
 
-$panelDark:             #333333 !default;
-$panelDarkDim:          #232323 !default;
-$panelLight:            #F5F8FA !default;
-$panelSlate:            #F2F5FA !default;
+$panelDark:                 #333333 !default;
+$panelDarkDim:              #232323 !default;
+$panelLight:                #EBEBEB !default;
+$panelSlate:                #F2F5FA !default;
 
-$regularText:           #505A5F !default;
-$lighterText:           #808A8F !default;
-$lightText:             #A8A9AB !default;
-$ghostText:             #EAEAEA !default;
-$darkText:              #333333 !default;
-$disabledText:          $lightText !default;
+$pageTitle-color:           #555A62 !default;
+$pageTitle-fontSize:        30px !default;
+$fontWeight-bold:           600 !default;
+$fontWeight-normal:         400 !default;
 
-$borderGray:            #959595 !default;
-$borderDark:            #393939 !default;
-$borderDarken:          #E4E4E4 !default;
-$borderLight:           #f2f2f2 !default;
-$borderShadow:          #DADADA !default;
-$shadowLight:           #EFEFEF !default;
 
-$input:                 #f7f7f7 !default;
+$regularText:               #505A5F !default;
+$lighterText:               #808A8F !default;
+$lightText:                 #A8A9AB !default;
+$ghostText:                 #EAEAEA !default;
+$darkText:                  #555A62 !default;
+$disabledText:              $lightText !default;
 
-$panelRed:              #ffdcdc !default;
-$panelRedText:          #cc0000 !default;
+$borderGray:                #959595 !default;
+$borderDark:                #393939 !default;
+$borderDarken:              #E4E4E4 !default;
+$borderLight:               #f2f2f2 !default;
+$borderShadow:              #DADADA !default;
+$shadowLight:               #EFEFEF !default;
 
-$panelYellow:           #FFFBEF !default;
-$panelYellowText:       #9E998E !default;
+$input:                     #f7f7f7 !default;
 
-$panelBlue:             #BBE1F5 !default;
-$panelBlueText:         #0272AC !default;
+$panelRed:                  #ffdcdc !default;
+$panelRedText:              #cc0000 !default;
+
+$panelYellow:               #FFFBEF !default;
+$panelYellowText:           #9E998E !default;
+
+$panelBlue:                 #BBE1F5 !default;
+$panelBlueText:             #0272AC !default;
+
+// Spacing
+$mainColumn-padding:        42px;
+
+// Animation
+$defaultTiming:             .3s;
+$defaultEasing:             ease-in-out;
+
+// Heights
+$site-padding:              32px;
+$site-padding_mobile:       18px;
+$site-width:                1400px;
+$site-widthPadded:          $site-width + 2 * $site-padding;
+
+$footer-minHeight:          60px;
+$header-minHeight:          60px;
+$panel-width:               250px;
+$panel-bg:                  #fafbfb;
+$panel-lineHeight:          1.5;
+$panel-verticalPadding:     5px;
+
+// Landing Page
+
+$landing-blockWidth:        350px;
+$landing-blockSpace:        24px;
+$landing-width:             $landing-blockWidth + $landing-blockWidth + $landing-blockSpace;
+$landing-widthPadded:       $landing-width + 2 * $site-padding;
+$landing-devBlock-color:    #333333;
+
+// Docs block
+$choiceApi-bg: rgba(white, .05);
+$choiceApi-bg_hover: rgba($vanillaPink, .7);
+
+// Versioning
+$fontSize-small:            12px;
+$fontSize-medium:           14px;
+$fontSize-large:            16px;
+$fontSize-extraLarge:       18px;
+$versioning-color:          #92959a;
+
+// Logos
+$logoHorizontal-width:      115px;
+$logoHorizontal-height:     34.28px;
+
+$logoVertical-width:      72px;
+$logoVertical-ratio:      69/118;
+$logoVertical-height:     $logoVertical-width * $logoVertical-ratio;
+
+// nav
+$navTier-padding:           12px;
+$navItem-bg:                #555A62;
+$navItem-horizontalPadding: 18px;
+
+// Hamburger
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+$hamburger-width                       : 24px;
+$hamburger-height                      : 22px;
+$hamburger-lineHeight                  : 3px;
+$hamburger-offset                      : ($hamburger-width - $hamburger-lineHeight * 3) / 2;
+
+// Media Queries
+$mediaQuery-mobile:         880px;

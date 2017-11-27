@@ -1,0 +1,208 @@
+.userContent {
+  display: block;
+  width: 100%;
+  font-size: $fontSize-large;
+  line-height: 1.6;
+  padding-top: 26px;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+  {
+    position: relative;
+    margin-top: 2.5em;
+
+    &::before {
+      display: block;
+      content: " ";
+      margin-top: -$header-minHeight;
+      height: $header-minHeight;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  h2 {
+    color: $vanillaPink;
+    font-size: 18px;
+    font-weight: $fontWeight-bold;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    em, i {
+      font-style: normal;
+      font-weight: normal;
+    }
+  }
+
+  h3 {
+    color: $darkText;
+    font-size: 17px;
+    font-weight: $fontWeight-bold;
+    margin-top: 1.6em;
+  }
+
+  h4 {
+    color: $vanillaBlue;
+    font-size: $fontSize-large;
+    font-weight: $fontWeight-bold;
+  }
+
+  ul, ol {
+    font-size: $fontSize-large;
+    margin: 0 0 1.6em;
+
+    li + li {
+      margin-top: .8em;
+    }
+
+    + h2 {
+      margin-top: 30px;
+    }
+  }
+
+  a {
+    color: $vanillaBlue;
+    position: relative;
+    z-index: 1;
+  }
+
+  code {
+    background: $faintPink;
+    color: $vanillaPink;
+    font-family: "Fira Mono", monospace;
+    font-size: 13px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    max-width: 100%;
+    word-break: break-all;
+  }
+
+  pre {
+    background: rgba($panelLight, .2);
+    color: $vanillaPink;
+    padding: 12px;
+    border-radius: 2px;
+    border: 1px solid rgba(#979797, .2);
+    margin-bottom: $fontSize-medium * 1.6;
+
+
+    code {
+      background: transparent;
+      padding: 0.2em 0 0;
+      font-size: $fontSize-medium;
+      overflow: scroll;
+      display: block;
+      word-break: keep-all;
+    }
+
+    + h2 {
+      margin-top: 30px;
+    }
+  }
+
+
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    code {
+      word-break: normal;
+    }
+
+    + h2 {
+      margin-top: 30px;
+    }
+
+    td {
+      text-align: left;
+      padding: 16px 8px;
+      font-size: $fontSize-medium;
+      line-height: 20px;
+    }
+
+    th {
+      text-align: left;
+      padding: 6px 8px;
+      font-size: $fontSize-medium;
+      line-height: 20px;
+    }
+
+    thead {
+      th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $borderDarken;
+        font-size: $fontSize-medium;
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid $borderDarken;
+        }
+      }
+
+      tr:last-child {
+        td {
+          border: 0px;
+        }
+      }
+    }
+  }
+
+  aside {
+    position: relative;
+    font-size: 12px;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    border-radius: 2px;
+    overflow: hidden;
+
+    &.warning {
+      color: $panelRedText;
+      background-color: $panelRed;
+    }
+
+    &.note {
+      color: $panelYellowText;
+      background-color: $panelYellow;
+    }
+
+    &.nav-edge {
+      position: relative;
+      margin-left: -32px;
+      padding: 0px;
+
+      img {
+        border: 0px;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid $borderDarken;
+  }
+}
+
+.table-scroll {
+  overflow: auto;
+
+  table {
+    min-width: 500px;
+  }
+
+  &.isExtraWide {
+    table {
+      min-width: 750px;
+    }
+  }
+}

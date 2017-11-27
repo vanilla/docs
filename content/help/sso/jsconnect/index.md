@@ -12,6 +12,17 @@ menu:
 aliases:
 - /features/sso/jsconnect
 ---
+
+## Why jsConnect?
+
+SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of time, and generally is not feasible for small-to-medium business owners.
+
+If you have a website that stores your user's identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we've abstracted most of the work to our side of the connection, and provide sample code for making your side.
+
+However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our [technical documentation](/help/sso/jsconnect/overview). The only exception is **WordPress** users, for which we've developed a ready-to-go [SSO plugin](https://wordpress.org/plugins/vanilla-forums/).
+
+Ready to learn more about jsConnect? Read on.
+
 ## jsConnect Concepts Overview
 
 Our SSO solution has a few basic assumptions:

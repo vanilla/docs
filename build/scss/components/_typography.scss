@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Open+Sans:400,400i,600,600i');
+
+
+h1,
+.pageTitle {
+  margin: 0;
+  font-size: 30px;
+  color: $pageTitle-color;
+  font-weight: $fontWeight-bold;
+  line-height: 1.2;
+
+  &.isGiantTitle {
+    font-size: 175px;
+    font-weight: $fontWeight-normal;
+  }
+}
+
+h2 {
+  margin: 0px;
+  color: $vanillaPink;
+  font-size: 24px;
+  font-weight: normal;
+
+  em, i {
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+h3 {
+  color: $darkText;
+  font-size: 16px;
+  font-weight: $fontWeight-bold;
+}
+
+h4 {
+  color: $vanillaBlue;
+  font-size: $fontSize-medium;
+  font-weight: normal;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 .8em;
+}
+
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 1.6em;
+}

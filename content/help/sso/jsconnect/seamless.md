@@ -17,24 +17,26 @@ aliases:
 jsConnect uses javascript to allow cross-domain single-signon with another site. We provide several <a title="Implementing Vanilla jsConnect Single-Signon on your Site" href="http://blog.vanillaforums.com/help/implementing-jsconnect-single-signon-on/#libraries">client libraries</a> to help you implement jsConnect on your site. If your site has been programmed in a language that doesn't have a client library than this is documentation is for you.
 
 Please note that this is technical documentation and requires knowledge programming to understand.
+
 <h2>Functions You'll Need</h2>
+
 jsConnect makes use of some functions that are available in most modern programming languages. You might want to do a bit of research to see if your language supports these functions because they are quite difficult to implement yourself.
 
-I've tried to make the functions a generic as possible, but they'll most likely be called something different in our language. A little googling should help you find what you need.
+We've tried to make the functions a generic as possible, but they'll most likely be called something different in our language. A little googling should help you find what you need.
 <ul>
 	<li><strong>timestamp</strong>: Return the current unix timestamp. Note that your server has to have it's time reasonably in synch with Vanilla's server.</li>
-	<li><strong>json encode</strong>: Encode an object/associative array in the json (ex. {"name": "Joe", "email": "joe@noreply.com"})</li>
+	<li><strong>JSON encode</strong>: Encode an object/associative array in the JSON (ex. {"name": "Joe", "email": "joe@noreply.com"})</li>
 	<li><strong>query string encode</strong>: Encode an object/associative array like a query string in RFC1738 (ex. name=Joe&amp;email=joe%40noreply.com)</li>
-	<li><strong>md5 or sha1</strong>: Call an md5 or sha1 hash on a string. We strongly recommend sha1.</li>
+	<li><strong>MD5, SHA1, SHA256</strong>: Create a hash of a string. We strongly recommend SHA256.</li>
 </ul>
 We also have an SSO module for automatically signing in to an embedded forum. If you are for sure going to just embed Vanilla then you might want to try this first.
 <ul>
-	<li><strong>base 64 encode</strong>: Encode a string in base64 notation.</li>
-	<li><strong>hmac sha1</strong>. Call the hmac(sha1) hashing algorithm on a string and a secret key.</li>
+	<li><strong>base64 encode</strong>: Encode a string in base64 notation.</li>
+	<li><strong>hmac</strong>. Call the HMAC-SHA256 hashing algorithm on a string and a secret key.</li>
 </ul>
 <h2>Concepts</h2>
 <h3><strong>JSONP</strong></h3>
-JSONP is a technology that browsers can use to get around the same-origin limitation of browsers and make cross-domain requests. Vanilla uses jsonp to transmit some of its SSO information. When you program a jsonp page it must follow a specific format. To best illustrate this lets use an example.
+JSONP is a technology that browsers can use to get around the same-origin limitation of browsers and make cross-domain requests. Vanilla uses JSONP to transmit some of its SSO information. When you program a jsonp page it must follow a specific format. To best illustrate this lets use an example.
 
 Let's say I want to request a jsonp response from the <strong>/getname.json</strong> page. What I'd do is make a request to that page with a querystring parameter called <strong>callback</strong> like this: <strong>/getname.json?callback=displayname.</strong>
 
@@ -57,11 +59,13 @@ When setting up jsConnect in Vanilla's dashboard there is a button to generate a
 
 If you've done any single sign-on or authentication work you've probably run into the concept of <strong>signing a request</strong>. Basically, you sign a request with your shared secret so that both sites know that the request came from a legitimate source. When you transmit user information you want to also sign that information so that I know it came from your site and not someone else trying to hack into Vanilla.
 
-jsConnect uses signatures to secure its requests. To sign a request you use a <strong>hash function</strong> such as md5 or sha1. You can select a variety of hash functions, but we recommend using <strong>sha1</strong> because it is more secure and widely available.
+jsConnect uses signatures to secure its requests. To sign a request you use a <strong>hash function</strong> such as MD5, SHA1 or SHA256. You can select a variety of hash functions, but we recommend using <strong>SHA256</strong> because it is more secure and widely available.
 
 We recommend getting jsConnect working without signatures first and then securing them. In Vanilla you can put your jsConnect connection in <strong>test mode</strong> and it won't check for a signature. <strong>Just make sure you don't go live without signing your requests</strong>.
+
 <h2>Site-Wide SSO</h2>
 For site-wide SSO you'll need to make a page on <strong>your site</strong> that provides authentication information. We call this your <strong>authentication page</strong>. You can call it whatever you want, but for the purposes of this documentation we'll call it <strong>/authenticate.json</strong>
+
 <h3><strong>Request</strong></h3>
 <strong></strong>GET /authenticate.json?parameters
 <h3>Parameters</h3>
@@ -161,7 +165,7 @@ Here is how you sign the user with the secret.
 "email=johndoe%40noreply.com&amp;name=John+Doe&amp;photourl=http%3A%2F%2Fnosite.com%2Fjohndoe.png&amp;uniqueid=1234";</pre>
 </li>
 	<li>Concatenate the signature with your secret and call your hash function around everything:
-<pre>signature = sha1(concat(signature_string, secret));</pre>
+<pre>signature = sha256(concat(signature_string, secret));</pre>
 </li>
 	<li>Now you want to add both your client_id and your signature back into the user.
 <pre>user = {

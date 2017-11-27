@@ -25,7 +25,7 @@ Want to help translate? Awesome! Here are some tips for creating great translati
 
 ## Installing locales
 
-1. Download the locale you want from the [Addon Directory](http://vanillaforums.org/addon/browse/locales/popular/2).
+1. Download the locale you want from the [Addon Directory](https://open.vanillaforums.com/addon/browse/all/popular/recent/).
 2. Upload the folder to your `locales` folder.
 3. In the Dashboard, go to `Addons > Locales`.
 4. Enable the locale.
@@ -33,7 +33,13 @@ Want to help translate? Awesome! Here are some tips for creating great translati
 
 ## Using multiple locales
 
-The [Multilingual plugin](http://vanillaforums.org/addon/multilingual-plugin) allows each user select their preference from all enabled locales.
+{{% cloudfeature %}}
+
+[Subcommunities](/help/multisite/#subcommunities) allow a single site to be split into multiple communities. Each community maps to a top level category and gets its own subfolder on the site. Everything inside this subfolder (categories, discussions, and anything else viewed from that subfolder) uses a locale specified in the dashboard. One site can have multiple subcommunities in different languages, and share the same user base, search system, and conversations.
+
+The [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) allows each user select their preference from all enabled locales.
+
+The Subcommunities plugin and the Mutlilingual plugin can't be activated at the same time.
 
 ## Overriding locales
 
@@ -49,8 +55,36 @@ $Definition['TranslationString3'] = "Override String 3";
 $Definition['TranslationString4'] = "Override String 4";
 ```
 
-You can override your default locale by adding a `conf/locale.php` file to your installation with additional definitions. Any definitions in this file will override your locale.
+### Overriding All Locales
 
-If you duplicate an entry's translation string, the latter one will take precedence. You can, however, assign the same override string to multiple translation strings.
+You can override your default locale by adding a `conf/locale.php` file to your installation with additional definitions. Any definitions in this file will override all locales.
 
-If you are using Multilingual to enable multiple locales, please note his override will effect **all** locales. There is currently no way to override multiple locales selectively.
+To find out what the translation strings for core components are please check our open source [Locales Repo](https://github.com/vanilla/locales). The core strings can be found in the [`tx-source/site_core.php`](https://github.com/vanilla/locales/blob/master/tx-source/site_core.php) file. 
+
+If you are using Subcommunities or the Multilingual Plugin to enable multiple locales, please note his override will effect **all** locales.
+
+### Overriding Locales with the Subcommunities plugin or the Multilingual plugin
+
+If you have [Subcommunities](/help/multisite/#subcommunities) or the [Multilingual plugin](https://open.vanillaforums.com/addon/multilingual-plugin) enabled you probably don't want to use the same translation for every locale. In this case you will have multiple locale override files. One per locale. Places these in the `locale/` folder of an [addon](/developer/addons) and name them `{locale-id}.php`. For example, the French language file would be located at `/plugins/<someaddon>/locale/fr.php` or `/themes/<sometheme>/locale/fr.php`.
+
+**`locale/fr.php`**
+```php
+<?php if (!defined('APPLICATION')) exit();
+
+// Note about what you're translating
+$Definition['TranslationString1'] = "Quelque chose en français";
+$Definition['TranslationString2'] = "Une autre chose en français";
+```
+
+**`locale/es.php`**
+```php
+<?php if (!defined('APPLICATION')) exit();
+
+// Note about what you're translating
+$Definition['TranslationString1'] = "Algo en español";
+$Definition['TranslationString2'] = "Otra cosa en español";
+```
+
+## Defining new translations strings
+
+If you are creating a custom theme or plugin for a multilingual community you may want to offer translations strings for text defined in your theme/plugin. Vanilla offers ways to define these strings in [Smarty Templates](/developer/smarty/functions/#function-t) and in [PHP](http://docs.vanillaforums.com/developer/framework/i18n/).

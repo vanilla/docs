@@ -7,10 +7,10 @@ tags:
 category: help
 menu:
   help:
-    identifier: role-permissions
-    weight: 100
+    identifier: roles-permissions
+    weight: 12
 aliases:
-- /features/roles-permissions
+- roles-permissions
 ---
 
 ## Overview

@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-
 body {
     background: $panelDark;
     color: $regularText;
@@ -9,14 +7,12 @@ body {
     .row {
         margin: 0px auto;
         width: 100%;
-        max-width: 1140px;
     }
 }
 
 .docs {
-    font-family: "Helvetica Neue", Helvetica, "Lato", Arial, "Lucida Grande", sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
-    font-weight: 300;
 }

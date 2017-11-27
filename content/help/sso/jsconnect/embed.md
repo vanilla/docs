@@ -27,7 +27,7 @@ Now, on to revising your embed code with some additional SSO information.
 Consider the embed code for Vanilla comments:
 
 ```
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript>
 
 /*** Required Settings: Edit BEFORE pasting into your web page ***/
 
@@ -46,7 +46,7 @@ vanilla.src = vanilla_forum_url + '/js/embed.js';
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vanilla);
 })();
 
-&lt;/script&gt;
+</script>
 ```
 
 If you declare <strong>vanilla_sso</strong> and give it the proper value then Vanilla will be able to sign in your user. Here is what you need to do to generate your SSO string:

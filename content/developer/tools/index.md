@@ -9,73 +9,76 @@ menu:
 aliases:
 - /developers/tools
 ---
-## Developer Tools
 
-Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem.
+Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All our developers use MacOS.
 
-### Languages, Standards & Formats
+## Stacks Supported
 
-* PHP & MySQL
-* Javascript
-* HTML & CSS
-* Smarty
-* Markdown & BBCode
-* JSON & XML
-* RSS & Atom
+* PHP 5.6 - 7.1 (as of Vanilla 2.5)
+* Unix, Windows, or OSX
+* [nginx, Apache, or IIS](http://docs.vanillaforums.com/developer/backend/)
+* MySQL, Percona, or MariaDB
 
-### Open Tools
+## Cloud Stack
 
-* git & GitHub
-* xdebug
-* PHPUnit
-* Composer
-* Hub
-* jQuery
-* Sass & Less
-* HtmLawed
-* CodeSniffer
-* PHPMailer
-
-### Internal Tools
-
-* HipChat
-* TeamworkPM
-* Transifex
-* Google Docs
-* Garden HTTP
-* Garden Console
-* Vanilla Porter
-* Lithe mobile theme
-* Minion forumbot
-* Jarvis chatbot
-
-### Cloud Stack
-
-* OpenStack
-* PHP 5.5
+* PHP 7.1
 * nginx
 * Percona
 * Varnish
-* memcached
+* [memcached](http://docs.vanillaforums.com/developer/backend/)
 * Zend OPcache
 * Sphinx
+* OpenStack
 
-### Stacks Supported
+## Developer Tools
 
-* Unix, Windows, or OSX
-* nginx, Apache, or IIS
-* MySQL, Percona, or MariaDB
-* PHP 5.3 - 5.6 (as of Vanilla 2.2)
+* homebrew
+* git
+* xdebug
+* PHPUnit
+* [Composer](https://github.com/vanilla/vanilla/blob/master/composer.json)
+* Hub
+* [CodeSniffer](https://github.com/vanilla/standards)
+* [Phing](https://github.com/vanilla/vanilla#building-with-phing)
+* Travis CI
+* Scrutinizer
 
-### Common Dev Apps
+## [Frontend Build](https://github.com/vanilla/vanilla/tree/master/applications/dashboard)
 
-* PhpStorm or NetBeans
-* Sequel Pro
+* Sass
+* SCSS-Lint
+* Yarn
+* Node.js
+
+## Libraries
+
+* [Garden](https://github.com/vanilla?q=garden) (our custom libraries on GitHub)
+* PHPMailer
+* HtmLawed
+* jQuery
+* NBBC
+* YAML
+* Smarty
+* PHP Markdown
+
+## Management
+
+* [GitHub](https://github.com/vanilla)
+* Transifex (translations)
+* ZenHub (sprints)
+* HipChat
+* Jarvis (chatbot)
+* CLA Assistant
+
+## Applications
+
+* PhpStorm or NetBeans (IDEs)
+* Sequel Pro (SQL manager)
 * Keka or YemuZip
-* MacDown or Mou
-* Kaleidoscope
+* MacDown or Mou (Markdown editor)
+* Kaleidoscope (diff tool)
 * Postman (Chrome App)
-* Balsamiq
+* Balsamiq (mockups)
 * 1Password
-* DeckSet
+* DeckSet (presentations using Markdown)
 

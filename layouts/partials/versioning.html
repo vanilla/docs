@@ -1,0 +1,21 @@
+{{ with .versioning }}
+<ul class="versionings">
+    {{ with .added}}
+    <li class="versioning versioning-added">
+        Available in Vanilla {{ . }}
+    </li>
+    {{ end }}
+
+    {{ with .deprecated}}
+    <li class="versioning versioning-depricated">
+        Deprecated as of Vanilla: {{ . }}
+    </li>
+    {{ end }}
+
+    {{ with .removed}}
+    <li class="versioning versioning-added">
+        Removed as of Vanilla: {{ . }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

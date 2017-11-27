@@ -1,0 +1,52 @@
+.choiceApi {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 60px;
+  user-select: none;
+}
+
+
+.choiceApi-link {
+  @include defaultTransition(background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: $choiceApi-bg;
+  border-radius: 2px;
+  padding: 22px 36px;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $choiceApi-bg_hover;
+  }
+}
+
+.choiceApi-title {
+  font-size: 24px;
+  display: block;
+  margin: 0;
+  color: inherit;
+  line-height: 1.2;
+}
+
+.choiceApi-p {
+  font-size: 13px;
+  color: inherit;
+  margin: 0;
+}
+
+.choiceApi-left {
+  max-width: 376px;
+}
+
+.choiceApi-right {
+  white-space: nowrap;
+  text-align: center;
+  flex-grow: 1;
+}
