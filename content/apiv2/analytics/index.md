@@ -1,40 +1,36 @@
 ---
-title: "Endpoint: analytics"
-tags: ["API"]
-category: "api"
+title: "Analytics"
+tags: ["API", "APIv2"]
+category: "apiv2"
 menu:
-  api:
+  apiv2:
     identifier: analytics
-    weight: 600
+    weight: 10
 ---
-
-*This is preliminary documentation.*
 
 ## /analytics/leaderboard
 
 ```http
-POST /api/v1/analytics/leaderboard.ext HTTP/1.1
+GET /api/v2/analytics/leaderboard HTTP/1.1
 Host: https://yoursite.vanillaforums.com
 ```
 
 Retrieve data for a site leaderboard.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__](../authentication): required
 
 ### Parameters
 
-Parameter             | Type       | Description
----                   | ---        | ---
-__`Board`__           | `string`   | [Type of leaderboard](#leaderboards).
-`Start`               | `string`   | Start of the time range (ISO 8601).
-`End`                 | `string`   | End of the time range (ISO 8601).
-`Limit`               | `integer`  | Maximum number of rows to return. Default: 10.
-`Filters`             | `array`    | [Event property filters](#filters)
-`Previous`            |`bool`      | Whether or not to include the previous timeframe. Including the previous time 
+Parameter | Type | Description
+--- | ---        | ---
+__`board`__ | `string` | [Type of leaderboard](#leaderboards).
+__`start`__ | `string` | Start of the time range (ISO 8601).
+__`end`__ | `string` | End of the time range (ISO 8601).
+`limit` | `integer` | Maximum number of rows to return. Default: 10.
 
 ### Leaderboards
 
-Leaderboards are specified by the `Board` parameter.  The following are valid values for that parameter: 
+Leaderboards are specified by the `board` parameter.  The following are valid values for that parameter: 
 
  * **top-posters**: Users with most posts.
  * **top-discussion-starters**: Users with most discussions.
@@ -51,73 +47,58 @@ Leaderboards are specified by the `Board` parameter.  The following are valid va
 
 ### Output
 
-The following is output from an example request for a user leaderboard.  It assumes a `Limit` of three.  The record property contains user row data, because this was a user leaderboard.  If it had been a discussion leaderboard request, the property would contain details about a discussion.
+The following is output from an example request for a user leaderboard.  It assumes a `limit` of three.  The record property contains user row data, because this was a user leaderboard.  If it had been a discussion leaderboard request, the property would contain details about a discussion.
 
 The record property has been pruned for this example.
 
 ```json
-{
-  "result": [
+[
     {
-      "record": {
-        "userID": 344,
-        "name": "userOne",
-        "url": "https://example.com/profile/userOne"
-        ...
-      },
-      "value": 737,
-      "position": 1,
-      "previous": 9
+        "id": 53738,
+        "position": 1,
+        "positionChange": "Rise",
+        "previous": 2,
+        "url": "http://yoursite.vanillaforums.com/profile?UserID=1234",
+        "title": null,
+        "count": 921
     },
     {
-      "record": {
-        "userID": 127,
-        "name": "userTwo",
-        "url": "https://example.com/profile/userTwo"
-        ...
-      },
-      "value": 679,
-      "position": 2,
-      "previous": 5
-    },
-    {
-      "record": {
-        "userID": 449,
-        "name": "userThree",
-        "link": "https://example.com/profile/userThree"
-        ...
-      },
-      "value": 460,
-      "position": 3,
-      "previous": 1
+        "id": 62929,
+        "position": 2,
+        "positionChange": "Fall",
+        "previous": 1,
+        "url": "http://yoursite.vanillaforums.com/profile?UserID=5678",
+        "title": null,
+        "count": 816
     }
-  ]
-}
+]
 ```
 
 ## /analytics/query
 
 ```http
-POST /api/v1/analytics/query.ext HTTP/1.1
+POST /api/v2/analytics/query HTTP/1.1
 Host: https://yoursite.vanillaforums.com
 ```
 
 Perform a query against collected analytics data.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__](../authentication): required
 
 The body of the request must be a JSON-encoded object.  Each property of the object should be a supported parameter.
 
 ### Parameters
 
-Parameter             | Type      | Description
----                   | ---       | ---
-__`AnalysisType`__    | `string`  | [Type of analysis to perform](#analysis-types)
-__`EventCollection`__ | `string`  | [Collection of events](#event-collections)
-__`Timeframe`__       | `array`   | [Range of time to target](#timeframe)
-`TargetProperty`      | `string`  | An event property to perform the analysis on
-`Filters`             | `array`   | [Event property filters](#filters)
-`Interval`            | `string`  | [Result interval](#interval)
+Parameter | Type | Description
+--- | --- | ---
+__`type`__ | `string` | [Type of analysis to perform](#analysis-types)
+__`collection`__ | `string` | [Collection of events](#event-collections)
+__`start`__ | `string` | Start of the time range (ISO 8601).
+__`end`__ | `string` | End of the time range (ISO 8601).
+`property` | `string` | An event property to perform the analysis on
+`filters` | `array` | [Event property filters](#filters)
+`interval` | `string` | [Result interval](#interval)
+`group` | `string` | An event property to group results by.
 
 ### Analysis Types
 
@@ -129,11 +110,11 @@ Analytics queries require an analysis type.  This type will dictate how the data
  * **count_unique**: Count the total number of unique property values.
  * **median**: Calculate the median value for a property.
 
-Most analysis types are performed on a specific event property, so they require the `TargetProperty` parameter to be specified. **count** does not require a `target_property` parameter.
+Most analysis types are performed on a specific event property, so they require the `property` parameter to be specified. **count** does not require a `property` parameter.
 
 ### Event Collections
 
-All events captured by Vanilla are grouped into one of the following categories.  The collection is specified by passing the `EventCollection` parameter to the analytics query.
+All events captured by Vanilla are grouped into one of the following categories.  The collection is specified by passing the `collection` parameter to the analytics query.
 
 #### page
 
@@ -231,7 +212,7 @@ Valid types for the session collection are:
 
 Data queried from analytics can be filtered by collection and event properties.  The most common type of filtering would be based on the `type` property.  For example, if you wanted to see new discussions, you'd query the `post` collection and set a filter on the `type` property being equal to "discussion_add".  The available types for the various collections are documented in their individual sections.  In addition to `type`, some additional commonly-used filtering properties are included in those sections, if available.
 
-Each element in the `Filters` array should be an object with two properties: `propertyName` and `propertyValue`.  An optional property, `operator`, can be specified.  There are several comparison operators to choose from:
+Each element in the `Filters` array should be an object with two properties: `prop` and `val`.  An optional property, `op`, can be specified.  There are several comparison operators to choose from:
 
  * **eq**: Equal
  * **ne**: Not equal
@@ -241,35 +222,27 @@ Each element in the `Filters` array should be an object with two properties: `pr
  * **lte**: Less than or equal to
  * **in**: Verify a property's value is in an array
 
-If `operator` is not specified, it is assumed to be "eq"
-
 For example, when querying the post collection, you could apply a set of filters that only queried the first answers to a question with the following:
 
 ```json
-"Filters": [
-  {
-    "propertyName": "type",
-    "propertyValue": "comment_add"
-  },
-  {
-    "propertyName": "discussionType",
-    "propertyValue": "Question"
-  },
-  {
-    "propertyName": "commentMetric.firstComment",
-    "propertyValue": "1"
-  }
-]
-```
-
-### Timeframe
-
-Timeframes should be specified as an object with two properties: `start` and `end`.  These values should be ISO 8601 datetime strings (e.g. 2016-12-01T00:00:00.000Z).
-
-```json
-"Timeframe": {
-  "start": "2016-12-01T00:00:00.000Z",
-  "end": "2016-12-31T00:00:00.000Z"
+{
+    "filters": [
+        {
+            "prop": "type",
+            "op": "eq",
+            "val": "comment_add"
+        },
+        {
+            "prop": "discussionType",
+            "op": "eq",
+            "val": "Question"
+        },
+        {
+            "prop": "commentMetric.firstComment",
+            "op": "eq",
+            "val": true
+        }
+    ]
 }
 ```
 
