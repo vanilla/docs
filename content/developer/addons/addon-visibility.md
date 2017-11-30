@@ -62,7 +62,7 @@ The following method works only with `theme` type addons. A theme can be shown o
 {
     "Garden": {
         "Themes": {
-            "Visible": 'mysite.vanillacommunities.com, mysite.vanillastaging.com'
+            "Visible": "mysite.vanillacommunities.com, mysite.vanillastaging.com"
         }
     }
 }
