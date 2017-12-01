@@ -1478,14 +1478,9 @@ p {
   padding: 0px;
 }
 
-.userContent aside.nav-edge img {
-  border: 0px;
-}
-
 .userContent img {
   max-width: 100%;
   height: auto;
-  border: 1px solid #E4E4E4;
 }
 
 .table-scroll {
