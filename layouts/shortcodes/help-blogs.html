@@ -16,7 +16,7 @@
     <script>
         $(function(){
             var request = new XMLHttpRequest();
-            request.open('GET', 'https://blog.vanillaforums.com/feed/', true);
+            request.open('GET', 'https://blog.vanillaforums.com/rss.xml', true);
 
             request.onload = function() {
                 if (request.status >= 200 && request.status < 400) {
