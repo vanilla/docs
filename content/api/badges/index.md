@@ -123,7 +123,7 @@ All fields are optional except Badge. Updates are sparse, so supply only the fie
 ## /badges/give
 
 ```http
-POST /api/v1/badges/giveuser.ext HTTP/1.1
+POST /api/v1/badge/giveuser.ext HTTP/1.1
 HOST: https://yoursite.vanillaforums.com
 ```
 
@@ -137,7 +137,7 @@ Gives an existing user a badge.
 
 | Parameter  | Type                                  | Description                  |
 | ---------- | ------------------------------------- | ---------------------------- |
-| __`User`__ | [`smart id`](../smart-id)  | Required. The user who should get the badge|
+| __`UserID`__ | [`smart id`](../smart-id)  | Required. The user who should get the badge|
 | __`BadgeID`__ | integer | Required. The ID of the badge to give|
 | `Reason`| `string` | Optional friendly message to provide with the badge|
 
