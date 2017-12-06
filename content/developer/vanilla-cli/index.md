@@ -95,6 +95,11 @@ Arguments should be file paths or globs to be linted. The default arguments are 
 
 Be sure to put quotes around glob arguments. If there are no quotes a glob bash/zsh/fish may automatically expand the glob, which will prevent files from being ignored properly.
 
+### Linting Rules
+For scripts the CLI bundles the [default ESLint rules](https://eslint.org/docs/rules/). It also bundles its config which can be found [in the Github repo](https://github.com/vanilla/vanilla-cli/blob/master/src/NodeTools/Linter/configs/.eslintrc).
+
+For stylesheets the CLI bundles both [the default Stylelint rules](https://stylelint.io/user-guide/rules/) and the [stylelint-scss rules](https://github.com/kristerkari/stylelint-scss). It bundles a very minimal config which can be find [in the Github repo](https://github.com/vanilla/vanilla-cli/blob/master/src/NodeTools/Linter/configs/.stylelintrc).
+
 ## Addon Utilities
 
 The Vanilla CLI offers a few utilities to make managing your addons easier. They only work with addons currently installed in a Vanilla installation and function by using Vanilla's built in addon manager to do the heavy lifting. As a result, these commands require you to point them to the vanilla directory with the `--vanillasrc` parameter.
