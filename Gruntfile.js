@@ -27,8 +27,12 @@ module.exports = function (grunt) {
                 tasks: ['sass_globbing', 'sass', 'postcss']
             },
             hugo: {
-                files: ['content/**', 'layouts/**', 'data/**', 'static/**', '!static/js/lunr-index.json'],
+                files: ['content/**', 'layouts/**', 'data/**', 'static/**', 'archetypes/**', 'config.yaml', 'config-dev.yaml', '!static/js/lunr-index.json'],
                 tasks: ['hugo:dev', 'index']
+            },
+            js: {
+                files: ['build/js/**/*.js'],
+                tasks: ['js']
             }
         },
 
@@ -36,7 +40,7 @@ module.exports = function (grunt) {
             docs: {
                 options: {
                     hostname: '127.0.0.1',
-                    port: 8081,
+                    port: 1313,
                     protocol: 'http',
                     base: 'public',
                     livereload: true
@@ -88,11 +92,14 @@ module.exports = function (grunt) {
                 map: true, // inline sourcemaps
 
                 processors: [
-                    require('autoprefixer')({browsers: 'last 2 versions'}) // add vendor prefixes
+                    require('autoprefixer')({browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"]}) // add vendor prefixes
                 ]
             },
             dist: {
-                src: 'static/css/**/*.css'
+                src: [
+                    'public/css/**/*.css',
+                    '!public/css/fonts/**/*.css'
+                ]
             }
         },
 
@@ -107,24 +114,22 @@ module.exports = function (grunt) {
             }
         },
 
-//        filerev: {
-//            options: {
-//                algorithm: 'md5',
-//                length: 8
-//            },
-//            json: {
-//                src: 'public/js/*.json'
-//            },
-//            images: {
-//                src: 'public/img/**/*.{svg,png,jpg}'
-//            },
-//            assets: {
-//                src: [
-//                    'public/js/**/*.js',
-//                    'public/css/**/*.css'
-//                ]
-//            }
-//        },
+        jshint: {
+            options: {
+                force: false,
+                jshintrc: 'build/js/.jshintrc'
+            },
+            all: ['build/js/src/**/*.js']
+        },
+
+        concat: {
+            dist: {
+                src: [
+                    'build/js/**/*.js'
+                ],
+                dest: 'static/js/custom.js'
+            }
+        },
 
         lunr_index: {
             options: {
@@ -158,19 +163,35 @@ module.exports = function (grunt) {
     /*
      * Builds the whole site from scratch
      *
+     * clean: revisions and minifies files
      * hugo: prepares public/ HTML from content
      * css: builds css from scss
      * js: prepares javascript
      * index: runs lunr index
-     * clean: revisions and minifies files
      */
     grunt.registerTask('build', [
         'clean',
         'hugo',
         'css',
         'js',
-        'index',
-        'varnish'
+        'index'
+    ]);
+
+    /*
+     * Builds the whole site from scratch - in dev mode
+     *
+     * clean: revisions and minifies files
+     * hugo: prepares public/ HTML from content
+     * css: builds css from scss
+     * js: prepares javascript
+     * index: runs lunr index
+     */
+    grunt.registerTask('buildDev', [
+        'clean',
+        'hugo:dev',
+        'css',
+        'js',
+        'index'
     ]);
 
     /*
@@ -186,24 +207,6 @@ module.exports = function (grunt) {
         'postcss'
     ]);
 
-    /*
-     * This task would perform javascript related tasks
-     */
-    grunt.registerTask('js', [
-
-    ]);
-
-    /*
-     * This task cleans up the generated HTML
-     */
-    grunt.registerTask('varnish', [
-//        'useminPrepare',
-//        'concat',
-//        'uglify',
-//        'cssmin',
-//        'filerev',
-//        'usemin'
-    ]);
 
     grunt.registerTask('index', [
         'lunr_index'
@@ -213,10 +216,12 @@ module.exports = function (grunt) {
      * Allows live editing
      *
      * connect: creates a server
+     * buildDev: build site in dev mode
      * watch: waits for changes to source files and re-runs grunt tasks
      */
     grunt.registerTask('edit', [
         'connect',
+        'buildDev',
         'watch'
     ]);
 
@@ -225,6 +230,14 @@ module.exports = function (grunt) {
      */
     grunt.registerTask('push', [
         'gh-pages:push'
+    ]);
+
+    /*
+     * Javscript tasks
+     */
+    grunt.registerTask('js', [
+        'concat',
+        'jshint'
     ]);
 
     /*
@@ -312,10 +325,9 @@ module.exports = function (grunt) {
         args = [
             '--destination=./' + options.dest
         ];
+
         if (target === 'dev') {
             args.push('--config=' + path.resolve('./config-dev.yaml'));
-            args.push('--buildDrafts=true');
-            args.push('--buildFuture=true');
         } else {
             args.push('--config=' + path.resolve('./config.yaml'));
         }

@@ -3,6 +3,7 @@ title: Help and Training
 tags:
 - Training
 category: "help"
+layout: "_single"
 menu:
   help:
     identifier: help

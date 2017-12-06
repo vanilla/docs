@@ -7,9 +7,9 @@ category: help
 menu:
   developer:
     identifier: embedding
-    weight: 100
 aliases:
 - /features/embedding
+- /help/forum-settings/embedding
 ---
 
 ## Embedding Forum

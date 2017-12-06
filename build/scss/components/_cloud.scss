@@ -1,9 +1,37 @@
-.docs-content {
-    #content {
-        .cloudfeature {
-            img {
-                border: 0;
-            }
-        }
+.cloudfeature {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    color: $panelBlueText;
+    background-color: $panelBlue;
+}
+
+
+.cloudFeature-image {
+    border: 0 !important;
+    margin-right: 10px;
+}
+
+.cloudfeature-p {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.cloudFeature-learnMore {
+    border-bottom: 1px dotted $vanillaBlue;
+    outline: none;
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 85px;
+    margin-left: 15px;
+}
+
+@include mediaQuery-mobile {
+    .cloudFeature-image {
+        display: none;
     }
 }

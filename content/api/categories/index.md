@@ -17,9 +17,11 @@ Host: https://yoursite.vanillaforums.com
 
 Adds a new category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type      | Description
 ---                 | ---       | ---
@@ -34,6 +36,8 @@ __`Description`__   | `string`  | Description of this category
 `Permissions.RoleID`| `integer` | The ID of the role to set the permissions for.
 `Permissions.*`     | `boolean` | Each permission is a dot-separated key with a boolean value. The basic permissions are Vanilla.Discussions.View, Vanilla.Discussions.Add, Vanilla.Discussions.Edit, Vanilla.Discussions.Announce, Vanilla.Discussions.Sink, Vanilla.Discussions.Close, Vanilla.Discussions.Delete, Vanilla.Comments.Add, Vanilla.Comments.Edit, Vanilla.Comments.Delete
 
+{{% /scrollableTables %}}
+
 ## /categories/edit
 
 ```http
@@ -43,9 +47,11 @@ Host: https://yoursite.vanillaforums.com
 
 Edits an existing category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type      | Description
 ---                 | ---       | ---
@@ -63,6 +69,8 @@ __`Category`__      | `string`  | Category to be edited (Name, use if no ID)
 `Permissions.RoleID`| `integer` | The ID of the role to set the permissions for.
 `Permissions.*`     | `boolean` | Each permission is a dot-separated key with a boolean value. The basic permissions are Vanilla.Discussions.View, Vanilla.Discussions.Add, Vanilla.Discussions.Edit, Vanilla.Discussions.Announce, Vanilla.Discussions.Sink, Vanilla.Discussions.Close, Vanilla.Discussions.Delete, Vanilla.Comments.Add, Vanilla.Comments.Edit, Vanilla.Comments.Delete
 
+{{% /scrollableTables %}}
+
 ## /categories/delete
 
 ```http
@@ -72,14 +80,18 @@ Host: https://yoursite.vanillaforums.com
 
 Deletes an existing category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ### Parameters
+
+{{% scrollableTables %}}
 
 Parameter           | Type      | Description
 ---                 | ---       | ---
 __`CategoryID`__    | `integer` | Category to be deleted (ID, use if no Name)
 __`Category`__      | `string`  | Category to be deleted (Name, use if no ID)
+
+{{% /scrollableTables %}}
 
 ## /categories/get
 
@@ -90,7 +102,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a single category.
 
-[__Authentication__](../#making-api-calls): required
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): required
 
 ## /categories/list
 
@@ -101,7 +113,7 @@ Host: https://yoursite.vanillaforums.com
 
 Get a list of categories.
 
-[__Authentication__](../#making-api-calls): optional  
+[__Authentication__]({{< relref "/api/index.md#making-api-calls" >}}): optional  
 If not provided, perspective will be that of a guest.
 
 ### Parameters

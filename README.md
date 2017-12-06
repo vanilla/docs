@@ -42,6 +42,46 @@ The `content/api` folder is for API documentation and api-related information (s
 
  * Consciously build menus using the front-matter
 
+
+## Versioning
+
+We've got a feature to add versioning to the docs. 
+
+## Versioning the Page
+In the "front matter" section, add the following:
+
+~~~
+versioning:
+  added: 2.0
+  deprecated: 2.1
+  removed: 2.3
+~~~
+
+This will set the versioning info right under the page title. Only add the info you need. So for example, if a feature has been added and is not deprecated, you'd enter:
+
+~~~
+versioning:
+  added: 2.0
+~~~
+
+
+## Versioning a section
+
+If you do not wish to version the entire page, you can insert a shortcode anywhere in your markdown file to add versioning.
+
+Here's an example:
+
+~~~
+{{% versioning added="2.0" deprecated="2.1" removed="2.3" %}}
+~~~
+
+Only add the info you need. So for example, if a feature has been added and is not deprecated, you'd enter:
+
+~~~
+{{% versioning added="2.0" %}}
+~~~
+
+
 ## Technical Setup
 
 These documents are built using the [Hugo](https://gohugo.io) static site generator. The content is formatted in Markdown and the templates use the [Go html/template](http://gohugo.io/templates/go-templates/) library. The generator supports both partials and shortcodes (partials that can be used in the content too).
@@ -58,8 +98,8 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 	* OS X: `$ brew install yarn`
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
-3. From the root of the folder, use `yarn` to install the project: `$ yarn install`
-4. Verifiy that you have `hugo-cli` install globally: `$ yarn install -g hugo-cli`
+3. Install Hugo `brew install hugo` [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/) OR if you already have hugo, run `brew upgrade hugo`
+4. From the root of the folder, use `yarn` to install the project: `$ yarn install`
 
 That should be it, you now have a working copy of the docs.
 
@@ -76,6 +116,13 @@ When you're done writing docs or making edits, just create a pull-request agains
 
 #### Publishing (for maintainers)
 
-Publishing is easy. Just build the site statically using `$ grunt build` and then push it to the `gh-pages` branch using `$ grunt push`. 
+Publishing is easy. Just commit your changes to master and wait for them to be automatically deployed live. **DO NOT MANUALLY DEPLOY THIS REPOSITORY**. You'll break it.
 
-Note: **Having built the site using the live editor is NOT SUFFICIENT for a push**, and will likely break the deployment. Always deploy a freshly built site using `grunt build`.
+#### Troubleshooting
+
+"-bash: grunt: command not found" error? Try `npm install -g grunt-cli`.
+
+"Warning: Error: not found: hugo Use --force to continue." error? Try `brew install hugo`.
+
+"Warning: Task "sass" not found. Use --force to continue." error? Try `npm install -g node-sass`. Still a problem or already had that? Maybe try `npm rebuild node-sass`.
+

@@ -1,8 +1,16 @@
 <div class="docs-title">
-    <h1>{{ .Title }}</h1>
+    <h1 class="pageTitle">{{ .Title }}</h1>
     {{ if .IsPage }}
     <div class="docs-page docs-improve">
-        {{ $File := .File }}  {{with $File.Path }}<a href="https://github.com/vanilla/docs/edit/master/content/{{ $File.Dir }}{{ $File.LogicalName }}"><i class="fa fa-pencil"></i>Improve this document</a>{{ end }}
+        {{ $File := .File }}
+        {{with $File.Path }}
+        <a href="https://github.com/vanilla/docs/edit/master/content/{{ $File.Dir }}{{ $File.LogicalName }}" class="editPage" title="Improve this document">
+            <svg class="icon pencilIcon">
+                <title>Pencil</title>
+                <use class="icon-pencil" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-edit"></use>
+            </svg>
+        </a>
+        {{ end }}
     </div>
     {{ end }}
 </div>

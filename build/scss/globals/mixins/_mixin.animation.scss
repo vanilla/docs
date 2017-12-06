@@ -1,0 +1,9 @@
+@mixin defaultTransition($properties...) {
+  transition: $properties $defaultTiming $defaultEasing;
+}
+
+@mixin wackyTransition($timing: $defaultTiming, $properties...) {
+  transition-property: $properties;
+  transition-duration: $defaultTiming;
+  transition-timing-function: cubic-bezier(.8, .8, .25, 1.25);
+}

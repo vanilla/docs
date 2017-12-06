@@ -15,8 +15,6 @@ aliases:
 
 Once a controller method is called to handle the request, how is the xhtml of the page put together? **Views**. There are two types of views in Garden: "Views" and "Master Views". A view relates directly to the controller method that called it and handles rendering content related to that request. You can typically think of a view as the content for that page. For example, if a `Vanilla->Discussion->All()` method is called, the view for that method would handle rendering all of the discussions. Everything that is rendered around the discussions is handled by the Master View. The Master View allows you to create a consistent layout for the pages in the application. A single master view defines the look and feel and standard behavior for all of the pages (or a group of pages) in the application. Let's go back to the filesystem so you can get a better picture. In the following example, the request in the url would have been: `http://myserver.com/garden/profile/index/mark`. So, this means that Garden's "Profile" controller was requested, the "index" method was requested from the profile controller, and the first argument into the index method is "mark". In other words, the request was: `$ProfileController->Index('mark');`
 
-<center><img class="Border" title="Views" src="http://markosullivan.ca/blog/wp-content/uploads/2008/12/fs-views.gif" alt="Views" width="417" height="687" /></center>
-
 Let's take a look at the profile controller's index method:
 
 ```php

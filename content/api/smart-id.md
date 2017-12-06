@@ -56,6 +56,8 @@ In situations where your system is providing SSO services, you would substitute 
 
 Currently, we support Smart ID for the following tables:
 
+{{% scrollableTables %}}
+
 Name            | Table             | Description
 ---             | ---               | ---
 __`Badge`__     | `GDN_Badge`       | Stores Vanilla badges by `BadgeID`
@@ -63,6 +65,8 @@ __`Category`__  | `GDN_Category`    | Stores Vanilla categories by `CategoryID`
 __`Rank`__      | `GDN_Rank`        | Stores Vanilla ranks by `RankID`
 __`Role`__      | `GDN_Role`        | Stores Vanilla roles by `RoleID`
 __`User`__      | `GDN_User`        | Stores Vanilla users by `UserID`
+
+{{% /scrollableTables %}}
 
 ### Caveats
 

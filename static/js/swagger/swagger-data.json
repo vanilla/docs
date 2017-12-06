@@ -1,0 +1,2656 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Vanilla API",
+        "description": "API access to your community.",
+        "version": "2.0-alpha"
+    },
+    "host": "example.com",
+    "basePath": "/api/v2",
+    "paths": {
+        "/categories": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "List categories.",
+                "parameters": [
+                    {
+                        "name": "parentCategoryID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Parent category ID."
+                    },
+                    {
+                        "name": "parentCategoryCode",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Parent category URL code."
+                    },
+                    {
+                        "name": "maxDepth",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "",
+                        "default": 2
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 100
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "categoryID": {
+                                        "type": "integer",
+                                        "description": "The ID of the category."
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The name of the category."
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "minLength": 0,
+                                        "description": "The description of the category.",
+                                        "allowNull": true
+                                    },
+                                    "urlCode": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The URL code of the category."
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The URL to the category."
+                                    },
+                                    "countDiscussions": {
+                                        "type": "integer",
+                                        "description": "Total discussions in the category."
+                                    },
+                                    "countComments": {
+                                        "type": "integer",
+                                        "description": "Total comments in the category."
+                                    },
+                                    "countAllDiscussions": {
+                                        "type": "integer",
+                                        "description": "Total of all discussions in a category and its children."
+                                    },
+                                    "countAllComments": {
+                                        "type": "integer",
+                                        "description": "Total of all comments in a category and its children."
+                                    },
+                                    "depth": {
+                                        "type": "integer"
+                                    },
+                                    "children": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "categoryID": {
+                                                    "type": "integer",
+                                                    "description": "The ID of the category."
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "minLength": 1,
+                                                    "description": "The name of the category."
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "minLength": 0,
+                                                    "description": "The description of the category.",
+                                                    "allowNull": true
+                                                },
+                                                "urlCode": {
+                                                    "type": "string",
+                                                    "minLength": 1,
+                                                    "description": "The URL code of the category."
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "minLength": 1,
+                                                    "description": "The URL to the category."
+                                                },
+                                                "countDiscussions": {
+                                                    "type": "integer",
+                                                    "description": "Total discussions in the category."
+                                                },
+                                                "countComments": {
+                                                    "type": "integer",
+                                                    "description": "Total comments in the category."
+                                                },
+                                                "countAllDiscussions": {
+                                                    "type": "integer",
+                                                    "description": "Total of all discussions in a category and its children."
+                                                },
+                                                "countAllComments": {
+                                                    "type": "integer",
+                                                    "description": "Total of all comments in a category and its children."
+                                                },
+                                                "depth": {
+                                                    "type": "integer"
+                                                },
+                                                "children": {
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "categoryID",
+                                                "name",
+                                                "description",
+                                                "urlCode",
+                                                "url",
+                                                "countDiscussions",
+                                                "countComments",
+                                                "countAllDiscussions",
+                                                "countAllComments",
+                                                "depth",
+                                                "children"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "categoryID",
+                                    "name",
+                                    "description",
+                                    "urlCode",
+                                    "url",
+                                    "countDiscussions",
+                                    "countComments",
+                                    "countAllDiscussions",
+                                    "countAllComments",
+                                    "depth"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Add a category.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CategoryPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryID": {
+                                    "type": "integer",
+                                    "description": "The ID of the category."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The name of the category."
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "description": "The description of the category.",
+                                    "allowNull": true
+                                },
+                                "urlCode": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL code of the category."
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL to the category."
+                                },
+                                "countDiscussions": {
+                                    "type": "integer",
+                                    "description": "Total discussions in the category."
+                                },
+                                "countComments": {
+                                    "type": "integer",
+                                    "description": "Total comments in the category."
+                                },
+                                "countAllDiscussions": {
+                                    "type": "integer",
+                                    "description": "Total of all discussions in a category and its children."
+                                },
+                                "countAllComments": {
+                                    "type": "integer",
+                                    "description": "Total of all comments in a category and its children."
+                                },
+                                "parentCategoryID": {
+                                    "type": "integer",
+                                    "allowNull": true,
+                                    "description": "Parent category ID."
+                                }
+                            },
+                            "required": [
+                                "categoryID",
+                                "name",
+                                "description",
+                                "urlCode",
+                                "url",
+                                "countDiscussions",
+                                "countComments",
+                                "countAllDiscussions",
+                                "countAllComments",
+                                "parentCategoryID"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/categories/search": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Category name filter."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 200
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Expand with the parent record."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "categoryID": {
+                                        "type": "integer",
+                                        "description": "The ID of the category."
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The name of the category."
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "minLength": 0,
+                                        "description": "The description of the category.",
+                                        "allowNull": true
+                                    },
+                                    "urlCode": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The URL code of the category."
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The URL to the category."
+                                    },
+                                    "countDiscussions": {
+                                        "type": "integer",
+                                        "description": "Total discussions in the category."
+                                    },
+                                    "countComments": {
+                                        "type": "integer",
+                                        "description": "Total comments in the category."
+                                    },
+                                    "countAllDiscussions": {
+                                        "type": "integer",
+                                        "description": "Total of all discussions in a category and its children."
+                                    },
+                                    "countAllComments": {
+                                        "type": "integer",
+                                        "description": "Total of all comments in a category and its children."
+                                    },
+                                    "parentCategoryID": {
+                                        "type": "integer",
+                                        "allowNull": true,
+                                        "description": "Parent category ID."
+                                    }
+                                },
+                                "required": [
+                                    "categoryID",
+                                    "name",
+                                    "description",
+                                    "urlCode",
+                                    "url",
+                                    "countDiscussions",
+                                    "countComments",
+                                    "countAllDiscussions",
+                                    "countAllComments",
+                                    "parentCategoryID"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categories/{id}": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Get a category.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The category ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryID": {
+                                    "type": "integer",
+                                    "description": "The ID of the category."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The name of the category."
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "description": "The description of the category.",
+                                    "allowNull": true
+                                },
+                                "urlCode": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL code of the category."
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL to the category."
+                                },
+                                "countDiscussions": {
+                                    "type": "integer",
+                                    "description": "Total discussions in the category."
+                                },
+                                "countComments": {
+                                    "type": "integer",
+                                    "description": "Total comments in the category."
+                                },
+                                "countAllDiscussions": {
+                                    "type": "integer",
+                                    "description": "Total of all discussions in a category and its children."
+                                },
+                                "countAllComments": {
+                                    "type": "integer",
+                                    "description": "Total of all comments in a category and its children."
+                                },
+                                "parentCategoryID": {
+                                    "type": "integer",
+                                    "allowNull": true,
+                                    "description": "Parent category ID."
+                                }
+                            },
+                            "required": [
+                                "categoryID",
+                                "name",
+                                "description",
+                                "urlCode",
+                                "url",
+                                "countDiscussions",
+                                "countComments",
+                                "countAllDiscussions",
+                                "countAllComments",
+                                "parentCategoryID"
+                            ]
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Update a category.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CategoryPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryID": {
+                                    "type": "integer",
+                                    "description": "The ID of the category."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The name of the category."
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "description": "The description of the category.",
+                                    "allowNull": true
+                                },
+                                "urlCode": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL code of the category."
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL to the category."
+                                },
+                                "countDiscussions": {
+                                    "type": "integer",
+                                    "description": "Total discussions in the category."
+                                },
+                                "countComments": {
+                                    "type": "integer",
+                                    "description": "Total comments in the category."
+                                },
+                                "countAllDiscussions": {
+                                    "type": "integer",
+                                    "description": "Total of all discussions in a category and its children."
+                                },
+                                "countAllComments": {
+                                    "type": "integer",
+                                    "description": "Total of all comments in a category and its children."
+                                },
+                                "parentCategoryID": {
+                                    "type": "integer",
+                                    "allowNull": true,
+                                    "description": "Parent category ID."
+                                }
+                            },
+                            "required": [
+                                "categoryID",
+                                "name",
+                                "description",
+                                "urlCode",
+                                "url",
+                                "countDiscussions",
+                                "countComments",
+                                "countAllDiscussions",
+                                "countAllComments",
+                                "parentCategoryID"
+                            ]
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Delete a category.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The category ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/categories/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Get a category for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The category ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryID": {
+                                    "type": "integer",
+                                    "description": "The ID of the category."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The name of the category."
+                                },
+                                "parentCategoryID": [],
+                                "urlCode": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL code of the category."
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "description": "The description of the category.",
+                                    "allowNull": true
+                                }
+                            },
+                            "required": [
+                                "categoryID",
+                                "name",
+                                "parentCategoryID",
+                                "urlCode",
+                                "description"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/comments": {
+            "get": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "List comments.",
+                "parameters": [
+                    {
+                        "name": "discussionID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The discussion ID."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": "30",
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "insertUserID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by author."
+                    },
+                    {
+                        "name": "after",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Limit to comments after this date.",
+                        "format": "date-time"
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records.",
+                        "default": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Comment"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Add a comment.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CommentPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    }
+                }
+            }
+        },
+        "/comments/{id}": {
+            "get": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Get a comment.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The comment ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Update a comment.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CommentPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Delete a comment.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The comment ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/comments/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Get a comment for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The comment ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "commentID": {
+                                    "type": "integer",
+                                    "description": "The ID of the comment."
+                                },
+                                "discussionID": {
+                                    "type": "integer",
+                                    "description": "The ID of the discussion."
+                                },
+                                "body": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The body of the comment."
+                                },
+                                "format": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The input format of the comment."
+                                }
+                            },
+                            "required": [
+                                "commentID",
+                                "discussionID",
+                                "body",
+                                "format"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/conversations": {
+            "get": {
+                "tags": [
+                    "Conversations"
+                ],
+                "summary": "List user conversations.",
+                "parameters": [
+                    {
+                        "name": "insertUserID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by author. (Has no effect if participantUserID is used)"
+                    },
+                    {
+                        "name": "participantUserID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by participating user."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": "50",
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Conversation"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Conversations"
+                ],
+                "summary": "Add a conversation.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConversationPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Conversation"
+                        }
+                    }
+                }
+            }
+        },
+        "/conversations/{id}": {
+            "get": {
+                "tags": [
+                    "Conversations"
+                ],
+                "summary": "Get a conversation.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The conversation ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Conversation"
+                        }
+                    }
+                }
+            }
+        },
+        "/conversations/{id}/leave": {
+            "delete": {
+                "tags": [
+                    "Conversations"
+                ],
+                "summary": "Leave a conversation.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The conversation ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/conversations/{id}/participants": {
+            "get": {
+                "tags": [
+                    "Conversations"
+                ],
+                "summary": "Get participants of a conversation.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The conversation ID."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 5,
+                        "minimum": 5,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of participants.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "userID": {
+                                        "type": "integer",
+                                        "description": "The userID of the participant."
+                                    },
+                                    "user": {
+                                        "$ref": "#/definitions/UserFragment"
+                                    },
+                                    "deleted": {
+                                        "type": "boolean",
+                                        "description": "True if the user left the conversation."
+                                    }
+                                }
+                            },
+                            "description": "List of participants."
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Conversations"
+                ],
+                "summary": "Add participants to a conversation.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The conversation ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConversationPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Conversation"
+                        }
+                    }
+                }
+            }
+        },
+        "/discussions": {
+            "get": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "List discussions.",
+                "parameters": [
+                    {
+                        "name": "categoryID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by a category."
+                    },
+                    {
+                        "name": "pinned",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Whether or not to include pinned discussions. If true, only return pinned discussions. Cannot be used with the pinOrder parameter."
+                    },
+                    {
+                        "name": "pinOrder",
+                        "in": "query",
+                        "type": "string",
+                        "default": "first",
+                        "description": "If including pinned posts, in what order should they be integrated? When \"first\", discussions pinned to a specific category will only be affected if the discussion's category is passed as the categoryID parameter. Cannot be used with the pinned parameter.",
+                        "enum": [
+                            "first",
+                            "mixed"
+                        ]
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "insertUserID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by author."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Discussion"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Add a discussion.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DiscussionPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Discussion"
+                        }
+                    }
+                }
+            }
+        },
+        "/discussions/bookmarked": {
+            "get": {
+                "tags": [
+                    "Discussions"
+                ],
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Discussion"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/discussions/{id}": {
+            "get": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Get a discussion.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The discussion ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Discussion"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Update a discussion.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DiscussionPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Discussion"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Delete a discussion.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The discussion ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/discussions/{id}/bookmark": {
+            "put": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Bookmark a discussion.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "bookmarked": {
+                                    "type": "boolean",
+                                    "description": "Pass true to bookmark or false to remove bookmark."
+                                }
+                            },
+                            "required": [
+                                "bookmarked"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "bookmarked": {
+                                    "type": "boolean",
+                                    "description": "The current bookmark value."
+                                }
+                            },
+                            "required": [
+                                "bookmarked"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/discussions/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Get a discussion for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The discussion ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "discussionID": {
+                                    "type": "integer",
+                                    "description": "The ID of the discussion."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The title of the discussion."
+                                },
+                                "body": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The body of the discussion."
+                                },
+                                "format": [],
+                                "categoryID": {
+                                    "type": "integer",
+                                    "description": "The category the discussion is in."
+                                },
+                                "sink": {
+                                    "type": "boolean",
+                                    "description": "Whether or not the discussion has been sunk."
+                                },
+                                "closed": {
+                                    "type": "boolean",
+                                    "description": "Whether the discussion is closed or open."
+                                },
+                                "pinned": {
+                                    "type": "boolean",
+                                    "description": "Whether or not the discussion has been pinned."
+                                },
+                                "pinLocation": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "allowNull": true,
+                                    "enum": [
+                                        "category",
+                                        "recent"
+                                    ],
+                                    "description": "The location for the discussion, if pinned. \"category\" are pinned to their own category. \"recent\" are pinned to the recent discussions list, as well as their own category."
+                                }
+                            },
+                            "required": [
+                                "discussionID",
+                                "name",
+                                "body",
+                                "format",
+                                "categoryID",
+                                "sink",
+                                "closed",
+                                "pinned",
+                                "pinLocation"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/messages": {
+            "get": {
+                "tags": [
+                    "Messages"
+                ],
+                "summary": "List user messages.",
+                "parameters": [
+                    {
+                        "name": "conversationID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by conversation."
+                    },
+                    {
+                        "name": "insertUserID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by author."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": "50",
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Message"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Messages"
+                ],
+                "summary": "Add a message.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/MessagePost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/messages/{id}": {
+            "get": {
+                "tags": [
+                    "Messages"
+                ],
+                "summary": "Get a message.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The message ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/roles": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "List roles.",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Role"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Roles"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Role"
+                        }
+                    }
+                }
+            }
+        },
+        "/roles/{id}": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Get a role.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The role ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Role"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Update a role.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RolePost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Role"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Delete a role.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The role ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/roles/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Get a role for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The role ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "roleID": {
+                                    "type": "integer",
+                                    "description": "ID of the role."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Name of the role."
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "allowNull": true,
+                                    "description": "Description of the role."
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "allowNull": true,
+                                    "description": "Default type of this role."
+                                },
+                                "deletable": {
+                                    "type": "boolean",
+                                    "description": "Is the role deletable?"
+                                },
+                                "canSession": {
+                                    "type": "boolean",
+                                    "description": "Can users in this role start a session?"
+                                },
+                                "personalInfo": {
+                                    "type": "boolean",
+                                    "description": "Is membership in this role personal information?"
+                                }
+                            },
+                            "required": [
+                                "roleID",
+                                "name",
+                                "description",
+                                "type",
+                                "deletable",
+                                "canSession",
+                                "personalInfo"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/tokens": {
+            "get": {
+                "tags": [
+                    "Tokens"
+                ],
+                "parameters": [
+                    {
+                        "name": "accessTokenID",
+                        "in": "query"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query"
+                    },
+                    {
+                        "name": "dateInserted",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/token"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Tokens"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/token"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/token"
+                        }
+                    }
+                }
+            }
+        },
+        "/tokens/{id}": {
+            "get": {
+                "tags": [
+                    "Tokens"
+                ],
+                "summary": "Reveal a usable access token.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The numeric ID of a token."
+                    },
+                    {
+                        "name": "transientKey",
+                        "in": "query",
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "A valid CSRF token for the current user."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/token"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Tokens"
+                ],
+                "summary": "Revoke an access token.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The numeric ID of a token."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "List users.",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Add a user.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get a user.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The user ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Update a user.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Delete a user.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The user ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/users/{id}/ban": {
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Ban a user.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "banned": {
+                                    "type": "boolean",
+                                    "description": "Pass true to ban or false to unban."
+                                }
+                            },
+                            "required": [
+                                "banned"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "banned": {
+                                    "type": "boolean",
+                                    "description": "The current banned value."
+                                }
+                            },
+                            "required": [
+                                "banned"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get a user for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The user ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "userID": {
+                                    "type": "integer",
+                                    "description": "ID of the user."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Name of the user."
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Email address of the user."
+                                },
+                                "photo": {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "allowNull": true,
+                                    "description": "Raw photo field value from the user record."
+                                }
+                            },
+                            "required": [
+                                "userID",
+                                "name",
+                                "email",
+                                "photo"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "CategoryPost": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the category."
+                },
+                "parentCategoryID": {
+                    "type": "integer",
+                    "allowNull": true,
+                    "description": "Parent category ID."
+                },
+                "urlCode": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URL code of the category."
+                }
+            },
+            "required": [
+                "name",
+                "parentCategoryID",
+                "urlCode"
+            ]
+        },
+        "Comment": {
+            "type": "object",
+            "properties": {
+                "commentID": {
+                    "type": "integer",
+                    "description": "The ID of the comment."
+                },
+                "discussionID": {
+                    "type": "integer",
+                    "description": "The ID of the discussion."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The body of the comment."
+                },
+                "format": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The input format of the comment."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the comment was created.",
+                    "format": "date-time"
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The user that created the comment."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "The full URL to the comment."
+                }
+            },
+            "required": [
+                "commentID",
+                "discussionID",
+                "body",
+                "format",
+                "dateInserted",
+                "insertUserID"
+            ]
+        },
+        "CommentPost": {
+            "type": "object",
+            "properties": {
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The body of the comment."
+                },
+                "format": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The input format of the comment."
+                },
+                "discussionID": {
+                    "type": "integer",
+                    "description": "The ID of the discussion."
+                }
+            },
+            "required": [
+                "body",
+                "format",
+                "discussionID"
+            ]
+        },
+        "Conversation": {
+            "type": "object",
+            "properties": {
+                "conversationID": {
+                    "type": "integer",
+                    "description": "The ID of the conversation."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the conversation was created.",
+                    "format": "date-time"
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The user that created the conversation."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "countParticipants": {
+                    "type": "integer",
+                    "description": "The number of participants on the conversation."
+                },
+                "countMessages": {
+                    "type": "integer",
+                    "description": "The number of messages on the conversation."
+                },
+                "countReadMessages": {
+                    "type": "integer",
+                    "allowNull": true,
+                    "description": "The number of unread messages by the current user on the conversation."
+                },
+                "dateLastViewed": {
+                    "type": "string",
+                    "allowNull": true,
+                    "description": "When the conversation was last viewed by the current user.",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "conversationID",
+                "dateInserted",
+                "insertUserID",
+                "countParticipants",
+                "countMessages"
+            ]
+        },
+        "ConversationPost": {
+            "type": "object",
+            "properties": {
+                "participantUserIDs": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "List of userID of the participants."
+                }
+            },
+            "required": [
+                "participantUserIDs"
+            ]
+        },
+        "Discussion": {
+            "type": "object",
+            "properties": {
+                "discussionID": {
+                    "type": "integer",
+                    "description": "The ID of the discussion."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The title of the discussion."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The body of the discussion."
+                },
+                "categoryID": {
+                    "type": "integer",
+                    "description": "The category the discussion is in."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the discussion was created.",
+                    "format": "date-time"
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The user that created the discussion."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "bookmarked": {
+                    "type": "boolean",
+                    "description": "Whether or no the discussion is bookmarked by the current user."
+                },
+                "pinned": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion has been pinned."
+                },
+                "pinLocation": {
+                    "type": "string",
+                    "minLength": 1,
+                    "allowNull": true,
+                    "enum": [
+                        "category",
+                        "recent"
+                    ],
+                    "description": "The location for the discussion, if pinned. \"category\" are pinned to their own category. \"recent\" are pinned to the recent discussions list, as well as their own category."
+                },
+                "closed": {
+                    "type": "boolean",
+                    "description": "Whether the discussion is closed or open."
+                },
+                "sink": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion has been sunk."
+                },
+                "countComments": {
+                    "type": "integer",
+                    "description": "The number of comments on the discussion."
+                },
+                "url": {
+                    "type": "string",
+                    "description": "The full URL to the discussion."
+                }
+            },
+            "required": [
+                "discussionID",
+                "name",
+                "body",
+                "categoryID",
+                "dateInserted",
+                "insertUserID",
+                "bookmarked",
+                "pinLocation",
+                "closed",
+                "sink",
+                "countComments"
+            ]
+        },
+        "DiscussionPost": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The title of the discussion."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The body of the discussion."
+                },
+                "format": [],
+                "categoryID": {
+                    "type": "integer",
+                    "description": "The category the discussion is in."
+                },
+                "closed": {
+                    "type": "boolean",
+                    "description": "Whether the discussion is closed or open."
+                },
+                "sink": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion has been sunk."
+                },
+                "pinned": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion has been pinned."
+                },
+                "pinLocation": {
+                    "type": "string",
+                    "minLength": 1,
+                    "allowNull": true,
+                    "enum": [
+                        "category",
+                        "recent"
+                    ],
+                    "description": "The location for the discussion, if pinned. \"category\" are pinned to their own category. \"recent\" are pinned to the recent discussions list, as well as their own category."
+                }
+            },
+            "required": [
+                "name",
+                "body",
+                "format",
+                "categoryID"
+            ]
+        },
+        "Message": {
+            "type": "object",
+            "properties": {
+                "messageID": {
+                    "type": "integer",
+                    "description": "The ID of the message."
+                },
+                "conversationID": {
+                    "type": "integer",
+                    "description": "The ID of the conversation."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 2000,
+                    "description": "The body of the message."
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The user that created the message."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the message was created.",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "messageID",
+                "conversationID",
+                "body",
+                "insertUserID",
+                "dateInserted"
+            ]
+        },
+        "MessagePost": {
+            "type": "object",
+            "properties": {
+                "conversationID": {
+                    "type": "integer",
+                    "description": "The ID of the conversation."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 2000,
+                    "description": "The body of the message."
+                },
+                "format": {
+                    "type": "string",
+                    "description": "The input format of the record."
+                }
+            },
+            "required": [
+                "conversationID",
+                "body"
+            ]
+        },
+        "Role": {
+            "type": "object",
+            "properties": {
+                "roleID": {
+                    "type": "integer",
+                    "description": "ID of the role."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the role."
+                },
+                "description": {
+                    "type": "string",
+                    "minLength": 0,
+                    "allowNull": true,
+                    "description": "Description of the role."
+                },
+                "type": {
+                    "type": "string",
+                    "minLength": 0,
+                    "allowNull": true,
+                    "description": "Default type of this role."
+                },
+                "deletable": {
+                    "type": "boolean",
+                    "description": "Is the role deletable?"
+                },
+                "canSession": {
+                    "type": "boolean",
+                    "description": "Can users in this role start a session?"
+                },
+                "personalInfo": {
+                    "type": "boolean",
+                    "description": "Is membership in this role personal information?"
+                },
+                "permissions": {
+                    "type": "object",
+                    "description": "Permissions available to the role."
+                }
+            },
+            "required": [
+                "roleID",
+                "name",
+                "description",
+                "type",
+                "deletable",
+                "canSession",
+                "personalInfo"
+            ]
+        },
+        "RoleFragment": {
+            "type": "object",
+            "properties": {
+                "roleID": {
+                    "type": "integer",
+                    "description": "ID of the role."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the role."
+                }
+            },
+            "required": [
+                "roleID",
+                "name"
+            ]
+        },
+        "RolePost": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the role."
+                },
+                "description": {
+                    "type": "string",
+                    "minLength": 0,
+                    "allowNull": true,
+                    "description": "Description of the role."
+                },
+                "type": {
+                    "type": "string",
+                    "minLength": 0,
+                    "allowNull": true,
+                    "description": "Default type of this role."
+                },
+                "deletable": {
+                    "type": "boolean",
+                    "description": "Is the role deletable?"
+                },
+                "canSession": {
+                    "type": "boolean",
+                    "description": "Can users in this role start a session?"
+                },
+                "personalInfo": {
+                    "type": "boolean",
+                    "description": "Is membership in this role personal information?"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "userID": {
+                    "type": "integer",
+                    "description": "ID of the user."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the user."
+                },
+                "email": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Email address of the user."
+                },
+                "photoUrl": {
+                    "type": "string",
+                    "minLength": 0,
+                    "allowNull": true,
+                    "description": "URL to the user photo."
+                },
+                "confirmed": {
+                    "type": "boolean",
+                    "description": "Is the user confirmed?"
+                },
+                "showEmail": {
+                    "type": "boolean",
+                    "description": "Is the email address visible to other users?"
+                },
+                "verified": {
+                    "type": "boolean",
+                    "description": "Has the user been verified?"
+                },
+                "banned": {
+                    "type": "integer",
+                    "description": "Is the user banned?"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RoleFragment"
+                    }
+                }
+            },
+            "required": [
+                "userID",
+                "name",
+                "email",
+                "photoUrl",
+                "confirmed",
+                "showEmail",
+                "verified",
+                "banned"
+            ]
+        },
+        "UserFragment": {
+            "type": "object",
+            "properties": {
+                "userID": {
+                    "type": "integer",
+                    "description": "The ID of the user."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The username of the user."
+                },
+                "photoUrl": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URL of the user's avatar picture."
+                }
+            },
+            "required": [
+                "userID",
+                "name",
+                "photoUrl"
+            ]
+        },
+        "UserPost": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the user."
+                },
+                "email": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Email address of the user."
+                },
+                "photo": {
+                    "type": "string",
+                    "minLength": 0,
+                    "allowNull": true,
+                    "description": "Raw photo field value from the user record."
+                },
+                "password": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Password of the user."
+                },
+                "roleID": {
+                    "type": "array",
+                    "description": "Roles to set on the user."
+                }
+            },
+            "required": [
+                "name",
+                "email",
+                "password"
+            ]
+        },
+        "token": {
+            "type": "object",
+            "properties": {
+                "accessTokenID": {
+                    "type": "integer",
+                    "description": "The unique numeric ID."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "allowNull": true,
+                    "description": "A user-specified label."
+                },
+                "accessToken": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "A signed version of the token."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the token was generated.",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "accessTokenID",
+                "name",
+                "accessToken",
+                "dateInserted"
+            ]
+        }
+    }
+}

@@ -12,7 +12,7 @@ aliases:
 ---
 ## Standards
 
-As of May 2014, Vanilla will adhere to [PSR-2] (and therefore [PSR-1]) with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
+As of May 2014, Vanilla will adhere to [PSR-2] \(and therefore [PSR-1]) with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
 
 We've named our primary exception to PSR-2 the **[Lord Brackos](https://twitter.com/linc/status/462308222427480065)** rule - Same-line open braces on all classes, method, and function definitions.
 

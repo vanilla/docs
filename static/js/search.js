@@ -1,5 +1,5 @@
 $(function($){
-    
+
     var cache = {
         set: function (key, val, exp) {
             cache.store.set(key, {
@@ -60,13 +60,13 @@ $(function($){
     }
 
     var $results = $('.js-search-results'),
-        $template = $results.find('a');
+        $template = $results.find('.searchResult').first();
 
     var searchHandler = function (e) {
         var $input = $(e.currentTarget),
             matches = [],
-            query = $input.val();
-    
+            query = escapeHTML($input.val());
+
         if (query.length < 3) {
             $results.removeClass('open');
             return;
@@ -97,9 +97,9 @@ $(function($){
                     categories = match.tags.join(' / ');
                 }
 
-                $item.attr('href', url);
-                $item.find('.title').text(title);
-                $item.find('.tags').text(categories);
+                $item.find('.searchResult-link').attr('href', url);
+                $item.find('.searchResult-title').text(title);
+                $item.find('.searchResult-tags').text(categories);
 
                 $results.append($item);
             });
@@ -112,4 +112,10 @@ $(function($){
 
     $(document).on('input', '.js-search-input', searchHandler);
 
+    // Close dropdown when clicking elsewhere
+    $('body').on('click', function(){
+        $('.js-search-results.open').each(function(){
+            $(this).removeClass('open');
+        });
+    });
 });

@@ -1,0 +1,45 @@
+.hamburgerMenu {
+  @include appearanceNone;
+  user-select: none;
+  display: none;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  height: $header-minHeight;
+  width: $hamburger-width + 2 * $site-padding_mobile;
+  padding: 0 $site-padding_mobile;
+  outline: 0;
+
+  @include mediaQuery-mobile {
+    display: block;
+  }
+}
+
+.hamburger {
+  transition: all 233ms cubic-bezier(.5, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: $hamburger-width;
+  height: $hamburger-height;
+}
+
+.hamburger-ingredient {
+  transition: all 400ms cubic-bezier(.5, 0, 0, 1);
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  position: relative;
+  display: block;
+  height: $hamburger-lineHeight;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburgerMenu-close {
+  color: #fff;
+}

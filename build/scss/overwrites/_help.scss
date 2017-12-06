@@ -1,0 +1,17 @@
+body.pageType-help {
+  .searchResult {
+    &:hover {
+      background: $vanillaBlue;
+    }
+  }
+
+  .mobileHeader,
+  .panelHeader,
+  .docs-header {
+    background-color: $vanillaBlue;
+
+    .docs-search-input {
+      background: rgba(black, .02);
+    }
+  }
+}

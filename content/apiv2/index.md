@@ -9,11 +9,13 @@ menu:
     weight: 1
 ---
 
-The Vanilla API v2 is the latest version of Vanilla's RESTful API. We've taken all the lessons learned from our first API and made a more consistent, useful API for integrating within your applications.
+We've rebuilt Vanilla's API from the ground up to enable tighter integrations and lower-level access to all of Vanilla's features using an API-first strategy. The initial release will provide feature partiy with our API v1. New endpoints will become available as they are completed, so watch for new product announcements.
 
-## Improvements in API v2
+## Key improvements in API v2
 
-- More authentication options including per-user access tokens.
-- A live API reference in your dashboard where you can reference API methods and make calls right from within the documentation.
+- More authentication options, including per-user access tokens.
+- Complete, custom API docs in your dashboard, including examples you can use immediately.
 - More endpoints so you can control more of your site from the API.
-- Cross origin resource sharing (CORS) support.
+- Cross-origin resource sharing (CORS) support.
+- Greater functional consistency, and higher conformance to current industry best practices.
+- Better automated testing, to reduce regression bugs and unwanted changes.

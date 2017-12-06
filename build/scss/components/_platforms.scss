@@ -1,46 +1,42 @@
-.docs-platform {
-    background: white;
-    
-    .docs-platform-choice {
-        margin: 20px 0px 40px 0px;
-        background: white;
-        box-shadow: 0px 1px 2px 0px rgba($borderDark, 0.4);
-        padding: 30px;
-        color: $lighterText;
-        
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        
-        img {
-            margin-right: 30px;
-        }
-        
-        .choice-details {
-            h3 {
-                margin: 0px 0px 10px 0px;
-                font-size: 26px;
-                font-weight: normal;
-            }
+.platforms {
+  margin-top: $mainColumn-padding;
+  border-top: 1px solid rgba(85, 90, 98, .15);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 30px;
+}
 
-            p {
-                font-size: 14px;
-                line-height: 22px;
-                max-width: 420px;
-            }
-        }
-        
-        a {
-            display: inline-block;
-            color: $vanillaBlue;
-            margin-left: auto;
-            border-color: $vanillaBlue;
-            padding: 10px 30px;
-            
-            &:hover {
-                border-color: $vanillaPink;
-                color: $vanillaPink;
-            }
-        }
-    }
+.platform {
+  flex-grow: 1;
+  padding-right: 25px;
+
+  + .platform {
+    padding-right: 0;
+    padding-left: 25px;
+  }
+}
+
+.platform-title {
+  font-size: 24px;
+  color: $pageTitle-color;
+  margin-top: 0;
+}
+
+.platform-description {
+  font-size: $fontSize-small;
+  margin-bottom: 25px;
+  color: $pageTitle-color;
+}
+
+.platform-link {
+  display: block;
+  color: $vanillaBlue;
+  font-size: $fontSize-small;
+
+  &:hover,
+  &:focus {
+    color: $vanillaPink;
+  }
 }

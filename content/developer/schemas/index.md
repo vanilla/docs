@@ -10,8 +10,6 @@ aliases:
 - /developers/schemas
 ---
 
-# Schemas
-
 ## Garden\Schema
 
 In Vanilla, the `Garden\Schema` class is used to whitelist parameters for a data structure and validate array of data.  It is primarily used for filtering input to API endpoints.
