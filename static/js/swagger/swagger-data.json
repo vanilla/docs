@@ -7,7 +7,466 @@
     },
     "host": "example.com",
     "basePath": "/api/v2",
+    "consumes": [
+        "application/json",
+        "application/x-www-form-urlencoded",
+        "multipart/form-data"
+    ],
     "paths": {
+        "/addons": {
+            "get": {
+                "tags": [
+                    "Addons"
+                ],
+                "summary": "List addons.",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "type": "string",
+                        "description": "The type of addon.\nMust be one of: \"addon\", \"theme\", \"locale\".",
+                        "enum": [
+                            "addon",
+                            "theme",
+                            "locale"
+                        ]
+                    },
+                    {
+                        "name": "enabled",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Filter enabled or disabled addons."
+                    },
+                    {
+                        "name": "themeType",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Which theme to show the enabled status for.\nMust be one of: \"desktop\", \"mobile\".",
+                        "enum": [
+                            "desktop",
+                            "mobile"
+                        ],
+                        "default": "desktop"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Addon"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/addons/{addonID}": {
+            "get": {
+                "tags": [
+                    "Addons"
+                ],
+                "summary": "Get an addon.",
+                "parameters": [
+                    {
+                        "name": "addonID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The ID of the addon."
+                    },
+                    {
+                        "name": "themeType",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Which theme to show the enabled status for.\nMust be one of: \"desktop\", \"mobile\".",
+                        "enum": [
+                            "desktop",
+                            "mobile"
+                        ],
+                        "default": "desktop"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Addon"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Addons"
+                ],
+                "summary": "Enable or disable an addon.",
+                "parameters": [
+                    {
+                        "name": "addonID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The ID of the addon."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": {
+                                    "type": "boolean",
+                                    "description": "Enable or disable the addon."
+                                },
+                                "themeType": {
+                                    "type": "string",
+                                    "description": "Which theme type to set.",
+                                    "enum": [
+                                        "desktop",
+                                        "mobile"
+                                    ],
+                                    "default": "desktop"
+                                }
+                            },
+                            "required": [
+                                "enabled"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Addon"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/authenticate": {
+            "post": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "summary": "Authenticate a user using a specific authenticator.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "authenticator": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The authenticator that will be used."
+                                },
+                                "authenticatorID": {
+                                    "type": "string",
+                                    "description": "Authenticator instance's identifier."
+                                }
+                            },
+                            "required": [
+                                "authenticator"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "authenticationStep": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Tells whether the user is now authenticated or if additional step(s) are required.",
+                                    "enum": [
+                                        "authenticated",
+                                        "linkUser"
+                                    ]
+                                },
+                                "userID": {
+                                    "type": "integer",
+                                    "description": "Identifier of the authenticated user."
+                                },
+                                "authSessionID": {
+                                    "type": "string",
+                                    "description": "Identifier of the authentication session. Returned if more steps are required to complete the authentication."
+                                }
+                            },
+                            "required": [
+                                "authenticationStep"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/authenticate/link-user": {
+            "post": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "summary": "Link a user to an authenticator using the authSessionID and some other information. Required: userID + password or name + email + password.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "authSessionID": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Identifier of the authentication session."
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Password of the user."
+                                },
+                                "userID": {
+                                    "type": "integer",
+                                    "description": "Identifier of the user."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "User name."
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "description": "User email."
+                                }
+                            },
+                            "required": [
+                                "authSessionID",
+                                "password"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/UserFragment"
+                        }
+                    }
+                }
+            }
+        },
+        "/authenticate/session/{authSessionID}": {
+            "get": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "summary": "Get the content of an authentication session.",
+                "parameters": [
+                    {
+                        "name": "authSessionID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Identifier of the authentication session."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "authSessionID": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "Identifier of the authentication session."
+                                },
+                                "dateInserted": {
+                                    "type": "string",
+                                    "description": "When the session was created.",
+                                    "format": "date-time"
+                                },
+                                "dateExpire": {
+                                    "type": "string",
+                                    "description": "When the session expires.",
+                                    "format": "date-time"
+                                },
+                                "attributes": {
+                                    "type": "object",
+                                    "properties": {
+                                        "ssoData": {
+                                            "$ref": "#/definitions/SSOData"
+                                        },
+                                        "linkUser": {
+                                            "type": "object",
+                                            "properties": {
+                                                "existingUsers": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "userID": {
+                                                                "type": "integer",
+                                                                "description": "The userID of the participant."
+                                                            },
+                                                            "user": {
+                                                                "$ref": "#/definitions/UserFragment"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "userID"
+                                                        ],
+                                                        "description": "User that matches the SSOData and can be used to connect the user."
+                                                    }
+                                                }
+                                            },
+                                            "required": [
+                                                "existingUsers"
+                                            ],
+                                            "description": "Information needed for the \"linkUser\" step."
+                                        }
+                                    },
+                                    "required": [
+                                        "ssoData"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "authSessionID",
+                                "dateInserted",
+                                "dateExpire",
+                                "attributes"
+                            ]
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "summary": "Delete an authentication session.",
+                "parameters": [
+                    {
+                        "name": "authSessionID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Identifier of the authentication session."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/authenticate/{authenticator}/{authenticatorID}": {
+            "get": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "summary": "Tells whether the user is linked to the authenticator or not.",
+                "parameters": [
+                    {
+                        "name": "authenticator",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The authenticator that will be used."
+                    },
+                    {
+                        "name": "authenticatorID",
+                        "in": "path",
+                        "required": true,
+                        "default": "",
+                        "type": "string",
+                        "description": "Authenticator instance's identifier."
+                    },
+                    {
+                        "name": "userID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "UserID of the user to check against the authenticator. Defaults to the current user."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "linked": {
+                                    "type": "boolean",
+                                    "description": "Whether the user is linked to the authenticator or not."
+                                }
+                            },
+                            "required": [
+                                "linked"
+                            ]
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "summary": "Delete the link between an authenticator and a user.",
+                "parameters": [
+                    {
+                        "name": "authenticator",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The authenticator that will be used."
+                    },
+                    {
+                        "name": "authenticatorID",
+                        "in": "path",
+                        "required": true,
+                        "default": "",
+                        "type": "string",
+                        "description": "Authenticator instance's identifier."
+                    },
+                    {
+                        "name": "userID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "UserID to unlink authenticator from."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
         "/categories": {
             "get": {
                 "tags": [
@@ -62,10 +521,23 @@
                                         "description": "The name of the category."
                                     },
                                     "description": {
-                                        "type": "string",
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
                                         "minLength": 0,
-                                        "description": "The description of the category.",
-                                        "allowNull": true
+                                        "description": "The description of the category."
+                                    },
+                                    "parentCategoryID": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "Parent category ID."
+                                    },
+                                    "customPermissions": {
+                                        "type": "boolean",
+                                        "description": "Are custom permissions set for this category?"
                                     },
                                     "urlCode": {
                                         "type": "string",
@@ -76,6 +548,22 @@
                                         "type": "string",
                                         "minLength": 1,
                                         "description": "The URL to the category."
+                                    },
+                                    "displayAs": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The display style of the category.",
+                                        "enum": [
+                                            "categories",
+                                            "discussions",
+                                            "flat",
+                                            "heading"
+                                        ],
+                                        "default": "discussions"
+                                    },
+                                    "countCategories": {
+                                        "type": "integer",
+                                        "description": "Total number of child categories."
                                     },
                                     "countDiscussions": {
                                         "type": "integer",
@@ -111,10 +599,23 @@
                                                     "description": "The name of the category."
                                                 },
                                                 "description": {
-                                                    "type": "string",
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ],
                                                     "minLength": 0,
-                                                    "description": "The description of the category.",
-                                                    "allowNull": true
+                                                    "description": "The description of the category."
+                                                },
+                                                "parentCategoryID": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "description": "Parent category ID."
+                                                },
+                                                "customPermissions": {
+                                                    "type": "boolean",
+                                                    "description": "Are custom permissions set for this category?"
                                                 },
                                                 "urlCode": {
                                                     "type": "string",
@@ -125,6 +626,22 @@
                                                     "type": "string",
                                                     "minLength": 1,
                                                     "description": "The URL to the category."
+                                                },
+                                                "displayAs": {
+                                                    "type": "string",
+                                                    "minLength": 1,
+                                                    "description": "The display style of the category.",
+                                                    "enum": [
+                                                        "categories",
+                                                        "discussions",
+                                                        "flat",
+                                                        "heading"
+                                                    ],
+                                                    "default": "discussions"
+                                                },
+                                                "countCategories": {
+                                                    "type": "integer",
+                                                    "description": "Total number of child categories."
                                                 },
                                                 "countDiscussions": {
                                                     "type": "integer",
@@ -153,8 +670,12 @@
                                                 "categoryID",
                                                 "name",
                                                 "description",
+                                                "parentCategoryID",
+                                                "customPermissions",
                                                 "urlCode",
                                                 "url",
+                                                "displayAs",
+                                                "countCategories",
                                                 "countDiscussions",
                                                 "countComments",
                                                 "countAllDiscussions",
@@ -169,8 +690,12 @@
                                     "categoryID",
                                     "name",
                                     "description",
+                                    "parentCategoryID",
+                                    "customPermissions",
                                     "urlCode",
                                     "url",
+                                    "displayAs",
+                                    "countCategories",
                                     "countDiscussions",
                                     "countComments",
                                     "countAllDiscussions",
@@ -213,10 +738,23 @@
                                     "description": "The name of the category."
                                 },
                                 "description": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "description": "The description of the category.",
-                                    "allowNull": true
+                                    "description": "The description of the category."
+                                },
+                                "parentCategoryID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "Parent category ID."
+                                },
+                                "customPermissions": {
+                                    "type": "boolean",
+                                    "description": "Are custom permissions set for this category?"
                                 },
                                 "urlCode": {
                                     "type": "string",
@@ -227,6 +765,22 @@
                                     "type": "string",
                                     "minLength": 1,
                                     "description": "The URL to the category."
+                                },
+                                "displayAs": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The display style of the category.",
+                                    "enum": [
+                                        "categories",
+                                        "discussions",
+                                        "flat",
+                                        "heading"
+                                    ],
+                                    "default": "discussions"
+                                },
+                                "countCategories": {
+                                    "type": "integer",
+                                    "description": "Total number of child categories."
                                 },
                                 "countDiscussions": {
                                     "type": "integer",
@@ -243,24 +797,22 @@
                                 "countAllComments": {
                                     "type": "integer",
                                     "description": "Total of all comments in a category and its children."
-                                },
-                                "parentCategoryID": {
-                                    "type": "integer",
-                                    "allowNull": true,
-                                    "description": "Parent category ID."
                                 }
                             },
                             "required": [
                                 "categoryID",
                                 "name",
                                 "description",
+                                "parentCategoryID",
+                                "customPermissions",
                                 "urlCode",
                                 "url",
+                                "displayAs",
+                                "countCategories",
                                 "countDiscussions",
                                 "countComments",
                                 "countAllDiscussions",
-                                "countAllComments",
-                                "parentCategoryID"
+                                "countAllComments"
                             ]
                         }
                     }
@@ -272,6 +824,7 @@
                 "tags": [
                     "Categories"
                 ],
+                "summary": "Search categories.",
                 "parameters": [
                     {
                         "name": "query",
@@ -324,10 +877,23 @@
                                         "description": "The name of the category."
                                     },
                                     "description": {
-                                        "type": "string",
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
                                         "minLength": 0,
-                                        "description": "The description of the category.",
-                                        "allowNull": true
+                                        "description": "The description of the category."
+                                    },
+                                    "parentCategoryID": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "Parent category ID."
+                                    },
+                                    "customPermissions": {
+                                        "type": "boolean",
+                                        "description": "Are custom permissions set for this category?"
                                     },
                                     "urlCode": {
                                         "type": "string",
@@ -338,6 +904,22 @@
                                         "type": "string",
                                         "minLength": 1,
                                         "description": "The URL to the category."
+                                    },
+                                    "displayAs": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The display style of the category.",
+                                        "enum": [
+                                            "categories",
+                                            "discussions",
+                                            "flat",
+                                            "heading"
+                                        ],
+                                        "default": "discussions"
+                                    },
+                                    "countCategories": {
+                                        "type": "integer",
+                                        "description": "Total number of child categories."
                                     },
                                     "countDiscussions": {
                                         "type": "integer",
@@ -354,24 +936,22 @@
                                     "countAllComments": {
                                         "type": "integer",
                                         "description": "Total of all comments in a category and its children."
-                                    },
-                                    "parentCategoryID": {
-                                        "type": "integer",
-                                        "allowNull": true,
-                                        "description": "Parent category ID."
                                     }
                                 },
                                 "required": [
                                     "categoryID",
                                     "name",
                                     "description",
+                                    "parentCategoryID",
+                                    "customPermissions",
                                     "urlCode",
                                     "url",
+                                    "displayAs",
+                                    "countCategories",
                                     "countDiscussions",
                                     "countComments",
                                     "countAllDiscussions",
-                                    "countAllComments",
-                                    "parentCategoryID"
+                                    "countAllComments"
                                 ]
                             }
                         }
@@ -410,10 +990,23 @@
                                     "description": "The name of the category."
                                 },
                                 "description": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "description": "The description of the category.",
-                                    "allowNull": true
+                                    "description": "The description of the category."
+                                },
+                                "parentCategoryID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "Parent category ID."
+                                },
+                                "customPermissions": {
+                                    "type": "boolean",
+                                    "description": "Are custom permissions set for this category?"
                                 },
                                 "urlCode": {
                                     "type": "string",
@@ -424,6 +1017,22 @@
                                     "type": "string",
                                     "minLength": 1,
                                     "description": "The URL to the category."
+                                },
+                                "displayAs": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The display style of the category.",
+                                    "enum": [
+                                        "categories",
+                                        "discussions",
+                                        "flat",
+                                        "heading"
+                                    ],
+                                    "default": "discussions"
+                                },
+                                "countCategories": {
+                                    "type": "integer",
+                                    "description": "Total number of child categories."
                                 },
                                 "countDiscussions": {
                                     "type": "integer",
@@ -440,24 +1049,22 @@
                                 "countAllComments": {
                                     "type": "integer",
                                     "description": "Total of all comments in a category and its children."
-                                },
-                                "parentCategoryID": {
-                                    "type": "integer",
-                                    "allowNull": true,
-                                    "description": "Parent category ID."
                                 }
                             },
                             "required": [
                                 "categoryID",
                                 "name",
                                 "description",
+                                "parentCategoryID",
+                                "customPermissions",
                                 "urlCode",
                                 "url",
+                                "displayAs",
+                                "countCategories",
                                 "countDiscussions",
                                 "countComments",
                                 "countAllDiscussions",
-                                "countAllComments",
-                                "parentCategoryID"
+                                "countAllComments"
                             ]
                         }
                     }
@@ -473,7 +1080,8 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The category ID."
                     },
                     {
                         "name": "body",
@@ -500,10 +1108,23 @@
                                     "description": "The name of the category."
                                 },
                                 "description": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "description": "The description of the category.",
-                                    "allowNull": true
+                                    "description": "The description of the category."
+                                },
+                                "parentCategoryID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "Parent category ID."
+                                },
+                                "customPermissions": {
+                                    "type": "boolean",
+                                    "description": "Are custom permissions set for this category?"
                                 },
                                 "urlCode": {
                                     "type": "string",
@@ -514,6 +1135,22 @@
                                     "type": "string",
                                     "minLength": 1,
                                     "description": "The URL to the category."
+                                },
+                                "displayAs": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The display style of the category.",
+                                    "enum": [
+                                        "categories",
+                                        "discussions",
+                                        "flat",
+                                        "heading"
+                                    ],
+                                    "default": "discussions"
+                                },
+                                "countCategories": {
+                                    "type": "integer",
+                                    "description": "Total number of child categories."
                                 },
                                 "countDiscussions": {
                                     "type": "integer",
@@ -530,24 +1167,22 @@
                                 "countAllComments": {
                                     "type": "integer",
                                     "description": "Total of all comments in a category and its children."
-                                },
-                                "parentCategoryID": {
-                                    "type": "integer",
-                                    "allowNull": true,
-                                    "description": "Parent category ID."
                                 }
                             },
                             "required": [
                                 "categoryID",
                                 "name",
                                 "description",
+                                "parentCategoryID",
+                                "customPermissions",
                                 "urlCode",
                                 "url",
+                                "displayAs",
+                                "countCategories",
                                 "countDiscussions",
                                 "countComments",
                                 "countAllDiscussions",
-                                "countAllComments",
-                                "parentCategoryID"
+                                "countAllComments"
                             ]
                         }
                     }
@@ -604,17 +1239,37 @@
                                     "minLength": 1,
                                     "description": "The name of the category."
                                 },
-                                "parentCategoryID": [],
+                                "parentCategoryID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "Parent category ID."
+                                },
                                 "urlCode": {
                                     "type": "string",
                                     "minLength": 1,
                                     "description": "The URL code of the category."
                                 },
                                 "description": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "description": "The description of the category.",
-                                    "allowNull": true
+                                    "description": "The description of the category."
+                                },
+                                "displayAs": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The display style of the category.",
+                                    "enum": [
+                                        "categories",
+                                        "discussions",
+                                        "flat",
+                                        "heading"
+                                    ],
+                                    "default": "discussions"
                                 }
                             },
                             "required": [
@@ -622,7 +1277,8 @@
                                 "name",
                                 "parentCategoryID",
                                 "urlCode",
-                                "description"
+                                "description",
+                                "displayAs"
                             ]
                         }
                     }
@@ -636,6 +1292,14 @@
                 ],
                 "summary": "List comments.",
                 "parameters": [
+                    {
+                        "name": "dateInserted",
+                        "in": "query"
+                    },
+                    {
+                        "name": "dateUpdated",
+                        "in": "query"
+                    },
                     {
                         "name": "discussionID",
                         "in": "query",
@@ -667,18 +1331,22 @@
                         "description": "Filter by author."
                     },
                     {
-                        "name": "after",
-                        "in": "query",
-                        "type": "string",
-                        "description": "Limit to comments after this date.",
-                        "format": "date-time"
-                    },
-                    {
                         "name": "expand",
                         "in": "query",
-                        "type": "boolean",
-                        "description": "Expand associated records.",
-                        "default": false
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "insertUser",
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -731,6 +1399,23 @@
                         "required": true,
                         "type": "integer",
                         "description": "The comment ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -752,7 +1437,8 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The comment ID."
                     },
                     {
                         "name": "body",
@@ -784,6 +1470,23 @@
                         "required": true,
                         "type": "integer",
                         "description": "The comment ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -806,6 +1509,23 @@
                         "required": true,
                         "type": "integer",
                         "description": "The comment ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -883,8 +1603,19 @@
                     {
                         "name": "expand",
                         "in": "query",
-                        "type": "boolean",
-                        "description": "Expand associated records."
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "insertUser"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -986,6 +1717,18 @@
                         "description": "The conversation ID."
                     },
                     {
+                        "name": "status",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Filter by participant status.\nMust be one of: \"all\", \"participating\", \"deleted\".",
+                        "enum": [
+                            "all",
+                            "participating",
+                            "deleted"
+                        ],
+                        "default": "participating"
+                    },
+                    {
                         "name": "page",
                         "in": "query",
                         "type": "integer",
@@ -1005,8 +1748,19 @@
                     {
                         "name": "expand",
                         "in": "query",
-                        "type": "boolean",
-                        "description": "Expand associated records."
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "user"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -1024,9 +1778,13 @@
                                     "user": {
                                         "$ref": "#/definitions/UserFragment"
                                     },
-                                    "deleted": {
-                                        "type": "boolean",
-                                        "description": "True if the user left the conversation."
+                                    "status": {
+                                        "description": "Participation status of the user.",
+                                        "type": "string",
+                                        "enum": [
+                                            "participating",
+                                            "deleted"
+                                        ]
                                     }
                                 }
                             },
@@ -1081,6 +1839,14 @@
                         "description": "Filter by a category."
                     },
                     {
+                        "name": "dateInserted",
+                        "in": "query"
+                    },
+                    {
+                        "name": "dateUpdated",
+                        "in": "query"
+                    },
+                    {
                         "name": "pinned",
                         "in": "query",
                         "type": "boolean",
@@ -1091,7 +1857,7 @@
                         "in": "query",
                         "type": "string",
                         "default": "first",
-                        "description": "If including pinned posts, in what order should they be integrated? When \"first\", discussions pinned to a specific category will only be affected if the discussion's category is passed as the categoryID parameter. Cannot be used with the pinned parameter.",
+                        "description": "If including pinned posts, in what order should they be integrated? When \"first\", discussions pinned to a specific category will only be affected if the discussion's category is passed as the categoryID parameter. Cannot be used with the pinned parameter.\nMust be one of: \"first\", \"mixed\".",
                         "enum": [
                             "first",
                             "mixed"
@@ -1124,8 +1890,31 @@
                     {
                         "name": "expand",
                         "in": "query",
-                        "type": "boolean",
-                        "description": "Expand associated records."
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "insertUser",
+                                "lastUser",
+                                "lastPost",
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
+                    },
+                    {
+                        "name": "groupID",
+                        "in": "query",
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "description": "The group the discussion is in."
                     }
                 ],
                 "responses": {
@@ -1170,6 +1959,7 @@
                 "tags": [
                     "Discussions"
                 ],
+                "summary": "Get a list of the current user's bookmarked discussions.",
                 "parameters": [
                     {
                         "name": "page",
@@ -1192,8 +1982,21 @@
                     {
                         "name": "expand",
                         "in": "query",
-                        "type": "boolean",
-                        "description": "Expand associated records."
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "insertUser",
+                                "lastUser",
+                                "lastPost"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -1222,6 +2025,23 @@
                         "required": true,
                         "type": "integer",
                         "description": "The discussion ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -1243,7 +2063,8 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The discussion ID."
                     },
                     {
                         "name": "body",
@@ -1275,6 +2096,23 @@
                         "required": true,
                         "type": "integer",
                         "description": "The discussion ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -1295,7 +2133,8 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The discussion ID."
                     },
                     {
                         "name": "body",
@@ -1347,6 +2186,248 @@
                         "required": true,
                         "type": "integer",
                         "description": "The discussion ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "reactions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/DiscussionGetEdit"
+                        }
+                    }
+                }
+            }
+        },
+        "/drafts": {
+            "get": {
+                "tags": [
+                    "Drafts"
+                ],
+                "summary": "List drafts created by the current user.",
+                "parameters": [
+                    {
+                        "name": "recordType",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Filter drafts by record type.\nMust be one of: \"comment\", \"discussion\".",
+                        "enum": [
+                            "comment",
+                            "discussion"
+                        ]
+                    },
+                    {
+                        "name": "parentRecordID",
+                        "in": "query",
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "description": "Filter by the unique ID of the parent for a draft. Used with recordType.",
+                        "default": null
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "draftID": {
+                                        "type": "integer",
+                                        "description": "The unique ID of the draft."
+                                    },
+                                    "recordType": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The type of record associated with this draft.",
+                                        "enum": [
+                                            "comment",
+                                            "discussion"
+                                        ]
+                                    },
+                                    "parentRecordID": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "The unique ID of the intended parent to this record."
+                                    },
+                                    "attributes": {
+                                        "type": "object",
+                                        "description": "A free-form object containing all custom data for this draft."
+                                    },
+                                    "insertUserID": {
+                                        "type": "integer",
+                                        "description": "The unique ID of the user who created this draft."
+                                    },
+                                    "dateInserted": {
+                                        "type": "string",
+                                        "description": "When the draft was created.",
+                                        "format": "date-time"
+                                    },
+                                    "updateUserID": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "The unique ID of the user who updated this draft."
+                                    },
+                                    "dateUpdated": {
+                                        "type": [
+                                            "datetime",
+                                            "null"
+                                        ],
+                                        "description": "When the draft was updated."
+                                    }
+                                },
+                                "required": [
+                                    "draftID",
+                                    "recordType",
+                                    "parentRecordID",
+                                    "attributes",
+                                    "insertUserID",
+                                    "dateInserted",
+                                    "updateUserID",
+                                    "dateUpdated"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Drafts"
+                ],
+                "summary": "Create a draft.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DraftPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "draftID": {
+                                    "type": "integer",
+                                    "description": "The unique ID of the draft."
+                                },
+                                "recordType": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The type of record associated with this draft.",
+                                    "enum": [
+                                        "comment",
+                                        "discussion"
+                                    ]
+                                },
+                                "parentRecordID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "The unique ID of the intended parent to this record."
+                                },
+                                "attributes": {
+                                    "type": "object",
+                                    "description": "A free-form object containing all custom data for this draft."
+                                },
+                                "insertUserID": {
+                                    "type": "integer",
+                                    "description": "The unique ID of the user who created this draft."
+                                },
+                                "dateInserted": {
+                                    "type": "string",
+                                    "description": "When the draft was created.",
+                                    "format": "date-time"
+                                },
+                                "updateUserID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "The unique ID of the user who updated this draft."
+                                },
+                                "dateUpdated": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the draft was updated."
+                                }
+                            },
+                            "required": [
+                                "draftID",
+                                "recordType",
+                                "parentRecordID",
+                                "attributes",
+                                "insertUserID",
+                                "dateInserted",
+                                "updateUserID",
+                                "dateUpdated"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/drafts/{id}": {
+            "get": {
+                "tags": [
+                    "Drafts"
+                ],
+                "summary": "Get a draft.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The draft ID."
                     }
                 ],
                 "responses": {
@@ -1355,60 +2436,1534 @@
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "discussionID": {
+                                "draftID": {
                                     "type": "integer",
-                                    "description": "The ID of the discussion."
+                                    "description": "The unique ID of the draft."
                                 },
-                                "name": {
+                                "recordType": {
                                     "type": "string",
                                     "minLength": 1,
-                                    "description": "The title of the discussion."
-                                },
-                                "body": {
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "description": "The body of the discussion."
-                                },
-                                "format": [],
-                                "categoryID": {
-                                    "type": "integer",
-                                    "description": "The category the discussion is in."
-                                },
-                                "sink": {
-                                    "type": "boolean",
-                                    "description": "Whether or not the discussion has been sunk."
-                                },
-                                "closed": {
-                                    "type": "boolean",
-                                    "description": "Whether the discussion is closed or open."
-                                },
-                                "pinned": {
-                                    "type": "boolean",
-                                    "description": "Whether or not the discussion has been pinned."
-                                },
-                                "pinLocation": {
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "allowNull": true,
+                                    "description": "The type of record associated with this draft.",
                                     "enum": [
-                                        "category",
-                                        "recent"
+                                        "comment",
+                                        "discussion"
+                                    ]
+                                },
+                                "parentRecordID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
                                     ],
-                                    "description": "The location for the discussion, if pinned. \"category\" are pinned to their own category. \"recent\" are pinned to the recent discussions list, as well as their own category."
+                                    "description": "The unique ID of the intended parent to this record."
+                                },
+                                "attributes": {
+                                    "type": "object",
+                                    "description": "A free-form object containing all custom data for this draft."
+                                },
+                                "insertUserID": {
+                                    "type": "integer",
+                                    "description": "The unique ID of the user who created this draft."
+                                },
+                                "dateInserted": {
+                                    "type": "string",
+                                    "description": "When the draft was created.",
+                                    "format": "date-time"
+                                },
+                                "updateUserID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "The unique ID of the user who updated this draft."
+                                },
+                                "dateUpdated": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the draft was updated."
                                 }
                             },
                             "required": [
-                                "discussionID",
-                                "name",
-                                "body",
-                                "format",
-                                "categoryID",
-                                "sink",
-                                "closed",
-                                "pinned",
-                                "pinLocation"
+                                "draftID",
+                                "recordType",
+                                "parentRecordID",
+                                "attributes",
+                                "insertUserID",
+                                "dateInserted",
+                                "updateUserID",
+                                "dateUpdated"
                             ]
                         }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Drafts"
+                ],
+                "summary": "Update a draft.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The draft ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DraftPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "draftID": [],
+                                "parentRecordID": [],
+                                "attributes": []
+                            },
+                            "required": [
+                                "draftID",
+                                "parentRecordID",
+                                "attributes"
+                            ]
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Drafts"
+                ],
+                "summary": "Delete a draft.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The draft ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/drafts/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Drafts"
+                ],
+                "summary": "Get a draft for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The draft ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "draftID": [],
+                                "parentRecordID": [],
+                                "attributes": []
+                            },
+                            "required": [
+                                "draftID",
+                                "parentRecordID",
+                                "attributes"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/events": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "List events.",
+                "parameters": [
+                    {
+                        "name": "groupID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by group ID."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "dateInserted",
+                            "-dateInserted",
+                            "dateStarts",
+                            "-dateStarts"
+                        ],
+                        "description": "Sort the results by the specified field. The default sort order is ascending.Prefixing the field with \"-\" will sort using a descending order.\nMust be one of: \"dateInserted\", \"-dateInserted\", \"dateStarts\", \"-dateStarts\"."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Event"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Create an event.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/EventPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Event"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get an event.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The event ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Event"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Update an event.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The event ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/EventPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Event"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Delete an event.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The event ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/events/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get an event for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The event ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Event"
+                        }
+                    }
+                }
+            }
+        },
+        "/events/{id}/participants": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get event's participants.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The event ID."
+                    },
+                    {
+                        "name": "attending",
+                        "in": "query",
+                        "type": "string",
+                        "default": "all",
+                        "enum": [
+                            "yes",
+                            "no",
+                            "maybe",
+                            "answered",
+                            "unanswered",
+                            "all"
+                        ],
+                        "description": "Filter participant by attending status.\nMust be one of: \"yes\", \"no\", \"maybe\", \"answered\", \"unanswered\", \"all\"."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Event"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "RSVP to an event.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The event ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "userID": {
+                                    "type": "string",
+                                    "description": "The ID of the user that RSVP."
+                                },
+                                "attending": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "minLength": 1,
+                                    "enum": [
+                                        "yes",
+                                        "no",
+                                        "maybe"
+                                    ],
+                                    "description": "Is the participant attending the event."
+                                }
+                            },
+                            "required": [
+                                "attending"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Event"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "List groups.",
+                "parameters": [
+                    {
+                        "name": "memberID",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Filter by member userID."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "dateInserted",
+                            "-dateInserted",
+                            "dateLastComment",
+                            "-dateLastComment",
+                            "countMembers",
+                            "-countMembers",
+                            "countDiscussions",
+                            "-countDiscussions"
+                        ],
+                        "description": "Sort the results by the specified field. The default sort order is ascending.Prefixing the field with \"-\" will sort using a descending order.\nMust be one of: \"dateInserted\", \"-dateInserted\", \"dateLastComment\", \"-dateLastComment\", \"countMembers\", \"-countMembers\", \"countDiscussions\", \"-countDiscussions\"."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Group"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Create a group.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/GroupPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Group"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Get a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Group"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Update a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/GroupPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Group"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Delete a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/groups/{id}/applicants": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "List applicants to a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/GroupApplicant"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Apply to a private group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "reason": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 200,
+                                    "description": "The reason why the user wants to apply to this group."
+                                }
+                            },
+                            "required": [
+                                "reason"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupApplicant"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/applicants/{userID}": {
+            "patch": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Approve or deny a group applicant.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group member user ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "state": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "minLength": 1,
+                                    "enum": [
+                                        "approved",
+                                        "denied"
+                                    ],
+                                    "description": "The status of the applicant."
+                                }
+                            },
+                            "required": [
+                                "state"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupApplicant"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/apply": {
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Apply to a private group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "reason": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 200,
+                                    "description": "The reason why the user wants to apply to this group."
+                                }
+                            },
+                            "required": [
+                                "reason"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupApplicant"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Get a group for editing.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Group"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/invites": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "List the invites for a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/GroupInvite"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Invite a user to a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "userID": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "userID"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupInvite"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/invites/{userID}": {
+            "delete": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Delete an invite to a user from a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group member user ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/groups/{id}/join": {
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Join a public group or a group that you have been invited to.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupMember"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/leave": {
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Leave a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/groups/{id}/members": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "List members of a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "type": "boolean",
+                        "description": "Expand associated records."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/GroupMember"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Add a user to a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "userID": {
+                                    "type": "integer",
+                                    "description": "The ID of the user."
+                                },
+                                "role": {
+                                    "type": "string",
+                                    "default": "member",
+                                    "enum": [
+                                        "leader",
+                                        "member"
+                                    ],
+                                    "description": "The role of the user for that group."
+                                }
+                            },
+                            "required": [
+                                "userID"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupMember"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}/members/{userID}": {
+            "patch": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Change a user's role within a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group member user ID."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "role": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "enum": [
+                                        "leader",
+                                        "member"
+                                    ],
+                                    "description": "The role of the user for that group."
+                                }
+                            },
+                            "required": [
+                                "role"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/GroupMember"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Remove a user from a group or leave a group.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The group ID."
+                    },
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "required": true,
+                        "default": null,
+                        "type": "integer",
+                        "description": "The group member user ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/invites": {
+            "get": {
+                "tags": [
+                    "Invites"
+                ],
+                "summary": "Get a list of invites sent by the current user.",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number.",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "The number of items per page.",
+                        "default": 30,
+                        "minimum": 1,
+                        "maximum": 100
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "acceptedUser"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "inviteID": {
+                                        "type": "integer",
+                                        "description": "A unique numerical ID for the invite."
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "The email address associated with an invite."
+                                    },
+                                    "code": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "description": "An invite code."
+                                    },
+                                    "status": {
+                                        "description": "Current status for the invite.",
+                                        "enum": [
+                                            "accepted",
+                                            "pending"
+                                        ]
+                                    },
+                                    "insertUserID": {
+                                        "type": "integer",
+                                        "description": "User who created the invite."
+                                    },
+                                    "dateInserted": {
+                                        "type": "string",
+                                        "description": "When the invite was created.",
+                                        "format": "date-time"
+                                    },
+                                    "acceptedUser": {
+                                        "$ref": "#/definitions/UserFragment"
+                                    },
+                                    "acceptedUserID": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "User who accepted the invite."
+                                    },
+                                    "dateAccepted": {
+                                        "type": [
+                                            "datetime",
+                                            "null"
+                                        ],
+                                        "description": "When the invite was accepted."
+                                    },
+                                    "dateExpires": {
+                                        "type": [
+                                            "datetime",
+                                            "null"
+                                        ],
+                                        "description": "When the expiration is set to expire."
+                                    }
+                                },
+                                "required": [
+                                    "inviteID",
+                                    "email",
+                                    "code",
+                                    "status",
+                                    "insertUserID",
+                                    "dateInserted",
+                                    "acceptedUserID",
+                                    "dateAccepted",
+                                    "dateExpires"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Invites"
+                ],
+                "summary": "Create a new invite.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The email address where the invite should be sent."
+                                }
+                            },
+                            "required": [
+                                "email"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "inviteID": {
+                                    "type": "integer",
+                                    "description": "A unique numerical ID for the invite."
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The email address associated with an invite."
+                                },
+                                "code": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "An invite code."
+                                },
+                                "status": {
+                                    "description": "Current status for the invite.",
+                                    "enum": [
+                                        "accepted",
+                                        "pending"
+                                    ]
+                                },
+                                "insertUserID": {
+                                    "type": "integer",
+                                    "description": "User who created the invite."
+                                },
+                                "dateInserted": {
+                                    "type": "string",
+                                    "description": "When the invite was created.",
+                                    "format": "date-time"
+                                },
+                                "acceptedUser": {
+                                    "$ref": "#/definitions/UserFragment"
+                                },
+                                "acceptedUserID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "User who accepted the invite."
+                                },
+                                "dateAccepted": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the invite was accepted."
+                                },
+                                "dateExpires": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the expiration is set to expire."
+                                }
+                            },
+                            "required": [
+                                "inviteID",
+                                "email",
+                                "code",
+                                "status",
+                                "insertUserID",
+                                "dateInserted",
+                                "acceptedUserID",
+                                "dateAccepted",
+                                "dateExpires"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/invites/{id}": {
+            "get": {
+                "tags": [
+                    "Invites"
+                ],
+                "summary": "Get an invite.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The invite ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "inviteID": {
+                                    "type": "integer",
+                                    "description": "A unique numerical ID for the invite."
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The email address associated with an invite."
+                                },
+                                "code": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "An invite code."
+                                },
+                                "status": {
+                                    "description": "Current status for the invite.",
+                                    "enum": [
+                                        "accepted",
+                                        "pending"
+                                    ]
+                                },
+                                "insertUserID": {
+                                    "type": "integer",
+                                    "description": "User who created the invite."
+                                },
+                                "dateInserted": {
+                                    "type": "string",
+                                    "description": "When the invite was created.",
+                                    "format": "date-time"
+                                },
+                                "acceptedUser": {
+                                    "$ref": "#/definitions/UserFragment"
+                                },
+                                "acceptedUserID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "User who accepted the invite."
+                                },
+                                "dateAccepted": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the invite was accepted."
+                                },
+                                "dateExpires": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the expiration is set to expire."
+                                }
+                            },
+                            "required": [
+                                "inviteID",
+                                "email",
+                                "code",
+                                "status",
+                                "insertUserID",
+                                "dateInserted",
+                                "acceptedUserID",
+                                "dateAccepted",
+                                "dateExpires"
+                            ]
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Invites"
+                ],
+                "summary": "Delete an invite.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "The invite ID."
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
                     }
                 }
             }
@@ -1452,8 +4007,19 @@
                     {
                         "name": "expand",
                         "in": "query",
-                        "type": "boolean",
-                        "description": "Expand associated records."
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "insertUser"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -1524,6 +4090,25 @@
                     "Roles"
                 ],
                 "summary": "List roles.",
+                "parameters": [
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "permissions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success",
@@ -1540,11 +4125,15 @@
                 "tags": [
                     "Roles"
                 ],
+                "summary": "Add a role.",
                 "parameters": [
                     {
                         "name": "body",
                         "in": "body",
-                        "required": true
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RolePost"
+                        }
                     }
                 ],
                 "responses": {
@@ -1570,6 +4159,23 @@
                         "required": true,
                         "type": "integer",
                         "description": "The role ID."
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                        "default": false,
+                        "items": {
+                            "enum": [
+                                "permissions"
+                            ],
+                            "type": "string"
+                        },
+                        "style": "form",
+                        "type": [
+                            "boolean",
+                            "array"
+                        ]
                     }
                 ],
                 "responses": {
@@ -1591,7 +4197,8 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The role ID."
                     },
                     {
                         "name": "body",
@@ -1663,15 +4270,19 @@
                                     "description": "Name of the role."
                                 },
                                 "description": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "allowNull": true,
                                     "description": "Description of the role."
                                 },
                                 "type": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "allowNull": true,
                                     "description": "Default type of this role."
                                 },
                                 "deletable": {
@@ -1701,11 +4312,74 @@
                 }
             }
         },
+        "/roles/{id}/permissions": {
+            "patch": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Update permissions on a role",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "array"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Overwrite all permissions for a role.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "array"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
         "/tokens": {
             "get": {
                 "tags": [
                     "Tokens"
                 ],
+                "summary": "Get a list of access token IDs for the current user.",
                 "parameters": [
                     {
                         "name": "accessTokenID",
@@ -1726,7 +4400,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/token"
+                                "$ref": "#/definitions/Token"
                             }
                         }
                     }
@@ -1736,13 +4410,14 @@
                 "tags": [
                     "Tokens"
                 ],
+                "summary": "Issue a new access token for the current user.",
                 "parameters": [
                     {
                         "name": "body",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/token"
+                            "$ref": "#/definitions/Token"
                         }
                     }
                 ],
@@ -1750,7 +4425,7 @@
                     "201": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/token"
+                            "$ref": "#/definitions/Token"
                         }
                     }
                 }
@@ -1782,7 +4457,7 @@
                     "200": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/token"
+                            "$ref": "#/definitions/Token"
                         }
                     }
                 }
@@ -1815,6 +4490,24 @@
                 ],
                 "summary": "List users.",
                 "parameters": [
+                    {
+                        "name": "dateInserted",
+                        "in": "query"
+                    },
+                    {
+                        "name": "dateUpdated",
+                        "in": "query"
+                    },
+                    {
+                        "name": "userID",
+                        "in": "query",
+                        "type": "array",
+                        "description": "One or more user IDs to lookup.",
+                        "items": {
+                            "type": "integer"
+                        },
+                        "style": "form"
+                    },
                     {
                         "name": "page",
                         "in": "query",
@@ -1870,6 +4563,74 @@
                 }
             }
         },
+        "/users/register": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Submit a new user registration.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "An email address for this user."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The username."
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "A password for this user."
+                                },
+                                "discoveryText": {
+                                    "type": "string",
+                                    "description": "Why does the user wish to join? Only used when the registration is flagged as SPAM (response code: 202)."
+                                },
+                                "invitationCode": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "An invitation code for registering on the site."
+                                }
+                            },
+                            "required": [
+                                "email",
+                                "name",
+                                "password",
+                                "invitationCode"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "userID": [],
+                                "name": [],
+                                "email": []
+                            },
+                            "required": [
+                                "userID",
+                                "name",
+                                "email"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "/users/{id}": {
             "get": {
                 "tags": [
@@ -1904,14 +4665,15 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The user ID."
                     },
                     {
                         "name": "body",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/UserPost"
+                            "$ref": "#/definitions/UserPatch"
                         }
                     }
                 ],
@@ -1956,7 +4718,8 @@
                         "name": "id",
                         "in": "path",
                         "required": true,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The user ID."
                     },
                     {
                         "name": "body",
@@ -2031,17 +4794,29 @@
                                     "description": "Email address of the user."
                                 },
                                 "photo": {
-                                    "type": "string",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
                                     "minLength": 0,
-                                    "allowNull": true,
                                     "description": "Raw photo field value from the user record."
+                                },
+                                "emailConfirmed": {
+                                    "type": "boolean",
+                                    "description": "Has the email address for this user been confirmed?"
+                                },
+                                "bypassSpam": {
+                                    "type": "boolean",
+                                    "description": "Should submissions from this user bypass SPAM checks?"
                                 }
                             },
                             "required": [
                                 "userID",
                                 "name",
                                 "email",
-                                "photo"
+                                "photo",
+                                "emailConfirmed",
+                                "bypassSpam"
                             ]
                         }
                     }
@@ -2050,6 +4825,156 @@
         }
     },
     "definitions": {
+        "Addon": {
+            "type": "object",
+            "properties": {
+                "addonID": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The ID of the addon used for API calls."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the addon."
+                },
+                "key": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The unique key that identifies the addon"
+                },
+                "type": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The type of addon.",
+                    "enum": [
+                        "addon",
+                        "theme",
+                        "locale"
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The addon's description"
+                },
+                "iconUrl": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The addon's icon.",
+                    "format": "uri"
+                },
+                "version": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The addon's version."
+                },
+                "require": {
+                    "type": "array",
+                    "description": "An array of addons that are required to enable the addon.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "addonID": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The ID of the addon used for API calls."
+                            },
+                            "name": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The name of the addon."
+                            },
+                            "key": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The unique key that identifies the addon"
+                            },
+                            "type": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The type of addon.",
+                                "enum": [
+                                    "addon",
+                                    "theme",
+                                    "locale"
+                                ]
+                            },
+                            "constraint": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The version requirement."
+                            }
+                        },
+                        "required": [
+                            "addonID",
+                            "name",
+                            "key",
+                            "type",
+                            "constraint"
+                        ]
+                    }
+                },
+                "conflict": {
+                    "type": "array",
+                    "description": "An array of addons that conflict with this addon.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "addonID": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The ID of the addon used for API calls."
+                            },
+                            "name": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The name of the addon."
+                            },
+                            "key": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The unique key that identifies the addon"
+                            },
+                            "type": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The type of addon.",
+                                "enum": [
+                                    "addon",
+                                    "theme",
+                                    "locale"
+                                ]
+                            },
+                            "constraint": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The version requirement."
+                            }
+                        },
+                        "required": [
+                            "addonID",
+                            "name",
+                            "key",
+                            "type",
+                            "constraint"
+                        ]
+                    }
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Whether or not the addon is enabled."
+                }
+            },
+            "required": [
+                "addonID",
+                "name",
+                "key",
+                "type",
+                "iconUrl",
+                "version",
+                "enabled"
+            ]
+        },
         "CategoryPost": {
             "type": "object",
             "properties": {
@@ -2059,19 +4984,36 @@
                     "description": "The name of the category."
                 },
                 "parentCategoryID": {
-                    "type": "integer",
-                    "allowNull": true,
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
                     "description": "Parent category ID."
                 },
                 "urlCode": {
                     "type": "string",
                     "minLength": 1,
                     "description": "The URL code of the category."
+                },
+                "displayAs": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The display style of the category.",
+                    "enum": [
+                        "categories",
+                        "discussions",
+                        "flat",
+                        "heading"
+                    ],
+                    "default": "discussions"
+                },
+                "customPermissions": {
+                    "type": "boolean",
+                    "description": "Are custom permissions set for this category?"
                 }
             },
             "required": [
                 "name",
-                "parentCategoryID",
                 "urlCode"
             ]
         },
@@ -2101,6 +5043,13 @@
                     "description": "When the comment was created.",
                     "format": "date-time"
                 },
+                "dateUpdated": {
+                    "type": [
+                        "datetime",
+                        "null"
+                    ],
+                    "description": "When the comment was last updated."
+                },
                 "insertUserID": {
                     "type": "integer",
                     "description": "The user that created the comment."
@@ -2119,6 +5068,7 @@
                 "body",
                 "format",
                 "dateInserted",
+                "dateUpdated",
                 "insertUserID"
             ]
         },
@@ -2174,15 +5124,18 @@
                     "description": "The number of messages on the conversation."
                 },
                 "countReadMessages": {
-                    "type": "integer",
-                    "allowNull": true,
+                    "type": [
+                        "null",
+                        "integer"
+                    ],
                     "description": "The number of unread messages by the current user on the conversation."
                 },
                 "dateLastViewed": {
-                    "type": "string",
-                    "allowNull": true,
-                    "description": "When the conversation was last viewed by the current user.",
-                    "format": "date-time"
+                    "type": [
+                        "null",
+                        "datetime"
+                    ],
+                    "description": "When the conversation was last viewed by the current user."
                 }
             },
             "required": [
@@ -2234,6 +5187,13 @@
                     "description": "When the discussion was created.",
                     "format": "date-time"
                 },
+                "dateUpdated": {
+                    "type": [
+                        "datetime",
+                        "null"
+                    ],
+                    "description": "When the discussion was last updated."
+                },
                 "insertUserID": {
                     "type": "integer",
                     "description": "The user that created the discussion."
@@ -2241,18 +5201,19 @@
                 "insertUser": {
                     "$ref": "#/definitions/UserFragment"
                 },
-                "bookmarked": {
-                    "type": "boolean",
-                    "description": "Whether or no the discussion is bookmarked by the current user."
+                "lastUser": {
+                    "$ref": "#/definitions/UserFragment"
                 },
                 "pinned": {
                     "type": "boolean",
                     "description": "Whether or not the discussion has been pinned."
                 },
                 "pinLocation": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 1,
-                    "allowNull": true,
                     "enum": [
                         "category",
                         "recent"
@@ -2271,9 +5232,35 @@
                     "type": "integer",
                     "description": "The number of comments on the discussion."
                 },
+                "countViews": {
+                    "type": "integer",
+                    "description": "The number of views on the discussion."
+                },
                 "url": {
                     "type": "string",
                     "description": "The full URL to the discussion."
+                },
+                "lastPost": {
+                    "$ref": "#/definitions/PostFragment"
+                },
+                "bookmarked": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion is bookmarked by the current user."
+                },
+                "unread": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion should have an unread indicator."
+                },
+                "countUnread": {
+                    "type": "integer",
+                    "description": "The number of unread comments."
+                },
+                "groupID": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The group the discussion is in."
                 }
             },
             "required": [
@@ -2282,12 +5269,81 @@
                 "body",
                 "categoryID",
                 "dateInserted",
+                "dateUpdated",
                 "insertUserID",
-                "bookmarked",
                 "pinLocation",
                 "closed",
                 "sink",
-                "countComments"
+                "countComments",
+                "countViews",
+                "bookmarked",
+                "unread"
+            ]
+        },
+        "DiscussionGetEdit": {
+            "type": "object",
+            "properties": {
+                "discussionID": {
+                    "type": "integer",
+                    "description": "The ID of the discussion."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The title of the discussion."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The body of the discussion."
+                },
+                "format": [],
+                "categoryID": {
+                    "type": "integer",
+                    "description": "The category the discussion is in."
+                },
+                "sink": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion has been sunk."
+                },
+                "closed": {
+                    "type": "boolean",
+                    "description": "Whether the discussion is closed or open."
+                },
+                "pinned": {
+                    "type": "boolean",
+                    "description": "Whether or not the discussion has been pinned."
+                },
+                "pinLocation": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "enum": [
+                        "category",
+                        "recent"
+                    ],
+                    "description": "The location for the discussion, if pinned. \"category\" are pinned to their own category. \"recent\" are pinned to the recent discussions list, as well as their own category."
+                },
+                "groupID": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The group the discussion is in."
+                }
+            },
+            "required": [
+                "discussionID",
+                "name",
+                "body",
+                "format",
+                "categoryID",
+                "sink",
+                "closed",
+                "pinned",
+                "pinLocation"
             ]
         },
         "DiscussionPost": {
@@ -2321,21 +5377,376 @@
                     "description": "Whether or not the discussion has been pinned."
                 },
                 "pinLocation": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 1,
-                    "allowNull": true,
                     "enum": [
                         "category",
                         "recent"
                     ],
                     "description": "The location for the discussion, if pinned. \"category\" are pinned to their own category. \"recent\" are pinned to the recent discussions list, as well as their own category."
+                },
+                "groupID": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The group the discussion is in."
                 }
             },
             "required": [
                 "name",
                 "body",
+                "format"
+            ]
+        },
+        "DraftPost": {
+            "type": "object",
+            "properties": {
+                "recordType": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The type of record associated with this draft.",
+                    "enum": [
+                        "comment",
+                        "discussion"
+                    ]
+                },
+                "parentRecordID": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The unique ID of the intended parent to this record."
+                },
+                "attributes": {
+                    "type": "object",
+                    "description": "A free-form object containing all custom data for this draft."
+                }
+            },
+            "required": [
+                "recordType",
+                "attributes"
+            ]
+        },
+        "Event": {
+            "type": "object",
+            "properties": {
+                "eventID": {
+                    "type": "integer",
+                    "description": "The ID of the event."
+                },
+                "userID": {
+                    "type": "integer",
+                    "description": "The user ID of the participant."
+                },
+                "user": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the event was created.",
+                    "format": "date-time"
+                },
+                "attending": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "enum": [
+                        "yes",
+                        "no",
+                        "maybe"
+                    ],
+                    "description": "Is the participant attending the event."
+                }
+            },
+            "required": [
+                "eventID",
+                "userID",
+                "dateInserted",
+                "attending"
+            ]
+        },
+        "EventPost": {
+            "type": "object",
+            "properties": {
+                "groupID": {
+                    "type": "integer",
+                    "description": "The group the event is in."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the event."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The description of the event."
+                },
+                "format": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The input format of the event."
+                },
+                "location": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "maxLength": 255,
+                    "description": "The location of the event."
+                },
+                "dateStarts": {
+                    "type": "string",
+                    "description": "When the event starts.",
+                    "format": "date-time"
+                },
+                "dateEnds": {
+                    "type": [
+                        "datetime",
+                        "null"
+                    ],
+                    "description": "When the event ends."
+                }
+            },
+            "required": [
+                "groupID",
+                "name",
+                "body",
                 "format",
-                "categoryID"
+                "location",
+                "dateStarts"
+            ]
+        },
+        "Group": {
+            "type": "object",
+            "properties": {
+                "groupID": {
+                    "type": "integer",
+                    "description": "The ID of the group."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the group."
+                },
+                "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The description of the group."
+                },
+                "format": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The input format of the group."
+                },
+                "iconUrl": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The URL of the icon of the group."
+                },
+                "bannerUrl": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The URL of the banner of the group."
+                },
+                "privacy": {
+                    "type": "string",
+                    "minLength": 1,
+                    "enum": [
+                        "public",
+                        "private"
+                    ],
+                    "description": "The privacy level of the group's content."
+                }
+            },
+            "required": [
+                "groupID",
+                "name",
+                "description",
+                "format",
+                "iconUrl",
+                "bannerUrl",
+                "privacy"
+            ]
+        },
+        "GroupApplicant": {
+            "type": "object",
+            "properties": {
+                "userID": {
+                    "type": "integer",
+                    "description": "The user ID of the applicant."
+                },
+                "user": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "state": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "enum": [
+                        "approved",
+                        "denied"
+                    ],
+                    "description": "The status of the applicant."
+                },
+                "reason": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The reason why the applicant wants to join the group."
+                },
+                "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Universal record field. Content of \"reason\"."
+                },
+                "format": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Universal record field. Format of \"reason\"."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the applicant was created.",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "userID",
+                "state",
+                "reason",
+                "body",
+                "format",
+                "dateInserted"
+            ]
+        },
+        "GroupInvite": {
+            "type": "object",
+            "properties": {
+                "userID": {
+                    "type": "integer",
+                    "description": "The ID of the user that has been invited."
+                },
+                "user": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the invite was issued.",
+                    "format": "date-time"
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The user that created the invite."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                }
+            },
+            "required": [
+                "userID",
+                "dateInserted",
+                "insertUserID"
+            ]
+        },
+        "GroupMember": {
+            "type": "object",
+            "properties": {
+                "userID": {
+                    "type": "integer",
+                    "description": "The user ID of the member of the group."
+                },
+                "user": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the user was added to the group.",
+                    "format": "date-time"
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The user that added this user to the group."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                },
+                "role": {
+                    "type": "string",
+                    "minLength": 1,
+                    "enum": [
+                        "leader",
+                        "member"
+                    ],
+                    "description": "The role of the user for that group."
+                }
+            },
+            "required": [
+                "userID",
+                "dateInserted",
+                "insertUserID",
+                "role"
+            ]
+        },
+        "GroupPost": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The name of the group."
+                },
+                "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The description of the group."
+                },
+                "format": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The input format of the group."
+                },
+                "iconUrl": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The URL of the icon of the group."
+                },
+                "bannerUrl": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The URL of the banner of the group."
+                },
+                "privacy": {
+                    "type": "string",
+                    "minLength": 1,
+                    "enum": [
+                        "public",
+                        "private"
+                    ],
+                    "description": "The privacy level of the group's content."
+                }
+            },
+            "required": [
+                "name",
+                "description",
+                "format",
+                "privacy"
             ]
         },
         "Message": {
@@ -2399,6 +5810,70 @@
                 "body"
             ]
         },
+        "PermissionFragment": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "type": {
+                    "type": "string",
+                    "minLength": 1,
+                    "enum": [
+                        "global",
+                        "category"
+                    ]
+                },
+                "permissions": {
+                    "type": "object"
+                }
+            },
+            "required": [
+                "type",
+                "permissions"
+            ]
+        },
+        "PostFragment": {
+            "type": "object",
+            "properties": {
+                "discussionID": {
+                    "type": "integer",
+                    "description": "The discussion ID of the post."
+                },
+                "commentID": {
+                    "type": "integer",
+                    "description": "The comment ID of the post, if any."
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The title of the post."
+                },
+                "url": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The URL of the post."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "The date of the post.",
+                    "format": "date-time"
+                },
+                "insertUserID": {
+                    "type": "integer",
+                    "description": "The author of the post."
+                },
+                "insertUser": {
+                    "$ref": "#/definitions/UserFragment"
+                }
+            },
+            "required": [
+                "name",
+                "url",
+                "dateInserted",
+                "insertUserID"
+            ]
+        },
         "Role": {
             "type": "object",
             "properties": {
@@ -2412,15 +5887,19 @@
                     "description": "Name of the role."
                 },
                 "description": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 0,
-                    "allowNull": true,
                     "description": "Description of the role."
                 },
                 "type": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 0,
-                    "allowNull": true,
                     "description": "Default type of this role."
                 },
                 "deletable": {
@@ -2436,8 +5915,10 @@
                     "description": "Is membership in this role personal information?"
                 },
                 "permissions": {
-                    "type": "object",
-                    "description": "Permissions available to the role."
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PermissionFragment"
+                    }
                 }
             },
             "required": [
@@ -2477,15 +5958,19 @@
                     "description": "Name of the role."
                 },
                 "description": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 0,
-                    "allowNull": true,
                     "description": "Description of the role."
                 },
                 "type": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 0,
-                    "allowNull": true,
                     "description": "Default type of this role."
                 },
                 "deletable": {
@@ -2499,10 +5984,100 @@
                 "personalInfo": {
                     "type": "boolean",
                     "description": "Is membership in this role personal information?"
+                },
+                "permissions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PermissionFragment"
+                    }
                 }
             },
             "required": [
                 "name"
+            ]
+        },
+        "SSOData": {
+            "type": "object",
+            "properties": {
+                "authenticatorName": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the authenticator that was used to create this object."
+                },
+                "authenticatorID": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "ID of the authenticator instance that was used to create this object."
+                },
+                "authenticatorIsTrusted": {
+                    "type": "boolean",
+                    "description": "If the authenticator is trusted to sync user's information."
+                },
+                "uniqueID": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Unique ID of the user supplied by the provider."
+                },
+                "email": {
+                    "type": "string",
+                    "description": "Email of the user."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the user."
+                },
+                "roles": {
+                    "type": "array",
+                    "description": "One or more role name.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "style": "form"
+                },
+                "...": {
+                    "type": "string",
+                    "description": "Any other information."
+                }
+            },
+            "required": [
+                "authenticatorName",
+                "authenticatorID",
+                "authenticatorIsTrusted",
+                "uniqueID"
+            ],
+            "description": "SSOAuthenticator's supplied information."
+        },
+        "Token": {
+            "type": "object",
+            "properties": {
+                "accessTokenID": {
+                    "type": "integer",
+                    "description": "The unique numeric ID."
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "description": "A user-specified label."
+                },
+                "accessToken": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "A signed version of the token."
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the token was generated.",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "accessTokenID",
+                "name",
+                "accessToken",
+                "dateInserted"
             ]
         },
         "User": {
@@ -2523,26 +6098,40 @@
                     "description": "Email address of the user."
                 },
                 "photoUrl": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 0,
-                    "allowNull": true,
                     "description": "URL to the user photo."
                 },
-                "confirmed": {
+                "emailConfirmed": {
                     "type": "boolean",
-                    "description": "Is the user confirmed?"
+                    "description": "Has the email address for this user been confirmed?"
                 },
                 "showEmail": {
                     "type": "boolean",
                     "description": "Is the email address visible to other users?"
                 },
-                "verified": {
+                "bypassSpam": {
                     "type": "boolean",
-                    "description": "Has the user been verified?"
+                    "description": "Should submissions from this user bypass SPAM checks?"
                 },
                 "banned": {
                     "type": "integer",
                     "description": "Is the user banned?"
+                },
+                "dateInserted": {
+                    "type": "string",
+                    "description": "When the user was created.",
+                    "format": "date-time"
+                },
+                "dateUpdated": {
+                    "type": [
+                        "datetime",
+                        "null"
+                    ],
+                    "description": "When the user was last updated."
                 },
                 "roles": {
                     "type": "array",
@@ -2556,10 +6145,12 @@
                 "name",
                 "email",
                 "photoUrl",
-                "confirmed",
+                "emailConfirmed",
                 "showEmail",
-                "verified",
-                "banned"
+                "bypassSpam",
+                "banned",
+                "dateInserted",
+                "dateUpdated"
             ]
         },
         "UserFragment": {
@@ -2586,6 +6177,44 @@
                 "photoUrl"
             ]
         },
+        "UserPatch": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the user."
+                },
+                "email": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Email address of the user."
+                },
+                "photo": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 0,
+                    "description": "Raw photo field value from the user record."
+                },
+                "emailConfirmed": {
+                    "type": "boolean",
+                    "description": "Has the email address for this user been confirmed?"
+                },
+                "bypassSpam": {
+                    "type": "boolean",
+                    "description": "Should submissions from this user bypass SPAM checks?"
+                },
+                "roleID": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "description": "Roles to set on the user."
+                }
+            }
+        },
         "UserPost": {
             "type": "object",
             "properties": {
@@ -2600,9 +6229,11 @@
                     "description": "Email address of the user."
                 },
                 "photo": {
-                    "type": "string",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "minLength": 0,
-                    "allowNull": true,
                     "description": "Raw photo field value from the user record."
                 },
                 "password": {
@@ -2610,46 +6241,30 @@
                     "minLength": 1,
                     "description": "Password of the user."
                 },
+                "emailConfirmed": {
+                    "default": true,
+                    "type": "boolean",
+                    "description": "Has the email address for this user been confirmed?"
+                },
+                "bypassSpam": {
+                    "default": false,
+                    "type": "boolean",
+                    "description": "Should submissions from this user bypass SPAM checks?"
+                },
                 "roleID": {
                     "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
                     "description": "Roles to set on the user."
                 }
             },
             "required": [
                 "name",
                 "email",
-                "password"
-            ]
-        },
-        "token": {
-            "type": "object",
-            "properties": {
-                "accessTokenID": {
-                    "type": "integer",
-                    "description": "The unique numeric ID."
-                },
-                "name": {
-                    "type": "string",
-                    "minLength": 1,
-                    "allowNull": true,
-                    "description": "A user-specified label."
-                },
-                "accessToken": {
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "A signed version of the token."
-                },
-                "dateInserted": {
-                    "type": "string",
-                    "description": "When the token was generated.",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "accessTokenID",
-                "name",
-                "accessToken",
-                "dateInserted"
+                "password",
+                "emailConfirmed",
+                "bypassSpam"
             ]
         }
     }
