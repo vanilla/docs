@@ -29,13 +29,14 @@ Current functionalities include:
 
 ## Getting Started
 
-Follow the [setup guide](https://github.com/vanilla/vanilla-cli#setup) in the `vanilla-cli` repo.
+Follow the [setup guide](/developer/vanilla-cli/installation).
 
 ## Build Tools
 
 The Vanilla CLI bundles it's own build tool to make starting and mainting your Vanilla Forums addons easier.
 
 - [Build Tool Quickstart Guide](/developer/vanilla-cli/build-quickstart)
+- [Build Process - Core](/developer/vanilla-cli/build-process-core)
 - [Build Process - 1.0](/developer/vanilla-cli/build-process-v1)
 - [Build Process - Legacy](/developer/vanilla-cli/build-process-legacy)
 - [How Bundling Works](/developer/vanilla-cli/bundling-process)
@@ -50,7 +51,7 @@ The Vanilla Build Tool aims to provide a consistant experience to building front
 ### Options
 
 #### `--process [process_version]`
-Select the build process you wish to use. This will override any other method of settings such the `build.processVersion` in the [addon.json](/developer/addons/addon-info/#build). Current options are [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy).
+Select the build process you wish to use. This will override any other method of settings such the `build.processVersion` in the [addon.json](/developer/addons/addon-info/#build). Current options are [core](/developer/vanilla-cli/build-process-v1), [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy).
 
 #### `--csstool [tool_name]`
 Select the CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.

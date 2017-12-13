@@ -14,7 +14,7 @@ versioning:
   added: 2.5
 ---
 
-This is the primary build process. It is based on the build tool [gulp](http://gulpjs.com/). It builds stylesheets using [node-sass](https://github.com/sass/node-sass) or [less](https://github.com/less/less.js/tree/master) and bundles javascript with [Webpack](https://github.com/webpack/webpack) and [babel](https://babeljs.io/).
+This is one of the built-in build processes. It is based on the task runner [gulp](http://gulpjs.com/). It builds stylesheets using [node-sass](https://github.com/sass/node-sass) or [less](https://github.com/less/less.js/tree/master) and bundles javascript with [Webpack](https://github.com/webpack/webpack) and [babel](https://babeljs.io/).
 
 This build process was formerly called `1.0`. It has now been renamed to `v1`. Existing addon.json files referencing the process version `1.0` will continue to work.
 
@@ -38,7 +38,7 @@ Source files should be placed in the `src/less` directory. Any file ending in `*
 
 ### Javascript
 
-The javascript entry point is currently always found at `src/js/index.js`. This tool does not currently support multiple javascript entry files.
+The javascript entry point is currently always found at `src/js/index.js` and will generate a bundle at `js/custom.js`. This tool does not currently support multiple javascript entry  files or custom entrypoints/outputs. For custom entrypoints see the [core build process](/developer/vanilla-cli/build-process-core).
 
 ### Images
 
