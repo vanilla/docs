@@ -18,7 +18,7 @@ menu:
 ## Prerequisites
 The CLI requires PHP `5.6.0` or greater installed to run. It also requires [composer](https://getcomposer.org/).
 
-Some commands, currently `build` and `lint`, require a minimum Node.js version of `8.3.0` and the package manager `yarn` to be installed. Installation instructions are located [in the wik](https://github.com/vanilla/vanilla-cli/wiki/Node.js-Processes).
+Some commands, currently `build` and `lint`, require a minimum Node.js version of `8.3.0` and the package manager `yarn` to be installed.
 
 ### Installing Node
 
