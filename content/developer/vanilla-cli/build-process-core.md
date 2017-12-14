@@ -9,6 +9,7 @@ tags:
 - parent
 - child
 - library
+- dependency
 
 category: developer
 menu:
@@ -18,13 +19,13 @@ versioning:
   added: 2.6
 ---
 
-This is the primary Vanilla Forums build process. It is used to build assets for vanilla's core, and it's addons. It is build using [Webpack](https://webpack.js.org/), [node-sass](https://github.com/sass/node-sass) and [babel](https://babeljs.io/). The `core` process can generate multiple javascript bundles and multiple built stylesheets for an addon. Its primary differences from the v1 process is that it enables building against other addons. Code can be shared between addons by using [library bundles](#library-bundles) and [child themes](#child-themes).
+This is the primary Vanilla Forums build process. It is used to build assets for vanilla's core, and it's addons. It is build using [Webpack](https://webpack.js.org/), [node-sass](https://github.com/sass/node-sass) and [babel](https://babeljs.io/). The `core` process can generate multiple javascript bundles and multiple built stylesheets for an addon. Its primary differences from the v1 process is that it enables building against other addons. Code can be shared between addons by using [dependency bundles](#dependency-bundles) and [child themes](#child-themes).
 
 ## Contents
 
 - [Folder Structure](#folder-structure)
-- [Library Bundles](#library-bundles)
-- [Runnable Bundles](#runnable-bundles)
+- [Dependency Bundles](#dependency-bundles)
+- [Executable Bundles](#executable-bundles)
 - [App & Admin Bundles](#app-admin-bundles)
 - [Stylesheets](#stylesheets)
 - [Child Themes](#child-themes)
@@ -37,10 +38,10 @@ Javascript source files are located in the `src/js` directory and built into the
 
 Javascript entry points must be explicitly defined in the [addon.json file](/developer/addons/addon-info#build). Stylesheet entry points are inferred. Any file matching the pattern `src/scss/**/*.scss` that does not match `_*.scss` will be used as an entry point.
 
-## Library Bundles
-Library bundles are built from the files defined in `build.exports` of the [addon.json file](/developer/addons/addon-info/#build-exports).
+## Dependency Bundles
+Dependency bundles are built from the files defined in `build.exports` of the [addon.json file](/developer/addons/addon-info/#build-exports).
 
-Library Bundles are used to separate out common chunks of code from between addons. Each export will generate a `lib-<ADDON_KEY>-<EXPORT_KEY>.js` bundle in the `js` folder of the addon and a `*-manifest.json` file in the `manifests` folder of the addon. The manifest file is a mapping for other bundles to build against so be sure to check those into version control. So an `exports` object like the following
+Dependency Bundles are used to separate out common chunks of code from between addons. Each export will generate a `lib-<ADDON_KEY>-<EXPORT_KEY>.js` bundle in the `js` folder of the addon and a `*-manifest.json` file in the `manifests` folder of the addon. The manifest file is a mapping for other bundles to build against so be sure to check those into version control. So an `exports` object like the following
 
 ```json
 "build": {
@@ -55,22 +56,22 @@ Library Bundles are used to separate out common chunks of code from between addo
 
 would generate bundles `js/lib-dashboard-app.js` and `js/lib-dashboard-admin.js` and manifests `manifests/app-manifest.json` and `manifests/admin-manifest.json`
 
-### What should go into a library bundle?
+### What should go into a dependency bundle?
 
 - Modular code that you want to consume from your own addon and/or other addons.
 - Vendor Libraries.
 - React Components.
 
-### What not to include in a library bundle?
+### What not to include in a dependency bundle?
 
-- Code that needs to be run by including a script in the page. If you want to put code for your own addon in a library bundle, be sure to import it properly in a [runnable bundle](#runnable-bundles).
+- Code that needs to be run by including a script in the page. If you want to put code for your own addon in a dependency bundle, be sure to import it properly in a [executable bundle](#executable-bundles).
 - Large files that are only meant to be included on a single page. These should be included in a separate bundle, or used as a global for that page.
 
-## Consuming a library bundle
+## Consuming a dependency bundle
 
-Library bundles can be consumed through other library bundles or through a [runnable bundle](#runnable-bundles). Any time that you build a bundle it will check the requirements declared in the `require` [addon.json key](/developer/addons/addon-info/#require) and build against the libraries from that addon. In addition to the requirements explicity declared in the `require` key, all addons build against their own library bundles and the core library bundles.
+Dependency bundles can be consumed through other dependency bundles or through a [executable bundle](#executable-bundles). Any time that you build a bundle it will check the requirements declared in the `require` [addon.json key](/developer/addons/addon-info/#require) and build against the libraries from that addon. In addition to the requirements explicity declared in the `require` key, all addons build against their own dependency bundles and the core dependency bundles.
 
-If a file declared in a required library bundle is imported, then that import will automatically be replaced with a reference to the library bundle in the outputed file. This is only possible if the imported file path resolves to the same location as the `build.exports` declaration in the required addon.
+If a file declared in a required dependency bundle is imported, then that import will automatically be replaced with a reference to the dependency bundle in the outputed file. This is only possible if the imported file path resolves to the same location as the `build.exports` declaration in the required addon.
 
 Some aliases have been provided to make importing slightly easier.
 
@@ -100,9 +101,9 @@ The `core` build process will automatically attempt to resolve node_modules in t
 
 No special syntax is required. If the modules you are trying to import is not explicitly an export from core, dashboard, vanilla, or your own addon will not be de-duplicated, so watch your bundle sizes!
 
-## Runnable Bundles
+## Executable Bundles
 
-Runnable bundles are built from the `build.entries` of the [addon.json file](/developer/addons/addon-info/#build-entries). Each entry point will generate an `<ADDON_KEY>-<ENTRY_KEY>.js` bundle in the `js` folder of the addon. So an `entries` object like the following
+Executable bundles are built from the `build.entries` of the [addon.json file](/developer/addons/addon-info/#build-entries). Each entry point will generate an `<ADDON_KEY>-<ENTRY_KEY>.js` bundle in the `js` folder of the addon. So an `entries` object like the following
 
 ```json
 "build": {
@@ -117,7 +118,7 @@ Runnable bundles are built from the `build.entries` of the [addon.json file](/de
 
 would generate bundles `js/dashboard-app.js` and `js/dashboard-admin.js` from the entrypoints `src/js/app/index.js` and `src/js/admin/index.js`.
 
-A runnable bundle is the actual exectuable javascript for your addon. This is place for 
+An executable bundle is the actual runnable javascript for your addon. This is the place for 
 
 - Registering event listeners and hooks.
 - Modifying the DOM.
@@ -151,7 +152,7 @@ This build process works with the [Sass preprocessor](http://sass-lang.com/). Th
 
 ### Child Themes
 
-The `core` build process allows themes to build against each other by specifying the [parent key in the addon.json file](/developer/addons/addon-info/#parent). For the build to work both themes must define be using the `core` build process. This enables the parent theme to specify some special entry points in it's stylesheets for the child theme to hook into.
+The `core` build process allows themes to build against each other by specifying the [parent key in the addon.json file](/developer/addons/addon-info/#parent). For the build to work both themes must define be using the `core` build process. This enables the parent theme to specify some special entry points in it's stylesheets for the child theme to hook into. ***Note: while multiple levels of children may technically build (eg. grandchildren) this setup is heavily discouraged.***
 
 #### Defining a Parent Theme
 

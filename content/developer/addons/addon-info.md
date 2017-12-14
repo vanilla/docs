@@ -302,13 +302,13 @@ This parameter has been renamed before. In previous versions of the `vanilla-cli
 
 #### build.entries
 
-Entries are available only in the [core build process](/developer/vanilla-cli/build-process-core/#runnable-bundles).
+Entries are available only in the [core build process](/developer/vanilla-cli/build-process-core/#executable-bundles).
 
 The `entries` of desired output files to entry files. It is an object mapping `string => string`, where the key is used to resolve the output filename and location, and the value is used to resolve the location of the entrypoint. Most addons should have very few entries and many will have just 1.
 
 #### build.exports
 
-Exports are available only in the [core build process](/developer/vanilla-cli/build-process-core/#library-bundles).
+Exports are available only in the [core build process](/developer/vanilla-cli/build-process-core/#dependency-bundles).
 
 They are used to allow allow addons to build against other addons. Anything resolved in an export gets outputted into a separate library for other addons to build against.
 
