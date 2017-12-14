@@ -275,23 +275,69 @@ A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Vi
 ],
 ```
 
+### parent
+
+The [core build process](/developer/vanilla-cli/build-process-core#child-themes) allows themes to build against each other in order to facilitate stylesheet re-use. This key should be the addon `key` of another theme build with the `core` build process.
+
+#### Example
+```json
+{
+    "key": "child-theme",
+    "parent": "parent-theme",
+    "build": {
+        "process": "core"
+    }
+}
+```
+
 ### build
 
 Specifies options for the [Vanilla CLI's build tool](/developer/vanilla-cli#build-tools).
 
-#### build.processVersion
+#### build.process
 
-Which process version to use. Currently available processes are [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy). The default is `legacy` for backwards compatibility purposes.
+Which process version to use. Currently available processes are [core](/developer/vanilla-cli/build-process-core), [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy). The default is `legacy` for backwards compatibility purposes.
+
+This parameter has been renamed before. In previous versions of the `vanilla-cli`, this key was called `buildProcessVersion` and `build.processVersion`. These keys are deprecated but will continue to work. The tool internally maps them to the new key.
+
+#### build.entries
+
+Entries are available only in the [core build process](/developer/vanilla-cli/build-process-core/#executable-bundles).
+
+The `entries` of desired output files to entry files. It is an object mapping `string => string`, where the key is used to resolve the output filename and location, and the value is used to resolve the location of the entrypoint. Most addons should have very few entries and many will have just 1.
+
+#### build.exports
+
+Exports are available only in the [core build process](/developer/vanilla-cli/build-process-core/#dependency-bundles).
+
+They are used to allow allow addons to build against other addons. Anything resolved in an export gets outputted into a separate library for other addons to build against.
 
 #### build.cssTool
 
 Which CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.
 
-#### Example 
+#### Build Example 
 ```json
 "build": {
-    "processVersion": "v1",
-    "cssTool": "scss"
+    "process": "v1",
+    "cssTool": "scss",
+    "entries": {
+        "output.js": "./entry.js"
+    }
+}
+```
+```json
+"build": {
+    "key": "dashboard",
+    "process": "core",
+    "entries": {
+        "app": "./app/index.js",
+        "admin": "./admin/index.js"
+    },
+    "exports": {
+        "app": ["./common/Modal", "./app/ProfileEvents", "moment"],
+        "admin": ["./common/Modal", "./admin/jenga-blocks", "ace", "moment", "bootstrap", "jquery"]
+    }
 }
 ```
 
@@ -354,17 +400,5 @@ An array of files or globs to lint. Defaults to
         "otherDirectory/src/**/.js",
         "otherDirectory/src/**/.jsx"
     ]
-}
-```
-
-#### build.cssTool
-
-Which CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.
-
-#### Example 
-```json
-"build": {
-    "processVersion": "v1",
-    "cssTool": "scss"
 }
 ```
