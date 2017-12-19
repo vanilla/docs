@@ -26,6 +26,7 @@ Current functionalities include:
 - [Getting Started](#getting-started)
 - [Build Tools](#build-tools)
 - [Addon Utilities](#addon-utilities)
+- [Common Issues](#common-issues)
 
 ## Getting Started
 
@@ -140,3 +141,39 @@ Convert addons from using `$PluginInfo` / `$ThemeInfo` / `about.php` metadata de
 #### `--vanillasrc`
 
 You vanilla installation's source directory.
+
+## Common Issues
+
+There are a few common issues that people run into.
+
+### I'm getting an error message that my Vanilla source directory is missing or incorrect.
+
+In order to function properly the CLI tool needs to know where your Vanilla installation is located on your system. If my vanilla installation is at `~/workspace/vanilla` then I can either pass it as a parameter on every command:
+
+```bash
+vanilla build --vanillasrc=~/workspace/vanilla
+```
+
+or set the environmental variable.
+
+```bash
+# In ~/.bashrc, ~/.profile, or ~/.bash_profile (Any startup script for bash)
+export VANILLACLI_VANILLA_SRC_DIR=~/workspace/vanilla
+
+# In fish shell prompt (This will save the variable across all of your sessions)
+set -Ux VANILLACLI_VANILLA_SRC_DIR ~/workspace/vanilla
+```
+
+Note that there are *not* quotes around any of the paths.
+
+### I'm having an issue with the CLI's own node_module dependancies.
+
+Try running your command with the `--reinitialize` flag. This will force-reinstall the node_modules required for your particular command.
+
+```bash
+vanilla build --reinitialize
+```
+
+### I'm getting an error related to composer, autoloader, or some PHP function not being available.
+
+This applies only to manual installations of `vanilla-cli`. Navigate to your `vanilla-cli` directory and run `composer install`.
