@@ -11,7 +11,7 @@ menu:
     identifier: addons-social-github
     weight: 2
 aliases:
-- help/integrations/github
+- /help/integrations/github
 ---
 
 ## Github
