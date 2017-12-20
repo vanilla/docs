@@ -10,6 +10,8 @@ menu:
     parent: addons-social
     identifier: addons-social-github
     weight: 2
+aliases:
+- help/integrations/github
 ---
 
 ## Github
