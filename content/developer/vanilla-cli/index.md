@@ -146,21 +146,41 @@ You vanilla installation's source directory.
 
 There are a few common issues that people run into.
 
+### I'm having trouble getting the parameters right.
+
+The CLI tool has some help baked right into the tool! By appending `--help` to any command you can list subcommands or parameters right in your console.
+
+```bash
+$ vanilla build --help
+$ vanilla addon-json --help
+```
+
+### I'm trying to resolve an issue with my build myself but there is not enough output to figure out what's going on.
+
+The CLI tool has a verbose mode which can output additional information to the console. Use it by adding the `--verbose` flag.
+
+```bash
+vanilla build --verbose
+```
+
 ### I'm getting an error message that my Vanilla source directory is missing or incorrect.
 
-In order to function properly the CLI tool needs to know where your Vanilla installation is located on your system. If my vanilla installation is at `~/workspace/vanilla` then I can either pass it as a parameter on every command:
+In order to function properly the CLI tool needs to know where your Vanilla installation is located on your system. These examples will use `~/workspace/vanilla` as the vanilla directory. The location on your local machine may be different. This can be passed on every command with the `--vanillasrc` parameter.
 
 ```bash
 vanilla build --vanillasrc=~/workspace/vanilla
 ```
 
-or set the environmental variable.
+Note that this is a ***temporary solution***. It will not carry across different shells or reboots. For a more permanent solution you can set an [environmental variable](https://www.cyberciti.biz/faq/set-environment-variable-unix/).
 
 ```bash
-# In ~/.bashrc, ~/.profile, or ~/.bash_profile (Any startup script for bash)
+# For Bash.
+# In ~/.bashrc, ~/.profile, or ~/.bash_profile. 
+# This will save the variable persistently across all of your sessions.
 export VANILLACLI_VANILLA_SRC_DIR=~/workspace/vanilla
 
-# In fish shell prompt (This will save the variable across all of your sessions)
+# In fish shell.
+# This will save the variable persistently across all of your sessions.
 set -Ux VANILLACLI_VANILLA_SRC_DIR ~/workspace/vanilla
 ```
 
