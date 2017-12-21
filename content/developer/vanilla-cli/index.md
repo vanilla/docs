@@ -26,6 +26,7 @@ Current functionalities include:
 - [Getting Started](#getting-started)
 - [Build Tools](#build-tools)
 - [Addon Utilities](#addon-utilities)
+- [Common Issues](#common-issues)
 
 ## Getting Started
 
@@ -140,3 +141,59 @@ Convert addons from using `$PluginInfo` / `$ThemeInfo` / `about.php` metadata de
 #### `--vanillasrc`
 
 You vanilla installation's source directory.
+
+## Common Issues
+
+There are a few common issues that people run into.
+
+### I'm having trouble getting the parameters right.
+
+The CLI tool has some help baked right into the tool! By appending `--help` to any command you can list subcommands or parameters right in your console.
+
+```bash
+$ vanilla build --help
+$ vanilla addon-json --help
+```
+
+### I'm trying to resolve an issue with my build myself but there is not enough output to figure out what's going on.
+
+The CLI tool has a verbose mode which can output additional information to the console. Use it by adding the `--verbose` flag.
+
+```bash
+vanilla build --verbose
+```
+
+### I'm getting an error message that my Vanilla source directory is missing or incorrect.
+
+In order to function properly the CLI tool needs to know where your Vanilla installation is located on your system. These examples will use `~/workspace/vanilla` as the vanilla directory. The location on your local machine may be different. This can be passed on every command with the `--vanillasrc` parameter.
+
+```bash
+vanilla build --vanillasrc=~/workspace/vanilla
+```
+
+Note that this is a ***temporary solution***. It will not carry across different shells or reboots. For a more permanent solution you can set an [environmental variable](https://www.cyberciti.biz/faq/set-environment-variable-unix/).
+
+```bash
+# For Bash.
+# In ~/.bashrc, ~/.profile, or ~/.bash_profile. 
+# This will save the variable persistently across all of your sessions.
+export VANILLACLI_VANILLA_SRC_DIR=~/workspace/vanilla
+
+# In fish shell.
+# This will save the variable persistently across all of your sessions.
+set -Ux VANILLACLI_VANILLA_SRC_DIR ~/workspace/vanilla
+```
+
+Note that there are *not* quotes around any of the paths.
+
+### I'm having an issue with the CLI's own node_module dependancies.
+
+Try running your command with the `--reinitialize` flag. This will force-reinstall the node_modules required for your particular command.
+
+```bash
+vanilla build --reinitialize
+```
+
+### I'm getting an error related to composer, autoloader, or some PHP function not being available.
+
+This applies only to manual installations of `vanilla-cli`. Navigate to your `vanilla-cli` directory and run `composer install`.
