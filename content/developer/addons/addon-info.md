@@ -304,13 +304,13 @@ This parameter has been renamed before. In previous versions of the `vanilla-cli
 
 Entries are available only in the [core build process](/developer/vanilla-cli/build-process-core/#executable-bundles).
 
-The `entries` of desired output files to entry files. It is an object mapping `string => string`, where the key is used to resolve the output filename and location, and the value is used to resolve the location of the entrypoint. Most addons should have very few entries and many will have just 1.
+The `entries` of desired output files to entry files. It is an object mapping `outputKey => entryFilePath`, where the key is used to resolve the output filename and location, and the value is used to resolve the location of the entrypoint. Most addons should have very few entries and many will have just 1. Any relative file paths will be resolved relative to the addon.json file.
 
 #### build.exports
 
 Exports are available only in the [core build process](/developer/vanilla-cli/build-process-core/#dependency-bundles).
 
-They are used to allow allow addons to build against other addons. Anything resolved in an export gets outputted into a separate library for other addons to build against.
+They are used to allow allow addons to build against other addons. Anything resolved in an export gets outputted into a separate library for other addons to build against. It is an object mapping `outputKey => entryFilePath[]`. Any relative file paths will be resolved relative to the addon.json file. Unqualified paths (eg. 'jquery', 'ace-editor') will be resolved in that addon's `node_modules` folder.
 
 #### build.cssTool
 
@@ -320,10 +320,7 @@ Which CSS preprocessor to use. Current options are `scss` and `less`. The defaul
 ```json
 "build": {
     "process": "v1",
-    "cssTool": "scss",
-    "entries": {
-        "output.js": "./entry.js"
-    }
+    "cssTool": "scss"
 }
 ```
 ```json
@@ -331,12 +328,12 @@ Which CSS preprocessor to use. Current options are `scss` and `less`. The defaul
     "key": "dashboard",
     "process": "core",
     "entries": {
-        "app": "./app/index.js",
-        "admin": "./admin/index.js"
+        "app": "./src/scripts/app/index.js",
+        "admin": "./src/scripts/admin/index.js"
     },
     "exports": {
-        "app": ["./common/Modal", "./app/ProfileEvents", "moment"],
-        "admin": ["./common/Modal", "./admin/jenga-blocks", "ace", "moment", "bootstrap", "jquery"]
+        "app": ["./src/scripts/common/Modal", "./src/scripts/app/ProfileEvents", "moment"],
+        "admin": ["./src/scripts/common/Modal", "./src/scripts/admin/jenga-blocks", "ace", "moment", "bootstrap", "jquery"]
     }
 }
 ```
