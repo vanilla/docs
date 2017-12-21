@@ -109,7 +109,7 @@ That whole definitions section probably didn't *seem* very quick, but you just d
 
 Creata a new directory inside of your theme called `design`. Inside of that directory create a new file called `custom.css` and place any of your custom styles here. More complex themes may use a CSS pre-processor like `sass`, `less`, or `stylus` in order to gain advanced css features. You can use these, just make sure that your output file is still called `custom.css` inside of the `design` folder.
 
-Learn more by reading our docs on [Theming with CSS](/developer/addons/theming-width-css)
+Learn more by reading our docs on [Theming with CSS](/developer/addons/theming-with-css)
 
 ## 4. Create a Master View (optional)
 
