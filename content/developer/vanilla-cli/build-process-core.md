@@ -34,7 +34,7 @@ This is the primary Vanilla Forums build process. It is used to build assets for
 
 Source files are always found in one of two places - the `src` directory or the `node_modules` directory. Node modules can be installed from [npm](https://www.npmjs.com/) with [yarn](https://yarnpkg.com/en/).
 
-Javascript source files are located in the `src/js` directory and built into the `js` directory of the addon. Stylesheet source files (Sass) are located in the `src/scss` directory and are built into the `design` directory of the addon.
+Javascript source files are located in the `src/scripts` directory and built into the `js` directory of the addon. Stylesheet source files (Sass) are located in the `src/scss` directory and are built into the `design` directory of the addon.
 
 Javascript entry points must be explicitly defined in the [addon.json file](/developer/addons/addon-info#build). Stylesheet entry points are inferred. Any file matching the pattern `src/scss/**/*.scss` that does not match `_*.scss` will be used as an entry point.
 
@@ -48,8 +48,8 @@ Dependency Bundles are used to separate out common chunks of code from between a
     "key": "dashboard",
     "process": "core",
     "exports": {
-        "app": ["./common/Modal", "./app/ProfileEvents", "moment"],
-        "admin": ["./common/Modal", "./admin/jenga-blocks", "ace", "moment", "bootstrap", "jquery"]
+        "app": ["./src/scripts/common/Modal", "./src/scripts/app/ProfileEvents", "moment"],
+        "admin": ["./src/scripts/common/Modal", "./src/scripts/admin/jenga-blocks", "ace", "moment", "bootstrap", "jquery"]
     }
 }
 ```
@@ -75,11 +75,11 @@ If a file declared in a required dependency bundle is imported, then that import
 
 Some aliases have been provided to make importing slightly easier.
 
-- `@core` => `<VANILLA_SRC_DIRECTORY>/core/src/js` 
-- `@vanilla` => `<VANILLA_SRC_DIRECTORY>/applications/vanilla/src/js`
-- `@dashboard` => `<VANILLA_SRC_DIRECTORY>/applications/dashboard/src/js`
+- `@core` => `<VANILLA_SRC_DIRECTORY>/core/src/scripts` 
+- `@vanilla` => `<VANILLA_SRC_DIRECTORY>/applications/vanilla/src/scripts`
+- `@dashboard` => `<VANILLA_SRC_DIRECTORY>/applications/dashboard/src/scripts`
 - Required addons will also have aliases generated for them. For example if the `vanilla-editor` addon was required, the following mapping would be generated.      
-    - `@vanilla-editor` => `<VANILLA_SRC_DIRECTORY>/plugins/editor/src/js`.
+    - `@vanilla-editor` => `<VANILLA_SRC_DIRECTORY>/plugins/editor/src/scripts`.
 
 ```js
 import * as React from "react";
@@ -110,13 +110,13 @@ Executable bundles are built from the `build.entries` of the [addon.json file](/
     "key": "dashboard",
     "process": "core",
     "entries": {
-        "app": "./app/index.js",
-        "admin": "./admin/index.js"
+        "app": "./src/scripts/app/index.js",
+        "admin": "./src/scripts/admin/index.js"
     }
 }
 ```
 
-would generate bundles `js/dashboard-app.js` and `js/dashboard-admin.js` from the entrypoints `src/js/app/index.js` and `src/js/admin/index.js`.
+would generate bundles `js/dashboard-app.js` and `js/dashboard-admin.js` from the entrypoints `src/scripts/app/index.js` and `src/scripts/admin/index.js`.
 
 An executable bundle is the actual runnable javascript for your addon. This is the place for 
 
