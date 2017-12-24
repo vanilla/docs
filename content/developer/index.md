@@ -15,6 +15,4 @@ Clients of VanillaForums.com (cloud) should [contact support](http://vanillaforu
 
 ## Security Issues and Responsible Disclosure
 
-Found a security issue? Please contact us at support@vanillaforums.com. This allows us to release a patch as quickly as possible and, hopefully, before knowledge of it becomes widespread. For all other issues, please use the [GitHub issue tracker](http://github.com/vanillaforums/vanilla).
-
-We do not currently offer a bug bounty program. We count on the support of the tens of thousands of folks running our software freely around the world to help us improve the product for the benefit of everyone.
+Found a security issue? Please contact us at security@vanillaforums.com with full details, including reproduction steps. All other inquiries should go to support@vanillaforums.com This allows us to release a patch as quickly as possible and, hopefully, before knowledge of it becomes widespread. For all other issues, please use the [GitHub issue tracker](http://github.com/vanillaforums/vanilla).
