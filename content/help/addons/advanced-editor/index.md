@@ -101,7 +101,7 @@ If you are an administrator, you can change the settings for the editor in the D
 
 ![Advanced Editor Dashboard Settings](https://images.v-cdn.net/docs/AE_DashboardSettings.PNG)
 
-A quick breakdown of these additional settings can be found, [here](https://docs.vanillaforums.com/help/addons/advanced-editor/additional-settings/).
+A quick breakdown of these additional settings can be found, [here](/help/addons/advanced-editor/additional-settings/).
 
 ## Additional Resources
 
