@@ -28,7 +28,7 @@ body {
   display: block;
   margin: auto;
   padding: 0 32px;
-  max-width: 1304px;
+  max-width: 1464px;
   width: 100%;
 }
 
@@ -60,7 +60,7 @@ body {
   padding: 0 42px 42px;
 }
 
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 1464px) {
   .column-main {
     max-width: calc(100% - 250px);
     padding-left: 32px;
@@ -423,7 +423,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (min-width: 1305px) {
+@media screen and (min-width: 1465px) {
   .menuItem-children .flyoutArrow-triangle {
     display: none;
   }
@@ -702,7 +702,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 1464px) {
   .content-nav {
     display: none;
   }
@@ -750,7 +750,7 @@ a:hover {
   display: block;
 }
 
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 1464px) {
   #nav .menuItem-children.isOpen-tablet {
     display: block;
   }
@@ -864,7 +864,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 1464px) {
   #nav_sub {
     display: none;
   }

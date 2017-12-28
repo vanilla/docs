@@ -60,11 +60,9 @@ function headingScrollInit($el, callback) {
     });
 }
 
-var $headings = $('.userContent').find('h1, h2, h3, h4, h5, h6');
-
 function anchorifyPage() {
     var anchorSVG = '<svg class="icon iconLink"><title>Anchor</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-link"></use></svg>';
-    $headings.each(function(){
+    $('.userContent').find('h1, h2, h3, h4, h5, h6').each(function(){
         if (hasAttr($(this), 'id')) {
             var anchor = '#' + $(this).attr('id');
             $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
@@ -79,12 +77,11 @@ function makeMenuItemFromElement($heading) {
     var anchor = '#' + $heading.attr('id');
     var title = $heading.text();
 
-    return `
-        <li class="menuItem">
-            <a href="${anchor}" class="sidebar-link">
-                <div class="sidebar-linkWrap">${title}</div>
-            </a>
-        </li>`;
+    return '<li class="menuItem">' +
+            '<a href="' + anchor + '" class="sidebar-link">' +
+                '<div class="sidebar-linkWrap">' + title + '</div>' +
+            '</a>' +
+        '</li>';
 }
 
 
@@ -97,7 +94,7 @@ function generateDynamicNav() {
     if (contentNavEmpty) {
         var output = "";
 
-        $headings.each(function() {
+        $('.userContent').find('h2').each(function() {
             var $heading = $(this);
             var anchor = '#' + $heading.attr('id');
             output += makeMenuItemFromElement($heading);
@@ -127,7 +124,7 @@ function setupLocationWatcher() {
     function changeHandler() {
         var anchor = window.location.hash;
         var $links = $("#subNav-content .sidebar-link");
-        var $pageNavLink = $(`#subNav-content .sidebar-link[href="${anchor}"]`);
+        var $pageNavLink = $('#subNav-content .sidebar-link[href="' + anchor + '"]');
 
         $links.removeClass("isActive");
         $pageNavLink.addClass("isActive");
