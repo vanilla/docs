@@ -22,6 +22,37 @@
     width: 100%;
     min-height: 100%;
     padding: 57px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    @include mediaQuery-notMobile {
+        overflow: auto;
+        position: fixed;
+        width: $panel-width;
+        height: initial;
+        padding: 0;
+
+        &::before {
+            content: "";
+            display: block;
+            height: $header-minHeight + 57px;
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: $footer-minHeight + 57px;
+            width: 100%;
+        }
+    }
+}
+
+.content-nav {
+    @include mediaQuery-noBleed {
+        display: none;
+    }
 }
 
 .sidebar-menu {
@@ -29,7 +60,6 @@
     display: block;
     padding: 0;
     margin: 0;
-
 
     .sidebar-menu {
         .sidebar-link {

@@ -22,7 +22,6 @@ function updateSubNav() {
     var $secondaryNavContent = $('#subNav-content');
     var $subNavContent = $mainNav.find('.js-showInRightPanel .menuItem-children');
 
-
     if( $subNavContent.length > 0 && $subNavContent.closest('')) {
         $secondaryNavContent.html( $subNavContent.html() );
         $secondaryNav.removeClass('noContent');
@@ -36,38 +35,107 @@ function navInit() {
     updateSubNav();
 }
 
-function scrollToInit($el, callback) {
-    $el.find('.headingAnchor').on('click touchstart' , function (e) {
-        e.preventDefault();
-        //calculate destination place
-        var dest = 0;
-        if ($el.offset().top > $(document).height() - $(window).height()) {
-            dest = $(document).height() - $(window).height();
-        } else {
-            dest = $el.offset().top;
+function smoothScrollToElement($el, callback) {
+    //calculate destination place
+    var dest = 0;
+    if ($el.offset().top > $(document).height() - $(window).height()) {
+        dest = $(document).height() - $(window).height();
+    } else {
+        dest = $el.offset().top;
+    }
+    //go to destination
+    $('html,body').animate({
+        scrollTop: dest
+    }, 300, 'swing', function(){
+        if( callback ){
+            callback();
         }
-        //go to destination
-        $('html,body').animate({
-            scrollTop: dest
-        }, 300, 'swing', function(){
-            if( callback ){
-                callback();
-            }
-        });
     });
 }
 
+function headingScrollInit($el, callback) {
+    $el.find('.headingAnchor').on('click touchstart' , function (e) {
+        e.preventDefault();
+        smoothScrollToElement($el, callback);
+    });
+}
+
+var $headings = $('.userContent').find('h1, h2, h3, h4, h5, h6');
+
 function anchorifyPage() {
     var anchorSVG = '<svg class="icon iconLink"><title>Anchor</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-link"></use></svg>';
-    $('.userContent').find('h1, h2, h3, h4, h5, h6').each(function(){
+    $headings.each(function(){
         if (hasAttr($(this), 'id')) {
             var anchor = '#' + $(this).attr('id');
             $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
-            scrollToInit($(anchor), function(){
+            headingScrollInit($(anchor), function(){
                 window.location = anchor;
             });
         }
     });
+}
+
+function makeMenuItemFromElement($heading) {
+    var anchor = '#' + $heading.attr('id');
+    var title = $heading.text();
+
+    return `
+        <li class="menuItem">
+            <a href="${anchor}" class="sidebar-link">
+                <div class="sidebar-linkWrap">${title}</div>
+            </a>
+        </li>`;
+}
+
+
+
+function generateDynamicNav() {
+    var $contentNavContent = $("#subNav-content");
+    var $contentNavPanel = $contentNavContent.closest(".column-panel")
+    var contentNavEmpty = $contentNavPanel.hasClass("noContent");
+
+    if (contentNavEmpty) {
+        var output = "";
+
+        $headings.each(function() {
+            var $heading = $(this);
+            var anchor = '#' + $heading.attr('id');
+            output += makeMenuItemFromElement($heading);
+
+            headingScrollInit($heading.parent(), function(){
+                window.location = anchor;
+            });
+        });
+
+        $contentNavContent.html(output);
+
+        // Add smoothscroll listeners
+        $contentNavContent.find(".sidebar-link").on("click touchstart", function(e) {
+            var $link = $(this);
+            var anchor = $link.attr("href");
+            var $endpoint = $(anchor);
+            smoothScrollToElement($endpoint, function() {
+                window.location = anchor;
+            });
+        });
+
+        $contentNavPanel.removeClass("noContent");
+    }
+}
+
+function setupLocationWatcher() {
+    function changeHandler() {
+        var anchor = window.location.hash;
+        var $links = $("#subNav-content .sidebar-link");
+        var $pageNavLink = $(`#subNav-content .sidebar-link[href="${anchor}"]`);
+
+        $links.removeClass("isActive");
+        $pageNavLink.addClass("isActive");
+    }
+
+    // Initialize navigation watcher
+    changeHandler();
+    $(window).on("hashchange", changeHandler);
 }
 
 function mobileNavInit() {
@@ -82,6 +150,8 @@ function mobileNavInit() {
 
 $(function(){
     navInit();
+    generateDynamicNav();
     anchorifyPage();
     mobileNavInit();
+    setupLocationWatcher();
 });

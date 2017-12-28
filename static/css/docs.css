@@ -28,7 +28,7 @@ body {
   display: block;
   margin: auto;
   padding: 0 32px;
-  max-width: 1464px;
+  max-width: 1304px;
   width: 100%;
 }
 
@@ -60,7 +60,7 @@ body {
   padding: 0 42px 42px;
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1304px) {
   .column-main {
     max-width: calc(100% - 250px);
     padding-left: 32px;
@@ -423,7 +423,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (min-width: 1465px) {
+@media screen and (min-width: 1305px) {
   .menuItem-children .flyoutArrow-triangle {
     display: none;
   }
@@ -441,6 +441,8 @@ a:hover {
   color: #A8A9AB;
   letter-spacing: 0.05em;
   min-height: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .docs-footer a {
@@ -673,6 +675,37 @@ a:hover {
   width: 100%;
   min-height: 100%;
   padding: 57px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+@media screen and (min-width: 881px) {
+  .docs-nav {
+    overflow: auto;
+    position: fixed;
+    width: 250px;
+    height: initial;
+    padding: 0;
+  }
+  .docs-nav::before {
+    content: "";
+    display: block;
+    height: 117px;
+    width: 100%;
+  }
+  .docs-nav::after {
+    content: "";
+    display: block;
+    height: 117px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1304px) {
+  .content-nav {
+    display: none;
+  }
 }
 
 .sidebar-menu {
@@ -717,7 +750,7 @@ a:hover {
   display: block;
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1304px) {
   #nav .menuItem-children.isOpen-tablet {
     display: block;
   }
@@ -831,7 +864,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1304px) {
   #nav_sub {
     display: none;
   }
