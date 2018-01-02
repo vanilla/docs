@@ -45,37 +45,28 @@ function smoothScrollToElement($el, callback) {
     });
 }
 
-function headingScrollInit($el, callback) {
-    $el.find('.headingAnchor').on('click touchstart' , function (e) {
-        e.preventDefault();
-        smoothScrollToElement($el, callback);
-    });
-}
-
 function anchorifyPage() {
     var anchorSVG = '<svg class="icon iconLink"><title>Anchor</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-link"></use></svg>';
     $('.userContent').find('h1, h2, h3, h4, h5, h6').each(function(){
         if (hasAttr($(this), 'id')) {
             var anchor = '#' + $(this).attr('id');
-            $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
-            headingScrollInit($(anchor), function(){
-                window.location = anchor;
-            });
+            $(this).append('<a href="' + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
         }
     });
 }
 
-function smoothScrollTableOfContents() {
-    var $tableOfContentsLinks = $("#TableOfContents a")
+function setupSmoothScroll() {
+    var $hashlinks = $("a[href^='#']");
 
-    // Add smoothscroll listeners
-    $tableOfContentsLinks.on("click touchstart", function(e) {
+    $(document).on("click touchstart", "a[href^='#']", function(e) {
         var $link = $(this);
-        var anchor = $link.attr("href");
-        var $endpoint = $(anchor);
-        smoothScrollToElement($endpoint, function() {
-            window.location = anchor;
-        });
+        if (hasAttr($link, "href")) {
+            var anchor = $link.attr("href");
+            var $endpoint = $(anchor);
+            smoothScrollToElement($endpoint, function() {
+                window.location = anchor;
+            });
+        }
     });
 }
 
@@ -106,8 +97,12 @@ function mobileNavInit() {
 
 $(function(){
     replaceTableOfContentsWithSubNav();
-    smoothScrollTableOfContents();
+    setupSmoothScroll();
     anchorifyPage();
     mobileNavInit();
     setupLocationWatcher();
+
+    if (!window.location.hash) {
+        smoothScrollToElement(".headingAnchor");
+    }
 });
