@@ -95,8 +95,8 @@ function smoothScrollTableOfContents() {
 function setupLocationWatcher() {
     function changeHandler() {
         var anchor = window.location.hash;
-        var $links = $("#subNav-content .sidebar-link");
-        var $pageNavLink = $('#subNav-content .sidebar-link[href="' + anchor + '"]');
+        var $links = $("#TableOfContents a");
+        var $pageNavLink = $('#TableOfContents a[href="' + anchor + '"]');
 
         $links.removeClass("isActive");
         $pageNavLink.addClass("isActive");
