@@ -65,19 +65,6 @@ function anchorifyPage() {
     });
 }
 
-function makeMenuItemFromElement($heading) {
-    var anchor = '#' + $heading.attr('id');
-    var title = $heading.text();
-
-    return '<li class="menuItem">' +
-            '<a href="' + anchor + '" class="sidebar-link">' +
-                '<div class="sidebar-linkWrap">' + title + '</div>' +
-            '</a>' +
-        '</li>';
-}
-
-
-
 function smoothScrollTableOfContents() {
     var $tableOfContentsLinks = $("#TableOfContents a")
 
