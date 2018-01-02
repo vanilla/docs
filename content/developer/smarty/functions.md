@@ -332,14 +332,12 @@ Writes the search box to the page.
 ### Usage
 
 ```
-{searchbox_advanced placeholder="string"}
+{searchbox_advanced}
 ```
 
 Writes an `AdvancedSearchModule` to the page. This functionality is only the available to the Vanilla Cloud customers with the `AdvancedSearch` plugin enabled. More details about advanced search can be found in the [help documentation](/help/addons/advanced-search/#using-advanced-search).
 
-### Parameters
-
-{{< params "theming/function/searchbox.json" >}}
+The advanced searchbox smarty tag does not currently offer a `placeholder` attribute. It's placeholder value can be changed by [editing the locale key](/developer/locales/) `SearchBoxPlaceHolder`.
 
 ## Function: `{text}`
 
