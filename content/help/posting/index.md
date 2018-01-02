@@ -34,11 +34,11 @@ This button will lead you to `/post/discussion`. Here's what you will encounter 
 
 ![New Post Breakdown](https://images.v-cdn.net/docs/Posting_NewPostBreakdown.png)
 
-**1** - The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the discussion on the category index.
-**2** - This is the [Advanced Editor](http://docs.vanillaforums.com/help/addons/advanced-editor/), which assists the user in formatting the text of their post, inserting images, and attaching files.
-**3** - This is the field where the user will type out the main body of their post.  
-**4** - Tags mark a discussion with certain keywords so it is easier to search for within the community. By default, up to five tags can be used on a post.
-**5** - Once the user has finished typing their post, clicking the Post Discussion button will immediately publish it. Clicking Save Draft will store the post under "My Drafts" in a user's profile menu. Preview will show the user what the finished post will look like when published. Cancel will bring the user back to the category they were viewing previously.
+1. The discussion title is what will show at the top of the post once it’s been submitted. It will also identify the discussion on the category index.
+1. This is the [Advanced Editor](http://docs.vanillaforums.com/help/addons/advanced-editor/), which assists the user in formatting the text of their post, inserting images, and attaching files.
+1. This is the field where the user will type out the main body of their post.  
+1. Tags mark a discussion with certain keywords so it is easier to search for within the community. By default, up to five tags can be used on a post.
+1. Once the user has finished typing their post, clicking the Post Discussion button will immediately publish it. Clicking Save Draft will store the post under "My Drafts" in a user's profile menu. Preview will show the user what the finished post will look like when published. Cancel will bring the user back to the category they were viewing previously.
 
 ## Types of Discussions
 
