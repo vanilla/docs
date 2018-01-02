@@ -16,7 +16,7 @@ function stripTags(html) {
     return tmp.textContent || tmp.innerText || "";
 }
 
-function updateSubNav() {
+function replaceTableOfContentsWithSubNav() {
     var $mainNav = $('#nav');
     var $secondaryNav = $('#nav_sub');
     var $secondaryNavContent = $('#subNav-content');
@@ -24,15 +24,7 @@ function updateSubNav() {
 
     if( $subNavContent.length > 0 && $subNavContent.closest('')) {
         $secondaryNavContent.html( $subNavContent.html() );
-        $secondaryNav.removeClass('noContent');
-    } else {
-        $secondaryNavContent.html( '' );
-        $secondaryNav.addClass('noContent');
     }
-}
-
-function navInit() {
-    updateSubNav();
 }
 
 function smoothScrollToElement($el, callback) {
@@ -86,38 +78,18 @@ function makeMenuItemFromElement($heading) {
 
 
 
-function generateDynamicNav() {
-    var $contentNavContent = $("#subNav-content");
-    var $contentNavPanel = $contentNavContent.closest(".column-panel")
-    var contentNavEmpty = $contentNavPanel.hasClass("noContent");
+function smoothScrollTableOfContents() {
+    var $tableOfContentsLinks = $("#TableOfContents a")
 
-    if (contentNavEmpty) {
-        var output = "";
-
-        $('.userContent').find('h2').each(function() {
-            var $heading = $(this);
-            var anchor = '#' + $heading.attr('id');
-            output += makeMenuItemFromElement($heading);
-
-            headingScrollInit($heading.parent(), function(){
-                window.location = anchor;
-            });
+    // Add smoothscroll listeners
+    $tableOfContentsLinks.on("click touchstart", function(e) {
+        var $link = $(this);
+        var anchor = $link.attr("href");
+        var $endpoint = $(anchor);
+        smoothScrollToElement($endpoint, function() {
+            window.location = anchor;
         });
-
-        $contentNavContent.html(output);
-
-        // Add smoothscroll listeners
-        $contentNavContent.find(".sidebar-link").on("click touchstart", function(e) {
-            var $link = $(this);
-            var anchor = $link.attr("href");
-            var $endpoint = $(anchor);
-            smoothScrollToElement($endpoint, function() {
-                window.location = anchor;
-            });
-        });
-
-        $contentNavPanel.removeClass("noContent");
-    }
+    });
 }
 
 function setupLocationWatcher() {
@@ -146,8 +118,8 @@ function mobileNavInit() {
 }
 
 $(function(){
-    navInit();
-    generateDynamicNav();
+    replaceTableOfContentsWithSubNav();
+    smoothScrollTableOfContents();
     anchorifyPage();
     mobileNavInit();
     setupLocationWatcher();

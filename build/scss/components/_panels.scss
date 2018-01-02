@@ -55,7 +55,8 @@
     }
 }
 
-.sidebar-menu {
+.sidebar-menu,
+#TableOfContents ul {
     list-style: none;
     display: block;
     padding: 0;
@@ -140,7 +141,8 @@
     }
 }
 
-.menuItem {
+.menuItem,
+#TableOfContents li {
     display: block;
     padding: 0;
     font-size: $fontSize-medium;
@@ -148,7 +150,8 @@
     line-height: $panel-lineHeight;
 }
 
-.sidebar-link {
+.sidebar-link,
+#TableOfContents a {
     @include defaultTransition(background);
     display: block;
     color: inherit !important;
@@ -162,6 +165,11 @@
     &.isActive {
         background-color: rgba($navItem-bg, .1) !important;
     }
+}
+
+// Hide 3rd level navigation
+#TableOfContents ul ul ul {
+    display: none;
 }
 
 .sidebar-linkWrap {

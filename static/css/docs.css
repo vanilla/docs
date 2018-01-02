@@ -60,7 +60,7 @@ body {
   padding: 0 42px 42px;
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1100px) {
   .column-main {
     max-width: calc(100% - 250px);
     padding-left: 32px;
@@ -423,7 +423,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (min-width: 1465px) {
+@media screen and (min-width: 1101px) {
   .menuItem-children .flyoutArrow-triangle {
     display: none;
   }
@@ -702,32 +702,37 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1100px) {
   .content-nav {
     display: none;
   }
 }
 
-.sidebar-menu {
+.sidebar-menu,
+#TableOfContents ul {
   list-style: none;
   display: block;
   padding: 0;
   margin: 0;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-link {
   padding-left: 30px;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-menu .sidebar-link {
   padding-left: 48px;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
   padding-left: 66px;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
   padding-left: 84px;
 }
 
@@ -750,7 +755,7 @@ a:hover {
   display: block;
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1100px) {
   #nav .menuItem-children.isOpen-tablet {
     display: block;
   }
@@ -780,7 +785,8 @@ a:hover {
   }
 }
 
-.menuItem {
+.menuItem,
+#TableOfContents li {
   display: block;
   padding: 0;
   font-size: 14px;
@@ -788,7 +794,8 @@ a:hover {
   line-height: 1.5;
 }
 
-.sidebar-link {
+.sidebar-link,
+#TableOfContents a {
   transition: background 0.3s ease-in-out;
   display: block;
   color: inherit !important;
@@ -796,12 +803,18 @@ a:hover {
   padding: 5px 18px;
 }
 
-.sidebar-link:hover {
+.sidebar-link:hover,
+#TableOfContents a:hover {
   background-color: rgba(85, 90, 98, 0.05);
 }
 
-.sidebar-link.isActive {
+.sidebar-link.isActive,
+#TableOfContents a.isActive {
   background-color: rgba(85, 90, 98, 0.1) !important;
+}
+
+#TableOfContents ul ul ul {
+  display: none;
 }
 
 .sidebar-linkWrap {
@@ -864,7 +877,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1100px) {
   #nav_sub {
     display: none;
   }

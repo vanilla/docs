@@ -5,13 +5,13 @@
 }
 
 @mixin mediaQuery-noBleed {
-  @media screen and (max-width: $site-widthPadded) {
+  @media screen and (max-width: $breakpoint-2-columns) {
     @content;
   }
 }
 
 @mixin mediaQuery-hasBleed {
-  @media screen and (min-width: $site-widthPadded + 1px) {
+  @media screen and (min-width: $breakpoint-2-columns + 1px) {
     @content;
   }
 }
