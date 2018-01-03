@@ -14,10 +14,10 @@ aliases:
 - /addons/ranks/applying-ranks-over-sso
 - /addons/ranks/using-ranks-as-incentives
 - /addons/ranks/using-ranks-to-defeat-spam-or-abuse
-- /help/addons/ranks/adding-and-editing-ranks
-- /help/addons/ranks/applying-ranks-over-sso
-- /help/addons/ranks/using-ranks-as-incentives
-- /help/addons/ranks/using-ranks-to-defeat-spam-or-abuse
+- /help/reputation/ranks/adding-and-editing-ranks
+- /help/reputation/ranks/applying-ranks-over-sso
+- /help/reputation/ranks/using-ranks-as-incentives
+- /help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse
 ---
 ## What is a Rank?
 

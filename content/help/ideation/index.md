@@ -7,7 +7,6 @@ menu:
     identifier: ideation
 aliases:
 - /ideation
-- /help/ideation
 ---
 {{% cloudfeature %}}
 

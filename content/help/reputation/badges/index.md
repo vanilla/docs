@@ -12,8 +12,8 @@ aliases:
 - /addons/badges
 - /addons/badges/adding-and-editing-badges
 - /addons/badges/giving-and-requesting-badges
-- /help/addons/badges/adding-and-editing-badges
-- /help/addons/badges/giving-and-requesting-badges
+- /help/reputation/badges/adding-and-editing-badges
+- /help/reputation/badges/giving-and-requesting-badges
 ---
 {{% cloudfeature %}}
 

@@ -12,8 +12,8 @@ aliases:
 - /addons/reactions
 - /addons/reactions/adding-and-editing-reactions
 - /addons/reactions/curating-with-reactions
-- /help/addons/reactions/adding-and-editing-reactions
-- /help/addons/reactions/curating-with-reactions
+- /help/reputation/adding-and-editing-reactions
+- /help/reputation/curating-with-reactions
 ---
 {{% cloudfeature %}}
 
