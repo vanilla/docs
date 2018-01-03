@@ -9,7 +9,6 @@ menu:
   help:
     parent: sso
     identifier: sso-oauth
-    weight: 2
 aliases:
 - /features/sso/oauth
 ---
