@@ -10,6 +10,7 @@ menu:
     weight: 9
 aliases:
 - /features/sso
+- /help/addons/social
 ---
 
 ## Single Sign-On overview
