@@ -245,4 +245,4 @@ user = {
 ### What's Next
 At this point you should have a valid jsConnect authentication page and Vanilla will be able to recognize your users. You just need to set up the connection in Vanilla and you're good to go.
 
-If you want to implement embedded SSO then visit [our embedded SSO documentation](/help/sso/jsconnect/#embedded-sso).
+If you want to implement embedded SSO then visit [our embedded SSO documentation](/help/sso/jsconnect/#embedding-with-seamless-jsconnect).

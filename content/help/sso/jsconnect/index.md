@@ -24,7 +24,7 @@ SSO systems are complex. Setting up your own SAML or OAuth system takes a lot of
 
 If you have a website that stores your user's identity and the only thing you need to integrate is a forum, jsConnect is a far simpler solution. This is because we've abstracted most of the work to our side of the connection, and provide sample code for making your side.
 
-However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our [technical documentation](/help/sso/jsconnect/overview). The only exception is **WordPress** users, for which we've developed a ready-to-go [SSO plugin](https://wordpress.org/plugins/vanilla-forums/).
+However, even our easier solution does require a developer on your team. A developer can typically set up the client side of jsConnect in 2-6 hours using our [technical documentation](/help/sso/jsconnect/#technical-overview). The only exception is **WordPress** users, for which we've developed a ready-to-go [SSO plugin](https://wordpress.org/plugins/vanilla-forums/).
 
 Ready to learn more about jsConnect? Read on.
 
@@ -116,7 +116,7 @@ These libraries are open source and maintained on Github:
 - [Python jsConnect client library](https://github.com/vanilla/python-jsconnect)
 
 
-All of these libraries have one file with all of the library code you'll need and one file that gives an example usage. They also have a readme that tells you which file is which. _Please note that these libraries don't support [embedded SSO](/help/features/sso/jsconnect/embed)._
+All of these libraries have one file with all of the library code you'll need and one file that gives an example usage. They also have a readme that tells you which file is which. _Please note that these libraries don't support [embedded SSO](#embedding-with-seamless-jsconnect)._
 
 If your site is programmed in a language that doesn't have a client library then we provide documentation on our jsConnect protocol. Have a look at the [jsConnect technical implementation guide](/help/sso/jsconnect-quickstart).
 
@@ -138,7 +138,7 @@ To get very tight SSO integration, you will also want to follow these steps. Alw
 2. Set your sign-in, sign-out, and registration URLs under jsConnect's settings in your Dashboard.
 3. Check "Make this connection your default signin method."
 4. When linking or redirecting signed-in users to your forum, use the `/sso` endpoint on the forum. This triggers jsConnect's user lookup **on the connection with "default sign in method" selected** without the user needing to click. Optionally, you can provide a `Target` parameter with a relative path to specify where they should ultimately land on the forum. Example: `http://forum.yoursite.com/sso?Target=/categories`. This is the final critical step in a fully seamless experience.
-5. For seamless SSO on an embedded forum, see our [embedded SSO solution](http://blog.vanillaforums.com/jsconnect-technical-documentation-for-embedded-sso/).
+5. For seamless SSO on an embedded forum, see our [embedded SSO solution](#embedding-with-seamless-jsconnect).
 
 If no jsConnect connection is designated as the "Default", you cannot use the `/sso` endpoint. Instead, use expanded endpoint that specifies the client ID of the connection you wish to trigger: `/entry/jsconnect?client_id={value_in_settings}`. This setup is useful in situations where you are using jsConnect in addition to normal logins or alternate SSO solutions, rather than as the sole connector.
 
@@ -189,7 +189,7 @@ We strongly recommend assigning them unique usernames in your system, then passi
 
 **Can we set roles over jsConnect?**
 
-Yes, see our [quickstart documentation](/help/features/sso/jsconnect-quickstart) for more information.
+Yes, see our [quickstart documentation](/help/sso/jsconnect-quickstart) for more information.
 
 **The settings & endpoint response look correct now, but it's still not working or redirecting properly.**
 
