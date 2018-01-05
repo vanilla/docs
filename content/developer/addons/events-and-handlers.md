@@ -9,6 +9,10 @@ tags:
 - EventArguments
 - magic
 - create
+- Gdn_Form
+- Settings Page
+- Custom
+- ConfigurationModule
 category: addons
 menu:
   developer:
@@ -163,7 +167,20 @@ public function base_render_before($sender) {
 
 ### Create an additional settings page
 
-This example creates a custom dashboard page that can set a few configuration options. You would then need to use these set configuration values in other hooks to customize your site. The configuration module uses Gdn_Form internally and renders an nice looking form for the dashboard. Its implementation can be found [here](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/views/modules/configuration.php). Further details can be found by looking through [Gdn_Form](https://github.com/vanilla/vanilla/blob/master/library/core/class.form.php). Not all form values are supported, but additional and more complex examples of it's use can be found in the  `SettingsController` and Vanilla's bundled plugins.
+This example creates a custom dashboard page that can set a few configuration options. You would then need to use these set configuration values in other hooks to customize your site. The configuration module uses Gdn_Form internally and renders an nice looking form for the dashboard. Its implementation can be found [here](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/views/modules/configuration.php). Further details can be found by looking through [Gdn_Form](https://github.com/vanilla/vanilla/blob/master/library/core/class.form.php). Not all form values are supported. Currently supported form values are 
+
+- `categorydropdown`
+- `labelcheckbox`
+- `checkbox`
+- `toggle`
+- `dropdown`
+- `imageupload`
+- `color`
+- `radiolist`
+- `checkboxlist`
+- `textbox`
+
+Additional and more complex examples of its use can be found in the `SettingsController` and Vanilla's bundled plugins.
 
 - [Branding Page](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/controllers/class.settingscontroller.php#L472-L552)
 - [Email Styles Page](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/controllers/class.settingscontroller.php#L864-L893)
