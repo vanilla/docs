@@ -123,7 +123,12 @@ To see how it all fits together, here's a default master view using Smarty:
 
 ## Overriding other views
 
-Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, your new view may not always be supported in future versions of Vanilla, which may cause problems down the road. If it's possible to accomplish what you're trying to do using good ol' CSS, or [event handlers](/developer/addons/events-and-handlers), or by being clever with the configuration of your master view, those are probably better ways to go.
+Now that you know how to override and configure the master view, you may want to configure the content of the assets and modules. Before we get there though, a warning: overriding a view can be a rather severe addition to a theme. Once a view is overridden, it diverges from core Vanilla. As such, **your new view may not always be supported** in future versions of Vanilla, which may cause problems down the road. 
+
+If possible first:
+
+- Try to accomplish what you're doing using good ol' CSS. A strong knowledge of CSS can allow you to make powerful customizations to your Vanilla Forum while being simpler, stabler, and more maintainable. The Vanilla Forums markup isn't perfect, but it's a lot easier down the road to tweak a few custom styles then to reconcile a totally custom view with the original if the shape of the data changes, or the view is refactored.
+- Try to use an [event handlers](/developer/addons/events-and-handlers) to accomplish your change. Vanilla's event handlers are incredibly powerful and there are events everywhere.
 
 With that warning out of the way, here's how you can override a view in Vanilla. Some plugins and every application contains a views folder. To override any file in this folder:
 
