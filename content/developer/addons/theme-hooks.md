@@ -99,17 +99,17 @@ There are a few common functions for a themehooks file.
 
 ### base_render_before()
 
-This runs on every single page load before the render. This includes the Dashboard so be sure to exclude it! This is also a good place to use the `Gdn_Controller` method `setData()` to inject data into your Smarty templates. 
+This runs on every single page load before the render. This includes the Dashboard so be sure to exclude it! This is also a good place to use the `Gdn_Controller` method `setData()` to inject data into your Smarty templates. For details on these controller methods, see our [framework documentation](/developer/framework/controllers/#setdata-and-data).
 
 For information about using this injected data see [Accessing Controller Data with Smarty](/developer/smarty/#accessing-controller-data-with-smarty). If you're trying to verify that the data that is getting passed into the template, try out the [{debug} function](/developer/smarty/functions/#function-debug) in smarty.
 
 ### setup()
 
-This runs when your theme is enabled. This is a good place for setting configuration values your theme may rely on, but is not required.
+This runs when when an addon is first enabled. This is a good place for setting configuration values your theme may rely on, but is not required. Sometimes it may be desirable to put most of this content inside the [structure() method](#structure) and call structure from the setup method. See the [example below](#example).
 
 ### structure()
 
-This update function is called every time you reach the `/utility/update` endpoint. Many plugins use this as a place to update the database, but it can be a good place for configuration values as well, and can be used to manually create a category, discussion, Pocket, etc that your theme relies on.
+This update function is called every time you reach the `/utility/update` endpoint. Many plugins use this as a place to update the database, but it can be a good place for configuration values as well, and can be used to manually create a category, discussion, Pocket, etc that your theme relies on. See the [example below](#example).
 
 This event is optional.
 
@@ -128,6 +128,8 @@ public function structure() {
         'Vanilla.Discussions.Layout' => 'table',
         'Garden.Thumbnail.Size' => '200',
     ]);
+
+    Pocket::touch("My Custom Pocket", "<div>My custom pocket contents</div>");
 
     return true;
 }
