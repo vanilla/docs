@@ -120,17 +120,14 @@ public function base_render_before($sender) {
     }
 
     if(!val('UserRoles', $sender->Data)) {
-        $user = val('User', Gdn::controller());
-        if (!$user && Gdn::session()->isValid()) {
-            $user = Gdn::session()->User;
-        }
-        $userRoles = [];
-        if ($user) {
-            $userID = val('UserID', $user);
-            $userRolesData = Gdn::userModel()->getRoles($userID);
-            if ($userRolesData->numRows() > 0) {
-                $userRoles = array_column($userRolesData->resultArray(), 'Name');
+        $userRoles = val('UserRoles', $sender->Data));
+        if (!$userRoles) {
+            $user = val('User', Gdn::controller());
+            if (!$user && Gdn::session()->isValid()) {
+                $user = Gdn::session()->User;
             }
+            $userID = val('UserID', $user);
+            $userRoles = Gdn::userModel()->getRoles($userID)->resultArray();
         }
         $sender->setData('UserRoles', $userRoles);
     }
@@ -148,17 +145,17 @@ public function base_render_before($sender) {
         return;
     }
     
-    $roles = val('UserRoles', $sender->Data));
-    if (!$roles) {
+    $userRoles = val('UserRoles', $sender->Data));
+    if (!$userRoles) {
         $user = val('User', Gdn::controller());
         if (!$user && Gdn::session()->isValid()) {
             $user = Gdn::session()->User;
         }
         $userID = val('UserID', $user);
-        $roles = Gdn::userModel()->getRoles($userID)->resultArray();
+        $userRoles = Gdn::userModel()->getRoles($userID)->resultArray();
     }
 
-    $roleNames = array_column($roles, 'Name');
+    $roleNames = array_column($userRoles, 'Name');
     $isSuperSpecialRole = in_array("SuperSpecialRole", $roleNames);
     $sender->setData("isSuperSpecialRole", $isSuperSpecialRole);
 }
@@ -166,7 +163,11 @@ public function base_render_before($sender) {
 
 ### Create an additional settings page
 
-This example creates a custom dashboard page that can set a few configuration options. You would then need to use these set configuration values in other hooks to customize your site.
+This example creates a custom dashboard page that can set a few configuration options. You would then need to use these set configuration values in other hooks to customize your site. The configuration module uses Gdn_Form internally and renders an nice looking form for the dashboard. Its implementation can be found [here](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/views/modules/configuration.php). Further details can be found by looking through [Gdn_Form](https://github.com/vanilla/vanilla/blob/master/library/core/class.form.php). Not all form values are supported, but additional and more complex examples of it's use can be found in the  `SettingsController` and Vanilla's bundled plugins.
+
+- [Branding Page](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/controllers/class.settingscontroller.php#L472-L552)
+- [Email Styles Page](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/controllers/class.settingscontroller.php#L864-L893)
+- [Google Plus Page](https://github.com/vanilla/vanilla/blob/master/plugins/GooglePlus/class.googleplus.plugin.php#L512-L520)
 
 ```php
 class MySitePlugin extends Gdn_Plugin {
