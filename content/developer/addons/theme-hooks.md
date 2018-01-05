@@ -105,11 +105,13 @@ For information about using this injected data see [Accessing Controller Data wi
 
 ### setup()
 
-This runs when your theme is enabled. This is a good place to any configuration values your theme may rely on, but is not required.
+This runs when your theme is enabled. This is a good place for setting configuration values your theme may rely on, but is not required.
 
 ### structure()
 
 This update function is called every time you reach the `/utility/update` endpoint. Many plugins use this as a place to update the database, but it can be a good place for configuration values as well, and can be used to manually create a category, discussion, Pocket, etc that your theme relies on.
+
+This event is optional.
 
 ### Example
 

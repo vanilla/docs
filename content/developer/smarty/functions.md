@@ -38,7 +38,7 @@ You are also able to use the [built-in Smarty functions](http://www.smarty.net/d
 
 Opens up the Smarty debug console in a popup window. This will show you all of the data available to the smarty template. This data matches the `data` attribute on the page's controller. 
 
-Additional data can be easily added by using the `setData()` method. See the [themehooks documentation for detail](/developer/addons/theme-hooks/#base_render_before).
+Additional data can be easily added by using the `setData()` method. See the [themehooks documentation for detail](/developer/addons/theme-hooks/#example-themehooks).
 
 ### Usage
 

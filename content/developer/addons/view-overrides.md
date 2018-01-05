@@ -128,7 +128,7 @@ Now that you know how to override and configure the master view, you may want to
 If possible first:
 
 - Try to accomplish what you're doing using good ol' CSS. A strong knowledge of CSS can allow you to make powerful customizations to your Vanilla Forum while being simpler, stabler, and more maintainable. The Vanilla Forums markup isn't perfect, but it's a lot easier down the road to tweak a few custom styles then to reconcile a totally custom view with the original if the shape of the data changes, or the view is refactored.
-- Try to use an [event handlers](/developer/addons/events-and-handlers) to accomplish your change. Vanilla's event handlers are incredibly powerful and there are events everywhere.
+- Try to use [event handlers](/developer/addons/events-and-handlers) to accomplish your change. Vanilla's event handlers are incredibly powerful and there are events everywhere.
 
 With that warning out of the way, here's how you can override a view in Vanilla. Some plugins and every application contains a views folder. To override any file in this folder:
 
