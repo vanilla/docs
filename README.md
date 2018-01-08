@@ -108,7 +108,7 @@ That should be it, you now have a working copy of the docs.
 The docs can be viewed live while you edit them, which makes writing new content really easy. 
 
 Simply enable editing mode: `$ yarn run edit`
-You should now have a locally accessible webserver providing the docs site at `http://127.0.0.1:8081`. This site should be livereload-enabled, so changes you make locally should trigger a page reload on the site. Now create some docs!
+You should now have a locally accessible webserver providing the docs site at `http://127.0.0.1:1313`. This site should be livereload-enabled, so changes you make locally should trigger a page reload on the site. Now create some docs!
 
 #### Submitting your changes
 
@@ -126,3 +126,7 @@ Publishing is easy. Just commit your changes to master and wait for them to be a
 
 "Warning: Task "sass" not found. Use --force to continue." error? Try `npm install -g node-sass`. Still a problem or already had that? Maybe try `npm rebuild node-sass`.
 
+
+### Regression testing
+
+Making larges refactors to the docs? Run `yarn links:generate` before making your changes. This will generate a JSON file called `current-links.json`. When you're done run `yarn links:test` to test that every previously accessible link is still accessible.
