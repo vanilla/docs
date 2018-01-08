@@ -5,7 +5,6 @@
 const args = require("yargs").argv;
 const fs = require("fs");
 const fetch = require("node-fetch");
-const { spawn } = require("child_process");
 const chalk = require("chalk").default;
 
 if (args.generate) {
@@ -22,26 +21,31 @@ function checkUrlExists(urlToCheck) {
  * Generate a list of the links we need to check.
  */
 function generateLinksToCheck() {
-    const process = spawn("yarn", ["run", "buildDev"], {});
-    process.on("close", () => {
-        const sitemap = fs.readFileSync("./public/sitemap.xml", "utf8");
-        const links = sitemap.match(/<loc>.+<\/loc>/g);
-        const cleanedLinks = links.map(link => {
-            return link.replace("<loc>", "").replace("</loc>", "");
-        });
-
-        fs.writeFileSync("current-links.json", JSON.stringify(cleanedLinks), "utf8");
-
-        console.log(`A list of existing site links has been generated in ${chalk.yellow("current-links.json")}.`);
-        console.log(`Run ${chalk.yellow("yarn linkCheck")} in the future to test against these links.`);
+    const sitemap = fs.readFileSync("./public/sitemap.xml", "utf8");
+    const links = sitemap.match(/<loc>.+<\/loc>/g);
+    const cleanedLinks = links.map(link => {
+        return link.replace("<loc>", "").replace("</loc>", "");
     });
+
+    fs.writeFileSync("current-links.json", JSON.stringify(cleanedLinks), "utf8");
+
+    console.log(`A list of existing site links has been generated in ${chalk.yellow("current-links.json")}.`);
+    console.log(`Run ${chalk.yellow("yarn links:test")} in the future to test against these links.`);
 }
 
+/**
+ * Check the already generated list of links.
+ */
 function checkLinks() {
+    if (!fs.existsSync("./current-links.json")) {
+        console.log(chalk.red("Unable to find './current-links.json'. Be sure to run 'yarn links:generate' before this command."));
+        return;
+    }
+
     const links = JSON.parse(fs.readFileSync("./current-links.json", "utf8"));
     const badLinks = [];
 
-    console.log("Starting docs dev server. Links checking will begin soon...\n");
+    console.log("Waiting for docs server to start. Link checking will begin soon...\n");
 
     setTimeout(() => {
         console.log("Beginning link checking...");
