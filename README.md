@@ -116,7 +116,7 @@ When you're done writing docs or making edits, just create a pull-request agains
 
 #### Publishing (for maintainers)
 
-Publishing is easy. Just commit your changes to master and wait for them to be automatically deployed live. **DO NOT MANUALLY DEPLOY THIS REPOSITORY**. You'll break it.
+Publishing is easy. Just commit your changes to master and wait for them to be automatically deployed to staging. Commit changes to deploy for them to be deployed to production. **DO NOT MANUALLY DEPLOY THIS REPOSITORY**. You'll break it.
 
 #### Troubleshooting
 
@@ -129,4 +129,14 @@ Publishing is easy. Just commit your changes to master and wait for them to be a
 
 ### Regression testing
 
-Making larges refactors to the docs? Run `yarn links:generate` before making your changes. This will generate a JSON file called `current-links.json`. When you're done run `yarn links:test` to test that every previously accessible link is still accessible.
+Making larges refactors to the docs? When you're done run `yarn links:test` to test that every previously accessible link is still accessible. If you add new pages run `yarn links:generate` afterwards. This will update the JSON file called `current-links.json`. Links should **NEVER** be removed from this file and it should not be edited manually.
+
+#### Troubleshooting
+
+In the event that the link-check scripts fails it may fail to shut down the docs development server. This will leave the server running and bound on port 1313. Attempting to run the docs server again will fail with an `EADDRESS` error. To kill this process you may run:
+
+```bash
+lsof -t -i tcp:1313 | xargs kill
+```
+
+This will kill all process running on the 1313 port.

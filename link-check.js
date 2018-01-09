@@ -6,6 +6,7 @@ const args = require("yargs").argv;
 const fs = require("fs");
 const fetch = require("node-fetch");
 const chalk = require("chalk").default;
+const { spawn } = require("child_process");
 
 if (args.generate) {
     generateLinksToCheck();
@@ -25,7 +26,7 @@ function generateLinksToCheck() {
     const links = sitemap.match(/<loc>.+<\/loc>/g);
     const cleanedLinks = links.map(link => {
         return link.replace("<loc>", "").replace("</loc>", "");
-    });
+    }).sort();
 
     fs.writeFileSync("current-links.json", JSON.stringify(cleanedLinks), "utf8");
 
@@ -38,12 +39,18 @@ function generateLinksToCheck() {
  */
 function checkLinks() {
     if (!fs.existsSync("./current-links.json")) {
-        console.log(chalk.red("Unable to find './current-links.json'. Be sure to run 'yarn links:generate' before this command."));
+        console.log(
+            chalk.red(
+                "Unable to find './current-links.json'. Be sure to run 'yarn links:generate' before this command."
+            )
+        );
         return;
     }
 
     const links = JSON.parse(fs.readFileSync("./current-links.json", "utf8"));
     const badLinks = [];
+
+    const buildProcess = spawn("yarn", ["run", "edit"], { stdio: "inherit" });
 
     console.log("Waiting for docs server to start. Link checking will begin soon...\n");
 
@@ -75,6 +82,10 @@ function checkLinks() {
                     console.log(link);
                 });
             }
+
+            buildProcess.kill("SIGINT");
+        }).catch(() => {
+            buildProcess.kill("SIGINT");
         });
     }, 8000);
 }
