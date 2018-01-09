@@ -11,6 +11,7 @@ menu:
     identifier: addons-groups
 aliases:
 - /addons/groups
+- /addons/groups/managing-groups
 - /help/addons/groups/managing-groups
 ---
 ## What are Groups?
