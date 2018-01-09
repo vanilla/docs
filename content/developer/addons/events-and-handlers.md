@@ -9,14 +9,15 @@ tags:
 - EventArguments
 - magic
 - create
+- Gdn_Form
+- Settings Page
+- Custom
+- ConfigurationModule
 category: addons
 menu:
   developer:
     parent: addons
     weight: 13
-aliases:
-- /theming/hooks
-- /developer/theming/hooks
 ---
 
 Addons have the ability to listen for events fired in the rest of Vanilla and even other Addons!. This is normally done inside of a `Gdn_Plugin` but can be done inside of anything inheriting from `Gdn_Pluggable`.
@@ -109,3 +110,202 @@ With this addon enabled, going to the URL `/discussions/kaboom` would now output
 If you use a magic method to duplicate an existing method name, it will be overridden completely. And call to it will be directed to your plugin instead. The only exception is the `Index()` method.
 
 Magic methods only work in classes that extend `Gdn_Pluggable`. For example, notice the `Gdn_Form` class does, but the `Gdn_Format` class does not. All models and controllers do.
+
+## Example Events
+
+### Inject the the current user's roles into every page
+
+Sometimes you may want to adjust parts of the template based on the roles the current user. This will inject gather the roles of the current user and inject them into the smarty template.
+
+```php
+public function base_render_before($sender) {
+    if (inSection('Dashboard')) {
+        return;
+    }
+
+    if(!val('UserRoles', $sender->Data)) {
+        $userRoles = val('UserRoles', $sender->Data));
+        if (!$userRoles) {
+            $user = val('User', Gdn::controller());
+            if (!$user && Gdn::session()->isValid()) {
+                $user = Gdn::session()->User;
+            }
+            $userID = val('UserID', $user);
+            $userRoles = Gdn::userModel()->getRoles($userID)->resultArray();
+        }
+        $sender->setData('UserRoles', $userRoles);
+    }
+}
+```
+
+### Inject a conditional based on roles
+
+Sometimes you may not need all the roles in the page. Let's say you wanted to make the page appear differently for a user with a certain role. Instead of injection all of the roles into the template and doing the conditional there, you can do it in the themehooks and inject just the boolean value you need.
+
+
+```php
+public function base_render_before($sender) {
+    if (inSection('Dashboard')) {
+        return;
+    }
+    
+    $userRoles = val('UserRoles', $sender->Data));
+    if (!$userRoles) {
+        $user = val('User', Gdn::controller());
+        if (!$user && Gdn::session()->isValid()) {
+            $user = Gdn::session()->User;
+        }
+        $userID = val('UserID', $user);
+        $userRoles = Gdn::userModel()->getRoles($userID)->resultArray();
+    }
+
+    $roleNames = array_column($userRoles, 'Name');
+    $isSuperSpecialRole = in_array("SuperSpecialRole", $roleNames);
+    $sender->setData("isSuperSpecialRole", $isSuperSpecialRole);
+}
+```
+
+### Create an additional settings page
+
+This example creates a custom dashboard page that can set a few configuration options. You would then need to use these set configuration values in other hooks to customize your site. The configuration module uses Gdn_Form internally and renders an nice looking form for the dashboard. Its implementation can be found [here](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/views/modules/configuration.php). Further details can be found by looking through [Gdn_Form](https://github.com/vanilla/vanilla/blob/master/library/core/class.form.php). Not all form values are supported. Currently supported form values are 
+
+- `categorydropdown`
+- `labelcheckbox`
+- `checkbox`
+- `toggle`
+- `dropdown`
+- `imageupload`
+- `color`
+- `radiolist`
+- `checkboxlist`
+- `textbox`
+
+Additional and more complex examples of its use can be found in the `SettingsController` and Vanilla's bundled plugins.
+
+- [Branding Page](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/controllers/class.settingscontroller.php#L472-L552)
+- [Email Styles Page](https://github.com/vanilla/vanilla/blob/master/applications/dashboard/controllers/class.settingscontroller.php#L864-L893)
+- [Google Plus Page](https://github.com/vanilla/vanilla/blob/master/plugins/GooglePlus/class.googleplus.plugin.php#L512-L520)
+
+```php
+class MySitePlugin extends Gdn_Plugin {
+     
+    /**
+     * Create the `/settings/example` page to host our custom settings.
+     *
+     * @param SettingsController $sender
+     */
+    public function settingsController_example_create($sender) {
+        $sender->permission('Garden.Settings.Manage');
+
+        $configurationModule = new ConfigurationModule($sender);
+        $configurationModule->initialize([
+            'ExmapleSite.BackgroundColour' => ['Control' => 'TextBox', 'Options' => ['class' => 'InputBox BigInput']],
+            'ExmapleSite.BackgroundImage' => ['Control' => 'ImageUpload'],
+            'ExmapleSite.BannerImage' => ['Control' => 'ImageUpload'],
+        ]);
+
+        $sender->addSideMenu();
+        $sender->setData('Title', "My Site Setttings");
+        $configurationModule->renderAll();
+    }
+
+    /**
+     * Add the "My Site" menu item.
+     *
+     * @param Gdn_Controller $sender
+     */
+    public function base_getAppSettingsMenuItems_handler($sender) {
+        /* @var SideMenuModule */
+        $menu = $sender->EventArguments['SideMenu'];
+        $menu->addLink('Appearance', t('My Site'), '/settings/example', 'Garden.Settings.Manage');
+    }
+}
+```
+
+### Add a link to the MeBox
+
+```php
+    /**
+     * Add link to drafts page to me module flyout menu.
+     *
+     * @param MeModule $sender The MeModule
+     * @param array $args Potential arguments
+     *
+     * @return void
+     */
+    public function meModule_flyoutMenu_handler($sender, $args) {
+        if (!val('Dropdown', $args, false)) {
+            return;
+        }
+        /** @var DropdownModule $dropdown */
+        $dropdown = $args['Dropdown'];
+        $dropdown->addLink(t('My Drafts'), '/drafts', 'profile.drafts', '', [], ['listItemCssClasses' => ['link-drafts']]);
+    }
+```
+
+### Add a custom location for a moderation message
+
+```php
+    /**
+     * Add custom asset location for messages
+     *
+     * @param MessageController $sender The message controller
+     * @param array $args The event arguments passed
+     *
+     * @return void
+     */
+    public function messageController_afterGetAssetData_handler($sender, $args) {
+        $possibleAssetLocations = val('AssetData', $args);
+        $possibleAssetLocations['AbovePromotedContent'] = 'Above the promoted content module';
+        setValue('AssetData', $args, $possibleAssetLocations);
+    }
+```
+
+You would then need to place this new asset somewhere in your template
+
+```tpl
+{asset name="AbovePromotedContent"}
+```
+
+### Add the Views and Comments counts to a Discussion Page
+
+```php
+    /**
+     * Adds Views and Comments count to Discussion Page
+     *
+     * @param DiscussionController $sender
+     * @param array $args
+     */
+    public function DiscussionController_AfterDiscussionTitle_handler($sender, $args) {
+        echo '<span class="Discussion-CountViews">';
+        echo t("Views").": ";
+        echo $args['Discussion']->CountViews;
+        echo '</span>';
+
+        echo '<span class="Discussion-CountComments">';
+        echo t("Reply").": ";
+        echo $args['Discussion']->CountComments;
+        echo '</span>';
+    }
+```
+
+### Add Leaderboards to the panel on the categories page
+
+{{% cloudfeature %}}
+
+```php
+    /**
+     * Adds leaderboards to Activity page
+     *
+     * @param ActivityController $sender
+     * @param array $args
+    */
+    public function categoriesController_render_before($sender, $args) {
+        if ($sender->deliveryMethod() == DELIVERY_METHOD_XHTML) {
+            $sender->addModule('LeaderBoardModule', 'Panel');
+            $module = new LeaderBoardModule();
+            $module->SlotType = 'a';
+            $sender->addModule($module);
+        }
+    }
+```

@@ -53,7 +53,7 @@ The goal of a theme is to selectively override CSS and views in a forum.
 
 Themes can do everything a normal Addon can do, but gains the following additional functionality and requirements.
 
-- A Theme can contain a Plugin. If it does the plugin must have a classname ending in `ThemeHooks` and must have a filename containing `class.themehooks.php`. The prevailing convention results in a class `MySiteThemeHooks` and file `class.mysite.themehooks.php`.
+- A Theme can contain a Plugin. If it does the plugin must have a classname ending in `ThemeHooks` and must have a filename containing `class.themehooks.php`. The prevailing convention results in a class `MySiteThemeHooks` and file `class.mysite.themehooks.php`. See our [Theme Hooks guide](/developer/addons/theme-hooks) for more details.
 - A theme can define a [Master View](/developer/theming/views/#the-master-view) to be automatically loaded in place of the default master view.
 - A theme will automatically load a javascript file at `<mythemefolder>/js/custom.js` and a CSS file at `<mythemefolder>/design/custom.css` into the head of the site.
 - A theme can define [Theme Options](/developer/addons/theme-options) to offer an easy way to load different styles and text for a single theme.
@@ -71,5 +71,7 @@ Check out our guides to get started on a new addon or theme!
 [Addon Quickstart](/developer/addons/addon-quickstart)
 
 [Theme Quickstart](/developer/addons/theme-quickstart)
+
+[Theme Hooks](/developer/addons/theme-hooks)
 
 [Ultimate Vanilla Forums Theme Guide](http://blog.vanillaforums.com/help/vanilla-forums-themes/)
