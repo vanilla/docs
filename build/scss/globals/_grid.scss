@@ -6,10 +6,7 @@ body {
 }
 
 .grid {
-    
-    // Define grid system
-    
-    .row, 
+    .row,
     .column {
         box-sizing: border-box;
     }
@@ -51,7 +48,7 @@ body {
     background-color: white;
     padding: 0 $mainColumn-padding $mainColumn-padding;
 
-    @include mediaQuery-noBleed {
+    @media screen and (max-width: $breakpoint-2-columns) {
         max-width: calc(100% - #{$panel-width});
         padding: {
             left: $site-padding;

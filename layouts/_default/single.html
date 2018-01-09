@@ -14,16 +14,6 @@
                 {{ partial "title.html" . }}
                 {{ partial "versioning.html" .Params }}
 
-                {{ if .Params.toc }}
-
-                    <div class="docs-toc-wrapper">
-                        <div id="toc" class="column column-3 docs-toc {{ if gt (len .TableOfContents) 2500 }}compact{{ end }}">
-                            {{ .TableOfContents }}
-                        </div>
-                    </div>
-
-                {{ end }}
-
                 <div class="userContent">
                     {{ .Content }}
                 </div>

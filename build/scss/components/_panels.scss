@@ -22,14 +22,45 @@
     width: 100%;
     min-height: 100%;
     padding: 57px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    @include mediaQuery-notMobile {
+        overflow: auto;
+        position: fixed;
+        width: $panel-width;
+        height: initial;
+        padding: 0;
+
+        &::before {
+            content: "";
+            display: block;
+            height: $header-minHeight + 57px;
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: $footer-minHeight + 57px;
+            width: 100%;
+        }
+    }
 }
 
-.sidebar-menu {
+.content-nav {
+    @include mediaQuery-noBleed {
+        display: none;
+    }
+}
+
+.sidebar-menu,
+#TableOfContents ul {
     list-style: none;
     display: block;
     padding: 0;
     margin: 0;
-
 
     .sidebar-menu {
         .sidebar-link {
@@ -70,20 +101,16 @@
 
     .menuItem-children {
         display: none;
+
+        &.isOpen-tablet {
+            display: block;
+        }
     }
 
     .nav-tier1 > .menuItem.isActive,
     .nav-tier1 > .menuItem.hasActiveChildren {
         > .menuItem-children {
             display: block;
-        }
-    }
-
-    @include mediaQuery-noBleed {
-        .menuItem-children {
-            &.isOpen-tablet {
-                display: block;
-            }
         }
     }
 
@@ -110,7 +137,8 @@
     }
 }
 
-.menuItem {
+.menuItem,
+#TableOfContents li {
     display: block;
     padding: 0;
     font-size: $fontSize-medium;
@@ -118,7 +146,8 @@
     line-height: $panel-lineHeight;
 }
 
-.sidebar-link {
+.sidebar-link,
+#TableOfContents a {
     @include defaultTransition(background);
     display: block;
     color: inherit !important;
@@ -134,12 +163,18 @@
     }
 }
 
+// Hide 3rd level navigation
+#TableOfContents ul ul ul {
+    display: none;
+}
+
 .sidebar-linkWrap {
     display: block;
     position: relative;
 }
 
-.subNav-title {
+.subNav-title,
+.pageNav-title {
     font-weight: $fontWeight-bold;
     font-size: $fontSize-medium;
     color: $darkText;
@@ -148,10 +183,18 @@
     margin: 0 0 12px;
 }
 
-.subNav {
+.subNav,
+.pageNav {
     border: 1px solid #F4F4F4;
     padding: 18px 0;
 
+    &.noContent {
+        display: none;
+    }
+}
+
+.subNav {
+    margin-bottom: 12px;
 }
 
 .column-panel {
@@ -159,6 +202,12 @@
         .docs-nav {
             display: none !important;
         }
+    }
+}
+
+@include mediaQuery-noBleed {
+    .column-pageNav {
+        display: none;
     }
 }
 

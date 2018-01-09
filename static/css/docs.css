@@ -60,7 +60,7 @@ body {
   padding: 0 42px 42px;
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1100px) {
   .column-main {
     max-width: calc(100% - 250px);
     padding-left: 32px;
@@ -423,7 +423,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (min-width: 1465px) {
+@media screen and (min-width: 1101px) {
   .menuItem-children .flyoutArrow-triangle {
     display: none;
   }
@@ -441,6 +441,8 @@ a:hover {
   color: #A8A9AB;
   letter-spacing: 0.05em;
   min-height: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .docs-footer a {
@@ -673,28 +675,64 @@ a:hover {
   width: 100%;
   min-height: 100%;
   padding: 57px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
-.sidebar-menu {
+@media screen and (min-width: 881px) {
+  .docs-nav {
+    overflow: auto;
+    position: fixed;
+    width: 250px;
+    height: initial;
+    padding: 0;
+  }
+  .docs-nav::before {
+    content: "";
+    display: block;
+    height: 117px;
+    width: 100%;
+  }
+  .docs-nav::after {
+    content: "";
+    display: block;
+    height: 117px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .content-nav {
+    display: none;
+  }
+}
+
+.sidebar-menu,
+#TableOfContents ul {
   list-style: none;
   display: block;
   padding: 0;
   margin: 0;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-link {
   padding-left: 30px;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-menu .sidebar-link {
   padding-left: 48px;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
   padding-left: 66px;
 }
 
-.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
+.sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link,
+#TableOfContents ul .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-menu .sidebar-link {
   padding-left: 84px;
 }
 
@@ -712,15 +750,13 @@ a:hover {
   display: none;
 }
 
-#nav .nav-tier1 > .menuItem.isActive > .menuItem-children,
-#nav .nav-tier1 > .menuItem.hasActiveChildren > .menuItem-children {
+#nav .menuItem-children.isOpen-tablet {
   display: block;
 }
 
-@media screen and (max-width: 1464px) {
-  #nav .menuItem-children.isOpen-tablet {
-    display: block;
-  }
+#nav .nav-tier1 > .menuItem.isActive > .menuItem-children,
+#nav .nav-tier1 > .menuItem.hasActiveChildren > .menuItem-children {
+  display: block;
 }
 
 @media screen and (max-width: 880px) {
@@ -747,7 +783,8 @@ a:hover {
   }
 }
 
-.menuItem {
+.menuItem,
+#TableOfContents li {
   display: block;
   padding: 0;
   font-size: 14px;
@@ -755,7 +792,8 @@ a:hover {
   line-height: 1.5;
 }
 
-.sidebar-link {
+.sidebar-link,
+#TableOfContents a {
   transition: background 0.3s ease-in-out;
   display: block;
   color: inherit !important;
@@ -763,12 +801,18 @@ a:hover {
   padding: 5px 18px;
 }
 
-.sidebar-link:hover {
+.sidebar-link:hover,
+#TableOfContents a:hover {
   background-color: rgba(85, 90, 98, 0.05);
 }
 
-.sidebar-link.isActive {
+.sidebar-link.isActive,
+#TableOfContents a.isActive {
   background-color: rgba(85, 90, 98, 0.1) !important;
+}
+
+#TableOfContents ul ul ul {
+  display: none;
 }
 
 .sidebar-linkWrap {
@@ -776,7 +820,8 @@ a:hover {
   position: relative;
 }
 
-.subNav-title {
+.subNav-title,
+.pageNav-title {
   font-weight: 600;
   font-size: 14px;
   color: #555A62;
@@ -785,13 +830,29 @@ a:hover {
   margin: 0 0 12px;
 }
 
-.subNav {
+.subNav,
+.pageNav {
   border: 1px solid #F4F4F4;
   padding: 18px 0;
 }
 
+.subNav.noContent,
+.pageNav.noContent {
+  display: none;
+}
+
+.subNav {
+  margin-bottom: 12px;
+}
+
 .column-panel.noContent .docs-nav {
   display: none !important;
+}
+
+@media screen and (max-width: 1100px) {
+  .column-pageNav {
+    display: none;
+  }
 }
 
 .panelHeader {
@@ -831,7 +892,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1100px) {
   #nav_sub {
     display: none;
   }

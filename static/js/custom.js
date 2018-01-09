@@ -16,44 +16,21 @@ function stripTags(html) {
     return tmp.textContent || tmp.innerText || "";
 }
 
-function updateSubNav() {
-    var $mainNav = $('#nav');
-    var $secondaryNav = $('#nav_sub');
-    var $secondaryNavContent = $('#subNav-content');
-    var $subNavContent = $mainNav.find('.js-showInRightPanel .menuItem-children');
-
-
-    if( $subNavContent.length > 0 && $subNavContent.closest('')) {
-        $secondaryNavContent.html( $subNavContent.html() );
-        $secondaryNav.removeClass('noContent');
+function smoothScrollToElement($el, callback) {
+    //calculate destination place
+    var dest = 0;
+    if ($el && $el.offset && $el.offset().top > $(document).height() - $(window).height()) {
+        dest = $(document).height() - $(window).height();
     } else {
-        $secondaryNavContent.html( '' );
-        $secondaryNav.addClass('noContent');
+        dest = ($el && $el.offset) ? $el.offset().top : 0;
     }
-}
-
-function navInit() {
-    updateSubNav();
-}
-
-function scrollToInit($el, callback) {
-    $el.find('.headingAnchor').on('click touchstart' , function (e) {
-        e.preventDefault();
-        //calculate destination place
-        var dest = 0;
-        if ($el.offset().top > $(document).height() - $(window).height()) {
-            dest = $(document).height() - $(window).height();
-        } else {
-            dest = $el.offset().top;
+    //go to destination
+    $('html,body').animate({
+        scrollTop: dest
+    }, 300, 'swing', function(){
+        if( callback ){
+            callback();
         }
-        //go to destination
-        $('html,body').animate({
-            scrollTop: dest
-        }, 300, 'swing', function(){
-            if( callback ){
-                callback();
-            }
-        });
     });
 }
 
@@ -62,12 +39,39 @@ function anchorifyPage() {
     $('.userContent').find('h1, h2, h3, h4, h5, h6').each(function(){
         if (hasAttr($(this), 'id')) {
             var anchor = '#' + $(this).attr('id');
-            $(this).append('<a href="' + window.location.origin + window.location.pathname + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
-            scrollToInit($(anchor), function(){
+            $(this).append('<a href="' + anchor + '" class="headingAnchor">' + anchorSVG + '</a>');
+        }
+    });
+}
+
+function setupSmoothScroll() {
+    var $hashlinks = $("a[href^='#']");
+
+    $(document).on("click touchstart", "a[href^='#']", function(e) {
+        var $link = $(this);
+        if (hasAttr($link, "href")) {
+            var anchor = $link.attr("href");
+            var $endpoint = $(anchor);
+            smoothScrollToElement($endpoint, function() {
                 window.location = anchor;
             });
         }
     });
+}
+
+function setupLocationWatcher() {
+    function changeHandler() {
+        var anchor = window.location.hash;
+        var $links = $("#TableOfContents a");
+        var $pageNavLink = $('#TableOfContents a[href="' + anchor + '"]');
+
+        $links.removeClass("isActive");
+        $pageNavLink.addClass("isActive");
+    }
+
+    // Initialize navigation watcher
+    changeHandler();
+    $(window).on("hashchange", changeHandler);
 }
 
 function mobileNavInit() {
@@ -81,7 +85,12 @@ function mobileNavInit() {
 }
 
 $(function(){
-    navInit();
+    setupSmoothScroll();
     anchorifyPage();
     mobileNavInit();
+    setupLocationWatcher();
+
+    if (!window.location.hash) {
+        smoothScrollToElement(".headingAnchor");
+    }
 });
