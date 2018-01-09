@@ -34,6 +34,17 @@ This section outlines all the Vanilla-specific Smarty functions made available f
 
 You are also able to use the [built-in Smarty functions](http://www.smarty.net/docsv2/en/language.custom.functions.tpl) in your template.
 
+## Function: `{debug}`
+
+Opens up the Smarty debug console in a popup window. This will show you all of the data available to the smarty template. This data matches the `data` attribute on the page's controller. 
+
+Additional data can be easily added by using the `setData()` method. See the [themehooks documentation for detail](/developer/addons/theme-hooks/#example-themehooks).
+
+### Usage
+
+```tpl
+{debug}
+```
 
 ## Function: `{asset}`
 
