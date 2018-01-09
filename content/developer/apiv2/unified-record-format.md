@@ -9,6 +9,8 @@ menu:
   developer:
     parent: framework-apiv2
     weight: 40
+aliases:
+- /developer/framework/apiv2/unified-record-format
 ---
 ## Unified Record Format
 

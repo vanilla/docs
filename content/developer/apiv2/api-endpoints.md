@@ -8,7 +8,9 @@ category: developer
 menu:
   developer:
     parent: framework-apiv2
-    weight: 20
+    weight: 2
+aliases:
+- /developer/framework/apiv2/api-endpoints
 ---
 ## Controller Endpoints
 
