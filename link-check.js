@@ -83,9 +83,9 @@ function checkLinks() {
                 });
             }
 
-            buildProcess.kill("SIGINT");
+            buildProcess.kill();
         }).catch(() => {
-            buildProcess.kill("SIGINT");
+            buildProcess.kill();
         });
     }, 8000);
 }

@@ -6,7 +6,12 @@
         "type": "git",
         "url": "git+https://github.com/vanilla/docs.git"
     },
-    "keywords": ["vanilla", "forums", "documentation", "vanillaforums"],
+    "keywords": [
+        "vanilla",
+        "forums",
+        "documentation",
+        "vanillaforums"
+    ],
     "author": "Tim Gunter <tim@vanillaforums.com>",
     "license": "CC-BY-SA-4.0",
     "bugs": {
@@ -16,7 +21,6 @@
     "devDependencies": {
         "autoprefixer": "^7.1.4",
         "chalk": "^2.3.0",
-        "concurrently": "^3.5.1",
         "grunt": "^1.0.1",
         "grunt-cli": "^1.2.0",
         "grunt-contrib-clean": "^1.0.0",
@@ -54,6 +58,6 @@
         "clean": "grunt clean",
         "js": "grunt js",
         "links:generate": "yarn run buildDev && node link-check.js --generate",
-        "links:test": "concurrently \"yarn run edit\" \"node link-check.js\""
+        "links:test": "node link-check.js"
     }
 }
