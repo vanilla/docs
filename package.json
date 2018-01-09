@@ -1,58 +1,63 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "Vanilla Forums Documentation",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vanilla/docs.git"
-  },
-  "keywords": [
-    "vanilla",
-    "forums",
-    "documentation",
-    "vanillaforums"
-  ],
-  "author": "Tim Gunter <tim@vanillaforums.com>",
-  "license": "CC-BY-SA-4.0",
-  "bugs": {
-    "url": "https://github.com/vanilla/docs/issues"
-  },
-  "homepage": "https://github.com/vanilla/docs#readme",
-  "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-csslint": "^2.0.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-filerev": "^2.3.1",
-    "grunt-gh-pages": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^1.2.0",
-    "grunt-sass-globbing": "^1.5.1",
-    "grunt-usemin": "^3.1.1",
-    "hugo-lunr": "0.0.4",
-    "jshint": "^2.9.5",
-    "load-grunt-tasks": "^3.5.0",
-    "node-sass": "^4.5.3",
-    "string": "^3.3.1",
-    "time-grunt": "^1.3.0",
-    "yfm": "^0.2.0"
-  },
-  "scripts": {
-    "build": "grunt",
-    "edit": "grunt edit",
-    "buildDev": "grunt buildDev",
-    "index": "grunt index",
-    "watch": "grunt watch",
-    "push": "grunt push",
-    "clean": "grunt clean",
-    "js": "grunt js"
-  }
+    "name": "docs",
+    "version": "1.0.0",
+    "description": "Vanilla Forums Documentation",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vanilla/docs.git"
+    },
+    "keywords": [
+        "vanilla",
+        "forums",
+        "documentation",
+        "vanillaforums"
+    ],
+    "author": "Tim Gunter <tim@vanillaforums.com>",
+    "license": "CC-BY-SA-4.0",
+    "bugs": {
+        "url": "https://github.com/vanilla/docs/issues"
+    },
+    "homepage": "https://github.com/vanilla/docs#readme",
+    "devDependencies": {
+        "autoprefixer": "^7.1.4",
+        "chalk": "^2.3.0",
+        "grunt": "^1.0.1",
+        "grunt-cli": "^1.2.0",
+        "grunt-contrib-clean": "^1.0.0",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-connect": "^1.0.2",
+        "grunt-contrib-csslint": "^2.0.0",
+        "grunt-contrib-cssmin": "^1.0.1",
+        "grunt-contrib-imagemin": "^1.0.1",
+        "grunt-contrib-jshint": "^1.1.0",
+        "grunt-contrib-uglify": "^1.0.1",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-filerev": "^2.3.1",
+        "grunt-gh-pages": "^1.1.0",
+        "grunt-postcss": "^0.9.0",
+        "grunt-sass": "^1.2.0",
+        "grunt-sass-globbing": "^1.5.1",
+        "grunt-usemin": "^3.1.1",
+        "hugo-lunr": "0.0.4",
+        "jshint": "^2.9.5",
+        "load-grunt-tasks": "^3.5.0",
+        "node-fetch": "^1.7.3",
+        "node-sass": "^4.5.3",
+        "string": "^3.3.1",
+        "time-grunt": "^1.3.0",
+        "yargs": "^10.0.3",
+        "yfm": "^0.2.0"
+    },
+    "scripts": {
+        "build": "grunt",
+        "edit": "grunt edit",
+        "buildDev": "grunt buildDev",
+        "index": "grunt index",
+        "watch": "grunt watch",
+        "push": "grunt push",
+        "clean": "grunt clean",
+        "js": "grunt js",
+        "links:generate": "yarn run buildDev && node link-check.js --generate",
+        "links:test": "node link-check.js"
+    }
 }

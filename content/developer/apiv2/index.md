@@ -7,9 +7,9 @@ tags:
 category: developer
 menu:
   developer:
-    parent: framework
-    weight: 1000
     identifier: framework-apiv2
+aliases:
+- /developer/framework/apiv2
 ---
 ## The Vanilla APIv2
 

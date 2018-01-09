@@ -9,6 +9,8 @@ menu:
   developer:
     parent: framework-apiv2
     weight: 30
+aliases:
+- /developer/framework/apiv2/authentication
 ---
 ## Authenticating API Calls
 
