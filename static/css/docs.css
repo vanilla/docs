@@ -750,15 +750,13 @@ a:hover {
   display: none;
 }
 
-#nav .nav-tier1 > .menuItem.isActive > .menuItem-children,
-#nav .nav-tier1 > .menuItem.hasActiveChildren > .menuItem-children {
+#nav .menuItem-children.isOpen-tablet {
   display: block;
 }
 
-@media screen and (max-width: 1100px) {
-  #nav .menuItem-children.isOpen-tablet {
-    display: block;
-  }
+#nav .nav-tier1 > .menuItem.isActive > .menuItem-children,
+#nav .nav-tier1 > .menuItem.hasActiveChildren > .menuItem-children {
+  display: block;
 }
 
 @media screen and (max-width: 880px) {
@@ -822,7 +820,8 @@ a:hover {
   position: relative;
 }
 
-.subNav-title {
+.subNav-title,
+.pageNav-title {
   font-weight: 600;
   font-size: 14px;
   color: #555A62;
@@ -831,13 +830,29 @@ a:hover {
   margin: 0 0 12px;
 }
 
-.subNav {
+.subNav,
+.pageNav {
   border: 1px solid #F4F4F4;
   padding: 18px 0;
 }
 
+.subNav.noContent,
+.pageNav.noContent {
+  display: none;
+}
+
+.subNav {
+  margin-bottom: 12px;
+}
+
 .column-panel.noContent .docs-nav {
   display: none !important;
+}
+
+@media screen and (max-width: 1100px) {
+  .column-pageNav {
+    display: none;
+  }
 }
 
 .panelHeader {

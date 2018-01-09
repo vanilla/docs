@@ -16,24 +16,13 @@ function stripTags(html) {
     return tmp.textContent || tmp.innerText || "";
 }
 
-function replaceTableOfContentsWithSubNav() {
-    var $mainNav = $('#nav');
-    var $secondaryNav = $('#nav_sub');
-    var $secondaryNavContent = $('#subNav-content');
-    var $subNavContent = $mainNav.find('.js-showInRightPanel .menuItem-children');
-
-    if( $subNavContent.length > 0 && $subNavContent.closest('')) {
-        $secondaryNavContent.html( $subNavContent.html() );
-    }
-}
-
 function smoothScrollToElement($el, callback) {
     //calculate destination place
     var dest = 0;
-    if ($el.offset().top > $(document).height() - $(window).height()) {
+    if ($el && $el.offset && $el.offset().top > $(document).height() - $(window).height()) {
         dest = $(document).height() - $(window).height();
     } else {
-        dest = $el.offset().top;
+        dest = ($el && $el.offset) ? $el.offset().top : 0;
     }
     //go to destination
     $('html,body').animate({
@@ -96,7 +85,6 @@ function mobileNavInit() {
 }
 
 $(function(){
-    replaceTableOfContentsWithSubNav();
     setupSmoothScroll();
     anchorifyPage();
     mobileNavInit();
