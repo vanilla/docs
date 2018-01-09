@@ -7,8 +7,9 @@ menu:
     weight: 11
 tags:
 - Integration
-- wordpress
-- comments
+- Wordpress
+- Features
+- Comments
 aliases:
 - /integrations/integrations
 - /integrations/wordpress

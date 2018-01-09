@@ -3,6 +3,7 @@ title: Vanilla Pop
 tags:
 - Features
 - Vanilla Pop
+- Hub
 category: help
 menu:
   help:
