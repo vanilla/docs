@@ -10,7 +10,7 @@ menu:
     parent: framework-apiv2
     weight: 30
 aliases:
-- /developers/framework/apiv2/authentication
+- /developer/framework/apiv2/authentication
 ---
 ## Authenticating API Calls
 

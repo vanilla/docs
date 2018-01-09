@@ -131,6 +131,8 @@ Publishing is easy. Just commit your changes to master and wait for them to be a
 
 Making larges refactors to the docs? When you're done run `yarn links:test` to test that every previously accessible link is still accessible. If you add new pages run `yarn links:generate` afterwards. This will update the JSON file called `current-links.json`. Links should **NEVER** be removed from this file and it should not be edited manually.
 
+Missing `/tags/` links are a result of tags being removed.
+
 #### Troubleshooting
 
 In the event that the link-check scripts fails it may fail to shut down the docs development server. This will leave the server running and bound on port 1313. Attempting to run the docs server again will fail with an `EADDRESS` error. To kill this process you may run:

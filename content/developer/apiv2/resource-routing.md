@@ -10,7 +10,7 @@ menu:
     parent: framework-apiv2
     weight: 10
 aliases:
-- /developers/framework/apiv2/resource-routing
+- /developer/framework/apiv2/resource-routing
 ---
 ## RESTful Resource Routing to Controller Methods
 

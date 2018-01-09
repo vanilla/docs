@@ -9,7 +9,7 @@ menu:
   developer:
     identifier: framework-apiv2
 aliases:
-- /developers/framework/apiv2
+- /developer/framework/apiv2
 ---
 ## The Vanilla APIv2
 

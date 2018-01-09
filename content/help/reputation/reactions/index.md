@@ -3,6 +3,7 @@ title: Reactions
 tags:
 - Features
 - Addons
+- Reactions
 category: help
 menu:
   help:
@@ -12,8 +13,8 @@ aliases:
 - /addons/reactions
 - /addons/reactions/adding-and-editing-reactions
 - /addons/reactions/curating-with-reactions
-- /help/reputation/adding-and-editing-reactions
-- /help/reputation/curating-with-reactions
+- /help/reputation/reactions/adding-and-editing-reactions/
+- /help/reputation/reactions/curating-with-reactions/
 ---
 {{% cloudfeature %}}
 

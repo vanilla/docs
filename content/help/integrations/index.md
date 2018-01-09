@@ -5,11 +5,17 @@ menu:
   help:
     identifier: integrations
     weight: 11
+tags:
+- Integration
+- wordpress
+- comments
 aliases:
 - /integrations/integrations
 - /integrations/wordpress
 - /features/wordpress/using-comments
+- /help/integrations/wordpress/using-comments/
 - /help/integrations/wordpress
+- /help/integrations/wordpress/wishlist/
 ---
 
 Vanilla integrates with several third party applications, including:

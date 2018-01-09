@@ -3,6 +3,7 @@ title: Ranks
 tags:
 - Features
 - Addons
+- Ranks
 category: help
 menu:
   help:

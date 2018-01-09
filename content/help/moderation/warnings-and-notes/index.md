@@ -3,6 +3,7 @@ title: Warnings and Notes
 tags:
 - Features
 - Moderation
+- warnings and notes
 category: help
 menu:
   help:

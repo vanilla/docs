@@ -10,7 +10,7 @@ menu:
     parent: framework-apiv2
     weight: 2
 aliases:
-- /developers/framework/apiv2/api-endpoints
+- /developer/framework/apiv2/api-endpoints
 ---
 ## Controller Endpoints
 

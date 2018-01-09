@@ -3,6 +3,7 @@ title: Groups
 tags:
 - Features
 - Addons
+- Groups
 category: help
 menu:
   help:

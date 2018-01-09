@@ -3,6 +3,8 @@ title: Advanced Editor
 tags:
 - Features
 - Addons
+- Advanced-editor
+- editor
 category: help
 menu:
   help:

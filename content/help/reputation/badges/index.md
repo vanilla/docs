@@ -3,6 +3,7 @@ title: Badges
 tags:
 - Features
 - Addons
+- Badges
 category: help
 menu:
   help:
