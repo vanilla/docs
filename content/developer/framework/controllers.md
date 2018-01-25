@@ -11,6 +11,7 @@ menu:
     parent: framework
     weight: 10
 aliases:
+- /framework/controllers
 - /developers/framework/controllers
 ---
 

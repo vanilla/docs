@@ -9,6 +9,7 @@ menu:
     parent: framework
     weight: 10
 aliases:
+- /framework/views
 - /developers/framework/views
 ---
 ## Views

@@ -10,6 +10,7 @@ menu:
     parent: addons
     identifier: addons-reactions
 aliases:
+- /help/addons/reactions/
 - /addons/reactions
 - /addons/reactions/adding-and-editing-reactions
 - /addons/reactions/curating-with-reactions

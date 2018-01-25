@@ -11,6 +11,7 @@ menu:
     weight: 10
 aliases:
 - /developer/framework/apiv2/resource-routing
+- /developer/framework/apiv2/api-endpoints/resource-routing
 ---
 ## RESTful Resource Routing to Controller Methods
 

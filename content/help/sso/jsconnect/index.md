@@ -14,6 +14,7 @@ aliases:
 - /features/sso/jsconnect
 - /features/sso/jsconnect/embed
 - /features/sso/jsconnect/overview
+- /help/features/sso/jsconnect/
 - /help/sso/jsconnect/embed
 - /help/sso/jsconnect/overview
 ---

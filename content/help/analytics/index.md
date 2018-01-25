@@ -10,6 +10,7 @@ menu:
 weight: 10
 aliases:
 - /analytics
+- /help/addons/statistics
 ---
 
 ## What Are Vanilla Analytics?
