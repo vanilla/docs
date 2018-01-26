@@ -19,6 +19,7 @@ aliases:
 - /help/reputation/ranks/applying-ranks-over-sso
 - /help/reputation/ranks/using-ranks-as-incentives
 - /help/reputation/ranks/using-ranks-to-defeat-spam-or-abuse
+- /help/ranks
 ---
 ## What is a Rank?
 
