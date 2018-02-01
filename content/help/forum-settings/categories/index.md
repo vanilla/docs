@@ -113,7 +113,7 @@ Additional Resources:
 
 ## Category Following
 
-Category following gives users a shortcut to discussions in their favorite categories. You can then filter discussions to only categories you follow.
+Category following gives users a shortcut to discussions in their favorite categories. You can then filter discussions to only show content from categories you follow.
 
 This feature is turned off by default and is not visible to guests.
 
@@ -121,30 +121,30 @@ This feature is turned off by default and is not visible to guests.
 
 You can find the Categories options page in the Dashboard, under the "Discussions" section. 
 
-    // Screen Shot - categoryFollowing_categoriesDashboard.png
+![Categories Section In Dashboard](http://static.v-cdn.net/docs/categories/categoryFollowing_categoriesDashboard.png)
 
 
 Or, you can directly go to that page with the url `/vanilla/settings/categories`. On the top right of the page, you'll see a settings button, next to the "Add Category" button.
 
-    // Screen Shot - categoryFollowing_enable.png
+![Category Following Toggle](http://static.v-cdn.net/docs/categories/categoryFollowing_enable.png)
 
 From there, you can toggle on category following.
 
-    // Screen Shot - categoryFollowing_enabled.png
+![Category Following Enabled](http://static.v-cdn.net/docs/categories/categoryFollowing_enabled.png)
 
 ### How to use it?
 
 With this feature activated, you will see a new button show up next to the title on categories that **display as discussions** 
 
-    // Screen Shot - categoryFollowing_follow.png
+![Category Following - Follow Button](http://static.v-cdn.net/docs/categories/categoryFollowing_follow.png)
 
 Once clicked, it will change to "Following". You can click it again to unfollow the category.
 
-    // Screen Shot - categoryFollowing_following.png
+![Category Following - Following Button](http://static.v-cdn.net/docs/categories/categoryFollowing_following.png)
 
 This feature also adds a filter to the `/categories` page.
 
-    // Screen Shot - categoryFollowing_filter.png
+![Category Following - Filter](http://static.v-cdn.net/docs/categories/categoryFollowing_filter.png)
 
 You can chose to view all categories or followed categories only. *Note that your preference is saved in your user profile.*
 
