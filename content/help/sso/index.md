@@ -29,7 +29,6 @@ Vanilla offers three flavors of single sign-on:
 
 We also offer:
 
-
 * Social SSO (Twitter, Facebook, and more).
 * Third-party service integration (e.g. Auth0; cloud-only).
 * Custom SSO integrations (cloud-only).
@@ -38,13 +37,52 @@ All flavors and types of SSO follow general rules in Vanilla, many of which are 
 
 ## General principles
 
-Regardless of your type of SSO, these principles apply to how Vanilla handles it:
+Regardless of your type of SSO, the following principles/recommendations apply to how it is handled by Vanilla:
 
-* We recommend against creating new users over the API. The fault-tolerant way to map users to your forum is to always let them be asynchronously created as they login.
-* We **only** connect to existing accounts by matching email address. No exceptions. Automatic account connection must be opted into for security reasons. 
-* Once a connection is made to an account, the connection is remembered forever. Future email address changes are irrelevant.
-* Omitting the parameter for username (often 'name') will send the user to an interstitial page that prompts them to create one.
+- Since you are the provider, make sure that the information you pass through SSO is already validated.
+Email addresses, for example, **should be already confirmed** on your side before a user is allowed to connect through SSO.
+- It is strongly recommend you do not create users over the API.
+The fault-tolerant way to map users to your forum is to always let them be asynchronously created as they login.
 
+### Account connection
+
+When a user logs in through SSO for the first time, a connection is made using the SSO UniqueID and Vanilla UserID.
+The connection between the two IDs is permanent for that connection. If the user changes their email address after the first connection it won't causes any problem.
+
+Generally, two things can happen when that connection is being made:
+
+- All the required information is correctly passed through SSO and no matching Vanilla user is found.
+   - This will result in a brand new user created on the forum.
+- Some required information is missing or some information matches an existing user account on the forum.
+   - The user will be redirected to a page where he will have to either:
+      - Fill out the missing information.
+      - Manually connect to an existing forum account by specifying the password of that account. 
+      *This ensures the user owns the forum's account.*
+      - Create a new account with a username/email that does not conflict with an existing forum account.
+
+*Omitting one required field, for example username (often 'name'), will prompt the user to fill in the information.*
+
+### AutoConnect
+
+AutoConnect is a feature that uses email addresses to automatically connect an account in the [Account connection](#account-connection) process.
+When this feature is enabled, and the email passed through SSO matches the email of a user account on the forum,
+the connection between the SSO UniqueID and Vanilla UserID is made right away without the user having to go 
+through confirming ownership over an existing account.
+
+For *security reasons* it must be opted into.
+Email addresses **must be validated on your side** when using this feature..
+
+*Vanilla __only__ connects existing accounts by matching email address. No exceptions.*
+
+### Redirection
+
+*Most SSO solutions honor this behavior.*
+
+When tightening your SSO configurations to redirect users automatically after the sign-in process, you can use `{target}` in the redirect URL.
+Vanilla will replace `{target}` by the page the user is currently on when generating the URL.
+
+Example (using jsConnect): `https://sso.example.com/jsconnect/signin?redirect={target}` would become something like
+`https://sso.example.com/jsconnect/signin?redirect=/discussions`
 
 ## Logging users out
 
