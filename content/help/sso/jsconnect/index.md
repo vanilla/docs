@@ -223,7 +223,7 @@ Consider the embed code for Vanilla comments:
 
 /*** Required Settings: Edit BEFORE pasting into your web page ***/
 
-var vanilla_forum_url = 'http://your.url.com/'; // The full http url &amp; path to your vanilla forum
+var vanilla_forum_url = 'http://forum.example.com/'; // The full http url &amp; path to your vanilla forum
 var vanilla_identifier = 'your-content-identifier'; // Your unique identifier for the content being commented on
 **var vanilla_sso = 'SSO STRING'; // Your SSO string.**
 
@@ -267,7 +267,6 @@ That's it! The value of vanilla_sso from above is what you put in your embed cod
 - Even though your signature string is base64 encoded make sure the actual signature is hex encoded. The correct string will be 40 characters consisting of the numbers 0-9 and a-f.
 - The timestamp is a unix timestamp. That means it will be an integer and represents the number of seconds since 1 January 1970. Most languages have a way of getting this timestamp.
 
-
 ## WordPress plugin
 
-If your site is using WordPress then we make a plugin that allows you to use SSO with your WordPress site. It also helps you set up an embedded forum and embedded comments on your site. <a href="https://wordpress.org/plugins/vanilla-forums/" target="_blank">Get the plugin</a>.
+If your site is using WordPress then we make a plugin that allows you to use SSO with your WordPress site. It also helps you set up an embedded forum and embedded comments on your site. <a href="https://wordpress.org/plugins/vanilla-forums/" target="_blank" rel="nofollow noopener">Get the plugin</a>.
