@@ -7,6 +7,7 @@ menu:
     identifier: ideation
 aliases:
 - /ideation
+- /addons/ideation/
 ---
 {{% cloudfeature %}}
 
