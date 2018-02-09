@@ -17,28 +17,28 @@ versioning:
 
 {{% cloudfeature %}}
 
-This plugin allows you to:
+This plugin provides an easy way to have a custom background image for every page of the forum. It allows you to upload this image in the dashboard and access it through a [Smarty Template](/developer/smarty/functions/#function-hero-image-url) or [Customize Theme](/help/appearance/custom-theme).
 
-- Associate an background image with a category.
-- Inherit the parent categories image if one isn't set.
-- Set a "top-level" image that everything falls back to if no image is found on a parent category.
-- Access this image through a [Smarty Template]() or [Customize Theme]().
+It also allows you override an the main image on a per-category basis. Overriding this background image for a category will also override the background image for every category or discussion inside of that category. This allows you to have a tree of background images through your forum, managed through the dashboard.
+
+<aside class="note">In order to be flexible this plugin does __not__ provide an out of the box solution for existing themes. Integrating the image will require custom theming work to be done. It's best to be knowledgeable in both HTML and CSS before using this plugin.</aside>
+
 
 ## Setup
 
-- Visit the addon's page of the dashboard.
+- Visit the addon's page of the dashboard. (`dashboard/settings/addons`)
 - Enable the HeroImage plugin.
+![](/img/help/addons/hero-image/hero-image-enable.png)
 
-![](/img/help/addons/hero-image/hero-image-settings.png)
-
-## Set the default image
+## Set the hero image
 
 1. Click on the settings icon next to the plugin.
+![](/img/help/addons/hero-image/hero-image-settings.png)
 2. Click on the file picker to select your image.
 ![](/img/help/addons/hero-image/hero-image-set-default.png)
 3. Click save.
 
-## Set a category image.
+## Override the hero image for a category.
 
 1. Navigate to the category page of the dashboard. (`/vanilla/settings/categories`)
 2. Edit a category.
@@ -47,7 +47,17 @@ This plugin allows you to:
 ![](/img/help/addons/hero-image/hero-image-set-category.png)
 5. Click Save.
 
-## Usage in PHP and Smarty
+## Which image will show up for a page?
+
+The default image is the one set in [plugin's setting](#set-the-hero-image). This image will always be returned for pages like Activity, Profile, Search, and many Ctegory & Discussion pages.
+
+A Discussion page will always return the same image as the category it is in.
+
+A Category page will by default return the default image unless:
+- It has an [image override](#override-the-hero-image-for-a-category) set directly on itself through the dashboard.
+- One of its parent categories has an image override set through the dashboard. A category will use it's closest parent category's image if set.
+
+## Usage in Smarty
 
 The URL of the image for the current page will be made available to Smarty Templates and customize theme with the tag:
 
@@ -55,9 +65,10 @@ The URL of the image for the current page will be made available to Smarty Templ
 {hero_image_url}
 ```
 
-If you place this custom smarty tag in your CustomizeTheme, and disable the Hero Image plugin you site _will_ break until you either remove the tag or re-enable the plugin.
+If you place this custom smarty tag in your [Customize Theme](/help/appearance/custom-theme), and disable the Hero Image plugin you site _will_ break until you either remove the tag or re-enable the plugin.
 
-It is made available through PHP (such as in a themehooks file) with the function call:
+## Usage in PHP
+Alternatively, this image url is made available through PHP (such as in a [themehooks](/developer/addons/theme-hooks) file) with the function call:
 
 ```php
 if (class_exists("HeroImagePlugin")) {
@@ -67,13 +78,15 @@ if (class_exists("HeroImagePlugin")) {
 
 ## Example usage
 
-The simplest usage is to just use the provided link in an image tag.
+There are multiple ways to use the image URL. 
 
+### With an Image Tag
 ```html
 <img src="{hero_image_url}" class="MyHeroImage"/>
 ```
 
-Sometimes you the need the flexibility of background image though (if you want to the image to stretch across the whole screen). An example might look like the following:
+### With a background image
+Sometimes you the need the flexibility of background image though (if you want to the image to stretch across the whole screen). This usage requires both HTML and CSS. An example might look like the following:
 
 ```html
 <div class="MyHero" style="background-image: url('{hero_image_url}')">

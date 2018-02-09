@@ -350,6 +350,24 @@ Writes an `AdvancedSearchModule` to the page. This functionality is only the ava
 
 The advanced searchbox smarty tag does not currently offer a `placeholder` attribute. It's placeholder value can be changed by [editing the locale key](/developer/locales/) `SearchBoxPlaceHolder`.
 
+## Function `{hero_image_url}`
+
+{{% cloudfeature %}}
+{{% versioning added="2.6" %}}
+
+This tag is added by the [Hero Image plugin](/help/addons/hero-image). It returns the url for the hero image of the current page.
+
+### Usage
+
+This function is easiest used inside of an `img` tag or an inline `background-image` style. These examples will likely require additional styles to be formatted properly.
+
+```html
+<img src="{hero_image_alt}" alt="Hero Image" />
+
+<!-- Or as an image -->
+<div style="background-image(url('{hero_image_alt}'))"></div>
+```
+
 ## Function: `{text}`
 
 ### Usage
