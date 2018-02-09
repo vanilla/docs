@@ -88,6 +88,7 @@ There are multiple ways to use the image URL.
 ### With a background image
 Sometimes you the need the flexibility of background image though (if you want to the image to stretch across the whole screen). This usage requires both HTML and CSS. An example might look like the following:
 
+#### HTML
 ```html
 <div class="MyHero" style="background-image: url('{hero_image_url}')">
     <h1>{$Title}</h1>
@@ -95,6 +96,10 @@ Sometimes you the need the flexibility of background image though (if you want t
     {breadcrumbs}
 </div>
 ```
+
+#### Styles
+
+This plugin doesn't provide styles for a background image. You will need to set them yourself in the CSS portion of [Customize Theme](/help/appearance/custom-theme). See the [Vanilla Forums Theme Guide](https://static.v-cdn.net/vfcom/docs/Vanilla-Forums-Theme-Guide.pdf) for tips and tricks on using Customize Theme.
 
 ```css
 .MyHero {
