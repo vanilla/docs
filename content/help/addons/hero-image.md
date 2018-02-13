@@ -12,17 +12,17 @@ menu:
 versioning:
   added: 2.6
 ---
-
-## Overview
-
 {{% cloudfeature %}}
+## Overview
 
 This plugin provides an easy way to have a custom background image for every page of the forum. It allows you to upload this image in the dashboard and access it through a [Smarty Template](/developer/smarty/functions/#function-hero-image-url) or [Customize Theme](/help/appearance/custom-theme).
 
-It also allows you override an the main image on a per-category basis. Overriding this background image for a category will also override the background image for every category or discussion inside of that category. This allows you to have a tree of background images through your forum, managed through the dashboard.
+It also allows you override the main image on a per-category basis. A category can optionally have its own background image. Any child categories inside this category will inherit from the parent category, unless it has its own image set. Discussions will always user their category's image.
 
-<aside class="note">In order to be flexible this plugin does __not__ provide an out of the box solution for existing themes. Integrating the image will require custom theming work to be done. It's best to be knowledgeable in both HTML and CSS before using this plugin.</aside>
+<aside class="note">In order to be flexible this plugin does __not__ provide an out of the box solution for existing themes. Integrating the image will require custom theming work to be done. It's best to be knowledgeable in both HTML and CSS before using this plugin.
 
+See our <a href="/developer/addons/theme-quickstart/">Custom Theme Guide</a> and <a href="/developer/addons/theme-quickstart/">Theming Quickstart Guide</a> for tips and guides on getting started.
+</aside>
 
 ## Setup
 
@@ -49,13 +49,13 @@ It also allows you override an the main image on a per-category basis. Overridin
 
 ## Which image will show up for a page?
 
-The default image is the one set in [plugin's setting](#set-the-hero-image). This image will always be returned for pages like Activity, Profile, Search, and many Ctegory & Discussion pages.
+The default image is the one set in [plugin's setting](#set-the-hero-image). This image will always be returned for pages like activity, profile, search, and many category & discussion pages.
 
-A Discussion page will always return the same image as the category it is in.
+A discussion page will always return the same image as the category it is in.
 
-A Category page will by default return the default image unless:
-- It has an [image override](#override-the-hero-image-for-a-category) set directly on itself through the dashboard.
-- One of its parent categories has an image override set through the dashboard. A category will use it's closest parent category's image if set.
+A category page will return the default image (set in the [plugin's setting](#set-the-hero-image)) unless:
+- It has an [image override](#override-the-hero-image-for-a-category) set in the category settings.
+- One of its parent categories has an [image override](#override-the-hero-image-for-a-category) set in the category settings.
 
 ## Usage in Smarty
 
@@ -78,15 +78,15 @@ if (class_exists("HeroImagePlugin")) {
 
 ## Example usage
 
-There are multiple ways to use the image URL. 
+### Simple example
 
-### With an Image Tag
+The easiest way to use the hero image url is through and image tag.
 ```html
 <img src="{hero_image_url}" class="MyHeroImage"/>
 ```
 
-### With a background image
-Sometimes you the need the flexibility of background image though (if you want to the image to stretch across the whole screen). This usage requires both HTML and CSS. An example might look like the following:
+### Advanced Usage
+Sometimes you need more flexibility than an `<img>` tag can provide. If so you can set an inline background-image. This usage requires both HTML and CSS. An example might look like the following:
 
 #### HTML
 ```html
