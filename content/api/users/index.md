@@ -74,7 +74,7 @@ Modify user information.
 ## /users/photo
 
 ```http
-POST /api/v1/users/photo HTTP/1.1
+POST /api/v1/users/photo.ext HTTP/1.1
 Host: https://yoursite.vanillaforums.com
 ```
 
