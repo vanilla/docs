@@ -86,8 +86,8 @@ Upload a new avatar
 
 | Parameter  | Type                      | Description                |
 | ---------- | ------------------------- | -------------------------- |
-| __`User`__ | [`smart id`](../smart-id) | Required. The user to edit |
-| `Picture`  | `string`                  | Uploaded file              |
+| __`UserID`__ | [`smart id`](../smart-id) | Required. The user to edit |
+| `Avatar`  | `string`                  | Uploaded file              |
 
 ### Notes
 
