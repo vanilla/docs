@@ -56,6 +56,100 @@ Readers can log in using a Disqus ID, Twitter, Google, FaceBook or via single si
 
 The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs [easyXDM](http://easyxdm.net/wp/) and a special container layer to achieve this. It requires a more in-depth setup than Vanilla's basic embed solution.
 
+## Testing embedding locally on Docker
+
+If your local environment is set up with Docker you can follow the steps below to test embedding:
+
+1. Create a “embed” directory in your workspace.
+1. On your docker installation, create a file called `embed.local.config` on etc > nginx > sites-enabled with the following code:
+
+```
+server {
+
+   server_name embed.vanilla.localhost;
+   listen 80;
+
+   listen 443 ssl;
+   ssl_certificate      /certificates/vanilla.localhost.crt;
+   ssl_certificate_key  /certificates/vanilla.localhost.key;
+
+   root /srv/your-path-to-embed-folder/embed;
+   index index.html;
+   
+   location ^~ /php/status {
+      # send to fastcgi
+      include fastcgi.conf;
+      fastcgi_pass    php-fpm;
+
+      access_log  /dev/null;
+      allow       127.0.0.1;
+     # deny        all;
+   }
+
+
+   # PHP handler
+   location ~* /index\.php$ {
+      # send to fastcgi
+      include fastcgi.conf;
+
+      fastcgi_param PHP_SELF        $fastcgi_script_name;
+      fastcgi_param SCRIPT_FILENAME $document_root/index.php;
+
+      fastcgi_pass    php-fpm;
+   }
+
+   # PHP
+   location ~* "^/cgi-bin/.+\.php" {
+      root /srv/your-path-to-embed-folder/embed;
+      # send to fastcgi
+      include fastcgi.conf;
+      fastcgi_pass php-fpm;
+   }
+
+   # Don't let any other php files run by themselves
+   location ~* \.php {
+      rewrite ^ /index.php?p=$uri last;
+      return 404;
+   }
+
+   # Safeguard against serving configs
+   location ~* "/\.htaccess$" { deny all; return 403; }
+   location ~* "/\.git" { deny all; return 403; }
+   location ~* "/conf/.*$" { deny all; return 403; }
+   location ^~ "/favicon.ico" { access_log off; log_not_found off; return 404; }
+}
+```
+1. Change `/srv/your-path-to-embed-folder/embed` with your path to your “embed” folder.
+1. On /etc/hosts add `127.0.0.1   embed.vanilla.localhost`.
+1. On you "embed" folder create a mock index.html file. For example:
+
+```
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body {
+				margin: 0;
+			}
+			#embedVanilla iframe {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>My Embedded Theme</h1>
+		<div id="embedVanilla">
+		</div>
+	</body>
+</html>
+```
+1. On your localhost go to Dashboard > Technical > Embedding. Turn on the option “Embed My Forum”.
+1. Choose the option you want to embed, in our case, we are going to embed the whole forum so we’ll go with “Universal Forum Embed Code”. Copy the code on the dashboard.
+1. Paste the copied code inside the div #embedVanilla.
+1. Navigate to `http://embed.vanilla.localhost` and test your forum.
+
 ## Setting Up Advanced Embedding
 
 Enable forum embedding via the Dashboard. Then set `Garden.Embed.Allow` to `2` in your config. _Cloud customers will have this done by support staff_.
