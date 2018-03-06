@@ -2,7 +2,7 @@
 title: Accessibility
 ---
 
-Accessibility (aka **a11y**) is about making sinetgubg as usable by as many people as possible. For the purpose of this document, we're focusing on web accessibility.  
+Accessibility (aka **a11y**) is about making a website usable for as many people as possible. For the purpose of this document, we're focusing on web accessibility.  
 
 ## Who's it for?
 
@@ -20,9 +20,9 @@ This includes, but is not exclusive to people with:
 
 A screen reader is a computer program that assists with reading text. However, modern screen readers also offer additional features for navigation, controlling the cursor, information about what actions can be taken on an element, etc. Screen readers are not only used by blind users. 
 
-You might also see the term "Assertive Technology" or "AT". That is a broader umbrella term for any equipment, software or product use to increase, maintain or improve functional capabilities of a person with disabilities. 
+You might also see the term "Assertive Technology" or "AT". That is a broader umbrella term for any equipment, software or product used to increase, maintain or improve functional capabilities of a person with disabilities. 
 
-### Desktop
+#### Desktop
 
 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) is by far the most popular screen reader. It is, however, quite expensive and there is a popular free alternative: [NVDA](https://www.nvaccess.org/). [VoiceOver](https://www.apple.com/ca/accessibility/mac/vision/) comes packaged with Mac computers, but isn't as well maintained. Any other screen reader for desktop has very small market share. [Screen Reader User Survey Data.](https://webaim.org/projects/screenreadersurvey7/)
 

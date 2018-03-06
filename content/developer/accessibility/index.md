@@ -237,13 +237,13 @@ This technique is not limited to menus. You could add one before a WYSIWYG's too
 
 This type of feature is difficult to find information on, since there isn't a consensus on how to handle it yet. However, here are some points to consider:
 
-- Add description of how it works beforehand. This can be hidden from the sighted user using the `sr-only` class.
+- Add a description of how it works beforehand. This can be hidden from the sighted user using the `sr-only` class.
 - Should have a way to turn off the infinite scroll.
 - Notify user if new data loads in (politely with a short message using `aria-live="polite"`).
 - Be sure to check swipe gestures with iOS VoiceOver
 - Good examples of accessible infinite scroll is Twitter.
 
-Note that the footer needs to be accessible. With an infinite scroll and a footer, it may be difficult or impossible to reach.
+Note that the footer needs to be accessible. With an infinite scroll and a footer, it may be difficult or impossible to reach. Many companies with infinite scrolling (like Facebook/Twitter/Linkedin) do not have footers.
 
 ## Tools
 
