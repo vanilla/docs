@@ -12,10 +12,10 @@ Here's an overview of the WCAG 2.1 spec. For details and success criteria, refer
 
 1. Perceivable - Information and user interface components must be presentable to users in ways they can perceive.
 
-    - 1.1 Text Alternatives - Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.
-    - 1.2 Time Based Media (example: video or audio) - Provide alternatives for time-based media.
-    - 1.3 Adaptable - Create content that can be presented in different ways (for example simpler layout) without losing information or structure. Responsiveness is a good example.
-    - 1.4 Distinguishable - Make it easier for users to see and hear content including separating foreground from background.
+    - 1.1 Text Alternatives - Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language
+    - 1.2 Time Based Media (example: video or audio) - Provide alternatives for time-based media
+    - 1.3 Adaptable - Create content that can be presented in different ways (for example simpler layout) without losing information or structure. Responsiveness is a good example
+    - 1.4 Distinguishable - Make it easier for users to see and hear content including separating foreground from background
     
 2. Operable - User interface components and navigation must be operable
     - 2.1 Keyboard Accessible - Everything needs to be doable by keyboard
@@ -26,12 +26,12 @@ Here's an overview of the WCAG 2.1 spec. For details and success criteria, refer
 3. Understandable - Information and the operation of user interface must be understandable
     - 3.1 Readable - Make text content readable and understandable (keep language simple)
     - 3.2 Predictable - Make Web pages appear and operate in predictable ways (Good UX is good accessibility)
-    - 3.3 Input Assistance - Help users avoid and correct mistakes.
+    - 3.3 Input Assistance - Help users avoid and correct mistakes
     
 4. Robust
     - 4.1 Compatible - Content must be robust enough that it can be interpreted by a wide variety of user agents, including assertive technologies
     
-Note that there are multiple levels of conformance. Most likely you'll be aiming for AA. A is really basic and AAA is very difficult to achieve. Even the W3C admits it's probabaly not realistic. 
+Note that there are multiple levels of conformance. Most likely you'll be aiming for AA. A is really basic and AAA is very difficult to achieve. Even the W3C admits it's probably not realistic
 
 ## Levels
 
@@ -46,7 +46,7 @@ When reading through the requirements for WCAG tests, you might see up to 3 diff
 
 ## Accessible Rich Internet Applications (Aria)
 
-Set of attributes that make web applications more accessible. We often use visual styles to convey meaning, Example a "pressed" button with a "pressed" class to the button has no semantic meaning. The screen reader does not analyze the names of the classes used. Using aria, we can add `aria-pressed="true"` or `aria-pressed="false"` to tell the screen reader the current state is.  
+Set of attributes that make web applications more accessible. We often use visual styles to convey meaning. For example a "pressed" button with a "pressed" class to the button has no semantic meaning. The screen reader does not analyze the names of the classes used. Using aria, we can add `aria-pressed="true"` or `aria-pressed="false"` to tell the screen reader the current state is.  
 
 For more on aria:
 
@@ -66,6 +66,8 @@ For more on roles:
 ## Labelling
 
 Make sure everything's labelled. Often times in modern web design, we tend to use icons without any text. We also need to think of a screen reader user is listening to one thing at a time and does not easily have context for things around. If they're having the items in a menu read to them, they can't just glance over to get the whole picture. They're hearing those items one by one. Proper labels will help things stay clear, even if they're out of context.
+
+## Images
 
 For images, use `alt` attribute. For SVGs, use the `<title>` tag. For any UI without a clear label, you can use `aria-label` to write the label, or use `aria-labelledby` with the ID of another element that contains the label.
 
@@ -88,6 +90,9 @@ The visual presentation of text and images of text has a contrast ratio of at le
 - Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
 
 - Logotypes: Text that is part of a logo or brand name has no contrast requirement.
+
+For color contrast tools, see our [tools section](#tools)
+
 
 ## Tab flow
 
@@ -163,24 +168,31 @@ Here's the class:
 
 Modern screen readers are good at emulating what CSS does. In other words, if you `display: none;` something, it will also be hidden to the screen reader. The above CSS make the element invisible, but it does so by cropping it in a 1px x 1px container. This is a hack, but it's become a convention. Maybe one day we'll have a proper CSS property for this behavior, but we currently don't.
 
+Example: Add a paragraph of instructions for screen readers before a complex component or widget. Favor `aria-label` and `aria-labelledby` when applicable.
+
 ### Focus states
 
-All elements that can have focus need to have a visual indication they are. Default browser stayles already have this, but it's pretty frequent for designers to ask the outline be removed. If you are to remove the default style, just keep in mind that you will need to add it to **EVERY** focussable element. That's a lot more work than keeping the default.
+All elements that can have focus need to have a visual indication they are. Default browser styles already have this, but it's pretty frequent for designers to ask the outline be removed. If you are to remove the default style, just keep in mind that you will need to add it to **EVERY** focussable element. That's a lot more work than keeping the default.
 
 If you put focus on an element it needs to come into view. That means if you've got a carousel and the user tabs away from the visible slides, the slides need to come over. Alternatively, you could set a `tabindex="-1"` on non visible slides to avoid this problem.
 
 ### Good Mobile Menu (aka. Hamburger Menu)
 
-- Use a real button
-- For "drawer" style (a.k.a. expand and collapse) sections, use a button!
+- Use a real button for the hamburger menu
+- For "drawer" or "accordion" style submenus (a.k.a. expand and collapse), use a button!
 - Use `aria-expanded`
 - Use `aria-haspopup`
 - You can tab into it after clicking the menu button
 - Close menu on "blur" and on "esc"
+- Maintain normal flow, i.e. you can tab from the menu button into the contents of the menu
 
 ### Responsive design
 
 Responsive design is now a requirement for accessibility. 
+
+#### Click targets
+
+Don't forget fingers are much fatter than cursors. Make sure click targets are big enough, especially on tablet or mobile. The minimum size of buttons will vary depending on your source, but a good rule of thumb is to keep them around 44px minimum. [Source](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)
 
 ### Links
 
@@ -188,7 +200,12 @@ Note that by default, not every browser allows tabbing to a link. If a link is p
 
 #### Skip Links
 
-Skip links allow users to "skip" over sections and get to the content. The most common type of skip link is to jump over the header. If you're navigating a website using a keyboard,  you probably don't want to be tabbing through the whole header and menu every page load. A common practice is to 
+Skip links allow users to "skip" over sections and get to the content. The most common type of skip link is to jump over the header. If you're navigating a website using a keyboard,  you probably don't want to be tabbing through the whole header and menu every page load. A common practice is to add what's called a "skip link", which is just an anchor that jumps to the main content of the page.
+
+Example:
+The very first element of your menu can be an absolutely positioned link that is hidden with [`.sr-only`](#hiding-things-from-a-sighted-user). On focus, you display it (remove styles from `sr-only`) that says something like: "Skip to content" that links to the `<main/>` section with a `tabindex="-1"` on it.
+
+This technique is not limited to menus. You could add one before a WYSIWYG's toolbar to skip to the `textarea`. 
 
 ### Tables
 
@@ -209,6 +226,7 @@ Skip links allow users to "skip" over sections and get to the content. The most 
 - If it's a confirmation dialogue, always put focus on least destructive option by default
 
 ### Pagination
+
 - `aria-label` or `aria-labelledby` on container, identifying the contents as pagination
 - `aria-label` or `aria-labelledby` on "next" and "prev"
 - `aria-current="page"` on selected page
@@ -220,7 +238,7 @@ Skip links allow users to "skip" over sections and get to the content. The most 
 This type of feature is difficult to find information on, since there isn't a consensus on how to handle it yet. However, here are some points to consider:
 
 - Add description of how it works beforehand. This can be hidden from the sighted user using the `sr-only` class.
-- Should be have a way to turn off the infinite scroll.
+- Should have a way to turn off the infinite scroll.
 - Notify user if new data loads in (politely with a short message using `aria-live="polite"`).
 - Be sure to check swipe gestures with iOS VoiceOver
 - Good examples of accessible infinite scroll is Twitter.
