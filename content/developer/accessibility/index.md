@@ -2,6 +2,8 @@
 title: Accessibility - Implementation
 ---
 
+<aside class="note">Theming can potentially break accessibility features build into Vanilla. Modify at your own risk.</aside>
+
 This is an implementation guide for accessibility. For details on what it is and who's it for, see our [intro](/help/accessibility).
 
 Note that much of the documentation you'll find online is for WCAG 2.0, but 2.1 is about to become an official recommendation in June 2018. Nothing was removed from 2.0, only some additional details were added in 2.1.
