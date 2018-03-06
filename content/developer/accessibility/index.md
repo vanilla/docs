@@ -72,7 +72,7 @@ Make sure everything's labelled. Often times in modern web design, we tend to us
 For images, use `alt` attribute. For SVGs, use the `<title>` tag. For any UI without a clear label, you can use `aria-label` to write the label, or use `aria-labelledby` with the ID of another element that contains the label.
 
   
-### Text
+## Text
 
 There are different color contrast requirements for "large" or "normal" text. 
 
