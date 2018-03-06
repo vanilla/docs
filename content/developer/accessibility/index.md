@@ -168,7 +168,10 @@ Here's the class:
 
 Modern screen readers are good at emulating what CSS does. In other words, if you `display: none;` something, it will also be hidden to the screen reader. The above CSS make the element invisible, but it does so by cropping it in a 1px x 1px container. This is a hack, but it's become a convention. Maybe one day we'll have a proper CSS property for this behavior, but we currently don't.
 
-Example: Add a paragraph of instructions for screen readers before a complex component or widget. Favor `aria-label` and `aria-labelledby` when applicable.
+Examples:
+ 
+- Add a paragraph of instructions for screen readers before a complex component or widget. Favor `aria-label` and `aria-labelledby` when applicable.
+- Inside a link that says "Read More" add some context with a `<span class="sr-only"/>"` inside so the screen reader will read: "Read More About Article X"
 
 ### Focus states
 
@@ -197,6 +200,8 @@ Don't forget fingers are much fatter than cursors. Make sure click targets are b
 ### Links
 
 Note that by default, not every browser allows tabbing to a link. If a link is part of normal text, that's not an issue, but if it's a part of navigation, or important UI, make sure to put a `tabindex="0"` on it. 
+
+Links should make sense out of context. Screen readers can pull up in a list all links in the page. If you've got 40 links on your page that say: "Read More", it's difficult for the user to know what the link is about. See out section on the [`.sr-only`](#hiding-things-from-a-sighted-user) class for a solution around this problem.
 
 #### Skip Links
 
@@ -237,7 +242,7 @@ This technique is not limited to menus. You could add one before a WYSIWYG's too
 
 This type of feature is difficult to find information on, since there isn't a consensus on how to handle it yet. However, here are some points to consider:
 
-- Add a description of how it works beforehand. This can be hidden from the sighted user using the `sr-only` class.
+- Add a description of how it works beforehand. This can be hidden from the sighted user using the [`.sr-only`](#hiding-things-from-a-sighted-user) class.
 - Should have a way to turn off the infinite scroll.
 - Notify user if new data loads in (politely with a short message using `aria-live="polite"`).
 - Be sure to check swipe gestures with iOS VoiceOver
