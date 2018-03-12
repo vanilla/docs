@@ -70,6 +70,10 @@ Disallow: /search/
 
 While we are happy to provide these features to those who desire them, we do not believe they provide any discernible benefit. As a popular forum software platform used by tens of thousands of sites, Vanilla is easily recognizable to search engines and they need no coaching to properly index your site. This is why we do not provide these two features as part of our core product.
 
+Our sitemaps provide links to pages that list discussions by category and month started. This gives search engines a complete directory of every discussion on your site without overloading server resources. Although not part of the normal site navigation, these pages are human-usable (and useful) and have semantic URLs. Listing all discussions in a single list (no matter how it is broken down) would introduce serious scaling problems due to the ever-changing nature of a sorted discussions list and the possibility of millions of discussions on one site. By breaking them down by category and month, we create moderately sized lists that do not change over time, enabling reliable performance. We have carefully followed all published sitemaps guidelines in building this system and do not provide customizations to it.
+
+
+
 #### Tagging
 
 User content tagging is available in Vanilla via the open source "Tagging" addon. Its primary benefit is making it easier to find content by particular topics across categories. It may have minor search engine benefits, but it is also a double-edged sword: it can be a high-maintenance to make sure users are properly tagging content and not abusing the system. That's why we provide this as an opt-in feature.
