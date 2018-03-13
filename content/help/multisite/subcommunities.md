@@ -84,7 +84,7 @@ Properly undoing these redirects may require assistance.
 ### Forums with no default subcommunity
 If no default subcommunity is set users visiting `forums.example.com` would see a category list as if the Subcommunities plugin was not enabled. If the user then clicked on top level category assosicated with a subcommunity they will be brought to the categories page of that subcommunity.
 
-While this may sound like a good way of navigating between subcommunities, it doesn't work in practice. This is because Vanilla rewrites the breadcrumbs for users inside of a subcommunties in a way that makes it feel quite disorienting to navigate from a non-subcommunity portion of a site to a subcommunity portion of it. See [Navigation between subcommunities](#navigation-between-subcommunities) for alternative solutions.
+While this may sound like a good way of navigating between subcommunities, it doesn't work in practice. This is because Vanilla rewrites the breadcrumbs for users inside of a subcommunties in a way that makes it feel quite disorienting to navigate from a non-subcommunity portion of a site to a subcommunity portion of it. See [Navigation between subcommunities](#navigate-between-subcommunities) for alternative solutions.
 
 ## Navigate between Communities
 

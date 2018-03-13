@@ -15,7 +15,7 @@ menu:
 
 ## Getting Started
 
-Subcommunities allow you split artificially split your forum into multiple sections. For more information about the benfits and details of subcommunities, see our [primary subcommmunity document](/help/multisite/subcommunities). This guide assumes a forum with no existing subcommunities. The setup process is relatively simple so let's get started.
+Subcommunities allow you artificially split your forum into multiple sections. For more information about the benfits and details of subcommunities, see our [primary subcommmunity document](/help/multisite/subcommunities). This guide assumes a forum with no existing subcommunities. The setup process is relatively simple so let's get started.
 
 ## Availability
 
@@ -38,7 +38,7 @@ Each category that you wish to become a subcommunity, should be
     - At the top level
     - Have the [nested type](/help/forum-settings/categories/#choosing-how-categories-display).
 
-With few exceptions every other category should be inside one of these categories. Categories found outside of these categories will likely not be accessible to your users. With Subcommunities and a [default subcommunity set](/help/multisite/subcommunities/#setting-a-default) _there will be be no navigable way for users to reach top-level categories outside of their current subcommunity_. See our instructions for [navigating between subcommunities](/help/multisite/subcommunities/#navigate-between-communities).
+With few exceptions every other category should be inside one of these categories. Categories found outside of these categories will likely not be accessible to your users. With Subcommunities and a [default subcommunity set](/help/multisite/subcommunities/#setting-a-default) _there will be no navigable way for users to reach top-level categories outside of their current subcommunity_. See our instructions for [navigating between subcommunities](/help/multisite/subcommunities/#navigate-between-communities).
 
 One exception to this rule is the `Social Groups` category created by the [Groups addon](/help/addons/groups/). That addon provides additional methods to navigate to and from groups inside of a subcommunity. Groups are [shared between subcommunities](/help/multisite/subcommunities/#shared-content) and are accessible from all subcommunities.
 
