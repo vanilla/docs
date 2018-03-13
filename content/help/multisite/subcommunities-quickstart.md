@@ -38,7 +38,7 @@ Each category that you wish to become a subcommunity, should be
     - At the top level
     - Have the [nested type](/help/forum-settings/categories/#choosing-how-categories-display).
 
-With few exceptions every other category should be inside one of these categories. Categories found outside of these categories will likely not be accessible to your users. With Subcommunities and a [default subcommunity set](/help/multisite/subcommunities/#setting-a-default) _there will be no navigable way for users to reach top-level categories outside of their current subcommunity_. See our instructions for [navigating between subcommunities](/help/multisite/subcommunities/#navigate-between-communities).
+With few exceptions every other category should be inside one of these categories. Categories found outside of these categories will likely not be accessible to your users. With Subcommunities and a [default subcommunity set](/help/multisite/subcommunities/#setting-a-default) _there will be no navigable way for users to reach top-level categories outside of their current subcommunity_. See our instructions for [navigating between subcommunities](/help/multisite/subcommunities/#navigate-between-subcommunities).
 
 One exception to this rule is the `Social Groups` category created by the [Groups addon](/help/addons/groups/). That addon provides additional methods to navigate to and from groups inside of a subcommunity. Groups are [shared between subcommunities](/help/multisite/subcommunities/#shared-content) and are accessible from all subcommunities.
 
@@ -52,7 +52,7 @@ Next click on the add subcommunity button, which will open a dialogue box.
 
 You will need to provide the following information
 
-- __Name__ - The name of the community. This will appear in the [SubcommunityToggleModule](/help/multisite/subcommunities/#navigate-between-communities).
+- __Name__ - The name of the community. This will appear in the [SubcommunityToggleModule](/help/multisite/subcommunities/#navigate-between-subcommunities).
 - __Folder__ - The bit added to the URL to differentiate the subcommunities from each other.
 - __Category__ - One of the `Nested` categories that you created/moved in the previous step.
 - __Locale__ - The language that you wish to use for your subcommunity. Subcommunities are often used to separate a community into different sections based on language, but different languages are not a requirement for subcommunities.

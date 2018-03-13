@@ -86,7 +86,7 @@ If no default subcommunity is set users visiting `forums.example.com` would see 
 
 While this may sound like a good way of navigating between subcommunities, it doesn't work in practice. This is because Vanilla rewrites the breadcrumbs for users inside of a subcommunties in a way that makes it feel quite disorienting to navigate from a non-subcommunity portion of a site to a subcommunity portion of it. See [Navigation between subcommunities](#navigate-between-subcommunities) for alternative solutions.
 
-## Navigate between Communities
+## Navigate between Subcommunities
 
 When a default community is set, it can be difficult for a user to navigate between communities. To properly facilitate this the `SubcommunityToggleModule` is included with the Subcommunities plugin.
 
