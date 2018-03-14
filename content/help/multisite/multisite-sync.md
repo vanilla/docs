@@ -3,13 +3,17 @@ title: Multisite Sync
 tags:
 - Cloud
 - Multisite
+- Sync
+- Hub
 category: help
+slug: sync
 menu:
   help:
     parent: multisite
 aliases:
 - /cloud/multisite/sync
 ---
+{{% cloudfeature %}}
 
 ## Hub Sync
 

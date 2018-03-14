@@ -3,6 +3,9 @@ title: Multisite
 tags:
 - Cloud
 - Multisite
+- Hub
+- Node
+- Subcommunities
 category: help
 menu:
   help:
@@ -32,11 +35,13 @@ Each Node is accessible via either a subdomain *or* a subfolder off a domain sha
 
 ### Subcommunities
 
-This artificially divides a **Single Community** *or* a **Node** into different areas by making each of the **top tier of categories** into subcommunities. While in any particular subcommunity, all other content outside the subcommunity is completely hidden. A common use case for subcommunities is localization.
+A subcommunity artificially divides a **Single Community** *or* a **Node** into different areas by making each of the **top level categories** into subcommunities.
 
-All subcommunities are still part of a single “instance” - the user list (and therefore moderators / admins), private messages, and activity stream are **shared** across all subcommunities.
+Each subcommunity (and it's top level category) must have a unique URL path prefix. For example, an English language subcommunity will have the the URL prefix of `/en/`. So the english subcommunity of `forums.example.com` would be available at `forums.example.com/en`.
 
-Each subcommunity has its own URL path prefix. For instance, visiting the “Recent Discussions” page of the English subcommunity for “forum.company.com” would take the user to “forum.company.com/en/discussions”. The user would see only discussions that are in the subcategories under the “English” top tier category.
+While in a subcommunity, categories and discussions will be filtered to that subsection of a forum. Category Lists, and the Recent Discussions page will be filtered to only show content from that subcommunity.
+
+All subcommunities are still part of a single “instance” - the user list (and therefore moderators / admins), private messages, and activity stream are **shared** across all subcommunities. For a more detailed list of what _is_ and _is not_ shared across subcommunities see the [Shared Content](/help/multisite/subcommunities/#shared-content) list in our Subcommunities document.
 
 A common way of combining this feature with the **Hub** is to create a **Node** per product, and use subcommunities for each locale within that product.
 
