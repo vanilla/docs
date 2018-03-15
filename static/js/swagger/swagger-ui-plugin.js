@@ -8,6 +8,12 @@ jQuery(document).ready(function($) {
         }
     }
 
+    // We actually can't prevent SwaggerUI from overwriting the set URL with one in the query string.
+    // https://github.com/swagger-api/swagger-ui/issues/4332
+    if (window.location.search) {
+        window.location.search = "";
+    }
+
     window.ui = SwaggerUIBundle({
         url: '/js/swagger/swagger-data.json',
         dom_id: '#swagger-ui',
