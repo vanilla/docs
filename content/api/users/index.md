@@ -74,7 +74,7 @@ Modify user information.
 ## /users/photo
 
 ```http
-POST /api/v1/users/photo HTTP/1.1
+POST /api/v1/users/photo.ext HTTP/1.1
 Host: https://yoursite.vanillaforums.com
 ```
 
@@ -87,7 +87,7 @@ Upload a new avatar
 | Parameter  | Type                      | Description                |
 | ---------- | ------------------------- | -------------------------- |
 | __`User`__ | [`smart id`](../smart-id) | Required. The user to edit |
-| `Picture`  | `string`                  | Uploaded file              |
+| `Avatar`  | `string`                  | Uploaded file              |
 
 ### Notes
 
