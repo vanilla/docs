@@ -98,8 +98,12 @@ The docs themselves are published to GitHub Pages and live at [http://docs.vanil
 	* OS X: `$ brew install yarn`
 	* Windows: ???
 2. Fork or clone the repository (depending on whether you have commit access)
-3. Install Hugo `brew install hugo` [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/) OR if you already have hugo, run `brew upgrade hugo`
-4. From the root of the folder, use `yarn` to install the project: `$ yarn install`
+3. Install Hugo `v0.29`. The site does not currently function properly with newer versions of hugo.
+
+The download can be found on hugo's release page. Unzip the archive for your platform and symlink it somewhere on your path.
+https://github.com/gohugoio/hugo/releases?after=v0.30
+
+4. From the root of the folder, use `yarn` to install the project dependancies: `$ yarn install`
 
 That should be it, you now have a working copy of the docs.
 
