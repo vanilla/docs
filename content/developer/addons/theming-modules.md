@@ -19,7 +19,7 @@ menu:
 
 ## Group Search Module
 
-The groups page has a search field, but if you with to move it somewhere, else, you can. There are 2 ways to add it to your theme.
+The groups page has a search field by default, but if you wish to move it somewhere else, you can. There are 2 ways to add it to your theme.
 
 Note that the custom CSS class and the button contents is **optional** and will change the markup if used.
 
@@ -32,7 +32,7 @@ Note that the custom CSS class and the button contents is **optional** and will 
 ### Adding Group Search Module - With PHP
 
 ```PHP
-if (Gdn::addonManager()->isEnabled('groups', Vanilla\Addon::TYPE_ADDON)) { // Make sure we have groups enablecd
+if (Gdn::addonManager()->isEnabled('groups', Vanilla\Addon::TYPE_ADDON)) { // Make sure we have groups enabled
     $groupSearch = new GroupSearchModule($sender); // Create group search module
     $groupSearch->setButtonContents("Search Groups"); // Optional (HTML supported)
     $groupSearch->setCssClass("someCustomClass"); // Optional, will remove default ".SiteSearch" if set
