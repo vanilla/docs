@@ -1293,6 +1293,8 @@ a:hover {
 
 .docs-improve {
   margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .editPage {
@@ -1360,6 +1362,8 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin: 0 0 1.6em;
+  position: relative;
+  z-index: 1;
 }
 
 .userContent {
