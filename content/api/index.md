@@ -1,15 +1,20 @@
 ---
-title: Vanilla API
+title: Vanilla API v1
 tags: ["API"]
 category: "api"
+menu:
+  api:
+    name: Overview
+    weight: 1
 ---
 
-Vanilla has had a read-only ReSTful API for some time, but until now, no formal way to access any write methods. This all changes with Simple API. Now developers can access Vanilla’s write methods using an access_token configured in the dashboard.
+*Vanilla now has a new [API v2](../apiv2) that is should be used if you are starting from scratch. If you already have a project using the API v1 then it will continue to be supported.*
 
-## Configuring Simple API
+## Configuring API v1
 
-Simple API is a plugin. Once you've enabled the plugin you’ll see a new link in your dashboard called "API". This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.
+The API v1 is a plugin. Once you've enabled the plugin you’ll see a new link in your dashboard called "API". This page allows forum owners to set the access token, define a user account that will be used for API access, and determine whether API calls are allowed over HTTP and HTTPS, or just HTTPS.
 
+*Note: The API v1 plugin was formally known as the "Simple API".*
 
 ### Access Token
 
@@ -42,14 +47,24 @@ Calls to the API are strictly separated by HTTP request type. Requests for data 
 
 ### Wire Format
 
-Regardless of the request type, the `access_token` should always be supplied in the query string:
+There are two ways to specify the access token in requests: with the authorization header or in the query string.
+
+#### Authorization Header
+
+```http
+GET /categories/all.json HTTP/1.1
+Authorization: Bearer abc123
+Host: mycompany.vanillaforums.com
+```
+
+#### Query String
 
 ```http
 GET /categories/all.json?access_token=abc123 HTTP/1.1
 Host: mycompany.vanillaforums.com
 ```
 
-The above request will yield the following response:
+The above requests will yield the following response:
 
 ```http
 HTTP/1.1 200 OK
@@ -83,4 +98,3 @@ No extension  | XHTML response, suitable for user interface
 ## Response Codes
 
 Generally, if an API request is successful it will return the standard response code of  `200`. You can check for this response code. If you get an error code (`4xx`-`5xx`) then you can check the `Exception` property of the response some error text that will help you to determine what went wrong.
-

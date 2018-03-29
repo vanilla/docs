@@ -13,12 +13,12 @@ draft: true
 
 Details about API endpoints for moderation.
 
-Simple API will be needed to make requests from an un authenticated request.
-To use Simple API you need to:
+The API v1 add-on will be needed to make requests from an un authenticated request.
+To use API v1 you need to:
 
-1. Enable to SimpleAPI Plugin
-2. Prepend `/api/v1/` to the URL
-3. Append `?access_token=XXXXXX` to the url
+1. Enable to API v1 add-on.
+2. Prepend `/api/v1/` to the URL.
+3. Append `?access_token=XXXXXX` to the url. You can also [use the authorization header to authenticate](../#authorization-header).
 
 Example:
 
