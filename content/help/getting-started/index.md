@@ -9,8 +9,6 @@ aliases:
 - /getting-started
 ---
 
-## Welcome!
-
 Welcome to Vanilla! We're glad to have you as a customer (or user!) and we're eager 
 to help make your community a success. This section is designed to give you a jump-start 
 in that direction and is intended for first-time or novice Vanilla administrators.
@@ -22,7 +20,7 @@ daunting experience with numerous choices and decisions to make. Having particip
 hundreds of community launches, we've developed a few tactics that increase the odds of
 success and remove some of the decision making.
 
-### 1 - Choose a Homepage View
+## 1. Choose a Homepage View
 
 In your dashboard, under `Appearance > Homepage` you'll find a choice of 3 different landing pages. 
 This is what people will see when they visit the main URL of your community. For a brand new
@@ -39,11 +37,11 @@ creating too many right away.
 Once there is significant content, switching to a category homepage might make sense. You 
 can use your analytics to see what leads to more engagement.
 
-### 2 - Upload your logo 
+## 2. Upload your logo 
 
 Most of the base themes will display a logo in the top navigation are of the page.  In the Dashboard, go to Appearance > Banner and upload your logo (Banner Logo). The logo will be displayed at 100% size and so a smaller version of your logo will usually work best. 
 
-### 3 - Add some "seed" content
+## 3. Add some "seed" content
 
 A common mistake is having little or no content upon launch. Just as people shy away 
 from being first on the dance floor at a party, having some active discussions going 
@@ -53,7 +51,7 @@ Create at least 10 discussions, use existing collateral, ask questions and solic
 Once thing to avoid is to create puppet accounts and stage fake discussions. Recruit 
 colleagues and friends to get those early discussions going, and keep them genuine.
 
-### 4 - Stay public
+## 4. Stay public
 
 It can be tempting to offer the forum as a private value add to existing customers or registered 
 members, restricting access to those people only. Unfortunately, a private forum 
@@ -66,7 +64,7 @@ That said, there are some exceptions:
 * Making it part of an existing premium membership that is already well established.
 * Limiting access and support to paid customers. This makes sense if you offer a high-end or expensive product. You may wish to consider a hybrid setup where you have a public “Pre-sales Questions” category.
 
-### 5 - Get the word out
+## 5. Get the word out
 
 Now that your community is set up to receive new members, its time to invite a few people
 to get the ball rolling. Start with your close knit friends and perhaps some colleagues. 
@@ -82,7 +80,7 @@ If you have an existing website, here are some ways to make sure your new commun
 * Have your customer service agents and sales team tell customers and potential customers about your community. Add it to your hold messages.
 * Invite discussions on topics from your blog, and also on social media posts where it makes sense.
 
-### 6 - Be welcoming!
+## 6. Be welcoming!
 
 Ensure you welcome and engage with new users as soon as you can when they make their first post. 
 Most communities have a large percentage of lurkers (people who only interact passively, by reading content), 
