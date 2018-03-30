@@ -109,4 +109,51 @@ Upon deleting a category, you will be prompted to select a replacement category 
 
 Additional Resources:
 
- * [Blog: How to Structure Categories](https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/)
+* [Blog: How to Structure Categories](https://blog.vanillaforums.com/community/how-to-structure-forum-categories-for-a-growing-community/)
+
+## Category Following
+
+Category following gives users a shortcut to discussions in their favorite categories. You can then filter discussions to only show content from categories you follow.
+
+This feature is turned off by default and is not visible to guests.
+
+### How to enable this feature?
+
+You can find the Categories options page in the Dashboard, under the "Discussions" section. 
+
+![Categories Section In Dashboard](http://static.v-cdn.net/docs/categories/categoryFollowing_categoriesDashboard.png)
+
+
+Or, you can directly go to that page with the url `/vanilla/settings/categories`. On the top right of the page, you'll see a settings button, next to the "Add Category" button.
+
+![Category Following Toggle](http://static.v-cdn.net/docs/categories/categoryFollowing_enable.png)
+
+From there, you can toggle on category following.
+
+![Category Following Enabled](http://static.v-cdn.net/docs/categories/categoryFollowing_enabled.png)
+
+### How to use it?
+
+With this feature activated, you will see a new button show up next to the title on categories that **display as discussions** 
+
+![Category Following - Follow Button](http://static.v-cdn.net/docs/categories/categoryFollowing_follow.png)
+
+Once clicked, it will change to "Following". You can click it again to unfollow the category.
+
+![Category Following - Following Button](http://static.v-cdn.net/docs/categories/categoryFollowing_following.png)
+
+This feature also adds a filter to the `/categories` page.
+
+![Category Following - Filter](http://static.v-cdn.net/docs/categories/categoryFollowing_filter.png)
+
+You can chose to view all categories or followed categories only. *Note that your preference is saved in your user profile.*
+
+### How do I translate it?
+
+The keys for the following button are: `Follow` and `Following`. The capitalization is done with CSS and can be undone in your theme's CSS if you prefer.
+
+### How to theme it?
+
+The icons can take the color you like by setting the `color` in CSS. By default, they inherit the text color. The new elements reuse existing CSS classes but also add new, unique ones for the category following that can be used.
+
+If you have a custom theme and you have a staging site, we **highly recommend** you test out your theme on staging *first*. Vanilla has tested our core themes with this feature, but we cannot anticipate all customizations done by themes. 
