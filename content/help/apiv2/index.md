@@ -1,11 +1,16 @@
 ---
 title: Vanilla API v2
-tags: ["API", "APIv2"]
+tags: 
+- API
+- APIv2
+- API v2
 category: "apiv2"
+aliases:
+- /apiv2/
 menu:
-  apiv2:
+  help:
     identifier: apiv2
-    name: Overview
+    name: API v2
     weight: 1
 ---
 

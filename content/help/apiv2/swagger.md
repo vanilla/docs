@@ -1,10 +1,17 @@
 ---
 title: API Reference
-tags: ["API", "APIv2", "Swagger"]
+tags: 
+- API
+- APIv2
+- API v2
+- Swagger
 category: "apiv2"
 swagger: true
+aliases:
+- /apiv2/swagger/
 menu:
-  apiv2:
+  help:
+    parent: apiv2
     weight: 12
 ---
 
