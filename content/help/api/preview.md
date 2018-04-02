@@ -4,7 +4,6 @@ tags:
 - API
 category: help
 weight: 120
-aliases: []
 ---
 
 ## API v2 Overview
