@@ -19,7 +19,14 @@ versioning:
   added: 2.6
 ---
 
-This is the primary Vanilla Forums build process. It is used to build assets for vanilla's core, and it's addons. It is built using [Webpack](https://webpack.js.org/), [node-sass](https://github.com/sass/node-sass), [babel](https://babeljs.io/), and [typescript](https://https://www.typescriptlang.org/). The `core` process can generate multiple javascript bundles and multiple built stylesheets for an addon. Its primary differences from the v1 process is that it enables building against other addons. Code can be shared between addons by using [dependency bundles](#dependency-bundles) and [child themes](#child-themes).
+This is the primary Vanilla Forums build process. It is used to build assets for vanilla's core, and it's addons. It's tooling includes
+
+- [Webpack](https://webpack.js.org/)
+- [node-sass](https://github.com/sass/node-sass)
+- [babel](https://babeljs.io/)
+- [typescript](https://https://www.typescriptlang.org/)
+
+The `core` process can generate multiple script bundles and multiple built stylesheets for an addon. Its primary differences from the `v1` process is that it enables building against other addons. Code can be shared between addons by using [dependency bundles](#dependency-bundles) and [child themes](#child-themes). It also allows for more complex file structures and has [typescript support](/developer/vanilla-cli/bundling-process#typescript).
 
 ## Contents
 
@@ -34,9 +41,9 @@ This is the primary Vanilla Forums build process. It is used to build assets for
 
 Source files are always found in one of two places - the `src` directory or the `node_modules` directory. Node modules can be installed from [npm](https://www.npmjs.com/) with [yarn](https://yarnpkg.com/en/).
 
-Javascript source files are located in the `src/scripts` directory and built into the `js` directory of the addon. Stylesheet source files (Sass) are located in the `src/scss` directory and are built into the `design` directory of the addon.
+Javascript or typescript source files are located in the `src/scripts` directory and built into the `js` directory of the addon. Stylesheet source files (Sass) are located in the `src/scss` directory and are built into the `design` directory of the addon.
 
-Javascript entry points must be explicitly defined in the [addon.json file](/developer/addons/addon-info#build). Stylesheet entry points are inferred. Any file matching the pattern `src/scss/**/*.scss` that does not match `_*.scss` will be used as an entry point.
+Javascript or typescript entry points must be explicitly defined in the [addon.json file](/developer/addons/addon-info#build). Stylesheet entry points are inferred. Any file matching the pattern `src/scss/**/*.scss` that does not match `_*.scss` will be used as an entry point.
 
 ## Dependency Bundles
 Dependency bundles are built from the files defined in `build.exports` of the [addon.json file](/developer/addons/addon-info/#build-exports).
@@ -58,7 +65,7 @@ would generate bundles `js/lib-dashboard-app.js` and `js/lib-dashboard-admin.js`
 
 ### The * Export
 
-Oftentimes you can have files that need to get exported into for every section. In this case you can use the `*` export. It's export will be applied for every other section. Keep in mind that the sections do need to still have an export key, even if its empty.
+Oftentimes you can have files that need to get exported into for every section. In this case you can use the `*` export. Its exports will be applied for every other section. Keep in mind that sections still need to have an export key, even if they are empty.
 
 ```json
 "build": {
@@ -226,4 +233,4 @@ If you create these two files in `themes/child-theme/src/scss` their contents wi
 
 ## Bundling Process
 
-See the [Bundling Process](/developer/vanilla-cli/bundling-process) page for details about the CLI bundles it's assets and the transforms that can be applied to javascript through the build process.
+See the [Bundling Process](/developer/vanilla-cli/bundling-process) page for details about the CLI bundles it's assets and the transforms that can be applied to javascript or typescript through the build process.

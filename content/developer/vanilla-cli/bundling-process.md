@@ -20,14 +20,6 @@ versioning:
 
 The Vanilla CLI's sass and javascript build processes provide multiple methods to import other sass/css or javascript files. *This only works with the built-in build processes.*
 
-## Typescript
-
-{{% versioning added="2.6" %}}
-
-The `core` and `v1` build process now contain support for typescript. Typescript files can import javascript files, and javascript files can import typescript files. If your not familiar with typescript, see the [typescript website](https://www.typescriptlang.org/).
-
-The typescript config being used will be the `tsconfig.json` at the top of your local Vanilla Forums installation.
-
 ## Javascript
 
 The javascript files are bundled *not concatenated*. Concatenation is how many legacy process work. A legacy build script would need to define the order that javscript files would get loaded in and they would get attatched to each other in order. Each file would place their contents in the global namespace and rely on their particular order to only reference things loaded before themselves. Bundling allows import/require statements to be resolved dynamically, and be deduplicated. All dependancies must be implicitly defined at the top of each file.
@@ -53,6 +45,7 @@ All ES2017 syntax and features are supported, including
 - `Map`/`Set`
 - `Array.prototype.map`/`Array.prototype.reduce`/`Array.prototype.filter`
 - `import`/`export`
+- `JSX` support
 
 ### Methods of exporting javascript
 
@@ -141,6 +134,17 @@ import {someOtherFunction} from "../sibling-file";
 ```
 
 If you are importing a file ending in `.js` or `.jsx` you do not need to and should not provide a file extension.
+
+
+## Typescript
+
+{{% versioning added="2.6" %}}
+
+The `core` build process now supports typescript. If you're not familiar with typescript, see the [typescript website](https://www.typescriptlang.org/).
+
+Typescript files are interoperable with javascript in this build process. A typescript file can import a javascript file and vice-versa. The only change you need to make for this build tool to interpret your javascript file as a typescript file is to rename the file extension from `js` to `ts` or from `jsx` to `tsx`. Because of this, it is recommended that your write you're script imports _without_ a file extension on them. The build tool will infer the file extension based on the actual file that exists. This allows easier migration from one extension to another if a file is converted to typescript or to support JSX.
+
+The typescript config being used will be the `tsconfig.json` at the top of your local Vanilla Forums installation.
 
 ## Sass
 
