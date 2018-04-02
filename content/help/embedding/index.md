@@ -12,6 +12,7 @@ aliases:
 - /features/embedding
 - /features/embedding/advanced
 - /help/forum-settings/embedding
+- /developer/embedding
 - /developer/embedding/advanced
 ---
 
