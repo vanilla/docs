@@ -19,7 +19,7 @@ versioning:
   added: 2.6
 ---
 
-This is the primary Vanilla Forums build process. It is used to build assets for vanilla's core, and it's addons. It is build using [Webpack](https://webpack.js.org/), [node-sass](https://github.com/sass/node-sass) and [babel](https://babeljs.io/). The `core` process can generate multiple javascript bundles and multiple built stylesheets for an addon. Its primary differences from the v1 process is that it enables building against other addons. Code can be shared between addons by using [dependency bundles](#dependency-bundles) and [child themes](#child-themes).
+This is the primary Vanilla Forums build process. It is used to build assets for vanilla's core, and it's addons. It is built using [Webpack](https://webpack.js.org/), [node-sass](https://github.com/sass/node-sass), [babel](https://babeljs.io/), and [typescript](https://https://www.typescriptlang.org/). The `core` process can generate multiple javascript bundles and multiple built stylesheets for an addon. Its primary differences from the v1 process is that it enables building against other addons. Code can be shared between addons by using [dependency bundles](#dependency-bundles) and [child themes](#child-themes).
 
 ## Contents
 
@@ -56,6 +56,39 @@ Dependency Bundles are used to separate out common chunks of code from between a
 
 would generate bundles `js/lib-dashboard-app.js` and `js/lib-dashboard-admin.js` and manifests `manifests/app-manifest.json` and `manifests/admin-manifest.json`
 
+### The * Export
+
+Oftentimes you can have files that need to get exported into for every section. In this case you can use the `*` export. It's export will be applied for every other section. Keep in mind that the sections do need to still have an export key, even if its empty.
+
+```json
+"build": {
+    "key": "core",
+    "process": "core",
+    "exports": {
+        "*": [
+            "./src/scripts/application",
+            "./src/scripts/gdn",
+            "./src/scripts/permissions",
+            "./src/scripts/utility",
+            "./src/scripts/dom-utility",
+            "./src/scripts/Components/DocumentTitle",
+            "./src/scripts/Main/NotFoundPage",
+            "axios",
+            "classnames",
+            "moment",
+            "react",
+            "react-dom",
+            "react-redux",
+            "redux",
+            "prop-types",
+            "sprintf-js"
+        ],
+        "app": [],
+        "admin": []
+    }
+}
+```
+
 ### What should go into a dependency bundle?
 
 - Modular code that you want to consume from your own addon and/or other addons.
@@ -84,7 +117,7 @@ Some aliases have been provided to make importing slightly easier.
 ```js
 import * as React from "react";
 import { Modal } from "@dashboard/app/components";
-import Editor from "@vanilla-editor/editor";
+import editorEvents from "@rich-editor/events";
 import Events from "@core/events";
 ```
 

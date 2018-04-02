@@ -5,6 +5,7 @@ tags:
 - CLI
 - Build
 - Javascript
+- Typescript
 - Import
 - Bundle
 - Webpack
@@ -19,9 +20,19 @@ versioning:
 
 The Vanilla CLI's sass and javascript build processes provide multiple methods to import other sass/css or javascript files. *This only works with the built-in build processes.*
 
+## Typescript
+
+{{% versioning added="2.6" %}}
+
+The `core` and `v1` build process now contain support for typescript. Typescript files can import javascript files, and javascript files can import typescript files. If your not familiar with typescript, see the [typescript website](https://www.typescriptlang.org/).
+
+The typescript config being used will be the `tsconfig.json` at the top of your local Vanilla Forums installation.
+
 ## Javascript
 
 The javascript files are bundled *not concatenated*. Concatenation is how many legacy process work. A legacy build script would need to define the order that javscript files would get loaded in and they would get attatched to each other in order. Each file would place their contents in the global namespace and rely on their particular order to only reference things loaded before themselves. Bundling allows import/require statements to be resolved dynamically, and be deduplicated. All dependancies must be implicitly defined at the top of each file.
+
+The babel preset used will be [@vanillaforums/babel-preset](https://github.com/vanilla/babel-preset).
 
 ### Syntax
 
