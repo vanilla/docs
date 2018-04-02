@@ -12,10 +12,9 @@ aliases:
 - /features/embedding
 - /features/embedding/advanced
 - /help/forum-settings/embedding
+- /developer/embedding
 - /developer/embedding/advanced
 ---
-
-Looking for Setup instructions? Take a look at our [developer documentation](/developer/embedding/).
 
 ## Embedding Forum
 
