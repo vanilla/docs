@@ -1896,6 +1896,37 @@
                 }
             }
         },
+        "/comments/{id}/answer": {
+            "patch": {
+                "tags": [
+                    "Comments"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CommentGet"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    }
+                }
+            }
+        },
         "/comments/{id}/edit": {
             "get": {
                 "tags": [
@@ -2740,6 +2771,32 @@
                     "Discussions"
                 ],
                 "summary": "Add an idea.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DiscussionPost"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Discussion"
+                        }
+                    }
+                }
+            }
+        },
+        "/discussions/question": {
+            "post": {
+                "tags": [
+                    "Discussions"
+                ],
+                "summary": "Add a discussion.",
                 "parameters": [
                     {
                         "name": "body",
@@ -5027,6 +5084,129 @@
                 "responses": {
                     "204": {
                         "description": "Success"
+                    }
+                }
+            }
+        },
+        "/media/scrape": {
+            "post": {
+                "tags": [
+                    "Media"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "url": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL to scrape."
+                                },
+                                "force": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "description": "Force the scrape even if the result is cached."
+                                }
+                            },
+                            "required": [
+                                "url"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "url": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The URL that was scraped."
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "The type of site. This determines how the embed is rendered.",
+                                    "enum": [
+                                        "getty",
+                                        "image",
+                                        "imgur",
+                                        "instagram",
+                                        "pinterest",
+                                        "site",
+                                        "smashcast",
+                                        "soundcloud",
+                                        "twitch",
+                                        "twitter",
+                                        "vimeo",
+                                        "vine",
+                                        "wistia",
+                                        "youtube"
+                                    ]
+                                },
+                                "name": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "minLength": 1,
+                                    "description": "The title of the page/item/etc. if any."
+                                },
+                                "body": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "minLength": 1,
+                                    "description": "A paragraph summarizing the content, if any. This is not what is what gets rendered to the page."
+                                },
+                                "photoUrl": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "minLength": 1,
+                                    "description": "A photo that goes with the content."
+                                },
+                                "height": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "The height of the image/video/etc. if applicable. This may be the photoUrl, but might exist even when there is no photoUrl in the case of a video without preview image."
+                                },
+                                "width": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "The width of the image/video/etc. if applicable."
+                                },
+                                "attributes": {
+                                    "type": [
+                                        "object",
+                                        "null"
+                                    ],
+                                    "description": "Any additional attributes required by the the specific embed."
+                                }
+                            },
+                            "required": [
+                                "url",
+                                "type",
+                                "name",
+                                "body",
+                                "photoUrl",
+                                "height",
+                                "width",
+                                "attributes"
+                            ]
+                        }
                     }
                 }
             }
@@ -7737,6 +7917,7 @@
                             "enum": [
                                 "discussion",
                                 "comment",
+                                "question",
                                 "group"
                             ]
                         },
@@ -9333,6 +9514,45 @@
                     "type": "string",
                     "description": "The full URL to the comment."
                 },
+                "attributes": {
+                    "type": "object",
+                    "properties": {
+                        "answer": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "enum": [
+                                        "accepted",
+                                        "rejected",
+                                        "pending"
+                                    ],
+                                    "description": "The state of the answer."
+                                },
+                                "dateAccepted": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When an answer was accepted."
+                                },
+                                "acceptUserID": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "description": "The user that accepted this answer."
+                                }
+                            },
+                            "required": [
+                                "status",
+                                "dateAccepted",
+                                "acceptUserID"
+                            ]
+                        }
+                    }
+                },
                 "reactions": {
                     "type": "array",
                     "items": {
@@ -9374,7 +9594,35 @@
                 "dateInserted",
                 "dateUpdated",
                 "insertUserID",
-                "score"
+                "score",
+                "attributes"
+            ]
+        },
+        "CommentGet": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "The comment ID."
+                },
+                "expand": {
+                    "description": "Expand associated records using one or more valid field names. A boolean true expands all expandable fields.",
+                    "default": false,
+                    "items": {
+                        "enum": [
+                            "reactions"
+                        ],
+                        "type": "string"
+                    },
+                    "style": "form",
+                    "type": [
+                        "boolean",
+                        "array"
+                    ]
+                }
+            },
+            "required": [
+                "id"
             ]
         },
         "CommentPost": {
@@ -9643,6 +9891,41 @@
                 "attributes": {
                     "type": "object",
                     "properties": {
+                        "question": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "enum": [
+                                        "unanswered",
+                                        "answered",
+                                        "accepted",
+                                        "rejected"
+                                    ],
+                                    "description": "The answering state of the question."
+                                },
+                                "dateAccepted": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When an answer was accepted."
+                                },
+                                "dateAnswered": {
+                                    "type": [
+                                        "datetime",
+                                        "null"
+                                    ],
+                                    "description": "When the last answer was inserted."
+                                }
+                            },
+                            "required": [
+                                "status",
+                                "dateAccepted",
+                                "dateAnswered"
+                            ]
+                        },
                         "idea": {
                             "type": "object",
                             "properties": {
@@ -9757,7 +10040,8 @@
                 "countViews",
                 "score",
                 "bookmarked",
-                "unread"
+                "unread",
+                "attributes"
             ]
         },
         "DiscussionGetEdit": {
@@ -10816,6 +11100,7 @@
                     "enum": [
                         "discussion",
                         "comment",
+                        "question",
                         "group"
                     ],
                     "description": "Sub-type of the discussion."
