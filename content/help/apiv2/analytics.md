@@ -1,10 +1,15 @@
 ---
 title: "Analytics"
-tags: ["API", "APIv2"]
+tags: 
+- API
+- APIv2
+- API v2
 category: "apiv2"
+aliases:
+- /apiv2/analytics/
 menu:
-  apiv2:
-    identifier: analytics
+  help:
+    parent: apiv2
     weight: 10
 ---
 
@@ -17,7 +22,7 @@ Host: https://yoursite.vanillaforums.com
 
 Retrieve data for a site leaderboard.
 
-[__Authentication__](../authentication): required
+[__Authentication__](authentication): required
 
 ### Parameters
 
@@ -83,7 +88,7 @@ Host: https://yoursite.vanillaforums.com
 
 Perform a query against collected analytics data.
 
-[__Authentication__](../authentication): required
+[__Authentication__](authentication): required
 
 The body of the request must be a JSON-encoded object.  Each property of the object should be a supported parameter.
 

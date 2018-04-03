@@ -1,5 +1,16 @@
 <aside class="column column-panel column-pageNav">
     <div class="docs-nav content-nav">
+        {{ if (eq (lower .Params.Category) "api") }}
+            {{ $.Scratch.Set "apiCrossRefTitle" "Looking for API v2 docs?"}}
+            {{ $.Scratch.Set "apiCrossRefUrl" "/help/apiv2"}}
+            {{ partial "api-cross-reference.html" . }}
+        {{ else if eq (lower .Params.Category) "apiv2" }}
+            {{ $.Scratch.Set "apiCrossRefTitle" "Looking for API v1 docs?"}}
+            {{ $.Scratch.Set "apiCrossRefUrl" "/api"}}
+            {{ partial "api-cross-reference.html" . }}
+        {{ end }}
+
+        {{ if not .Params.swagger }}
         <div class="pageNav">
             <h2 class="pageNav-title">
                 Jump To
@@ -8,5 +19,6 @@
                 {{ .TableOfContents }}
             </div>
         </div>
+        {{ end }}
     </div>
 </aside>

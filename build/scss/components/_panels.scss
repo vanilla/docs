@@ -193,6 +193,12 @@
     }
 }
 
+.pageNav {
+    + .pageNav {
+        margin-top: 18px;
+    }
+}
+
 .subNav {
     margin-bottom: 12px;
 }
@@ -231,6 +237,32 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+.crossRef-button {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    padding: 4px 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: $vanillaBlue;
+    margin: 0 $navItem-horizontalPadding;
+    text-decoration: none;
+    border: {
+        width: 1px;
+        color: $vanillaBlue;
+        style: solid;
+        radius: 2px;
+    }
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $vanillaPink;
+        border-color: $vanillaDarkPink;
+    }
+}
+
 
 @include mediaQuery-notMobile {
     .panelHeader {

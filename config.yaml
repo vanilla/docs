@@ -17,10 +17,10 @@ params:
         blog: "https://blog.vanillaforums.com"
         cloud: "https://vanillaforums.com"
         community: "https://vanillaforums.org/discussions"
-        api: "http://docs.vanillaforums.com/api"
+        api: "http://docs.vanillaforums.com/help/apiv2"
         github: "https://github.com/vanilla/vanilla"
         issues: "https://github.com/vanilla/vanilla/issues"
-    
+
 taxonomies:
     category: "categories"
     tag: "tags"

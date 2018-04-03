@@ -1,15 +1,22 @@
 ---
 title: Vanilla API v2
-tags: ["API", "APIv2"]
+tags: 
+- API
+- APIv2
+- API v2
 category: "apiv2"
+aliases:
+- /apiv2/
 menu:
-  apiv2:
+  help:
     identifier: apiv2
-    name: Overview
+    name: API v2
     weight: 1
 ---
 
 We've rebuilt Vanilla's API from the ground up to enable tighter integrations and lower-level access to all of Vanilla's features using an API-first strategy. The initial release will provide feature partiy with our API v1. New endpoints will become available as they are completed, so watch for new product announcements.
+
+{{% apiv1-link %}}
 
 ## Key improvements in API v2
 

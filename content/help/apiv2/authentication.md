@@ -1,9 +1,15 @@
 ---
 title: Authentication
-tags: ["API", "APIv2"]
+tags: 
+- API
+- APIv2
+- API v2
 category: "apiv2"
+aliases:
+- /apiv2/authentication/
 menu:
-  apiv2:
+  help:
+    parent: apiv2
     weight: 10
 ---
 
