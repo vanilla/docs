@@ -16,6 +16,8 @@ menu:
 
 We've rebuilt Vanilla's API from the ground up to enable tighter integrations and lower-level access to all of Vanilla's features using an API-first strategy. The initial release will provide feature partiy with our API v1. New endpoints will become available as they are completed, so watch for new product announcements.
 
+{{% apiv1-link %}}
+
 ## Key improvements in API v2
 
 - More authentication options, including per-user access tokens.

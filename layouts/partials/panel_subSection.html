@@ -10,6 +10,7 @@
             {{ partial "api-cross-reference.html" . }}
         {{ end }}
 
+        {{ if not .Params.swagger }}
         <div class="pageNav">
             <h2 class="pageNav-title">
                 Jump To
@@ -18,5 +19,6 @@
                 {{ .TableOfContents }}
             </div>
         </div>
+        {{ end }}
     </div>
 </aside>

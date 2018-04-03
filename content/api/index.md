@@ -8,7 +8,7 @@ menu:
     weight: 1
 ---
 
-*Vanilla now has a new [API v2](../apiv2) that is should be used if you are starting from scratch. If you already have a project using the API v1 then it will continue to be supported.*
+*Vanilla now has a new [API v2](../help/apiv2) that is should be used if you are starting from scratch. If you already have a project using the API v1 then it will continue to be supported.*
 
 ## Configuring API v1
 
