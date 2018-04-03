@@ -841,6 +841,10 @@ a:hover {
   display: none;
 }
 
+.pageNav + .pageNav {
+  margin-top: 18px;
+}
+
 .subNav {
   margin-bottom: 12px;
 }
@@ -874,6 +878,28 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.crossRef-button {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  padding: 4px 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: #0291DB;
+  margin: 0 18px 12px;
+  text-decoration: none;
+  border-width: 1px;
+  border-color: #0291DB;
+  border-style: solid;
+  border-radius: 2px;
+}
+
+.crossRef-button:hover, .crossRef-button:focus {
+  text-decoration: none;
+  color: #F52C6E;
+  border-color: #e12663;
 }
 
 @media screen and (min-width: 881px) {
