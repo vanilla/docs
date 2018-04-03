@@ -239,7 +239,6 @@
 }
 
 
-
 .crossRef-button {
     display: block;
     position: relative;
@@ -248,7 +247,7 @@
     line-height: 1.5;
     text-align: center;
     color: $vanillaBlue;
-    margin: 0 $navItem-horizontalPadding 12px;
+    margin: 0 $navItem-horizontalPadding;
     text-decoration: none;
     border: {
         width: 1px;
