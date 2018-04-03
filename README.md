@@ -64,7 +64,6 @@ versioning:
   added: 2.0
 ~~~
 
-
 ## Versioning a section
 
 If you do not wish to version the entire page, you can insert a shortcode anywhere in your markdown file to add versioning.
