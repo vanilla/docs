@@ -16,7 +16,7 @@ Vanilla uses a file-based configuration system.
 
 Vanilla is distributed with a file at `/conf/config-defaults.php` which we will call "config-defaults". After installation, a file is created at `/conf/config.php` which we will call simply "config" or "config.php".
 
-Your config-defaults file should **never** be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism thru which it will happen.
+Your config-defaults file should **never** be edited. It is overwritten during every upgrade. Sometimes future changes may depend on your default configuration being changed and this is the mechanism through which it will happen.
 
 All configuration changes are to be exclusively made to your config.php file. We recommend periodically making a backup copy of your `config.php` and storing it in a safe location (not on your web server).
 

@@ -86,7 +86,7 @@ Example (using jsConnect): `https://sso.example.com/jsconnect/signin?redirect={t
 
 ## Logging users out
 
-We recommend using the default logout approach, which is generally accomplished by 1) Setting a default connection and 2) including in its config your site's signout URL. After a user clicks "Sign Out" on Vanilla, we will redirect them to your page. If someone signs out on your side, we recommend doing the opposite: send them thru our signout page. You can redirect them afterward by including a `Target` paramenter indicating the URL you wish them to land on afterward.
+We recommend using the default logout approach, which is generally accomplished by 1) Setting a default connection and 2) including in its config your site's signout URL. After a user clicks "Sign Out" on Vanilla, we will redirect them to your page. If someone signs out on your side, we recommend doing the opposite: send them through our signout page. You can redirect them afterward by including a `Target` paramenter indicating the URL you wish them to land on afterward.
 
 This is an imperfect strategy, but it does general accomplish its goal and is the most simple and effective approach.
 

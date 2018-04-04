@@ -33,7 +33,7 @@ $howMany = Gdn::sql()
     ->count();
 ```
 
-This example is a common construct for iterating thru records returned from a database:
+This example is a common construct for iterating through records returned from a database:
 
 ```
 $users = Gdn::sql()

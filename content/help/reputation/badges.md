@@ -64,7 +64,7 @@ All badges created in your Dashboard must be given manually.
 
 ## Creating automated badges
 
-It is not currently possible to create your own automated badges thru the Dashboard. To discuss custom possibilities for your community, contact sales.
+It is not currently possible to create your own automated badges through the Dashboard. To discuss custom possibilities for your community, contact sales.
 
 ## Giving a badge
 

@@ -36,7 +36,7 @@ If the application is omitted, it will automatically search enabled applications
 
 ## Pretty URLs
 
-All requests are dispatched thru the index.php file. While it's possible to use the framework by passing a 'p' parameter with the rest of the path (e.g. `/index.php?p=/profile`), it's best to configure your server to handle "pretty" URLs.
+All requests are dispatched through the index.php file. While it's possible to use the framework by passing a 'p' parameter with the rest of the path (e.g. `/index.php?p=/profile`), it's best to configure your server to handle "pretty" URLs.
 
 On Apache, this is accomplished with the `.htaccess` file provided with Vanilla that contains these rewrite rules:
 

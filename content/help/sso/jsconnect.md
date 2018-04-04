@@ -170,7 +170,7 @@ If you've followed all the steps above, the only way a user can be not signed in
 
 **How is sign-out handled?**
 
-We bounce them to your sign-in page after they sign-out on the forum. To do the opposite, redirect users thru our sign-out page, again passing a `Target` parameter so they finish where you want them to.
+We bounce them to your sign-in page after they sign-out on the forum. To do the opposite, redirect users through our sign-out page, again passing a `Target` parameter so they finish where you want them to.
 
 **Does this work for native applications, non-web scenarios, or third-party products?**
 
