@@ -39,18 +39,18 @@ Other action names are avoided and may be renamed or refactored out of the frame
 
 ### Using Permissions
 
-There are two basic ways to check a permission. One is to use a true/false conditional, typically to `CheckPermission()` in an `if` statement:
+There are two basic ways to check a permission. One is to use a true/false conditional, typically to `checkPermission()` in an `if` statement:
 
 ```
-if (CheckPermission('Permission.Name')) {
+if (checkPermission('Permission.Name')) {
     // Do something special
 }
 ```
-The other is to wholesale block execution by a call to `Gdn::Session->Permission()`. This method automatically triggers a permission exception:
+The other is to wholesale block execution by a call to `Gdn::session()->permission()`. This method automatically triggers a permission exception:
 
 ```
 public function Index() {
-    Gdn::Session()->Permission('Permission.Name');
+    Gdn::session()->permission('Permission.Name');
     // Do priviliged things safely now
 }
 ```
@@ -68,7 +68,7 @@ You may find additional permission checks in Vanilla for permission names that d
 
 The forum owner's account (the one you create when installing Vanilla) gets a special flag set on it. This is accomplished by setting the `Admin` column equal to `1` in the `User` table.
 
-Accounts with this flag set bypass all permission checks. `CheckPermission` will always return `true` and no permission exception will ever be thrown for it. It will do this regardless of any role assignment.
+Accounts with this flag set bypass all permission checks. `checkPermission` will always return `true` and no permission exception will ever be thrown for it. It will do this regardless of any role assignment.
 
 For this reason, it is extremely important to test your addons with a non-owner account to see your permission checks in action.
 
@@ -80,4 +80,4 @@ This grants the same privileges as the Owner flag, and protects the account from
 
 ### Reversed Permission
 
-A special case in the framework is the `Vanilla.Approval.Require` permission. It is checked with the `CheckRequirement` function. A `true` result means their content must go to the Moderation queue for approval. Therefore, a `true` result actually grants you _less_ permission. We don't generally recommend using this construct.
+A special case in the framework is the `Vanilla.Approval.Require` permission. It is checked with the `checkRequirement` function. A `true` result means their content must go to the Moderation queue for approval. Therefore, a `true` result actually grants you _less_ permission. We don't generally recommend using this construct.

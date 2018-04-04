@@ -42,7 +42,7 @@ $users = Gdn::sql()
     ->where('CountComments', 1)
     ->get();
 
-foreach ($result->resultArray() as $user) {
+foreach ($users->resultArray() as $user) {
 	// Do something to each user with 1 comment.
 }
 ```

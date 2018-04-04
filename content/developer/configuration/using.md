@@ -21,7 +21,7 @@ If you have large quantities of data or data that is written frequently, conside
 The `c` function is the appropriate shortcut for reading from the config. The first parameter is the name of the config value in [dot notation](/developer/configuration). The second is an optional default value to return if requested config setting is not defined.
 
 Example:
-`$Value = c('Name.Of.Setting', 'DefaultValue');`
+`$value = c('Name.Of.Setting', 'DefaultValue');`
 
 You can call a partial config key to get an array of all values below it in dot notation. For instance, say this was in your config:
 
@@ -34,13 +34,13 @@ Now calling `c('Examples.Settings');` will return `array('A'=>1, 'B'=>2)`.
 
 ## Writing to config
 
-Save to the config with the `SaveToConfig` function. It takes the name of the config value, a new value to associate with it, and an optional options array. In the options array, you can pass the key `Save` with the value `FALSE` to make the config change only apply for this pageload.
+Save to the config with the `saveToConfig` function. It takes the name of the config value, a new value to associate with it, and an optional options array. In the options array, you can pass the key `Save` with the value `false` to make the config change only apply for this pageload.
 
-Change a config setting permanently: `SaveToConfig('Name.Of.Setting', 'NewValue');`
+Change a config setting permanently: `saveToConfig('Name.Of.Setting', 'NewValue');`
 
-Change a config setting only for this pageload: `SaveToConfig('Name.Of.Setting', 'NewValue', array('Save' => FALSE));`
+Change a config setting only for this pageload: `saveToConfig('Name.Of.Setting', 'NewValue', array('Save' => false));`
 
-Simply passing the value `FALSE` in place of the options array has the same effect as passing `array('Save' => FALSE)`.
+Simply passing the value `false` in place of the options array has the same effect as passing `array('Save' => false)`.
 
 <aside class="warning">Do not used numeric-key arrays as config values. Associative arrays are fine.</aside>
 
@@ -48,14 +48,14 @@ Simply passing the value `FALSE` in place of the options array has the same effe
 
 We've created a shortcut for making simple settings pages using the `ConfigurationModule`.
 
-The configuration module can be instantiated and rendered from any plugin. You `Initialize` it with an array of config values, each of which has its own array of properties to define it (type of field, label, default, etc). See `applications/dashboard/modules/class.configurationmodule.php` for details.
+The configuration module can be instantiated and rendered from any plugin. You `initialize` it with an array of config values, each of which has its own array of properties to define it (type of field, label, default, etc). See `applications/dashboard/modules/class.configurationmodule.php` for details.
 
 This is how the Akismet plugin uses the ConfigurationModule to build a simple settings page consisting of a text field and a dropdown:
 
 ```php
-$Cf = new ConfigurationModule($Sender);
-$Cf->Initialize(array(
-    'Plugins.Akismet.Key' => ['Description' => $KeyDesc],
+$cf = new ConfigurationModule($sender);
+$cf->initialize(array(
+    'Plugins.Akismet.Key' => ['Description' => $keyDesc],
     'Plugins.Akismet.Server' => [
         'Description' => 'You can use either Akismet or TypePad antispam.', 
         'Control' => 'DropDown', 'Items' => [
@@ -65,7 +65,7 @@ $Cf->Initialize(array(
         ]
     ]
 ));
-$Cf->RenderAll();
+$cf->renderAll();
 ```
 
 That's all there is to it - no custom view is involved.

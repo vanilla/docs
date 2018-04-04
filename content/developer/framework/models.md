@@ -21,34 +21,34 @@ The theory of a Model in MVC is that it is an object representation of the data 
 
 ```php
 // Create a validation object to handle validation issues that the model will encounter:
-$Validation = new Gdn_Validation();
+$validation = new Gdn_Validation();
 
 // Create a new model based on a table in the database called "Blog":
-$BlogModel = new Gdn_Model('Blog', $Validation);
+$blogModel = new Gdn_Model('Blog', $validation);
 
 // Retrieve a DataSet from the Blog table:
-$BlogData = $BlogModel->GetWhere(array('BlogID' => '12'));
+$blogData = $blogModel->getWhere(array('BlogID' => '12'));
 
 // Grab the first row of the dataset as an associative array:
-$Blog = $BlogData->FirstRow('', DATASET_TYPE_ARRAY);
+$blog = $blogData->firstRow('', DATASET_TYPE_ARRAY);
 
-// $Blog now contains every column of the "Blog" table where BlogID == 12. Let's change something:
-$Blog['Title'] = 'Some blog title';
+// $blog now contains every column of the "Blog" table where BlogID == 12. Let's change something:
+$blog['Title'] = 'Some blog title';
 
 // And save it:
-$BlogModel->Save($Blog); // Validates
+$blogModel->save($blog); // Validates
 
 // And let's try to insert something that we know shouldn't go into the database:
-$Blog['BlogID'] = 'Not an Integer!';
+$blog['BlogID'] = 'Not an Integer!';
 
 // And save it:
-$BlogModel->Save($Blog); // Doesn't validate
+$blogModel->save($blog); // Doesn't validate
 ```
 
-When the model’s “GetWhere” method is called, it does a very simple `select * from Blog where BlogID = 12`query that returns all of the columns from that table into a dataset. At this point, the model still doesn’t know anything about the structure of the table. When the model’s “Save” method is called, the first thing it does is uses the Database object to get information about the table so that it can define the table’s schema. It looks at each column’s data types, isnullable, default values, keys, etc. Then it uses the validation object to build up a set of rules for each column. Finally, it examines the \$Blog that was passed as it’s first argument, matching up associative array keys with column names, and then checks each field against the rules automatically defined for that table. As it encounters problems, it builds up a set of validation results that can then be used however you wish (typically they are consumed by Garden’s form object and displayed on the screen). So, with just a few lines of code, I’ve grabbed data from the database, altered it, and saved it - making sure that no invalid data is inserted into the database, all exceptions are caught, and results can be delivered to the user:
+When the model’s “getWhere” method is called, it does a very simple `select * from Blog where BlogID = 12`query that returns all of the columns from that table into a dataset. At this point, the model still doesn’t know anything about the structure of the table. When the model’s “save” method is called, the first thing it does is uses the Database object to get information about the table so that it can define the table’s schema. It looks at each column’s data types, isnullable, default values, keys, etc. Then it uses the validation object to build up a set of rules for each column. Finally, it examines the \$blog that was passed as it’s first argument, matching up associative array keys with column names, and then checks each field against the rules automatically defined for that table. As it encounters problems, it builds up a set of validation results that can then be used however you wish (typically they are consumed by Garden’s form object and displayed on the screen). So, with just a few lines of code, I’ve grabbed data from the database, altered it, and saved it - making sure that no invalid data is inserted into the database, all exceptions are caught, and results can be delivered to the user:
 
 ```php
-print_r($BlogModel->Validation->Results());
+print_r($blogModel->Validation->results());
 // Prints:
 Array (
     [BlogID] => Array (
@@ -61,9 +61,9 @@ This means that the "BlogID" field has encountered a problem when attempting to 
 
 ```php
 // Empty value is also incorrect
-$Blog['BlogID'] = '';
-$BlogModel->Save($Blog);
-print_r($BlogModel->Validation->Results());
+$blog['BlogID'] = '';
+$blogModel->save($blog);
+print_r($blogModel->Validation->results());
 
 // Prints:
 Array (
@@ -78,73 +78,73 @@ The validation object will always collect as much information about what is wron
 
 ## Forms & Validation
 
-In order for the database, models, validation, & datasets to shine, we need to get the information out and editable by the users. This is where the Form class comes into play. Let’s take a look at an actual example of how the controller, model, validator, and form work together. Let’s say we get the following request: `/bloggingtool/post/new` Which is the same as calling the following controller in an imaginary “bloggingtool” application: `$Post->New();`My “New” method on the post controller would contain:
+In order for the database, models, validation, & datasets to shine, we need to get the information out and editable by the users. This is where the Form class comes into play. Let’s take a look at an actual example of how the controller, model, validator, and form work together. Let’s say we get the following request: `/bloggingtool/post/new` Which is the same as calling the following controller in an imaginary “bloggingtool” application: `$post->new();`My “New” method on the post controller would contain:
 
 ```php
 public function New() {
-   $Validation = new Gdn_Validation();
-   $BlogModel = new Gdn_Model('Blog', $Validation);
+   $validation = new Gdn_Validation();
+   $blogModel = new Gdn_Model('Blog', $validation);
 
    // Set the BlogModel on the form.
-   $this->Form->SetModel($BlogModel);
+   $this->Form->setModel($blogModel);
 
    // If the form has already been posted back...
-   if ($this->Form->AuthenticatedPostBack()) {
+   if ($this->Form->authenticatedPostBack()) {
       // Attempt to save the form values
-      $BlogID = $this->Form->Save();
+      $blogID = $this->Form->save();
 
       // If it saved, redirect to the new entry:
-      if ($BlogID !== FALSE)
-         Redirect('/bloggingtool/entries/'.$BlogID);
+      if ($blogID !== false)
+         redirect('/bloggingtool/entries/'.$blogID);
 
    }
    // Render the form
-   $this->Render();
+   $this->render();
 }
 ```
 
-The form’s `Save()` method calls the model’s `Save()` and then takes any validation results that came out of it. If the save was successful, the model would have returned the id of the record inserted (or updated). If not, it could take all of the validation results and write them to the screen for the user to see. That’s really all there is to saving a bunch of data to the database. You might be wondering: **What fields were actually saved?**That all depends on what you put on the form. The Form class is a “user interface” class, which means that a large number of it’s methods actually return xhtml. The view for my “New” method above would look something like this:
+The form’s `save()` method calls the model’s `save()` and then takes any validation results that came out of it. If the save was successful, the model would have returned the id of the record inserted (or updated). If not, it could take all of the validation results and write them to the screen for the user to see. That’s really all there is to saving a bunch of data to the database. You might be wondering: **What fields were actually saved?**That all depends on what you put on the form. The Form class is a “user interface” class, which means that a large number of it’s methods actually return xhtml. The view for my “New” method above would look something like this:
 
 ```php
-echo $this->Form->Open();
-echo $this->Form->Errors();
-echo $this->Form->TextInput('Title');
-echo $this->Form->TextBox('Body');
-echo $this->Form->Close('Save');
+echo $this->Form->open();
+echo $this->Form->errors();
+echo $this->Form->textInput('Title');
+echo $this->Form->textBox('Body');
+echo $this->Form->close('Save');
 ```
 
-In this example, you can see I’ve referenced two fields on the Model that is being manipulated: *Title* and *Body*. When the form’s “Save” method is called above (and the Model’s “Save” method is called therein), the model validates and attempts to save the data. If one of these two fields were required, it would return a validation result that would then be written to the screen by `$this->Form->Errors()`. Furthermore, if there were a field on the “Blog” table that were required and not present on this form, it would have a validation result for that as well. What if we were editing a blog post instead of creating a new one?
+In this example, you can see I’ve referenced two fields on the Model that is being manipulated: *Title* and *Body*. When the form’s “save” method is called above (and the Model’s “save” method is called therein), the model validates and attempts to save the data. If one of these two fields were required, it would return a validation result that would then be written to the screen by `$this->Form->errors()`. Furthermore, if there were a field on the “Blog” table that were required and not present on this form, it would have a validation result for that as well. What if we were editing a blog post instead of creating a new one?
 
 ```php
-public function Edit($BlogID = '') {
-   $Validation = new Gdn_Validation();
-   $BlogModel = new Gdn_Model('Blog', $Validation);
+public function edit($blogID = '') {
+   $validation = new Gdn_Validation();
+   $blogModel = new Gdn_Model('Blog', $validation);
 
    // Load the blog being edited 
-   $Blog = $BlogModel ->GetWhere(array('BlogID' => $BlogID)) ->FirstRow();
+   $blog = $blogModel->getWhere(array('BlogID' => $blogID))->firstRow();
 
    // Set the BlogModel on the form.
-   $this->Form->SetModel($BlogModel);
+   $this->Form->setModel($blogModel);
 
    // Make sure the form knows which item we are editing.
-   $this->Form->AddHidden('BlogID', $BlogID);
+   $this->Form->addHidden('BlogID', $blogID);
 
    // If the form has NOT been posted back...
-   if ($this->Form->AuthenticatedPostBack() === FALSE) {
+   if ($this->Form->authenticatedPostBack() === false) {
       // Set the blog on the form
-      $this->Form->SetData($Blog);
+      $this->Form->setData($blog);
    } else {
       // Attempt to save the form values
-      $BlogID = $this->Form->Save();
+      $blogID = $this->Form->save();
 
       // If it saved, redirect to the new entry:
-      if ($BlogID !== FALSE)
-         Redirect('/bloggingtool/entries/'.$BlogID);
+      if ($blogID !== false)
+         redirect('/bloggingtool/entries/'.$blogID);
 
    }
    // Render the form
-   $this->Render();
+   $this->render();
 }
 ```
 
-I load the blog and set it’s data onto the form using `$this->Form->SetData()`. At that point the form takes over and knows to either (a) render the existing data if the form has not been posted back, or (b) render the postback data otherwise. And since I added the BlogID to the form’s hidden field collection, the model will know that it should update a blog row instead of insert a new one.
+I load the blog and set it’s data onto the form using `$this->Form->setData()`. At that point the form takes over and knows to either (a) render the existing data if the form has not been posted back, or (b) render the postback data otherwise. And since I added the BlogID to the form’s hidden field collection, the model will know that it should update a blog row instead of insert a new one.

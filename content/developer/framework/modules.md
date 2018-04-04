@@ -24,24 +24,24 @@ aliases:
 
 ```php
 class HelloWorldModule extends Gdn_Module {
-   public function AssetTarget() {
+   public function assetTarget() {
       return 'Panel';
    }
    
-   public function ToString() {
+   public function toString() {
       return 'Hello World!';
    }
 }
 ```
 
 
-<p>Now let's go add it to a controller. Open up a controller in your test application and add the following (if you don't have a test application, use vanilla's controllers/discussions.php file and add it to the bottom of the index method) right above the call to $this-&gt;Render():</p>
-<pre lang="php">$this-&gt;AddModule('HelloWorldModule');</pre>
+<p>Now let's go add it to a controller. Open up a controller in your test application and add the following (if you don't have a test application, use vanilla's controllers/discussions.php file and add it to the bottom of the index method) right above the call to $this-&gt;render():</p>
+<pre lang="php">$this-&gt;addModule('HelloWorldModule');</pre>
 <p>If you browse to this page, the text "Hello World!" will not appear in the panel. You can change where the "Hello World!" text appears either by changing the value returned by the AssetTarget method, or on the fly when the module is added by the controller. Let's change the AddModule call to send the module to the Content asset instead of the Panel:</p>
-<pre lang="php">$this-&gt;AddModule('HelloWorldModule', 'Content');</pre>
+<pre lang="php">$this-&gt;addModule('HelloWorldModule', 'Content');</pre>
 <p>Go back and refresh the page to see that the text has moved over to the Content asset. The AddModule method will take a string as the first parameter, or an instantiated module object. So, we could have also added the module in the following manner:</p>
-<pre lang="php">$HelloWorldModule = new HelloWorldModule();
-$this-&gt;AddModule($HelloWorldModule);</pre>
+<pre lang="php">$helloWorldModule = new HelloWorldModule();
+$this-&gt;addModule($helloWorldModule);</pre>
 <h2>Organizing Module Sort Order</h2>
 <p>You can organize the order that modules appear in assets by manipulating the Modules collection of the Configuration array. Take a look at conf/config-defaults.php to see the default sort order of core-packaged modules:</p>
 <pre lang="php">// Modules

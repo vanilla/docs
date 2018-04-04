@@ -15,7 +15,7 @@ aliases:
 
 Vanilla only supports MySQL. It has a generic SQL driver implementation built on top of PDO to potentially allow for other databases (which you can see in `/library/databases`). However, at this time, the Vanilla team has no plans to support additional databases.
 
-The best way to access the database is via existing [models](/developer/framework/models). For instance, to get a list of discussions, use the `Get` method in the `DiscussionModel`. You can rely on model-based access to already be optimized for performance and utilize caching if it's available.
+The best way to access the database is via existing [models](/developer/framework/models). For instance, to get a list of discussions, use the `get` method in the `DiscussionModel`. You can rely on model-based access to already be optimized for performance and utilize caching if it's available.
 
 ### Building queries
 
@@ -27,15 +27,15 @@ Here's a simple example that gets a single discussion by its ID. We write its pi
 Gdn::sql()->
    ->select('*')
    ->from('Discussion')
-   ->where('DiscussionID', $DiscussionID)
+   ->where('DiscussionID', $discussionID)
    ->get();
 ```
 
 Note that this is an impractical query to use in your addon, because this functionality already exists in a model: 
 
 ```
-$DiscussionModel = new DiscussionModel();
-$DiscussionModel->getID($DiscussionID);
+$discussionModel = new DiscussionModel();
+$discussionModel->getID($discussionID);
 ```
 
 Always use pre-existing calls in models when they are available for better performance and forward-compatibility.
@@ -48,15 +48,15 @@ Gdn::sql()
    ->select('iu.Name', '', 'InsertName')
    ->from('ConversationMessage cm')
    ->join('Conversation c', 'cm.ConversationID = c.ConversationID')
-   ->join('UserConversation uc', 'c.ConversationID = uc.ConversationID and uc.UserID = '.$ViewingUserID, 'left')
+   ->join('UserConversation uc', 'c.ConversationID = uc.ConversationID and uc.UserID = '.$viewingUserID, 'left')
    ->join('User iu', 'cm.InsertUserID = iu.UserID', 'left')
    ->beginWhereGroup()
    ->where('uc.DateCleared is null')
-   ->orWhere('uc.DateCleared <', 'cm.DateInserted', TRUE, FALSE)
+   ->orWhere('uc.DateCleared <', 'cm.DateInserted', true, false)
    ->endWhereGroup()
-   ->where('cm.ConversationID', $ConversationID)
+   ->where('cm.ConversationID', $conversationID)
    ->orderBy('cm.DateInserted', 'asc')
-   ->limit($Limit, $Offset)
+   ->limit($limit, $offset)
    ->get();
 ```
 
@@ -68,17 +68,17 @@ An insert is a single step that takes the table name and an array of values to i
 
 ```
 Gdn::sql()->insert('UserConversation', array(
-   'ConversationID' => $ConversationID,
-   'UserID' => $TargetUserID
+   'ConversationID' => $conversationID,
+   'UserID' => $targetUserID
 ));
 ```
 
-An update requires setting the table in `Update`, ends with a `Put` (much like the select's ending `Get`):
+An update requires setting the table in `update`, ends with a `put` (much like the select's ending `get`):
 
 ```
 Gdn::sql()->update('Conversation')
-   ->set('LastMessageID', $MessageID)
-   ->where('ConversationID', $ConversationID)
+   ->set('LastMessageID', $messageID)
+   ->where('ConversationID', $conversationID)
    ->put();
 ```
 
@@ -98,12 +98,12 @@ Vanilla allows you to define database structures in code. Use the `Gdn::structur
 ```
 Gdn::structure()
    ->primaryKey('UserID')
-   ->column('Name', 'varchar(50)', FALSE, 'key')
+   ->column('Name', 'varchar(50)', false, 'key')
    ->column('Password', 'varbinary(100)') 
    ->column('ShowEmail', 'tinyint(1)', '0')
    ->column('Gender', array('u', 'm', 'f'), 'u')
-   ->column('Preferences', 'text', TRUE)
-   ->column('DateOfBirth', 'datetime', TRUE)
+   ->column('Preferences', 'text', true)
+   ->column('DateOfBirth', 'datetime', true)
    ->column('Score', 'float', NULL)
    ->set();
 ```
@@ -112,4 +112,4 @@ Gdn::structure()
 
 `primaryKey()` creates an auto-incrementing column. The Gender column uses an array to create an `enum` type; the rest are self-explanatory. 
 
-The `set()` method takes 2 parameters which should nearly _always_ be false, which is their default. The first is `$Explicit` which is whether to force the structure of the table to match _exactly_ the definition above. The second is `$Drop` which is whether to drop and recreate the table. 
+The `set()` method takes 2 parameters which should nearly _always_ be false, which is their default. The first is `$explicit` which is whether to force the structure of the table to match _exactly_ the definition above. The second is `$drop` which is whether to drop and recreate the table. 

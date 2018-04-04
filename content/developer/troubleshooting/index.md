@@ -14,7 +14,7 @@ aliases:
 
 These are some generic tips for addressing problems during an upgrade.
 
-* Set `$Configuration['Debug'] = TRUE;` in your `conf/config.php` to reveal full error messages. Remember to remove it when you are done.
+* Set `$Configuration['Debug'] = true;` in your `conf/config.php` to reveal full error messages. Remember to remove it when you are done.
 * Clear your browser cache and cookies, then restart your browser.
 * Clear *.ini files from the `cache` folder.
 * Revert to the default theme. You can do this manually in `conf/config.php` by setting the `$Configuration['Garden']['Theme']` value to `default`.

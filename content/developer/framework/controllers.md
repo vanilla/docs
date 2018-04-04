@@ -28,11 +28,11 @@ First it looks for an application name, then a controller name, then a method na
 An example that includes all of these is: `/dashboard/profile/notifications/1/Lincoln`. This calls the Dashboard's `ProfileController` invoking the `Notifications` method, which it passes the arguments `1` and `Lincoln`, in that order. It roughly translates to:
 
 ```
-$ProfileController = new ProfileController();
-$ProfileController->notifications('1', 'Lincoln');
+$profileController = new ProfileController();
+$profileController->notifications('1', 'Lincoln');
 ```
 
-If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the `Index()` method will be invoked. Therefore, the basic profile URL `/profile/1/Lincoln` could be more verbosely written as `/dashboard/profile/index/1/Lincoln` to more clearly understand what code it is invoking.
+If the application is omitted, it will automatically search enabled applications for a suitably named controller. Therefore, avoid controller name overlap. If the method name is omitted, the `index()` method will be invoked. Therefore, the basic profile URL `/profile/1/Lincoln` could be more verbosely written as `/dashboard/profile/index/1/Lincoln` to more clearly understand what code it is invoking.
 
 ## Pretty URLs
 
@@ -51,7 +51,7 @@ Consult the [community](/developer/community) if you need assistance configuring
 Vanilla will attempt to detect whether your system can handle pretty URLs during installation. If it sets it incorrectly, the [config](/developer/configuration) setting to enable pretty URLs is:
 
 ```
-$Configuration['Garden']['RewriteUrls'] = TRUE;
+$Configuration['Garden']['RewriteUrls'] = true;
 ```
 The ability to use non-pretty URLs may be deprecated in the future.
 

@@ -27,7 +27,7 @@ There isn't a built-in user interface for issuing access tokens (yet). Right now
 ```php
 // Issue a token
 $model = new AccessTokenModel();
-$accessToken = $model->issue(Gdn::session()->UserID(), '1 month', $scope);
+$accessToken = $model->issue(Gdn::session()->UserID, '1 month', $scope);
 
 // Verify a token.
 $tokenRow = $model->verify($accessToken);
