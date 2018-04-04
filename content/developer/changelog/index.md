@@ -243,11 +243,11 @@ Major Features:
 
 Changes:
 
-* Added ability to chain Vanillicons into Gravatars with C(Plugins.Gravatar.UseVanillicons) = TRUE
+* Added ability to chain Vanillicons into Gravatars with c(Plugins.Gravatar.UseVanillicons) = true
 * Added ability to use IE targetting for CSS and JS files
 * Disabled CLEditor for IE6 users
 * Disabled popups in IE7 or less
-* Added Session support, see: Gdn_Session()->Stash()
+* Added Session support, see: Gdn_Session()->stash()
 * Turns off Embed by default
 * Added WebOS to mobile user agents
 

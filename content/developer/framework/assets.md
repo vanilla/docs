@@ -21,8 +21,8 @@ Vanilla uses these assets by default: `Head`, `Content`, `Panel`, and `Foot`. Yo
 
 ### Using assets
 
-You can create your own arbitrary assets in your templates and simply add content to them using `Gdn::controller()->addAsset('AssetName', $Content, 'ContentName')`. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the `default.master.tpl` file.
+You can create your own arbitrary assets in your templates and simply add content to them using `Gdn::controller()->addAsset('AssetName', $content, 'ContentName')`. This is a great strategy for creating flexible themes that are easily customized by rearranging assets in the `default.master.tpl` file.
 
-A common scenario is using [modules](/developer/framework/modules) to add content to an asset. (Note: In plugin hooks, you will typically be using `$Sender` in place of `Gdn::controller()` since the Sender _is_ the controller).
+A common scenario is using [modules](/developer/framework/modules) to add content to an asset. (Note: In plugin hooks, you will typically be using `$sender` in place of `Gdn::controller()` since the sender _is_ the controller).
 
 You can set the sort order in which content in an asset is displayed via the [config](/developer/configuration). Use a key like `Modules.{Application}.{Asset}` (e.g. `Modules.Vanilla.Content`) to define an array of `ContentName` values that you used when calling `addAsset()`. See `$ModuleSortContainer` in `Gdn_Controller`.

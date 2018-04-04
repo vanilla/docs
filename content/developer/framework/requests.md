@@ -49,7 +49,7 @@ You can define a `DeliveryMethod` by appending it to your request like `Delivery
 
 Vanilla parses incoming URLs and parameters for you. There is rarely any reason to directly access PHP globals like `$_GET`. The `Gdn_Request` class (in `/library/core/class.request.php`) handles this for you.
 
-`Gdn::request()->domain()` will return the current domain. These methods also work as you'd expect: `Host`, `IpAddress`, `Path`, and `Port`. You can also call `Get` and `Post` with a parameter name to see its current value. See `Gdn_Request` for more request data.
+`Gdn::request()->domain()` will return the current domain. These methods also work as you'd expect: `host`, `ipAddress`, `path`, and `port`. You can also call `get` and `post` with a parameter name to see its current value. See `Gdn_Request` for more request data.
 
 A few more useful methods:
 

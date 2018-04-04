@@ -33,7 +33,7 @@ $this->fireEvent('EventName');
 ```
 and then Plugins can attach to that event to perform an action.
 
-There is an AddonManager that detects any enabled addons. When the `FireEvent` method is called, it pings the AddonManager class to see if there are any addons that want to attach to the event name being fired.
+There is an AddonManager that detects any enabled addons. When the `fireEvent` method is called, it pings the AddonManager class to see if there are any addons that want to attach to the event name being fired.
 
 Addons attach to an event by creating a method named with the object name, event name, and the word `handler` separated by underscores. Say the `DiscussionsController` fired an event named 'Kaboom'. Here is how you would use it:
 
@@ -107,7 +107,7 @@ class MyPlugin extends Gdn_Plugin {
 
 With this addon enabled, going to the URL `/discussions/kaboom` would now output the text "Kaboom!". You can references other methods and properties on the extended object using the `$sender` variable.
 
-If you use a magic method to duplicate an existing method name, it will be overridden completely. And call to it will be directed to your plugin instead. The only exception is the `Index()` method.
+If you use a magic method to duplicate an existing method name, it will be overridden completely. And call to it will be directed to your plugin instead. The only exception is the `index()` method.
 
 Magic methods only work in classes that extend `Gdn_Pluggable`. For example, notice the `Gdn_Form` class does, but the `Gdn_Format` class does not. All models and controllers do.
 

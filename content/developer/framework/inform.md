@@ -29,9 +29,9 @@ An example native inform message in Vanilla: saving drafts.
 
 When a comment draft is saved, you can see an inform message appear on the bottom-left of the screen. This message shows a close button on the top-right when you hover your mouse overtop, and it automatically disappears after a few seconds. The code used to make this message appear is located on line 448 of /applications/vanilla/class.postcontroller.php:
 
-<pre lang="php">$this-&gt;InformMessage(sprintf(T('Draft saved at %s'), Gdn_Format::Date()));</pre>
+<pre lang="php">$this-&gt;informMessage(sprintf(t('Draft saved at %s'), Gdn_Format::date()));</pre>
 <p>If we didn't want to include the time that the draft was saved, we could simplify it further to:</p>
-<pre lang="php">$this-&gt;InformMessage(T('Draft saved successfully'));</pre>
+<pre lang="php">$this-&gt;informMessage(t('Draft saved successfully'));</pre>
 
 The `t()` function is Vanilla's native "Translate" function so that the string can be converted to other languages. 
 
@@ -43,9 +43,9 @@ Adding a message to the screen with a plugin.
 
 The code to achieve this is pretty easy:
 
-<pre lang="php">public function Base_Render_Before($Sender) {<br />   $Sender-&gt;InformMessage('This is a test!');<br />}</pre>
+<pre lang="php">public function base_render_before($sender) {<br />   $sender-&gt;informMessage('This is a test!');<br />}</pre>
 <p>With this code, the message will appear on every page load for every user (signed in or not) and it will disappear after a few moments. Not exactly a useful message, but let's see what else we can do with it:</p>
-<pre lang="php">public function Base_Render_Before($Sender) {<br />   // Only show the message if the user is signed in<br />   if (Gdn::Session()-&gt;IsValid())<br />      $Sender-&gt;InformMessage('This is a test!', 'Dismissable');<br />}</pre>
+<pre lang="php">public function base_render_before($sender) {<br />   // Only show the message if the user is signed in<br />   if (Gdn::session()-&gt;isValid())<br />      $sender-&gt;informMessage('This is a test!', 'Dismissable');<br />}</pre>
 
 Now the message only shows if the user has a valid session, and it doesn't auto-dismiss. The second parameter in the InformMessage method is either a string of CSS classes to be applied to the message container, or an array of options. 
 
@@ -59,7 +59,7 @@ If you don't provide the second parameter at all, it defaults to "Dismissable Au
 
 Let's say you want to deliver a message to a particular user, and have that message stay on the screen on every page load until that user dismisses the message. You can achieve it like this:
 
-<pre lang="php">public function Base_Render_Before($Sender) {<br />   $Session = Gdn::Session();<br />   if ($Session-&gt;IsValid() &amp;&amp; $Session-&gt;User-&gt;UserID == 1 &amp;&amp; $Session-&gt;GetPreference('UserDismissedCustomMessage', false) == false) {<br />      $Sender-&gt;InformMessage(<br />         'This message will stay here until you dismiss it!',<br />         array(<br />            'CssClass' =&gt; 'Dismissable',<br />            'DismissCallbackUrl' =&gt; '/plugin/dismissmessage/'<br />         )<br />      );<br />   }<br />}<br /><br />// Handle the callback<br />public function PluginController_DismissMessage_Create($Sender) {<br />   $Session = Gdn::Session();<br />   $Session-&gt;SetPreference('UserDismissedCustomMessage', TRUE);<br />}</pre>
+<pre lang="php">public function base_render_before($sender) {<br />   $session = Gdn::session();<br />   if ($session-&gt;isValid() &amp;&amp; $session-&gt;User-&gt;UserID == 1 &amp;&amp; $session-&gt;getPreference('UserDismissedCustomMessage', false) == false) {<br />      $sender-&gt;informMessage(<br />         'This message will stay here until you dismiss it!',<br />         array(<br />            'CssClass' =&gt; 'Dismissable',<br />            'DismissCallbackUrl' =&gt; '/plugin/dismissmessage/'<br />         )<br />      );<br />   }<br />}<br /><br />// Handle the callback<br />public function pluginController_dismissMessage_create($sender) {<br />   $session = Gdn::session();<br />   $session-&gt;setPreference('UserDismissedCustomMessage', true);<br />}</pre>
 
 <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5254/5503327977_f14304669c_o.png" alt="" /> 
 
@@ -75,7 +75,7 @@ There are over 100 icons available for you to use. You can check them out by loo
 
 Here's the code to achieve this message:
 
-<pre lang="php">$Sender-&gt;InformMessage('&lt;span class="InformSprite Skull"&gt;&lt;/span&gt; This is a test!', 'Dismissable HasSprite');</pre>
+<pre lang="php">$sender-&gt;informMessage('&lt;span class="InformSprite Skull"&gt;&lt;/span&gt; This is a test!', 'Dismissable HasSprite');</pre>
 
 Note the span at the front of the message. This will contain the "Skull" image you see above. It's also necessary for the CSS definition in the second argument to contain "HasSprite" so that the spacing &amp; alignment of the icon all works properly.
 
@@ -85,7 +85,7 @@ You can also style the inform messages to appear "From" a specific user. <img st
 
 You'll need to load a user record for the icon you wish to display, and then write the message to the screen like this:
 
-<pre lang="php">$User = Gdn::UserModel-&gt;Get(1); // Load the user who's icon you want to show<br />$String = UserPhoto($User, 'Icon'); // IMPORTANT: Give the icon a css class of "Icon" <br />$String .= 'This is a test!'; // Append some message<br />$Sender-&gt;InformMessage($String, 'Dismissable HasIcon'); // Send to the screen</pre>
+<pre lang="php">$user = Gdn::userModel()-&gt;get(1); // Load the user who's icon you want to show<br />$string = userPhoto($user, 'Icon'); // IMPORTANT: Give the icon a css class of "Icon" <br />$string .= 'This is a test!'; // Append some message<br />$sender-&gt;informMessage($string, 'Dismissable HasIcon'); // Send to the screen</pre>
 
 ## Inform via JavaScript
 

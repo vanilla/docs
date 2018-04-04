@@ -68,7 +68,7 @@ if (c('Garden.Installed')) {
    saveToConfig('Cache.Memcached.Store', array('localhost:11211'));
    if (class_exists('Memcached')) {
       saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_COMPRESSION, true, false);
-      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT, FALSE);
+      saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT, false);
       saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_LIBKETAMA_COMPATIBLE, true, false);
       saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_NO_BLOCK, true, false);
       saveToConfig('Cache.Memcached.Option.'.Memcached::OPT_TCP_NODELAY, true, false);
@@ -159,6 +159,6 @@ Add a new PHP Web Application and give it the name & host of your localhost setu
 
 ![](https://us.v-cdn.net/5022541/uploads/editor/cv/1nur7d6q57eb.png "")
 
-Clicking "Play" should now open Vanilla in your browser. To prove XDebug is working, add a breakpoint to index.php at `$Dispatcher = Gdn::Dispatcher();` and click the "Bug" button. A page should open in your browser with an XDebug session attached to the URL. Back in PHPStorm, your debug console should be open with variable information.
+Clicking "Play" should now open Vanilla in your browser. To prove XDebug is working, add a breakpoint to index.php at `$dispatcher = Gdn::dispatcher();` and click the "Bug" button. A page should open in your browser with an XDebug session attached to the URL. Back in PHPStorm, your debug console should be open with variable information.
 
 *Not using PHPStorm? Add your IDE's steps here.*
