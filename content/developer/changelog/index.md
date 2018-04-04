@@ -114,7 +114,7 @@ Vanilla internals were completely revamped for 2.1. Many views and several plugi
 * Framework improvements.
 * Hundreds of bug fixes.
 
-Incremental changelogs from the [first 2.1 beta](https://open.vanillaforums.com/discussion/23322/vanilla-2-1b1-released) thru RC1 can be found in their individual release announcements:
+Incremental changelogs from the [first 2.1 beta](https://open.vanillaforums.com/discussion/23322/vanilla-2-1b1-released) through RC1 can be found in their individual release announcements:
 
 * [Beta 2](https://open.vanillaforums.com/discussion/24845/vanilla-2-1b2-released)
 * [Beta 3](https://open.vanillaforums.com/discussion/26518/vanillla-2-1-beta-3)

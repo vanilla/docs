@@ -100,7 +100,7 @@ These are things to do after your Vanilla import. This includes manually visitin
 
 1. **Better BBCode:** If you're coming from a forum that uses BBCode, we recommend grabbing the NBBC plugin from the [Addons repository](https://github.com/vanilla/addons) for improved support.
 
-1. **Verify Content:** Go thru your discussions and categories to make sure your content is complete, ungarbled, and organized correctly.
+1. **Verify Content:** Go through your discussions and categories to make sure your content is complete, ungarbled, and organized correctly.
 
 1. **Enable & Verify Redirects:** Turn on your 301 redirects to Vanilla. Test old discussion, category, and user profile URLs to make sure you have set up your redirects correctly. See the **Redirects** section below for more info.
 

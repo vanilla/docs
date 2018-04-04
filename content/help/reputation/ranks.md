@@ -35,7 +35,7 @@ Ranks can solve a number of challenges forum owners face. They can limit malicio
 
 ## Default ranks
 
-Ranks comes with 7 default ranks. There are "Level 1" thru "Level 5", "Moderator", and "Administrator". The order of the list matters. In this case, "Administrator" is the highest rank because it has the highest number for "Level" and is therefore last in the list. "Level 1" is the lowest rank.
+Ranks comes with 7 default ranks. There are "Level 1" through "Level 5", "Moderator", and "Administrator". The order of the list matters. In this case, "Administrator" is the highest rank because it has the highest number for "Level" and is therefore last in the list. "Level 1" is the lowest rank.
 
 ## Adding and Editing Ranks
 
@@ -104,9 +104,9 @@ You can use Ranks as an incentive for members to participate by rewarding them f
 
 ### Example Case
 
-What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 thru 5 consecutively.
+What follows is an example for abilities to grant to higher ranks. It uses the default ranks Levels 1-5 and assumes the default Criteria of 50, 100, 500, and 1000 points for Level 2 through 5 consecutively.
 
-Gaining points on your site is done thru addons such as Badges and Reactions. Users who gain the point levels of the default ranks have demonstrated their ability to positively contribute to your community.
+Gaining points on your site is done through addons such as Badges and Reactions. Users who gain the point levels of the default ranks have demonstrated their ability to positively contribute to your community.
 
 ### Suggested abilities
 
