@@ -12,3 +12,4 @@ static/js/lunr-index.json
 .idea
 bower_components/
 dist/
+*.map
