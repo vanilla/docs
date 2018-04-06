@@ -10,7 +10,7 @@ aliases:
 menu:
   help:
     parent: apiv2
-    weight: 10
+    weight: 15
 ---
 
 ## /analytics/leaderboard
