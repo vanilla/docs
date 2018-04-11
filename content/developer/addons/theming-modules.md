@@ -14,10 +14,11 @@ menu:
 
 ---
 
+## Group Search Module
+
 {{% cloudfeature %}}
 
-
-## Group Search Module
+{{% versioning added="2.7" %}}
 
 The groups page has a search field by default, but if you wish to move it somewhere else, you can. There are 2 ways to add it to your theme.
 
