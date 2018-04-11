@@ -41,6 +41,17 @@ if (Gdn::addonManager()->isEnabled('groups', Vanilla\Addon::TYPE_ADDON)) { // Ma
 }
 ```
 
+Or with the controller
+
+```PHP
+if (Gdn::addonManager()->isEnabled('groups', Vanilla\Addon::TYPE_ADDON)) { // Make sure we have groups enabled
+    $groupSearch = new GroupSearchModule($sender); // Create group search module
+    $groupSearch->setButtonContents("Search Groups"); // Optional (HTML supported)
+    $groupSearch->setCssClass("someCustomClass"); // Optional, will remove default ".SiteSearch" if set
+    $sender->addModule($groupSearch);
+}
+```
+
 ### Custom CSS Class (optional)
 
 When there is no custom css class, `.SiteSearch` will be added for compatibility with older themes to the module. This will position the search button absolutely, on top of the input field. Note that many themes hide this button. 
