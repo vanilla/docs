@@ -976,6 +976,59 @@ a:hover {
   color: #F52C6E;
 }
 
+body div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner {
+  padding: 12px 18px !important;
+}
+
+body div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-size: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 550px) {
+  body div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p {
+    margin-bottom: 12px !important;
+  }
+}
+
+body div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p + p {
+  margin-top: 12px !important;
+}
+
+body div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area {
+  text-align: right !important;
+  margin-left: 40px;
+}
+
+body div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button {
+  display: inline-block;
+  padding: 7px 20px !important;
+  margin-right: 0 !important;
+  border-radius: 2px !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  background-image: none !important;
+  background: #60BD68 !important;
+  user-select: none;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  line-height: 1.46;
+}
+
+#hs-eu-cookie-confirmation-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 550px) {
+  #hs-eu-cookie-confirmation-inner {
+    display: block;
+  }
+}
+
 .docs-header-search {
   position: relative;
   max-width: 525px;

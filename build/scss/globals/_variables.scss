@@ -122,5 +122,8 @@ $hamburger-height                      : 22px;
 $hamburger-lineHeight                  : 3px;
 $hamburger-offset                      : ($hamburger-width - $hamburger-lineHeight * 3) / 2;
 
+$fontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 // Media Queries
 $mediaQuery-mobile:         880px;
+$mediaQuery-xs:             550px;
