@@ -20,6 +20,7 @@ Customers with a success manager receive updates approximately every other week 
 
 Full release notes:
 
+* [2018 releases](/cloud/releases/2018)
 * [2017 releases](/cloud/releases/2017)
 * [2016 VIP releases](/cloud/releases/2016)
 
@@ -29,4 +30,6 @@ Full release notes:
 * **Summer**: 11-12 July
 * **Fall**: 17-18 October
 
-The first release of 2018 does not have a date set at this time.
+### 2018 VIP Releases
+
+* **Spring**: 5-6 April 
