@@ -1,6 +1,22 @@
 body div#hs-eu-cookie-confirmation {
+  position: fixed !important;
+  top: auto !important;
+  bottom: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  margin-top: 100%;
+  transform: translateY(100%);
+
+  &,
+  &.can-use-gradients {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
   div#hs-eu-cookie-confirmation-inner {
     padding: 12px 18px !important;
+    animation: slideUp .3s ease-out #{$privacyBanner_animationDelay} forwards !important;
+    background: rgba(0, 0, 0, .8);
 
     p {
       font-family: $fontFamily !important;
@@ -26,11 +42,12 @@ body div#hs-eu-cookie-confirmation {
       padding: 7px 20px !important;
       margin-right: 0 !important;
       border-radius: 2px !important;
-      border: 0 !important;
+      border: solid #fff 1px !important;
       box-shadow: none !important;
       text-shadow: none !important;
       background-image: none !important;
-      background: #60BD68 !important;
+      color: #fff !important;
+      background: transparent !important;
       user-select: none;
       text-decoration: none !important;
       font-size: 14px !important;
@@ -46,5 +63,15 @@ body div#hs-eu-cookie-confirmation {
 
   @include mediaQuery-xs {
     display: block;
+  }
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
