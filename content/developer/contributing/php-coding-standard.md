@@ -1,14 +1,16 @@
 ---
-title: Coding Standard
+title: PHP Coding Standard
 tags:
 - Developers
 - Contributing
+- Coding Standard
 category: developer
 menu:
   developer:
     parent: contributing
 aliases:
 - /developers/contributing/coding-standard
+- /developer/contributing/coding-standard
 ---
 ## Standards
 
