@@ -1,0 +1,77 @@
+body div#hs-eu-cookie-confirmation {
+  position: fixed !important;
+  top: auto !important;
+  bottom: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  margin-top: 100%;
+  transform: translateY(100%);
+
+  &,
+  &.can-use-gradients {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  div#hs-eu-cookie-confirmation-inner {
+    padding: 12px 18px !important;
+    animation: slideUp .3s ease-out #{$privacyBanner_animationDelay} forwards !important;
+    background: rgba(0, 0, 0, .8);
+
+    p {
+      font-family: $fontFamily !important;
+      font-size: 12px !important;
+      margin-bottom: 0 !important;
+
+      @include mediaQuery-xs {
+        margin-bottom: 12px !important;
+      }
+
+      + p {
+        margin-top: 12px !important;
+      }
+    }
+
+    div#hs-en-cookie-confirmation-buttons-area {
+      text-align: right !important;
+      margin-left: 40px;
+    }
+
+    a#hs-eu-confirmation-button {
+      display: inline-block;
+      padding: 7px 20px !important;
+      margin-right: 0 !important;
+      border-radius: 2px !important;
+      border: solid #fff 1px !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      background-image: none !important;
+      color: #fff !important;
+      background: transparent !important;
+      user-select: none;
+      text-decoration: none !important;
+      font-size: 14px !important;
+      line-height: 1.46;
+    }
+  }
+}
+
+#hs-eu-cookie-confirmation-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mediaQuery-xs {
+    display: block;
+  }
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

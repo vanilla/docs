@@ -23,6 +23,12 @@
   }
 }
 
+@mixin mediaQuery-xs {
+  @media screen and (max-width: $mediaQuery-xs) {
+    @content;
+  }
+}
+
 @mixin mediaQuery-notMobile {
   @media screen and (min-width: $mediaQuery-mobile + 1px) {
     @content;
