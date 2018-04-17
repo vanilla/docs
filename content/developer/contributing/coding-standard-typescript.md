@@ -1,6 +1,5 @@
 ---
 title: Coding Standard - Typescript
-name: fuck
 tags:
 - Developers
 - Contributing
@@ -18,7 +17,6 @@ menu:
 As of April 2018, Vanilla will follow the following coding standard for all frontend scripts. Existing code should not (and cannot) be mass-updated, but all _new_ code must follow this standard.
 
 We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it's annoying and hard to read when everything is styled differently. Key words in this document ("MUST", "_SHOULD_", etc.) are used as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) which is as boring and obvious as you expect but mercifully brief.
-
 
 ## Language Features
 
@@ -193,7 +191,7 @@ All files _MUST_ use the Unix LF (linefeed) line ending.
 
 All files _MUST_ end with a single blank line.
 
-A file wiht a default export _MUST_ be named the same as the export.
+A file with a default export _MUST_ be named the same as the export.
 
 ### 3.2. Character Encoding
 
@@ -442,7 +440,7 @@ let thing1, thing2, thing3;
 
 ### 6.2. Objects
 
-- Objects keys `MUST_NOT` use quotes unless necessary.
+- Objects keys _MUST NOT_ use quotes unless necessary.
 
 ```ts
 const object = {
