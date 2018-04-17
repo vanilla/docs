@@ -4,6 +4,7 @@ tags:
 - Developers
 - Contributing
 - Coding Standard
+- PHP
 category: developer
 menu:
   developer:
