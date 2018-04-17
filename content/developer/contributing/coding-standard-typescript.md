@@ -549,7 +549,7 @@ foo.bar(
 );
 ```
 
-## 57 Control Structures
+## 7. Control Structures
 
 The general style rules for control structures are as follows. Many are automatically enforced by Prettier.
 
