@@ -1,5 +1,5 @@
 ---
-title: PHP Coding Standard
+title: Coding Standard - PHP
 tags:
 - Developers
 - Contributing

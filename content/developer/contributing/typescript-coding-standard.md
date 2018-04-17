@@ -1,21 +1,23 @@
 ---
-title: Typescript Coding Standard
+title: Coding Standard - Typescript
+name: fuck
 tags:
 - Developers
 - Contributing
 - Coding Standard
 - Typescript
-- Javascript
+- Prettier
 - Linter
 category: developer
 menu:
   developer:
+    name: Coding Standard - TS
     parent: contributing
 ---
 
 As of April 2018, Vanilla will follow the following coding standard for all frontend scripts. Existing code should not (and cannot) be mass-updated, but all _new_ code must follow this standard.
 
-We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it's annoying and hard to read when everything is styled differently. Key words in this document ("MUST", "SHOULD", etc.) are used as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) which is as boring and obvious as you expect but mercifully brief.
+We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it's annoying and hard to read when everything is styled differently. Key words in this document ("MUST", "_SHOULD_", etc.) are used as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) which is as boring and obvious as you expect but mercifully brief.
 
 
 ## Language Features
@@ -57,10 +59,6 @@ There are multiple ways to use these tools.
 
 Running the build command from the [vanilla-cli build tool](/developer/vanilla-cli/build-process-core) will automatically format all compiled code with Prettier. Additionally it will attempt to validate the code with TSLint. Some warnings can and will be automatically fixed by TSLint. Others will require manual attention.
 
-#### Setup a pre-commit hook
-
-...
-
 ### IDE Integration
 
 Prettier and TSLint have integrations with many popular IDEs and editors.
@@ -88,17 +86,17 @@ All repositories in the `vanilla` organization are meant to be developed in the 
 
 - All new files in the `vanilla/vanilla` repo _MUST_ be in Typescript.
 
-- New code MUST NOT use JQuery. Instead native browser API's and utility functions from `@core/dom` may be used.
+- New code _MUST NOT_ use JQuery. Instead native browser API's and utility functions from `@core/dom` may be used.
 
 - All files _MUST_ be formatted with Prettier.
 
-- Files SHOULD NOT declare more than 1 class in a single file.
+- Files _SHOULD NOT_ declare more than 1 class in a single file.
 
-- Files with a default export MUST be named equivalently to the symbol (class, function, interface, constant) that they export.
+- Files with a default export _MUST_ be named equivalently to the symbol (class, function, interface, constant) that they export.
 
-- Interfaces for code defined inside of Vanilla Forums code MUST be named beginning with the character `I` (Eg. `IThing`, `IButtonOptions`). This rule does not apply to type definitions for dependencies.
+- Interfaces for code defined inside of Vanilla Forums code _MUST_ be named beginning with the character `I` (Eg. `IThing`, `IButtonOptions`). This rule does not apply to type definitions for dependencies.
 
-- Method names SHOULD be declared in `camelCase`.
+- Method names _SHOULD_ be declared in `camelCase`.
 
 - Static class properties _MUST_ be declared in all upper case with underscore separators.
 
@@ -106,11 +104,11 @@ All repositories in the `vanilla` organization are meant to be developed in the 
 
 - `const` _MUST_ be used where possible. Otherwise `let` _MUST_ be used. `var` _MUST NOT_ be used.
 
-- Namespaces MUST NOT be used.
+- `===` _MUST_ be used instead of `==`. An exception is made for null checks specifically `someVar == null`.
 
 - A file _MUST NOT_ contain unused imports.
 
-- Test files MUST be located in a directory `__tests__` and end with the extension `.test.ts` or `.test.js`.
+- Test files _MUST_ be located in a directory `__tests__` and end with the extension `.test.ts` or `.test.js`.
 
 - `console.log` and other built in logging functions _MUST NOT_ be used. Instead logging functions from `@core/utility` may be used.
 
@@ -208,12 +206,12 @@ There _MUST NOT_ be a hard limit on line length.
 The soft limit on line length _MUST_ be 120 characters; automated style checkers
 _MUST_ warn but _MUST NOT_ error at the soft limit.
 
-Lines MUST NOT be longer than 120 characters; lines longer than that MUST
+Lines _MUST NOT_ be longer than 120 characters; lines longer than that MUST
 be split into multiple subsequent lines of no more than 120 characters each.
 
 There _MUST NOT_ be trailing whitespace of any kind.
 
-Blank lines MAY be added to improve readability and to indicate related blocks of code.
+Blank lines _MAY_ be added to improve readability and to indicate related blocks of code.
 
 There _MUST NOT_ be more than one statement per line.
 
@@ -309,7 +307,7 @@ class ClassName extends ParentClass implements ArrayAccess, Countable {
 }
 ```
 
-Lists of `implements` MAY be split across multiple lines, where each
+Lists of `implements` _MAY_ be split across multiple lines, where each
 subsequent line is indented once. When doing so, the first item in the list
 _MUST_ be on the next line, and there _MUST_ be only one interface per line.
 
@@ -541,7 +539,7 @@ foo.bar($arg1);
 Foo.baz($arg2, $arg3);
 ```
 
-Argument lists MAY be split across multiple lines, where each subsequent line
+Argument lists _MAY_ be split across multiple lines, where each subsequent line
 is indented once. When doing so, the first item in the list _MUST_ be on the
 next line, and there _MUST_ be only one argument per line.
 
@@ -585,7 +583,7 @@ if (expr1) {
 }
 ```
 
-The keyword `elseif` SHOULD be used instead of `else if` so that all control
+The keyword `elseif` _SHOULD_ be used instead of `else if` so that all control
 keywords look like single words.
 
 If statements _MUST_ have opening and closing brackets and be split onto multiple lines. Single line if statements are prohibited.
@@ -653,12 +651,12 @@ for (const key in objectVals) {
 
 - Class methods and properties _MUST_ contain a visibility declaration.
 
-- All files _MUST_ contain an opening multi-line comment containing `@copyright 2009-2018 Vanilla Forums Inc.` where 2018 shall be replaced with the current year. Scripts in open source projects _MUST_ contain an `@license` parameter with name and link to license of the project it is contained in. For example a file in the `vanilla/vanilla` repo, which is licensed under GPLv2 MUST contain `@license http://www.opensource.org/licenses/gpl-2.0.php GPLv2`.
+- All files _MUST_ contain an opening multi-line comment containing `@copyright 2009-2018 Vanilla Forums Inc.` where 2018 shall be replaced with the current year. Scripts in open source projects _MUST_ contain an `@license` parameter with name and link to license of the project it is contained in. For example a file in the `vanilla/vanilla` repo, which is licensed under GPLv2 _MUST_ contain `@license http://www.opensource.org/licenses/gpl-2.0.php GPLv2`.
 
-- All functions, except for anonymous functions, and all class methods, MUST contain a multi-line JSDoc style comment. This comment:
-  - MUST contain a short description.
-  - MAY contain an extended description.
-  - MAY contain `@param` annotations.
-  - MUST NOT contain type hints in its `@param` or `@returns` annoations. Type hints should be declared directly as part of the function signature.
-  - MUST NOT align its `@param` descriptions by using additional spaces.
-  - MAY contain a single `@returns` annotation.
+- All functions, except for anonymous functions, and all class methods, _MUST_ contain a multi-line JSDoc style comment. This comment:
+  - _MUST_ contain a short description.
+  - _MAY_ contain an extended description.
+  - _MAY_ contain `@param` annotations.
+  - _MUST NOT_ contain type hints in its `@param` or `@returns` annoations. Type hints should be declared directly as part of the function signature.
+  - _MUST NOT_ align its `@param` descriptions by using additional spaces.
+  - _MAY_ contain a single `@returns` annotation.
