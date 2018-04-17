@@ -131,6 +131,8 @@ All files _MUST_ be formatted with Prettier. This is to ensure consistent format
 
 - Semicolons are REQUIRED;
 
+- Strings _SHOULD_ use double quotes `"` or Backtick quotes `\``.
+
 - Colons in object and interface declarations _MUST NOT_ be preceeded by a space and _MUST_ be followed by a space.
 
 - Object and array declarations _MUST_ contain a trailing comma, if it is declared on multiple lines.
@@ -221,6 +223,26 @@ Code _MUST_ use an indent of 4 spaces, and _MUST NOT_ use tabs for indenting.
 N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
 problems with diffs, patches, history, and annotations.
 </aside>
+
+### 3.5. Single and Double Quotes
+
+All strings will automatically have their quotes adjusted by Prettier.
+
+Strings _SHOULD_ use double quotes `"` or Backtick quotes `\``.
+
+Strings _MAY_ use double quotes if there are double quotes that would have to otherwise be escaped.
+
+```ts
+// Good
+"Something"
+"OMG she's using double quotes!"
+`This one uses backtick quotes and has ${numberOfVars} variables.`
+'"Single quotes can work sometimes too!", he excaimed.'
+
+// Bad
+'Single quotes with no escaped characters'
+'Definitely not single quotes if there\'s single quotes that need to be escaped.'
+```
 
 ## 4. Namespaces, Types, and Interfaces
 
