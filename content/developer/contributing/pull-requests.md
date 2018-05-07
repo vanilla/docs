@@ -14,7 +14,7 @@ aliases:
 
 We love pull requests! They're the core of our workflow.
 
-All code is added to Vanilla via pull requests (PRs). A pull request is simply a request to merge code from a particular branch into another (usually a `feature` or `hotfix` branch into `master`). GitHub's pull request feature tracks discussion, labels, assignments, and changes over time to a pull request. 
+All code is added to Vanilla via pull requests (PRs). A pull request is simply a request to merge code from a particular branch into another (usually a `feature/significative-name` or `fix/significative-name` or `refactor/significative-name` branch into `master`). GitHub's pull request feature tracks discussion, labels, assignments, and changes over time to a pull request. 
 
 ### Creating a pull request
 
