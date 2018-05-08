@@ -9,8 +9,7 @@ menu:
   developer:
     identifier: sso
     parent: troubleshooting
-aliases:
-- /developers/troubleshooting/sso
+
 ---
 
 ## How to troubleshoot 3rd party SSO from your localhost setup.
@@ -24,4 +23,3 @@ aliases:
 1. Go to `forum.3rdpartydomain.com`. (It should show your own local forum)
 
 You can now login from your localhost setup which means that you can put breakpoints where needed!
-
