@@ -175,6 +175,19 @@
       background-color: $panelYellow;
     }
 
+    &.important {
+      color: $panelRedText;
+      background-color: $panelRed;
+      border: 1px solid $panelRedText;
+      margin: 20px 0px;
+      padding: 15px 20px;
+    }
+
+    &.info {
+      color: $panelYellowText;
+      background-color: $panelYellow;
+    }
+
     &.nav-edge {
       position: relative;
       margin-left: -32px;
