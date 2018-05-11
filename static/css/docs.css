@@ -1643,6 +1643,19 @@ p {
   background-color: #FFFBEF;
 }
 
+.userContent aside.important {
+  color: #cc0000;
+  background-color: #ffdcdc;
+  border: 1px solid #cc0000;
+  margin: 20px 0px;
+  padding: 15px 20px;
+}
+
+.userContent aside.info {
+  color: #9E998E;
+  background-color: #FFFBEF;
+}
+
 .userContent aside.nav-edge {
   position: relative;
   margin-left: -32px;
