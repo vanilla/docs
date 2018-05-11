@@ -1,5 +1,5 @@
 ---
-title: Setting up SSL (https)
+title: Setting up Custom SSL (https)
 tags:
 - Features
 - SSL
@@ -14,13 +14,15 @@ aliases:
 
 {{% cloudfeature %}}
 
-## Setting up SSL (https) with Vanilla Cloud
+All Vanilla Cloud communities are automatically protected by SSL from the moment they are created, but things get a little more complicated when a [Custom Domain](/help/getting-started/custom-domain) is used.
 
-Vanilla offers SSL support for all plans, even when a Custom Domain is used. We have partnered with Cloudflare to offer simple SSL certificate issuing services to our customers.
+## Setting up Custom SSL (https) with Vanilla Cloud
+
+We have partnered with Cloudflare to offer simple SSL certificate issuing services to our all of our customers. This means that we're able to issue SSL certificates for your community on your behalf. 
 
 ### How to obtain your SSL certificate
 
-Simply email your Customer Success Manager or, if you don't have one, Vanilla Support. We're able to handle the entire process on your behalf. The only prerequisite is that you're using a Custom Domain and it is pointed at your Vanilla URL according to the instructions on the Custom Domain setup page in your forum's dashboard.
+Simply email your Customer Success Manager or, if you don't have one, Vanilla Support. We're able to handle the entire process on your behalf. The only prerequisite is that you're using a [Custom Domain](/help/getting-started/custom-domain) and it is pointed at your Vanilla URL according to the instructions on the [Custom Domain](/help/getting-started/custom-domain) setup page in your forum's dashboard.
 
 ### HTTPS-only sites
 
