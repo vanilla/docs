@@ -8,6 +8,8 @@ menu:
     identifier: embeds
 aliases:
 - /developers/embeds
+versioning:
+  added: 2.7
 ---
 
 ## Embeds
