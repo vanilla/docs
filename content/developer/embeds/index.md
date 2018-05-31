@@ -57,27 +57,63 @@ After the embed class has been registered, subsequent calls to the embed manager
 
 Client-side rendering is performed with JavaScript. The implementation of a client-side embed renderer is straightforward, primarily powered by a single renderer function.
 
-Vanilla's `registerEmbed` function is required to register the new renderer. It must be imported from `@dashboard/embeds`. In addition, the `IEmbedData` interface is also required for  constructing a proper render function signature. To import these two requirements, you may include the following:
+### Creating a New Renderer
 
-```javascript
-import { registerEmbed, IEmbedData } from "@dashboard/embeds";
+Any new client-side rendering functions must accept two parameters: `element` and `data`. The `element` parameter is the HTML element that will contain the rendered embed, while `data` is expected to be an instance of `IEmbedData` (which must be imported from `@dashboard/embeds`), containing the data returned from a server-side embed component's `matchUrl` method. Renderer functions do not return a value. They are expected to render any new HTML elements by acting on the value of `element`.
+
+Renderers may be defined as asynchronous functions. This can be particularly beneficial when ensuring an additional script is available as part of the rendering process. For example, a Twitter embed renderer might want to include the official Twitter widget library and wait for it to load, before proceeding with rendering.
+
+```typescript
+export async function renderTweet(element: Element, data: IEmbedData) {
+    // Ensure the twitter library is loaded.
+    await ensureScript("//platform.twitter.com/widgets.js");
+
+    if (!window.twttr) {
+        throw new Error("The Twitter widget failed to load.");
+    }
+    // ...
+}
+```
+### Registering the Renderer
+
+Vanilla's `registerEmbed` function is required to register new renderer functions and must be imported from `@dashboard/embeds`. To register an embed renderer, an embed type and a function must be provided.
+
+```typescript
+registerEmbed("myEmbed", renderMyEmbed);
 ```
 
-The renderer is expected to take two parameters: `element` and `data`. The `element` parameter is the HTML element that will contain the rendered embed, while `data` is expected to be an instance of `IEmbedData`, containing the data returned from a server-side embed component's `matchUrl` method. This function returns no value. It is expected to act on `element`.
+Registering an embed renderer ensures it will automatically be used in JavaScript rendering contexts, such as those used by the Rich Editor addon.
 
-```javascript
-export async function myRenderer(element: HTMLElement, data: IEmbedData)
+### Calling the Renderer
+
+Registering a renderer is a good way to have it automatically called on new content. However, sometimes existing content on the page will need to be converted (e.g. Twitter links from server-rendered content). In those cases, it's best to create a separate function to perform the conversion. Within this function, the specific elements can be queried and passed through the renderer function, one at a time. This conversion function can then be called, directly in the script, to perform the necessary updates.
+
+```typescript
+// Convert existing "MyEmbed" embeds.
+function convertExistingEmbeds() {
+    // Grab all the unconverted embeds. The my-unconverted-embeds class was part of the MyEmbeds::renderData output.
+    const unconverted = Array.from(document.querySelectorAll(".my-unconverted-embeds"));
+    if (unconverted.length > 0) {
+        unconverted.forEach(element => {
+            // Get embed data out of the data attributes.
+            const url = element.getAttribute("data-myembed") || "";
+
+            const renderData: IEmbedData = {
+                type: "myEmbed",
+                url,
+            };
+
+            renderMyEmbed(element, renderData);
+        });
+    }
+}
 ```
 
-Lastly, a call to `registerEmbed` is necessary to ensure when an embed of the target type is encountered, the renderer function is called.
-
-```javascript
-registerEmbed("custom", myRenderer);
-```
+### Example
 
 All the pieces can be seen coming together in the image embed renderer.
 
-```javascript
+```typescript
 import { registerEmbed, IEmbedData, FOCUS_CLASS } from "@dashboard/embeds";
 
 // Setup image embeds.
@@ -86,7 +122,7 @@ registerEmbed("image", imageRenderer);
 /**
  * Render an image embed in the editor.
  */
-export async function imageRenderer(element: HTMLElement, data: IEmbedData) {
+export function imageRenderer(element: HTMLElement, data: IEmbedData) {
     element.classList.add("embed-image");
     element.classList.add("embedImage");
 
