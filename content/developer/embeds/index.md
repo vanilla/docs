@@ -30,7 +30,6 @@ All embed classes must extend the `Vanilla\Embeds\Embed` class. Strict type chec
 While the base class does try to handle most of the common functionality necessary for an embed, child classes must implement a few key methods:
 
 * `__construct` - The constructor must be implemented for each child class to define the embed's primary type (e.g. "youtube") and its secondary type (e.g. "video")
-* `canHandle` - Given both a domain and a full URL, this method determines if a URL can be handled by the embed class. If the result indicates it cannot handle a URL, subsequent calls to this embed for this URL are halted. If the result indicates the embed class can handle the URL, it is assumed a call to `matchUrl` is safe and will return relevant data.
 * `matchUrl` - This method is expected to obtain relevant information about a URL. This does not necessarily mean the information has to be found in the document the URL points to. For example, the YouTube embed class retrieves the video ID from the URL, then fetches a separate oEmbed endpoint to get specific information about that video. Data returned from this endpoint should either be an associative array or `null`, if unable to obtain relevant information. If an array, the following keys are allowed:
     * name: Name of the resource (e.g. video's title).
     * body: Body text, if any (e.g. video description).
