@@ -1,18 +1,16 @@
 ---
-title: Embeds
+title: Embedded Content
 tags:
 - Developers
+- Embeds
+- Load script
 category: developer
 menu:
   developer:
     identifier: embeds
-aliases:
-- /developers/embeds
 versioning:
   added: 2.7
 ---
-
-## Embeds
 
 Vanilla allows developers to develop create components that are capable of scraping content from an external site and embedding it Vanilla content using custom markup. This capability is implemented using two components: a server-side component and a client-side component.
 
