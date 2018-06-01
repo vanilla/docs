@@ -60,7 +60,7 @@ Client-side rendering is performed with JavaScript. The implementation of a clie
 
 ### Creating a New Renderer
 
-Any new client-side rendering functions must accept two parameters: `element` and `data`. The `element` parameter is the HTML element that will contain the rendered embed, while `data` is expected to be an instance of `IEmbedData` (which must be imported from `@dashboard/embeds`), containing the data returned from a server-side embed component's `matchUrl` method. Renderer functions do not return a value. They are expected to render any new HTML elements by acting on the value of `element`.
+Any new client-side rendering functions must accept two parameters: `element` and `data`. The `element` parameter is the HTML element that will contain the rendered embed, while `data` is expected to be an object matching the shape of the interface `IEmbedData` (this interface may imported from `@dashboard/embeds`). Data returned from the `POST /api/v2/media/scrape` endpoint will already conform to the shape of `IEmbedData`. Renderer functions do not return a value. They are expected to render any new HTML elements by acting on the value of `element`.
 
 Renderers may be defined as asynchronous functions. This can be particularly beneficial when ensuring an additional script is available as part of the rendering process. For example, a Twitter embed renderer might want to include the official Twitter widget library and wait for it to load, before proceeding with rendering.
 
@@ -75,6 +75,9 @@ export async function renderTweet(element: Element, data: IEmbedData) {
     // ...
 }
 ```
+
+The `ensureScript` function may be imported from `@dashboard/dom`. This method will resolve  almost immediately if the script is already present, and ensure that the script only gets loaded a single time, no matter how many times you call it.
+
 ### Registering the Renderer
 
 Vanilla's `registerEmbed` function is required to register new renderer functions and must be imported from `@dashboard/embeds`. To register an embed renderer, an embed type and a function must be provided.
@@ -112,26 +115,46 @@ function convertExistingEmbeds() {
 
 ### Example
 
-All the pieces can be seen coming together in the image embed renderer.
+All the pieces can be seen coming together in the following example.
 
+**/plugins/my-plugin/src/scripts/my-embed.ts**
 ```typescript
-import { registerEmbed, IEmbedData, FOCUS_CLASS } from "@dashboard/embeds";
+import { registerEmbed, IEmbedData } from "@dashboard/embeds";
 
-// Setup image embeds.
-registerEmbed("image", imageRenderer);
+// Register the embed renderer for JavaScript contexts.
+registerEmbed("my-embed", renderMyEmbed);
 
-/**
- * Render an image embed in the editor.
- */
-export function imageRenderer(element: HTMLElement, data: IEmbedData) {
-    element.classList.add("embed-image");
-    element.classList.add("embedImage");
+// Handle rendering for HTML from server-side contexts.
+convertExistingEmbeds();
 
-    const image = document.createElement("img");
-    image.classList.add("embedImage-img");
-    image.setAttribute("src", data.url || "");
-    image.setAttribute("alt", data.name || "");
+// Convert existing "MyEmbed" embeds.
+function convertExistingEmbeds() {
+    // Grab all the unconverted embeds. The my-unconverted-embeds class was part of the MyEmbeds::renderData output.
+    const unconverted = Array.from(document.querySelectorAll(".my-unconverted-embeds"));
+    if (unconverted.length > 0) {
+        unconverted.forEach(element => {
+            // Get embed data out of the data attributes.
+            const url = element.getAttribute("data-myembed") || "";
 
-    element.appendChild(image);
+            const renderData: IEmbedData = {
+                type: "my-embed",
+                url,
+            };
+
+            renderMyEmbed(element, renderData);
+        });
+    }
+}
+
+export async function renderMyEmbed(element: Element, data: IEmbedData) {
+    // Load up an external script that our embed depends on.
+    await ensureScript("//platform.my-embed-site.com/widgets.js");
+
+	// Ensure that the library we just loaded is available
+	// (There could have been an error, network timeout, etc.)
+    if (!window.globalEmbedLibrary) {
+        throw new Error("MyEmbedSite library failed to load.");
+    }
+    // ... Do some rendering into `element` here.
 }
 ```
