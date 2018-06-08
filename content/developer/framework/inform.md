@@ -25,13 +25,19 @@ They can be passed with JavaScript callbacks to fire on dismissal so some kind o
 
 An example native inform message in Vanilla: saving drafts. 
 
-<img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5091/5503092803_d4be13195b_o.png" alt="" /> 
+![An example native inform message](http://farm6.static.flickr.com/5091/5503092803_d4be13195b_o.png "An example native inform message")
 
 When a comment draft is saved, you can see an inform message appear on the bottom-left of the screen. This message shows a close button on the top-right when you hover your mouse overtop, and it automatically disappears after a few seconds. The code used to make this message appear is located on line 448 of /applications/vanilla/class.postcontroller.php:
 
-<pre lang="php">$this-&gt;informMessage(sprintf(t('Draft saved at %s'), Gdn_Format::date()));</pre>
-<p>If we didn't want to include the time that the draft was saved, we could simplify it further to:</p>
-<pre lang="php">$this-&gt;informMessage(t('Draft saved successfully'));</pre>
+```php
+$this->informMessage(sprintf(t('Draft saved at %s'), Gdn_Format::date()));
+```
+
+If we didn't want to include the time that the draft was saved, we could simplify it further to:
+
+```php
+$this->informMessage(t('Draft saved successfully'));
+```
 
 The `t()` function is Vanilla's native "Translate" function so that the string can be converted to other languages. 
 
@@ -39,29 +45,59 @@ The `t()` function is Vanilla's native "Translate" function so that the string c
 
 Adding a message to the screen with a plugin. 
 
-<img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5019/5503917718_4f22ccd6e0_o.png" alt="" /> 
+![A message added with a plugin](http://farm6.static.flickr.com/5019/5503917718_4f22ccd6e0_o.png "A message added with a plugin")
 
 The code to achieve this is pretty easy:
 
-<pre lang="php">public function base_render_before($sender) {<br />   $sender-&gt;informMessage('This is a test!');<br />}</pre>
-<p>With this code, the message will appear on every page load for every user (signed in or not) and it will disappear after a few moments. Not exactly a useful message, but let's see what else we can do with it:</p>
-<pre lang="php">public function base_render_before($sender) {<br />   // Only show the message if the user is signed in<br />   if (Gdn::session()-&gt;isValid())<br />      $sender-&gt;informMessage('This is a test!', 'Dismissable');<br />}</pre>
+```php
+public function base_render_before($sender) {
+    $sender->informMessage('This is a test!');
+}
+```
+With this code, the message will appear on every page load for every user (signed in or not) and it will disappear after a few moments. Not exactly a useful message, but let's see what else we can do with it:
+
+```php
+public function base_render_before($sender) {
+    // Only show the message if the user is signed in
+    if (Gdn::session()->isValid())
+        $sender->informMessage('This is a test!', 'Dismissable');
+    }
+```
 
 Now the message only shows if the user has a valid session, and it doesn't auto-dismiss. The second parameter in the InformMessage method is either a string of CSS classes to be applied to the message container, or an array of options. 
 
 If you don't provide the second parameter at all, it defaults to "Dismissable AutoDismiss", which obviously makes it so the message automatically disappears after a few moments, or can be immediately dismissed by clicking the "close" button. If you decide to use the second parameter, here are the options available to you:
 
-* <strong>CssClass:</strong> An optional set of css classes to pass along to the message's container.
-* <strong>DismissCallback:</strong> An optional javascript callback that gets called when the "close" button is clicked on a message.
-* <strong>DismissCallbackUrl:</strong> An optional javascript callback url that gets requested when the "close" button is clicked on a message. If a dismissCallback is specified, this option will be ignored.
+ - **CssClass:** An optional set of css classes to pass along to the message's container.
+ - **DismissCallback:** An optional javascript callback that gets called when the "close" button is clicked on a message.
+ - **DismissCallbackUrl:** An optional javascript callback url that gets requested when the "close" button is clicked on a message. If a dismissCallback is specified, this option will be ignored.
 
 ## Static messages
 
 Let's say you want to deliver a message to a particular user, and have that message stay on the screen on every page load until that user dismisses the message. You can achieve it like this:
 
-<pre lang="php">public function base_render_before($sender) {<br />   $session = Gdn::session();<br />   if ($session-&gt;isValid() &amp;&amp; $session-&gt;User-&gt;UserID == 1 &amp;&amp; $session-&gt;getPreference('UserDismissedCustomMessage', false) == false) {<br />      $sender-&gt;informMessage(<br />         'This message will stay here until you dismiss it!',<br />         array(<br />            'CssClass' =&gt; 'Dismissable',<br />            'DismissCallbackUrl' =&gt; '/plugin/dismissmessage/'<br />         )<br />      );<br />   }<br />}<br /><br />// Handle the callback<br />public function pluginController_dismissMessage_create($sender) {<br />   $session = Gdn::session();<br />   $session-&gt;setPreference('UserDismissedCustomMessage', true);<br />}</pre>
+```php
+public function base_render_before($sender) {
+    $session = Gdn::session();
+        if ($session->isValid() &amp;&amp; $session->User->UserID == 1 &amp;&amp; $session->getPreference('UserDismissedCustomMessage', false) == false) {
+            $sender->informMessage(
+                'This message will stay here until you dismiss it!',
+                array(
+                    'CssClass' => 'Dismissable',
+                    'DismissCallbackUrl' => '/plugin/dismissmessage/'
+                )
+            );
+        }
+}
+                                                                        
+// Handle the callback
+public function pluginController_dismissMessage_create($sender) {
+    $session = Gdn::session();
+    $session->setPreference('UserDismissedCustomMessage', true);
+}
+```
 
-<img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5254/5503327977_f14304669c_o.png" alt="" /> 
+![A message specific to a particular user](http://farm6.static.flickr.com/5254/5503327977_f14304669c_o.png "A message specific to a particular user")
 
 This message appears for me because my UserID is 1, and it keeps showing up on every page until I dismiss it. At that point the callback url is requested via ajax, and the dismissal preference is saved so the message will no longer appear for me.
 
@@ -69,32 +105,50 @@ This message appears for me because my UserID is 1, and it keeps showing up on e
 
 Let's look at how we can change the appearance of these messages. 
 
-<img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5014/5503328011_3d92a293b7_o.png" alt="" /> 
+![A test message with an icon](http://farm6.static.flickr.com/5014/5503328011_3d92a293b7_o.png "A test message with an icon")
 
 There are over 100 icons available for you to use. You can check them out by looking at the icon sprite file located in /applications/dashboard/design/images/inform-sprites.png, and you can see how to reference them by searching for the css definitions in /applications/dashboard/design/style.css (hint: search for "span.InformSprite."). 
 
 Here's the code to achieve this message:
 
-<pre lang="php">$sender-&gt;informMessage('&lt;span class="InformSprite Skull"&gt;&lt;/span&gt; This is a test!', 'Dismissable HasSprite');</pre>
+```php
+$sender->informMessage('<span class="InformSprite Skull"></span> This is a test!', 'Dismissable HasSprite');
+```
 
 Note the span at the front of the message. This will contain the "Skull" image you see above. It's also necessary for the CSS definition in the second argument to contain "HasSprite" so that the spacing &amp; alignment of the icon all works properly.
 
 ## Message origin
 
-You can also style the inform messages to appear "From" a specific user. <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5098/5503917812_cfa84f0c24_o.png" alt="" /> 
+You can also style the inform messages to appear "From" a specific user.
+
+![A message with an user as sender](http://farm6.static.flickr.com/5098/5503917812_cfa84f0c24_o.png "A message with an user as sender")
 
 You'll need to load a user record for the icon you wish to display, and then write the message to the screen like this:
 
-<pre lang="php">$user = Gdn::userModel()-&gt;get(1); // Load the user who's icon you want to show<br />$string = userPhoto($user, 'Icon'); // IMPORTANT: Give the icon a css class of "Icon" <br />$string .= 'This is a test!'; // Append some message<br />$sender-&gt;informMessage($string, 'Dismissable HasIcon'); // Send to the screen</pre>
+```php
+$user = Gdn::userModel()->get(1); // Load the user who's icon you want to show
+$string = userPhoto($user, 'Icon'); // IMPORTANT: Give the icon a css class of "Icon" 
+$string .= 'This is a test!'; // Append some message
+$sender->informMessage($string, 'Dismissable HasIcon'); // Send to the screen
+```
 
 ## Inform via JavaScript
 
-At some point you may need to write a message to the screen from JavaScript instead of from the server side. This can be achieved with a similar, JavaScript-based method:</p>
-<pre lang="javascript">gdn.informMessage('This is a test!');</pre>
-<p>And all of the same properties exist, so you can be as elaborate as you like:</p>
-<pre lang="javascript">gdn.informMessage('This is a test!', {'CssClass' : 'Dismissable', 'DismissCallback' : 'some_function', 'DismissCallbackUrl' : '/relative/path/to/callback/url'});</pre>
+At some point you may need to write a message to the screen from JavaScript instead of from the server side. This can be achieved with a similar, JavaScript-based method:
+
+```javascript
+gdn.informMessage('This is a test!');
+```
+
+And all of the same properties exist, so you can be as elaborate as you like:
+
+```javascript
+gdn.informMessage('This is a test!', {'CssClass' : 'Dismissable', 'DismissCallback' : 'some_function', 'DismissCallbackUrl' : '/relative/path/to/callback/url'});
+```
 
 ## Duplication and stacking
 
-You can add as many messages to as many pages as you like. If a message is already present on the screen, it will not be added a second time, and new messages will simply stack one-on-top-of-the-next. <img style="border: 1px solid #333; margin: 20px 0; display: block;" src="http://farm6.static.flickr.com/5300/5503917872_92042ca343_o.png" alt="" />
+You can add as many messages to as many pages as you like. If a message is already present on the screen, it will not be added a second time, and new messages will simply stack one-on-top-of-the-next.
+
+![Multiple messages](http://farm6.static.flickr.com/5300/5503917872_92042ca343_o.png "Multiple messages")
 
