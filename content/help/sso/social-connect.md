@@ -49,6 +49,10 @@ In order to set up Facebook Connect, you must create an "application" in Faceboo
 
 Once your application has been set up, you must copy the "Application ID" and "Application Secret" into your Facebook plugin settings page from your Vanilla dashboard.
 
+Please note that the 'Valid oAuth Redirect URI" should be: 
+https://community.yoursite.com/entry/connect/facebook or 
+https://yoursite.vanillacommunities.com/entry/connect/facebook if you do not have custom domain.
+
 ### Need help?
 
 For a complete walk-through of the steps involved, read [How to Create a Facebook Application for Vanillaforums Single Sign-On (SSO)](http://blog.vanillaforums.com/facebook-application-for-vanillaforums-sso/).
