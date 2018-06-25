@@ -2,6 +2,9 @@
 title: Change Log
 tags:
 - Developers
+- Changes
+- Bug fixes
+- Security
 category: developer
 menu:
   developer:
@@ -9,16 +12,61 @@ menu:
 aliases:
 - /developers/changelog
 ---
-## Version Change Log
 
 This is for packaged, gold releases of the self-hosted product. We publish beta and release candidate change logs on the [forum](https://open.vanillaforums.com/categories/blog). We provide separate [cloud release notes](http://docs.vanillaforums.com/help/releases/) since they are scheduled differently.
 
 Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.
 
-### 2.3
+## 2.6.x
+
+_Vanilla 2.6 is the first version of Vanilla that requires PHP 7.0._
+
+New Features:
+
+- Category Following
+- API v2 In-Dashboard Docs
+- API v2 Changes and Additional Endpoints
+- Numerous bug-fixes and security patches
+- The full feature list and details can be found on [the 2.6 release announcement and discussion](https://open.vanillaforums.com/discussion/comment/252706/#Comment_252706).
+
+### 2.6.0
+
+*[Released 14 May 2018](https://open.vanillaforums.com/discussion/36260/vanilla-2-6-is-here-includes-security-fixes)*
+
+## 2.5.x
+
+_Vanilla 2.5 is the last version of Vanilla that supports PHP 5.6. As such many additional security fixes have been backported to this release. If you cannot currently run a later version of Vanilla, be sure to run the latest 2.5 patch release._
+
+Highlights of this released include:
+
+- Dashboard Redesign
+- Flat categories
+- Native API (APIv2)
+- Full IPv6 support.
+
+A full feature list can be found on [the 2.5 release schedule and features discussion](https://open.vanillaforums.com/discussion/34616/vanilla-2-5-release-schedule-features).
+
+### 2.5.2
+
+*[Released 14 May 2018](https://open.vanillaforums.com/addon/vanilla-core-2.5.2)*
+
+### 2.5.1
+
+*[Released 12 Feb 2018](https://open.vanillaforums.com/discussion/35925/vanilla-2-5-1-now-available-security-update)*
+
+### 2.5.0
+
+*[Released 23 Dec 2017](https://open.vanillaforums.com/discussion/35687/vanilla-2-5-is-now-available)*
+
+## 2.4.x
+
+A full vanilla 2.4 version was never released. Instead, [Release 2.5](#2-5) was branched. A [beta was distributed]((https://open.vanillaforums.com/discussion/33066/preview-release-2-4-beta)), but a full version was never released.
+
+## 2.3.x
 
 *[Released 18 Nov 2016](https://open.vanillaforums.com/discussion/32822/vanilla-2-3-is-now-available)*
 
+## 2.2.x
 ### 2.2.1
 
 *[Released 7 May 2016](https://open.vanillaforums.com/discussion/32109/vanilla-2-2-1-now-available)*
@@ -27,6 +75,7 @@ Vanilla numbers major releases with the first decimal place. A second decimal in
 
 *[Released 12 Nov 2015](https://open.vanillaforums.com/discussion/31121/vanilla-is-proud-to-present-version-2-2)*
 
+## 2.1.x
 ### 2.1.13
 
 *[Released 29 Oct 2015](https://open.vanillaforums.com/discussion/31046/vanilla-2-1-13-security-updates)*
@@ -119,6 +168,8 @@ Incremental changelogs from the [first 2.1 beta](https://open.vanillaforums.com/
 * [Beta 2](https://open.vanillaforums.com/discussion/24845/vanilla-2-1b2-released)
 * [Beta 3](https://open.vanillaforums.com/discussion/26518/vanillla-2-1-beta-3)
 * [Release Candidate 1](https://open.vanillaforums.com/discussion/26626/vanilla-2-1-release-candidate)
+
+## 2.0.x
 
 ### 2.0.18.14
 
@@ -291,7 +342,7 @@ Fixes:
 * Fixed bug where mobile theme would sometimes display incorrect "last comment date".
 * Optimized Announced Discussions query to improve performance.
 
-### Older Releases
+## Older Releases
 
 *Unlisted versions were skipped or replaced the same day.*
 
