@@ -40,15 +40,6 @@ CodeSniffer is a tool you can plug into your IDE or run from the command line to
 
 Keep note of the path where you copied/cloned the `vanilla/standards` repo. This will be referred to as `PATH_TO_STANDARDS_REPO`.
 
-### PHPStorm CodeStyle
-
-In order to enable the PHPStorm `Code > Reformat Code` command to be of any use, your PHPStorm `Editor > Code Style > PHP` needs to be configured.
-
-1. Download the <a href="/documents/VanillaPHPStormCodingStyle.xml" download>Vanilla PHPStorm Code Style</a>.
-1. Navigate to `Editor > Code Style > PHP`
-1. Open the Settings/Cogwheel dropdown at the top.
-1. Use `Import Scheme > Intellij IDEA code style XML` to import the downloaded configuration.
-
 ### CodeSniffer PHPStorm Integration
 
 1. Go to your PHP Preferences.
@@ -75,6 +66,14 @@ Thus ends the readable part of your adventure as you descend into the dry, techn
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 
+### PHPStorm Code Style
+
+In order to enable the PHPStorm `Code > Reformat Code` command to be of any use, your PHPStorm `Editor > Code Style > PHP` needs to be configured.
+
+1. Download the <a href="/documents/VanillaPHPStormCodingStyle.xml" download>Vanilla PHPStorm Code Style</a>.
+1. Navigate to `Editor > Code Style > PHP`
+1. Open the Settings/Cogwheel dropdown at the top.
+1. Use `Import Scheme > Intellij IDEA code style XML` to import the downloaded configuration.
 
 ## 1. Overview
 
