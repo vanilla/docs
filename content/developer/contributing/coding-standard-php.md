@@ -30,9 +30,9 @@ All code in `release/2.3` must work under PHP 5.4.
 
 For up-to-date information you can look at our [self-hosting-requirements](https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements) section.
 
-## Validating your PHP code with PHP_CodeSniffer
+## Validating your PHP code
 
-CodeSniffer is a tool you can plug into your IDE or run from the command line to help you adhere to a coding standard like this one. This installation guide requires PPH
+CodeSniffer is a tool you can plug into your IDE or run from the command line to help you adhere to a coding standard like this one. This installation guide requires PHP >= 7 and composer to be installed.
 
 1. Get CodeSniffer 2.8: `composer global require squizlabs/php_codesniffer:2.8.1`.
 1. Ensure that composer's `bin` directory is on your path. If it is `which phpcs` should return a path similar to the following: `~/.composer/vendor/bin/phpcs`
@@ -40,7 +40,16 @@ CodeSniffer is a tool you can plug into your IDE or run from the command line to
 
 Keep note of the path where you copied/cloned the `vanilla/standards` repo. This will be referred to as `PATH_TO_STANDARDS_REPO`.
 
-### PHPStorm Integration
+### PHPStorm CodeStyle
+
+In order to enable the PHPStorm `Code > Reformat Code` command to be of any use, your PHPStorm `Editor > Code Style > PHP` needs to be configured.
+
+1. Download the <a href="/documents/VanillaPHPStormCodingStyle.xml" download>Vanilla PHPStorm Code Style</a>.
+1. Navigate to `Editor > Code Style > PHP`
+1. Open the Settings/Cogwheel dropdown at the top.
+1. Use `Import Scheme > Intellij IDEA code style XML` to import the downloaded configuration.
+
+### CodeSniffer PHPStorm Integration
 
 1. Go to your PHP Preferences.
 1. Navigate to `Languages & Frameworks > PHP > Code Sniffer`.
@@ -52,7 +61,7 @@ Keep note of the path where you copied/cloned the `vanilla/standards` repo. This
 1. Click the `...`.
 1. Set "Path to ruleset" to `PATH_TO_STANDARDS_REPO/code-sniffer/Vanilla`.
 
-### From the command line
+### CodeSniffer from the Command Line
 
 It is not recomended that you attempt to run `phpcs` on the full Vanilla repo. It is likely you will experience a memory exhaustion error if you attempt to.
 
