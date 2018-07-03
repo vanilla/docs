@@ -13,7 +13,6 @@ aliases:
 - /developers/contributing/coding-standard
 - /developer/contributing/coding-standard
 ---
-## Standards
 
 As of May 2014, Vanilla will adhere to [PSR-2] \(and therefore [PSR-1]) with a few exceptions. We have been mass-updating our source code as possible without breaking backwards compatibility (most notably by refraining from changing the casing of existing variables).
 
@@ -21,26 +20,45 @@ We've named our primary exception to PSR-2 the **[Lord Brackos](https://twitter.
 
 We adopted this standard for all the usual reasons: our team is growing, and we want to make sure things stay consistent between our various projects, and it's annoying and hard to read when everything is styled differently. Key words in this document ("MUST", "SHOULD", etc.) are used as described in [RFC 2119] which is as boring and obvious as you expect but mercifully brief.
 
-### PHP Version
+## PHP Version
 
-All code in `master` must work under PHP 5.6, but we strongly recommend using 7.0.
+All code in `master` must work under PHP 7.0, but we strongly recommend using 7.2.
+
+All code in `release/2.5` must work under PHP 5.6.
 
 All code in `release/2.3` must work under PHP 5.4.
 
 For up-to-date information you can look at our [self-hosting-requirements](https://github.com/vanilla/vanilla/tree/master#self-hosting-requirements) section.
 
-### Validating your PHP code with PHP_CodeSniffer
+## Validating your PHP code
 
-CodeSniffer is a tool you can plug into your IDE to help you adhere to a coding standard like this one. This quick guide assumes you have both PEAR and homebrew with PHP 5.5 installed.
+CodeSniffer is a tool you can plug into your IDE or run from the command line to help you adhere to a coding standard like this one. This installation guide requires PHP >= 7 and composer to be installed.
 
-Our standard is in [Vanilla's Standards repo](https://github.com/vanilla/standards), where you can submit issues and pull requests. Its contents will help you on your way.
+1. Get CodeSniffer 2.8: `composer global require squizlabs/php_codesniffer:2.8.1`.
+1. Ensure that composer's `bin` directory is on your path. If it is `which phpcs` should return a path similar to the following: `~/.composer/vendor/bin/phpcs`
+1. Get the Vanilla Standard from our [Standards repo](https://github.com/vanilla/standards)
 
-1. Get CodeSniffer: `pear install PHP_CodeSniffer`.
-2. Add to bash profile: `export PATH="$(brew --prefix php55)/bin:$PATH"`.
-3. Find CodeSniffer's Standards folder. Use `pear config-get php_dir` and go from there.
-3. Symlink `standards/code-sniffer/Vanilla` to CodeSniffer's Standards folder.
-4. Set Vanilla as your standard: `phpcs --config-set default_standard Vanilla`.
-5. Use it: `phpcs /path/to/code`.
+Keep note of the path where you copied/cloned the `vanilla/standards` repo. This will be referred to as `PATH_TO_STANDARDS_REPO`.
+
+### CodeSniffer PHPStorm Integration
+
+1. Go to your PHP Preferences.
+1. Navigate to `Languages & Frameworks > PHP > Code Sniffer`.
+1. Click on the `...` next to `Configuration`.
+1. Set the path to your `phpcs`. This can be found by running `which phpcs`.
+1. Click `Apply`.
+1. Navigate to `Editor > Inspections > PHP > PHP Code Sniffer Validation`
+1. In the right pane set your `Coding standard` to custom.
+1. Click the `...`.
+1. Set "Path to ruleset" to `PATH_TO_STANDARDS_REPO/code-sniffer/Vanilla`.
+
+### CodeSniffer from the Command Line
+
+It is not recomended that you attempt to run `phpcs` on the full Vanilla repo. It is likely you will experience a memory exhaustion error if you attempt to.
+
+```shell
+phpcs --standard=/PATH_TO_STANDARDS_REPO/code-sniffer/Vanilla /file/or/dir/to/check
+```
 
 Thus ends the readable part of your adventure as you descend into the dry, technical blather of a coding standard. Godspeed, coding warrior.
 
@@ -48,6 +66,14 @@ Thus ends the readable part of your adventure as you descend into the dry, techn
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 
+### PHPStorm Code Style
+
+In order to enable the PHPStorm `Code > Reformat Code` command to be of any use, your PHPStorm `Editor > Code Style > PHP` needs to be configured.
+
+1. Download the <a href="/documents/VanillaPHPStormCodingStyle.xml" download>Vanilla PHPStorm Code Style</a>.
+1. Navigate to `Editor > Code Style > PHP`
+1. Open the Settings/Cogwheel dropdown at the top.
+1. Use `Import Scheme > Intellij IDEA code style XML` to import the downloaded configuration.
 
 ## 1. Overview
 
