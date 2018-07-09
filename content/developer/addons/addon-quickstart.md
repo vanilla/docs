@@ -113,7 +113,7 @@ These checks only apply to addon's being enabled/disabled in the dashboard. If a
 
 #### Visibility
 
-If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your addon's visibility](/developer/adddons/addon-visibility).
+If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set your addon's visibility](/developer/addons/addon-visibility).
 
 #### Define new permissions
 
