@@ -8,7 +8,7 @@ category: developer
 menu:
   developer:
     parent: framework-apiv2
-    weight: 10
+    weight: 20
 aliases:
 - /developer/framework/apiv2/resource-routing
 - /developer/framework/apiv2/api-endpoints/resource-routing
