@@ -34,7 +34,7 @@ For up-to-date information you can look at our [self-hosting-requirements](https
 
 CodeSniffer is a tool you can plug into your IDE or run from the command line to help you adhere to a coding standard like this one. This installation guide requires PHP >= 7 and composer to be installed.
 
-1. Get CodeSniffer 2.8: `composer global require squizlabs/php_codesniffer:2.8.1`.
+1. Get CodeSniffer 3.x: `composer global require squizlabs/php_codesniffer "^3.0"`.
 1. Ensure that composer's `bin` directory is on your path. If it is `which phpcs` should return a path similar to the following: `~/.composer/vendor/bin/phpcs`
 1. Get the Vanilla Standard from our [Standards repo](https://github.com/vanilla/standards)
 
