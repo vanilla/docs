@@ -23,8 +23,8 @@ with **HTTP 429 Too Many Requests**. The block will lift automatically after **1
 
 ## GET requests
 
-These types of requests are limited to **20 requests** per **1 second**, per IP.
+These types of requests are limited to **300 requests** per **1 minute**, per IP.
 
 ## POST / PUT / PATCH / DELETE requests
 
-These types of requests are limited to **5 requests** per **1 second**, per IP.
+These types of requests are limited to **20 requests** per **1 minute**, per IP.
