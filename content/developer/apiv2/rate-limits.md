@@ -19,7 +19,7 @@ The API is rate-limited in order to prevent abuse and protect our origins from a
 per-IP basis.
 
 Exceeding the following rate limits will result in a temporary block, during which the service will respond 
-with **HTTP 429 Too Many Requests**. The block will lift automatically after **1 minute**.
+with **HTTP 429 Too Many Requests**. The block will lift automatically after **1 hour**.
 
 ## GET requests
 
