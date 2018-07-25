@@ -46,7 +46,10 @@ If React cannot be used for a particular view (and it likely can), the `escapeHT
 
 ### Escaping links in JS
 
-`href` attributes containing user input __MUST__ be escaped using the `sanitizeUrl()` method in `@dashboard/utility` __in addition__ to normal escaping.
+`href` attributes containing user input __MUST__ be escaped using one of the following two methods __in addition__ to normal escaping:
+
+- `sanitizeUrl()` method in `@dashboard/utility` - For entering user input that is expected to already have a protocol, such as use generated link.
+- `formatUrl()` method in `@dashboard/application` - For generating a vanilla link from a path. One case where "user-generated" content may be used for this is constructing a url from query parameters in the URL such as a `target`.
 
 ### Additional rules
 
@@ -59,7 +62,10 @@ Regular escaping of user content __SHOULD__ be done using the [htmlspecialchars(
 
 ### Escaping links in PHP
 
-`href` attributes containg user input __MUST__ be escaped using `Vanilla\Formatting\FormatUtility::sanitizeUrl()` __in addition__ to normal escaping.
+`href` attributes containing user input __MUST__ be escaped using one of the following two methods __in addition__ to normal escaping:
+
+- `Gdn_Format::sanitizeUrl()` - For entering user input that is expected to already have a protocol, such as use generated link.
+- `url()` - For generating a vanilla link from a path. One case where "user-generated" content may be used for this is constructing a url from query parameters in the URL such as a `target`.
 
 ### Additional rules
 
