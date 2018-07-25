@@ -54,7 +54,7 @@ If React cannot be used for a particular view (and it likely can), the `escapeHT
 ### Additional rules
 
 - The React property `dangerouslySetInnerHTML` __MUST NOT__ be used.
-- If dealing directly with DOM `Element`'s `innerHTML` and `outerHTML` __MUST NOT__ be used.
+- If dealing directly with DOM a `Element` - `innerHTML` and `outerHTML` __MUST NOT__ be used.
 
 ## XSS (PHP)
 
