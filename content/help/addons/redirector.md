@@ -23,6 +23,7 @@ Redirector is a plug-in that translates URLs from many popular forum platforms i
 5. smf
 6. vBulletin
 7. xenforo
+8. Lithium
 
 ## Usage
 1. Install and enable the plug-in.
