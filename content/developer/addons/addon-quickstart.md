@@ -117,7 +117,7 @@ If you've got [Vanilla Cloud](http://vanillaforums.com), make sure to also [set 
 
 #### Define new permissions
 
-Adding new permissions via addon is easy. Any defined here will be added as soon as the addon is enabled. It's important to know more about [using permissions in Vanilla](/developers/framework/permissions/) before doing this.
+Adding new permissions via addon is easy. Any permission defined here will be added as soon as the addon is enabled. It's important to know more about [using permissions in Vanilla](/developers/framework/permissions/) before doing this.
 
 You can provide an array of permission names using dot syntax. You can optionally use key/value pairs to set a default (`1` will give all roles the permission; `0` is the default and leaves it off for all roles to start).
 
