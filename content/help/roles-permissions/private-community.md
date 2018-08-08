@@ -18,9 +18,7 @@ If you set your community to private, only registered members will be able to vi
 
 To make your community private:
 
- * Go to the Addons page in the Dashboard
- * Turn on the 'Private Community' addon 
- * Click on the addon settings, this will take you to the Roles and Permission page
+ * Go to the Roles and Permissions page.
  * Turn on 'Enable Private Communities'
 
 
