@@ -1,5 +1,5 @@
 ---
-title: Rich Editor
+title: Rich Editor (Beta)
 tags:
     - Features
     - Addons
@@ -10,6 +10,8 @@ category: help
 menu:
     help:
         parent: addons
+versioning:
+    added: 2.7
 ---
 
 ## Overview
@@ -17,6 +19,8 @@ menu:
 The Rich Editor adds intuitive styling and formatting to a posts and documents on Vanilla.
 
 ![A full view of editor](/img/help/addons/rich-editor/editor-view.png)
+
+_Please note that Rich Editor is currently in beta and **is under active development**. Please report any bugs you encounter to your CSMs or on the [Vanilla Issue Tracker](https://github.com/vanilla/vanilla/issues)._
 
 ## Important Functions
 
