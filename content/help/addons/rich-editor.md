@@ -6,6 +6,7 @@ tags:
     - Rich Editor
     - Advanced-editor
     - editor
+    - quotes
 category: help
 menu:
     help:
@@ -30,7 +31,11 @@ Once enabled, Rich Editor provides your users with familiar formatting tools. He
 
 ![The bold, italic, strikethrough, code, and link buttons](/img/help/addons/rich-editor/inline-formats.png)
 
-This first set of buttons allows you to add bold, italic, strike, code, or link formatting to selected text. This menu is dynamic and contextual, appearing wherever the user makes a selection. The standard keyboard shortcuts, `ctrl+b`, `ctrl+i`, and `ctrl+k` also work when you have begun typing inside the editor.
+This first set of buttons allows you to add bold, italic, strike, code, or link formatting to selected text. This menu is dynamic and contextual, appearing wherever the user makes a selection. The following standard keyboard shortcuts also work when you have begun typing inside the editor.
+
+-  `ctrl+b` or `⌘+b` for bold.
+-  `ctrl+i` or `⌘+i` for italic.
+-  `ctrl+k` or `⌘+k` for link.
 
 ### Lists
 
@@ -150,6 +155,9 @@ These embeds will be still be able to load for users with a more permissive brow
 This message appears when an a published post was inserted improperly. This can happen through incorrect insertion of a post through the API.
 
 The `Rich` format must be stored in a very particular way. Content from sources other than Rich Editor should not be stored with this format.
+
+![Number List, Bullet List](/img/help/addons/rich-editor/rich-render-error.png)
+
 
 ## Additional Resources
 
