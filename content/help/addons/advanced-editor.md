@@ -102,9 +102,9 @@ You can return to the normal WYSIWYG view by hitting the HTML view toggle again.
 
 Advanced Editor has different modes to help you accommodate the needs of your community.
 
-If you are an administrator, you can change the settings for the editor in the Dashboard. Click the Settings icon next to advanced-editor on your addon list, or navigate directly to `/settings/editor`.
+If you are an administrator, you can change the settings for the editor in the Dashboard. Go to the Posting page in dashboard settings, or navigate directly to `/vanilla/settings/posting`.
 
-![Advanced Editor Dashboard Settings](https://images.v-cdn.net/docs/AE_DashboardSettings.PNG)
+![Posting Format Settings page Markdown](/img/help/addons/advanced-editor/post-format-md.png)
 
 By default, all forums are set to use Markdown as their post format.
 
