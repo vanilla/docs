@@ -16,7 +16,7 @@ menu:
 ---
 
 ## Prerequisites
-The CLI requires PHP `5.6.0` or greater installed to run. It also requires [composer](https://getcomposer.org/).
+The CLI requires PHP `7.0` or greater installed to run. It also requires [composer](https://getcomposer.org/).
 
 Some commands, currently `build` and `lint`, require a minimum Node.js version of `8.3.0` and the package manager `yarn` to be installed.
 
@@ -25,12 +25,13 @@ Some commands, currently `build` and `lint`, require a minimum Node.js version o
 #### For OS X
 ```bash
 brew install node
-brew install yarn
+# Make sure not to link these or a yarn upgrade will upgrade your node!
+brew install yarn --without-node
 ```
 
 #### For Debian/Ubuntu Linux
 ```bash
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 

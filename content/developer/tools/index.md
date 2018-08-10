@@ -10,18 +10,18 @@ aliases:
 - /developers/tools
 ---
 
-Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All our developers use MacOS.
+Vanilla uses a wide range to tools and technologies to build its product. This list is simply to guide new developers getting acclimated to our ecosystem. All of our developers use MacOS.
 
 ## Stacks Supported
 
-* PHP 5.6 - 7.1 (as of Vanilla 2.5)
+* PHP 7.0 - 7.2 (as of Vanilla 2.6)
 * Unix, Windows, or OSX
 * [nginx, Apache, or IIS](http://docs.vanillaforums.com/developer/backend/)
 * MySQL, Percona, or MariaDB
 
 ## Cloud Stack
 
-* PHP 7.1
+* PHP 7.2
 * nginx
 * Percona
 * Varnish
@@ -36,30 +36,30 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 * git
 * xdebug
 * PHPUnit
+* Docker
 * [Composer](https://github.com/vanilla/vanilla/blob/master/composer.json)
-* Hub
 * [CodeSniffer](https://github.com/vanilla/standards)
 * [Phing](https://github.com/vanilla/vanilla#building-with-phing)
+* Hub
 * Travis CI
 * Scrutinizer
-
-## [Frontend Build](https://github.com/vanilla/vanilla/tree/master/applications/dashboard)
-
-* Sass
-* SCSS-Lint
+* Node 8.x or 10.x
 * Yarn
-* Node.js
 
 ## Libraries
 
 * [Garden](https://github.com/vanilla?q=garden) (our custom libraries on GitHub)
 * PHPMailer
 * HtmLawed
-* jQuery
 * NBBC
 * YAML
 * Smarty
 * PHP Markdown
+* Typescript
+* Sass
+* [Quill](https://github.com/quilljs/quill/)
+* React
+* jQuery
 
 ## Management
 
@@ -72,13 +72,13 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 
 ## Applications
 
-* PhpStorm or NetBeans (IDEs)
+* PhpStorm, VS Code or NetBeans (IDEs)
 * Sequel Pro (SQL manager)
 * Keka or YemuZip
-* MacDown or Mou (Markdown editor)
+* MacDown, Typora, or Mou (Markdown editor)
 * Kaleidoscope (diff tool)
 * Postman (Chrome App)
 * Balsamiq (mockups)
-* 1Password
+* Dashlane
 * DeckSet (presentations using Markdown)
 

@@ -21,13 +21,6 @@ Current functionalities include:
 - Converting addons' [PluginInfo/ThemeInfo](/developer/addons/plugin-theme-info) to the [addon.json format](/developer/addons/addon-info).
 - Validate addons in a Vanilla installation.
 
-## Contents
-
-- [Getting Started](#getting-started)
-- [Build Tools](#build-tools)
-- [Addon Utilities](#addon-utilities)
-- [Common Issues](#common-issues)
-
 ## Getting Started
 
 Follow the [setup guide](/developer/vanilla-cli/installation).
@@ -51,56 +44,14 @@ The Vanilla Build Tool aims to provide a consistant experience to building front
 
 ### Options
 
-#### `--process [process_version]`
-Select the build process you wish to use. This will override any other method of settings such the `build.processVersion` in the [addon.json](/developer/addons/addon-info/#build). Current options are [core](/developer/vanilla-cli/build-process-v1), [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy).
-
-#### `--csstool [tool_name]`
-Select the CSS preprocessor to use. Current options are `scss` and `less`. The default is `scss`.
-
 #### `--watch`
 Run the build process in watch mode. This will listen for changes in your code and recompile the parts that have changed. It spawns a local server meant to hook into the [livereload](http://livereload.com/extensions/) browser extension for [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/livereload/), and [Safari](http://livereload.com/extensions/). This is officially supported by the `1.0` build process only. It may also work with the `legacy` build process if the addon supports it.
 
 #### `--verbose`
 Log additional output to stdout. This is helpful for finding out what might be wrong in your build process and outlines each step as they occur.
 
-#### `--reset`
+#### `--reinitialize`
 This tool has its own javascript dependencies that it relies on to function properly. Some of these are native modules and may require recompilation if your OS or Node.js installation get upgraded. This flags clears all cached modules and reinstall/recompiles them. The tool will attempt to do this automatically if necessary, but this command can be useful for fixing dependency related issues.
-
-## Linting Tools
-
-The Vanilla CLI bundles a linter that enforces Vanilla Forums standards of code quality for SCSS stylesheets and javscripts files. It is built using [ESLint](https://eslint.org/) and [StyleLint](https://stylelint.io/). Options are determined with fallbacks in this order CLI Options/Args > Configuration > Defaults. Configuration can be specific in the [addon.json file](/developer/addons/addon-info#lint).
-
-### Usage
-`vanilla build [<options>] [<arguments>]`
-
-### Options
-
-#### `--scripts`
-
-Causes the tool to only run the javascript related parts of the process.
-
-#### `--scripts`
-
-Causes the tool to only run the javascript related parts of the process.
-
-#### `--watch`
-
-Run to the tool in watch mode. Changed files will be linted. Currently newly added files require a re-running the command.
-
-#### `--fix`
-
-Lint the files and attempt to automatically fix certain types of linting errors.
-
-### Arguments
-
-Arguments should be file paths or globs to be linted. The default arguments are `"src/**/*.js" "src/**/*.jsx" "src/**/*.scss"`. `node_modules` and `vendor` directories will be ignored automatically. This allows arbitrary files to be linted.
-
-Be sure to put quotes around glob arguments. If there are no quotes a glob bash/zsh/fish may automatically expand the glob, which will prevent files from being ignored properly.
-
-### Linting Rules
-For scripts the CLI bundles the [default ESLint rules](https://eslint.org/docs/rules/). It also bundles its config which can be found [in the Github repo](https://github.com/vanilla/vanilla-cli/blob/master/src/NodeTools/Linter/configs/.eslintrc).
-
-For stylesheets the CLI bundles both [the default Stylelint rules](https://stylelint.io/user-guide/rules/) and the [stylelint-scss rules](https://github.com/kristerkari/stylelint-scss). It bundles a very minimal config which can be find [in the Github repo](https://github.com/vanilla/vanilla-cli/blob/master/src/NodeTools/Linter/configs/.stylelintrc).
 
 ## Addon Utilities
 
@@ -162,29 +113,6 @@ The CLI tool has a verbose mode which can output additional information to the c
 ```bash
 vanilla build --verbose
 ```
-
-### I'm getting an error message that my Vanilla source directory is missing or incorrect.
-
-In order to function properly the CLI tool needs to know where your Vanilla installation is located on your system. These examples will use `~/workspace/vanilla` as the vanilla directory. The location on your local machine may be different. This can be passed on every command with the `--vanillasrc` parameter.
-
-```bash
-vanilla build --vanillasrc=~/workspace/vanilla
-```
-
-Note that this is a ***temporary solution***. It will not carry across different shells or reboots. For a more permanent solution you can set an [environmental variable](https://www.cyberciti.biz/faq/set-environment-variable-unix/).
-
-```bash
-# For Bash.
-# In ~/.bashrc, ~/.profile, or ~/.bash_profile. 
-# This will save the variable persistently across all of your sessions.
-export VANILLACLI_VANILLA_SRC_DIR=~/workspace/vanilla
-
-# In fish shell.
-# This will save the variable persistently across all of your sessions.
-set -Ux VANILLACLI_VANILLA_SRC_DIR ~/workspace/vanilla
-```
-
-Note that there are *not* quotes around any of the paths.
 
 ### I'm having an issue with the CLI's own node_module dependancies.
 
