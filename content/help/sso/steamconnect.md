@@ -16,7 +16,8 @@ aliases:
 
 ## SteamConnect : Overview
 
-Steam can act as an OpenID provider. This allows your application to authenticate a user's SteamID without requiring them to enter their steam username or password on your site . This is done by enabling OpenID then SteamConnect SSO addons,
+Steam can act as an OpenID provider. This allows your application to authenticate a user's SteamID without requiring 
+them to enter their steam username or password on your site . This is done by enabling OpenID then SteamConnect SSO addons,
 and configuring steamconnect via its Settings page (Dashboard → Addons → Steam Connect → Settings button).
 
 ## SteamConnect settings
