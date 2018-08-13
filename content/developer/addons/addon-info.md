@@ -275,42 +275,15 @@ A list of Vanilla Forums Cloud sites to show display the addon on. See [Addon Vi
 ],
 ```
 
-### parent
-
-The [core build process](/developer/vanilla-cli/build-process-core#child-themes) allows themes to build against each other in order to facilitate stylesheet re-use. This key should be the addon `key` of another theme build with the `core` build process.
-
-#### Example
-```json
-{
-    "key": "child-theme",
-    "parent": "parent-theme",
-    "build": {
-        "process": "core"
-    }
-}
-```
-
 ### build
 
 Specifies options for the [Vanilla CLI's build tool](/developer/vanilla-cli#build-tools).
 
 #### build.process
 
-Which process version to use. Currently available processes are [core](/developer/vanilla-cli/build-process-core), [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy). The default is `legacy` for backwards compatibility purposes.
+Which process version to use. Currently available processes are [v1](/developer/vanilla-cli/build-process-v1) and [legacy](/developer/vanilla-cli/build-process-legacy). The default is `legacy` for backwards compatibility purposes.
 
 This parameter has been renamed before. In previous versions of the `vanilla-cli`, this key was called `buildProcessVersion` and `build.processVersion`. These keys are deprecated but will continue to work. The tool internally maps them to the new key.
-
-#### build.entries
-
-Entries are available only in the [core build process](/developer/vanilla-cli/build-process-core/#executable-bundles).
-
-The `entries` of desired output files to entry files. It is an object mapping `outputKey => entryFilePath`, where the key is used to resolve the output filename and location, and the value is used to resolve the location of the entrypoint. Most addons should have very few entries and many will have just 1. Any relative file paths will be resolved relative to the addon.json file.
-
-#### build.exports
-
-Exports are available only in the [core build process](/developer/vanilla-cli/build-process-core/#dependency-bundles).
-
-They are used to allow allow addons to build against other addons. Anything resolved in an export gets outputted into a separate library for other addons to build against. It is an object mapping `outputKey => entryFilePath[]`. Any relative file paths will be resolved relative to the addon.json file. Unqualified paths (eg. 'jquery', 'ace-editor') will be resolved in that addon's `node_modules` folder.
 
 #### build.cssTool
 
@@ -321,81 +294,5 @@ Which CSS preprocessor to use. Current options are `scss` and `less`. The defaul
 "build": {
     "process": "v1",
     "cssTool": "scss"
-}
-```
-```json
-"build": {
-    "key": "dashboard",
-    "process": "core",
-    "entries": {
-        "app": "./src/scripts/app/index.js",
-        "admin": "./src/scripts/admin/index.js"
-    },
-    "exports": {
-        "app": ["./src/scripts/common/Modal", "./src/scripts/app/ProfileEvents", "moment"],
-        "admin": ["./src/scripts/common/Modal", "./src/scripts/admin/jenga-blocks", "ace", "moment", "bootstrap", "jquery"]
-    }
-}
-```
-
-### lint
-
-Specifies options for the [Vanilla CLI's lint tool](/developer/vanilla-cli#linting-tools).
-
-#### lint.scripts
-
-##### lint.scripts.enable
-
-Enable linting of script files. Defaults to true.
-
-##### lint.scripts.configFile
-
-Provide a path to an ESLint config file. By default the following files will be checked:
-
-- `<addonDirectory>/.eslintrc`
-- `<addonDirectory>/.eslintrc.json`
-- `<addonDirectory>/.eslintrc.yaml`
-- `<addonDirectory>/config.eslintrc.js`
-
-#### lint.styles
-
-##### lint.scripts.enable
-
-Enable linting of SCSS stylesheets. Defaults to true.
-
-##### lint.scripts.configFile
-
-Provide a path to an StyleLint config file. By default the following files will be checked:
-
-- `<addonDirectory>/.stylelintrc`
-- `<addonDirectory>/.stylelintrc.json`
-- `<addonDirectory>/.stylelintrc.yaml`
-- `<addonDirectory>/config.stylelintrc.js`
-
-#### paths
-
-An array of files or globs to lint. Defaults to
-```json
-[
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.scss"
-]
-```
-
-#### Example
-
-```json
-"lint": {
-    "scripts": {
-        "configFile": "otherDirectory/.eslintrc"
-    },
-    "styles": {
-        "enable": false,
-    },
-    "paths": [
-        "otherDirectory/src/**/.js",
-        "otherDirectory/src/**/.jsx"
-    ]
 }
 ```
