@@ -30,12 +30,11 @@ Follow the [setup guide](/developer/vanilla-cli/installation).
 The Vanilla CLI bundles it's own build tool to make starting and mainting your Vanilla Forums addons easier.
 
 - [Build Tool Quickstart Guide](/developer/vanilla-cli/build-quickstart)
-- [Build Process - Core](/developer/vanilla-cli/build-process-core)
 - [Build Process - 1.0](/developer/vanilla-cli/build-process-v1)
 - [Build Process - Legacy](/developer/vanilla-cli/build-process-legacy)
 - [How Bundling Works](/developer/vanilla-cli/bundling-process)
 
-Both the core of Vanilla and its many addons often have their own tools to build their frontend dependencies. Normally these tools bundle, concatenate, and/or minify the javascript and styles, compress images and other assets, and may include a CSS authoring tool such as [Sass](http://sass-lang.com/) or [Less](http://lesscss.org/). Many of these build toolchains accomplish the same objective but in different ways.
+Many Vanilla addons often have their own tools to build their frontend dependencies. Normally these tools bundle, concatenate, and/or minify the javascript and styles, compress images and other assets, and may include a CSS authoring tool such as [Sass](http://sass-lang.com/) or [Less](http://lesscss.org/). Many of these build toolchains accomplish the same objective but in different ways.
 
 The Vanilla Build Tool aims to provide a consistant experience to building frontend assets for Vanilla. If you specify a build process in your [addon.json](/developer/addons/addon-info/#build) it will use that process automatically, but falls back to [legacy build process](/developer/vanilla-cli/build-process-legacy) for older projects. This is to try to smooth the edges of working with older addons, but is not as simple as using one of the built in processes.
 

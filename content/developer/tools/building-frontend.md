@@ -12,6 +12,10 @@ category: developer
 menu:
   developer:
     parent: tools
+aliases:
+    - /developers/vanilla-cli/build-process-core
+versioning:
+    added: 2.7
 ---
 
 Vanilla's frontend scripts use a single global build process. This is used for all internal javscript, both in core and addons.
@@ -20,8 +24,14 @@ This build process is __not__ suitable for 3rd party addons, as it relies on hav
 ## What does it do?
 
 The included build process uses Typescript and Webpack to bundle typescript files to into javascript bundles.
-These bundles will be automatically loaded by Vanilla if the addon they belong to is enabled.
-The output files live in `/js/webpack` folders throughout the core and in addons.
+
+Every addon in your current vanilla project containing entries will get built. Currently that means bundling scripts from the following addons:
+
+- `dashboard`
+- `rich-editor`
+- `ui-tests`
+
+The outputted bundles will automatically be loaded by Vanilla into the page if their addon is enabled.
 
 ## Prerequisites
 
@@ -66,7 +76,7 @@ yarn build -vif
 There are multiple different build modes and each of them does something different.
 It also possible to specify any of these modes through the `--mode` option.
 
-#### build
+## build
 
 This is the default production build.
 It will generate full sourcemaps and output production ready javascript to the disk inside of your repos.
@@ -76,7 +86,7 @@ It is:
 - Slow.
 - Accurate.
 
-#### build:development
+## build:development
 
 Development builds _do not_ write javascript to the disk.
 Instead the typescript files from all of your enabled addons and will be build into a single file that is kept in memory only and served through a local web server.
@@ -95,7 +105,7 @@ $Configuration['HotReload']['Enabled'] = true;
 Setting this config value will instruct your Vanilla installation to load its built javascript
 from the development build's web-server instead of the pre-built files. Don't forget to turn this off when you're done!
 
-#### build:analyse
+## build:analyse
 
 This command runs a production build then uses `webpack-analyze` to open a local webserver with details about:
 
@@ -104,7 +114,7 @@ This command runs a production build then uses `webpack-analyze` to open a local
 - How large files are.
 - Which files are in which bundles.
 
-#### build:polyfills
+## build:polyfills
 
 Separate from any application Vanilla's `AssetModel` provides a page blocking polyfill for older browsers (does not execute in modern ones).
 This is build process for that file. Since that file is the first thing loaded it can have no vanilla or addon specific dependencies and gets built separately.
@@ -139,4 +149,43 @@ This means your entry file may be one of the following file:
 - `/plugins/MY_PLUGIN/src/scripts/entries/forum.tsx`
 - `/plugins/MY_PLUGIN/src/scripts/entries/admin.tsx`
 
-Every other file may be outputted from there.
+Every other file may be imported from one of these entries.
+
+### Dynamic entries
+
+Anytime you have secondary content of a significant size that is not the primary content of a page it should be dynamically imported. This will split everything from that import down the chain into it's own javascript bundle. If the import statement is reached, that separate bundle will be dynamically loaded by the client, and the imported file's exports returned in a Promise.
+
+Rich Editor is a great example of this. It:
+
+- Only loads under certain conditions (signed in user, posting permissions, on a comment/posting page).
+- Very large (~400 Kb).
+
+So in the `plugins/rich-editor/src/scripts/entries/forum.ts` you can find code similar to the following:
+
+```ts
+async function startEditor() {
+    if (pageNeedsRichEditor()) {
+        const mountEditorModule = await import("./mountEditor" /* webpackChunkName="plugins/rich-editor/js/webpack/chunks/mountEditor" */)
+        const mountEditor = mountEditorModule.default;
+        mountEditor(getMountPoint());
+    }
+}
+```
+
+There are a few things to decouple here.
+
+1. The `import()` function returns a Promise of module. It is an asyncrounous operation and must be handled as such.
+2. Default exports get put on a named property `default` of the imported module. Named exports will be put on a property of their name. See [webpack's import() documentation](https://webpack.js.org/api/module-methods/#import-) for more details.
+3. You __MUST__ provide a `webpackChunkName` property. Omitting it will result in a chunk named `0.min.js` or `1.min.js` in the root of the vanilla installation where 0 or 1 will be a automatically incrementing integer. The file _will_ still be automatically loaded but it is important to ensure the built chunks end up in a similar location. The `js/webpack/chunks` directory of your addon is the customary place to output this file.
+
+## Site Sections
+
+Every addon may offer entrypoints for different "sections" of the site. These will get loaded based on the master view in use.
+
+__`forum` entries__
+
+Forum entries are loaded in what would be considered the "frontend" of the site. That is anything using the `default` master view (currently `default.master.tpl`).
+
+__`admin` entries__
+
+Admin entries are for the administrative dashboard of the site. That is anything using the `admin` master view (currently `admin.master.tpl`).
