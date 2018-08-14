@@ -19,9 +19,6 @@
     "http://127.0.0.1:1313/api/smart-id/",
     "http://127.0.0.1:1313/api/use-api-on-external-site/",
     "http://127.0.0.1:1313/api/users/",
-    "http://127.0.0.1:1313/categories/",
-    "http://127.0.0.1:1313/categories/cloud/",
-    "http://127.0.0.1:1313/categories/leaving/",
     "http://127.0.0.1:1313/developer/",
     "http://127.0.0.1:1313/developer/addons/",
     "http://127.0.0.1:1313/developer/addons/addon-info/",
@@ -177,6 +174,5 @@
     "http://127.0.0.1:1313/help/sso/jsconnect/",
     "http://127.0.0.1:1313/help/sso/oauth/",
     "http://127.0.0.1:1313/help/sso/saml/",
-    "http://127.0.0.1:1313/help/sso/social-connect/",
-    "http://127.0.0.1:1313/series/"
+    "http://127.0.0.1:1313/help/sso/social-connect/"
 ]
