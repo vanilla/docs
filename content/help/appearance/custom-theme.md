@@ -32,7 +32,10 @@ For example, to change the font to the Google Font Lato:
 
 Notes:
  * Knowledge of CSS is required to use the CSS customization features of Vanilla 
- * If you would like to install a font that is not available as a webfont, please contact Vanilla support.  
+ * If you would like to install a font that is not available as a webfont, please contact Vanilla support.
+ * For safe implementation, use smarty's [escape variable modifier](https://www.smarty.net/docsv2/en/language.modifier.escape).
+   Be careful when using the $Path variable: Unsafe implementation:{$Path}. Safe implementation: {$Path|escape:'url'}.
+     
 
 Additional Resources:
 
