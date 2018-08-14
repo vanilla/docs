@@ -135,17 +135,6 @@ import {someOtherFunction} from "../sibling-file";
 
 If you are importing a file ending in `.js` or `.jsx` you do not need to and should not provide a file extension.
 
-
-## Typescript
-
-{{% versioning added="2.6" %}}
-
-The `core` build process now supports typescript. If you're not familiar with typescript, see the [typescript website](https://www.typescriptlang.org/).
-
-Typescript files are interoperable with javascript in this build process. A typescript file can import a javascript file and vice-versa. The only change you need to make for this build tool to interpret your javascript file as a typescript file is to rename the file extension from `js` to `ts` or from `jsx` to `tsx`. Because of this, it is recommended that your write you're script imports _without_ a file extension on them. The build tool will infer the file extension based on the actual file that exists. This allows easier migration from one extension to another if a file is converted to typescript or to support JSX.
-
-The typescript config being used will be the `tsconfig.json` at the top of your local Vanilla Forums installation.
-
 ## Sass
 
 Sass partials can be required as usual with

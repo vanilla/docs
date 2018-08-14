@@ -28,6 +28,7 @@ function generateLinksToCheck() {
         return link.replace("<loc>", "").replace("</loc>", "");
     }).sort();
 
+
     fs.writeFileSync("current-links.json", JSON.stringify(cleanedLinks, null, 4), "utf8");
 
     console.log(`A list of existing site links has been generated in ${chalk.yellow("current-links.json")}.`);

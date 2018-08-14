@@ -20,6 +20,7 @@ To automatically recompile Composer dependencies when you make commits, pull, or
 ```
 #!/bin/sh
 composer install
+yarn install
 ```
 
 To these files in your git repository (creating them if they do not exist):
