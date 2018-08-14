@@ -13,7 +13,7 @@ menu:
   developer:
     parent: tools
 aliases:
-    - /developers/vanilla-cli/build-process-core
+    - /developer/vanilla-cli/build-process-core/
 versioning:
     added: 2.7
 ---
