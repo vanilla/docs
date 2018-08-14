@@ -25,9 +25,8 @@ yarn install
 
 To these files in your git repository (creating them if they do not exist):
 
-* `.git/tools/post-commit`
-* `.git/tools/post-merge`
-* `.git/tools/post-checkout`
+* `.git/hooks/post-merge`
+* `.git/hooks/post-checkout`
 
 Then make the files executable. On MacOS, you can use `chmod +x [filename]` to do this.
 
