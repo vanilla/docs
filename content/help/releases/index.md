@@ -23,13 +23,3 @@ Full release notes:
 * [2018 releases](/cloud/releases/2018)
 * [2017 releases](/cloud/releases/2017)
 * [2016 VIP releases](/cloud/releases/2016)
-
-### 2017 VIP releases
-
-* **Spring**: 11-12 April
-* **Summer**: 11-12 July
-* **Fall**: 17-18 October
-
-### 2018 VIP Releases
-
-* **Spring**: 5-6 April 
