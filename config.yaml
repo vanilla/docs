@@ -21,7 +21,6 @@ params:
         github: "https://github.com/vanilla/vanilla"
         issues: "https://github.com/vanilla/vanilla/issues"
 
-taxonomies:
-    category: "categories"
-    tag: "tags"
-    series: "series"
+disableKinds:
+- taxonomy
+- taxonomyTerm
