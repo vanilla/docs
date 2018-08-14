@@ -26,9 +26,6 @@ function generateLinksToCheck() {
     const links = sitemap.match(/<loc>.+<\/loc>/g);
     const cleanedLinks = links.map(link => {
         return link.replace("<loc>", "").replace("</loc>", "");
-    }).filter(link => {
-        // Filter out tag links.
-        return !link.match(/\/tags\//)
     }).sort();
 
 
