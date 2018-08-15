@@ -67,7 +67,7 @@ First, make a standard HTTPS GET request to the authentication provider's author
 * `scope: openid profile email` (can be configured in the OAuth2 settings page in Vanilla)
 
 The result is a URL which, when visited by a user signed in on the authentication provider, will route the user back to Vanilla to begin SSO authentication. If the user already has an account, they can automatically connect to an existing or can automatically create a new account, they will be signed into Vanilla at the end of the request chain. The URL will look something like this: 
-`https://[auth-domain].com/authorize?response_type=code&client_id=1234567890ABCDEFG&redirect_uri=https%3A%2F%2Fcyourforum.com%2Fentry%2Foauth2&scope=openid+profile+email`
+`https://[auth-domain].com/authorize?response_type=code&client_id=1234567890ABCDEFG&redirect_uri=https%3A%2F%2Fc[forum-domain].com%2Fentry%2Foauth2&scope=openid+profile+email`
 
 #### Test the connection
 
