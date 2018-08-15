@@ -48,7 +48,7 @@ With most SSO providers, you will have two additional requirements:
 
  * Your forum must be accessed over `https` by users.
  * Your forum must contact your Authorization Server using `https`.
- * Your Authorization Server will need to whitelist the redirect URI (e.g. `https://*[The url of the forum]*/entry/oauth2`)
+ * Your Authorization Server will need to whitelist the redirect URI (e.g. `https://[forum-domain].com/entry/oauth2`)
  
 
 ### Automating OAuth2 connections with Javascript
@@ -59,7 +59,7 @@ The following instructions will determine if the user is currently signed into t
 
 #### Create a connection in Javascript
 
-First, make a standard HTTPS GET request to the authentication provider's authorize endpoint. If you're using Auth0, this is usually something like `https://[example-auth-domain.com]/authorize`. Use the following parameters:
+First, make a standard HTTPS GET request to the authentication provider's authorize endpoint. If you're using Auth0, this is usually something like `https://[eauth-domain].com/authorize`. Use the following parameters:
 
 * `response_type: code`
 * `client_id: 1234567890ABCDEFG` (found in the provider's application settings)
@@ -67,13 +67,13 @@ First, make a standard HTTPS GET request to the authentication provider's author
 * `scope: openid profile email` (can be configured in the OAuth2 settings page in Vanilla)
 
 The result is a URL which, when visited by a user signed in on the authentication provider, will route the user back to Vanilla to begin SSO authentication. If the user already has an account, they can automatically connect to an existing or can automatically create a new account, they will be signed into Vanilla at the end of the request chain. The URL will look something like this: 
-`https://[example-auth-domain.com]/authorize?response_type=code&client_id=1234567890ABCDEFG&redirect_uri=https%3A%2F%2Fcyourforum.com%2Fentry%2Foauth2&scope=openid+profile+email`
+`https://[auth-domain].com/authorize?response_type=code&client_id=1234567890ABCDEFG&redirect_uri=https%3A%2F%2Fcyourforum.com%2Fentry%2Foauth2&scope=openid+profile+email`
 
 #### Test the connection
 
-1. Sign in at https://[example-auth-domain.com] (your actual SSO sign in page)
-2. Visit https://[yourforum].com. Make sure you are not logged in. Clear your cookies, if necessary.
+1. Sign in at `https://[auth-domain].com` (your actual SSO sign in page)
+2. Visit `https://[forum-domain].com`. Make sure you are not logged in. Clear your cookies, if necessary.
 3. Visit the "authorize" link described above.
-4. You should automatically arrive back at https://[yourforum].com, but you should now be signed into Vanilla.
+4. You should automatically arrive back at `https://[forum-domain].com`, but you should now be signed into Vanilla.
 
 In Vanilla, this can be implemented as Javascript in your page via the Customize Theme feature or a Pocket. Contact support if you need clarification on these steps.
