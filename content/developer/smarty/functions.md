@@ -350,7 +350,7 @@ Writes an `AdvancedSearchModule` to the page. This functionality is only the ava
 
 The advanced searchbox smarty tag does not currently offer a `placeholder` attribute. It's placeholder value can be changed by [editing the locale key](/developer/locales/) `SearchBoxPlaceHolder`.
 
-## Function `{hero_image_url}`
+## Function `{hero_image_link}`
 
 {{% cloudfeature %}}
 {{% versioning added="2.6" %}}

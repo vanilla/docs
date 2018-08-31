@@ -62,7 +62,7 @@ A category page will return the default image (set in the [plugin's setting](#se
 The URL of the image for the current page will be made available to Smarty Templates and customize theme with the tag:
 
 ```tpl
-{hero_image_url}
+{hero_image_link}
 ```
 
 If you place this custom smarty tag in your [Customize Theme](/help/appearance/custom-theme), and disable the Hero Image plugin you site _will_ break until you either remove the tag or re-enable the plugin.
@@ -82,7 +82,7 @@ if (class_exists("HeroImagePlugin")) {
 
 The easiest way to use the hero image url is through and image tag.
 ```html
-<img src="{hero_image_url}" class="MyHeroImage"/>
+<img src="{hero_image_link}" class="MyHeroImage"/>
 ```
 
 ### Advanced Usage
@@ -90,7 +90,7 @@ Sometimes you need more flexibility than an `<img>` tag can provide. If so you c
 
 #### HTML
 ```html
-<div class="MyHero" style="background-image: url('{hero_image_url}')">
+<div class="MyHero" style="background-image: url('{hero_image_link}')">
     <h1>{$Title}</h1>
     <p>{$Description}</p>
     {breadcrumbs}
