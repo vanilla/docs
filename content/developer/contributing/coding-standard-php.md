@@ -396,7 +396,6 @@ Another exception to this rule is `Controller` methods. Controllers routed throu
 
 ```
 'get_',
-'post_',
 'patch_',
 'post_',
 'index_',
