@@ -375,7 +375,9 @@ class ClassName {
 }
 ```
 
-The major exception to this rule is Event Methods.  Any method that has the following patterns:
+#### Event method exception
+
+One major exception to this rule is Event Methods. Any method that has the following patterns:
 
 ```
 '_handler',
@@ -383,10 +385,24 @@ The major exception to this rule is Event Methods.  Any method that has the foll
 '_before',
 '_override',
 '_after',
-'controller_'
+'controller_',
 ```
 
 Event methods MUST be `camelCase` separated by `_`.
+
+#### API method exception
+
+Another exception to this rule is `Controller` methods. Controllers routed through `ResourceRoute` may have methods prefixed with any of the following:
+
+```
+'get_',
+'patch_',
+'post_',
+'index_',
+'put_',
+'options_',
+'delete_',
+```
 
 ### 4.5. Method Arguments
 
@@ -429,11 +445,7 @@ class ClassName {
 ```
 ### 4.6. Global Functions
 
-Global function names SHOULD be declared in `camelCase()`.
-
-Global function names that match php style; such as array_something() are allowed
-and MUST be declared in lowercase.
-
+New global functions __MUST NOT__ be created.
 
 ### 4.7. `abstract`, `final`, and `static`
 
@@ -723,7 +735,14 @@ $foo->bar(
 
 - Descriptions MUST BE a full sentence with a capital to start and period to end
 
-- Short, return and parameter descriptions MUST be included if present
+- A short description MUST be provided
+
+- There MUST be one empty line after the short description.
+
+- Param annotations with a description MUST be provided UNLESS
+  - An `@inheritdoc` param is provided.
+
+- If a long description is provided there MUST be an empty line after it
 
 - There MUST be one space before and after parameters
 
@@ -731,10 +750,16 @@ $foo->bar(
 ```php
 /**
  * Short description.
+ * 
+ * This a long description. It has more detail than a short one. I must be a sentence with a full stop.
  *
  * @param string $string Parameter descriptions must be a sentence with full stop.
  *
  * @return bool True if user is added else false.
+ */
+
+/**
+ * @inheritdoc
  */
 ```
 
