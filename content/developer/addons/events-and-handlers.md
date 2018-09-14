@@ -124,7 +124,7 @@ public function base_render_before($sender) {
     }
 
     if(!val('UserRoles', $sender->Data)) {
-        $userRoles = val('UserRoles', $sender->Data));
+        $userRoles = val('UserRoles', $sender->Data);
         if (!$userRoles) {
             $user = val('User', Gdn::controller());
             if (!$user && Gdn::session()->isValid()) {
