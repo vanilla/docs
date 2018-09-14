@@ -11,17 +11,17 @@ menu:
     parent: framework
 ---
 
-Vanilla uses [garden-container](https://github.com/vanilla/garden-container) for dependency injection. The `\Garden\Container` object is a PSR-11 (Container Interface) compliant container class. This document outlines its usage in Vanilla, rather than how to use it, so it is worht reading the in-repo documentation.
+Vanilla uses [garden-container](https://github.com/vanilla/garden-container) for dependency injection. The `\Garden\Container` object is a PSR-11 (Container Interface) compliant container class. This document outlines its usage in Vanilla, rather than how to use it, so it is worth reading the in-repo documentation.
 
 ## Creating Container Rules
 
-The container is primarily configured in vanilla's bootstrap file `bootstrap.php`. An alterative configuration is provided for the test environment `VanillaTests\Bootstrap`.
+The container is primarily configured in Vanilla's bootstrap file, `bootstrap.php`. An alterative configuration is provided for the test environment `VanillaTests\Bootstrap`.
 
-Sometimes an addon needs to modify or add additional rules for the container. Vanilla's bootstrap fires an event called `container_init` which provides the container instance after its initial configuration.
+Sometimes an addon needs to modify or add additional rules for the container. Vanilla's bootstrap fires an event called `container_init`, which provides the container instance after its initial configuration.
 
 ### Example
 
-__/plugins/some-addon/SomeAddonPlugin.php
+__/plugins/some-addon/SomeAddonPlugin.php__
 ```php
 class SomeAddonPlugin extends Gdn_Plugin {
     public function container_init(\Garden\Container $container) {
