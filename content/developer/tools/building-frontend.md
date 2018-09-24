@@ -34,7 +34,7 @@ The outputted bundles will automatically be loaded by Vanilla into the page if t
 
 ## Prerequisites
 
-Node 8+ and Yarn are prerequisites to run this build tool. To install them:
+Node 10+ and Yarn are prerequisites to run this build tool. To install them:
 
 ```bash
 brew install node@10
