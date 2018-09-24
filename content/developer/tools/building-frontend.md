@@ -19,7 +19,6 @@ versioning:
 ---
 
 Vanilla's frontend scripts use a single global build process. This is used for all internal javscript, both in core and addons.
-This build process is __not__ suitable for 3rd party addons, as it relies on having commit access to the [vanilla/vanilla](http://github.com/vanilla/vanilla) repository.
 
 ## What does it do?
 
@@ -29,13 +28,13 @@ Every addon in your current vanilla project containing entries will get built. C
 
 - `dashboard`
 - `rich-editor`
-- `ui-tests`
+- Various internal addons.
 
 The outputted bundles will automatically be loaded by Vanilla into the page if their addon is enabled.
 
 ## Prerequisites
 
-Node 8+ and Yarn are prerequisites to run this build tool. To install them:
+Node 10+ and Yarn are prerequisites to run this build tool. To install them:
 
 ```bash
 brew install node@10
@@ -49,6 +48,42 @@ Next you will need to install the repo's `node_modules`. The build process will 
 # Navigate to the root of your Vanilla installation
 cd /path/to/vanilla
 yarn install
+```
+
+## Composer post-install
+
+The build is run automatically in a `post-install` hook of composer. This is to ensure a `composer install` provides a fully functioning vanilla setup. The equivalent command will be run:
+
+```sh
+yarn install --pure-lockfile
+yarn build -i
+```
+
+There are a few environmental variables that can affect how this composer post-install script is started.
+
+### VANILLA_BUILD_DISABLE_AUTO_BUILD
+
+Setting this environmental variable will disable automatic building after a composer install. So if you have a post-checkout hook and don't want to run the build on every checkout you can could run your install like this:
+
+```sh
+VANILLA_BUILD_DISABLE_AUTO_BUILD=true composer install
+```
+
+### VANILLA_BUILD_DISABLE_CODE_VALIDATION
+
+Setting this environmental variable will disable type checking and code validation. It is particularly useful for memory constrained environments, as the code validation is particularly memory intensive.
+
+```sh
+VANILLA_BUILD_DISABLE_CODE_VALIDATION=true composer install
+```
+
+### VANILLA_BUILD_NODE_ARGS
+
+The value of this environemental variable will be passed as arguments to the nodejs process used by the build script.
+
+```sh
+# Restrict the node process to 512Mb of RAM.
+VANILLA_BUILD_NODE_ARGS="--max-old-space-size=512" composer install
 ```
 
 ## Usage
@@ -140,9 +175,9 @@ Do __not__ use this at the same time as an IDE that formats on save. Your IDE wi
 
 All source files __MUST__ be typescript files with an extension of `.ts` or `.tsx` and reside in the `src/scripts` directory of an addon.
 
-Entries __MUST__ be placed directly in the `src/scripts/entries` directory of an addon.
-Vanilla currently supports 2 core entries: `forum` and `admin`.
-This means your entry file may be one of the following file:
+Entries __MUST__ be placed directly in the `src/scripts/entries` directory of an addon. Adding an entry of a given name will create an entry of that type. Currently 2 entries are provided by the dashboard and rich-editor addons `forum` and `admin`.
+
+This means an entry for one of those sections would be one of the following files.
 
 - `/plugins/MY_PLUGIN/src/scripts/entries/forum.ts`
 - `/plugins/MY_PLUGIN/src/scripts/entries/admin.ts`
@@ -165,7 +200,7 @@ So in the `plugins/rich-editor/src/scripts/entries/forum.ts` you can find code s
 ```ts
 async function startEditor() {
     if (pageNeedsRichEditor()) {
-        const mountEditorModule = await import("./mountEditor" /* webpackChunkName="plugins/rich-editor/js/webpack/chunks/mountEditor" */)
+        const mountEditorModule = await import("./mountEditor" /* webpackChunkName="chunks/mountEditor" */)
         const mountEditor = mountEditorModule.default;
         mountEditor(getMountPoint());
     }
@@ -176,11 +211,11 @@ There are a few things to decouple here.
 
 1. The `import()` function returns a Promise of module. It is an asyncrounous operation and must be handled as such.
 2. Default exports get put on a named property `default` of the imported module. Named exports will be put on a property of their name. See [webpack's import() documentation](https://webpack.js.org/api/module-methods/#import-) for more details.
-3. You __MUST__ provide a `webpackChunkName` property. Omitting it will result in a chunk named `0.min.js` or `1.min.js` in the root of the vanilla installation where 0 or 1 will be a automatically incrementing integer. The file _will_ still be automatically loaded but it is important to ensure the built chunks end up in a similar location. The `js/webpack/chunks` directory of your addon is the customary place to output this file.
+3. You __MUST__ provide a `webpackChunkName` property. Omitting it will result in a chunk named `0.min.js` or `1.min.js` in the root the sections build directory where 0 or 1 will be a automatically incrementing integer. The files will still be loaded, but providing a name allows for easier viewing of what scripts are loaded in the page.
 
 ## Site Sections
 
-Every addon may offer entrypoints for different "sections" of the site. These will get loaded based on the master view in use.
+Every addon may offer entrypoints for different "sections" of the site. These will get loaded based off the javascript files requested from the `AssetModel::getWebpackJsFiles(string $section)`.
 
 __`forum` entries__
 
@@ -189,3 +224,31 @@ Forum entries are loaded in what would be considered the "frontend" of the site.
 __`admin` entries__
 
 Admin entries are for the administrative dashboard of the site. That is anything using the `admin` master view (currently `admin.master.tpl`).
+
+__Additional entries__
+
+If you wanted to create a entry for a new section (lets use `mySection` as an example) you would do the following:
+
+1. Create a file `src/scripts/entries/mySection.ts` or `src/scripts/entries/mySection.tsx` in your addon.
+2. Run the build.
+3. Call `$assetModel->getWebpackJsFiles('mySection')` and add the resulting script files to your page.
+
+## Output files
+
+The `AssetModel` is responsible for gathering build files. You should not be referencing them directly as their locations may change in the future. Please use `AssetModel::getWebpackJsFiles()` instead.
+
+### Location
+
+Output files are build into the `dist` directory. Each section get's it own folder. The folder structure of a section looks like this:
+
+__dist/forum__
+```
+runtime.min.js   (Webpack runtime)
+vendors.min.js   (vendor JS. Everything from node_modules)
+shared.min.js    (Shared code from the `@library`)
+addons/*         (Build entry points from addons. Eg. `addons/rich-editor.mins.js`, `addons/dashboard.min.js`)
+bootstrap.min.js (The script the fires the `onReady()` event.)
+async~someChunkName.min.js
+```
+
+Each of these files has its own sourcemap file as well. The `async~` the chunks build from dynamic import statements.
