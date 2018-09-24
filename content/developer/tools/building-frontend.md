@@ -50,6 +50,42 @@ cd /path/to/vanilla
 yarn install
 ```
 
+## Composer post-install
+
+The build is run automatically in a `post-install` hook of composer. This is to ensure a `composer install` provides a fully functioning vanilla setup. The equivalent command will be run:
+
+```sh
+yarn install --pure-lockfile
+yarn build -i
+```
+
+There are a few environmental variables that can affect how this composer post-install script is started.
+
+### VANILLA_BUILD_DISABLE_AUTO_BUILD
+
+Setting this environmental variable will disable automatic building after a composer install. So if you have a post-checkout hook and don't want to run the build on every checkout you can could run your install like this:
+
+```sh
+VANILLA_BUILD_DISABLE_AUTO_BUILD=true composer install
+```
+
+### VANILLA_BUILD_DISABLE_CODE_VALIDATION
+
+Setting this environmental variable will disable type checking and code validation. It is particularly useful for memory constrained environments, as the code validation is particularly memory intensive.
+
+```sh
+VANILLA_BUILD_DISABLE_CODE_VALIDATION=true composer install
+```
+
+### VANILLA_BUILD_NODE_ARGS
+
+The value of this environemental variable will be passed as arguments to the nodejs process used by the build script.
+
+```sh
+# Restrict the node process to 512Mb of RAM.
+VANILLA_BUILD_NODE_ARGS="--max-old-space-size=512" composer install
+```
+
 ## Usage
 
 ```sh
@@ -126,6 +162,10 @@ The following flags have a long option and name a short alias. Use whichever you
 
 Print additional output to your console.
 
+#### --install or -i
+
+Automatically install `node_modules` of all addons being built at the start of the build.
+
 #### --fix or -f
 
 Automatically fix styling and fixable lint errors in all built source files.
@@ -192,3 +232,18 @@ If you wanted to create a entry for a new section (lets use `mySection` as an ex
 1. Create a file `src/scripts/entries/mySection.ts` or `src/scripts/entries/mySection.tsx` in your addon.
 2. Run the build.
 3. Call `$assetModel->getWebpackJsFiles('mySection')` and add the resulting script files to your page.
+
+## Output files
+
+The `AssetModel` is responsible for gathering build files. You should not be referencing them directly as their locations may change in the future. Please use `AssetModel::getWebpackJsFiles()` instead.
+
+### Location
+
+Output files are build into the `dist` directory. Each section get's it own folder. The folder structure of a section looks like this:
+
+__dist/forum__
+```
+runtime.min.js (Webpack runtime)
+vendors.min.js (vendor JS. Everything from node_modules)
+
+```
