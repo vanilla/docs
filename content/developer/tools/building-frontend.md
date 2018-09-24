@@ -243,7 +243,12 @@ Output files are build into the `dist` directory. Each section get's it own fold
 
 __dist/forum__
 ```
-runtime.min.js (Webpack runtime)
-vendors.min.js (vendor JS. Everything from node_modules)
-
+runtime.min.js   (Webpack runtime)
+vendors.min.js   (vendor JS. Everything from node_modules)
+shared.min.js    (Shared code from the `@library`)
+addons/*         (Build entry points from addons. Eg. `addons/rich-editor.mins.js`, `addons/dashboard.min.js`)
+bootstrap.min.js (The script the fires the `onReady()` event.)
+async~someChunkName.min.js
 ```
+
+Each of these files has its own sourcemap file as well. The `async~` the chunks build from dynamic import statements.
