@@ -19,7 +19,6 @@ versioning:
 ---
 
 Vanilla's frontend scripts use a single global build process. This is used for all internal javscript, both in core and addons.
-This build process is __not__ suitable for 3rd party addons, as it relies on having commit access to the [vanilla/vanilla](http://github.com/vanilla/vanilla) repository.
 
 ## What does it do?
 
@@ -29,7 +28,7 @@ Every addon in your current vanilla project containing entries will get built. C
 
 - `dashboard`
 - `rich-editor`
-- `ui-tests`
+- Various internal addons.
 
 The outputted bundles will automatically be loaded by Vanilla into the page if their addon is enabled.
 
@@ -127,10 +126,6 @@ The following flags have a long option and name a short alias. Use whichever you
 
 Print additional output to your console.
 
-#### --install or -i
-
-Automatically install `node_modules` of all addons being built at the start of the build.
-
 #### --fix or -f
 
 Automatically fix styling and fixable lint errors in all built source files.
@@ -140,9 +135,9 @@ Do __not__ use this at the same time as an IDE that formats on save. Your IDE wi
 
 All source files __MUST__ be typescript files with an extension of `.ts` or `.tsx` and reside in the `src/scripts` directory of an addon.
 
-Entries __MUST__ be placed directly in the `src/scripts/entries` directory of an addon.
-Vanilla currently supports 2 core entries: `forum` and `admin`.
-This means your entry file may be one of the following file:
+Entries __MUST__ be placed directly in the `src/scripts/entries` directory of an addon. Adding an entry of a given name will create an entry of that type. Currently 2 entries are provided by the dashboard and rich-editor addons `forum` and `admin`.
+
+This means an entry for one of those sections would be one of the following files.
 
 - `/plugins/MY_PLUGIN/src/scripts/entries/forum.ts`
 - `/plugins/MY_PLUGIN/src/scripts/entries/admin.ts`
@@ -165,7 +160,7 @@ So in the `plugins/rich-editor/src/scripts/entries/forum.ts` you can find code s
 ```ts
 async function startEditor() {
     if (pageNeedsRichEditor()) {
-        const mountEditorModule = await import("./mountEditor" /* webpackChunkName="plugins/rich-editor/js/webpack/chunks/mountEditor" */)
+        const mountEditorModule = await import("./mountEditor" /* webpackChunkName="chunks/mountEditor" */)
         const mountEditor = mountEditorModule.default;
         mountEditor(getMountPoint());
     }
@@ -176,11 +171,11 @@ There are a few things to decouple here.
 
 1. The `import()` function returns a Promise of module. It is an asyncrounous operation and must be handled as such.
 2. Default exports get put on a named property `default` of the imported module. Named exports will be put on a property of their name. See [webpack's import() documentation](https://webpack.js.org/api/module-methods/#import-) for more details.
-3. You __MUST__ provide a `webpackChunkName` property. Omitting it will result in a chunk named `0.min.js` or `1.min.js` in the root of the vanilla installation where 0 or 1 will be a automatically incrementing integer. The file _will_ still be automatically loaded but it is important to ensure the built chunks end up in a similar location. The `js/webpack/chunks` directory of your addon is the customary place to output this file.
+3. You __MUST__ provide a `webpackChunkName` property. Omitting it will result in a chunk named `0.min.js` or `1.min.js` in the root the sections build directory where 0 or 1 will be a automatically incrementing integer. The files will still be loaded, but providing a name allows for easier viewing of what scripts are loaded in the page.
 
 ## Site Sections
 
-Every addon may offer entrypoints for different "sections" of the site. These will get loaded based on the master view in use.
+Every addon may offer entrypoints for different "sections" of the site. These will get loaded based of the javascript files requested from the `AssetModel::getWebpackJsFiles(string $section)`.
 
 __`forum` entries__
 
@@ -189,3 +184,11 @@ Forum entries are loaded in what would be considered the "frontend" of the site.
 __`admin` entries__
 
 Admin entries are for the administrative dashboard of the site. That is anything using the `admin` master view (currently `admin.master.tpl`).
+
+__Additional entries__
+
+If you wanted to create a entry for a new section (lets use `mySection` as an exampel) you would do the following:
+
+1. Create a file `src/scripts/entries/mySection.ts` or `src/scripts/entries/mySection.tsx` in your addon.
+2. Run the build.
+3. Call `$assetModel->getWebpackJsFiles('mySection')` and add the resulting script files to your page.
