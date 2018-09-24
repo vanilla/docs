@@ -215,7 +215,7 @@ There are a few things to decouple here.
 
 ## Site Sections
 
-Every addon may offer entrypoints for different "sections" of the site. These will get loaded based of the javascript files requested from the `AssetModel::getWebpackJsFiles(string $section)`.
+Every addon may offer entrypoints for different "sections" of the site. These will get loaded based off the javascript files requested from the `AssetModel::getWebpackJsFiles(string $section)`.
 
 __`forum` entries__
 
@@ -227,7 +227,7 @@ Admin entries are for the administrative dashboard of the site. That is anything
 
 __Additional entries__
 
-If you wanted to create a entry for a new section (lets use `mySection` as an exampel) you would do the following:
+If you wanted to create a entry for a new section (lets use `mySection` as an example) you would do the following:
 
 1. Create a file `src/scripts/entries/mySection.ts` or `src/scripts/entries/mySection.tsx` in your addon.
 2. Run the build.
