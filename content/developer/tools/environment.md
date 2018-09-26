@@ -131,7 +131,7 @@ fi
 
 First, grab xdebug.
 
-`brew install xdebug`
+`pecl install xdebug`
 
 If you're using the normal nginx setup we pass around the office, your upstream backend is probably listening on port 9000, which is the default for xdebug, so there's a conflict. So, let's set xdebug to 9009.
 
