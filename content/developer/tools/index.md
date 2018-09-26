@@ -34,9 +34,9 @@ Vanilla uses a wide range to tools and technologies to build its product. This l
 
 * homebrew
 * git
-* xdebug
-* PHPUnit
-* Docker
+* [Docker](https://github.com/vanilla/vanilla-docker)
+* [xdebug](https://docs.vanillaforums.com/developer/tools/environment/#proper-debugging-setup)
+* [PHPUnit](https://github.com/vanilla/vanilla/tree/master/tests)
 * [Composer](https://github.com/vanilla/vanilla/blob/master/composer.json)
 * [CodeSniffer](https://github.com/vanilla/standards)
 * [Phing](https://github.com/vanilla/vanilla#building-with-phing)
