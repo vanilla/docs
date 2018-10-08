@@ -1,5 +1,5 @@
 ---
-title: Setting up Custom SSL (https)
+title: Setting up Custom SSL (HTTPS)
 tags:
 - Features
 - SSL
@@ -14,7 +14,7 @@ aliases:
 
 {{% cloudfeature %}}
 
-## Setting up Custom SSL (https) with Vanilla Cloud
+## Setting up Custom SSL (HTTPS) with Vanilla Cloud
 
 All Vanilla Cloud communities are automatically protected by SSL from the moment they are created, but things get a little more complicated when a [Custom Domain](/help/getting-started/custom-domain) is used. 
 
