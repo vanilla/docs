@@ -19,7 +19,7 @@ Forums are a first-class web application and a primary driver of content in a he
 
 In the past, forums were frequently set up as subfolders (e.g. `example.com/forum`) under the root domain of a web presence. The reality of many legacy server setups made this the simplest way to run a forum and it became fairly standard to see sites organized this way. And in the 90s and early 00s, search engines often did not combine rankings across subdomains, causing "splintered" SEO effects. In the age of web services, none of this is true anymore.
 
-In the present, all first-class search engines catalog subdomains of a domain as an extension of the primary domain. Google Webmaster Tools in particular has settings to manually declare subdomains as official parts of your primary web presence, and notes that there is no penalty or side effects to this setup. Google itself offers subdomain-based web services based on this model, so there is no rationale for believing it would penalize it.
+In the present, all first-class search engines catalog subdomains as an extension of the primary domain. Google Webmaster Tools in particular has settings to manually declare subdomains as official parts of your primary web presence, and notes that there is no penalty or side effects to this setup. Google itself offers subdomain-based web services based on this model, so there is no rationale for believing it would penalize it.
 
 Even if your site has used subfolders for many years, it is safe to transition to a subdomain-based URL system using properly configured 301 redirects. Whenever implementing 301 redirects for any reason, it is normal to see a short-term decline in traffic while the pages are reindexed.
 
