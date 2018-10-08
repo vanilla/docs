@@ -31,6 +31,8 @@ Implementing a proper web services architecture by using subdomains for independ
 
 * Requests are slower, because they have to make an extra jump. This hurts search engine rankings (Google has stated response times are a factor in rankings).
 * Uptime for the forum becomes dependent on the main website, adding a big asterisk to any SLA.
+* You are responsible for the setup and maintenance of a reverse proxy setup, which is what cloud services are designed to eliminate.
+* It complicates all network-related trouleshooting, which leads to more complex support needs and communication overhead.
 * The forum cannot effectively be protected from DDoS via Cloudflare or similar service.
 * Security of the forum is now dependent on the security of the main website since all requests are intercepted.
 
