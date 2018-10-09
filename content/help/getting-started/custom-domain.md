@@ -27,9 +27,9 @@ Implementing a proper web services architecture by using subdomains for independ
 
 #### Why We Don't Suggest or Offer Subfolders
 
-**Reverse Proxy** is the only reliable way to serve an independent web application in a subfolder of a domain that is mapped elsewhere. In this setup, your main website `example.com` silently redirects requests for `example.com/forum` to the independent server where your forum is hosted.  In other words, your server is now a single point of failure for what should be an independent service, since all requests to the forum must pass thru it.
+**Reverse Proxy** is the only reliable way to serve an independent web application in a subfolder of a domain that is mapped elsewhere. In this setup, your main website `example.com` silently forwards requests for `example.com/forum` to the independent server where your forum is hosted.  In other words, your server is now a single point of failure for what should be an independent service, since all requests to the forum must pass thru it.
 
-* Requests are slower, because they have to make an extra jump. This hurts search engine rankings (Google has stated response times are a factor in rankings).
+* **Requests are slower**, because they have to make an extra jump. This **hurts search engine rankings** (Google has stated response times are a factor in rankings).
 * Uptime for the forum becomes dependent on the main website, adding a big asterisk to any SLA.
 * You are responsible for the setup and maintenance of a reverse proxy setup, which is what cloud services are designed to eliminate.
 * It complicates all network-related trouleshooting, which leads to more complex support needs and communication overhead.
