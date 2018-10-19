@@ -7,7 +7,6 @@ tags:
 - APIv2
 - API v2
 category: "apiv2"
-swagger: true
 aliases:
 - /apiv2/smart-ids/
 menu:
