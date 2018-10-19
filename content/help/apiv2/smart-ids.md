@@ -22,6 +22,8 @@ The basic format of a smart ID is: `${field}:{value}`, where "field" is the prop
 
 Smart IDs can be used in three areas of a request: the path, the query and the body. When received in one of these areas of a request, Vanilla will attempt to lookup the corresponding record, based on the criteria provided. Depending on where the smart ID is used, the resolution of the target record ID is dependent on different criteria. For example, if received in the path, the URL will be used to determine what type of record we're looking up. A request to /api/v2/users/`$name:foo` will attempt to lookup a user with the name "foo", while a request to /api/v2/categories/`$name:foo` will attempt to lookup a category with the name "foo". The same smart ID is used, but the context determines which resource is queried. Similarly, when a smart ID is used in a query or the body of the request, the key of the value is used to resolve the resource. In the case of a smart ID in a query, say /api/v2/discussions?insertUserID=`$name:bar`, Vanilla will attempt to lookup a user with the name "bar", because the associated key is "insertUserID". The same request could be modified to /api/v2/discussions?categoryID=`$name:bar` and now a category with the name "bar" will used.
 
+If a smart ID resolves to multiple rows, or none at all, a fatal error will be generated. A smart ID must resolve to exactly one row.
+
 ## Supported Fields
 
 Categories support smart ID lookup using one of two fields:
