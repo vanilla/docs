@@ -2,6 +2,8 @@
 title: Smart IDs
 tags:
 - API
+- ForeignID
+- Foreign
 - APIv2
 - API v2
 category: "apiv2"
