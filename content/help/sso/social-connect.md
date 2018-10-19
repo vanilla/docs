@@ -82,7 +82,13 @@ Twitter Connect allows users to sign in using their Twitter account. You must re
 ### Setting up social login in Twitter Connect
 
 1. Register Vanilla with Twitter at: [https://apps.twitter.com/app/new](https://apps.twitter.com/app/new)
-2. Set the **OAuth 2.0 Redirect URLs** by appending both `/entry/connect/twitter` and `/profile/twitterconnect` to the end of your forum’s URL. (If your forum is at `example.com/forum`, your Redirect URLs would be `http://example.com/forum/entry/connect/twitter` and `http://example.com/forum/profile/twitterconnect`).
+
+2. Set the **OAuth 2.0 Redirect URLs** by appending both `/entry/connect/twitter` and `/entry/twauthorize` to the end of your forum’s URL. (If your forum is at `https://community.example.com`, your Redirect URLs would be `https://community.example.com/entry/connect/twitter` and `https://community.example.com/entry/twauthorize`).
+
+**Note** 
+* the redirect URLs should be HTTPs
+* the redirect URLs should have **no** following spaces or slashes (i.e., /entry/connect/twitter/ will not work, while entry/connect/twitter will)
+
 3. After registering, copy the "Consumer Key" and "Consumer Secret" into your Twitter plugin settings page from your Vanilla dashboard.
 
 ![Settings in Twitter](/img/help/addons/social/twitter/settings.png)
