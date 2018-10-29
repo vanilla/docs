@@ -39,4 +39,6 @@ Currently, you can obtain a personal access token from your profile. These acces
 4. Give the token a name that will help you remember its use.
 5. Click "Generate" to generate the token and copy the value into your app.
 
-
+Please note:  
+* This requires the "Token - Add" permission in Roles and Permissions for the relevant role.
+* API Calls using a token will reflect the permissions of the user who generated the token.
