@@ -55,7 +55,9 @@ Moderators and administrators have permission to be notified for every new comme
 
 ## Setting defaults
 
-You can set default notification levels for new users in your config. Setting a value to `1` is on, `0` is off, and `false` disables it globally. Any user has already chosen their preferences will be unaffected.
+You can set default notification levels for new users in your config. Hosted communities will have to request this through support or their CSM.
+
+Setting a value to `1` is on, `0` is off, and `false` disables it globally. Any user has already chosen their preferences will be unaffected.
 
 Vanilla starts with these defaults:
 
