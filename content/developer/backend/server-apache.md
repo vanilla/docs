@@ -34,8 +34,8 @@ The provided `.htaccess` already comes with some decent hardening:
 
 ### Default VirtualHost entry
 
-By default, Apache will respond to any ServerName option until a domain which doesn't match any VirtualHost is requested,
-When this happens, the first VirtualHost is used as a catch all.
-Make sure you have a default entry added to mitigate host-header-injection type of attacks.
+By default, Apache will respond to any ServerName option until a domain which doesn't match any VirtualHost is requested.
+Make sure you have a default entry added. Not doing so can make you susceptible to host header injection attacks.
+(tricking your server into rendering pages based on a third-party domain).
 
 [VirtuaHost Examples](https://httpd.apache.org/docs/2.4/vhosts/examples.html).
