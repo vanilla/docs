@@ -21,7 +21,7 @@ The most simple filter is just specifying a date and checking to for equality. W
 1985-04-12T23:20:50.52Z
 1996-12-19T16:39:57-08:00
 2018-12-25
-````
+```
 
 This is a flexiable, unambiguos format that allows you to specify a date, date/time, and also specify timezones.
 
