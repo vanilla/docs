@@ -10,55 +10,59 @@ menu:
 aliases:
 - /developers/backend/apache
 ---
-## nginx
 
-### Configuration
+## Configuration Notes
 
-The key to specifically running Vanilla under nginx is getting the basic rewrite rule in nginx.conf correct.
-You can see a working example in the Hardening section.
+The most important consideration to getting Vanilla running on nginx is to make sure the rewrite rules are correct. Below is one suggested configuration which locks down the server to only respond to requests via `index.php`, which we strongly recommend if Vanilla is the only application running.
 
-Some tips:
-- When configuring fastcgi make sure that you use `$realpath_root` instead of `$document_root`.
-- Make sure that you set the `fastcgi_param` `X_REWRITE` parameter to `1`.
+Make sure that you set the `fastcgi_param` named `X_REWRITE` to `1`.
 
-### Hardening
+When configuring fastcgi, using `$realpath_root` instead of `$document_root` may be necessary in some setups (e.g. when using symlinks).
+
+We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurations may redundantly re-add them during the rewrite, resulting in a name of "/index.php/index.php". The end result of this is all your Javascript and CSS assets paths in the page start with "/index.php", thus breaking them. Feel free to omit those two lines if you're confident your configuration is immune.
+
+## Sample Configuration
+
+```nginx
+    # Block some folders as an extra hardening measure.
+    location ~* /\.git { deny all; return 403; }
+    location ~* ^/build/ { deny all; return 403; }
+    location ~* ^/cache/ { deny all; return 403; }
+    location ~* ^/cgi-bin/ { deny all; return 403; }
+    location ~* ^/uploads/import/ { deny all; return 403; }
+    location ~* ^/conf/ { deny all; return 403; }
+    location ~* ^/tests/ { deny all; return 403; }
+    location ~* ^/vendor/ { deny all; return 403; }
+
+    # This handles all the main requests thru index.php.
+    location ~* ^/index\.php(/|$) {
+        # send to fastcgi
+        include fastcgi.conf;
+        fastcgi_param SCRIPT_NAME /index.php;
+        fastcgi_param SCRIPT_FILENAME $realpath_root/index.php;
+        fastcgi_param X_REWRITE 1;
+        fastcgi_pass php-fpm; # where 'php-fpm' is the upstream, probably defined in nginx.conf 
+    }
+
+    # If this is some other PHP script, disallow it by redirecting to /index.php
+    location ~* \.php(/|$) {
+        rewrite ^ /index.php$uri last;
+    }
+
+    # Default path handling is to pass it back to /index.php.
+    location / {
+        try_files $uri @vanilla;
+    }
+    
+    location @vanilla {
+        rewrite ^ /index.php$uri last;
+    }
+```
+
+## Hardening
 
 Here are some directories that should be forbidden:
 
 ```nginx
-    location ~* "/\.git" { deny all; return 403; }
-    location ~* "^/build/" { deny all; return 403; }
-    location ~* "^/cache/" { deny all; return 403; }
-    location ~* "^/cgi-bin/" { deny all; return 403; }
-    location ~* "^/uploads/import/" { deny all; return 403; }
-    location ~* "^/conf/" { deny all; return 403; }
-    location ~* "^/tests/" { deny all; return 403; }
-    location ~* "^/vendor/" { deny all; return 403; }
-```
-
-We alo recommend to disallow any script but `/index.php` from being called directly.
-This can be achieved like so:
-
-```nginx
-    # /index.php handler
-    location ~* "^/index\.php(/|$)" {
-        # send to fastcgi
-        include fastcgi.conf;
-        fastcgi_param X_REWRITE 1; # Needed for pretty URLs
-        fastcgi_pass php-fpm; # Upstream defined in nginx.conf 
-    }
-
-    # If it is a php script disallow its execution by redirecting the call it to /index.php
-    location ~* "\.php(/|$)" {
-        rewrite ^ /index.php$uri last;
-    }
-
-    # Default location handling
-    location / {
-        try_files $uri @vanilla;
-    }
-
-    location @vanilla {
-        rewrite ^ /index.php$uri last;
-    }
+    
 ```
