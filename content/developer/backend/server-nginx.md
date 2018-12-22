@@ -17,6 +17,8 @@ The most important consideration to getting Vanilla running on nginx is to make 
 
 Make sure that you set the `fastcgi_param` named `X_REWRITE` to `1`.
 
+Make sure that you define `PATH_INFO` in your `fastcgi_param` file. You may find this [example set of FastCGI params](https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/) helpful.
+
 When configuring fastcgi, using `$realpath_root` instead of `$document_root` may be necessary in some setups (e.g. when using symlinks).
 
 We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurations may redundantly re-add them during the rewrite, resulting in a name of "/index.php/index.php". The end result of this is all your Javascript and CSS assets paths in the page start with "/index.php", thus breaking them. Feel free to omit those two lines if you're confident your configuration is immune.
