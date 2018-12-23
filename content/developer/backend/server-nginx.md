@@ -11,6 +11,10 @@ aliases:
 - /developers/backend/apache
 ---
 
+Vanilla includes excellent support for nginx. In fact, it's our server of choice for our cloud service. 
+
+When configuring nginx, it's an excellent idea to save a backup copy of every file you intend to edit before you do it, so you can keep track of all changes you've made in case you need to revert some of them.
+
 ## Configuration Notes
 
 The most important consideration to getting Vanilla running on nginx is to make sure the rewrite rules are correct. Below is one suggested configuration which locks down the server to only respond to requests via `index.php`, which we strongly recommend if Vanilla is the only application running.
@@ -60,3 +64,13 @@ We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurat
         rewrite ^ /index.php$uri last;
     }
 ```
+
+## Troubleshooting
+
+As recommended in the nginx docs, a good first step is to replace your `index.php` file temporarily with this code to reveal what nginx is passing along to PHP:
+
+`<?php var_export($_SERVER)?>`
+
+You should see `PATH_INFO` available with a value of a relative path, for example: `/discussion/1/some-title-of-a-discussion` if you had clicked on a discussion or `/entry/signin?Target=discussions` if you clicked on "Sign In". Your `SCRIPT_NAME` should be `/index.php`. Failing to set `X_REWRITE` may create a redirect loop or errors in Vanilla.
+
+If you get a 500 error, you've probably made a critical error in your nginx configuration and may need to start over if you aren't sure what changes you've made.
