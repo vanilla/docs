@@ -60,11 +60,3 @@ We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurat
         rewrite ^ /index.php$uri last;
     }
 ```
-
-## Hardening
-
-Here are some directories that should be forbidden:
-
-```nginx
-    
-```
