@@ -133,6 +133,7 @@ Valid types for the page collection are:
 Commonly used properties for the page collection are:
 
 * **user.userID**: The ID of the user, if available.  If there is no current user, either because they aren't signed in or are a guest, this value will be `0`.
+`-1` is for an anonymized user. This was added for GDPR compliance, it only shows for users in Europe.
 
 #### point
 
