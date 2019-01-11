@@ -61,7 +61,7 @@ Available on certain plans as an add-on, Advanced Analytics give you further ins
   * __Discussions with Most Views:__ Discussions ordered by the highest number of accumulated views.
 
 #### Graphs
-  * __Active Users:__ Number of users that logged in to the community.
+  * __Active Users:__ Number of users that logged in to the community, including the number of users who were already logged in during the set timeframe.
   * __Visits:__ Number of visits. *Including guests.*
   * __Unique Visits by Role Type:__ Number of visits, from registered users, grouped by [role types](#role-type).
   * __Page Views:__ Number of total page views.
