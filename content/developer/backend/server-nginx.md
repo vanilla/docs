@@ -32,13 +32,13 @@ We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurat
 ```nginx
     # Block some folders as an extra hardening measure.
     location ~* /\.git { deny all; return 403; }
-    location ~* ^/build/ { deny all; return 403; }
-    location ~* ^/cache/ { deny all; return 403; }
-    location ~* ^/cgi-bin/ { deny all; return 403; }
-    location ~* ^/uploads/import/ { deny all; return 403; }
-    location ~* ^/conf/ { deny all; return 403; }
-    location ~* ^/tests/ { deny all; return 403; }
-    location ~* ^/vendor/ { deny all; return 403; }
+    location /build/ { deny all; return 403; }
+    location /cache/ { deny all; return 403; }
+    location /cgi-bin/ { deny all; return 403; }
+    location /uploads/import/ { deny all; return 403; }
+    location /conf/ { deny all; return 403; }
+    location /tests/ { deny all; return 403; }
+    location /vendor/ { deny all; return 403; }
 
     # This handles all the main requests thru index.php.
     location ~* ^/index\.php(/|$) {
