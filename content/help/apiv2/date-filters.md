@@ -23,7 +23,7 @@ menu:
 2018-12-25
 ```
 
-This is a flexiable, unambiguos format that allows you to specify a date, date/time, and also specify timezones.
+ This is a flexible, unambiguous format that allows you to specify a date, date/time, and also specify timezones.
 
 ## Basic Date Operations
 
