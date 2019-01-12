@@ -77,7 +77,7 @@ class MyCustomThemeHooks extends Gdn_Plugin {
      */
     public function structure() {
         // Set default theme option, but don't override it if it exists.
-        touchConfig([
+        \Gdn::config()->touch([
             "Garden.ThemeOptions.Styles.Key" => "Blue",
             "Garden.ThemeOptions.Styles.Value" => "%s_blue",
         ]);
