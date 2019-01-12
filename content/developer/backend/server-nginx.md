@@ -29,6 +29,8 @@ We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurat
 
 ## Sample Configuration
 
+This would go within the appropriate `server { }` block. It assumes you've already assigned a `root` and `index`, among other things.
+
 ```nginx
     # Block some folders as an extra hardening measure.
     location ~* /\.git { deny all; return 403; }
