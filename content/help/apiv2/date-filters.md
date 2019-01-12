@@ -45,4 +45,4 @@ You can also filter based on date ranges. To do this you put two dates between b
 
 ## Date Filters Must Be Encoded
 
-Most date filters are supplied in the query string which means they have to be encoded just like any other query string parameter. Most dates will work regardless of coding, but it is considered a best practice to always encode.
+ Most date filters are supplied in the query string which means they have to be encoded just like any other query string parameter. Most dates will work regardless of encoding, but it is considered a best practice to always encode.
