@@ -31,4 +31,14 @@ The provided `.htaccess` already comes with some decent security hardening:
 - The only PHP script that can be requested directly is `/index.php`.
 - Folders that should not be accessed from the web return a 403.
 
+### Default VirtualHost entry
+
+By default, Apache will respond to any ServerName option until a domain which doesn't match any VirtualHost is requested.
+Make sure you have a default entry added. Not doing so can make you susceptible to host header injection attacks.
+(tricking your server into rendering pages based on a third-party domain).
+
+Also see these [VirtuaHost Examples](https://httpd.apache.org/docs/2.4/vhosts/examples.html).
+
+### Contributing
+
 We're always eager to learn about various host restrictions and challenges you might run into. Start a discussion on the [community forum](https://open.vanillaforums.com/discussions) to tell us about situations you've come across or to request help with Apache.
