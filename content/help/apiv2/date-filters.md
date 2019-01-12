@@ -14,7 +14,7 @@ menu:
 
 ## Date Formats
 
-The most simple filter is just specifying a date and checking to for equality. When you specify a date use the [RFC339](https://www.ietf.org/rfc/rfc3339.txt) format. Here are some examples:
+ The most simple filter is just specifying a date and checking for equality. When you specify a date use the [RFC339](https://www.ietf.org/rfc/rfc3339.txt) format. Here are some examples:
 
 ```
 2018-12-25
