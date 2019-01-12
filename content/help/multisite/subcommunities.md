@@ -11,7 +11,7 @@ menu:
 ---
 {{% cloudfeature %}}
 
-## What are Subcomunities?
+## What are Subcommunities?
 
 A subcommunity is one method of dividing a forum into multiple different areas. Often by language or by product. Subcommunities are a great method of managing a forum in multiple languages on the same instance. They can be used on their own or in combination with [a Hub/Node setup](/help/multisite/#the-hub) and [Multisite Sync](/help/multisite/sync).
 

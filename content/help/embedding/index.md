@@ -55,6 +55,32 @@ Readers can log in using a Disqus ID, Twitter, Google, FaceBook or via single si
 
 The advanced embedding technique is for developers who require programmatic interaction between the Vanilla iframe and their parent window. It employs [easyXDM](http://easyxdm.net/wp/) and a special container layer to achieve this. It requires a more in-depth setup than Vanilla's basic embed solution.
 
+## Testing embedding locally on Docker
+
+If your local environment is set up with [vanilla-docker](https://github.com/vanilla/vanilla-docker) local embed setups are very simple to configure.
+
+1. Clone the [stub-embed-providers repo](https://github.com/vanilla/stub-embed-providers) next to your vanilla-docker repo.
+
+__Simple & Comments Embed__
+2. Add the following to your configuration.
+
+```php
+$Configuration['Garden']['Embed']['Allow'] = true;
+```
+
+3. Navigate to `http://embed.vanilla.localhost` and test your forum.
+4. Navigate to `http://comments-embed.vanilla.localhost/` and test your comments embed.
+
+__Advanced Embed__
+
+2. Add the following to your configuration. 
+
+```php
+$Configuration['Garden']['Embed']['Allow'] = 2;
+```
+
+3. Navigate to http://advanced-embed.vanilla.localhost and test your forum.
+
 ## Setting Up Advanced Embedding
 
 Enable forum embedding via the Dashboard. Then set `Garden.Embed.Allow` to `2` in your config. _Cloud customers will have this done by support staff_.
