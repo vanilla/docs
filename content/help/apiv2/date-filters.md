@@ -10,7 +10,7 @@ menu:
     parent: apiv2
 ---
 
-Thre are a lot of endpoints that allow you to filter on a date such as the date that a record was inserted or updated. In these cases you can pass a filter value can filter based on a range of values.
+ There are a lot of endpoints that allow you to filter on a date such as the date that a record was inserted or updated. In these cases you can filter based on a range of values.
 
 ## Date Formats
 
