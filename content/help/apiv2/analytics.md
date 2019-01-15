@@ -133,7 +133,7 @@ Valid types for the page collection are:
 #### Note on properties
 
 If you are unsure about which property to use, contact your CSM, as we have around 300 different
-property to choose from.
+properties to choose from.
 
 Commonly used properties for the page collection are:
 
