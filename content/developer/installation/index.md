@@ -10,10 +10,22 @@ menu:
 aliases:
 - /developers/installation
 ---
-## Installing Vanilla
 
-Our current installation and upgrade instructions are in the [README file](https://github.com/vanillaforums/vanilla/blob/master/README.md) that comes with Vanilla. If you run into issues, see the Developers > Troubleshooting section of these docs.
+## Local Installation
+
+All Vanilla employees develop and test on local installations using Docker. See the [vanilla-docker repo](https://github.com/vanilla/vanilla-docker) for instructions on
+
+- Installing vanilla locally.
+- Running unit tests.
+- Debugging with XDebug.
 
 ## Cloud Solution
 
-For a 1-click installation hosted plan with professional support and services, see [Vanilla Forums Cloud Hosting plans](https://vanillaforums.com/plans).
+For a 1-click installation hosted plan with automatic upgrades, amazing professional support, incredible scalability,
+integration assistance, theming and migration services, and exclusive features, see [Vanilla Forums Cloud Hosting plans](https://vanillaforums.com/plans).
+
+If you professionally run a large community or enterprise forum, our cloud solution will make the best technical and economic sense by far.
+
+## Self Hosting
+
+For instructions on installing, upgrading, and migrating vanilla forums open source instances, see our [self-hosting basics guide](/developer/installation/basics).
