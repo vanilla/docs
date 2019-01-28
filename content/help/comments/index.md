@@ -18,7 +18,7 @@ Vanilla comments allow any website with a unique content id to add a commenting 
 
 ## What are Universal Comments?
 
-We made Comment integration easy with WordPress ([learn more about that here](/help/features/wordpress/using-comments/).), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.
+We made Comment integration easy with WordPress ([learn more about that here](/help/integrations/#wordpress-integration).), but we also wanted to make it possible to add comments to any site where you can identify unique content. Universal Comments a way to do that.
 
 ## How to use Universal Comments.
 
