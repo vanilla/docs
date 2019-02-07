@@ -33,18 +33,34 @@ We also offer single sign-on from Salesforce.
 ### Salesforce: Create & Configure Application
 
 1. Log into your Salesforce Account
-1. Create new Connected App in Salesforce.
+2. Create new Connected App in Salesforce.
   1. Build → Create → Apps → Connected Apps → New
-  1. Fill the required fields: **Connected App Name**, **API Name**, **Contact Email**.
-  1. Enable OAuth Settings.
-  1. Set a Callback URL by appending `/profile/salesforceconnect` to the end of your forum's URL.
+  2. Fill the required fields: **Connected App Name**, **API Name**, **Contact Email**.
+  3. Enable OAuth Settings.
+  4. Set a Callback URL by appending `/profile/salesforceconnect` to the end of your forum's URL.
      - If your forum is at `https://forum.example.com/`, your Callback URL would be `https://forum.example.com/profile/salesforceconnect`.
      - If your forum is at `https://forum.example.com/en/`, your Callback URL would be `https://forum.example.com/en/profile/salesforceconnect`.
      - Callback URL must be HTTPS.
-  1. Add to Selected OAuth Scopes:
+  5. Add to Selected OAuth Scopes:
      - **Full access (full)**
      - **Perform requests on your behalf at any time (refresh_token, offline_access)**
-  1. Save. ![](/img/help/addons/salesforce/app_create.png)
+  6. Save. ![](/img/help/addons/salesforce/app_create.png)
+
+### Salesforce: Minimum Requirements
+
+The Salesforce Lead and Case creation API will pass user data from your Vanilla forum to your Salesforce application. The following are the values your Salesforce application must be configured to be updated by the Salesforce user you have used to connect the API.
+
+**Cases**
+
+1. `FirstName` - Set by the administrator creating the Case.
+2. `LastName` - Set by the administrator creating the Case.
+3. `Status` - Set by the administrator creating the Case. 
+4. `Origin` - Defaults to 'Vanilla'.
+5. `Priority` - Set by the administrator creating the Case.
+6. `Subject` - The title of the Discussion or Comment that is being used as a Case.
+7. `Description` - The body of the Discussion or Comment.
+8. `ContactId` - Retrieved from Salesforce based on the Discussion or Comment author's email address.
+9. `Vanilla__ForumUrl__c` - The URL of the Discussion or Comment.
 
 ### Vanilla: Enable & Configure Addon
 
@@ -60,11 +76,11 @@ We also offer single sign-on from Salesforce.
 ### Vanilla: Link your account
 
 1. Login to Vanilla.
-1. Go to your profile page.
-1. Edit your profile.
-1. Click on the Social section. *(/profile/connections)*
-1. Click "Connect" on Salesforce.
-1. Follow the instructions from there.
+2. Go to your profile page.
+3. Edit your profile.
+4. Click on the Social section. *(/profile/connections)*
+5. Click "Connect" on Salesforce.
+6. Follow the instructions from there.
 
 ## Troubleshooting
 
