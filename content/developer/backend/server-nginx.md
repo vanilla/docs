@@ -21,13 +21,15 @@ The most important consideration to getting Vanilla running on nginx is to make 
 
 Make sure that you set the `fastcgi_param` named `X_REWRITE` to `1`.
 
+Make sure that `fastcgi_pass` is set to the name of your actual upstream (in our example below, it's named `php-fpm`), or call your PHP install directly by socket, for example:  `unix:/run/php/php7.2-fpm.sock`.
+
 Make sure that you define `PATH_INFO` in your `fastcgi_param` file. You may find this [example set of FastCGI params](https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/) helpful.
 
 When configuring FastCGI, using `$realpath_root` instead of `$document_root` may be necessary in some setups (e.g. when using symlinks).
 
 We define `SCRIPT_NAME` and `SCRIPT_FILENAME` explicitly because some configurations may redundantly re-add them during the rewrite, resulting in a name of "/index.php/index.php". The end result of this is all your Javascript and CSS assets paths in the page start with "/index.php", thus breaking them. Feel free to omit those two lines if you're confident your configuration is immune.
 
-## Sample Configuration
+## Sample Configurations
 
 This would go within the appropriate `server { }` block. It assumes you've already assigned a `root` and `index`, among other things.
 
@@ -66,6 +68,8 @@ This would go within the appropriate `server { }` block. It assumes you've alrea
         rewrite ^ /index.php$uri last;
     }
 ```
+
+Another example is [available in our Docker configuration](https://github.com/vanilla/vanilla-docker/blob/master/resources/etc/nginx/sites-available/dev.vanilla.localhost.conf).
 
 ## Troubleshooting
 
