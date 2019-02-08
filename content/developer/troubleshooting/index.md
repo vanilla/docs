@@ -14,6 +14,7 @@ aliases:
 
 These are some generic tips for addressing problems during an upgrade or installation.
 
+* Delete `cache/addon.php` so that the plugin and theme mapping rebuilds itself on the next page load.
 * Set `$Configuration['Debug'] = true;` in your `conf/config.php` to reveal full error messages. Remember to remove it when you are done.
 * Clear your browser cache and cookies, then restart your browser.
 * Clear the entire contents of the `cache` folder.
