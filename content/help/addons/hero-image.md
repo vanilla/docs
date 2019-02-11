@@ -12,7 +12,6 @@ menu:
 versioning:
   added: 2.6
 ---
-{{% cloudfeature %}}
 ## Overview
 
 This plugin provides an easy way to have a custom background image for every page of the forum. It allows you to upload this image in the dashboard and access it through a [Smarty Template](/developer/smarty/functions/#function-hero-image-url) or [Customize Theme](/help/appearance/custom-theme).
