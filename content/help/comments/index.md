@@ -30,9 +30,7 @@ Once you've determined you have the necessary identifier, to get started with Va
 
 You want to make sure you have enabled "Embed My Forum". The next step is to select the Universal Code setting tab:
 
-![Universal Comments tab](/img/help/features/comments/universal-code.png)
-
-On this tab you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.
+On this screen you will find code to paste into your platform you are using, wherever you want your comment box to appear. Usually this will be after the content your platform calls.
 
 ![Universal Comments tab](/img/help/features/comments/universal-code-identifier.png)
 
