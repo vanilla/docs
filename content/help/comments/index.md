@@ -26,11 +26,9 @@ To know if you can use Vanilla Universal Comments, you need to know if your cont
 
 This identifier is how you can assign a comment box from Vanilla to a specific document on any platform. Essentially, if you have a way to identify unique content, you can use Vanilla Comments.
 
-Once you've determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Blog Comments” under the “Forum” heading. You will see the following:
+Once you've determined you have the necessary identifier, to get started with Vanilla Comments, head to your Vanilla Forums dashboard, and look for “Embedding” under the “Technical” heading in the Settings Tab. You will see the following:
 
-![Universal Comments](/img/help/features/comments/settings.png)
-
-You want to make sure you have enabled embedding. The next step is to select the Universal Code setting tab:
+You want to make sure you have enabled "Embed My Forum". The next step is to select the Universal Code setting tab:
 
 ![Universal Comments tab](/img/help/features/comments/universal-code.png)
 
