@@ -16,7 +16,7 @@ The core team does not officially support IIS but accept bug reports and patches
 Information and help may be provided on our [community forum](https://open.vanillaforums.com).
 We welcome additions to this documentation.
 
-See the dedicated sections for more information about Apache and nginx.
+See the dedicated sections for more information about Apache and nginx. We also recommend this excellent [third-party guide to setting up Vanilla on CentOS](https://www.howtoforge.com/how-to-install-vanilla-forum-on-centos-7/#step-install-nginx-and-configure-nginx-for-matomo).
 
 ## Advanced Handling of Headers
 
