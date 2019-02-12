@@ -23,7 +23,7 @@ When you enter one of those to reach your web host, your web server shows what i
 
 We strongly recommend:
 
-*  **PHP 7.2** or higher.
+*  **PHP 7.3** or higher.
 *  MySQL 5.7 or higher (or Percona/MariaDB equivalent).
 * SSL encryption (check out [LetsEncrypt](https://letsencrypt.org/)).
 
@@ -31,7 +31,7 @@ If your server is not running PHP 7.1 or higher, **you should address this soon*
 
 Our _minimum_ requirements are now:
 
-* PHP 7.0 or newer.
+* PHP 7.0 or newer. (_This is about to change to 7.1._)
 * PHP extensions mbstring (`--enable-mbstring`), cURL (`--with-curl`), GD (on by default), and PDO (on by default).
 * To [import into Vanilla](#migrating-to-vanilla) you need MySQLi (`--with-mysqli`).
 * To use our social plugins you need [OpenSSL](http://php.net/manual/en/openssl.installation.php).
