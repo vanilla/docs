@@ -95,7 +95,7 @@ yarn build:<mode> <options>
 
 # Modes
 yarn build
-yarn build:development
+yarn build:dev
 yarn build:analyze
 yarn build:polyfills
 
@@ -121,7 +121,7 @@ It is:
 - Slow.
 - Accurate.
 
-## build:development
+## build:dev
 
 Development builds _do not_ write javascript to the disk.
 Instead the typescript files from all of your enabled addons and will be build into a single file that is kept in memory only and served through a local web server.
