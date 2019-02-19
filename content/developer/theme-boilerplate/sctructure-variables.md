@@ -1,5 +1,5 @@
 ---
-title: Variables and Strucuture
+title: Variables and Structure
 tags:
 - Developers
 - Theme
