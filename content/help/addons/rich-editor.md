@@ -21,8 +21,6 @@ The Rich Editor adds intuitive styling and formatting to a posts and documents o
 
 ![A full view of editor](/img/help/addons/rich-editor/editor-view.png)
 
-_Please note that Rich Editor is currently in beta and **is under active development**. Please report any bugs you encounter to your CSMs or on the [Vanilla Issue Tracker](https://github.com/vanilla/vanilla/issues)._
-
 ## Important Functions
 
 Once enabled, Rich Editor provides your users with familiar formatting tools. Here is a quick rundown of the functions that are currently available:
