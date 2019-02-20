@@ -1,5 +1,5 @@
 ---
-title: Rich Editor (Beta)
+title: Rich Editor
 tags:
     - Features
     - Addons
