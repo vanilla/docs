@@ -19,7 +19,7 @@ versioning:
 
 The Rich Editor is the default editor on Vanilla. It allows for intuitive styling and formatting to posts and discussions.
 
-![A full view of editor](https://images.v-cdn.net/docs/richeditor_editorview.PNG
+![A full view of editor](https://images.v-cdn.net/docs/richeditor_editorview.PNG)
 
 It should be noted that older clients of Vanilla may still be using our Advanced Editor, and are allowed to upgrade at any time.
 
@@ -39,13 +39,13 @@ This first set of buttons allows you to add bold, italic, strike, code, or link 
 
 ### Lists
 
-![Number List, Bullet List](https://images.v-cdn.net/docs/richeditor_lists.PNG
+![Number List, Bullet List](https://images.v-cdn.net/docs/richeditor_lists.PNG)
 
 List are created by inputting `-` or `1.`, causing either numbers or bullet-points to mark each item in the list. After starting one of these two options, Rich Editor will jump you to the first point in your list. After writing the first point, hitting enter will bring you to the next point. Once you’re done with your list, just hit enter twice, and it will let you work on other aspects of your post.
 
 ### Headings and Special Text Formatting
 
-![The format button and its menu](https://images.v-cdn.net/docs/richeditor_paragraphmenu.PNG
+![The format button and its menu](https://images.v-cdn.net/docs/richeditor_paragraphmenu.PNG)
 
 The block formatting menu provides a range of formatting options that take up 1 or multiple lines. Current formats include:
 
@@ -73,7 +73,7 @@ Users with permission to upload images can add images to their post using the im
 
 Users with permission to upload files can add files to their post for others to download. This can be done by clicking the 'Paperclip' icon at the bottom of the Rich Editor text box. Users can also upload files by dragging them directly into the Rich Editor.  
 
-![Successful File Upload](https://images.v-cdn.net/docs/richeditor_FileUploadSuccess.PNG
+![Successful File Upload](https://images.v-cdn.net/docs/richeditor_FileUploadSuccess.PNG)
 
 ## Mentions
 
