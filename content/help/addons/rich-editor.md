@@ -168,7 +168,7 @@ There are two common errors that can occur when uploading a file to the Rich Edi
 
 This error indicates that the file being uploaded is not currently allowed on the forum. If there is a specific file type that your site needs greenlisted, please reach out to Vanilla Support or your CSM to make the necessary change in your site's configuration.  
 
-![File Too Big](/img/help/addons/rich-editor/https://images.v-cdn.net/docs/richeditor_fileuploaderrorsize.PNG)
+![File Too Big](https://images.v-cdn.net/docs/richeditor_fileuploaderrorsize.PNG)
 
 This error indicates that the uploaded file's size is too large and can not be accepted. The default maximum file size is set at 50mb, but this can be changed to suit a site's needs. If you need to increase or decrease the maximum allowed file size limit, reach out to Vanilla Support or your CSM to make the necessary change in your site's configuration. 
 
