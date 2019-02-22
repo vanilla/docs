@@ -28,4 +28,4 @@ If you professionally run a large community or enterprise forum, our cloud solut
 
 ## Self Hosting
 
-For instructions on installing, upgrading, and migrating vanilla forums open source instances, see our [self-hosting basics guide](/developer/installation/basics).
+For instructions on installing, upgrading, and migrating vanilla forums open source instances, see our [self-hosting basics guide](/developer/installation/self-hosting).
