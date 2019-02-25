@@ -89,6 +89,8 @@ Mentions are sorted with case sensitivity and accents included to allow for more
 
 Rich Editor supports embedding of external content within posts. Use the embed menu to transform a link into a rich content embed.
 
+_Alternatively, pressing enter at the of a line containing __only__ a link also attempt to create an embed from that link._
+
 ![Embed menu](https://images.v-cdn.net/docs/richeditor_embedmenu.PNG)
 
 While we fetch the data for the embedded content, the link appears as a link with a loading indicator.
