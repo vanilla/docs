@@ -16,17 +16,17 @@ menu:
 
 ### Base
 
-Styles defining the scaffold of the theme. You can use this folder to import font families, define typography, mixins.
+Styles defining the scaffold of the theme. You can use this folder to import fonts, define typography, mixins.
 
 ### Components
 
-Components are self contained pieces of UI. They can be very small, like a breadcrumb or a button. They can also be complex and composed of other components like the advanced search control. Each component must have a unique class. They should also get a SASS partial with the same name.
+Components are self contained pieces of UI. They can be very small, like a breadcrumb or a button. They can also be complex and composed of other components like the Advanced Search. Each component must have a unique class. They should also get a SASS partial with the same name.
 
 Variables specific to a component should be defined on the top of the component's `.scss` file with a proper default and should only be used for that component.
 
 ### Sections
 
-Sections are present in almost every page. For example the main header. Variables to be used in a section should be on the `_variables.scss` file since those variables may be inherited by a component.
+Sections are present in almost every page. For example the main header is considered to be a section. Variables to be used in a section should be on the `_variables.scss` file since those variables may be inherited by a component.
 
 Styles on this folder can overwrite components.
 
@@ -67,82 +67,91 @@ What about more abstract styles that are applied to multiple blocks? Use the blo
 $global-button_paddingTop
 ```
 
-What about states? Append "_hover" after the sub element.
+What about states? Append "hover" after the sub element.
 
 ```
-$vanillaBox-icon_hover_paddingTop
+$vanillaBox-icon-hover_paddingTop
 ```
 
 ## Variables Description
+
+### Utility
+
+Utility variables are used as helpers, like for example for spacing. These variables are heavily inherited and should not be edited.  Doing so may break the layout.
 
 ### Global
 
 - **$global-body_fontFamily**: Main font family. Used pretty much for every text on the theme.
 - **$global-body_fontWeight**: Same as above but for font weight.
 - **$global-medium_fontSize**: Same as above but for font size.
+- **$global-base_lineHeight**: Same as above but for line height.
+- **$global-condensed_lineHeight**: Line height used for elements that usually stands as one line (for example tags, tittle, counts).
+
+### Global Overwrites
+
+- **$global-main_width**: Desktop view max width.
 - **$global-color_primary**: Your brand's primary color. (Recommended to have good contrast with `$global-color_bg`)
-- **$global-color_primaryAlt**: A variation of the primary color, usually used on hover state (it might be a darker version of the same color like for example).
+- **$global-color_primaryAlt**: A variation of the primary color, usually used on hover state.
 - **$global-color_secondary**: Your brand's secondary color. generally used for important call to actions, or hover/focus color. Recommended to have good contrast with `$global-color_bg`)
 - **$global-color_bg**: Main color used for background. Adding a dark color to this variable will transform your theme into a dark theme, so make sure the `$global-color_fg` has high contrast with the color declared here.
 - **$global-color_fg**: Main color used for foreground elements like text, icons, etc. Should have high contrast between `$global-color_bg`.
+- **$link-default_color**: Color used on links.
+- **$link-default-hover_color**: Color used on links, but on hover state.
 
-### Utility
 
-- **$utility-medium_padding**: Utility variables are heavily inherited through the theme. Editing those variables may break your layout, please do not edit them.
-- **$utility-xSmall_padding**: Utility variables are heavily inherited through the theme. Editing those variables may break your layout, please do not edit them.
-- **$utility-small_padding**: Utility variables are heavily inherited through the theme. Editing those variables may break your layout, please do not edit them.
-- **$utility-large_padding**: Utility variables are heavily inherited through the theme. Editing those variables may break your layout, please do not edit them.
-- **$utility-xLarge_padding**: Utility variables are heavily inherited through the theme. Editing those variables may break your layout, please do not edit them.
+### Buttons Colors ###
 
-### Theme
+- Variables in this section define colors for buttons.
 
-- **$theme-link_color**: Color used on links.
-- **$theme-link-hover_color**: Color used on links, but on hover state.
-- **$theme-link-hover_textDecoration**: Value to be used to decorate links on hover state. Usually it's set to `none` or `underline`.
+### Theme User Photos
+
+- **$theme-photo_round**: Variable used to define if profile photos should have round edges. Valid values are `true` or `false`. If `true` the variable `$theme-photo_borderRadius` is ignored.
+- **$theme-photo_borderRadius**: Value used to define profile photos border radius if `$theme-photo_round` is set to false.
+
+### Body
+
+- Variables in this section define background values for the theme outside the frame.
 
 ### Frame
 
-- **$frame_backgroundColor**: Color used for background inside the theme frame.
-- **$frame_backgroundImage**: Main background image. You can use this value to blend with `$frame_backgroundColor`.
+- Variables in this section define values for the theme inside the frame, within the limit define in `$global-main_width`.
 
 ### Header
 
-- **$header_bg**: Background color for the header section.
-- **$header_border**: Bottom border for the header section. To remove the border set this value to `none`.
+Variables related to the main header section.
+
+### Navigation
+
+Variables related to the mobile navigation section.
+
+### Content
+
+Variables related to the main content section.
 
 ### Panel
 
-- **$panel_toLeft**: Set `true` on this variable if you want the panel to be on the left.
-- **$panel_width**: Width for the panel section.
-- **$panel_bg**: Background color for the panel section.
+Variables related to the panel section. These variables also have the subsection **item**.
 
 ### Footer
 
-- **$footer_bg**: Background color for the footer section.
-- **$footer_color**: Text color for the footer section.
-- **footer-link_color**: Color used in links on the footer section.
-- **$footer-link-hover_color**: Color used in links on the footer section, but on hover state.
+Variables related to the main Footer section.
 
 ### Component
 
+Variables under the `component` name space define general values to be used within components, for example lists. These variables also have the subsections **title**, **base** and **meta**.
+
 - **$component-item_spacing**: Space between items. Generally used on categories and discussions lists. If the value of this variable is `0`, the items will collapse. 
-- **$component_bg**: Background color used on items.
-- **$component_borderWidth**: Border width used on items. Border's will always be solid. Seti this value to `0` to remove the border.
-- **$component_borderColor**: Color used on items borders.
-- **$component_boxShadow**: Box shadow used on items. If `$component-item_spacing` value is `0`, this variable will be used on the list, not on the items.
-- **$component_borderRadius**: Box radius used on items. If `$component-item_spacing` value is `0`, this variable will be used on the list, not on the items.
+- **$component_borderWidth**: Border width used on items. Border's will always be solid. Set this value to `0` to remove the border.
+- **$component_lateralBorder**: This variable defines if the components should have lateral borders. Valid values are `true` or `false`. If set to `false` lateral paddings will be ignored and content will flush on the sides.
 
 ### Form Element
 
-- **$formElement_borderColor**: Border color for form inputs and textarea.
-- **$formElement_borderRadius**: Border radius for form inputs and textarea.
+Variables under this name space define rules for form elements like inputs, selects, textarea.
 
 ### Form Button
 
-- **$formButton_bg**: Background color used on buttons.
-- **$formButton_color**: Text color used on buttons.
-- **$formButton_borderRadius**: Border radius used on buttons. If you set this value to the `$formButton_height` , buttons will be round.
+Variables under this name space define rules for buttons.
 
 
 
->  **Notice:** Some variables relative to specific components are not inside the `_variables.scss` file, those you can find inside the component `.scss` itself. Fell free to dig inside  `src/scss/components` to find out more.
+>  **Notice:** Variables relative to specific components are inside the component's `.scss` file. To overwrite those you can migrate them to the bottom of your `_variables.scss`  and define the value you want, always keeping the `!default` flag.
