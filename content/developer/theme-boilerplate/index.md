@@ -55,7 +55,7 @@ A good starting point is to create variables containing your brand values on the
 
 Once your variables are set, you may start customizing!
 
-To know more about the boilerplate SCSS structure please visit the [variables description](https://docs.vanillaforums.com/developer/theme-boilerplate/sctructure-variables/) page.
+To know more about the boilerplate SCSS structure please visit the [variables description](https://docs.vanillaforums.com/developer/theme-boilerplate/structure-variables/) page.
 There you can find information about what each variable represents, naming conventions and folder structure.
 
 Essentially you can overwrite whatever you like but be careful! Some variables are heavily inherited and not meant to be overwritten. Doing so may break your layout.
