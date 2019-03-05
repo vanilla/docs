@@ -20,7 +20,7 @@ versioning:
 Creating a new project with the Vanilla CLI, the process is simple. There are just a few key steps.
 
 1. Follow the [setup guide](https://github.com/vanilla/vanilla-cli#setup) in the `vanilla-cli` repo.
-1. Create a key `build.processVersion` in your addon.json file and set it to `v1`. Don't know about the addon.json file? Check out our [detailed documentation](/developer/addons/addon-info)!
+1. Create a key `build.process` in your addon.json file and set it to `v1`. Don't know about the addon.json file? Check out our [detailed documentation](/developer/addons/addon-info)!
 1. Read about how [structure your source files](/developer/vanilla-cli/build-process-v1#folder-structure). Looking for an example? Check out our [Vanilla CLI example repo](https://github.com/vanilla/vanilla-cli-example).
 1. Create some new source files.
 1. Run `vanilla build` or `vanilla build --watch`.
