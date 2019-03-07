@@ -48,13 +48,9 @@ As you'd expect, using our cloud product dramatically simplifies the process of 
 
 Newly created Vanilla communities are given a public URL that looks something like **yourcompany.vanillacommunity.com**. At some point you might decide that you want to unify your branding and change that URL to something like **community.yourcompany.com**. 
 
-It’s a simple, two-step process that we recommend for all new forum owners. __Please note that you must already own (or purchase) your desired domain from a domain registrar before customizing your Vanilla Forums URL.__
-
-* Log in to the domain name registrar where your domain is hosted (ex. Name.com, GoDaddy, Rackspace, etc.)
-* In your Admin control panel, create a DNS record for your domain so that it points at our servers.
-* Create a CNAME record for your domain that points from from your subdomain to your Vanilla address: community.yourcompany.com CNAME yourcompany.vanillacommunity.com 
-* Back in your Vanilla Dashboard, you’ll notice a Custom Domain menu under the Appearance category. Enter your custom domain on that page. 
+It’s a simple process. 
+You just have to log in into you forum dashboard, go to `settings -> custom domain` and follow the instructions. 
 
 ### Using SSL on Cloud
 
-If you'd like to use the HTTPS protocol and insert an SSL certificate on your cloud site, follow the [instructions here](/cloud/ssl/). Please note that you absolutely should use SSL on ALL installs of Vanilla, cloud or not, and our software is fully compatible with it.
+SSL certificates are automatically installed for both vanilla URLs and Custom Domain. You do not have to worry about it!
