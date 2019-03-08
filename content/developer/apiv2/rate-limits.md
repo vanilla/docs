@@ -27,4 +27,4 @@ These types of requests are limited to **300 requests** per **1 minute**, per IP
 
 ## POST / PUT / PATCH / DELETE requests
 
-These types of requests are limited to **20 requests** per **1 minute**, per IP.
+These types of requests are limited to **30 requests** per **1 minute**, per IP.
