@@ -10,11 +10,7 @@ aliases:
 ---
 ## Overview
 
-We strive for maximum accessibility in our product design and take defects in it seriously.
-
-'508 Compliance' refers to a US law that requires that US government websites to be accessible to persons with disabilities (e.g. visual or physical impairment).   Accessibility means, among many other things, that a person must be able to use the website with software that reads the website aloud and/or using only a keyboard. Many private companies use the 508 guidelines to ensure websites are accessible. 
-
-We believe Vanilla Forums to be both Section 508 and WCAG AAA compliant. 
+We strive for maximum accessibility in our product design and take defects in it seriously. Our applications are developed with WCAG 2.0 level AA compliance in mind.
 
 ### Key points
 
@@ -22,9 +18,16 @@ We believe Vanilla Forums to be both Section 508 and WCAG AAA compliant.
 * Our interface is keyboard-friendly.
 * We limit the use of colors, images, and symbols as navigation aids or primary content.
 * We use modern HTML5 markup and accessible forms.
-* We cannot control the accessibility of user generated content within a forum.
+* Not all of Vanilla's add-ons are 100% WCAG 2.0 compliant, usually because we offer newer accessible alternatives.
+* We cannot control the accessibility of user generated content within a forum, but we do provide users with the tools to post accessible content.
 
 If you find an area where Vanilla could improve its accessibility, please [contact support](mailto:support@vanillaforums.com) or [file an issue](http://github.com/vanilla/vanilla/issues).
+
+### Section 508
+
+Section 508 is a federal law that requires all electronic and information technology developed, procured, maintained, or used by the federal government be accessible to people with disabilities. Many private businesses also opt to be Section 508 compliant too.
+
+As of Januarary 2017, Section 508 [has adopted WCAG 2.0 level AA success criteria](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-regulatory-impact-analysis#_Toc471376817) for accessibility.
 
 ## Theming consideration
 
