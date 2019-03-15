@@ -61,10 +61,23 @@ Please consider using [maintenance mode](#using-maintenance-mode) before running
 1. Backup your database, `.htaccess` and `conf/config.php` file somewhere safe.
 1. Upload the new release's files so they overwrite the old ones.
 1. Delete all files in `/cache` (except `.htaccess` if you use Apache).
+1. Delete all files in `/dist`.
 1. Follow all version-specific instructions below. It is **critcal** you delete the listed files.
 1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time by refreshing the page.
 
 If you run into a problem, see [Getting Help](#getting-help) below.
+
+### Fromn Vanilla 2.6 or earlier
+
+* Delete `plugins/Pockets`. (This is now in core.) 
+* Delete `plugins/akismet`. (This is now in core.)
+* Delete `plugins/Debugger`. (This is no longer maintained and no longer works. See [Debug Bar](https://open.vanillaforums.com/addon/debugbar-plugin) instead.
+* Delete `applications/dashboard/models/class.assetmodel.php`
+
+A few addons have been moved out of core. These are no longer maintained and may represent security holes for your forum.
+
+- `ButtonBar` Use the built-in Rich Editor or Advanced Editor.
+- `OpenID`
 
 ### From Vanilla 2.5 or earlier:
 
