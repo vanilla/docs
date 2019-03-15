@@ -17,6 +17,25 @@ This is for packaged, gold releases of the self-hosted product. We publish beta 
 
 Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.
 
+## 2.8.x
+
+- Rich Editor is the new defaul editor.
+- Keystone is the new default desktop & mobile (responsive theme)
+- Numerous bug-fixes and security patches
+- The full feature list and details can be found on [the 2.8 release notes discussion](https://open.vanillaforums.com/discussion/37120/vanilla-2-8-release-notes).
+
+### 2.8.0
+
+* [Released 7 February 2019](https://open.vanillaforums.com/discussion/36983/vanilla-2-8-is-now-available)
+
+### 2.8.1
+
+* [Released 15 March 2019](https://open.vanillaforums.com/discussion/37121/vanilla-2-8-1-is-now-available-security-patches-bug-fixes)
+
+## 2.7.x
+
+_Vanilla 2.7 was only distributed to Vanilla Cloud. The accumulated open source release notes from this release are incorporated into the [the 2.8 release notes discussion](https://open.vanillaforums.com/discussion/37120/vanilla-2-8-release-notes)._
+
 ## 2.6.x
 
 _Vanilla 2.6 is the first version of Vanilla that requires PHP 7.0._
@@ -190,7 +209,7 @@ Incremental changelogs from the [first 2.1 beta](https://open.vanillaforums.com/
 * Refactored the definitions list into Javascript instead of using the DOM
 * Fixes HTMLawed error in 2.0.18.12 which this immediately replaced.
 
-### 2.0.18.11  
+### 2.0.18.11
 
 *[Released 21 Apr 2014](https://open.vanillaforums.com/discussion/26627/vanilla-2-0-18-11-security-release)*
 
