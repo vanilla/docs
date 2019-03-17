@@ -59,15 +59,15 @@ Follow these steps to upgrade Vanilla when a new stable release is announced. Th
 Please consider using [maintenance mode](#using-maintenance-mode) before running database updates if your database is very large (millions of users or comments).
 
 1. Backup your database, `.htaccess` and `conf/config.php` file somewhere safe.
+1. Delete all files in `/dist`.
 1. Upload the new release's files so they overwrite the old ones.
 1. Delete all files in `/cache` (except `.htaccess` if you use Apache).
-1. Delete all files in `/dist`.
 1. Follow all version-specific instructions below. It is **critcal** you delete the listed files.
 1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time by refreshing the page.
 
 If you run into a problem, see [Getting Help](#getting-help) below.
 
-### Fromn Vanilla 2.6 or earlier
+### From Vanilla 2.6 or earlier
 
 * Delete `plugins/Pockets`. (This is now in core.) 
 * Delete `plugins/akismet`. (This is now in core.)
