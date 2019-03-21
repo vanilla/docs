@@ -14,7 +14,7 @@ aliases:
 ---
 ## Controller Endpoints
 
-When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the [resource routing](./resource-routing) guide. This guide concerns writing the contents of a method.
+When writing an API controller class, each method represents an endpoint. How to define those endpoint names and parameters is covered in the [resource routing](/developer/apiv2/resource-routing) guide. This guide concerns writing the contents of a method.
 
 ## The Controller Base Class
 
