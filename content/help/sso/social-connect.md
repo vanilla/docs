@@ -20,7 +20,7 @@ aliases:
 - /help/integrations/github
 - /help/addons/social/github
 - /help/addons/social/facebook
-- /help/addons/social/google
+- /help/addons/social/googleplus
 - /help/addons/social/twitter
 - /help/addons/social/linkedin
 ---
