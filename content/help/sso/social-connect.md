@@ -8,7 +8,7 @@ tags:
 - Facebook
 - SSO
 - Social Sign On
-- Google Plus
+- Google
 - Twitter
 - Linkedin
 category: help
@@ -20,7 +20,7 @@ aliases:
 - /help/integrations/github
 - /help/addons/social/github
 - /help/addons/social/facebook
-- /help/addons/social/googleplus
+- /help/addons/social/google
 - /help/addons/social/twitter
 - /help/addons/social/linkedin
 ---
@@ -57,23 +57,25 @@ https://yoursite.vanillacommunities.com/entry/connect/facebook if you do not hav
 
 For a complete walk-through of the steps involved, read [How to Create a Facebook Application for Vanillaforums Single Sign-On (SSO)](http://blog.vanillaforums.com/facebook-application-for-vanillaforums-sso/).
 
-## Google Plus
+## Google
 
-The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in [Google API Console](https://code.google.com/apis/console). This [Google+ Video Tutorial](http://youtu.be/OHEb22VrZy4) also shows you how to set this up.
+The Google Plus Sign-In adds the ability to sign to your community with Google Plus. You will need to configure your site in [Google API Console](https://console.developers.google.com).
 
-### Setting up social login in Google Plus
+### Setting up Google Sign In
 
-1. Once you have enabled the Google+ Plugin in your Vanilla Dashboard, go to your API Console at Google.
+1. Once you have enabled the Google Sign In Plugin in your Vanilla Dashboard, go to your API Console at Google.
 2. You will  need to create a project.
 2. Once you have a project, click on the project name. You will be presented with a side menu. Select “Credentials”.
-3. Create New ClientID and fill in the form.
+3. Under the Credentials Tab in the main content area of the page, click on the Create credentials button and choose "OAuth Client ID" 
 4. Select Web Application as Type.
-5. For authorized Javascript Origins URL will be your Vanilla Forums URL
-6. For authorized redirect URL, append "/entry/googleplus" to the end of your forum’s URL. (If your forum is at `example.com/forum`, your redirect URL would be `http://example.com/forum/entry/googleplus`).
+5. For authorized Javascript Origins URL will be your Vanilla Application URL.
+	- You may get a warning 'Invalid Origin: Domain must be added to the authorised domains list before submitting.'.
+	- If so, click on the link provided and navigate to the " Authorised domains" section to add your domain to the list of trusted domains.
+	- Don't forget to save.
+6. For authorized redirect URL, append "/entry/googlesignin" to the end of your forum’s URL. (If your forum is at `example.com/forum`, your redirect URL would be `https://example.com/forum/entry/googlesignin`).
 7. Copy over Client ID and Secret into appropriate fields in Vanilla Dashboard.
 8. If you have never used Google APIs before you will also need to fill in Consent Screen.
 
-![Settings in Google Plus](/img/help/addons/social/googleplus/settings.png)
 
 ## Twitter
 
