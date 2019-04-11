@@ -22,6 +22,7 @@ Other plan levels and all staging sites receive these updates on an ad-hoc basis
 
 Full release notes:
 
+* [2019.005](/help/releases/2019-005)
 * [2019.004](/help/releases/2019-004)
 * [2019.003](/help/releases/2019-003)
 * [2019 - 001 & 002](/help/releases/2019-2.8)
