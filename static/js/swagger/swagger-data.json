@@ -3,7 +3,7 @@
     "info": {
         "description": "API access to your community.",
         "title": "Vanilla API",
-        "version": "2.0-alpha"
+        "version": "1.0.0"
     },
     "paths": {
         "/addons": {
@@ -13427,9 +13427,4 @@
             }
         }
     },
-    "servers": [
-        {
-            "url": "/api/v2"
-        }
-    ]
 }
