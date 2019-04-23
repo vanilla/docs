@@ -19,7 +19,7 @@ Vanilla numbers major releases with the first decimal place. A second decimal in
 
 ## 2.8.x
 
-- Rich Editor is the new defaul editor.
+- Rich Editor is the new default editor.
 - Keystone is the new default desktop & mobile (responsive theme)
 - Numerous bug-fixes and security patches
 - The full feature list and details can be found on [the 2.8 release notes discussion](https://open.vanillaforums.com/discussion/37120/vanilla-2-8-release-notes).
