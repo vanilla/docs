@@ -3,7 +3,7 @@
     "info": {
         "description": "API access to your community.",
         "title": "Vanilla API",
-        "version": "1.0.0"
+        "version": "2.0-alpha"
     },
     "paths": {
         "/addons": {
@@ -172,6 +172,225 @@
                 },
                 "summary": "Enable or disable an addon.",
                 "x-addon": "dashboard"
+            }
+        },
+        "/analytics/leaderboard": {
+            "get": {
+                "parameters": [
+                    {
+                        "description": "The user leaderboard to query.",
+                        "in": "query",
+                        "name": "board",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "top-posters",
+                                "top-discussion-starters",
+                                "top-question-answerers",
+                                "top-best-answerers",
+                                "top-viewed-discussions",
+                                "top-viewed-qna-discussions",
+                                "top-commented-discussions",
+                                "top-positive-discussions",
+                                "top-negative-discussions",
+                                "top-member-by-total-reputation",
+                                "top-member-by-reputation"
+                            ],
+                            "minLength": 1,
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "The number of rows to return.",
+                        "in": "query",
+                        "name": "limit",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": 10,
+                            "maximum": 100,
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "description": "Start of the time frame.",
+                        "in": "query",
+                        "name": "start",
+                        "required": true,
+                        "schema": {
+                            "format": "date-time",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "End of the time frame.",
+                        "in": "query",
+                        "name": "end",
+                        "required": true,
+                        "schema": {
+                            "format": "date-time",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/Leaderboard"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "tags": [
+                    "Analytics"
+                ],
+                "summary": "Retrieve data for a leaderboard.",
+                "x-addon": "vanillaanalytics"
+            }
+        },
+        "/analytics/query": {
+            "post": {
+                "responses": {
+                    "201": {
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "properties": {
+                                        "result": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "result"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "tags": [
+                    "Analytics"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "collection": {
+                                        "description": "Event collection.",
+                                        "enum": [
+                                            "page",
+                                            "point",
+                                            "post",
+                                            "post_modify",
+                                            "qna",
+                                            "reaction",
+                                            "registration",
+                                            "session"
+                                        ],
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "end": {
+                                        "description": "End of the time frame.",
+                                        "format": "date-time",
+                                        "type": "string"
+                                    },
+                                    "filters": {
+                                        "items": {
+                                            "properties": {
+                                                "op": {
+                                                    "type": "string",
+                                                    "default": "eq",
+                                                    "description": "The comparison operation for the filter.",
+                                                    "enum": [
+                                                        "eq",
+                                                        "ne",
+                                                        "gt",
+                                                        "gte",
+                                                        "lt",
+                                                        "lte",
+                                                        "in"
+                                                    ],
+                                                    "minLength": 1
+                                                },
+                                                "prop": {
+                                                    "description": "The property name.",
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                },
+                                                "val": {
+                                                    "description": "The target value for comparison."
+                                                }
+                                            },
+                                            "required": [
+                                                "prop",
+                                                "op",
+                                                "val"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "group": {
+                                        "description": "An event property to group results.",
+                                        "type": "string"
+                                    },
+                                    "interval": {
+                                        "description": "Result interval.",
+                                        "enum": [
+                                            "hourly",
+                                            "daily",
+                                            "weekly",
+                                            "monthly"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "property": {
+                                        "description": "An event property to perform the analysis on. Required for count_unique, maximum, median and sum query types.",
+                                        "type": "string"
+                                    },
+                                    "start": {
+                                        "description": "Start of the time frame.",
+                                        "format": "date-time",
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "description": "Type of analysis to perform.",
+                                        "enum": [
+                                            "count",
+                                            "count_unique",
+                                            "maximum",
+                                            "median",
+                                            "sum"
+                                        ],
+                                        "minLength": 1,
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "type",
+                                    "collection",
+                                    "start",
+                                    "end"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "summary": "Get the result of an analytics query.",
+                "x-addon": "vanillaanalytics"
             }
         },
         "/badges": {
@@ -11630,6 +11849,60 @@
                 ],
                 "x-addon": "groups"
             },
+            "Leaderboard": {
+                "properties": {
+                    "count": {
+                        "description": "Associated total for this row.",
+                        "type": "integer"
+                    },
+                    "id": {
+                        "description": "ID of the record.",
+                        "type": "integer"
+                    },
+                    "position": {
+                        "description": "Current leaderboard position.",
+                        "type": "integer"
+                    },
+                    "positionChange": {
+                        "description": "Progression status of the record.",
+                        "enum": [
+                            "Fall",
+                            "New",
+                            "Rise",
+                            "Same"
+                        ],
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "previous": {
+                        "description": "Previous position of the record",
+                        "nullable": true,
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "Title for the row.",
+                        "minLength": 1,
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "Full URL to the record.",
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "position",
+                    "positionChange",
+                    "previous",
+                    "url",
+                    "title",
+                    "count"
+                ],
+                "type": "object",
+                "x-addon": "vanillaanalytics"
+            },
             "MediaItemPatch": {
                 "properties": {
                     "foreignID": {
@@ -13426,5 +13699,5 @@
                 "x-addon": "dashboard"
             }
         }
-    },
+    }
 }
