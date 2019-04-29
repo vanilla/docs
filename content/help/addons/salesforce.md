@@ -23,6 +23,7 @@ This addon allows users that have the `Staff.Allow` permission to do the followi
 - Create Salesforce cases and leads from Vanilla discussions (per discussion, not per comment).
 - Salesforce cases and leads appear as "attachments" on your Vanilla discussion for authorized users.
 - View Salesforce leads from Vanilla user profiles.
+- Sync Vanilla users with salesforce contacts when user edit profile/register.
 
 The Vanilla administrator may alternatively setup a global Salesforce connection rather than using individual connections.
 
@@ -65,6 +66,10 @@ We also offer single sign-on from Salesforce.
 1. Click on the Social section. *(/profile/connections)*
 1. Click "Connect" on Salesforce.
 1. Follow the instructions from there.
+
+### Vanilla: Send Profile Extender Fields to Salesforce
+
+To send custom fields over to SalesForce make sure the field "SalesForceID" input on "Profile fields" in Vanilla is set and value matchs exactly the "Field Name" set on Salesforce.
 
 ## Troubleshooting
 
