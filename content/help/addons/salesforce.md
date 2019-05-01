@@ -23,7 +23,7 @@ This addon allows users that have the `Staff.Allow` permission to do the followi
 - Create Salesforce cases and leads from Vanilla discussions (per discussion, not per comment).
 - Salesforce cases and leads appear as "attachments" on your Vanilla discussion for authorized users.
 - View Salesforce leads from Vanilla user profiles.
-- Sync Vanilla users with salesforce contacts when user edit profile/register.
+- Sync Vanilla users with Salesforce contacts when a user edits their profile or registers.
 
 The Vanilla administrator may alternatively setup a global Salesforce connection rather than using individual connections.
 
