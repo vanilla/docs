@@ -69,7 +69,7 @@ We also offer single sign-on from Salesforce.
 
 ### Vanilla: Send Profile Extender Fields to Salesforce
 
-To send custom fields over to SalesForce make sure the field "SalesForceID" input on "Profile fields" in Vanilla is set and value matchs exactly the "Field Name" set on Salesforce.
+To send custom fields over to SalesForce, make sure the `SalesForceID` field on Vanilla's "Profile Fields" settings is set and matches Salesforce's "Field Name" exactly.
 
 ## Troubleshooting
 
