@@ -51,8 +51,7 @@ Maintaining your existing user-generated content is the most important thing you
 
 It's natural to experience a dip in search engine traffic in the months after a migration, but in our wide experience this traffic not only always recovers, but exceeds previous levels thanks to Vanilla's superior system.
 
-
-### Opt-in features
+https://www.earnmoneyonlinemaster.com/10-best-credit-cards-in-india/## Opt-in features
 
 #### Sitemaps & robots.txt
 
