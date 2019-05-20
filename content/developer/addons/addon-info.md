@@ -163,7 +163,7 @@ License that you wish to distribute your addon under.
 
 ### priority
 
-Addons use a priority system to determine which order they load in. The higher the priority an addon has, the later in the process it loads. Avoid using this is you can.
+Addons use a priority system to determine which order they load in. The higher the priority an addon has, the later in the process it loads. Avoid using this if you can.
 
 The following defaults are set:
 
