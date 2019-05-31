@@ -42,8 +42,6 @@ Leaderboards are specified by the `board` parameter.  The following are valid va
  * **top-question-answerers**: Users with most answers.
  * **top-best-answerers**: Users with most accepted answers.
  * **top-member-by-total-reputation**: Users by total reputation.
- * **top-positive-users**: Users with the most positive reactions.
- * **top-member-by-accumulated-reputation**: Users by accumulated reputation.
  * **top-viewed-discussions**: Discussions with most views.
  * **top-commented-discussions**: Discussions with most comments.
  * **top-positive-discussions**: Discussions with most positive reactions.
