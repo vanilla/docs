@@ -1,90 +1,96 @@
-'use strict';
+"use strict";
 
-var yfm = require('yfm');
-var S = require("string");
-var path = require('path');
+var fs = require("fs");
+var fm = require("front-matter");
+var path = require("path");
+const sass = require("sass");
 
-module.exports = function (grunt) {
-
+module.exports = function(grunt) {
     // Load all Grunt tasks matching the `grunt-*` pattern
-    require('load-grunt-tasks')(grunt);
+    require("load-grunt-tasks")(grunt);
 
     // Time how long tasks take. Can help when optimizing build times
-    require('time-grunt')(grunt);
+    require("time-grunt")(grunt);
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: grunt.file.readJSON("package.json"),
 
         watch: {
             options: {
-                livereload: true
+                livereload: true,
             },
             gruntfile: {
-                files: ['Gruntfile.js']
+                files: ["Gruntfile.js"],
             },
             sass: {
-                files: ['build/scss/**/*.scss'],
-                tasks: ['sass_globbing', 'sass', 'postcss']
+                files: ["build/scss/**/*.scss"],
+                tasks: ["sass_globbing", "sass", "postcss"],
             },
             hugo: {
-                files: ['content/**', 'layouts/**', 'data/**', 'static/**', 'archetypes/**', 'config.yaml', 'config-dev.yaml', '!static/js/lunr-index.json'],
-                tasks: ['hugo:dev', 'index']
+                files: [
+                    "content/**",
+                    "layouts/**",
+                    "data/**",
+                    "static/**",
+                    "archetypes/**",
+                    "config.yaml",
+                    "config-dev.yaml",
+                    "!static/js/lunr-index.json",
+                ],
+                tasks: ["hugo:dev", "index"],
             },
             js: {
-                files: ['build/js/**/*.js'],
-                tasks: ['js']
-            }
+                files: ["build/js/**/*.js"],
+                tasks: ["js"],
+            },
         },
 
         connect: {
             docs: {
                 options: {
-                    hostname: '127.0.0.1',
+                    hostname: "127.0.0.1",
                     port: 1313,
-                    protocol: 'http',
-                    base: 'public',
-                    livereload: true
-                }
-            }
+                    protocol: "http",
+                    base: "public",
+                    livereload: true,
+                },
+            },
         },
 
         clean: {
             dist: {
-                src: [
-                    '.tmp',
-                    'public/'
-                ]
-            }
+                src: [".tmp", "public/"],
+            },
         },
 
         sass: {
             options: {
+                implementation: sass,
                 sourceMap: true,
-                outputStyle: "expanded"
+                outputStyle: "expanded",
             },
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'build/scss/',
-                    src: [
-                        '*.scss',
-                        '!_*.scss'
-                    ],
-                    dest: 'static/css/',
-                    ext: '.css'
-                }]
-            }
+                files: [
+                    {
+                        expand: true,
+                        cwd: "build/scss/",
+                        src: ["*.scss", "!_*.scss"],
+                        dest: "static/css/",
+                        ext: ".css",
+                    },
+                ],
+            },
         },
 
         sass_globbing: {
             docs: {
                 files: {
-                    'build/scss/tmp/_componentsMap.scss': 'build/scss/components/**/*.scss'
+                    "build/scss/tmp/_componentsMap.scss": "build/scss/components/**/*.scss",
                 },
                 options: {
-                    useSingleQuotes: false
-                }
-            }
+                    useSingleQuotes: false,
+                },
+            },
         },
 
         postcss: {
@@ -92,73 +98,69 @@ module.exports = function (grunt) {
                 map: true, // inline sourcemaps
 
                 processors: [
-                    require('autoprefixer')({browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"]}) // add vendor prefixes
-                ]
+                    require("autoprefixer")({
+                        browsers: ["ie > 9", "last 6 iOS versions", "last 4 versions"],
+                    }), // add vendor prefixes
+                ],
             },
             dist: {
-                src: [
-                    'public/css/**/*.css',
-                    '!public/css/fonts/**/*.css'
-                ]
-            }
+                src: ["public/css/**/*.css", "!public/css/fonts/**/*.css"],
+            },
         },
 
         imagemin: {
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'static/img',
-                    src: '**/*.{gif,jpeg,jpg,png,svg}',
-                    dest: 'static/img'
-                }]
-            }
+                files: [
+                    {
+                        expand: true,
+                        cwd: "static/img",
+                        src: "**/*.{gif,jpeg,jpg,png,svg}",
+                        dest: "static/img",
+                    },
+                ],
+            },
         },
 
         jshint: {
             options: {
                 force: false,
-                jshintrc: 'build/js/.jshintrc'
+                jshintrc: "build/js/.jshintrc",
             },
-            all: ['build/js/src/**/*.js']
+            all: ["build/js/src/**/*.js"],
         },
 
         concat: {
             dist: {
-                src: [
-                    'build/js/**/*.js'
-                ],
-                dest: 'static/js/custom.js'
-            }
+                src: ["build/js/**/*.js"],
+                dest: "static/js/custom.js",
+            },
         },
 
         lunr_index: {
             options: {
-                source: 'content',
-                dest: 'static/js/lunr-index.json'
-            }
+                source: "content",
+                dest: "static/js/lunr-index.json",
+            },
         },
 
         hugo: {
             options: {
-                source: 'content',
-                dest: 'public'
-            }
+                source: "content",
+                dest: "public",
+            },
         },
 
-        'gh-pages': {
+        "gh-pages": {
             push: {
                 options: {
-                    base: 'public'
+                    base: "public",
                 },
-                src: ['**']
-            }
-        }
-
+                src: ["**"],
+            },
+        },
     });
 
-    grunt.registerTask('default', [
-        'build'
-    ]);
+    grunt.registerTask("default", ["build"]);
 
     /*
      * Builds the whole site from scratch
@@ -169,13 +171,7 @@ module.exports = function (grunt) {
      * js: prepares javascript
      * index: runs lunr index
      */
-    grunt.registerTask('build', [
-        'clean',
-        'hugo',
-        'css',
-        'js',
-        'index'
-    ]);
+    grunt.registerTask("build", ["clean", "hugo", "css", "js", "index"]);
 
     /*
      * Builds the whole site from scratch - in dev mode
@@ -186,13 +182,7 @@ module.exports = function (grunt) {
      * js: prepares javascript
      * index: runs lunr index
      */
-    grunt.registerTask('buildDev', [
-        'clean',
-        'hugo:dev',
-        'css',
-        'js',
-        'index'
-    ]);
+    grunt.registerTask("buildDev", ["clean", "hugo:dev", "css", "js", "index"]);
 
     /*
      * This task builds and prepares css
@@ -201,16 +191,9 @@ module.exports = function (grunt) {
      * sass: builds scss files into css
      * postcss: prefixes css statements with browser-specific versions
      */
-    grunt.registerTask('css', [
-        'sass_globbing',
-        'sass',
-        'postcss'
-    ]);
+    grunt.registerTask("css", ["sass_globbing", "sass", "postcss"]);
 
-
-    grunt.registerTask('index', [
-        'lunr_index'
-    ]);
+    grunt.registerTask("index", ["lunr_index"]);
 
     /*
      * Allows live editing
@@ -219,32 +202,22 @@ module.exports = function (grunt) {
      * buildDev: build site in dev mode
      * watch: waits for changes to source files and re-runs grunt tasks
      */
-    grunt.registerTask('edit', [
-        'connect',
-        'buildDev',
-        'watch'
-    ]);
+    grunt.registerTask("edit", ["connect", "buildDev", "watch"]);
 
     /*
      * Deploys dist (public/) files to gh-pages branch
      */
-    grunt.registerTask('push', [
-        'gh-pages:push'
-    ]);
+    grunt.registerTask("push", ["gh-pages:push"]);
 
     /*
      * Javscript tasks
      */
-    grunt.registerTask('js', [
-        'concat',
-        'jshint'
-    ]);
+    grunt.registerTask("js", ["concat", "jshint"]);
 
     /*
      * Creates lunr.js index of content
      */
     grunt.registerTask("lunr_index", function() {
-
         grunt.log.writeln("Build lunr index");
 
         var options = this.options();
@@ -252,8 +225,10 @@ module.exports = function (grunt) {
         var indexPages = function() {
             var pagesIndex = [];
             grunt.file.recurse(options.source, function(abspath, rootdir, subdir, filename) {
-                grunt.verbose.writeln("Parse file:",abspath);
-                pagesIndex.push(processFile(abspath, filename));
+                if ([".html", ".md"].includes(path.extname(filename))) {
+                    grunt.verbose.writeln("Parse file:", abspath);
+                    pagesIndex.push(processFile(abspath, filename));
+                }
             });
 
             return pagesIndex;
@@ -262,10 +237,13 @@ module.exports = function (grunt) {
         var processFile = function(abspath, filename) {
             var pageIndex;
 
-            if (S(filename).endsWith(".html")) {
-                pageIndex = processHTMLFile(abspath, filename);
-            } else {
-                pageIndex = processMDFile(abspath, filename);
+            switch (path.extname(filename)) {
+                case ".html":
+                    pageIndex = processHTMLFile(abspath, filename);
+                    break;
+                case ".md":
+                    pageIndex = processMDFile(abspath, filename);
+                    break;
             }
 
             return pageIndex;
@@ -273,38 +251,41 @@ module.exports = function (grunt) {
 
         var processHTMLFile = function(abspath, filename) {
             var content = grunt.file.read(abspath);
-            var pageName = S(filename).chompRight(".html").s;
-            var href = S(abspath)
-                .chompLeft(options.source).s;
+            var pageName = path.basename(filename, ".html");
+            var href = abspath.substr(options.source.length);
             return {
                 title: pageName,
                 href: href,
-                content: S(content).trim().stripTags().stripPunctuation().s
+                content: content
+                    .trim()
+                    .replace(/<\/?[^<>]*>/gi, "")
+                    .replace(/[^\w\s]|_/g, "")
+                    .replace(/\s+/g, " "),
             };
         };
 
         var processMDFile = function(abspath, filename) {
             var pageIndex;
             try {
-                var ydata = yfm.read(abspath);
-                var frontMatter = ydata.context;
+                var rawContent = fs.readFileSync(abspath, "utf8");
+                var ydata = fm(rawContent);
+                var frontMatter = ydata.attributes;
             } catch (e) {
                 grunt.log.error(e.message);
             }
 
-            var href = S(abspath).chompLeft(options.source).chompRight(".md").s;
-
-            // href for index.md files stops at the folder name
-            if (filename === "index.md") {
-                href = S(abspath).chompLeft(options.source).chompRight(filename).s;
-            }
+            var href = abspath.substr(options.source.length).replace(/(index)?\.md$/, "");
 
             // Build Lunr index for this page
             pageIndex = {
                 title: frontMatter.title,
                 tags: frontMatter.tags,
                 url: href,
-                content: S(ydata.content).trim().stripTags().stripPunctuation().s
+                content: ydata.body
+                    .trim()
+                    .replace(/<\/?[^<>]*>/gi, "")
+                    .replace(/[^\w\s]|_/g, "")
+                    .replace(/\s+/g, " "),
             };
 
             return pageIndex;
@@ -316,35 +297,36 @@ module.exports = function (grunt) {
     /*
      * Compiles hugo content into HTML
      */
-    grunt.registerTask('hugo', function (target) {
+    grunt.registerTask("hugo", function(target) {
         var options = this.options();
-        var target = target || 'final';
+        var target = target || "final";
 
         var args, done;
         done = this.async();
-        args = [
-            '--destination=./' + options.dest
-        ];
+        args = ["--destination=./" + options.dest];
 
-        if (target === 'dev') {
-            args.push('--config=' + path.resolve('./config-dev.yaml'));
+        if (target === "dev") {
+            args.push("--config=" + path.resolve("./config-dev.yaml"));
         } else {
-            args.push('--config=' + path.resolve('./config.yaml'));
+            args.push("--config=" + path.resolve("./config.yaml"));
         }
 
         // Run hugo
-        grunt.util.spawn({
-            cmd: 'hugo',
-            args: args,
-            opts: {
-                stdio: 'inherit'
-            }
-        }, function (error, result, code) {
-            if (error) {
-                done(error);
-            }
+        grunt.util.spawn(
+            {
+                cmd: "hugo",
+                args: args,
+                opts: {
+                    stdio: "inherit",
+                },
+            },
+            function(error, result, code) {
+                if (error) {
+                    done(error);
+                }
 
-            done();
-        });
+                done();
+            },
+        );
     });
 };
