@@ -22,7 +22,6 @@ aliases:
 * Learn the difference between [Addons, Plugins, and Themes](/developer/addons/#addons-and-plugins-and-themes-oh-my).
 * Read about our event and handler system: [Vanilla Events & Handlers](/developer/addons/events-and-handlers).
 * See details about the [Addon Information Format](/developer/addons/addon-info).
-* Download the official [Example addon](https://open.vanillaforums.com/addon/example-plugin).
 * Download other addons from the [Addon Directory](https://open.vanillaforums.com/addons) and borrow their code.
 * Get help in the [developer community](https://open.vanillaforums.com/categories/developers).
 
@@ -30,7 +29,7 @@ aliases:
 
 Vanilla is built on an object-oriented, MVC framework. If you're coming at this from a mostly function-based world like WordPress or Drupal, this might read like moonspeak. That's OK! Soak it up and ask questions on the forum after you follow this guide and play with the examples.
 
-Ready to code? Grab the [Example addon](https://open.vanillaforums.com/addon/example-plugin) and use it below for an even quicker start. Hang onto your butts, here we go:
+Ready to code? Hang onto your butts, here we go:
 
 1. [Name your addon](#1-name-your-addon).
 1. [Define your addon](#2-define-your-addon).
