@@ -32,6 +32,18 @@ Vanilla numbers major releases with the first decimal place. A second decimal in
 
 * [Released 15 March 2019](https://open.vanillaforums.com/discussion/37121/vanilla-2-8-1-is-now-available-security-patches-bug-fixes)
 
+### 2.8.2
+
+There was an error while creating this release so it was never distributed.
+
+### 2.8.3
+
+* [Released 23 April 2019](https://open.vanillaforums.com/discussion/37245/vanilla-2-8-3-is-now-available-for-download-security-patches)
+
+### 2.8.4
+
+* [Released 4 June 2019](https://open.vanillaforums.com/discussion/37347/vanilla-2-8-4-is-now-available-for-download-important-security-patches)
+
 ## 2.7.x
 
 _Vanilla 2.7 was only distributed to Vanilla Cloud. The accumulated open source release notes from this release are incorporated into the [the 2.8 release notes discussion](https://open.vanillaforums.com/discussion/37120/vanilla-2-8-release-notes)._
