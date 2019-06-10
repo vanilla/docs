@@ -31,7 +31,7 @@ If your server is not running PHP 7.1 or higher, **you should address this soon*
 
 Our _minimum_ requirements are now:
 
-* PHP 7.0 or newer. (_This is about to change to 7.1._)
+* PHP 7.1 or newer. (_This change to 7.2 in 2020._)
 * PHP extensions mbstring (`--enable-mbstring`), cURL (`--with-curl`), GD (on by default), and PDO (on by default).
 * To [import into Vanilla](#migrating-to-vanilla) you need MySQLi (`--with-mysqli`).
 * To use our social plugins you need [OpenSSL](http://php.net/manual/en/openssl.installation.php).
@@ -66,6 +66,11 @@ Please consider using [maintenance mode](#using-maintenance-mode) before running
 1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time by refreshing the page.
 
 If you run into a problem, see [Getting Help](#getting-help) below.
+
+### From Vanilla 2.8 or earlier
+
+* Delete `plugins/EmojiExtender`. (Directory is now `plugins/emojiextender`). The addon key is still `emojiextender`.
+* URL Rewriting is mandatory!! You're site should not be using URLs like `?p=/somepath`. See the 2.3 upgrade notes for more information.
 
 ### From Vanilla 2.6 or earlier
 
