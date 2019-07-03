@@ -35,7 +35,7 @@ Confused about addons and plugins? We've made some changes recently. Learn about
 
 ## Translation Guide from `addon.json`
 
-While `PluginInfo` and `ThemeInfo` declarations are deprecated, they will still be supported for some time. Aside from the syntax differences between JSON and PHP, the structure and key names are very simple.
+While `PluginInfo` and `ThemeInfo` declarations are deprecated, they will still be supported for some time. Aside from the syntax differences between JSON and PHP, the structure and key names are very similar.
 
 ### Author Declaration
 
@@ -65,7 +65,7 @@ Instead of 1 author an addon declares an array of 1 or multiple authors!
 
 ### Key Names
 
-Key names UpperCamelCased in an PHP Info declaration and lowerCamerCased in an `addon.json` file. All keynames aside from the author stay the same. 
+Key names are UpperCamelCased in a PHP Info declaration and lowerCamerCased in an `addon.json` file. All keynames aside from the author stay the same. 
 
 ### Indexed Arrays
 

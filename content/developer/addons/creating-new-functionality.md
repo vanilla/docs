@@ -21,7 +21,7 @@ Confused about addons and plugins? Learn the difference between [Addons, Plugins
 
 #### Modules
 
-Looking to add a small reusable component? Create your own module. Add a new file `class.mymodule.module.php` in the root of your addon. Open it and create a new class extending `Gdn_Module`. Next creating a `views/modules` directory inside of your addon. Inside of this folder create a file named like your modules class name. For example, if your module were called `MyFancyWidgetModule` your would create a view file called `myfancywidget.php`. This file must be lowercased and have the `Module` removed from the classname.
+Looking to add a small reusable component? Create your own module. Add a new file `class.mymodule.module.php` in the root of your addon. Open it and create a new class extending `Gdn_Module`. Next, create a `views/modules` directory inside of your addon. Inside of this folder create a file named like your modules class name. For example, if your module were called `MyFancyWidgetModule`, you would create a view file called `myfancywidget.php`. This file must be lowercased and have the `Module` removed from the classname.
 
 [Ready more about modules](/developer/framework/modules).
 
