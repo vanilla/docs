@@ -152,7 +152,7 @@ Lastly, [find an addon](https://open.vanillaforums.com/addons) that does somethi
 
 ### 4. Write a plugin in your addon
 
-After creating your `addon.json` file, you will want to make your a file. Not all addons need to define a plugin. Themes generally don't. Inside your addon's folder, create a file that includes the slug name (e.g. `class.fancyplugin.php`). Next open the file and create a class extending `Gdn_Plugin`, and name the class using the slug name of your plugin followed by the word 'Plugin' to avoid namespace conflicts.
+After creating your `addon.json` file, you will want to make your plugin file. Not all addons need to define a plugin. Themes generally don't. Inside your addon's folder, create a file that includes the slug name (e.g. `class.fancyplugin.php`). Next open the file and create a class extending `Gdn_Plugin`, and name the class using the slug name of your plugin followed by the word 'Plugin' to avoid namespace conflicts.
 
 ```
 class FancyPlugin extends Gdn_Plugin {
