@@ -115,7 +115,7 @@ Magic methods only work in classes that extend `Gdn_Pluggable`. For example, not
 
 ### Inject the the current user's roles into every page
 
-Sometimes you may want to adjust parts of the template based on the roles the current user. This will inject gather the roles of the current user and inject them into the smarty template.
+Sometimes you may want to adjust parts of the template based on the roles the current user. This will gather the roles of the current user and inject them into the smarty template.
 
 ```php
 public function base_render_before($sender) {
