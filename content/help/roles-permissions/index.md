@@ -39,7 +39,7 @@ It’s possible to edit the default Roles and to create new custom Roles. Here a
 - **View Activity** – This allows the user to view the activity on the Activity Page.
 - **Advanced Notifications** – This permission should only be given to mods and admins in small communities. This allows a notification to be sent when a new discussion or comment is posted in a specific category. 
 - **Community Manage** - Gives you access to banner, category and reaction settings in the Dashboard if the role has "View Settings" but not "Moderate Settings".
-- **Manage Curation**  – Gives the ‘Promote’ Reaction. The Promote reactions gives 5 points to the promoted content and displays it on the Best of Page.
+- **Manage Curation**  – Gives the ‘Promote’ Reaction. The Promote reactions gives 5 points to the promoted content and displays it on the Best of Page. This also gives users the ability to mark answers as rejected/accepted when the QnA addon is enabled.
 - **View Email** – Allows users to receive notifications via email. This _does not_ reveal email addresses of other users to the role. 
 - **Manage Moderation** – Gives access to moderation functionality such as the moderation and SPAM queue.
 - **Allow No Ads** - Hides Pockets labeled as ads. 
