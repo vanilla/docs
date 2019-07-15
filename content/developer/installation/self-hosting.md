@@ -72,6 +72,7 @@ If you run into a problem, see [Getting Help](#getting-help) below.
 * Delete `plugins/EmojiExtender`. (Directory is now `plugins/emojiextender`). The addon key is still `emojiextender`.
 * Delete `container.html`.
 * URL Rewriting is mandatory!! You're site should not be using URLs like `?p=/somepath`. See the 2.3 upgrade notes for more information.
+* Delete `/library/Vanilla/Formatting/Embeds/linkEmbed.twig`
 
 ### From Vanilla 2.6 or earlier
 
