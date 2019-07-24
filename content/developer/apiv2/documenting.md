@@ -13,8 +13,6 @@ aliases:
     - /developer/framework/apiv2/documenting
 ---
 
-## Documenting Endpoints
-
 All available API v2 endpoints must appear on the API v2 page in the Vanilla dashboard. Addons augumenting Vanilla's API v2 capabilities must include valid OpenAPI v3 documentation to describe those changes.
 
 Writing a valid OpenAPI v3 endpoint definitions is beyond the scope of this document. If you would like to learn more, please [read the technical documentation in the OpenAPI repository](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md).
