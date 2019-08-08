@@ -3,13 +3,8 @@
     "info": {
         "description": "API access to your community.",
         "title": "Vanilla API",
-        "version": "2.0-alpha"
+        "version": "2.0"
     },
-    "servers": [
-        {
-            "url": "/api/v2"
-        }
-    ],
     "paths": {
         "/addons": {
             "get": {
