@@ -63,9 +63,19 @@ Please consider using [maintenance mode](#using-maintenance-mode) before running
 1. Upload the new release's files so they overwrite the old ones.
 1. Delete all files in `/cache` (except `.htaccess` if you use Apache).
 1. Follow all version-specific instructions below. It is **critcal** you delete the listed files.
-1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time by refreshing the page.
+1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time.
 
 If you run into a problem, see [Getting Help](#getting-help) below.
+
+### Update Token
+
+On newer versions of Vanilla, your update will ask for an update token. To find your update token you must look in your config for:
+
+```php
+$Configuration['Garden']['UpdateToken'] = '<your token will be here>';
+```
+
+If you don't find the above in your config then you can add it manually. Use a strong random password generator to generate your update token.
 
 ### From Vanilla 2.8 or earlier
 
