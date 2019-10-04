@@ -67,9 +67,13 @@ We also offer single sign-on from Salesforce.
 1. Click "Connect" on Salesforce.
 1. Follow the instructions from there.
 
-### Vanilla: Send Profile Extender Fields to Salesforce
+### Vanilla: Send Profile Extender Fields to Contacts on Salesforce
 
-To send custom fields over to SalesForce, make sure the `SalesForceID` field on Vanilla's "Profile Fields" settings is set and matches Salesforce's "Field Name" exactly.
+To send custom fields over to SalesForce make sure the `SalesForceID` field on Vanilla's "Profile Fields" settings is set: 
+
+- For "Contact Standard Fields" it should match "Field Name".
+
+- For "Contact Custom Fields" it should match "API Name".
 
 ## Troubleshooting
 
