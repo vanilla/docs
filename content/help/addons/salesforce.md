@@ -71,9 +71,11 @@ We also offer single sign-on from Salesforce.
 
 To send custom fields over to SalesForce make sure the `SalesForceID` field on Vanilla's "Profile Fields" settings is set: 
 
-- For "Contact Standard Fields" it should match "Field Name".
+- For "Contact Standard Fields" it should match "Field Name":
+![](/img/help/addons/salesforce/profileextender1.png)
 
-- For "Contact Custom Fields" it should match "API Name".
+- For "Contact Custom Fields" it should match "API Name":
+![](/img/help/addons/salesforce/profileextender2.png)
 
 ## Troubleshooting
 
