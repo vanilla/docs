@@ -42,7 +42,7 @@ Change a config setting only for this pageload: `saveToConfig('Name.Of.Setting',
 
 Simply passing the value `false` in place of the options array has the same effect as passing `array('Save' => false)`.
 
-<aside class="warning">Do not used numeric-key arrays as config values. Associative arrays are fine.</aside>
+<aside class="warning">Do not use numeric-key arrays as config values. Associative arrays are fine.</aside>
 
 ## Configuration module
 
