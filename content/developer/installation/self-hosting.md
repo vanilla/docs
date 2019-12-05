@@ -65,9 +65,21 @@ Please consider using [maintenance mode](#using-maintenance-mode) before running
   - Any files listed in the version specific upgrade instructions. ___If you are upgrading past multiple versions, be sure to delete the files from all of the version steps your are skipping if they exist.___ For example, if updating from 2.6 to 3.1, upgrade steps for both 2.6 and 2.8 should be completed.
 1. Follow any other version specific upgrade instructions.
 1. Upload the new release's files so they overwrite the old ones.
+1. Delete all files in `/cache` (except `.htaccess` if you use Apache).
+1. Follow all version-specific instructions below. It is **critcal** you delete the listed files.
 1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time by refreshing the page.
 
 If you run into a problem, see [Getting Help](#getting-help) below.
+
+### Update Token
+
+On newer versions of Vanilla, your update will ask for an update token. To find your update token you must look in your config for:
+
+```php
+$Configuration['Garden']['UpdateToken'] = '<your token will be here>';
+```
+
+If you don't find the above in your config then you can add it manually. Use a strong random password generator to generate your update token.
 
 ### From Vanilla 2.8 or earlier
 
