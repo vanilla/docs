@@ -24,7 +24,7 @@ The `SQL` object supports chaining. You can call it with `Gdn::sql()`.
 Here's a simple example that gets a single discussion by its ID. We write its pieces in the order of a SQL statement, but they can be called in any order up to the `get()`. The `get()` is the call that fires the built query.
 
 ```
-Gdn::sql()->
+Gdn::sql()
    ->select('*')
    ->from('Discussion')
    ->where('DiscussionID', $discussionID)

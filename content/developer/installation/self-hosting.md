@@ -59,11 +59,15 @@ Follow these steps to upgrade Vanilla when a new stable release is announced. Th
 Please consider using [maintenance mode](#using-maintenance-mode) before running database updates if your database is very large (millions of users or comments).
 
 1. Backup your database, `.htaccess` and `conf/config.php` file somewhere safe.
-1. Delete all files in `/dist`.
+1. Delete various files. This is necessary for the upgrade to go smoothly and to prevent clashes if your filesystem merges directories together. __Delete the following files__.
+  - All files in `/dist`.
+  - All files in `/cache` (except `.htaccess` if you use Apache).
+  - Any files listed in the version specific upgrade instructions. ___If you are upgrading past multiple versions, be sure to delete the files from all of the version steps your are skipping if they exist.___ For example, if updating from 2.6 to 3.1, upgrade steps for both 2.6 and 2.8 should be completed.
+1. Follow any other version specific upgrade instructions.
 1. Upload the new release's files so they overwrite the old ones.
 1. Delete all files in `/cache` (except `.htaccess` if you use Apache).
 1. Follow all version-specific instructions below. It is **critcal** you delete the listed files.
-1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time.
+1. Go to `example.com/utility/update` to run any database updates needed. (404? See next paragraph.) If it fails, try it a second time by refreshing the page.
 
 If you run into a problem, see [Getting Help](#getting-help) below.
 

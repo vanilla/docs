@@ -1,16 +1,18 @@
 ---
 title: Writing APIs
 tags:
-- Developers
-- Framework
-- API
+    - Developers
+    - Framework
+    - API
 category: developer
 menu:
-  developer:
-    identifier: framework-apiv2
+    developer:
+        identifier: framework-apiv2
+        weight: 2
 aliases:
-- /developer/framework/apiv2
+    - /developer/framework/apiv2
 ---
+
 ## The Vanilla APIv2
 
 Vanilla's APIv2 offers a powerful, yet simple way of creating RESTful API endpoints in your application. With version 2 of the API we consider Vanilla to be an "API first" framework where you write your API first and then think about the resulting HTML. This offers several benefits:
@@ -23,13 +25,13 @@ Vanilla's APIv2 offers a powerful, yet simple way of creating RESTful API endpoi
 
 The API offers the following features for developers.
 
-- Resource URL routing to API controllers. If you are familiar with RESTful APIs you'll be right at home with Vanilla's routing.
-- You can specify separate methods for the different HTTP methods (GET, POST, DELETE, etc.) allowing you to concentrate on the task at hand.
-- Controllers are dependency injected by the dispatcher. This allows controllers to be relatively simple where each specific controller declares only the dependencies it requires. In fact, the dispatcher doesn't depend on a specific controller base class, but we provide one with common utility functionality.
-- Controller endpoints concern themselves with retrieving data and returning it like a PHP function. The dispatcher handles rendering. In this way an endpoint can be rendered to different formats without you having to worry about the details for every endpoint.
-- Exceptions thrown from your methods are rendered correctly from the dispatcher. Some exceptions (such as not found or method not allowed) are intelligently determined by the dispatcher.
-- Whitelists request data coming in using the **Schema** class. In this way you can be sure that a malicious user can't post extra information to attack your endpoint.
-- The **Schema** object also supports automatic documentation of your endpoints (TODO).
+-   Resource URL routing to API controllers. If you are familiar with RESTful APIs you'll be right at home with Vanilla's routing.
+-   You can specify separate methods for the different HTTP methods (GET, POST, DELETE, etc.) allowing you to concentrate on the task at hand.
+-   Controllers are dependency injected by the dispatcher. This allows controllers to be relatively simple where each specific controller declares only the dependencies it requires. In fact, the dispatcher doesn't depend on a specific controller base class, but we provide one with common utility functionality.
+-   Controller endpoints concern themselves with retrieving data and returning it like a PHP function. The dispatcher handles rendering. In this way an endpoint can be rendered to different formats without you having to worry about the details for every endpoint.
+-   Exceptions thrown from your methods are rendered correctly from the dispatcher. Some exceptions (such as not found or method not allowed) are intelligently determined by the dispatcher.
+-   Whitelists request data coming in using the **Schema** class. In this way you can be sure that a malicious user can't post extra information to attack your endpoint.
+-   The **Schema** object also supports automatic documentation of your endpoints (TODO).
 
 ## About This Guide
 

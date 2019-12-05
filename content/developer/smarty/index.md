@@ -20,6 +20,8 @@ You can [override this view](/developer/addons/view-overrides/#the-master-view) 
 
 You can output the content of the current page's controller's data array using Smarty by using `{$ArrayKey.NestedArrayKey}` syntax. For instance, `{$BodyClass}` in Vanilla's master view outputs the css class names for the current page. `{$User.Name}` would render the session's username. To see what data you have available to you on any given page, you can insert a `{debug}` tag into your Smarty template and a popup listing the data in the data array will appear.
 
+**Be very careful not to leave this feature on, as it can disclose personal information like email addresses.**
+
 ### Smarty Functions
 
 In the default master view in Vanilla, you'll find tags like `{searchbox}` which calls a function to render a search box in the page and `{breadcrumbs}` which calls a function to render the breadcrumbs. These are tags are mapped to php functions.

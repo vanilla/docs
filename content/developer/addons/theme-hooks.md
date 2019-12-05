@@ -20,7 +20,7 @@ Themes can be imbued with the power of plugins via a special themehooks php file
 
 ## Naming
 
-To use event hooks in a theme, the theme must have a plugin with a classname ending in `ThemeHooks` and must a filename containing `class.themehooks.php`. The prevailing convention results in a class `MySiteThemeHooks` and file `class.mysite.themehooks.php`. This file must be located in the root of your addon.
+To use event hooks in a theme, the theme must have a plugin with a classname ending in `ThemeHooks` and must have a filename containing `class.themehooks.php`. The prevailing convention results in a class `MySiteThemeHooks` and file `class.mysite.themehooks.php`. This file must be located in the root of your addon.
 
 ## Events
 
