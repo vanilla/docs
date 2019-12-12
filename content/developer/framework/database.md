@@ -31,6 +31,24 @@ Gdn::sql()
    ->get();
 ```
 
+If you want to retrieve the request result as an array of associative arrays, you can use the `resultArray()` after the `get()` method
+```
+Gdn::sql()
+   ->select('*')
+   ->from('Discussion')
+   ->where('DiscussionID', $discussionID)
+   ->get()->resultArray();
+```
+
+You can also use the `firstRow()` method if you want to retrieve only one result.
+```
+Gdn::sql()
+   ->select('*')
+   ->from('Discussion')
+   ->where('DiscussionID', $discussionID)
+   ->firstRow();
+```
+
 Note that this is an impractical query to use in your addon, because this functionality already exists in a model: 
 
 ```
