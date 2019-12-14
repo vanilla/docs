@@ -37,7 +37,8 @@ Gdn::sql()
    ->select('*')
    ->from('Discussion')
    ->where('DiscussionID', $discussionID)
-   ->get()->resultArray();
+   ->get()
+   ->resultArray();
 ```
 
 You can also use the `firstRow()` method if you want to retrieve only one result.
@@ -46,6 +47,7 @@ Gdn::sql()
    ->select('*')
    ->from('Discussion')
    ->where('DiscussionID', $discussionID)
+   ->get()
    ->firstRow();
 ```
 
