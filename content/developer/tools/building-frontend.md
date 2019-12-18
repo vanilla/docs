@@ -26,9 +26,14 @@ The included build process uses Typescript and Webpack to bundle typescript file
 
 Every addon in your current vanilla project containing entries will get built. Currently that means bundling scripts from the following addons:
 
+- `vanilla`
 - `dashboard`
 - `rich-editor`
-- Various internal addons.
+- `foundation`
+- `subcommunities`
+- `knowledge`
+- `vanillaanalytics`
+- Varioius others.
 
 The outputted bundles will automatically be loaded by Vanilla into the page if their addon is enabled.
 
