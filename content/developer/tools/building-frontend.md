@@ -38,8 +38,7 @@ Node 10+ and Yarn are prerequisites to run this build tool. To install them:
 
 ```bash
 brew install node@10
-# Make sure not to link these or a yarn upgrade will upgrade your node!
-brew install yarn --without-node
+npm install -g yarn
 ```
 
 Next you will need to install the repo's `node_modules`. The build process will handle installation of any addons' `node_modules` itself.
@@ -149,11 +148,6 @@ This command runs a production build then uses `webpack-analyze` to open a local
 - How large files are.
 - Which files are in which bundles.
 
-## build:polyfills
-
-Separate from any application Vanilla's `AssetModel` provides a page blocking polyfill for older browsers (does not execute in modern ones).
-This is build process for that file. Since that file is the first thing loaded it can have no vanilla or addon specific dependencies and gets built separately.
-
 ### Options
 
 The following flags have a long option and name a short alias. Use whichever your prefer.
@@ -175,14 +169,16 @@ Do __not__ use this at the same time as an IDE that formats on save. Your IDE wi
 
 All source files __MUST__ be typescript files with an extension of `.ts` or `.tsx` and reside in the `src/scripts` directory of an addon.
 
-Entries __MUST__ be placed directly in the `src/scripts/entries` directory of an addon. Adding an entry of a given name will create an entry of that type. Currently 2 entries are provided by the dashboard and rich-editor addons `forum` and `admin`.
+Entries __MUST__ be placed directly in the `src/scripts/entries` directory of an addon. Adding an entry of a given name will create an entry of that type. Currently Vanilla defines 3 common entries: `forum`, `admin`, and `knowledge`.
 
 This means an entry for one of those sections would be one of the following files.
 
 - `/plugins/MY_PLUGIN/src/scripts/entries/forum.ts`
 - `/plugins/MY_PLUGIN/src/scripts/entries/admin.ts`
+- `/plugins/MY_PLUGIN/src/scripts/entries/knowledge.ts`
 - `/plugins/MY_PLUGIN/src/scripts/entries/forum.tsx`
 - `/plugins/MY_PLUGIN/src/scripts/entries/admin.tsx`
+- `/plugins/MY_PLUGIN/src/scripts/entries/knowledge.tsx`
 
 Every other file may be imported from one of these entries.
 
@@ -235,7 +231,7 @@ If you wanted to create a entry for a new section (lets use `mySection` as an ex
 
 ## Output files
 
-The `AssetModel` is responsible for gathering build files. You should not be referencing them directly as their locations may change in the future. Please use `AssetModel::getWebpackJsFiles()` instead.
+The `WebpackAssetProvider` is responsible for gathering build files. You should not be referencing them directly as their locations may change in the future. Please use `WebpackAssetProvider` and use it's methods instead.
 
 ### Location
 
