@@ -25,8 +25,7 @@ Some commands, currently `build` and `lint`, require a minimum Node.js version o
 #### For OS X
 ```bash
 brew install node
-# Make sure not to link these or a yarn upgrade will upgrade your node!
-brew install yarn --without-node
+npm install -g yarn
 ```
 
 #### For Debian/Ubuntu Linux
