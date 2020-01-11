@@ -17,6 +17,48 @@ This is for packaged, gold releases of the self-hosted product. We publish beta 
 
 Vanilla numbers major releases with the first decimal place. A second decimal indicates a minor patch release.
 
+## 3.3.0
+
+- [Released 28 October 2019](https://open.vanillaforums.com/discussion/37683/vanilla-3-3-is-now-available)
+- Bug & Security Fixes
+
+## 3.2.0
+
+- [Released 3 September 2019](https://open.vanillaforums.com/discussion/37556/vanilla-3-2-is-now-available)
+- New Embed System.
+- Improved mentions.
+- OIDC-compliant OAuth.
+
+## 3.1.0
+
+- [Released 10 July 2019](https://open.vanillaforums.com/discussion/37418/vanilla-3-1-is-now-available) 
+- Full Content Rendering for Moderation/Spam Queue.
+- Important Security Fixes.
+
+## 3.0.x
+
+- New Rich Editor features and improvements.
+- 100s of bug fixes.
+- Many medium-severity security issues reported via our HackerOne campaign are now resolved.
+- Improved default cache headers.
+- Image upload limits.
+- Improvements to the Keystone theme.
+- Google SignIn.
+- Better SEO and performance w/ the DeferredLegacyScripts flag.
+
+### 3.0.0
+
+* [Released 10 June 2019](https://open.vanillaforums.com/discussion/37360/vanilla-3-0-is-now-available/)
+
+### 3.0.1
+
+* [Released 11 June 2019](https://open.vanillaforums.com/discussion/comment/257296/#Comment_257296)
+
+## 3.0.2
+
+* [Released 20 June 2019](https://open.vanillaforums.com/discussion/comment/257296/#Comment_257296)
+
+
 ## 2.8.x
 
 - Rich Editor is the new default editor.
