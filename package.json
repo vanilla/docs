@@ -43,7 +43,7 @@
         "hugo-lunr": "0.0.4",
         "jshint": "2.10.2",
         "load-grunt-tasks": "4.0.0",
-        "node-fetch": "2.6.0",
+        "node-fetch": "3.1.1",
         "sass": "1.20.1",
         "time-grunt": "2.0.0",
         "yargs": "13.2.4"
